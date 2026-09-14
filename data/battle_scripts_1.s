@@ -235,6 +235,104 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCalmMind               @ EFFECT_CALM_MIND
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
+	@ Generation 4 effects. Most have their own real battle script now.
+	@ The handful still on BattleScript_EffectPending (Gravity, Healing Wish,
+	@ Embargo, Psycho Shift, Heal Block, Power Trick, Gastro Acid, Me First,
+	@ Copycat, Aqua Ring, Magnet Rise, Trick Room) animate and then fail
+	@ harmlessly instead of doing their real thing - deliberately deferred,
+	@ see the Milestone 2 write-up. A few entries below (Roost, Miracle Eye,
+	@ Feint, Metal Burst, U-Turn, the three Fang moves) are orphaned: the
+	@ moves that used to point at them got reclassified to reuse a different,
+	@ already-working effect instead, so these slots are unused dead code.
+	.4byte BattleScript_EffectPending                @ EFFECT_ROOST
+	.4byte BattleScript_EffectPending                @ EFFECT_GRAVITY
+	.4byte BattleScript_EffectPending                @ EFFECT_MIRACLE_EYE
+	.4byte BattleScript_EffectHammerArm              @ EFFECT_HAMMER_ARM
+	.4byte BattleScript_EffectGyroBall               @ EFFECT_GYRO_BALL
+	.4byte BattleScript_EffectPending                @ EFFECT_HEALING_WISH
+	.4byte BattleScript_EffectHit                    @ EFFECT_FEINT
+	.4byte BattleScript_EffectTailwind               @ EFFECT_TAILWIND
+	.4byte BattleScript_EffectAcupressure            @ EFFECT_ACUPRESSURE
+	.4byte BattleScript_EffectHit                    @ EFFECT_METAL_BURST
+	.4byte BattleScript_EffectHit                    @ EFFECT_U_TURN
+	.4byte BattleScript_EffectCloseCombat            @ EFFECT_CLOSE_COMBAT
+	.4byte BattleScript_EffectPayback                @ EFFECT_PAYBACK
+	.4byte BattleScript_EffectPending                @ EFFECT_EMBARGO
+	.4byte BattleScript_EffectPending                @ EFFECT_PSYCHO_SHIFT
+	.4byte BattleScript_EffectTrumpCard              @ EFFECT_TRUMP_CARD
+	.4byte BattleScript_EffectPending                @ EFFECT_HEAL_BLOCK
+	.4byte BattleScript_EffectWringOut               @ EFFECT_WRING_OUT
+	.4byte BattleScript_EffectPending                @ EFFECT_POWER_TRICK
+	.4byte BattleScript_EffectPending                @ EFFECT_GASTRO_ACID
+	.4byte BattleScript_EffectLuckyChant             @ EFFECT_LUCKY_CHANT
+	.4byte BattleScript_EffectPending                @ EFFECT_ME_FIRST
+	.4byte BattleScript_EffectPending                @ EFFECT_COPYCAT
+	.4byte BattleScript_EffectPowerSwap              @ EFFECT_POWER_SWAP
+	.4byte BattleScript_EffectGuardSwap              @ EFFECT_GUARD_SWAP
+	.4byte BattleScript_EffectPunishment             @ EFFECT_PUNISHMENT
+	.4byte BattleScript_EffectWorrySeed              @ EFFECT_WORRY_SEED
+	.4byte BattleScript_EffectSuckerPunch            @ EFFECT_SUCKER_PUNCH
+	.4byte BattleScript_EffectToxicSpikes            @ EFFECT_TOXIC_SPIKES
+	.4byte BattleScript_EffectHeartSwap              @ EFFECT_HEART_SWAP
+	.4byte BattleScript_EffectPending                @ EFFECT_AQUA_RING
+	.4byte BattleScript_EffectPending                @ EFFECT_MAGNET_RISE
+	.4byte BattleScript_EffectHit                    @ EFFECT_THUNDER_FANG
+	.4byte BattleScript_EffectHit                    @ EFFECT_ICE_FANG
+	.4byte BattleScript_EffectHit                    @ EFFECT_FIRE_FANG
+	.4byte BattleScript_EffectPending                @ EFFECT_TRICK_ROOM
+	.4byte BattleScript_EffectStealthRock            @ EFFECT_STEALTH_ROCK
+	.4byte BattleScript_EffectChargeBeam             @ EFFECT_CHARGE_BEAM
+	.4byte BattleScript_EffectHeadSmash              @ EFFECT_HEAD_SMASH
+	@ Generation 5 effects. Moves whose real gimmick needs a mixed-stat damage
+	@ formula, a room/field status, doubles-only positioning, or turn-order
+	@ manipulation this engine has no hook for point at BattleScript_EffectHit
+	@ (still deals damage, minus the gimmick) or BattleScript_EffectPending
+	@ (animates, then fails) instead of a bespoke script - see the comment on
+	@ MOVE_HONE_CLAWS's block in battle_moves.h.
+	.4byte BattleScript_EffectHoneClaws              @ EFFECT_HONE_CLAWS
+	.4byte BattleScript_EffectProtect                @ EFFECT_WIDE_GUARD
+	.4byte BattleScript_EffectGuardSplit              @ EFFECT_GUARD_SPLIT
+	.4byte BattleScript_EffectPowerSplit              @ EFFECT_POWER_SPLIT
+	.4byte BattleScript_EffectPending                @ EFFECT_WONDER_ROOM
+	.4byte BattleScript_EffectHit                    @ EFFECT_PSYSHOCK
+	.4byte BattleScript_EffectVenoshock               @ EFFECT_VENOSHOCK
+	.4byte BattleScript_EffectPending                @ EFFECT_TELEKINESIS
+	.4byte BattleScript_EffectPending                @ EFFECT_MAGIC_ROOM
+	.4byte BattleScript_EffectHit                    @ EFFECT_SMACK_DOWN
+	.4byte BattleScript_EffectHit                    @ EFFECT_ALWAYS_CRIT
+	.4byte BattleScript_EffectQuiverDance             @ EFFECT_QUIVER_DANCE
+	.4byte BattleScript_EffectHit                    @ EFFECT_SYNCHRONOISE
+	.4byte BattleScript_EffectElectroBall             @ EFFECT_ELECTRO_BALL
+	.4byte BattleScript_EffectPending                @ EFFECT_SOAK
+	.4byte BattleScript_EffectSpeedUpHit              @ EFFECT_SPEED_UP_HIT
+	.4byte BattleScript_EffectCoil                   @ EFFECT_COIL
+	.4byte BattleScript_EffectHit                    @ EFFECT_FOUL_PLAY
+	.4byte BattleScript_EffectSimpleBeam              @ EFFECT_SIMPLE_BEAM
+	.4byte BattleScript_EffectEntrainment             @ EFFECT_ENTRAINMENT
+	.4byte BattleScript_EffectPending                @ EFFECT_AFTER_YOU
+	.4byte BattleScript_EffectHit                    @ EFFECT_ECHOED_VOICE
+	.4byte BattleScript_EffectHit                    @ EFFECT_CHIP_AWAY
+	.4byte BattleScript_EffectClearSmog               @ EFFECT_CLEAR_SMOG
+	.4byte BattleScript_EffectStoredPower             @ EFFECT_STORED_POWER
+	.4byte BattleScript_EffectProtect                @ EFFECT_QUICK_GUARD
+	.4byte BattleScript_EffectPending                @ EFFECT_ALLY_SWITCH
+	.4byte BattleScript_EffectShellSmash              @ EFFECT_SHELL_SMASH
+	.4byte BattleScript_EffectHealPulse               @ EFFECT_HEAL_PULSE
+	.4byte BattleScript_EffectHex                    @ EFFECT_HEX
+	.4byte BattleScript_EffectShiftGear               @ EFFECT_SHIFT_GEAR
+	.4byte BattleScript_EffectHit                    @ EFFECT_CIRCLE_THROW
+	.4byte BattleScript_EffectPending                @ EFFECT_QUASH
+	.4byte BattleScript_EffectAcrobatics              @ EFFECT_ACROBATICS
+	.4byte BattleScript_EffectPending                @ EFFECT_REFLECT_TYPE
+	.4byte BattleScript_EffectFinalGambit             @ EFFECT_FINAL_GAMBIT
+	.4byte BattleScript_EffectPending                @ EFFECT_BESTOW
+	.4byte BattleScript_EffectWorkUp                 @ EFFECT_WORK_UP
+	.4byte BattleScript_EffectCottonGuard             @ EFFECT_COTTON_GUARD
+	.4byte BattleScript_EffectChargeBeam              @ EFFECT_SPECIAL_ATTACK_UP_HIT (unused - Fiery Dance reuses EFFECT_CHARGE_BEAM directly)
+	.4byte BattleScript_EffectHit                    @ EFFECT_V_CREATE
+	@ Generation 6 Fairy-type moves.
+	.4byte BattleScript_EffectGeomancy               @ EFFECT_GEOMANCY
+	.4byte BattleScript_EffectPending                @ EFFECT_MISTY_TERRAIN
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -2047,6 +2145,562 @@ BattleScript_EffectFakeOut::
 	setmoveeffect MOVE_EFFECT_FLINCH | MOVE_EFFECT_CERTAIN
 	goto BattleScript_EffectHit
 
+@ Placeholder for Generation 4 status-move effects whose real mechanic
+@ hasn't been implemented as its own battle script yet. Plays the move's
+@ animation and then fails harmlessly instead of crashing/doing nothing silently.
+BattleScript_EffectPending::
+	attackcanceler
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	goto BattleScript_ButItFailed
+
+@ Generation 4 entry hazards / side timers.
+BattleScript_EffectStealthRock::
+	attackcanceler
+	trysetstealthrock BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	printstring STRINGID_SPIKESSCATTERED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectToxicSpikes::
+	attackcanceler
+	trysettoxicspikes BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	printstring STRINGID_SPIKESSCATTERED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectTailwind::
+	attackcanceler
+	trysettailwind BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	printstring STRINGID_TAILWINDBLEW
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectLuckyChant::
+	attackcanceler
+	trysetluckychant BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	printstring STRINGID_LUCKYCHANTSHIELDED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_StealthRockOnTarget::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	call BattleScript_PrintHurtBySpikes
+	tryfaintmon BS_TARGET
+	tryfaintmon_spikes BS_TARGET, BattleScript_SpikesOnTargetFainted
+	return
+
+BattleScript_StealthRockOnAttacker::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	call BattleScript_PrintHurtBySpikes
+	tryfaintmon BS_ATTACKER
+	tryfaintmon_spikes BS_ATTACKER, BattleScript_SpikesOnAttackerFainted
+	return
+
+BattleScript_ToxicSpikesOnTarget::
+	printstring STRINGID_PKMNPOISONEDBY
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+@ Trivial hit-plus-self-stat-change effects that only need a single
+@ setmoveeffect call plugged into the generic hit script.
+BattleScript_EffectHammerArm::
+	setmoveeffect MOVE_EFFECT_SPD_MINUS_1 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
+	goto BattleScript_EffectHit
+
+BattleScript_EffectChargeBeam::
+	setmoveeffect MOVE_EFFECT_SP_ATK_PLUS_1 | MOVE_EFFECT_AFFECTS_USER
+	goto BattleScript_EffectHit
+
+BattleScript_EffectCloseCombat::
+	setmoveeffect MOVE_EFFECT_DEF_SPDEF_DOWN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
+	goto BattleScript_EffectHit
+
+BattleScript_EffectHeadSmash::
+	setmoveeffect MOVE_EFFECT_RECOIL_50 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
+	goto BattleScript_EffectHit
+
+BattleScript_EffectWorrySeed::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	attackanimation
+	waitanimation
+	various BS_TARGET, VARIOUS_WORRY_SEED
+	printstring STRINGID_TARGETABILITYCHANGED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectPowerSwap::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	attackanimation
+	waitanimation
+	various BS_ATTACKER, VARIOUS_POWER_SWAP
+	printstring STRINGID_STATSSWAPPED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectGuardSwap::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	attackanimation
+	waitanimation
+	various BS_ATTACKER, VARIOUS_GUARD_SWAP
+	printstring STRINGID_STATSSWAPPED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectHeartSwap::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	attackanimation
+	waitanimation
+	various BS_ATTACKER, VARIOUS_HEART_SWAP
+	printstring STRINGID_STATSSWAPPED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectGyroBall::
+	attackcanceler
+	attackstring
+	ppreduce
+	various BS_ATTACKER, VARIOUS_GYRO_BALL_POWER
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectWringOut::
+	attackcanceler
+	attackstring
+	ppreduce
+	various BS_ATTACKER, VARIOUS_WRING_OUT_POWER
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectTrumpCard::
+	attackcanceler
+	attackstring
+	ppreduce
+	various BS_ATTACKER, VARIOUS_TRUMP_CARD_POWER
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectPunishment::
+	attackcanceler
+	attackstring
+	ppreduce
+	various BS_ATTACKER, VARIOUS_PUNISHMENT_POWER
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectPayback::
+	attackcanceler
+	attackstring
+	ppreduce
+	various BS_ATTACKER, VARIOUS_PAYBACK_POWER
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectSuckerPunch::
+	attackcanceler
+	various BS_ATTACKER, VARIOUS_SUCKER_PUNCH_CHECK
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 1, BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectAcupressure::
+	attackcanceler
+	acupressure BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+@ Generation 5 self stat-boost / status effects.
+BattleScript_EffectHoneClaws::
+	attackcanceler
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_ATK | BIT_ACC, 0
+	setstatchanger STAT_ATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_HoneClawsTryAcc
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_HoneClawsTryAcc
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_HoneClawsTryAcc::
+	setstatchanger STAT_ACC, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectCoil::
+	attackcanceler
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_ATK | BIT_DEF | BIT_ACC, 0
+	setstatchanger STAT_ATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_CoilTryDef
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_CoilTryDef
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_CoilTryDef::
+	setstatchanger STAT_DEF, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_CoilTryAcc
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_CoilTryAcc
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_CoilTryAcc::
+	setstatchanger STAT_ACC, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectQuiverDance::
+	attackcanceler
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_SPATK | BIT_SPDEF | BIT_SPEED, 0
+	setstatchanger STAT_SPATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_QuiverDanceTrySpDef
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_QuiverDanceTrySpDef
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_QuiverDanceTrySpDef::
+	setstatchanger STAT_SPDEF, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_QuiverDanceTrySpeed
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_QuiverDanceTrySpeed
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_QuiverDanceTrySpeed::
+	setstatchanger STAT_SPEED, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectWorkUp::
+	attackcanceler
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_ATK | BIT_SPATK, 0
+	setstatchanger STAT_ATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_WorkUpTrySpAtk
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_WorkUpTrySpAtk
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_WorkUpTrySpAtk::
+	setstatchanger STAT_SPATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectShiftGear::
+	attackcanceler
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_ATK | BIT_SPEED, 0
+	setstatchanger STAT_ATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_ShiftGearTrySpeed
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_ShiftGearTrySpeed
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_ShiftGearTrySpeed::
+	setstatchanger STAT_SPEED, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectCottonGuard::
+	attackcanceler
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_DEF, 0
+	setstatchanger STAT_DEF, 3, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectShellSmash::
+	attackcanceler
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_DEF | BIT_SPDEF, 1
+	setstatchanger STAT_DEF, 1, TRUE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_ShellSmashTrySpDef
+	jumpifbyte CMP_LESS_THAN, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_ShellSmashPrintDefDown
+	goto BattleScript_ShellSmashTrySpDef
+BattleScript_ShellSmashPrintDefDown::
+	printfromtable gStatDownStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_ShellSmashTrySpDef::
+	setstatchanger STAT_SPDEF, 1, TRUE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_ShellSmashTryAtk
+	jumpifbyte CMP_LESS_THAN, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_ShellSmashPrintSpDefDown
+	goto BattleScript_ShellSmashTryAtk
+BattleScript_ShellSmashPrintSpDefDown::
+	printfromtable gStatDownStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_ShellSmashTryAtk::
+	setstatchanger STAT_ATK, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_ShellSmashTrySpAtk
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_ShellSmashTrySpAtk
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_ShellSmashTrySpAtk::
+	setstatchanger STAT_SPATK, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_ShellSmashTrySpeed
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_ShellSmashTrySpeed
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_ShellSmashTrySpeed::
+	setstatchanger STAT_SPEED, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+@ Generation 5 target-stat / field-support effects.
+BattleScript_EffectGuardSplit::
+	attackcanceler
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	various BS_ATTACKER, VARIOUS_GUARD_SPLIT
+	printstring STRINGID_STATSSWAPPED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectPowerSplit::
+	attackcanceler
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	various BS_ATTACKER, VARIOUS_POWER_SPLIT
+	printstring STRINGID_STATSSWAPPED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectSimpleBeam::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	attackanimation
+	waitanimation
+	various BS_TARGET, VARIOUS_SIMPLE_BEAM
+	printstring STRINGID_TARGETABILITYCHANGED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectEntrainment::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	attackanimation
+	waitanimation
+	various BS_TARGET, VARIOUS_ENTRAINMENT
+	printstring STRINGID_TARGETABILITYCHANGED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectHealPulse::
+	attackcanceler
+	attackstring
+	ppreduce
+	tryhealhalfhealth BattleScript_AlreadyAtFullHp, BS_TARGET
+	attackanimation
+	waitanimation
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+@ Generation 5 dynamic-power hits: various sets gDynamicBasePower/gBattleMoveDamage,
+@ then execution rejoins the normal hit pipeline (mirrors BattleScript_EffectGyroBall).
+BattleScript_EffectVenoshock::
+	attackcanceler
+	attackstring
+	ppreduce
+	various BS_ATTACKER, VARIOUS_VENOSHOCK_POWER
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectElectroBall::
+	attackcanceler
+	attackstring
+	ppreduce
+	various BS_ATTACKER, VARIOUS_ELECTRO_BALL_POWER
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectStoredPower::
+	attackcanceler
+	attackstring
+	ppreduce
+	various BS_ATTACKER, VARIOUS_STORED_POWER_POWER
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectHex::
+	attackcanceler
+	attackstring
+	ppreduce
+	various BS_ATTACKER, VARIOUS_HEX_POWER
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectAcrobatics::
+	attackcanceler
+	attackstring
+	ppreduce
+	various BS_ATTACKER, VARIOUS_ACROBATICS_POWER
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectSpeedUpHit::
+	setmoveeffect MOVE_EFFECT_SPD_PLUS_1 | MOVE_EFFECT_AFFECTS_USER
+	goto BattleScript_EffectHit
+
+BattleScript_EffectClearSmog::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage B_WAIT_TIME_LONG
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	various BS_TARGET, VARIOUS_CLEAR_SMOG_RESET
+	printstring STRINGID_STATCHANGESGONE
+	waitmessage B_WAIT_TIME_LONG
+	tryfaintmon BS_TARGET
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectFinalGambit::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	typecalc
+	bicbyte gMoveResultFlags, MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE
+	various BS_ATTACKER, VARIOUS_FINAL_GAMBIT_DAMAGE
+	adjustsetdamage
+	setatkhptozero
+	goto BattleScript_HitFromAtkAnimation
+
+@ Generation 6 Fairy-type moves.
+BattleScript_EffectGeomancy::
+	attackcanceler
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_SPATK | BIT_SPDEF | BIT_SPEED, 0
+	setstatchanger STAT_SPATK, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_GeomancyTrySpDef
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_GeomancyTrySpDef
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_GeomancyTrySpDef::
+	setstatchanger STAT_SPDEF, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_GeomancyTrySpeed
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_GeomancyTrySpeed
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_GeomancyTrySpeed::
+	setstatchanger STAT_SPEED, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
 BattleScript_ButItFailedAtkStringPpReduce::
 	attackstring
 BattleScript_ButItFailedPpReduce::
@@ -3582,6 +4236,25 @@ BattleScript_AtkDefDownAtkFail::
 	printfromtable gStatDownStringIds
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_AtkDefDownDefFail::
+	return
+
+BattleScript_DefSpDefDown::
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_DEF | BIT_SPDEF, STAT_CHANGE_CANT_PREVENT | STAT_CHANGE_NEGATIVE | STAT_CHANGE_MULTIPLE_STATS
+	playstatchangeanimation BS_ATTACKER, BIT_DEF, STAT_CHANGE_CANT_PREVENT | STAT_CHANGE_NEGATIVE
+	setstatchanger STAT_DEF, 1, TRUE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN | STAT_CHANGE_ALLOW_PTR, BattleScript_DefSpDefDownDefFail
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_DefSpDefDownDefFail
+	printfromtable gStatDownStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_DefSpDefDownDefFail::
+	playstatchangeanimation BS_ATTACKER, BIT_SPDEF, STAT_CHANGE_NEGATIVE | STAT_CHANGE_CANT_PREVENT
+	setstatchanger STAT_SPDEF, 1, TRUE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR | MOVE_EFFECT_CERTAIN, BattleScript_DefSpDefDownSpDefFail
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_DefSpDefDownSpDefFail
+	printfromtable gStatDownStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_DefSpDefDownSpDefFail::
 	return
 
 BattleScript_KnockedOff::

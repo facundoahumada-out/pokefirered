@@ -452,4 +452,7 @@ gSpecials::
 	def_special UpdateLoreleiDollCollection
 	def_special LoopWingFlapSound
 	def_special CreateEnemyEventMon
+	def_special GetRockClimbUsableMonPartyIndex
+	def_special PickMushroomPatch
+	def_special RefreshMushroomPatchesOnMap
 gSpecialsEnd::

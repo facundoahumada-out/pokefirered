@@ -49,6 +49,7 @@ bool8 MetatileBehavior_IsSlideEast(u8 metatileBehavior);
 bool8 MetatileBehavior_IsCounter(u8 metatileBehavior);
 bool8 MetatileBehavior_IsPlayerFacingTVScreen(u8 metatileBehavior, u8 playerDirection);
 bool8 MetatileBehavior_IsPC(u8 metatileBehavior);
+bool8 MetatileBehavior_IsMushroomPatch(u8 metatileBehavior);
 bool8 MetatileBehavior_HasRipples(u8 metatileBehavior);
 bool8 MetatileBehavior_IsPuddle(u8 metatileBehavior);
 bool8 MetatileBehavior_IsTallGrass(u8 metatileBehavior);
@@ -135,5 +136,6 @@ bool8 MetatileBehavior_IsBurglary(u8 metatileBehavior);
 bool8 MetatileBehavior_IsTrainerTowerMonitor(u8 metatileBehavior);
 bool8 MetatileBehavior_IsSecretBaseJumpMat(u8 metatileBehavior);
 bool8 MetatileBehavior_IsSecretBaseSpinMat(u8 metatileBehavior);
+bool8 MetatileBehavior_IsRockClimbable(u8 metatileBehavior);
 
 #endif // GUARD_METATILE_BEHAVIOR

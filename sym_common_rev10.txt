@@ -54,3 +54,5 @@
 	.include "m4a.o"
 	.include "agb_flash.o"
 	.include "librfu_sio32id.o"
+	.align 4
+	.include "rtc.o"

@@ -190,6 +190,10 @@
 #define SIDE_STATUS_FUTUREATTACK     (1 << 6)
 #define SIDE_STATUS_MIST             (1 << 8)
 #define SIDE_STATUS_SPIKES_DAMAGED   (1 << 9)
+#define SIDE_STATUS_TOXIC_SPIKES     (1 << 10)
+#define SIDE_STATUS_STEALTH_ROCK     (1 << 11)
+#define SIDE_STATUS_TAILWIND         (1 << 12)
+#define SIDE_STATUS_LUCKY_CHANT      (1 << 13)
 
 // Flags describing move's result
 #define MOVE_RESULT_MISSED             (1 << 0)
@@ -278,6 +282,8 @@
 #define MOVE_EFFECT_NOTHING_39          57
 #define MOVE_EFFECT_NOTHING_3A          58
 #define MOVE_EFFECT_SP_ATK_TWO_DOWN     59
+#define MOVE_EFFECT_DEF_SPDEF_DOWN      60 // Close Combat
+#define MOVE_EFFECT_RECOIL_50           61 // Head Smash
 #define NUM_MOVE_EFFECTS                60
 
 #define MOVE_EFFECT_AFFECTS_USER        (1 << 6) // 64

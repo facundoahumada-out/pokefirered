@@ -369,7 +369,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_HM07]           = {gItemIcon_TMHM, gItemIconPalette_WaterTMHM},
     [ITEM_HM08]           = {gItemIcon_TMHM, gItemIconPalette_WaterTMHM},
     // ????????
-    [ITEM_15B]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_HM09]           = {gItemIcon_TMHM, gItemIconPalette_NormalTMHM},
     [ITEM_15C]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // FireRed/LeafGreen key items
     [ITEM_OAKS_PARCEL]    = {gItemIcon_OaksParcel, gItemIconPalette_OaksParcel},
@@ -398,6 +398,28 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_POWDER_JAR]     = {gItemIcon_PowderJar, gItemIconPalette_PowderJar},
     [ITEM_RUBY]           = {gItemIcon_Gem, gItemIconPalette_Ruby},
     [ITEM_SAPPHIRE]       = {gItemIcon_Gem, gItemIconPalette_Sapphire},
+    // Mints
+    [ITEM_ADAMANT_MINT]   = {gItemIcon_Mint, gItemIconPalette_RedMint},
+    [ITEM_BOLD_MINT]      = {gItemIcon_Mint, gItemIconPalette_BlueMint},
+    [ITEM_BRAVE_MINT]     = {gItemIcon_Mint, gItemIconPalette_RedMint},
+    [ITEM_CALM_MINT]      = {gItemIcon_Mint, gItemIconPalette_PinkMint},
+    [ITEM_CAREFUL_MINT]   = {gItemIcon_Mint, gItemIconPalette_PinkMint},
+    [ITEM_GENTLE_MINT]    = {gItemIcon_Mint, gItemIconPalette_PinkMint},
+    [ITEM_HASTY_MINT]     = {gItemIcon_Mint, gItemIconPalette_GreenMint},
+    [ITEM_IMPISH_MINT]    = {gItemIcon_Mint, gItemIconPalette_BlueMint},
+    [ITEM_JOLLY_MINT]     = {gItemIcon_Mint, gItemIconPalette_GreenMint},
+    [ITEM_LAX_MINT]       = {gItemIcon_Mint, gItemIconPalette_BlueMint},
+    [ITEM_LONELY_MINT]    = {gItemIcon_Mint, gItemIconPalette_RedMint},
+    [ITEM_MILD_MINT]      = {gItemIcon_Mint, gItemIconPalette_LightBlueMint},
+    [ITEM_MODEST_MINT]    = {gItemIcon_Mint, gItemIconPalette_LightBlueMint},
+    [ITEM_NAIVE_MINT]     = {gItemIcon_Mint, gItemIconPalette_GreenMint},
+    [ITEM_NAUGHTY_MINT]   = {gItemIcon_Mint, gItemIconPalette_RedMint},
+    [ITEM_QUIET_MINT]     = {gItemIcon_Mint, gItemIconPalette_LightBlueMint},
+    [ITEM_RASH_MINT]      = {gItemIcon_Mint, gItemIconPalette_LightBlueMint},
+    [ITEM_RELAXED_MINT]   = {gItemIcon_Mint, gItemIconPalette_BlueMint},
+    [ITEM_SASSY_MINT]     = {gItemIcon_Mint, gItemIconPalette_PinkMint},
+    [ITEM_SERIOUS_MINT]   = {gItemIcon_Mint, gItemIconPalette_YellowMint},
+    [ITEM_TIMID_MINT]     = {gItemIcon_Mint, gItemIconPalette_GreenMint},
     // Return to field arrow
     [ITEMS_COUNT]         = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

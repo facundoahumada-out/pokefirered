@@ -1355,3 +1355,93 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_SmallSparkle =
 };
 
 const struct SpritePalette gSpritePalette_SmallSparkle = { .data = gFieldEffectPal_SmallSparkle, .tag = FLDEFF_PAL_TAG_SMALL_SPARKLE };
+
+static const struct SpriteFrameImage sPicTable_RockClimbBlob[] =
+{
+    overworld_frame(gFieldEffectObjectPic_RockClimbBlob, 4, 4, 0),
+    overworld_frame(gFieldEffectObjectPic_RockClimbBlob, 4, 4, 1),
+    overworld_frame(gFieldEffectObjectPic_RockClimbBlob, 4, 4, 2),
+    overworld_frame(gFieldEffectObjectPic_RockClimbBlob, 4, 4, 3),
+    overworld_frame(gFieldEffectObjectPic_RockClimbBlob, 4, 4, 4),
+    overworld_frame(gFieldEffectObjectPic_RockClimbBlob, 4, 4, 5),
+};
+
+static const union AnimCmd sRockClimbBlobAnim_FaceSouth[] =
+{
+    ANIMCMD_FRAME(0, 8),
+    ANIMCMD_FRAME(1, 8),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sRockClimbBlobAnim_FaceNorth[] =
+{
+    ANIMCMD_FRAME(2, 8),
+    ANIMCMD_FRAME(3, 8),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sRockClimbBlobAnim_FaceWest[] =
+{
+    ANIMCMD_FRAME(4, 8),
+    ANIMCMD_FRAME(5, 8),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sRockClimbBlobAnim_FaceEast[] =
+{
+    ANIMCMD_FRAME(4, 8, .hFlip = TRUE),
+    ANIMCMD_FRAME(5, 8, .hFlip = TRUE),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd *const sAnimTable_RockClimbBlob[] =
+{
+    [DIR_SOUTH - 1] = sRockClimbBlobAnim_FaceSouth,
+    [DIR_NORTH - 1] = sRockClimbBlobAnim_FaceNorth,
+    [DIR_WEST  - 1] = sRockClimbBlobAnim_FaceWest,
+    [DIR_EAST  - 1] = sRockClimbBlobAnim_FaceEast,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_RockClimbBlob =
+{
+    .tileTag = TAG_NONE,
+    .paletteTag = TAG_NONE,
+    .oam = &gObjectEventBaseOam_32x32,
+    .anims = sAnimTable_RockClimbBlob,
+    .images = sPicTable_RockClimbBlob,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateSurfBlobFieldEffect,
+};
+
+static const struct SpriteFrameImage sPicTable_RockClimbDust[] =
+{
+    overworld_frame(gFieldEffectObjectPic_RockClimbDust, 4, 4, 0),
+    overworld_frame(gFieldEffectObjectPic_RockClimbDust, 4, 4, 1),
+    overworld_frame(gFieldEffectObjectPic_RockClimbDust, 4, 4, 2),
+};
+
+static const union AnimCmd sAnim_RockClimbDust[] =
+{
+    ANIMCMD_FRAME(0, 12),
+    ANIMCMD_FRAME(1, 12),
+    ANIMCMD_FRAME(2, 12),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sAnimTable_RockClimbDust[] =
+{
+    sAnim_RockClimbDust,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_RockClimbDust =
+{
+    .tileTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_DUST_CLOUD,
+    .oam = &gObjectEventBaseOam_32x32,
+    .anims = sAnimTable_RockClimbDust,
+    .images = sPicTable_RockClimbDust,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateJumpImpactEffect,
+};
+
+const struct SpritePalette gSpritePalette_BigDust = { .data = gFieldEffectPal_DustCloud, .tag = FLDEFF_PAL_TAG_DUST_CLOUD };

@@ -413,6 +413,14 @@ bool8 MetatileBehavior_IsPC(u8 metatileBehavior)
         return FALSE;
 }
 
+bool8 MetatileBehavior_IsMushroomPatch(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_MUSHROOM_PATCH)
+        return TRUE;
+    else
+        return FALSE;
+}
+
 bool8 MetatileBehavior_HasRipples(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_POND_WATER || metatileBehavior == MB_PUDDLE)
@@ -1033,6 +1041,14 @@ bool8 MetatileBehavior_IsBurglary(u8 metatileBehavior)
 bool8 MetatileBehavior_IsTrainerTowerMonitor(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_TRAINER_TOWER_MONITOR)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsRockClimbable(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_ROCK_CLIMB)
         return TRUE;
     else
         return FALSE;

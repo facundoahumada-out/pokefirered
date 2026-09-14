@@ -1171,6 +1171,7 @@ extern const u8 CableClub_Text_CanMakeBerryPowder[];
 extern const u8 EventScript_PC[];
 
 extern const u8 EventScript_RepelWoreOff[];
+extern const u8 EventScript_PickMushroomPatch[];
 
 // battle_message
 extern const u8 Text_MonSentToBoxInSomeonesPC[];
@@ -1234,6 +1235,7 @@ extern const u8 EventScript_CurrentTooFast[];
 extern const u8 EventScript_UseSurf[];
 extern const u8 EventScript_Waterfall[];
 extern const u8 EventScript_CantUseWaterfall[];
+extern const u8 EventScript_UseRockClimb[];
 extern const u8 EventScript_VsSeekerChargingDone[];
 extern const u8 EventScript_FieldPoison[];
 extern const u8 EventScript_EggHatch[];

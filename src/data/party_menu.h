@@ -659,6 +659,7 @@ static const u8 *const sFieldMoveDescriptionTable[] =
     [FIELD_MOVE_MILK_DRINK]  = gText_ShareHp,
     [FIELD_MOVE_SOFT_BOILED] = gText_ShareHp,
     [FIELD_MOVE_SWEET_SCENT] = gText_LureWildPokemon,
+    [FIELD_MOVE_ROCK_CLIMB]  = gText_ClimbASteepRockFace,
 };
 
 static const u32 sHeldItemGfx[] = INCBIN_U32("graphics/party_menu/hold_icons.4bpp");
@@ -1027,6 +1028,7 @@ static const u16 sTMHMMoves_Duplicate[] =
     MOVE_ROCK_SMASH,
     MOVE_WATERFALL,
     MOVE_DIVE,
+    MOVE_ROCK_CLIMB,
 };
 
 enum
@@ -1088,6 +1090,7 @@ static struct
     [CURSOR_OPTION_FIELD_MOVES + FIELD_MOVE_MILK_DRINK]  = {gMoveNames[MOVE_MILK_DRINK],  CursorCB_FieldMove},
     [CURSOR_OPTION_FIELD_MOVES + FIELD_MOVE_SOFT_BOILED] = {gMoveNames[MOVE_SOFT_BOILED], CursorCB_FieldMove},
     [CURSOR_OPTION_FIELD_MOVES + FIELD_MOVE_SWEET_SCENT] = {gMoveNames[MOVE_SWEET_SCENT], CursorCB_FieldMove},
+    [CURSOR_OPTION_FIELD_MOVES + FIELD_MOVE_ROCK_CLIMB]  = {gMoveNames[MOVE_ROCK_CLIMB],  CursorCB_FieldMove},
 };
 
 static const u8 sPartyMenuAction_SummarySwitchCancel[]   = {CURSOR_OPTION_SUMMARY,  CURSOR_OPTION_SWITCH,    CURSOR_OPTION_CANCEL1};
@@ -1158,7 +1161,22 @@ static const u8 sPartyMenuActionCounts[] =
 static const u16 sFieldMoves[] =
 {
     MOVE_FLASH, MOVE_CUT, MOVE_FLY, MOVE_STRENGTH, MOVE_SURF, MOVE_ROCK_SMASH, MOVE_WATERFALL, MOVE_TELEPORT,
-    MOVE_DIG, MOVE_MILK_DRINK, MOVE_SOFT_BOILED, MOVE_SWEET_SCENT, FIELD_MOVE_END // this may be misuse of enum. same in emerald
+    MOVE_DIG, MOVE_MILK_DRINK, MOVE_SOFT_BOILED, MOVE_SWEET_SCENT, MOVE_ROCK_CLIMB, FIELD_MOVE_END // this may be misuse of enum. same in emerald
+};
+
+// HM item associated with each HM field move (FIELD_MOVE_FLASH..FIELD_MOVE_WATERFALL).
+// Using these field moves only requires owning the HM and having a Pokémon able to learn it,
+// not having the move taught to the Pokémon.
+static const u16 sFieldMoveHmItems[] =
+{
+    [FIELD_MOVE_FLASH]      = ITEM_HM05_FLASH,
+    [FIELD_MOVE_CUT]        = ITEM_HM01_CUT,
+    [FIELD_MOVE_FLY]        = ITEM_HM02_FLY,
+    [FIELD_MOVE_STRENGTH]   = ITEM_HM04_STRENGTH,
+    [FIELD_MOVE_SURF]       = ITEM_HM03_SURF,
+    [FIELD_MOVE_ROCK_SMASH] = ITEM_HM06_ROCK_SMASH,
+    [FIELD_MOVE_WATERFALL]  = ITEM_HM07_WATERFALL,
+    [FIELD_MOVE_ROCK_CLIMB] = ITEM_HM09_ROCK_CLIMB,
 };
 
 static struct
@@ -1179,6 +1197,7 @@ static struct
     [FIELD_MOVE_MILK_DRINK]   = {SetUpFieldMove_SoftBoiled,  PARTY_MSG_NOT_ENOUGH_HP},
     [FIELD_MOVE_SOFT_BOILED]  = {SetUpFieldMove_SoftBoiled,  PARTY_MSG_NOT_ENOUGH_HP},
     [FIELD_MOVE_SWEET_SCENT]  = {SetUpFieldMove_SweetScent,  PARTY_MSG_CANT_USE_HERE},
+    [FIELD_MOVE_ROCK_CLIMB]   = {SetUpFieldMove_RockClimb,   PARTY_MSG_CANT_USE_HERE},
 };
 
 static const u8 *const sUnionRoomTradeMessages[] =
@@ -1254,4 +1273,5 @@ static const u16 sTMHMMoves[] =
     MOVE_ROCK_SMASH,
     MOVE_WATERFALL,
     MOVE_DIVE,
+    MOVE_ROCK_CLIMB,
 };

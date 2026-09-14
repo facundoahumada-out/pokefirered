@@ -89,6 +89,27 @@
 #define VARIOUS_RETURN_OPPONENT_MON2            10
 #define VARIOUS_CHECK_POKEFLUTE                 11
 #define VARIOUS_WAIT_FANFARE                    12
+#define VARIOUS_WORRY_SEED                      13
+#define VARIOUS_POWER_SWAP                      14
+#define VARIOUS_GUARD_SWAP                      15
+#define VARIOUS_HEART_SWAP                      16
+#define VARIOUS_GYRO_BALL_POWER                 17
+#define VARIOUS_WRING_OUT_POWER                 18
+#define VARIOUS_TRUMP_CARD_POWER                19
+#define VARIOUS_PUNISHMENT_POWER                20
+#define VARIOUS_PAYBACK_POWER                   21
+#define VARIOUS_SUCKER_PUNCH_CHECK              22
+#define VARIOUS_GUARD_SPLIT                     23
+#define VARIOUS_POWER_SPLIT                     24
+#define VARIOUS_VENOSHOCK_POWER                 25
+#define VARIOUS_ELECTRO_BALL_POWER              26
+#define VARIOUS_STORED_POWER_POWER              27
+#define VARIOUS_HEX_POWER                       28
+#define VARIOUS_ACROBATICS_POWER                29
+#define VARIOUS_SIMPLE_BEAM                     30
+#define VARIOUS_ENTRAINMENT                     31
+#define VARIOUS_CLEAR_SMOG_RESET                32
+#define VARIOUS_FINAL_GAMBIT_DAMAGE             33
 
 // Cmd_manipulatedmg
 #define DMG_CHANGE_SIGN            0

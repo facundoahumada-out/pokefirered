@@ -12,6 +12,7 @@
 #include "battle.h"
 #include "fieldmap.h"
 #include "field_specials.h"
+#include "item.h"
 #include "region_map.h"
 #include "task.h"
 #include "battle_tower.h"
@@ -2056,7 +2057,7 @@ bool8 UsedPokemonCenterWarp(void)
 bool8 BufferTMHMMoveName(void)
 {
     // 8004 = item ID
-    if (gSpecialVar_0x8004 >= ITEM_TM01 && gSpecialVar_0x8004 <= ITEM_HM08)
+    if (gSpecialVar_0x8004 >= ITEM_TM01 && gSpecialVar_0x8004 <= ITEM_HM09)
     {
         StringCopy(gStringVar1, gMoveNames[ItemIdToBattleMoveId(gSpecialVar_0x8004)]);
         return TRUE;
@@ -2465,6 +2466,27 @@ bool8 IsBadEggInParty(void)
             return TRUE;
     }
     return FALSE;
+}
+
+// Rock Climb is a Hidden Machine: using it in the field only requires owning
+// HM09 and having a compatible Pokémon in the party, not having taught it the move.
+u8 GetRockClimbUsableMonPartyIndex(void)
+{
+    u8 i;
+
+    if (!CheckBagHasItem(ITEM_HM09_ROCK_CLIMB, 1))
+        return PARTY_SIZE;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL);
+        if (!species)
+            break;
+        if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG, NULL)
+            && CanMonLearnTMHM(&gPlayerParty[i], ITEM_HM09_ROCK_CLIMB - ITEM_TM01_FOCUS_PUNCH))
+            return i;
+    }
+    return PARTY_SIZE;
 }
 
 bool8 IsPlayerNotInTrainerTowerLobby(void)

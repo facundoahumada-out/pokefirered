@@ -3,6 +3,7 @@
 PalletTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PalletTown_OnFrame
+	map_script MAP_SCRIPT_ON_RESUME, MushroomPatch_OnResume
 	.byte 0
 
 PalletTown_OnTransition::
@@ -388,6 +389,30 @@ PalletTown_Movement_SignLadyMoveOutOfWayLeft::
 
 PalletTown_EventScript_FatMan::
 	msgbox PalletTown_Text_CanStoreItemsAndMonsInPC, MSGBOX_NPC
+	additem ITEM_HM09_ROCK_CLIMB
+	setvar VAR_MOM_SHOES, 1
+	additem ITEM_ADAMANT_MINT
+	additem ITEM_BOLD_MINT
+	additem ITEM_BRAVE_MINT
+	additem ITEM_CALM_MINT
+	additem ITEM_CAREFUL_MINT
+	additem ITEM_GENTLE_MINT
+	additem ITEM_HASTY_MINT
+	additem ITEM_IMPISH_MINT
+	additem ITEM_JOLLY_MINT
+	additem ITEM_LAX_MINT
+	additem ITEM_LONELY_MINT
+	additem ITEM_MILD_MINT
+	additem ITEM_MODEST_MINT
+	additem ITEM_NAIVE_MINT
+	additem ITEM_NAUGHTY_MINT
+	additem ITEM_QUIET_MINT
+	additem ITEM_RASH_MINT
+	additem ITEM_RELAXED_MINT
+	additem ITEM_SASSY_MINT
+	additem ITEM_SERIOUS_MINT
+	additem ITEM_TIMID_MINT
+	release
 	end
 
 PalletTown_EventScript_OaksLabSign::
@@ -447,3 +472,116 @@ PalletTown_EventScript_SignLadyStartShowSign::
 	call PalletTown_EventScript_SignLadyShowSign
 	release
 	end
+
+PalletTown_EventScript_TriggerMomGiveRunningShoes_left::
+	lockall
+	setvar VAR_TEMP_4, 0
+	call PalletTown_EventScript_VarMomGiveRunningShoes
+	releaseall
+	end
+
+PalletTown_EventScript_TriggerMomGiveRunningShoes_right::
+	lockall
+	setvar VAR_TEMP_4, 1
+	call PalletTown_EventScript_VarMomGiveRunningShoes
+	releaseall
+	end
+
+PalletTown_EventScript_VarMomGiveRunningShoes::
+	lockall
+	goto_if_eq VAR_MOM_SHOES, 1, PalletTown_EventScript_TriggerMomGiveRunningShoes
+	releaseall
+	end
+
+
+PalletTown_EventScript_TriggerMomGiveRunningShoes::
+	lockall
+	@ playse SE_RS_DOOR
+	opendoor 6, 7
+	waitdooranim
+	addobject LOCALID_PALLET_MOM
+	closedoor 6, 7
+	waitdooranim
+	playse SE_PIN
+	waitse
+	textcolor NPC_TEXT_COLOR_FEMALE
+	message PalletTown_Text_MomDontGoOut 
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	playse SE_PIN
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 30
+	goto_if_eq VAR_TEMP_4, 0, PalletTown_EventScript_MomGiveRunningShoesMoveLeft
+	goto_if_eq VAR_TEMP_4, 1, PalletTown_EventScript_MomGiveRunningShoesMoveRight
+	releaseall
+	end
+
+PalletTown_EventScript_TriggerMomGiveRunningShoes2::
+	lockall
+	message PalletTown_Text_MomGiveRunningShoes
+	waitmessage
+	playfanfare MUS_OBTAIN_KEY_ITEM
+	message PalletTown_Text_MomGiveRunningShoes2
+	waitmessage
+	waitfanfare
+	setflag FLAG_SYS_B_DASH
+	setvar VAR_MOM_SHOES, 0
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_PALLET_MOM
+	setflag FLAG_HIDE_MOM
+	delay 30
+	fadescreen FADE_FROM_BLACK
+	setvar VAR_MOM_SHOES, 0
+	releaseall
+	end
+
+PalletTown_EventScript_MomGiveRunningShoesMoveLeft::
+	applymovement LOCALID_PALLET_MOM, PalletTown_Momvement_MomGiveRunningShoes_left
+	waitmovement 0
+	call PalletTown_EventScript_TriggerMomGiveRunningShoes2
+	releaseall
+	end
+
+PalletTown_EventScript_MomGiveRunningShoesMoveRight::
+	applymovement LOCALID_PALLET_MOM, PalletTown_Momvement_MomGiveRunningShoes_right
+	waitmovement 0
+	call PalletTown_EventScript_TriggerMomGiveRunningShoes2
+	releaseall
+	end
+
+PalletTown_Momvement_MomGiveRunningShoes_left::
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up	
+	face_up
+	step_end
+
+PalletTown_Momvement_MomGiveRunningShoes_right::
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right	
+	face_up
+	step_end
+	

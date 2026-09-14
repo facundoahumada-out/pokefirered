@@ -99,6 +99,10 @@ static void CreatePokerusIconObj(u16, u16);
 static void PokeSum_CreateMonMarkingsSprite(void);
 static void CreateMoveSelectionCursorObjs(u16, u16);
 static void CreateMonStatusIconObj(u16, u16);
+static void CreateCategoryIconObj(u16, u16);
+static void DestroyCategoryIconObj(void);
+static void UpdateCategoryIconObj(void);
+static void ShowOrHideCategoryIconObj(bool8 invisible);
 static void CreateHpBarObjs(u16, u16);
 static void CreateExpBarObjs(u16, u16);
 static void CreateBallIconObj(void);
@@ -314,10 +318,18 @@ struct ShinyStarObjData
     u16 palTag; /* 0x06 */
 };
 
+struct CategoryIconObj
+{
+    struct Sprite *sprite; /* 0x00 */
+    u16 tileTag; /* 0x04 */
+    u16 palTag; /* 0x06 */
+};
+
 static EWRAM_DATA struct PokemonSummaryScreenData * sMonSummaryScreen = NULL;
 static EWRAM_DATA struct Struct203B144 * sMonSkillsPrinterXpos = NULL;
 static EWRAM_DATA struct MoveSelectionCursor * sMoveSelectionCursorObjs[4] = {};
 static EWRAM_DATA struct MonStatusIconObj * sStatusIcon = NULL;
+static EWRAM_DATA struct CategoryIconObj * sCategoryIcon = NULL;
 static EWRAM_DATA struct HpBarObjs * sHpBarObjs = NULL;
 static EWRAM_DATA struct ExpBarObjs * sExpBarObjs = NULL;
 static EWRAM_DATA struct PokerusIconObj * sPokerusIconObj = NULL;
@@ -337,6 +349,8 @@ extern const u32 gSummaryScreen_Bg_Gfx[];
 extern const u16 gSummaryScreen_HpExpBar_Pal[];
 extern const u32 gSummaryScreen_StatusAilmentIcon_Gfx[];
 extern const u16 gSummaryScreen_StatusAilmentIcon_Pal[];
+extern const u32 gSummaryScreen_CategoryIcon_Gfx[];
+extern const u16 gSummaryScreen_CategoryIcon_Pal[];
 extern const u32 gSummaryScreen_HpBar_Gfx[];
 extern const u32 gSummaryScreen_ExpBar_Gfx[];
 
@@ -454,6 +468,47 @@ static const union AnimCmd * const sStatusAilmentIconAnimTable[] =
     sStatusAilmentIconAnim_PKRS,
     sStatusAilmentIconAnim_FNT,
     sStatusAilmentIconAnim_Blank
+};
+
+// Shows which of Physical/Special/Status a move's damage category is, on the Moves page.
+static const struct OamData sCategoryIconOamData = {
+    .y = 0,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = FALSE,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(32x16),
+    .x = 0,
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(32x16),
+    .tileNum = 0,
+    .priority = 0,
+    .paletteNum = 0
+};
+
+static const union AnimCmd sCategoryIconAnim_Physical[] =
+{
+    ANIMCMD_FRAME(0, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sCategoryIconAnim_Special[] =
+{
+    ANIMCMD_FRAME(8, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sCategoryIconAnim_Status[] =
+{
+    ANIMCMD_FRAME(16, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd * const sCategoryIconAnimTable[] =
+{
+    [SPLIT_PHYSICAL] = sCategoryIconAnim_Physical,
+    [SPLIT_SPECIAL]  = sCategoryIconAnim_Special,
+    [SPLIT_STATUS]   = sCategoryIconAnim_Status,
 };
 
 static const struct OamData sHpOrExpBarOamData = {
@@ -915,6 +970,29 @@ static const u8 sLevelNickTextColors[][3] =
     {0, 2, 3},
     {0, 11, 10},
 };
+
+// Colors for the Atk/Def/Sp.Atk/Sp.Def/Speed values on the Skills page,
+// tinted by whether the mon's nature raises or lowers that stat.
+// Indices 1 and 7 belong to gMenuInfoElements2_Pal (loaded at BG_PLTT_ID(6),
+// the same palette POKESUM_WIN_RIGHT_PANE uses), where they're the Fire (red)
+// and Water (blue) type colors.
+enum
+{
+    STAT_COLOR_NEUTRAL,
+    STAT_COLOR_RAISED,
+    STAT_COLOR_LOWERED,
+};
+
+static const u8 sStatValueTextColors[][3] =
+{
+    [STAT_COLOR_NEUTRAL] = {0, 14, 10},
+    [STAT_COLOR_RAISED]  = {0, 7, 10},
+    [STAT_COLOR_LOWERED] = {0, 1, 10},
+};
+
+// A nature's index encodes its raised/lowered stat as (raisedStat * NUM_NATURE_STATS + loweredStat),
+// in the order Atk, Def, Speed, Sp.Atk, Sp.Def. This maps that order to PSS_STAT_* (Atk, Def, Sp.Atk, Sp.Def, Speed).
+static const u8 sNatureStatToPssStat[NUM_NATURE_STATS] = {PSS_STAT_ATK, PSS_STAT_DEF, PSS_STAT_SPE, PSS_STAT_SPA, PSS_STAT_SPD};
 
 static const u8 ALIGNED(4) sMultiBattlePartyOrder[] =
 {
@@ -2333,6 +2411,9 @@ static u8 PokeSum_HandleCreateSprites(void)
     case 8:
         PokeSum_CreateMonIconSprite();
         break;
+    case 9:
+        CreateCategoryIconObj(TAG_PSS_CATEGORY_ICON, TAG_PSS_CATEGORY_ICON);
+        break;
     default:
         PokeSum_CreateMonPicSprite();
         return TRUE;
@@ -2498,12 +2579,26 @@ static void PrintInfoPage(void)
 
 static void PrintSkillsPage(void)
 {
+    u8 nature = GetNature(&sMonSummaryScreen->currentMon, TRUE);
+    u8 raisedStat = nature / NUM_NATURE_STATS;
+    u8 loweredStat = nature % NUM_NATURE_STATS;
+    const u8 *statColors[NUM_NATURE_STATS];
+    u8 i;
+
+    for (i = 0; i < NUM_NATURE_STATS; i++)
+        statColors[i] = sStatValueTextColors[STAT_COLOR_NEUTRAL];
+    if (raisedStat != loweredStat)
+    {
+        statColors[sNatureStatToPssStat[raisedStat]] = sStatValueTextColors[STAT_COLOR_RAISED];
+        statColors[sNatureStatToPssStat[loweredStat]] = sStatValueTextColors[STAT_COLOR_LOWERED];
+    }
+
     AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 14 + sMonSkillsPrinterXpos->curHpStr, 4, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.curHpStrBuf);
-    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 50 + sMonSkillsPrinterXpos->atkStr, 22, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_ATK]);
-    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 50 + sMonSkillsPrinterXpos->defStr, 35, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_DEF]);
-    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 50 + sMonSkillsPrinterXpos->spAStr, 48, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_SPA]);
-    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 50 + sMonSkillsPrinterXpos->spDStr, 61, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_SPD]);
-    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 50 + sMonSkillsPrinterXpos->speStr, 74, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_SPE]);
+    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 50 + sMonSkillsPrinterXpos->atkStr, 22, statColors[PSS_STAT_ATK], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_ATK]);
+    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 50 + sMonSkillsPrinterXpos->defStr, 35, statColors[PSS_STAT_DEF], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_DEF]);
+    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 50 + sMonSkillsPrinterXpos->spAStr, 48, statColors[PSS_STAT_SPA], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_SPA]);
+    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 50 + sMonSkillsPrinterXpos->spDStr, 61, statColors[PSS_STAT_SPD], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_SPD]);
+    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 50 + sMonSkillsPrinterXpos->speStr, 74, statColors[PSS_STAT_SPE], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_SPE]);
     AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 15 + sMonSkillsPrinterXpos->expStr, 87, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.expPointsStrBuf);
     AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 15 + sMonSkillsPrinterXpos->toNextLevel, 100, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.expToNextLevelStrBuf);
 }
@@ -2617,7 +2712,7 @@ static void PokeSum_PrintTrainerMemo_Mon_HeldByOT(void)
     u8 natureMetOrHatchedAtLevelStr[152];
 
     DynamicPlaceholderTextUtil_Reset();
-    nature = GetNature(&sMonSummaryScreen->currentMon);
+    nature = GetNature(&sMonSummaryScreen->currentMon, TRUE);
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gNatureNamePointers[nature]);
     level = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MET_LEVEL);
 
@@ -2691,7 +2786,7 @@ static void PokeSum_PrintTrainerMemo_Mon_NotHeldByOT(void)
     u8 natureMetOrHatchedAtLevelStr[152];
 
     DynamicPlaceholderTextUtil_Reset();
-    nature = GetNature(&sMonSummaryScreen->currentMon);
+    nature = GetNature(&sMonSummaryScreen->currentMon, TRUE);
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gNatureNamePointers[nature]);
 
     level = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MET_LEVEL);
@@ -2892,6 +2987,7 @@ static void PokeSum_PrintAbilityDataOrMoveTypes(void)
         break;
     }
 
+    UpdateCategoryIconObj();
     PutWindowTilemap(sMonSummaryScreen->windowIds[5]);
 }
 
@@ -4389,6 +4485,84 @@ static void ShowOrHideStatusIcon(u8 invisible)
     }
 }
 
+static void CreateCategoryIconObj(u16 tileTag, u16 palTag)
+{
+    u16 spriteId;
+    void *gfxBufferPtr;
+
+    sCategoryIcon = AllocZeroed(sizeof(struct CategoryIconObj));
+    gfxBufferPtr = AllocZeroed(0x20 * 24);
+
+    LZ77UnCompWram(gSummaryScreen_CategoryIcon_Gfx, gfxBufferPtr);
+
+    if (sCategoryIcon != NULL)
+    {
+        struct SpriteSheet sheet = {
+            .data = gfxBufferPtr,
+            .size = 0x20 * 24,
+            .tag = tileTag
+        };
+
+        struct SpritePalette palette = {.data = gSummaryScreen_CategoryIcon_Pal, .tag = palTag};
+        struct SpriteTemplate template = {
+            .tileTag = tileTag,
+            .paletteTag = palTag,
+            .oam = &sCategoryIconOamData,
+            .anims = sCategoryIconAnimTable,
+            .images = NULL,
+            .affineAnims = gDummySpriteAffineAnimTable,
+            .callback = SpriteCallbackDummy,
+        };
+
+        LoadSpriteSheet(&sheet);
+        LoadSpritePalette(&palette);
+
+        spriteId = CreateSprite(&template, 104, 58, 0);
+        sCategoryIcon->sprite = &gSprites[spriteId];
+        sCategoryIcon->tileTag = tileTag;
+        sCategoryIcon->palTag = palTag;
+    }
+
+    ShowOrHideCategoryIconObj(TRUE);
+    FREE_AND_SET_NULL_IF_SET(gfxBufferPtr);
+}
+
+static void DestroyCategoryIconObj(void)
+{
+    if (sCategoryIcon->sprite != NULL)
+        DestroySpriteAndFreeResources(sCategoryIcon->sprite);
+
+    FREE_AND_SET_NULL_IF_SET(sCategoryIcon);
+}
+
+static void UpdateCategoryIconObj(void)
+{
+    u16 move;
+
+    if (sMonSummaryScreen->curPageIndex != PSS_PAGE_MOVES_INFO
+     || sMoveSelectionCursorPos >= 5
+     || (sMonSummaryScreen->mode != PSS_MODE_SELECT_MOVE && sMoveSelectionCursorPos == 4))
+    {
+        ShowOrHideCategoryIconObj(TRUE);
+        return;
+    }
+
+    move = sMonSummaryScreen->moveIds[sMoveSelectionCursorPos];
+    if (move == MOVE_NONE)
+    {
+        ShowOrHideCategoryIconObj(TRUE);
+        return;
+    }
+
+    StartSpriteAnim(sCategoryIcon->sprite, gBattleMoves[move].split);
+    ShowOrHideCategoryIconObj(FALSE);
+}
+
+static void ShowOrHideCategoryIconObj(u8 invisible)
+{
+    sCategoryIcon->sprite->invisible = invisible;
+}
+
 static void CreateHpBarObjs(u16 tileTag, u16 palTag)
 {
     u8 i;
@@ -4857,6 +5031,7 @@ static void PokeSum_DestroySprites(void)
     DestroyMonStatusIconObj();
     DestroyPokerusIconObj();
     DestroyShinyStarObj();
+    DestroyCategoryIconObj();
     ResetSpriteData();
 }
 

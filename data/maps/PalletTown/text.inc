@@ -65,3 +65,22 @@ PalletTown_Text_OakYouEnjoyingTraveling::
     .string "Good for you, good for you.\n"
     .string "Hohoho.$"
 
+
+PalletTown_Text_MomDontGoOut::
+    .string "Mom: Hey! Wait!\n"
+    .string "Don't go yet!$"
+
+PalletTown_Text_MomGiveRunningShoes::
+    .string "Mom: Wow! You and your Pokémon\n"
+    .string "make a great team!\p"
+    .string "Now that you have your Pokédex\n"
+    .string "your adventure is just beginning!\p"
+    .string "Here, take these Running Shoes\n"
+    .string "with you. They'll be very useful\n"
+    .string "on your journey.$"
+
+PalletTown_Text_MomGiveRunningShoes2::
+    .string "Mom: And don't forget to wear them!\n"
+    .string "They're essential for every Trainer!\p"
+    .string "Come home every now and then and\n"
+    .string "show me how you're doing!$"

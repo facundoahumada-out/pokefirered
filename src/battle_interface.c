@@ -935,7 +935,7 @@ static void PrintSafariMonInfo(u8 healthboxSpriteId, struct Pokemon *mon)
 
     barFontGfx = &gMonSpritesGfxPtr->barFontGfx[0x520 + (GetBattlerPosition(gSprites[healthboxSpriteId].sBattlerId) * 384)];
     var = 5;
-    nature = GetNature(mon);
+    nature = GetNature(mon, FALSE);
     StringCopy(text + 6, gNatureNamePointers[nature]);
     RenderTextHandleBold(barFontGfx, 0, text, 0, 0, 0, 0, 0);
 
@@ -2237,4 +2237,89 @@ static void SafariTextIntoHealthboxObject(void *dest, u8 *windowTileData, u32 wi
 {
     CpuCopy32(windowTileData, dest, windowWidth * TILE_SIZE_4BPP);
     CpuCopy32(windowTileData + 256, dest + 256, windowWidth * TILE_SIZE_4BPP);
+}
+
+// Icono de categoría (Físico/Especial/Estado) mostrado junto al tipo del movimiento
+// seleccionado en la pantalla de elección de ataque.
+extern const u32 gSummaryScreen_CategoryIcon_Gfx[];
+extern const u16 gSummaryScreen_CategoryIcon_Pal[];
+
+static const struct OamData sMoveSelectionCategoryIconOamData =
+{
+    .y = 0,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = FALSE,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(32x16),
+    .x = 0,
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(32x16),
+    .tileNum = 0,
+    .priority = 0,
+    .paletteNum = 0
+};
+
+static const union AnimCmd sMoveSelectionCategoryIconAnim_Physical[] = { ANIMCMD_FRAME(0, 0), ANIMCMD_END };
+static const union AnimCmd sMoveSelectionCategoryIconAnim_Special[] = { ANIMCMD_FRAME(8, 0), ANIMCMD_END };
+static const union AnimCmd sMoveSelectionCategoryIconAnim_Status[] = { ANIMCMD_FRAME(16, 0), ANIMCMD_END };
+
+static const union AnimCmd * const sMoveSelectionCategoryIconAnimTable[] =
+{
+    [SPLIT_PHYSICAL] = sMoveSelectionCategoryIconAnim_Physical,
+    [SPLIT_SPECIAL]  = sMoveSelectionCategoryIconAnim_Special,
+    [SPLIT_STATUS]   = sMoveSelectionCategoryIconAnim_Status,
+};
+
+static const struct CompressedSpriteSheet sMoveSelectionCategoryIconSheet =
+{
+    .data = gSummaryScreen_CategoryIcon_Gfx,
+    .size = 0x20 * 24,
+    .tag = TAG_MOVE_CATEGORY_ICON
+};
+
+static const struct SpritePalette sMoveSelectionCategoryIconPalette =
+{
+    .data = gSummaryScreen_CategoryIcon_Pal,
+    .tag = TAG_MOVE_CATEGORY_ICON
+};
+
+static const struct SpriteTemplate sMoveSelectionCategoryIconSpriteTemplate =
+{
+    .tileTag = TAG_MOVE_CATEGORY_ICON,
+    .paletteTag = TAG_MOVE_CATEGORY_ICON,
+    .oam = &sMoveSelectionCategoryIconOamData,
+    .anims = sMoveSelectionCategoryIconAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+
+// Nota: sin inicializador explícito para que quede en .bss (arranca en 0/FALSE);
+// este proyecto no reserva espacio para .data inicializado con valores != 0.
+static bool8 sMoveSelectionCategoryIconActive;
+static u8 sMoveSelectionCategoryIconSpriteId;
+
+void UpdateMoveSelectionCategoryIcon(u8 split)
+{
+    if (!sMoveSelectionCategoryIconActive)
+    {
+        LoadCompressedSpriteSheetUsingHeap(&sMoveSelectionCategoryIconSheet);
+        LoadSpritePalette(&sMoveSelectionCategoryIconPalette);
+        sMoveSelectionCategoryIconSpriteId = CreateSprite(&sMoveSelectionCategoryIconSpriteTemplate, 184, 144, 0);
+        if (sMoveSelectionCategoryIconSpriteId == MAX_SPRITES)
+            return;
+        sMoveSelectionCategoryIconActive = TRUE;
+    }
+    StartSpriteAnim(&gSprites[sMoveSelectionCategoryIconSpriteId], split);
+    gSprites[sMoveSelectionCategoryIconSpriteId].invisible = FALSE;
+}
+
+void DestroyMoveSelectionCategoryIcon(void)
+{
+    if (sMoveSelectionCategoryIconActive)
+    {
+        DestroySpriteAndFreeResources(&gSprites[sMoveSelectionCategoryIconSpriteId]);
+        sMoveSelectionCategoryIconActive = FALSE;
+    }
 }

@@ -283,3 +283,32 @@ EventScript_FailSweetScent::
 
 Text_LooksLikeNothingHere::
 	.string "Looks like there's nothing here…$"
+
+EventScript_UseRockClimb::
+	lockall
+	specialvar VAR_RESULT, GetRockClimbUsableMonPartyIndex
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantRockClimb
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	setfieldeffectargument 0, VAR_RESULT
+	msgbox Text_WantToRockClimb, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_EndRockClimb
+	msgbox Text_MonUsedRockClimb
+	dofieldeffect FLDEFF_USE_ROCK_CLIMB
+	goto EventScript_EndRockClimb
+
+EventScript_CantRockClimb::
+	msgbox Text_CantRockClimb
+EventScript_EndRockClimb:
+	releaseall
+	end
+
+Text_WantToRockClimb::
+	.string "The cliff is steep.\n"
+	.string "Would you like to use ROCK CLIMB?$"
+
+Text_MonUsedRockClimb::
+	.string "{STR_VAR_1} used ROCK CLIMB!$"
+
+Text_CantRockClimb::
+	.string "The cliff is steep.\n"
+	.string "A POKéMON may be able to climb it.$"

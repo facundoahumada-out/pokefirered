@@ -52,7 +52,7 @@ $(TILESETGFXDIR)/secondary/berry_forest/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 101 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/sevii_islands_45/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 374 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 384 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/pokemon_league/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 340 -Wnum_tiles
@@ -94,7 +94,7 @@ $(TILESETGFXDIR)/secondary/pokemon_tower/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 128 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/school/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 50 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 65 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/dummy_3/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 2 -Wnum_tiles
@@ -160,7 +160,7 @@ $(TILESETGFXDIR)/secondary/cerulean_city/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 158 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/fuchsia_city/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 191 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 192 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/mart/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 36 -Wnum_tiles

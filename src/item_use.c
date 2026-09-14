@@ -910,6 +910,12 @@ void FieldUseFunc_OakStopsYou(u8 taskId)
         PrintNotTheTimeToUseThat(taskId, gTasks[taskId].data[3]);
 }
 
+void FieldUseFunc_Mints(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_Mints;
+    DoSetUpItemUseCallback(taskId);
+}
+
 void ItemUse_SetQuestLogEvent(u8 eventId, struct Pokemon *pokemon, u16 itemId, u16 param)
 {
     struct QuestLogEvent_Item *data = Alloc(sizeof(*data));

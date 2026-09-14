@@ -1208,6 +1208,9 @@ const u32 gEasyChatRectangleCursor_Gfx[] = INCBIN_U32("graphics/easy_chat/rectan
 const u16 gSummaryScreen_StatusAilmentIcon_Pal[] = INCBIN_U16("graphics/summary_screen/status_ailment_icons.gbapal");
 const u32 gSummaryScreen_StatusAilmentIcon_Gfx[] = INCBIN_U32("graphics/summary_screen/status_ailment_icons.4bpp.lz");
 
+const u16 gSummaryScreen_CategoryIcon_Pal[] = INCBIN_U16("graphics/summary_screen/category_icons.gbapal");
+const u32 gSummaryScreen_CategoryIcon_Gfx[] = INCBIN_U32("graphics/summary_screen/category_icons.4bpp.lz");
+
 const u16 gDexScreen_TopMenuIconPals_AtoZ[] = INCBIN_U16("graphics/pokedex/cat_icon_abc.gbapal");
 const u32 gDexScreen_TopMenuIconTiles_AtoZ[] = INCBIN_U32("graphics/pokedex/cat_icon_abc.4bpp.lz");
 
