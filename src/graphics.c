@@ -1210,6 +1210,7 @@ const u32 gSummaryScreen_StatusAilmentIcon_Gfx[] = INCBIN_U32("graphics/summary_
 
 const u16 gSummaryScreen_CategoryIcon_Pal[] = INCBIN_U16("graphics/summary_screen/category_icons.gbapal");
 const u32 gSummaryScreen_CategoryIcon_Gfx[] = INCBIN_U32("graphics/summary_screen/category_icons.4bpp.lz");
+const u32 gSummaryScreen_CategoryIcon_Battle_Gfx[] = INCBIN_U32("graphics/summary_screen/category_icons_battle.4bpp.lz");
 
 const u16 gDexScreen_TopMenuIconPals_AtoZ[] = INCBIN_U16("graphics/pokedex/cat_icon_abc.gbapal");
 const u32 gDexScreen_TopMenuIconTiles_AtoZ[] = INCBIN_U32("graphics/pokedex/cat_icon_abc.4bpp.lz");

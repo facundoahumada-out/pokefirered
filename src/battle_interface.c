@@ -2242,6 +2242,7 @@ static void SafariTextIntoHealthboxObject(void *dest, u8 *windowTileData, u32 wi
 // Icono de categoría (Físico/Especial/Estado) mostrado junto al tipo del movimiento
 // seleccionado en la pantalla de elección de ataque.
 extern const u32 gSummaryScreen_CategoryIcon_Gfx[];
+extern const u32 gSummaryScreen_CategoryIcon_Battle_Gfx[];
 extern const u16 gSummaryScreen_CategoryIcon_Pal[];
 
 static const struct OamData sMoveSelectionCategoryIconOamData =
@@ -2273,7 +2274,7 @@ static const union AnimCmd * const sMoveSelectionCategoryIconAnimTable[] =
 
 static const struct CompressedSpriteSheet sMoveSelectionCategoryIconSheet =
 {
-    .data = gSummaryScreen_CategoryIcon_Gfx,
+    .data = gSummaryScreen_CategoryIcon_Battle_Gfx,
     .size = 0x20 * 24,
     .tag = TAG_MOVE_CATEGORY_ICON
 };
