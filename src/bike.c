@@ -12,6 +12,7 @@
 static u8 GetBikeTransitionId(u8 *, u16, u16);
 static void Bike_SetBikeStill(void);
 static u8 CanBikeFaceDirectionOnRail(u8 direction, u8 metatileBehavior);
+static u8 GetBikeMovementDirection(void);
 static u8 GetBikeCollision(u8);
 static u8 GetBikeCollisionAt(struct ObjectEvent *playerObjEvent, s16 x, s16 y, u8 direction, u8 metatileBehavior);
 static bool8 MetatileBehaviorForbidsBiking(u8);
@@ -53,7 +54,7 @@ static u8 GetBikeTransitionId(u8 *direction, u16 newKeys, u16 heldKeys)
 static u8 BikeInputHandler_Normal(u8 *direction_p, u16 newKeys, u16 heldKeys)
 {
     struct ObjectEvent *playerObjEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
-    u8 direction = GetPlayerMovementDirection();
+    u8 direction = GetBikeMovementDirection();
 
     gPlayerAvatar.bikeFrameCounter = 0;
     if (MetatileBehavior_IsCyclingRoadPullDownTile(playerObjEvent->currentMetatileBehavior) == TRUE)
@@ -111,7 +112,7 @@ static u8 BikeInputHandler_Turning(u8 *direction_p, u16 newKeys, u16 heldKeys)
 
 static u8 BikeInputHandler_Slope(u8 *direction_p, u16 newKeys, u16 heldKeys)
 {
-    u8 direction = GetPlayerMovementDirection();
+    u8 direction = GetBikeMovementDirection();
     u8 playerObjEventId = gPlayerAvatar.objectEventId;
     if (MetatileBehavior_IsCyclingRoadPullDownTile(playerObjEventId[gObjectEvents].currentMetatileBehavior) == TRUE)
     {
@@ -143,6 +144,25 @@ static u8 BikeInputHandler_Slope(u8 *direction_p, u16 newKeys, u16 heldKeys)
     {
         gPlayerAvatar.runningState = MOVING;
         return BIKE_TRANS_MOVE;
+    }
+}
+
+// After a diagonal step on sideways stairs the movement direction is diagonal,
+// so map it back to the horizontal direction the player was pressing.
+static u8 GetBikeMovementDirection(void)
+{
+    u8 direction = GetPlayerMovementDirection();
+
+    switch (direction)
+    {
+    case DIR_SOUTHWEST:
+    case DIR_NORTHWEST:
+        return DIR_WEST;
+    case DIR_SOUTHEAST:
+    case DIR_NORTHEAST:
+        return DIR_EAST;
+    default:
+        return direction;
     }
 }
 

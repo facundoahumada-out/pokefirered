@@ -434,8 +434,34 @@ static const u8 *GetInteractedObjectEventScript(struct MapPosition *position, u8
 {
     u8 objectEventId;
     const u8 *script;
+    s16 currX = gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.x;
+    s16 currY = gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.y;
+    u8 currBehavior = MapGridGetMetatileBehaviorAt(currX, currY);
 
-    objectEventId = GetObjectEventIdByPosition(position->x, position->y, position->elevation);
+    // On sideways stairs, the object you're facing is diagonal to you
+    switch (direction)
+    {
+    case DIR_EAST:
+        if (MetatileBehavior_IsSidewaysStairsLeftSideAny(metatileBehavior))
+            objectEventId = GetObjectEventIdByPosition(currX + 1, currY - 1, position->elevation); // Left side stairs to your right, check northeast
+        else if (MetatileBehavior_IsSidewaysStairsRightSideAny(currBehavior))
+            objectEventId = GetObjectEventIdByPosition(currX + 1, currY + 1, position->elevation); // On right side stairs, check southeast
+        else
+            objectEventId = GetObjectEventIdByPosition(position->x, position->y, position->elevation);
+        break;
+    case DIR_WEST:
+        if (MetatileBehavior_IsSidewaysStairsRightSideAny(metatileBehavior))
+            objectEventId = GetObjectEventIdByPosition(currX - 1, currY - 1, position->elevation); // Right side stairs to your left, check northwest
+        else if (MetatileBehavior_IsSidewaysStairsLeftSideAny(currBehavior))
+            objectEventId = GetObjectEventIdByPosition(currX - 1, currY + 1, position->elevation); // On left side stairs, check southwest
+        else
+            objectEventId = GetObjectEventIdByPosition(position->x, position->y, position->elevation);
+        break;
+    default:
+        objectEventId = GetObjectEventIdByPosition(position->x, position->y, position->elevation);
+        break;
+    }
+
     if (objectEventId == OBJECT_EVENTS_COUNT || gObjectEvents[objectEventId].localId == LOCALID_PLAYER)
     {
         if (MetatileBehavior_IsCounter(metatileBehavior) != TRUE)

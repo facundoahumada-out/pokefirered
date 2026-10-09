@@ -15,6 +15,7 @@
 #include "script.h"
 #include "trainer_see.h"
 #include "trig.h"
+#include "constants/metatile_behaviors.h"
 #include "constants/maps.h"
 #include "constants/event_object_movement.h"
 #include "constants/event_objects.h"
@@ -870,10 +871,10 @@ static const u8 sRunningDirectionAnimNums[] = {
     [DIR_NORTH]     = ANIM_RUN_NORTH,
     [DIR_WEST]      = ANIM_RUN_WEST,
     [DIR_EAST]      = ANIM_RUN_EAST,
-    [DIR_SOUTHWEST] = ANIM_RUN_SOUTH,
-    [DIR_SOUTHEAST] = ANIM_RUN_SOUTH,
-    [DIR_NORTHWEST] = ANIM_RUN_NORTH,
-    [DIR_NORTHEAST] = ANIM_RUN_NORTH,
+    [DIR_SOUTHWEST] = ANIM_RUN_WEST,
+    [DIR_SOUTHEAST] = ANIM_RUN_EAST,
+    [DIR_NORTHWEST] = ANIM_RUN_WEST,
+    [DIR_NORTHEAST] = ANIM_RUN_EAST,
 };
 
 static const u8 sTrainerFacingDirectionMovementTypes[] = {
@@ -920,6 +921,10 @@ static const u8 sFaceDirectionMovementActions[] = {
     [DIR_NORTH] = MOVEMENT_ACTION_FACE_UP,
     [DIR_WEST]  = MOVEMENT_ACTION_FACE_LEFT,
     [DIR_EAST]  = MOVEMENT_ACTION_FACE_RIGHT,
+    [DIR_SOUTHWEST] = MOVEMENT_ACTION_FACE_LEFT,
+    [DIR_SOUTHEAST] = MOVEMENT_ACTION_FACE_RIGHT,
+    [DIR_NORTHWEST] = MOVEMENT_ACTION_FACE_LEFT,
+    [DIR_NORTHEAST] = MOVEMENT_ACTION_FACE_RIGHT,
 };
 
 static const u8 sFaceDirectionFastMovementActions[] = {
@@ -1080,6 +1085,10 @@ static const u8 sWalkInPlaceSlowMovementActions[] = {
     [DIR_NORTH] = MOVEMENT_ACTION_WALK_IN_PLACE_SLOW_UP,
     [DIR_WEST]  = MOVEMENT_ACTION_WALK_IN_PLACE_SLOW_LEFT,
     [DIR_EAST]  = MOVEMENT_ACTION_WALK_IN_PLACE_SLOW_RIGHT,
+    [DIR_SOUTHWEST] = MOVEMENT_ACTION_WALK_IN_PLACE_SLOW_LEFT,
+    [DIR_SOUTHEAST] = MOVEMENT_ACTION_WALK_IN_PLACE_SLOW_RIGHT,
+    [DIR_NORTHWEST] = MOVEMENT_ACTION_WALK_IN_PLACE_SLOW_LEFT,
+    [DIR_NORTHEAST] = MOVEMENT_ACTION_WALK_IN_PLACE_SLOW_RIGHT,
 };
 
 static const u8 sWalkInPlaceNormalMovementActions[] = {
@@ -1088,6 +1097,10 @@ static const u8 sWalkInPlaceNormalMovementActions[] = {
     [DIR_NORTH] = MOVEMENT_ACTION_WALK_IN_PLACE_NORMAL_UP,
     [DIR_WEST]  = MOVEMENT_ACTION_WALK_IN_PLACE_NORMAL_LEFT,
     [DIR_EAST]  = MOVEMENT_ACTION_WALK_IN_PLACE_NORMAL_RIGHT,
+    [DIR_SOUTHWEST] = MOVEMENT_ACTION_WALK_IN_PLACE_NORMAL_LEFT,
+    [DIR_SOUTHEAST] = MOVEMENT_ACTION_WALK_IN_PLACE_NORMAL_RIGHT,
+    [DIR_NORTHWEST] = MOVEMENT_ACTION_WALK_IN_PLACE_NORMAL_LEFT,
+    [DIR_NORTHEAST] = MOVEMENT_ACTION_WALK_IN_PLACE_NORMAL_RIGHT,
 };
 
 static const u8 sWalkInPlaceFastMovementActions[] = {
@@ -1096,6 +1109,10 @@ static const u8 sWalkInPlaceFastMovementActions[] = {
     [DIR_NORTH] = MOVEMENT_ACTION_WALK_IN_PLACE_FAST_UP,
     [DIR_WEST]  = MOVEMENT_ACTION_WALK_IN_PLACE_FAST_LEFT,
     [DIR_EAST]  = MOVEMENT_ACTION_WALK_IN_PLACE_FAST_RIGHT,
+    [DIR_SOUTHWEST] = MOVEMENT_ACTION_WALK_IN_PLACE_FAST_LEFT,
+    [DIR_SOUTHEAST] = MOVEMENT_ACTION_WALK_IN_PLACE_FAST_RIGHT,
+    [DIR_NORTHWEST] = MOVEMENT_ACTION_WALK_IN_PLACE_FAST_LEFT,
+    [DIR_NORTHEAST] = MOVEMENT_ACTION_WALK_IN_PLACE_FAST_RIGHT,
 };
 
 static const u8 sWalkInPlaceFasterMovementActions[] = {
@@ -1104,6 +1121,10 @@ static const u8 sWalkInPlaceFasterMovementActions[] = {
     [DIR_NORTH] = MOVEMENT_ACTION_WALK_IN_PLACE_FASTER_UP,
     [DIR_WEST]  = MOVEMENT_ACTION_WALK_IN_PLACE_FASTER_LEFT,
     [DIR_EAST]  = MOVEMENT_ACTION_WALK_IN_PLACE_FASTER_RIGHT,
+    [DIR_SOUTHWEST] = MOVEMENT_ACTION_WALK_IN_PLACE_FASTER_LEFT,
+    [DIR_SOUTHEAST] = MOVEMENT_ACTION_WALK_IN_PLACE_FASTER_RIGHT,
+    [DIR_NORTHWEST] = MOVEMENT_ACTION_WALK_IN_PLACE_FASTER_LEFT,
+    [DIR_NORTHEAST] = MOVEMENT_ACTION_WALK_IN_PLACE_FASTER_RIGHT,
 };
 
 static const u8 sAcroWheelieFaceDirectionMovementActions[] = {
@@ -2296,6 +2317,8 @@ void TryMoveObjectEventToMapCoords(u8 localId, u8 mapNum, u8 mapGroup, s16 x, s1
 void ShiftStillObjectEventCoords(struct ObjectEvent *objectEvent)
 {
     ShiftObjectEventCoords(objectEvent, objectEvent->currentCoords.x, objectEvent->currentCoords.y);
+    // The step is over, so a diagonal sideways stairs direction can't leak into the next movement
+    objectEvent->directionOverwrite = DIR_NONE;
 }
 
 void UpdateObjectEventCoordsForCameraUpdate(void)
@@ -4829,9 +4852,53 @@ static u8 GetCollisionInDirection(struct ObjectEvent *objectEvent, u8 direction)
     return GetCollisionAtCoords(objectEvent, x, y, direction);
 }
 
-u8 GetCollisionAtCoords(struct ObjectEvent *objectEvent, s16 x, s16 y, u32 dir)
+static u8 GetSidewaysStairsCollision(struct ObjectEvent *objectEvent, u8 dir, u8 currentBehavior, u8 nextBehavior, u8 collision)
 {
-    u8 direction = dir;
+    if ((dir == DIR_SOUTH || dir == DIR_NORTH) && collision != COLLISION_NONE)
+        return collision;
+
+    // Can't descend stairs into water
+    if (MetatileBehavior_IsSurfable(nextBehavior))
+        return collision;
+
+    if (MetatileBehavior_IsSidewaysStairsLeftSide(nextBehavior))
+    {
+        // Moving onto left side stair
+        if (dir == DIR_WEST && currentBehavior != nextBehavior)
+            return collision; // Moving onto top part of left side stair going west, so no diagonal
+        else
+            return COLLISION_SIDEWAYS_STAIRS_TO_LEFT;
+    }
+    else if (MetatileBehavior_IsSidewaysStairsRightSide(nextBehavior))
+    {
+        // Moving onto right side stair
+        if (dir == DIR_EAST && currentBehavior != nextBehavior)
+            return collision; // Moving onto top part of right side stair going east, so no diagonal
+        else
+            return COLLISION_SIDEWAYS_STAIRS_TO_RIGHT;
+    }
+    else if (MetatileBehavior_IsSidewaysStairsLeftSideAny(currentBehavior))
+    {
+        // Moving off of any left side stair
+        if (dir == DIR_WEST && nextBehavior != currentBehavior)
+            return COLLISION_SIDEWAYS_STAIRS_TO_LEFT; // Moving off of left stairs onto non-stair, so diagonal
+        else
+            return collision;
+    }
+    else if (MetatileBehavior_IsSidewaysStairsRightSideAny(currentBehavior))
+    {
+        // Moving off of any right side stair
+        if (dir == DIR_EAST && nextBehavior != currentBehavior)
+            return COLLISION_SIDEWAYS_STAIRS_TO_RIGHT; // Moving off of right stairs onto non-stair, so diagonal
+        else
+            return collision;
+    }
+
+    return collision;
+}
+
+static u8 GetVanillaCollision(struct ObjectEvent *objectEvent, s16 x, s16 y, u8 direction)
+{
     if (IsCoordOutsideObjectEventMovementRange(objectEvent, x, y))
         return COLLISION_OUTSIDE_RANGE;
     else if (MapGridGetCollisionAt(x, y) || GetMapBorderIdAt(x, y) == CONNECTION_INVALID || IsMetatileDirectionallyImpassable(objectEvent, x, y, direction))
@@ -4843,6 +4910,152 @@ u8 GetCollisionAtCoords(struct ObjectEvent *objectEvent, s16 x, s16 y, u32 dir)
     else if (DoesObjectCollideWithObjectAt(objectEvent, x, y))
         return COLLISION_OBJECT_EVENT;
     return COLLISION_NONE;
+}
+
+// Checks for an object at the diagonal destination of a step on left side stairs
+static bool8 ObjectEventOnLeftSideStair(struct ObjectEvent *objectEvent, s16 x, s16 y, u8 direction)
+{
+    switch (direction)
+    {
+    case DIR_EAST:
+        MoveCoords(DIR_NORTH, &x, &y);
+        return DoesObjectCollideWithObjectAt(objectEvent, x, y);
+    case DIR_WEST:
+        MoveCoords(DIR_SOUTH, &x, &y);
+        return DoesObjectCollideWithObjectAt(objectEvent, x, y);
+    default:
+        return FALSE; // North/south is handled by GetVanillaCollision
+    }
+}
+
+// Checks for an object at the diagonal destination of a step on right side stairs
+static bool8 ObjectEventOnRightSideStair(struct ObjectEvent *objectEvent, s16 x, s16 y, u8 direction)
+{
+    switch (direction)
+    {
+    case DIR_EAST:
+        MoveCoords(DIR_SOUTH, &x, &y);
+        return DoesObjectCollideWithObjectAt(objectEvent, x, y);
+    case DIR_WEST:
+        MoveCoords(DIR_NORTH, &x, &y);
+        return DoesObjectCollideWithObjectAt(objectEvent, x, y);
+    default:
+        return FALSE; // North/south is handled by GetVanillaCollision
+    }
+}
+
+static inline bool8 IsSidewaysStairsTop(u8 behavior)
+{
+    return MetatileBehavior_IsSidewaysStairsLeftSideTop(behavior) || MetatileBehavior_IsSidewaysStairsRightSideTop(behavior);
+}
+
+static inline bool8 IsSidewaysStairsBottom(u8 behavior)
+{
+    return MetatileBehavior_IsSidewaysStairsLeftSideBottom(behavior) || MetatileBehavior_IsSidewaysStairsRightSideBottom(behavior);
+}
+
+// One-way bottom stair tiles can't be used to walk down the stairs, only up.
+// A step down is blocked if it starts on, passes by, or ends on one of them.
+static bool8 IsBlockedByOneWayStairsBottom(struct ObjectEvent *objectEvent, u8 moveDir)
+{
+    s16 x = objectEvent->currentCoords.x;
+    s16 y = objectEvent->currentCoords.y;
+    u8 oneWayBehavior;
+    u8 horizontalDir;
+
+    if (moveDir == DIR_SOUTHEAST) // Walking down right side stairs
+    {
+        oneWayBehavior = MB_SIDEWAYS_STAIRS_RIGHT_SIDE_BOTTOM_ONE_WAY;
+        horizontalDir = DIR_EAST;
+    }
+    else if (moveDir == DIR_SOUTHWEST) // Walking down left side stairs
+    {
+        oneWayBehavior = MB_SIDEWAYS_STAIRS_LEFT_SIDE_BOTTOM_ONE_WAY;
+        horizontalDir = DIR_WEST;
+    }
+    else
+    {
+        return FALSE;
+    }
+
+    if (MapGridGetMetatileBehaviorAt(x, y) == oneWayBehavior)
+        return TRUE;
+    MoveCoords(horizontalDir, &x, &y);
+    if (MapGridGetMetatileBehaviorAt(x, y) == oneWayBehavior)
+        return TRUE;
+    MoveCoords(DIR_SOUTH, &x, &y);
+    return MapGridGetMetatileBehaviorAt(x, y) == oneWayBehavior;
+}
+
+// One-way top stair tiles can only be entered horizontally from the upper ground (to go down).
+// moveDir is the real direction of the step, which may be diagonal on sideways stairs.
+static bool8 IsBlockedByOneWayStairs(struct ObjectEvent *objectEvent, u8 moveDir)
+{
+    s16 x = objectEvent->currentCoords.x;
+    s16 y = objectEvent->currentCoords.y;
+    u8 behavior;
+
+    if (IsBlockedByOneWayStairsBottom(objectEvent, moveDir))
+        return TRUE;
+
+    MoveCoords(moveDir, &x, &y);
+    behavior = MapGridGetMetatileBehaviorAt(x, y);
+    if (behavior == MB_SIDEWAYS_STAIRS_RIGHT_SIDE_TOP_ONE_WAY)
+        return moveDir != DIR_EAST; // Right side stairs go up to the left, so the upper ground is to the west
+    if (behavior == MB_SIDEWAYS_STAIRS_LEFT_SIDE_TOP_ONE_WAY)
+        return moveDir != DIR_WEST; // Left side stairs go up to the right, so the upper ground is to the east
+    return FALSE;
+}
+
+u8 GetCollisionAtCoords(struct ObjectEvent *objectEvent, s16 x, s16 y, u32 dir)
+{
+    u8 direction = dir;
+    u8 currentBehavior = MapGridGetMetatileBehaviorAt(objectEvent->currentCoords.x, objectEvent->currentCoords.y);
+    u8 nextBehavior = MapGridGetMetatileBehaviorAt(x, y);
+    u8 collision;
+
+    objectEvent->directionOverwrite = DIR_NONE;
+
+    // Sideways stairs edges
+    if (MetatileBehavior_IsSidewaysStairsLeftSideTop(nextBehavior) && direction == DIR_EAST)
+        return COLLISION_IMPASSABLE; // Moving east onto the top edge of left side stairs from the ground
+    else if (MetatileBehavior_IsSidewaysStairsRightSideTop(nextBehavior) && direction == DIR_WEST)
+        return COLLISION_IMPASSABLE; // Moving west onto the top edge of right side stairs from the ground
+    else if (MetatileBehavior_IsSidewaysStairsRightSideBottom(nextBehavior) && (direction == DIR_EAST || direction == DIR_SOUTH))
+        return COLLISION_IMPASSABLE; // Moving onto the bottom edge of right side stairs from the ground
+    else if (MetatileBehavior_IsSidewaysStairsLeftSideBottom(nextBehavior) && (direction == DIR_WEST || direction == DIR_SOUTH))
+        return COLLISION_IMPASSABLE; // Moving onto the bottom edge of left side stairs from the ground
+    else if (IsSidewaysStairsTop(currentBehavior) && direction == DIR_NORTH)
+        return COLLISION_IMPASSABLE; // Moving north off of the top stair tile onto the same level
+    else if (!IsSidewaysStairsTop(currentBehavior) && direction == DIR_SOUTH && IsSidewaysStairsTop(nextBehavior))
+        return COLLISION_IMPASSABLE; // Moving south onto the top stair tile from a non-stair tile
+    else if (!IsSidewaysStairsBottom(currentBehavior) && direction == DIR_NORTH && IsSidewaysStairsBottom(nextBehavior))
+        return COLLISION_IMPASSABLE; // Moving north onto the bottom stair tile from a non-stair tile
+
+    collision = GetVanillaCollision(objectEvent, x, y, direction);
+    collision = GetSidewaysStairsCollision(objectEvent, direction, currentBehavior, nextBehavior, collision);
+    switch (collision)
+    {
+    case COLLISION_SIDEWAYS_STAIRS_TO_LEFT:
+        if (ObjectEventOnLeftSideStair(objectEvent, x, y, direction))
+            return COLLISION_OBJECT_EVENT;
+        if (IsBlockedByOneWayStairs(objectEvent, GetLeftSideStairsDirection(direction)))
+            return COLLISION_IMPASSABLE;
+        objectEvent->directionOverwrite = GetLeftSideStairsDirection(direction);
+        return COLLISION_NONE;
+    case COLLISION_SIDEWAYS_STAIRS_TO_RIGHT:
+        if (ObjectEventOnRightSideStair(objectEvent, x, y, direction))
+            return COLLISION_OBJECT_EVENT;
+        if (IsBlockedByOneWayStairs(objectEvent, GetRightSideStairsDirection(direction)))
+            return COLLISION_IMPASSABLE;
+        objectEvent->directionOverwrite = GetRightSideStairsDirection(direction);
+        return COLLISION_NONE;
+    }
+
+    if (collision == COLLISION_NONE && IsBlockedByOneWayStairs(objectEvent, direction))
+        return COLLISION_IMPASSABLE;
+
+    return collision;
 }
 
 u8 GetCollisionFlagsAtCoords(struct ObjectEvent *objectEvent, s16 x, s16 y, u8 direction)
@@ -5048,12 +5261,31 @@ bool8 ObjectEventIsHeldMovementActive(struct ObjectEvent *objectEvent)
     return FALSE;
 }
 
+// NPCs walk slowly on sideways stairs, like the player (see PlayerIsMovingOnRockStairs)
+static u8 TryUpdateMovementActionOnStairs(struct ObjectEvent *objectEvent, u8 movementActionId)
+{
+    if (objectEvent->isPlayer || objectEvent->directionOverwrite == DIR_NONE)
+        return movementActionId;
+
+    switch (movementActionId)
+    {
+    case MOVEMENT_ACTION_WALK_NORMAL_LEFT:
+        return MOVEMENT_ACTION_WALK_SLOW_LEFT;
+    case MOVEMENT_ACTION_WALK_NORMAL_RIGHT:
+        return MOVEMENT_ACTION_WALK_SLOW_RIGHT;
+    default:
+        return movementActionId;
+    }
+}
+
 bool8 ObjectEventSetHeldMovement(struct ObjectEvent *objectEvent, u8 movementActionId)
 {
     if (QL_GetPlaybackState() == QL_PLAYBACK_STATE_RUNNING)
         ObjectEventClearHeldMovementIfActive(objectEvent);
     else if (ObjectEventIsMovementOverridden(objectEvent))
         return TRUE;
+
+    movementActionId = TryUpdateMovementActionOnStairs(objectEvent, movementActionId);
 
     UnfreezeObjectEvent(objectEvent);
     objectEvent->movementActionId = movementActionId;
@@ -5154,7 +5386,7 @@ u8 name(u32 idx)                                    \
     u8 animIds[sizeof(table)];                      \
     direction = idx;                                \
     memcpy(animIds, (table), sizeof(table));        \
-    if (direction > DIR_EAST) direction = DIR_NONE; \
+    if (direction >= sizeof(table)) direction = DIR_NONE; \
     return animIds[direction];                      \
 }
 
@@ -5268,6 +5500,7 @@ static bool8 ObjectEventExecSingleMovementAction(struct ObjectEvent *objectEvent
 
 static void ObjectEventSetSingleMovement(struct ObjectEvent *objectEvent, struct Sprite *sprite, u8 movementActionId)
 {
+    movementActionId = TryUpdateMovementActionOnStairs(objectEvent, movementActionId);
     objectEvent->movementActionId = movementActionId;
     sprite->data[2] = 0;
     
@@ -5616,9 +5849,17 @@ static bool8 MovementAction_WalkSlowDown_Step1(struct ObjectEvent *objectEvent, 
     return FALSE;
 }
 
+// Horizontal movement on sideways stairs is turned into a diagonal step (see GetCollisionAtCoords)
+static u8 GetSidewaysStairsMoveDirection(struct ObjectEvent *objectEvent, u8 direction)
+{
+    if (objectEvent->directionOverwrite != DIR_NONE)
+        return objectEvent->directionOverwrite;
+    return direction;
+}
+
 static bool8 MovementAction_WalkSlowLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitWalkSlow(objectEvent, sprite, DIR_WEST);
+    InitWalkSlow(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_WEST));
     return MovementAction_WalkSlowLeft_Step1(objectEvent, sprite);
 }
 
@@ -5634,7 +5875,7 @@ static bool8 MovementAction_WalkSlowLeft_Step1(struct ObjectEvent *objectEvent, 
 
 static bool8 MovementAction_WalkSlowRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitWalkSlow(objectEvent, sprite, DIR_EAST);
+    InitWalkSlow(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_EAST));
     return MovementAction_WalkSlowRight_Step1(objectEvent, sprite);
 }
 
@@ -5682,7 +5923,7 @@ static bool8 MovementAction_WalkNormalUp_Step1(struct ObjectEvent *objectEvent, 
 
 static bool8 MovementAction_WalkNormalLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_NORMAL);
+    InitMovementNormal(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_WEST), MOVE_SPEED_NORMAL);
     return MovementAction_WalkNormalLeft_Step1(objectEvent, sprite);
 }
 
@@ -5698,7 +5939,7 @@ static bool8 MovementAction_WalkNormalLeft_Step1(struct ObjectEvent *objectEvent
 
 static bool8 MovementAction_WalkNormalRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_NORMAL);
+    InitMovementNormal(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_EAST), MOVE_SPEED_NORMAL);
     return MovementAction_WalkNormalRight_Step1(objectEvent, sprite);
 }
 
@@ -5963,7 +6204,7 @@ static bool8 MovementAction_WalkFastUp_Step1(struct ObjectEvent *objectEvent, st
 
 static bool8 MovementAction_WalkFastLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FAST_1);
+    InitMovementNormal(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_WEST), MOVE_SPEED_FAST_1);
     return MovementAction_WalkFastLeft_Step1(objectEvent, sprite);
 }
 
@@ -5979,7 +6220,7 @@ static bool8 MovementAction_WalkFastLeft_Step1(struct ObjectEvent *objectEvent, 
 
 static bool8 MovementAction_WalkFastRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FAST_1);
+    InitMovementNormal(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_EAST), MOVE_SPEED_FAST_1);
     return MovementAction_WalkFastRight_Step1(objectEvent, sprite);
 }
 
@@ -6324,7 +6565,7 @@ static bool8 MovementAction_RideWaterCurrentUp_Step1(struct ObjectEvent *objectE
 
 static bool8 MovementAction_RideWaterCurrentLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FAST_2);
+    InitMovementNormal(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_WEST), MOVE_SPEED_FAST_2);
     return MovementAction_RideWaterCurrentLeft_Step1(objectEvent, sprite);
 }
 
@@ -6340,7 +6581,7 @@ static bool8 MovementAction_RideWaterCurrentLeft_Step1(struct ObjectEvent *objec
 
 static bool8 MovementAction_RideWaterCurrentRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FAST_2);
+    InitMovementNormal(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_EAST), MOVE_SPEED_FAST_2);
     return MovementAction_RideWaterCurrentRight_Step1(objectEvent, sprite);
 }
 
@@ -6388,7 +6629,7 @@ static bool8 MovementAction_WalkFasterUp_Step1(struct ObjectEvent *objectEvent, 
 
 static bool8 MovementAction_WalkFasterLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FASTER);
+    InitMovementNormal(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_WEST), MOVE_SPEED_FASTER);
     return MovementAction_WalkFasterLeft_Step1(objectEvent, sprite);
 }
 
@@ -6404,7 +6645,7 @@ static bool8 MovementAction_WalkFasterLeft_Step1(struct ObjectEvent *objectEvent
 
 static bool8 MovementAction_WalkFasterRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FASTER);
+    InitMovementNormal(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_EAST), MOVE_SPEED_FASTER);
     return MovementAction_WalkFasterRight_Step1(objectEvent, sprite);
 }
 
@@ -6452,7 +6693,7 @@ static bool8 MovementAction_SlideUp_Step1(struct ObjectEvent *objectEvent, struc
 
 static bool8 MovementAction_SlideLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FASTEST);
+    InitMovementNormal(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_WEST), MOVE_SPEED_FASTEST);
     return MovementAction_SlideLeft_Step1(objectEvent, sprite);
 }
 
@@ -6468,7 +6709,7 @@ static bool8 MovementAction_SlideLeft_Step1(struct ObjectEvent *objectEvent, str
 
 static bool8 MovementAction_SlideRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FASTEST);
+    InitMovementNormal(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_EAST), MOVE_SPEED_FASTEST);
     return MovementAction_SlideRight_Step1(objectEvent, sprite);
 }
 
@@ -6516,7 +6757,7 @@ static bool8 MovementAction_PlayerRunUp_Step1(struct ObjectEvent *objectEvent, s
 
 static bool8 MovementAction_PlayerRunLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    StartRunningAnim(objectEvent, sprite, DIR_WEST);
+    StartRunningAnim(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_WEST));
     return MovementAction_PlayerRunLeft_Step1(objectEvent, sprite);
 }
 
@@ -6532,7 +6773,7 @@ static bool8 MovementAction_PlayerRunLeft_Step1(struct ObjectEvent *objectEvent,
 
 static bool8 MovementAction_PlayerRunRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    StartRunningAnim(objectEvent, sprite, DIR_EAST);
+    StartRunningAnim(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_EAST));
     return MovementAction_PlayerRunRight_Step1(objectEvent, sprite);
 }
 
@@ -6614,7 +6855,7 @@ static bool8 MovementAction_RunUpSlow_Step1(struct ObjectEvent *objectEvent, str
 
 static bool8 MovementAction_RunLeftSlow_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitRunSlow(objectEvent, sprite, DIR_WEST);
+    InitRunSlow(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_WEST));
     return MovementAction_RunLeftSlow_Step1(objectEvent, sprite);
 }
 
@@ -6630,7 +6871,7 @@ static bool8 MovementAction_RunLeftSlow_Step1(struct ObjectEvent *objectEvent, s
 
 static bool8 MovementAction_RunRightSlow_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitRunSlow(objectEvent, sprite, DIR_SOUTH);
+    InitRunSlow(objectEvent, sprite, GetSidewaysStairsMoveDirection(objectEvent, DIR_EAST));
     return MovementAction_RunRightSlow_Step1(objectEvent, sprite);
 }
 
@@ -8147,6 +8388,10 @@ static void GetGroundEffectFlags_LongGrassOnBeginStep(struct ObjectEvent *objEve
 
 static void GetGroundEffectFlags_Tracks(struct ObjectEvent *objEvent, u32 *flags)
 {
+    // No footprints while moving diagonally on sideways stairs
+    if (objEvent->directionOverwrite != DIR_NONE)
+        return;
+
     if (MetatileBehavior_IsDeepSand(objEvent->previousMetatileBehavior))
     {
         *flags |= GROUND_EFFECT_FLAG_DEEP_SAND;
@@ -8598,12 +8843,19 @@ static void DoTracksGroundEffect_BikeTireTracks(struct ObjectEvent *objEvent, st
 
     if (objEvent->currentCoords.x != objEvent->previousCoords.x || objEvent->currentCoords.y != objEvent->previousCoords.y)
     {
+        // The previous direction can be diagonal after leaving sideways stairs
+        u8 movementDir = objEvent->previousMovementDirection;
+        if (movementDir == DIR_SOUTHWEST || movementDir == DIR_NORTHWEST)
+            movementDir = DIR_WEST;
+        else if (movementDir == DIR_SOUTHEAST || movementDir == DIR_NORTHEAST)
+            movementDir = DIR_EAST;
+
         gFieldEffectArguments[0] = objEvent->previousCoords.x;
         gFieldEffectArguments[1] = objEvent->previousCoords.y;
         gFieldEffectArguments[2] = 149;
         gFieldEffectArguments[3] = 2;
         gFieldEffectArguments[4] =
-            bikeTireTracks_Transitions[objEvent->previousMovementDirection][objEvent->facingDirection - 5];
+            bikeTireTracks_Transitions[movementDir][objEvent->facingDirection - 5];
         FieldEffectStart(FLDEFF_BIKE_TIRE_TRACKS);
     }
 }

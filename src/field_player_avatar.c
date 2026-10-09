@@ -292,7 +292,22 @@ static bool8 ForcedMovement_None(void)
 static u8 DoForcedMovement(u8 direction, MovementAction movementAction)
 {
     struct PlayerAvatar *playerAvatar = &gPlayerAvatar;
-    u8 collision = CheckForPlayerAvatarCollision(direction);
+    u8 collision;
+
+    // Forced movement right after a diagonal step on sideways stairs (e.g. onto ice)
+    switch (direction)
+    {
+    case DIR_NORTHWEST:
+    case DIR_SOUTHWEST:
+        direction = DIR_WEST;
+        break;
+    case DIR_NORTHEAST:
+    case DIR_SOUTHEAST:
+        direction = DIR_EAST;
+        break;
+    }
+
+    collision = CheckForPlayerAvatarCollision(direction);
 
     playerAvatar->flags |= PLAYER_AVATAR_FLAG_FORCED;
     if (collision)
@@ -547,8 +562,46 @@ bool32 PlayerIsMovingOnRockStairs(u8 direction)
     case DIR_SOUTH:
         MoveCoords(DIR_SOUTH, &x, &y);
         return MetatileBehavior_IsRockStairs(MapGridGetMetatileBehaviorAt(x, y));
+    case DIR_WEST:
+    case DIR_EAST:
+    case DIR_SOUTHWEST:
+    case DIR_SOUTHEAST:
+    case DIR_NORTHWEST:
+    case DIR_NORTHEAST:
+        // directionOverwrite is only set while moving diagonally on sideways stairs
+        return objectEvent->directionOverwrite != DIR_NONE;
     default:
         return FALSE;
+    }
+}
+
+u8 GetRightSideStairsDirection(u8 direction)
+{
+    switch (direction)
+    {
+    case DIR_WEST:
+        return DIR_NORTHWEST;
+    case DIR_EAST:
+        return DIR_SOUTHEAST;
+    default:
+        if (direction > DIR_EAST)
+            direction -= DIR_EAST;
+        return direction;
+    }
+}
+
+u8 GetLeftSideStairsDirection(u8 direction)
+{
+    switch (direction)
+    {
+    case DIR_WEST:
+        return DIR_SOUTHWEST;
+    case DIR_EAST:
+        return DIR_NORTHEAST;
+    default:
+        if (direction > DIR_EAST)
+            direction -= DIR_EAST;
+        return direction;
     }
 }
 
