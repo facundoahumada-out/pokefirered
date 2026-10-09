@@ -26,7 +26,7 @@ text OneIsland_KindleRoad_Text_AbigailPostBattle {
 }
 
 text OneIsland_KindleRoad_Text_FinnIntro {
-    "Seen from here, MT. EMBER towers\n"
+    "Seen from here, Mt. Ember towers\n"
     "into the sky.$"
 }
 
@@ -50,7 +50,7 @@ text OneIsland_KindleRoad_Text_GarrettDefeat {
 }
 
 text OneIsland_KindleRoad_Text_GarrettPostBattle {
-    "Instead of using SURF all the time,\n"
+    "Instead of using Surf all the time,\n"
     "you should swim some.$"
 }
 
@@ -153,54 +153,54 @@ text OneIsland_KindleRoad_Text_ClairePostBattle {
 }
 
 text OneIsland_KindleRoad_Text_KiaIntro {
-    "KIA: My big brother and I make\n"
+    "Kia: My big brother and I make\n"
     "an awesome combination!$"
 }
 
 text OneIsland_KindleRoad_Text_KiaDefeat {
-    "KIA: Huh?!\n"
+    "Kia: Huh?!\n"
     "I can't believe it!$"
 }
 
 text OneIsland_KindleRoad_Text_KiaPostBattle {
-    "KIA: How could there be anyone\n"
+    "Kia: How could there be anyone\n"
     "better than my big brother?$"
 }
 
 text OneIsland_KindleRoad_Text_KiaNotEnoughMons {
-    "KIA: If you want to battle with\n"
+    "Kia: If you want to battle with\n"
     "us, you have to bring at least two\l"
-    "POKéMON with you.$"
+    "Pokémon with you.$"
 }
 
 text OneIsland_KindleRoad_Text_MikIntro {
-    "MIK: Together with KIA, I'm afraid\n"
+    "Mik: Together with Kia, I'm afraid\n"
     "of nothing!$"
 }
 
 text OneIsland_KindleRoad_Text_MikDefeat {
-    "MIK: Whoa!\n"
+    "Mik: Whoa!\n"
     "That's too much!$"
 }
 
 text OneIsland_KindleRoad_Text_MikPostBattle {
-    "MIK: How could my combination\n"
-    "with KIA fail?$"
+    "Mik: How could my combination\n"
+    "with Kia fail?$"
 }
 
 text OneIsland_KindleRoad_Text_MikNotEnoughMons {
-    "MIK: Hey, do you want to battle\n"
+    "Mik: Hey, do you want to battle\n"
     "with us two?\p"
-    "Bring two or more POKéMON with\n"
+    "Bring two or more Pokémon with\n"
     "you, then.$"
 }
 
 text OneIsland_KindleRoad_Text_RouteSign {
-    "This is KINDLE ROAD.\p"
-    "Go straight for MT. EMBER.$"
+    "This is Kindle Road.\p"
+    "Go straight for Mt. Ember.$"
 }
 
 text OneIsland_KindleRoad_Text_EmberSpaSign {
     "Light the Fire in Your Heart!\n"
-    "EMBER SPA$"
+    "Ember Spa$"
 }

@@ -7,13 +7,13 @@ ViridianCity_House_Text_NicknamingIsFun::
 
 ViridianCity_House_Text_MyDaddyLovesMonsToo::
 # 8 "data/maps/ViridianCity_House/text.pory"
-	.string "My daddy loves POKéMON, too.$"
+	.string "My daddy loves Pokémon, too.$"
 
 ViridianCity_House_Text_Speary::
 # 12 "data/maps/ViridianCity_House/text.pory"
-	.string "SPEARY: Tetweet!$"
+	.string "Speary: Tetweet!$"
 
 ViridianCity_House_Text_SpearowNameSpeary::
 # 16 "data/maps/ViridianCity_House/text.pory"
-	.string "SPEAROW\n"
-	.string "Name: SPEARY$"
+	.string "Spearow\n"
+	.string "Name: Speary$"

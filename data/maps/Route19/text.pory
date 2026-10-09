@@ -23,7 +23,7 @@ text Route19_Text_ReeceDefeat {
 }
 
 text Route19_Text_ReecePostBattle {
-    "Watch out for TENTACOOL.\n"
+    "Watch out for Tentacool.\n"
     "They sting so painfully.$"
 }
 
@@ -37,7 +37,7 @@ text Route19_Text_MatthewDefeat {
 }
 
 text Route19_Text_MatthewPostBattle {
-    "I can beat even marine POKéMON\n"
+    "I can beat even marine Pokémon\n"
     "at swimming.$"
 }
 
@@ -55,7 +55,7 @@ text Route19_Text_DouglasPostBattle {
 }
 
 text Route19_Text_DavidIntro {
-    "I tried diving for POKéMON, but it\n"
+    "I tried diving for Pokémon, but it\n"
     "was a no-go.$"
 }
 
@@ -65,7 +65,7 @@ text Route19_Text_DavidDefeat {
 
 text Route19_Text_DavidPostBattle {
     "I guess you have to fish for sea\n"
-    "POKéMON.$"
+    "Pokémon.$"
 }
 
 text Route19_Text_TonyIntro {
@@ -94,8 +94,8 @@ text Route19_Text_AnyaDefeat {
 
 text Route19_Text_AnyaPostBattle {
     "It's still a long way to go to\n"
-    "SEAFOAM ISLANDS…\p"
-    "I want to go back to FUCHSIA…$"
+    "Seafoam Islands…\p"
+    "I want to go back to Fuchsia…$"
 }
 
 text Route19_Text_AliceIntro {
@@ -109,7 +109,7 @@ text Route19_Text_AliceDefeat {
 
 text Route19_Text_AlicePostBattle {
     "My boyfriend wanted to swim to\n"
-    "SEAFOAM ISLANDS.$"
+    "Seafoam Islands.$"
 }
 
 text Route19_Text_AxleIntro {
@@ -137,57 +137,57 @@ text Route19_Text_ConnieDefeat {
 }
 
 text Route19_Text_ConniePostBattle {
-    "If I were to ride a POKéMON on\n"
-    "the sea, I'd like a LAPRAS.\p"
-    "LAPRAS is so big, I bet it\n"
+    "If I were to ride a Pokémon on\n"
+    "the sea, I'd like a Lapras.\p"
+    "Lapras is so big, I bet it\n"
     "would keep me dry on water.$"
 }
 
 text Route19_Text_RouteSign {
-    "SEA ROUTE 19\n"
-    "FUCHSIA CITY - SEAFOAM ISLANDS$"
+    "Sea Route 19\n"
+    "Fuchsia City - Seafoam Islands$"
 }
 
 text Route19_Text_LiaIntro {
-    "LIA: I'm looking after my brother.\n"
-    "He just became a TRAINER.$"
+    "Lia: I'm looking after my brother.\n"
+    "He just became a Trainer.$"
 }
 
 text Route19_Text_LiaDefeat {
-    "LIA: That's no way to treat my\n"
+    "Lia: That's no way to treat my\n"
     "little brother!$"
 }
 
 text Route19_Text_LiaPostBattle {
-    "LIA: Do you have a younger\n"
+    "Lia: Do you have a younger\n"
     "brother?\p"
     "I hope you're teaching him all\n"
     "sorts of things.$"
 }
 
 text Route19_Text_LiaNotEnoughMons {
-    "LIA: I want to battle together\n"
+    "Lia: I want to battle together\n"
     "with my little brother.\p"
-    "Don't you have two POKéMON?$"
+    "Don't you have two Pokémon?$"
 }
 
 text Route19_Text_LucIntro {
-    "LUC: My big sis taught me how\n"
-    "to swim and train POKéMON.$"
+    "Luc: My big sis taught me how\n"
+    "to swim and train Pokémon.$"
 }
 
 text Route19_Text_LucDefeat {
-    "LUC: Oh, wow!\n"
+    "Luc: Oh, wow!\n"
     "Someone tougher than my big sis!$"
 }
 
 text Route19_Text_LucPostBattle {
-    "LUC: My big sis is strong and nice.\n"
+    "Luc: My big sis is strong and nice.\n"
     "I think she's awesome!$"
 }
 
 text Route19_Text_LucNotEnoughMons {
-    "LUC: I don't want to if I can't\n"
+    "Luc: I don't want to if I can't\n"
     "battle you with my big sis.\p"
-    "Don't you have two POKéMON?$"
+    "Don't you have two Pokémon?$"
 }

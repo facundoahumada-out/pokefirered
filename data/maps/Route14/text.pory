@@ -1,6 +1,6 @@
 text Route14_Text_CarterIntro {
     "You need to use TMs to teach good\n"
-    "moves to POKéMON.$"
+    "moves to Pokémon.$"
 }
 
 text Route14_Text_CarterDefeat {
@@ -8,12 +8,12 @@ text Route14_Text_CarterDefeat {
 }
 
 text Route14_Text_CarterPostBattle {
-    "You have some HMs, right? POKéMON\n"
+    "You have some HMs, right? Pokémon\n"
     "can't forget those moves easily.$"
 }
 
 text Route14_Text_MitchIntro {
-    "My bird POKéMON should be ready\n"
+    "My bird Pokémon should be ready\n"
     "for battle.$"
 }
 
@@ -22,13 +22,13 @@ text Route14_Text_MitchDefeat {
 }
 
 text Route14_Text_MitchPostBattle {
-    "My bird POKéMON need to learn\n"
+    "My bird Pokémon need to learn\n"
     "better moves.$"
 }
 
 text Route14_Text_BeckIntro {
     "They have TMs on sale at the\n"
-    "CELADON DEPT. STORE.\p"
+    "Celadon Dept. Store.\p"
     "TMs aren't really rare, but not\n"
     "many people have HMs.$"
 }
@@ -38,15 +38,15 @@ text Route14_Text_BeckDefeat {
 }
 
 text Route14_Text_BeckPostBattle {
-    "Try teaching POKéMON a move that's\n"
+    "Try teaching Pokémon a move that's\n"
     "the same type as it.\p"
     "That apparently boosts the power\n"
     "of the move.$"
 }
 
 text Route14_Text_MarlonIntro {
-    "Have you taught your bird POKéMON\n"
-    "how to FLY?\p"
+    "Have you taught your bird Pokémon\n"
+    "how to Fly?\p"
     "You'll be able to soar with it into\n"
     "the sky!$"
 }
@@ -56,7 +56,7 @@ text Route14_Text_MarlonDefeat {
 }
 
 text Route14_Text_MarlonPostBattle {
-    "Bird POKéMON are my one true love.\n"
+    "Bird Pokémon are my one true love.\n"
     "I don't want to raise anything else.$"
 }
 
@@ -72,9 +72,9 @@ text Route14_Text_DonaldDefeat {
 
 text Route14_Text_DonaldPostBattle {
     "Well, the winged mirages are the\n"
-    "legendary bird POKéMON.\p"
-    "There are three of them: ARTICUNO,\n"
-    "ZAPDOS, and MOLTRES.$"
+    "legendary bird Pokémon.\p"
+    "There are three of them: Articuno,\n"
+    "Zapdos, and Moltres.$"
 }
 
 text Route14_Text_BennyIntro {
@@ -117,7 +117,7 @@ text Route14_Text_IsaacDefeat {
 }
 
 text Route14_Text_IsaacPostBattle {
-    "Raising POKéMON is a drag, man.$"
+    "Raising Pokémon is a drag, man.$"
 }
 
 text Route14_Text_GeraldIntro {
@@ -130,14 +130,14 @@ text Route14_Text_GeraldDefeat {
 }
 
 text Route14_Text_GeraldPostBattle {
-    "It's cool you made your POKéMON so\n"
+    "It's cool you made your Pokémon so\n"
     "strong.\p"
     "Might is right!\n"
     "And you know it!$"
 }
 
 text Route14_Text_MalikIntro {
-    "POKéMON battle?\n"
+    "Pokémon battle?\n"
     "Cool! Rumble!$"
 }
 
@@ -151,45 +151,45 @@ text Route14_Text_MalikPostBattle {
 }
 
 text Route14_Text_RouteSign {
-    "ROUTE 14\n"
-    "West to FUCHSIA CITY$"
+    "Route 14\n"
+    "West to Fuchsia City$"
 }
 
 text Route14_Text_KiriIntro {
-    "KIRI: JAN, let's try really,\n"
+    "Kiri: Jan, let's try really,\n"
     "really hard together.$"
 }
 
 text Route14_Text_KiriDefeat {
-    "KIRI: Whimper…\n"
+    "Kiri: Whimper…\n"
     "We lost, didn't we?$"
 }
 
 text Route14_Text_KiriPostBattle {
-    "KIRI: Did we lose because of me?$"
+    "Kiri: Did we lose because of me?$"
 }
 
 text Route14_Text_KiriNotEnoughMons {
-    "KIRI: We can battle if you have\n"
-    "two POKéMON.$"
+    "Kiri: We can battle if you have\n"
+    "two Pokémon.$"
 }
 
 text Route14_Text_JanIntro {
-    "JAN: KIRI, here we go!\n"
+    "Jan: Kiri, here we go!\n"
     "We have to try hard!$"
 }
 
 text Route14_Text_JanDefeat {
-    "JAN: Eeeeh!\n"
+    "Jan: Eeeeh!\n"
     "No fair!$"
 }
 
 text Route14_Text_JanPostBattle {
-    "JAN: KIRI, don't cry!\n"
+    "Jan: Kiri, don't cry!\n"
     "We'll just try harder next time.$"
 }
 
 text Route14_Text_JanNotEnoughMons {
-    "JAN: You want to battle?\n"
-    "You don't have enough POKéMON.$"
+    "Jan: You want to battle?\n"
+    "You don't have enough Pokémon.$"
 }

@@ -1,5 +1,5 @@
 text CeladonCity_GameCorner_PrizeRoom_Text_FancyThatPorygon {
-    "I sure do fancy that PORYGON!\n"
+    "I sure do fancy that Porygon!\n"
     "But, it's hard to win at slots!$"
 }
 
@@ -9,11 +9,11 @@ text CeladonCity_GameCorner_PrizeRoom_Text_RakedItInToday {
 }
 
 text CeladonCity_GameCorner_PrizeRoom_Text_CoinCaseRequired {
-    "A COIN CASE is required…$"
+    "A Coin Case is required…$"
 }
 
 text CeladonCity_GameCorner_PrizeRoom_Text_WeExchangeCoinsForPrizes {
-    "We exchange your COINS for prizes.$"
+    "We exchange your Coins for prizes.$"
 }
 
 text CeladonCity_GameCorner_PrizeRoom_Text_WhichPrize {
@@ -34,7 +34,7 @@ text CeladonCity_GameCorner_PrizeRoom_Text_YouWantTM {
 }
 
 text CeladonCity_GameCorner_PrizeRoom_Text_NeedMoreCoins {
-    "Sorry, you'll need more COINS\n"
+    "Sorry, you'll need more Coins\n"
     "than that.$"
 }
 

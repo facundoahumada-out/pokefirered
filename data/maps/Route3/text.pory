@@ -1,13 +1,13 @@
 text Route3_Text_TunnelFromCeruleanTiring {
     "Whew… I better take a rest…\n"
     "Groan…\p"
-    "That tunnel from CERULEAN takes a\n"
+    "That tunnel from Cerulean takes a\n"
     "lot out of you!$"
 }
 
 text Route3_Text_ColtonIntro {
     "Hey!\n"
-    "I saw you in VIRIDIAN FOREST!$"
+    "I saw you in Viridian Forest!$"
 }
 
 text Route3_Text_ColtonDefeat {
@@ -15,7 +15,7 @@ text Route3_Text_ColtonDefeat {
 }
 
 text Route3_Text_ColtonPostBattle {
-    "There are other kinds of POKéMON\n"
+    "There are other kinds of Pokémon\n"
     "than the ones you find in forests.$"
 }
 
@@ -31,10 +31,10 @@ text Route3_Text_BenDefeat {
 }
 
 text Route3_Text_BenPostBattle {
-    "Are you using a POKéMON CENTER's\n"
-    "PC for storing your POKéMON?\p"
-    "Each BOX can hold up to\n"
-    "30 POKéMON.$"
+    "Are you using a Pokémon Center's\n"
+    "PC for storing your Pokémon?\p"
+    "Each Box can hold up to\n"
+    "30 Pokémon.$"
 }
 
 text Route3_Text_JaniceIntro {
@@ -52,18 +52,18 @@ text Route3_Text_JanicePostBattle {
 }
 
 text Route3_Text_GregIntro {
-    "Are you a TRAINER?\n"
+    "Are you a Trainer?\n"
     "Let's get with it right away!$"
 }
 
 text Route3_Text_GregDefeat {
-    "If I had new POKéMON, I would've\n"
+    "If I had new Pokémon, I would've\n"
     "won!$"
 }
 
 text Route3_Text_GregPostBattle {
-    "If a POKéMON BOX on the PC gets\n"
-    "full, just switch to another BOX.$"
+    "If a Pokémon Box on the PC gets\n"
+    "full, just switch to another Box.$"
 }
 
 text Route3_Text_SallyIntro {
@@ -77,7 +77,7 @@ text Route3_Text_SallyDefeat {
 
 text Route3_Text_SallyPostBattle {
     "You can avoid battles by not\n"
-    "letting TRAINERS see you.$"
+    "letting Trainers see you.$"
 }
 
 text Route3_Text_CalvinIntro {
@@ -96,7 +96,7 @@ text Route3_Text_CalvinPostBattle {
 }
 
 text Route3_Text_JamesIntro {
-    "I'll battle you with the POKéMON\n"
+    "I'll battle you with the Pokémon\n"
     "I just caught.$"
 }
 
@@ -105,7 +105,7 @@ text Route3_Text_JamesDefeat {
 }
 
 text Route3_Text_JamesPostBattle {
-    "Trained POKéMON are stronger than\n"
+    "Trained Pokémon are stronger than\n"
     "the wild ones.$"
 }
 
@@ -119,11 +119,11 @@ text Route3_Text_RobinDefeat {
 }
 
 text Route3_Text_RobinPostBattle {
-    "ROUTE 4 is at the foot of\n"
-    "MT. MOON.$"
+    "Route 4 is at the foot of\n"
+    "Mt. Moon.$"
 }
 
 text Route3_Text_RouteSign {
-    "ROUTE 3\n"
-    "MT. MOON AHEAD$"
+    "Route 3\n"
+    "Mt. Moon Ahead$"
 }

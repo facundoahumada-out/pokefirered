@@ -10,11 +10,11 @@ text SaffronCity_PokemonTrainerFanClub_Text_YourePlayerWereYourFansNow {
     "You are {PLAYER}!\p"
     "We were just talking about you!\p"
     "We were talking about how an\n"
-    "incredibly good TRAINER appeared.\p"
+    "incredibly good Trainer appeared.\p"
     "And that someone is you!\n"
     "You're so cool!\p"
     "So, we decided that we'll become\n"
-    "your FAN CLUB!\p"
+    "your Fan Club!\p"
     "We all hope you'll keep battling\n"
     "and show us how cool you are.\p"
     "That way, maybe other people will\n"
@@ -55,7 +55,7 @@ text SaffronCity_PokemonTrainerFanClub_Text_EveryonesYourFanButICantBe {
 }
 
 text SaffronCity_PokemonTrainerFanClub_Text_TrainersCoolWhenBattling {
-    "I think TRAINERS are so cool when\n"
+    "I think Trainers are so cool when\n"
     "they're battling.\p"
     "Don't you think so, too?$"
 }
@@ -81,18 +81,18 @@ text SaffronCity_PokemonTrainerFanClub_Text_CountingOnYou {
 }
 
 text SaffronCity_PokemonTrainerFanClub_Text_BrocksMyHero {
-    "BROCK's my hero!\n"
+    "Brock's my hero!\n"
     "He's a man among men!\p"
     "Heheh, I got my mom to do\n"
     "something for me.\p"
-    "I got her to embroider “BROCK”\n"
+    "I got her to embroider “Brock”\n"
     "on my shorts!$"
 }
 
 text SaffronCity_PokemonTrainerFanClub_Text_BrocksFanToBitterEnd {
     "…  …\p"
     "…  …\n"
-    "I'm BROCK's fan!\p"
+    "I'm Brock's fan!\p"
     "Even if I were his only fan,\n"
     "I swear it on my rock-hard will,\l"
     "and on my shorts!\p"
@@ -100,7 +100,7 @@ text SaffronCity_PokemonTrainerFanClub_Text_BrocksFanToBitterEnd {
 }
 
 text SaffronCity_PokemonTrainerFanClub_Text_BrocksLastWordOnCool {
-    "BROCK's the last word on cool,\n"
+    "Brock's the last word on cool,\n"
     "end of story!\p"
     "Now there's a guy who I want to\n"
     "be like!$"
@@ -118,7 +118,7 @@ text SaffronCity_PokemonTrainerFanClub_Text_HadPleasureOfWatchingYouBattle {
 text SaffronCity_PokemonTrainerFanClub_Text_NeverSeenTrainerOfYourMagnificence {
     "I have journeyed far and wide\n"
     "across the lands.\p"
-    "But never have I seen a TRAINER\n"
+    "But never have I seen a Trainer\n"
     "of your magnificence.\p"
     "Take courage in your abilities\n"
     "and keep battling on!\p"
@@ -130,7 +130,7 @@ text SaffronCity_PokemonTrainerFanClub_Text_HmmAndYouAre {
     "Hmm…\n"
     "And you are?\p"
     "Were you hoping to sign up for\n"
-    "a membership in our FAN CLUB?$"
+    "a membership in our Fan Club?$"
 }
 
 text SaffronCity_PokemonTrainerFanClub_Text_YouveStillAWaysToGo {
@@ -139,14 +139,14 @@ text SaffronCity_PokemonTrainerFanClub_Text_YouveStillAWaysToGo {
     "You certainly do have the look of\n"
     "a winner.\p"
     "But for me to accept you as\n"
-    "a true POKéMON great…\p"
+    "a true Pokémon great…\p"
     "… …\p"
     "You've still a ways to go!$"
 }
 
 text SaffronCity_PokemonTrainerFanClub_Text_YoullBeTalkedAboutIfYouKeepWinning {
     "All of us gathered here are fans\n"
-    "of POKéMON TRAINERS.\p"
+    "of Pokémon Trainers.\p"
     "The way they look in battle…\n"
     "They are the picture of coolness.\p"
     "Perhaps you will be talked about\n"
@@ -170,15 +170,15 @@ text SaffronCity_PokemonTrainerFanClub_Text_EveryoneButMeStoppedBeingYourFan {
 
 text SaffronCity_PokemonTrainerFanClub_Text_WantToBeLikeSabrina {
     "Do you know what?\n"
-    "I want to be like SABRINA!\p"
+    "I want to be like Sabrina!\p"
     "I want to be a psychic girl just\n"
     "like her!$"
 }
 
 text SaffronCity_PokemonTrainerFanClub_Text_WontStopBeingSabrinasFan {
     "Even if I'm the only one, I won't\n"
-    "stop being SABRINA's fan.\p"
-    "My dream is to be like SABRINA,\n"
+    "stop being Sabrina's fan.\p"
+    "My dream is to be like Sabrina,\n"
     "cute, but cool.\p"
     "I want to be a psychic girl just\n"
     "like her!$"
@@ -186,7 +186,7 @@ text SaffronCity_PokemonTrainerFanClub_Text_WontStopBeingSabrinasFan {
 
 text SaffronCity_PokemonTrainerFanClub_Text_CanIBecomeCoolTrainerOneDay {
     "I wonder if I can become a cool\n"
-    "TRAINER one day?$"
+    "Trainer one day?$"
 }
 
 text SaffronCity_PokemonTrainerFanClub_Text_TheWayYouBattleIsCool {
@@ -262,7 +262,7 @@ text SaffronCity_PokemonTrainerFanClub_Text_YouReallyAreAmazing {
     "Amazing!\n"
     "{PLAYER}, you really are amazing!\p"
     "Instead of just watching, maybe\n"
-    "I should become a TRAINER, too.$"
+    "I should become a Trainer, too.$"
 }
 
 text SaffronCity_PokemonTrainerFanClub_Text_ImYourOnlyFan {
@@ -300,7 +300,7 @@ text SaffronCity_PokemonTrainerFanClub_Text_YourBattleStyleIsEducational {
 text SaffronCity_PokemonTrainerFanClub_Text_WontStopBeingYourFan {
     "Instead of just watching others\n"
     "battle, battle yourself!\p"
-    "…My DOJO's MASTER chewed me out\n"
+    "…My Dojo's Master chewed me out\n"
     "like that…\p"
     "But I won't let that stop me from\n"
     "being your fan!\p"
@@ -308,20 +308,20 @@ text SaffronCity_PokemonTrainerFanClub_Text_WontStopBeingYourFan {
 }
 
 text SaffronCity_PokemonTrainerFanClub_Text_OnlyMasterHasMyRespect {
-    "Hiyah! There is but one TRAINER\n"
+    "Hiyah! There is but one Trainer\n"
     "who has my respect.\p"
     "And that is none other than my\n"
-    "MASTER at the FIGHTING DOJO.\p"
+    "Master at the Fighting Dojo.\p"
     "You should become a fan of my\n"
-    "MASTER like me! Hiyah!$"
+    "Master like me! Hiyah!$"
 }
 
 text SaffronCity_PokemonTrainerFanClub_Text_NeverBeFanOfAnyoneButMaster {
-    "Hiyah! I respect my MASTER at the\n"
-    "FIGHTING DOJO.\p"
+    "Hiyah! I respect my Master at the\n"
+    "Fighting Dojo.\p"
     "I will never become a fan of\n"
-    "anyone other than my MASTER!\p"
-    "I will even sneak out of the DOJO\n"
+    "anyone other than my Master!\p"
+    "I will even sneak out of the Dojo\n"
     "to spread word of his greatness.\p"
     "Hiyah!$"
 }

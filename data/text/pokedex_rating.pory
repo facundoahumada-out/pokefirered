@@ -1,67 +1,67 @@
 text PokedexRating_Text_HowIsPokedexComingAlong {
-    "OAK: Good to see you!\n"
-    "How is your POKéDEX coming along?\p"
+    "Oak: Good to see you!\n"
+    "How is your Pokédex coming along?\p"
     "Here, let me take a look.$"
 }
 
 text PokedexRating_Text_SeenXOwnedY {
     "The amount of progress you've made\n"
-    "on your POKéDEX is:\p"
-    "{STR_VAR_1} POKéMON seen and\n"
-    "{STR_VAR_2} POKéMON owned.\p"
-    "{FONT_NORMAL}PROF. OAK's rating:$"
+    "on your Pokédex is:\p"
+    "{STR_VAR_1} Pokémon seen and\n"
+    "{STR_VAR_2} Pokémon owned.\p"
+    "{FONT_NORMAL}Prof. Oak's rating:$"
 }
 
 text PokedexRating_Text_LessThan10 {
     "You still have lots to do.\p"
     "Go into every patch of grass you\n"
-    "see and look for POKéMON!$"
+    "see and look for Pokémon!$"
 }
 
 text PokedexRating_Text_LessThan20 {
     "It looks as if you're getting on\n"
     "the right track!\p"
-    "I've given one of my AIDES a FLASH\n"
+    "I've given one of my Aides a Flash\n"
     "HM. Make sure you go get it!$"
 }
 
 text PokedexRating_Text_LessThan30 {
-    "Your POKéDEX could use a bit more\n"
+    "Your Pokédex could use a bit more\n"
     "volume still!\p"
     "Try to catch other species of\n"
-    "POKéMON!$"
+    "Pokémon!$"
 }
 
 text PokedexRating_Text_LessThan40 {
     "Good, it's apparent that you're\n"
     "trying hard!\p"
-    "I've given one of my AIDES an\n"
-    "ITEMFINDER. Be sure to collect it!$"
+    "I've given one of my Aides an\n"
+    "Itemfinder. Be sure to collect it!$"
 }
 
 text PokedexRating_Text_LessThan50 {
-    "Your POKéDEX is coming along quite\n"
+    "Your Pokédex is coming along quite\n"
     "well!\p"
-    "I've given one of my AIDES an\n"
-    "AMULET COIN. Be sure to get it!$"
+    "I've given one of my Aides an\n"
+    "Amulet Coin. Be sure to get it!$"
 }
 
 text PokedexRating_Text_LessThan60 {
     "Ah, you've finally topped 50\n"
     "species!\p"
-    "I've given one of my AIDES an EXP.\n"
-    "SHARE. Be sure to go get it!$"
+    "I've given one of my Aides an EXP.\n"
+    "Share. Be sure to go get it!$"
 }
 
 text PokedexRating_Text_LessThan70 {
     "Hoho! This is turning into quite the\n"
-    "respectable POKéDEX!$"
+    "respectable Pokédex!$"
 }
 
 text PokedexRating_Text_LessThan80 {
     "Very good!\p"
     "I think you'll collect even more\n"
-    "POKéMON by going fishing!$"
+    "Pokémon by going fishing!$"
 }
 
 text PokedexRating_Text_LessThan90 {
@@ -81,7 +81,7 @@ text PokedexRating_Text_LessThan110 {
 
 text PokedexRating_Text_LessThan120 {
     "You even have the evolved forms\n"
-    "of POKéMON! Super!$"
+    "of Pokémon! Super!$"
 }
 
 text PokedexRating_Text_LessThan130 {
@@ -96,29 +96,29 @@ text PokedexRating_Text_LessThan140 {
 
 text PokedexRating_Text_LessThan150 {
     "I have nothing left to say!\n"
-    "You're the POKéMON PROFESSOR now!$"
+    "You're the Pokémon Professor now!$"
 }
 
 text PokedexRating_Text_Complete {
-    "Your POKéDEX is entirely complete!\n"
+    "Your Pokédex is entirely complete!\n"
     "Congratulations!!$"
 }
 
 text PokedexRating_Text_NationalDexSeenXOwnedY {
-    "And your NATIONAL POKéDEX is:\p"
-    "{STR_VAR_1} POKéMON seen and\n"
-    "{STR_VAR_2} POKéMON owned.$"
+    "And your National Pokédex is:\p"
+    "{STR_VAR_1} Pokémon seen and\n"
+    "{STR_VAR_2} Pokémon owned.$"
 }
 
 text PokedexRating_Text_LookForwardToFilledNationalDex {
     "I'll be looking forward to seeing\n"
-    "you fill the NATIONAL POKéDEX!$"
+    "you fill the National Pokédex!$"
 }
 
 text PokedexRating_Text_YouveCompletedDex {
     "Finally…\p"
     "You've finally completed the\n"
-    "POKéDEX!\p"
+    "Pokédex!\p"
     "It's magnificent!\n"
     "Truly, this is a fantastic feat!$"
 }
@@ -138,8 +138,8 @@ text PokedexRating_Text_ThankYouMadeDreamReality {
 }
 
 text PokedexRating_Text_LoveSeeingYourPokedex {
-    "OAK: Ah, welcome!\p"
-    "Tell me, how is your POKéDEX\n"
+    "Oak: Ah, welcome!\p"
+    "Tell me, how is your Pokédex\n"
     "coming along?\p"
     "Wahaha!\p"
     "Actually, I know how it is, but I\n"

@@ -2,7 +2,7 @@ SSAnne_1F_Room7_Text_ThomasIntro::
 # 1 "data/maps/SSAnne_1F_Room7/text.pory"
 	.string "I am but a solitary traveler…\p"
 	.string "My sole companions and friends are\n"
-	.string "POKéMON I caught on my journeys…$"
+	.string "Pokémon I caught on my journeys…$"
 
 SSAnne_1F_Room7_Text_ThomasDefeat::
 # 7 "data/maps/SSAnne_1F_Room7/text.pory"

@@ -6,6 +6,6 @@ text PalletTown_PlayersHouse_2F_Text_PlayedWithNES {
 
 text PalletTown_PlayersHouse_2F_Text_PressLRForHelp {
     "It's a posted notice…\p"
-    "If you're confused, ask for HELP!\n"
+    "If you're confused, ask for Help!\n"
     "Press the L or R Button!$"
 }

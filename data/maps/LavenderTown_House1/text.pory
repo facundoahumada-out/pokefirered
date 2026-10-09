@@ -1,17 +1,17 @@
 text LavenderTown_House1_Text_Cubone {
-    "CUBONE: Kyarugoo!$"
+    "Cubone: Kyarugoo!$"
 }
 
 text LavenderTown_House1_Text_RocketsKilledCubonesMother {
-    "Those horrible ROCKETS!\n"
+    "Those horrible Rockets!\n"
     "They deserve no mercy!\p"
-    "That poor CUBONE's mother…\p"
+    "That poor Cubone's mother…\p"
     "It was killed trying to escape from\n"
-    "TEAM ROCKET.$"
+    "Team Rocket.$"
 }
 
 text LavenderTown_House1_Text_GhostOfPokemonTowerIsGone {
-    "The ghost of POKéMON TOWER is\n"
+    "The ghost of Pokémon Tower is\n"
     "gone!\p"
     "Someone must have soothed its\n"
     "restless spirit!$"

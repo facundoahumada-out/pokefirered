@@ -1,13 +1,13 @@
 text SSAnne_2F_Room3_Text_SeenMonsFerryPeople {
-    "Ah, yes, I have seen some POKéMON\n"
+    "Ah, yes, I have seen some Pokémon\n"
     "ferry people across the water!$"
 }
 
 text SSAnne_2F_Room3_Text_SomeTreesCanBeCutDown {
     "Small trees can be chopped down\n"
-    "using the move CUT.\p"
+    "using the move Cut.\p"
     "But remember this!\n"
-    "CUT is an HM technique.\p"
+    "Cut is an HM technique.\p"
     "Once learned, it is not so easily\n"
     "discarded.$"
 }

@@ -1,19 +1,19 @@
 // The text here is a copy/paste from Hoenn's Safari Zone, and any unused text was left untranslated
 text SafariZone_Text_WouldYouLikeToExit {
-    "Would you like to exit the SAFARI\n"
-    "ZONE right now?$"
+    "Would you like to exit the Safari\n"
+    "Zone right now?$"
 }
 
 text SafariZone_Text_TimesUp {
-    "PA: Ding-dong!\p"
+    "Pa: Ding-dong!\p"
     "Time's up!\p"
-    "PA: Your SAFARI GAME is over!$"
+    "Pa: Your Safari Game is over!$"
 }
 
 text SafariZone_Text_OutOfBalls {
-    "PA: Ding-dong!\p"
-    "You are out of SAFARI BALLS!\p"
-    "PA: Your SAFARI GAME is over!$"
+    "Pa: Ding-dong!\p"
+    "You are out of Safari Balls!\p"
+    "Pa: Your Safari Game is over!$"
 }
 
 text SafariZone_Text_WelcomeToSafariZone {
@@ -85,7 +85,7 @@ text SafariZone_Text_PleaseEnjoyYourself {
 
 text SafariZone_Text_ExcuseMeYourPCBoxIsFull {
     "Excuse me!\n"
-    "Your PC BOX is full.$"
+    "Your PC Box is full.$"
 }
 
 text SafariZone_Text_YouNeedPokeblockCase {

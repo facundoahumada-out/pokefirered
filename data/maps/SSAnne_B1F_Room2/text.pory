@@ -1,5 +1,5 @@
 text SSAnne_B1F_Room2_Text_HueyIntro {
-    "Even us sailors have POKéMON, too!$"
+    "Even us sailors have Pokémon, too!$"
 }
 
 text SSAnne_B1F_Room2_Text_HueyDefeat {
@@ -7,6 +7,6 @@ text SSAnne_B1F_Room2_Text_HueyDefeat {
 }
 
 text SSAnne_B1F_Room2_Text_HueyPostBattle {
-    "We caught all our POKéMON while\n"
+    "We caught all our Pokémon while\n"
     "we were out at sea.$"
 }

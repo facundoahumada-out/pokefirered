@@ -1,5 +1,5 @@
 text CeladonCity_Hotel_Text_ThisHotelIsForPeople {
-    "POKéMON?\n"
+    "Pokémon?\n"
     "No, this is a hotel for people.\p"
     "We're full up, unfortunately.$"
 }
@@ -7,7 +7,7 @@ text CeladonCity_Hotel_Text_ThisHotelIsForPeople {
 text CeladonCity_Hotel_Text_OnVacationWithBrotherAndBoyfriend {
     "I'm on vacation with my brother and\n"
     "boyfriend.\p"
-    "CELADON is such a pretty city!$"
+    "Celadon is such a pretty city!$"
 }
 
 text CeladonCity_Hotel_Text_WhyDidSheBringBrother {

@@ -1,31 +1,31 @@
 text PewterCity_PokemonCenter_1F_Text_TeamRocketMtMoonImOnPhone {
     "What!?\p"
-    "TEAM ROCKET is at MT. MOON?\n"
+    "Team Rocket is at Mt. Moon?\n"
     "Huh?\p"
     "I'm on the phone!\n"
     "Scram!$"
 }
 
 text PewterCity_PokemonCenter_1F_Text_Jigglypuff {
-    "JIGGLYPUFF: Puu pupuu!$"
+    "Jigglypuff: Puu pupuu!$"
 }
 
 text PewterCity_PokemonCenter_1F_Text_WhenJiggylypuffSingsMonsGetDrowsy {
     "Yawn!\p"
-    "When JIGGLYPUFF sings, POKéMON get\n"
+    "When Jigglypuff sings, Pokémon get\n"
     "drowsy…\p"
     "…Me, too…\n"
     "Snore…$"
 }
 
 text PewterCity_PokemonCenter_1F_Text_TradingMyClefairyForPikachu {
-    "I really want a PIKACHU, so I'm\n"
-    "trading my CLEFAIRY for one.$"
+    "I really want a Pikachu, so I'm\n"
+    "trading my Clefairy for one.$"
 }
 
 text PewterCity_PokemonCenter_1F_Text_TradingPikachuWithKid {
-    "I'm trading POKéMON with that kid\n"
+    "I'm trading Pokémon with that kid\n"
     "there.\p"
-    "I had two PIKACHU, so I figured\n"
+    "I had two Pikachu, so I figured\n"
     "I might as well trade one.$"
 }

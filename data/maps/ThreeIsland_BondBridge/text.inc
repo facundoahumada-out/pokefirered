@@ -11,7 +11,7 @@ ThreeIsland_BondBridge_Text_NikkiDefeat::
 ThreeIsland_BondBridge_Text_NikkiPostBattle::
 # 11 "data/maps/ThreeIsland_BondBridge/text.pory"
 	.string "Perhaps that reek is your sweaty\n"
-	.string "POKéMON's body odor…$"
+	.string "Pokémon's body odor…$"
 
 ThreeIsland_BondBridge_Text_VioletIntro::
 # 16 "data/maps/ThreeIsland_BondBridge/text.pory"
@@ -21,12 +21,12 @@ ThreeIsland_BondBridge_Text_VioletIntro::
 ThreeIsland_BondBridge_Text_VioletDefeat::
 # 21 "data/maps/ThreeIsland_BondBridge/text.pory"
 	.string "You're raising some wonderful\n"
-	.string "POKéMON.$"
+	.string "Pokémon.$"
 
 ThreeIsland_BondBridge_Text_VioletPostBattle::
 # 26 "data/maps/ThreeIsland_BondBridge/text.pory"
 	.string "If you keep going this way, you'll\n"
-	.string "eventually reach BERRY FOREST.$"
+	.string "eventually reach Berry Forest.$"
 
 ThreeIsland_BondBridge_Text_AmiraIntro::
 # 31 "data/maps/ThreeIsland_BondBridge/text.pory"
@@ -46,7 +46,7 @@ ThreeIsland_BondBridge_Text_AmiraPostBattle::
 ThreeIsland_BondBridge_Text_AlexisIntro::
 # 46 "data/maps/ThreeIsland_BondBridge/text.pory"
 	.string "Yay, yay!\n"
-	.string "POKéMON!$"
+	.string "Pokémon!$"
 
 ThreeIsland_BondBridge_Text_AlexisDefeat::
 # 51 "data/maps/ThreeIsland_BondBridge/text.pory"
@@ -69,57 +69,57 @@ ThreeIsland_BondBridge_Text_TishaDefeat::
 
 ThreeIsland_BondBridge_Text_TishaPostBattle::
 # 70 "data/maps/ThreeIsland_BondBridge/text.pory"
-	.string "A POKéMON bit through my \n"
+	.string "A Pokémon bit through my \n"
 	.string "swimsuit.\p"
 	.string "I can't get out of the water!$"
 
 ThreeIsland_BondBridge_Text_JoyIntro::
 # 76 "data/maps/ThreeIsland_BondBridge/text.pory"
-	.string "JOY: We'll teach you what our\n"
-	.string "favorite POKéMON is!$"
+	.string "Joy: We'll teach you what our\n"
+	.string "favorite Pokémon is!$"
 
 ThreeIsland_BondBridge_Text_JoyDefeat::
 # 81 "data/maps/ThreeIsland_BondBridge/text.pory"
-	.string "JOY: Ohh…\n"
-	.string "MEG!$"
+	.string "Joy: Ohh…\n"
+	.string "Meg!$"
 
 ThreeIsland_BondBridge_Text_JoyPostBattle::
 # 86 "data/maps/ThreeIsland_BondBridge/text.pory"
-	.string "JOY: Wasn't that fun?\n"
+	.string "Joy: Wasn't that fun?\n"
 	.string "I hope we can battle again!$"
 
 ThreeIsland_BondBridge_Text_JoyNotEnoughMons::
 # 91 "data/maps/ThreeIsland_BondBridge/text.pory"
-	.string "JOY: I really want to battle with\n"
-	.string "MEG.\p"
-	.string "One POKéMON isn't enough.$"
+	.string "Joy: I really want to battle with\n"
+	.string "Meg.\p"
+	.string "One Pokémon isn't enough.$"
 
 ThreeIsland_BondBridge_Text_MegIntro::
 # 97 "data/maps/ThreeIsland_BondBridge/text.pory"
-	.string "MEG: We'll show you our favorite\n"
-	.string "POKéMON.$"
+	.string "Meg: We'll show you our favorite\n"
+	.string "Pokémon.$"
 
 ThreeIsland_BondBridge_Text_MegDefeat::
 # 102 "data/maps/ThreeIsland_BondBridge/text.pory"
-	.string "MEG: Ohh…\n"
-	.string "JOY!$"
+	.string "Meg: Ohh…\n"
+	.string "Joy!$"
 
 ThreeIsland_BondBridge_Text_MegPostBattle::
 # 107 "data/maps/ThreeIsland_BondBridge/text.pory"
-	.string "MEG: JOY, wasn't that fun?$"
+	.string "Meg: Joy, wasn't that fun?$"
 
 ThreeIsland_BondBridge_Text_MegNotEnoughMons::
 # 111 "data/maps/ThreeIsland_BondBridge/text.pory"
-	.string "MEG: I want to battle together\n"
-	.string "with JOY.\p"
-	.string "One POKéMON isn't enough.$"
+	.string "Meg: I want to battle together\n"
+	.string "with Joy.\p"
+	.string "One Pokémon isn't enough.$"
 
 ThreeIsland_BondBridge_Text_BerryForestAhead::
 # 117 "data/maps/ThreeIsland_BondBridge/text.pory"
-	.string "BERRY FOREST AHEAD$"
+	.string "Berry Forest Ahead$"
 
 ThreeIsland_BondBridge_Text_BondBridgeSign::
 # 121 "data/maps/ThreeIsland_BondBridge/text.pory"
-	.string "BOND BRIDGE\n"
+	.string "Bond Bridge\n"
 	.string "Please be quiet when crossing.\p"
-	.string "BERRY FOREST AHEAD$"
+	.string "Berry Forest Ahead$"

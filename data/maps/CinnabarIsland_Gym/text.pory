@@ -1,42 +1,42 @@
 text CinnabarIsland_Gym_Text_BlaineIntro {
     "Hah!\p"
-    "I am BLAINE, the red-hot LEADER\n"
-    "of CINNABAR GYM!\p"
-    "My fiery POKéMON are all rough\n"
+    "I am Blaine, the red-hot Leader\n"
+    "of Cinnabar Gym!\p"
+    "My fiery Pokémon are all rough\n"
     "and ready with intense heat!\p"
     "They incinerate all challengers!\p"
     "Hah!\n"
-    "You better have BURN HEAL!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    "You better have Burn Heal!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 }
 
 text CinnabarIsland_Gym_Text_BlaineDefeat {
     "I have burned down to nothing!\n"
     "Not even ashes remain!\p"
-    "You have earned the VOLCANOBADGE.$"
+    "You have earned the Volcanobadge.$"
 }
 
 text CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove {
-    "FIRE BLAST is the ultimate fire\n"
+    "Fire Blast is the ultimate fire\n"
     "technique.\p"
-    "Don't waste it on WATER POKéMON.$"
+    "Don't waste it on Water Pokémon.$"
 }
 
 text CinnabarIsland_Gym_Text_ExplainVolcanoBadge {
     "Hah!\p"
-    "The VOLCANOBADGE heightens the\n"
-    "SPECIAL stats of your POKéMON.\p"
+    "The Volcanobadge heightens the\n"
+    "Special stats of your Pokémon.\p"
     "Here, you can have this, too!$"
 }
 
 text CinnabarIsland_Gym_Text_ReceivedTM38FromBlaine {
     "{PLAYER} received TM38\n"
-    "from BLAINE.$"
+    "from Blaine.$"
 }
 
 text CinnabarIsland_Gym_Text_BlainePostBattle {
-    "TM38 contains FIRE BLAST.\n"
-    "Teach it to FIRE-type POKéMON.\p"
-    "VULPIX or CHARMELEON would be\n"
+    "TM38 contains Fire Blast.\n"
+    "Teach it to Fire-type Pokémon.\p"
+    "Vulpix or Charmeleon would be\n"
     "ideal for that move.$"
 }
 
@@ -45,7 +45,7 @@ text CinnabarIsland_Gym_Text_MakeSpaceForThis {
 }
 
 text CinnabarIsland_Gym_Text_ErikIntro {
-    "Do you know how hot POKéMON fire\n"
+    "Do you know how hot Pokémon fire\n"
     "breath can get?$"
 }
 
@@ -63,7 +63,7 @@ text CinnabarIsland_Gym_Text_ErikPostBattle {
 
 text CinnabarIsland_Gym_Text_QuinnIntro {
     "I was a thief, but I went straight\n"
-    "as a TRAINER.$"
+    "as a Trainer.$"
 }
 
 text CinnabarIsland_Gym_Text_QuinnDefeat {
@@ -72,11 +72,11 @@ text CinnabarIsland_Gym_Text_QuinnDefeat {
 
 text CinnabarIsland_Gym_Text_QuinnPostBattle {
     "I get this uncontrollable urge to\n"
-    "steal other people's POKéMON.$"
+    "steal other people's Pokémon.$"
 }
 
 text CinnabarIsland_Gym_Text_AveryIntro {
-    "I've studied POKéMON thoroughly.\n"
+    "I've studied Pokémon thoroughly.\n"
     "You can't win!$"
 }
 
@@ -91,7 +91,7 @@ text CinnabarIsland_Gym_Text_AveryPostBattle {
 }
 
 text CinnabarIsland_Gym_Text_RamonIntro {
-    "I like using FIRE-type POKéMON.\n"
+    "I like using Fire-type Pokémon.\n"
     "I just do.$"
 }
 
@@ -100,13 +100,13 @@ text CinnabarIsland_Gym_Text_RamonDefeat {
 }
 
 text CinnabarIsland_Gym_Text_RamonPostBattle {
-    "I wish there were a thief POKéMON.\n"
+    "I wish there were a thief Pokémon.\n"
     "I'd use that!$"
 }
 
 text CinnabarIsland_Gym_Text_DerekIntro {
-    "I know why BLAINE became a\n"
-    "TRAINER.$"
+    "I know why Blaine became a\n"
+    "Trainer.$"
 }
 
 text CinnabarIsland_Gym_Text_DerekDefeat {
@@ -114,16 +114,16 @@ text CinnabarIsland_Gym_Text_DerekDefeat {
 }
 
 text CinnabarIsland_Gym_Text_DerekPostBattle {
-    "Our LEADER, BLAINE, became lost\n"
+    "Our Leader, Blaine, became lost\n"
     "in the mountains but good.\p"
     "Night fell when a fiery bird\n"
-    "POKéMON appeared.\p"
-    "Its light allowed BLAINE to find\n"
+    "Pokémon appeared.\p"
+    "Its light allowed Blaine to find\n"
     "his way down safely.$"
 }
 
 text CinnabarIsland_Gym_Text_DustyIntro {
-    "I've been to many GYMS, but this\n"
+    "I've been to many Gyms, but this\n"
     "one best suits my style.$"
 }
 
@@ -133,8 +133,8 @@ text CinnabarIsland_Gym_Text_DustyDefeat {
 }
 
 text CinnabarIsland_Gym_Text_DustyPostBattle {
-    "PONYTA, NINETALES…\n"
-    "Those are popular FIRE POKéMON.$"
+    "Ponyta, Ninetales…\n"
+    "Those are popular Fire Pokémon.$"
 }
 
 text CinnabarIsland_Gym_Text_ZacIntro {
@@ -148,18 +148,18 @@ text CinnabarIsland_Gym_Text_ZacDefeat {
 
 text CinnabarIsland_Gym_Text_ZacPostBattle {
     "Water beats fire, of course.\p"
-    "But fire melts ice, so the FIRE\n"
-    "type beats ICE-type POKéMON.$"
+    "But fire melts ice, so the Fire\n"
+    "type beats Ice-type Pokémon.$"
 }
 
 text CinnabarIsland_Gym_Text_GymGuyAdvice {
     "Yo!\n"
     "Champ in the making!\p"
-    "The hotheaded BLAINE is a FIRE\n"
-    "POKéMON pro.\p"
+    "The hotheaded Blaine is a Fire\n"
+    "Pokémon pro.\p"
     "Douse his spirits with water!\p"
     "You'd better take some\n"
-    "BURN HEALS, too.$"
+    "Burn Heals, too.$"
 }
 
 text CinnabarIsland_Gym_Text_GymGuyPostVictory {
@@ -168,55 +168,55 @@ text CinnabarIsland_Gym_Text_GymGuyPostVictory {
 }
 
 text CinnabarIsland_Gym_Text_GymStatue {
-    "CINNABAR POKéMON GYM\n"
-    "LEADER: BLAINE\p"
-    "WINNING TRAINERS:\n"
+    "Cinnabar Pokémon Gym\n"
+    "Leader: Blaine\p"
+    "Winning Trainers:\n"
     "{RIVAL}$"
 }
 
 text CinnabarIsland_Gym_Text_GymStatuePlayerWon {
-    "CINNABAR POKéMON GYM\n"
-    "LEADER: BLAINE\p"
-    "WINNING TRAINERS:\n"
+    "Cinnabar Pokémon Gym\n"
+    "Leader: Blaine\p"
+    "Winning Trainers:\n"
     "{RIVAL}, {PLAYER}$"
 }
 
 text CinnabarIsland_Gym_Text_PokemonQuizRules {
-    "POKéMON Quiz!\p"
+    "Pokémon Quiz!\p"
     "Get it right, and the door opens to\n"
     "the next room.\p"
-    "Get it wrong, and face a TRAINER!\p"
+    "Get it wrong, and face a Trainer!\p"
     "If you want to conserve your\n"
-    "POKéMON for the GYM LEADER…\p"
+    "Pokémon for the Gym Leader…\p"
     "Then get it right!\n"
     "Here we go!$"
 }
 
 text CinnabarIsland_Gym_Text_QuizQuestion1 {
-    "CATERPIE evolves into METAPOD?$"
+    "Caterpie evolves into Metapod?$"
 }
 
 text CinnabarIsland_Gym_Text_QuizQuestion2 {
-    "There are nine certified POKéMON\n"
-    "LEAGUE BADGES?$"
+    "There are nine certified Pokémon\n"
+    "League Badges?$"
 }
 
 text CinnabarIsland_Gym_Text_QuizQuestion3 {
-    "POLIWAG evolves three times?$"
+    "Poliwag evolves three times?$"
 }
 
 text CinnabarIsland_Gym_Text_QuizQuestion4 {
     "Are electric moves effective\n"
-    "against GROUND-type POKéMON?$"
+    "against Ground-type Pokémon?$"
 }
 
 text CinnabarIsland_Gym_Text_QuizQuestion5 {
-    "POKéMON of the same kind and level\n"
+    "Pokémon of the same kind and level\n"
     "are not identical?$"
 }
 
 text CinnabarIsland_Gym_Text_QuizQuestion6 {
-    "TM28 contains TOMBSTONY?$"
+    "TM28 contains Tombstony?$"
 }
 
 text CinnabarIsland_Gym_Text_CorrectGoOnThrough {

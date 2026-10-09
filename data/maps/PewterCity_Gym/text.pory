@@ -1,15 +1,15 @@
 text PewterCity_Gym_Text_BrockIntro {
-    "So, you're here. I'm BROCK.\n"
-    "I'm PEWTER's GYM LEADER.\p"
+    "So, you're here. I'm Brock.\n"
+    "I'm Pewter's Gym Leader.\p"
     "My rock-hard willpower is evident\n"
-    "even in my POKéMON.\p"
-    "My POKéMON are all rock hard, and\n"
+    "even in my Pokémon.\p"
+    "My Pokémon are all rock hard, and\n"
     "have true-grit determination.\p"
-    "That's right - my POKéMON are all\n"
-    "the ROCK type!\p"
+    "That's right - my Pokémon are all\n"
+    "the Rock type!\p"
     "Fuhaha! You're going to challenge\n"
     "me knowing that you'll lose?\p"
-    "That's the TRAINER's honor that\n"
+    "That's the Trainer's honor that\n"
     "compels you to challenge me.\p"
     "Fine, then!\n"
     "Show me your best!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
@@ -22,16 +22,16 @@ text PewterCity_Gym_Text_BrockDefeat {
     "I took you for granted, and so\n"
     "I lost.\p"
     "As proof of your victory, I confer\n"
-    "on you this…the official POKéMON\l"
-    "LEAGUE BOULDERBADGE.\p"
-    "{FONT_NORMAL}{PLAYER} received the BOULDERBADGE\n"
-    "from BROCK!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
-    "{FONT_MALE}Just having the BOULDERBADGE makes\n"
-    "your POKéMON more powerful.\p"
+    "on you this…the official Pokémon\l"
+    "League Boulderbadge.\p"
+    "{FONT_NORMAL}{PLAYER} received the Boulderbadge\n"
+    "from Brock!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
+    "{FONT_MALE}Just having the Boulderbadge makes\n"
+    "your Pokémon more powerful.\p"
     "It also enables the use of the\n"
-    "move FLASH outside of battle.\p"
-    "Of course, a POKéMON must know the\n"
-    "move FLASH to use it.$"
+    "move Flash outside of battle.\p"
+    "Of course, a Pokémon must know the\n"
+    "move Flash to use it.$"
 }
 
 text PewterCity_Gym_Text_TakeThisWithYou {
@@ -41,30 +41,30 @@ text PewterCity_Gym_Text_TakeThisWithYou {
 
 text PewterCity_Gym_Text_ReceivedTM39FromBrock {
     "{PLAYER} received TM39\n"
-    "from BROCK.$"
+    "from Brock.$"
 }
 
 text PewterCity_Gym_Text_ExplainTM39 {
     "A TM, Technical Machine, contains a\n"
-    "technique for POKéMON.\p"
+    "technique for Pokémon.\p"
     "Using a TM teaches the move it\n"
-    "contains to a POKéMON.\p"
+    "contains to a Pokémon.\p"
     "A TM is good for only one use.\p"
     "So, when you use one, pick the\n"
-    "POKéMON carefully.\p"
+    "Pokémon carefully.\p"
     "Anyways…\n"
-    "TM39 contains ROCK TOMB.\p"
+    "TM39 contains Rock Tomb.\p"
     "It hurls boulders at the foe and\n"
-    "lowers its SPEED.$"
+    "lowers its Speed.$"
 }
 
 text PewterCity_Gym_Text_BrockPostBattle {
-    "There are all kinds of TRAINERS in\n"
+    "There are all kinds of Trainers in\n"
     "this huge world of ours.\p"
     "You appear to be very gifted as a\n"
-    "POKéMON TRAINER.\p"
+    "Pokémon Trainer.\p"
     "So let me make a suggestion.\p"
-    "Go to the GYM in CERULEAN and test\n"
+    "Go to the Gym in Cerulean and test\n"
     "your abilities.$"
 }
 
@@ -75,7 +75,7 @@ text PewterCity_Gym_Text_DontHaveRoomForThis {
 text PewterCity_Gym_Text_LiamIntro {
     "Stop right there, kid!\p"
     "You're ten thousand light-years \n"
-    "from facing BROCK!$"
+    "from facing Brock!$"
 }
 
 text PewterCity_Gym_Text_LiamDefeat {
@@ -86,15 +86,15 @@ text PewterCity_Gym_Text_LiamDefeat {
 
 text PewterCity_Gym_Text_LiamPostBattle {
     "You're pretty hot.\n"
-    "…But not as hot as BROCK!$"
+    "…But not as hot as Brock!$"
 }
 
 text PewterCity_Gym_Text_LetMeTakeYouToTheTop {
     "Hiya!\n"
     "Do you want to dream big?\p"
     "Do you dare to dream of becoming\n"
-    "the POKéMON champ?\p"
-    "I'm no TRAINER, but I can advise\n"
+    "the Pokémon champ?\p"
+    "I'm no Trainer, but I can advise\n"
     "you on how to win.\p"
     "Let me take you to the top!$"
 }
@@ -105,9 +105,9 @@ text PewterCity_Gym_Text_LetsGetHappening {
 }
 
 text PewterCity_Gym_Text_TryDifferentPartyOrders {
-    "The first POKéMON out in a match is\n"
-    "at the left of the POKéMON LIST.\p"
-    "By changing the order of POKéMON,\n"
+    "The first Pokémon out in a match is\n"
+    "at the left of the Pokémon List.\p"
+    "By changing the order of Pokémon,\n"
     "you may gain an advantage.\p"
     "Try different orders to suit your\n"
     "opponent's party.$"
@@ -120,19 +120,19 @@ text PewterCity_Gym_Text_ItsFreeLetsGetHappening {
 
 text PewterCity_Gym_Text_YoureChampMaterial {
     "Just as I thought!\n"
-    "You're POKéMON champ material!$"
+    "You're Pokémon champ material!$"
 }
 
 text PewterCity_Gym_Text_GymStatue {
-    "PEWTER POKéMON GYM\n"
-    "LEADER: BROCK\p"
-    "WINNING TRAINERS:\n"
+    "Pewter Pokémon Gym\n"
+    "Leader: Brock\p"
+    "Winning Trainers:\n"
     "{RIVAL}$"
 }
 
 text PewterCity_Gym_Text_GymStatuePlayerWon {
-    "PEWTER POKéMON GYM\n"
-    "LEADER: BROCK\p"
-    "WINNING TRAINERS:\n"
+    "Pewter Pokémon Gym\n"
+    "Leader: Brock\p"
+    "Winning Trainers:\n"
     "{RIVAL}, {PLAYER}$"
 }

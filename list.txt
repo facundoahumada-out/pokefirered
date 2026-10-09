@@ -23,6 +23,7 @@ Amuleto Iris [Listas]
 Correr en interiores [Listas]
 Poner nombres predeterminados [Listas]
 Arreglar sonido de Seta y que cure 30ps [Listas]
+Cambiar todo a Pascal Case [Listas]
 
 Implementación escaleras laterales [Pendientes]
 Implementación de nueva ruta [Pendientes] [Gintas]

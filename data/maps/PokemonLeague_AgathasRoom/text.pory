@@ -1,33 +1,33 @@
 text PokemonLeague_AgathasRoom_Text_Intro {
-    "I am AGATHA of the ELITE FOUR.\p"
-    "I hear OAK's taken a lot of\n"
+    "I am Agatha of the Elite Four.\p"
+    "I hear Oak's taken a lot of\n"
     "interest in you, child.\p"
     "That old duff was once tough and\n"
     "handsome.\p"
     "But that was decades ago.\n"
     "He's a shadow of his former self.\p"
     "Now he just wants to fiddle with\n"
-    "his POKéDEX.\p"
+    "his Pokédex.\p"
     "He's wrong.\n"
-    "POKéMON are for battling!\p"
+    "Pokémon are for battling!\p"
     "{PLAYER}! I'll show you how a real\n"
-    "TRAINER battles!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    "Trainer battles!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 }
 
 text PokemonLeague_AgathasRoom_Text_RematchIntro {
-    "I am AGATHA of the ELITE FOUR.\p"
-    "You're the child that OAK's taken\n"
+    "I am Agatha of the Elite Four.\p"
+    "You're the child that Oak's taken\n"
     "under his wing, aren't you?\p"
     "That old duff was once tough and\n"
     "handsome.\p"
     "But that was decades ago.\n"
     "He's a shadow of his former self.\p"
     "Now he just wants to fiddle with\n"
-    "his POKéDEX.\p"
+    "his Pokédex.\p"
     "He's wrong.\n"
-    "POKéMON are for battling!\p"
+    "Pokémon are for battling!\p"
     "{PLAYER}! I'll show you how a real\n"
-    "TRAINER battles!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    "Trainer battles!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 }
 
 text PokemonLeague_AgathasRoom_Text_Defeat {

@@ -1,12 +1,12 @@
 Route4_Text_TrippedOverGeodude::
 # 1 "data/maps/Route4/text.pory"
 	.string "Ouch! I tripped over a rocky\n"
-	.string "POKéMON, GEODUDE!$"
+	.string "Pokémon, Geodude!$"
 
 Route4_Text_CrissyIntro::
 # 6 "data/maps/Route4/text.pory"
-	.string "I came to MT. MOON in search of\n"
-	.string "mushroom POKéMON.$"
+	.string "I came to Mt. Moon in search of\n"
+	.string "mushroom Pokémon.$"
 
 Route4_Text_CrissyDefeat::
 # 11 "data/maps/Route4/text.pory"
@@ -20,33 +20,33 @@ Route4_Text_CrissyPostBattle::
 
 Route4_Text_MtMoonEntrance::
 # 21 "data/maps/Route4/text.pory"
-	.string "MT. MOON\n"
+	.string "Mt. Moon\n"
 	.string "Tunnel Entrance$"
 
 Route4_Text_RouteSign::
 # 26 "data/maps/Route4/text.pory"
-	.string "ROUTE 4\n"
-	.string "MT. MOON - CERULEAN CITY$"
+	.string "Route 4\n"
+	.string "Mt. Moon - Cerulean City$"
 
 Text_MegaPunchTeach::
 # 31 "data/maps/Route4/text.pory"
 	.string "A punch of roaring ferocity!\p"
 	.string "Packed with destructive power!\p"
 	.string "When the chips are down,\n"
-	.string "MEGA PUNCH is the ultimate attack!\l"
+	.string "Mega Punch is the ultimate attack!\l"
 	.string "You agree, yes?\p"
 	.string "Now!\n"
-	.string "Let me teach it to your POKéMON!$"
+	.string "Let me teach it to your Pokémon!$"
 
 Text_MegaPunchDeclined::
 # 41 "data/maps/Route4/text.pory"
 	.string "You'll be back when you understand\n"
-	.string "the worth of MEGA PUNCH.$"
+	.string "the worth of Mega Punch.$"
 
 Text_MegaPunchWhichMon::
 # 46 "data/maps/Route4/text.pory"
 	.string "Fine!\n"
-	.string "Which POKéMON will learn it?$"
+	.string "Which Pokémon will learn it?$"
 
 Text_MegaPunchTaught::
 # 51 "data/maps/Route4/text.pory"
@@ -61,20 +61,20 @@ Text_MegaKickTeach::
 	.string "A kick of brutal ferocity!\p"
 	.string "Packed with destructive power!\p"
 	.string "When you get right down to it,\n"
-	.string "MEGA KICK is the ultimate attack!\l"
+	.string "Mega Kick is the ultimate attack!\l"
 	.string "Don't you agree?\p"
 	.string "Okay!\n"
-	.string "I'll teach it to your POKéMON!$"
+	.string "I'll teach it to your Pokémon!$"
 
 Text_MegaKickDeclined::
 # 69 "data/maps/Route4/text.pory"
 	.string "You'll come crawling back when you\n"
-	.string "realize the value of MEGA KICK.$"
+	.string "realize the value of Mega Kick.$"
 
 Text_MegaKickWhichMon::
 # 74 "data/maps/Route4/text.pory"
 	.string "All right!\n"
-	.string "Which POKéMON wants to learn it?$"
+	.string "Which Pokémon wants to learn it?$"
 
 Text_MegaKickTaught::
 # 79 "data/maps/Route4/text.pory"
@@ -86,9 +86,9 @@ Text_MegaKickTaught::
 
 Route4_Text_PeopleLikeAndRespectBrock::
 # 87 "data/maps/Route4/text.pory"
-	.string "Oh, wow, that's the BOULDERBADGE!\n"
-	.string "You got it from BROCK, didn't you?\p"
-	.string "BROCK is cool. He's not just tough.\n"
+	.string "Oh, wow, that's the Boulderbadge!\n"
+	.string "You got it from Brock, didn't you?\p"
+	.string "Brock is cool. He's not just tough.\n"
 	.string "People like and respect him.\p"
-	.string "I want to become a GYM LEADER\n"
+	.string "I want to become a Gym Leader\n"
 	.string "like him.$"

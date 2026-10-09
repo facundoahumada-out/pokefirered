@@ -1,5 +1,5 @@
 text Text_OnlySkilledTrainersAllowedThrough {
-    "Only truly skilled TRAINERS are\n"
+    "Only truly skilled Trainers are\n"
     "allowed through.\p"
     "You don't have the {STR_VAR_1}\n"
     "yet!$"
@@ -21,7 +21,7 @@ text Text_OnlyPassWithBadgeDontHaveYet {
     "You don't have the {STR_VAR_1}\n"
     "yet.\p"
     "You have to have it to get to\n"
-    "the POKéMON LEAGUE.$"
+    "the Pokémon League.$"
 }
 
 text Text_OnlyPassWithBadgeOhGoAhead {

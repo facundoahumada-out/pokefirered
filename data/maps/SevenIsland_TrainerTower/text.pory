@@ -15,27 +15,27 @@ text SevenIsland_TrainerTower_Text_DarioPostBattle {
 
 text SevenIsland_TrainerTower_Text_RodetteIntro {
     "Somewhere on this island, peculiar\n"
-    "POKéMON are sleeping.$"
+    "Pokémon are sleeping.$"
 }
 
 text SevenIsland_TrainerTower_Text_RodetteDefeat {
-    "What an amazing TRAINER!$"
+    "What an amazing Trainer!$"
 }
 
 text SevenIsland_TrainerTower_Text_RodettePostBattle {
     "Somewhere on this island, peculiar\n"
-    "POKéMON are sleeping.\p"
+    "Pokémon are sleeping.\p"
     "Could it be that they're waiting\n"
     "for you?$"
 }
 
 text SevenIsland_TrainerTower_Text_TrainerTowerSign {
-    "TRAINER TOWER ENTRANCE\n"
-    "Rise to the Challenge, TRAINERS!$"
+    "Trainer Tower Entrance\n"
+    "Rise to the Challenge, Trainers!$"
 }
 
 text SevenIsland_TrainerTower_Text_TrainerTowerAhead {
-    "TRAINER TOWER AHEAD$"
+    "Trainer Tower Ahead$"
 }
 
 // Unused text perhaps indicating Trainer Tower was planned to be unlocked by something

@@ -1,6 +1,6 @@
 Text_OnlySkilledTrainersAllowedThrough::
 # 1 "data/text/route23.pory"
-	.string "Only truly skilled TRAINERS are\n"
+	.string "Only truly skilled Trainers are\n"
 	.string "allowed through.\p"
 	.string "You don't have the {STR_VAR_1}\n"
 	.string "yet!$"
@@ -22,7 +22,7 @@ Text_OnlyPassWithBadgeDontHaveYet::
 	.string "You don't have the {STR_VAR_1}\n"
 	.string "yet.\p"
 	.string "You have to have it to get to\n"
-	.string "the POKéMON LEAGUE.$"
+	.string "the Pokémon League.$"
 
 Text_OnlyPassWithBadgeOhGoAhead::
 # 27 "data/text/route23.pory"

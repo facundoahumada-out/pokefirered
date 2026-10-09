@@ -1446,8 +1446,8 @@ script TwoIsland_JoyfulGameCorner_EventScript_ShowDodrioBerryPickingRecords {
 }
 
 text CableClub_Text_WelcomeWhichCableClubService {
-    "Welcome to the POKéMON CABLE\n"
-    "CLUB.\p"
+    "Welcome to the Pokémon Cable\n"
+    "Club.\p"
     "Which of our services do you wish\n"
     "to use?$"
 }
@@ -1458,12 +1458,12 @@ text CableClub_Text_WhichService {
 }
 
 text CableClub_Text_TradeMonsUsingLinkCable {
-    "Trade POKéMON with another player\n"
+    "Trade Pokémon with another player\n"
     "using a GBA Game Link cable.$"
 }
 
 text CableClub_Text_BattleUsingLinkCable {
-    "You may battle another TRAINER\n"
+    "You may battle another Trainer\n"
     "using a GBA Game Link cable.$"
 }
 
@@ -1473,18 +1473,18 @@ text CableClub_Text_CloseThisMenu {
 }
 
 text CableClub_Text_NeedTwoMonsForDoubleBattle {
-    "For a DOUBLE BATTLE, you must\n"
-    "have at least two POKéMON.$"
+    "For a Double Battle, you must\n"
+    "have at least two Pokémon.$"
 }
 
 text CableClub_Text_NeedTwoMonsToTrade {
     "For trading, you must have at\n"
-    "least two POKéMON with you.$"
+    "least two Pokémon with you.$"
 }
 
 text CableClub_Text_CantTradeEnigmaBerry {
-    "A POKéMON holding the {STR_VAR_1}\n"
-    "BERRY can't be traded.$"
+    "A Pokémon holding the {STR_VAR_1}\n"
+    "Berry can't be traded.$"
 }
 
 text CableClub_Text_PleaseWaitBCancel {
@@ -1549,12 +1549,12 @@ text CableClub_Text_IncorrectNumberOfParticipants {
 }
 
 text CableClub_Text_CantSingleBattleWithXPlayers {
-    "The SINGLE BATTLE Mode can't be\n"
+    "The Single Battle Mode can't be\n"
     "played by {STR_VAR_1} players.$"
 }
 
 text CableClub_Text_CantDoubleBattleWithXPlayers {
-    "The DOUBLE BATTLE Mode can't be\n"
+    "The Double Battle Mode can't be\n"
     "played by {STR_VAR_1} players.$"
 }
 
@@ -1580,18 +1580,18 @@ text Text_TerminateLinkConfirmation {
 }
 
 text Text_TrainerTooBusyToNotice {
-    "This TRAINER is too busy to\n"
+    "This Trainer is too busy to\n"
     "notice…$"
 }
 
 text Text_LookedAtPlayersTrainerCard {
     "Score! Got to look at {STR_VAR_1}'s\n"
-    "TRAINER CARD!$"
+    "Trainer Card!$"
 }
 
 text Text_LookedAtPlayersTrainerCardColored {
     "Score! Got to look at {STR_VAR_1}'s\n"
-    "TRAINER CARD!\p"
+    "Trainer Card!\p"
     "It's a {STR_VAR_2} card!$"
 }
 
@@ -1611,7 +1611,7 @@ text RecordCorner_Text_ThanksForComing {
 }
 
 text CableClub_Text_TrainerCardDataOverwritten {
-    "The TRAINER CARD data will\n"
+    "The Trainer Card data will\n"
     "be overwritten.$"
 }
 
@@ -1622,16 +1622,16 @@ text CableClub_Text_HopeToSeeYouAgain {
 text CableClub_Text_NotSetUpForFarAwayRegion {
     "I'm awfully sorry.\p"
     "We're not set up to conduct trades\n"
-    "with TRAINERS far away in another\l"
+    "with Trainers far away in another\l"
     "region yet…$"
 }
 
 text CableClub_Text_OtherTrainerNotReady {
-    "The other TRAINER is not ready.$"
+    "The other Trainer is not ready.$"
 }
 
 text CableClub_Text_YouHaveAMonThatCantBeTaken {
-    "You have at least one POKéMON\n"
+    "You have at least one Pokémon\n"
     "that can't be taken.$"
 }
 
@@ -1656,8 +1656,8 @@ text CableClub_Text_PleaseWait {
 }
 
 text CableClub_Text_YouMayTradeHere {
-    "You may trade your POKéMON here\n"
-    "with another TRAINER.$"
+    "You may trade your Pokémon here\n"
+    "with another Trainer.$"
 }
 
 text CableClub_Text_YouMayBattleHere {
@@ -1666,8 +1666,8 @@ text CableClub_Text_YouMayBattleHere {
 }
 
 text CableClub_Text_CanMakeBerryPowder {
-    "Two to five TRAINERS can make\n"
-    "BERRY POWDER together.$"
+    "Two to five Trainers can make\n"
+    "Berry Powder together.$"
 }
 
 // Unused, Record Mix nopped
@@ -1677,7 +1677,7 @@ text CableClub_Text_CanMixRecords {
 }
 
 text CableClub_Text_CancelSelectedItem {
-    "Cancels the selected MENU item.$"
+    "Cancels the selected Menu item.$"
 }
 
 // Unused, translated in Emerald
@@ -1691,23 +1691,23 @@ text CableClub_Text_ReturnsToPreviousStep {
 }
 
 text CableClub_Text_NeedBerryForBerryCrush {
-    "To use the BERRY CRUSH service,\n"
-    "you must have at least one BERRY.$"
+    "To use the Berry Crush service,\n"
+    "you must have at least one Berry.$"
 }
 
 text CableClub_Text_NeedTwoMonsForUnionRoom {
-    "To enter the UNION ROOM, you must\n"
-    "have at least two POKéMON.$"
+    "To enter the Union Room, you must\n"
+    "have at least two Pokémon.$"
 }
 
 text CableClub_Text_NoEnigmaBerryInUnionRoom {
-    "No POKéMON holding the {STR_VAR_1}\n"
-    "BERRY may enter the UNION ROOM.$"
+    "No Pokémon holding the {STR_VAR_1}\n"
+    "Berry may enter the Union Room.$"
 }
 
 text CableClub_Text_UnionRoomAdapterNotConnected {
-    "This is the POKéMON WIRELESS CLUB\n"
-    "UNION ROOM.\p"
+    "This is the Pokémon Wireless Club\n"
+    "Union Room.\p"
     "Unfortunately, your Wireless\n"
     "Adapter is not connected properly.\p"
     "Please do come again.$"
@@ -1732,27 +1732,27 @@ text Text_DescribeWhichGame {
 }
 
 text Text_PokemonJumpInfo {
-    "“POKéMON JUMP”\p"
-    "Make your POKéMON skip the\n"
-    "VINE WHIP rope with the A Button.\p"
-    "Only mini POKéMON around 28 inches\n"
+    "“Pokémon Jump”\p"
+    "Make your Pokémon skip the\n"
+    "Vine Whip rope with the A Button.\p"
+    "Only mini Pokémon around 28 inches\n"
     "or less may participate.\p"
-    "POKéMON that only swim, burrow, or\n"
+    "Pokémon that only swim, burrow, or\n"
     "fly are not good at jumping.\p"
-    "As a result, those POKéMON may not\n"
+    "As a result, those Pokémon may not\n"
     "participate.\p"
     "Good things happen if everyone\n"
     "jumps in time.$"
 }
 
 text Text_DodrioBerryPickingInfo {
-    "“DODRIO BERRY-PICKING”\p"
-    "Command DODRIO's three heads to\n"
-    "catch falling BERRIES.\p"
+    "“Dodrio Berry-Picking”\p"
+    "Command Dodrio's three heads to\n"
+    "catch falling Berries.\p"
     "Press right, up, or left on the\n"
     "{PLUS} Control Pad to move the heads.\p"
     "To play this game, you must have\n"
-    "a DODRIO.$"
+    "a Dodrio.$"
 }
 
 text Text_TalkToManToPlay {
@@ -1783,7 +1783,7 @@ text Text_PlayWhichGame {
 }
 
 text Text_EnterWhichPokemon {
-    "Which POKéMON would you like to\n"
+    "Which Pokémon would you like to\n"
     "enter?$"
 }
 
@@ -1800,25 +1800,25 @@ text Text_LeavingDoComeAgain {
 
 text EventScript_ExplainPokemonJumpRequirements {
     "It doesn't look like you have any\n"
-    "POKéMON that you can enter…\p"
+    "Pokémon that you can enter…\p"
     "Would you like me to explain what\n"
-    "kinds of POKéMON can enter?$"
+    "kinds of Pokémon can enter?$"
 }
 
 text Text_ShortJumpingPokemonAllowed {
-    "“POKéMON JUMP” is open to POKéMON\n"
+    "“Pokémon Jump” is open to Pokémon\n"
     "around 28 inches or less.\p"
     "What you can't enter are those\n"
-    "POKéMON that can't jump.\p"
-    "You know, like POKéMON that only\n"
+    "Pokémon that can't jump.\p"
+    "You know, like Pokémon that only\n"
     "swim, burrow, or fly.\p"
     "That's all you need to know.$"
 }
 
 text Text_OnlyDodrioAllowed {
-    "“DODRIO BERRY-PICKING”…\n"
+    "“Dodrio Berry-Picking”…\n"
     "Well, the name says it all.\p"
-    "You have to have a DODRIO to play\n"
+    "You have to have a Dodrio to play\n"
     "this game.$"
 }
 
@@ -1829,8 +1829,8 @@ text Text_RetryFromStartPlease {
 }
 
 text CableClub_Text_WelcomeWhichDirectCornerRoom {
-    "Welcome to the POKéMON WIRELESS\n"
-    "CLUB DIRECT CORNER.\p"
+    "Welcome to the Pokémon Wireless\n"
+    "Club Direct Corner.\p"
     "You may interact directly with\n"
     "your friends here.\p"
     "Which room would you like to\n"
@@ -1838,7 +1838,7 @@ text CableClub_Text_WelcomeWhichDirectCornerRoom {
 }
 
 text CableClub_Text_TradePokemon {
-    "Would you like to trade POKéMON?$"
+    "Would you like to trade Pokémon?$"
 }
 
 text CableClub_Text_PlayWhichBattleMode {
@@ -1848,84 +1848,84 @@ text CableClub_Text_PlayWhichBattleMode {
 
 text CableClub_Text_UseBerryCrush {
     "Would you like to use the\n"
-    "BERRY CRUSH System?$"
+    "Berry Crush System?$"
 }
 
 text CableClub_Text_ExplainBattleModes {
     "There are three Battle Modes.\p"
-    "SINGLE BATTLE is for two TRAINERS\n"
-    "with one or more POKéMON each.\p"
-    "Each TRAINER can have one POKéMON\n"
+    "Single Battle is for two Trainers\n"
+    "with one or more Pokémon each.\p"
+    "Each Trainer can have one Pokémon\n"
     "in battle at a time.\p"
-    "DOUBLE BATTLE is for two TRAINERS\n"
-    "with two or more POKéMON each.\p"
-    "Each TRAINER will send out two\n"
-    "POKéMON in battle at a time.\p"
-    "MULTI BATTLE is for four TRAINERS\n"
-    "with one or more POKéMON each.\p"
-    "Each TRAINER can have one POKéMON\n"
+    "Double Battle is for two Trainers\n"
+    "with two or more Pokémon each.\p"
+    "Each Trainer will send out two\n"
+    "Pokémon in battle at a time.\p"
+    "Multi Battle is for four Trainers\n"
+    "with one or more Pokémon each.\p"
+    "Each Trainer can have one Pokémon\n"
     "in battle at a time.$"
 }
 
 text CableClub_Text_ChooseGroupLeaderOfTwo {
     "Please decide which of you two\n"
-    "will become the LEADER.\p"
+    "will become the Leader.\p"
     "The other player must then choose\n"
-    "“JOIN GROUP.”$"
+    "“Join Group.”$"
 }
 
 text CableClub_Text_ChooseGroupLeaderOfFour {
     "Please decide which of you four\n"
-    "will become the GROUP LEADER.\p"
+    "will become the Group Leader.\p"
     "The other players must then choose\n"
-    "“JOIN GROUP.”$"
+    "“Join Group.”$"
 }
 
 text CableClub_Text_ChooseGroupLeader {
     "Please decide which of you will\n"
-    "become the GROUP LEADER.\p"
+    "become the Group Leader.\p"
     "The other players must then choose\n"
-    "“JOIN GROUP.”$"
+    "“Join Group.”$"
 }
 
 text CableClub_Text_WelcomeUnionRoomEnter {
-    "Welcome to the POKéMON WIRELESS\n"
-    "CLUB UNION ROOM.\p"
+    "Welcome to the Pokémon Wireless\n"
+    "Club Union Room.\p"
     "You may interact directly with\n"
-    "other TRAINERS here, some of\l"
+    "other Trainers here, some of\l"
     "whom you may not even know.\p"
-    "Would you like to enter the ROOM?$"
+    "Would you like to enter the Room?$"
 }
 
 text CableClub_Text_UnionRoomInfo {
-    "The TRAINERS in the UNION ROOM\n"
+    "The Trainers in the Union Room\n"
     "will be those players around you\l"
-    "who have also entered the ROOM.\p"
+    "who have also entered the Room.\p"
     "You may do all sorts of things\n"
     "here, such as exchanging greetings.\p"
-    "You may enter two POKéMON up to\n"
+    "You may enter two Pokémon up to\n"
     "Lv. 30 for a one-on-one battle.\p"
     "You may take part in a chat with\n"
     "two to five people.\p"
-    "Or, you may register a POKéMON for\n"
+    "Or, you may register a Pokémon for\n"
     "trade.\p"
-    "Would you like to enter the ROOM?$"
+    "Would you like to enter the Room?$"
 }
 
 text CableClub_Text_EnjoyUnionRoom {
     "I hope you enjoy your time in\n"
-    "the UNION ROOM.$"
+    "the Union Room.$"
 }
 
 text CableClub_Text_FirstTimeRightThisWay {
     "Hello!\n"
-    "My name is TEALA.\p"
+    "My name is Teala.\p"
     "This must be your first time\n"
     "up here.\p"
     "I'll show you how the Wireless\n"
     "Communication System works.\p"
     "First, I need to show you this\n"
-    "floor of our POKéMON CENTER.\p"
+    "floor of our Pokémon Center.\p"
     "Right this way, please.$"
 }
 
@@ -1933,59 +1933,59 @@ text CableClub_Text_ExplainWirelessClubFirstTime {
     "On the top floor, there are two\n"
     "rooms.\p"
     "First, the room on the left.\n"
-    "It's the UNION ROOM.\p"
-    "You may link up with TRAINERS\n"
+    "It's the Union Room.\p"
+    "You may link up with Trainers\n"
     "around you who have also entered\l"
-    "the UNION ROOM.\p"
+    "the Union Room.\p"
     "With them, you may do things like\n"
     "chat, battle, and trade.\p"
     "Second, the room on the right is\n"
-    "the DIRECT CORNER.\p"
-    "You may trade or battle POKéMON\n"
+    "the Direct Corner.\p"
+    "You may trade or battle Pokémon\n"
     "with your friends in this room.\p"
     "If the Wireless Adapter isn't\n"
     "connected, you may still link up\l"
     "using a GBA Game Link cable.\p"
     "If that is the case, you must go\n"
-    "to the DIRECT CORNER.\p"
+    "to the Direct Corner.\p"
     "I hope you enjoy the Wireless \n"
     "Communication System.$"
 }
 
 text CableClub_Text_AskAboutLinking {
     "Hello, {PLAYER}!\p"
-    "It's me, TEALA, the POKéMON\n"
-    "CENTER 2F attendant.\p"
+    "It's me, Teala, the Pokémon\n"
+    "Center 2F attendant.\p"
     "Is there something you needed to\n"
     "ask me about linking?$"
 }
 
 text CableClub_Text_ExplainWirelessClub {
-    "Let me explain how the POKéMON\n"
-    "WIRELESS CLUB works.\p"
+    "Let me explain how the Pokémon\n"
+    "Wireless Club works.\p"
     "On this, the top floor, there are\n"
     "two rooms.\p"
     "First, the room on the left.\n"
-    "It's the UNION ROOM.\p"
-    "You may link up with TRAINERS\n"
+    "It's the Union Room.\p"
+    "You may link up with Trainers\n"
     "around you who have also entered\l"
-    "the UNION ROOM.\p"
+    "the Union Room.\p"
     "With them, you may do things like\n"
     "chat, battle, and trade.\p"
     "Second, the room on the right is\n"
-    "the DIRECT CORNER.\p"
-    "You may trade or battle POKéMON\n"
+    "the Direct Corner.\p"
+    "You may trade or battle Pokémon\n"
     "with your friends in this room.\p"
     "Sometimes, you may not be able to\n"
-    "find your friends in the UNION ROOM\l"
-    "or the DIRECT CORNER.\p"
+    "find your friends in the Union Room\l"
+    "or the Direct Corner.\p"
     "In that case, please move closer\n"
     "to your friends.\p"
     "If the Wireless Adapter isn't\n"
     "connected, you may still link up\l"
     "using a GBA Game Link cable.\p"
     "If that is the case, you must go\n"
-    "to the DIRECT CORNER.\p"
+    "to the Direct Corner.\p"
     "I hope you enjoy the Wireless \n"
     "Communication System.$"
 }

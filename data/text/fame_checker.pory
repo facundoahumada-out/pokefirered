@@ -1,32 +1,32 @@
 text gFameCheckerFlavorText_ProfOak0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}OAK POKéMON RESEARCH LAB$"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Oak Pokémon Research Lab$"
 }
 
 text gFameCheckerFlavorText_ProfOak1 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}To make a complete guide on all\n"
-    "the POKéMON in the world…\p"
+    "the Pokémon in the world…\p"
     "That was my dream!$"
 }
 
 text gFameCheckerFlavorText_ProfOak2 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PROF. OAK may not look like much,\n"
-    "but he's the authority on POKéMON.\p"
-    "Many POKéMON TRAINERS hold him in\n"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Prof. Oak may not look like much,\n"
+    "but he's the authority on Pokémon.\p"
+    "Many Pokémon Trainers hold him in\n"
     "high regard.$"
 }
 
 text gFameCheckerFlavorText_ProfOak3 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PROF. OAK reportedly lives with his\n"
-    "grandchildren, DAISY and {RIVAL}.$"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Prof. Oak reportedly lives with his\n"
+    "grandchildren, Daisy and {RIVAL}.$"
 }
 
 text gFameCheckerFlavorText_ProfOak4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I hear OAK's taken a lot of\n"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I hear Oak's taken a lot of\n"
     "interest in you, child.\p"
     "That old duff was once tough and\n"
     "handsome.\p"
@@ -36,269 +36,269 @@ text gFameCheckerFlavorText_ProfOak4 {
 
 text gFameCheckerFlavorText_ProfOak5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PROF. OAK is going to have his own\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Prof. Oak is going to have his own\n"
     "radio show soon.\p"
-    "The program will be called PROF.\n"
-    "OAK'S POKéMON SEMINAR.$"
+    "The program will be called Prof.\n"
+    "Oak's Pokémon Seminar.$"
 }
 
 text gFameCheckerFlavorText_Daisy0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}If you show DAISY your POKéMON,\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}If you show Daisy your Pokémon,\n"
     "she can tell how much it likes you.\p"
     "Occasionally, she will even groom\n"
-    "a POKéMON for you.$"
+    "a Pokémon for you.$"
 }
 
 text gFameCheckerFlavorText_Daisy1 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
     "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}But the person who is most liked by\n"
-    "POKéMON is DAISY, I think.$"
+    "Pokémon is Daisy, I think.$"
 }
 
 text gFameCheckerFlavorText_Daisy2 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}She was gently grooming POKéMON…\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}She was gently grooming Pokémon…\n"
     "She was a little angel.\p"
     "That little girl's name…\n"
-    "I think it was DAISY.$"
+    "I think it was Daisy.$"
 }
 
 text gFameCheckerFlavorText_Daisy3 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PROF. OAK reportedly lives with his\n"
-    "grandchildren, DAISY and {RIVAL}.$"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Prof. Oak reportedly lives with his\n"
+    "grandchildren, Daisy and {RIVAL}.$"
 }
 
 text gFameCheckerFlavorText_Daisy4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}A girl from PALLET TOWN, DAISY,\n"
-    "she enjoys TEA every day.\p"
-    "She visits the CELADON DEPT. STORE\n"
-    "to buy some TEA.$"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}A girl from Pallet Town, Daisy,\n"
+    "she enjoys Tea every day.\p"
+    "She visits the Celadon Dept. Store\n"
+    "to buy some Tea.$"
 }
 
 text gFameCheckerFlavorText_Daisy5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The Spring POKéMON CONTEST's\n"
-    "Grand Champion is DAISY OAK of\l"
-    "PALLET TOWN!$"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The Spring Pokémon Contest's\n"
+    "Grand Champion is Daisy Oak of\l"
+    "Pallet Town!$"
 }
 
 text gFameCheckerFlavorText_Brock0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PEWTER CITY POKéMON GYM\n"
-    "LEADER: BROCK\l"
-    "The Rock-Solid POKéMON TRAINER!$"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Pewter City Pokémon Gym\n"
+    "Leader: Brock\l"
+    "The Rock-Solid Pokémon Trainer!$"
 }
 
 text gFameCheckerFlavorText_Brock1 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My rock-hard willpower is evident\n"
-    "in even my POKéMON.\p"
-    "My POKéMON are all rock hard and\n"
+    "in even my Pokémon.\p"
+    "My Pokémon are all rock hard and\n"
     "have true-grit determination.\p"
-    "That's right - my POKéMON are all\n"
-    "the ROCK type!$"
+    "That's right - my Pokémon are all\n"
+    "the Rock type!$"
 }
 
 text gFameCheckerFlavorText_Brock2 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There aren't many serious POKéMON\n"
-    "TRAINERS here.\p"
-    "They're all like BUG CATCHERS,\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There aren't many serious Pokémon\n"
+    "Trainers here.\p"
+    "They're all like Bug Catchers,\n"
     "you know, just hobbyists.\p"
-    "But PEWTER GYM's BROCK isn't like\n"
+    "But Pewter Gym's Brock isn't like\n"
     "that, not one bit.$"
 }
 
 text gFameCheckerFlavorText_Brock3 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BROCK is cool. He's not just tough.\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Brock is cool. He's not just tough.\n"
     "People like and respect him.\p"
-    "I want to become a GYM LEADER\n"
+    "I want to become a Gym Leader\n"
     "like him.$"
 }
 
 text gFameCheckerFlavorText_Brock4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hi, I'm excavating for fossils here\n"
-    "under MT. MOON.\p"
-    "Sometimes, BROCK of PEWTER GYM\n"
+    "under Mt. Moon.\p"
+    "Sometimes, Brock of Pewter Gym\n"
     "lends me a hand.$"
 }
 
 text gFameCheckerFlavorText_Brock5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BROCK rarely laughs, but is said to\n"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Brock rarely laughs, but is said to\n"
     "be unable to stop if he starts.$"
 }
 
 text gFameCheckerFlavorText_Misty0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}CERULEAN CITY POKéMON GYM\n"
-    "LEADER: MISTY\l"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Cerulean City Pokémon Gym\n"
+    "Leader: Misty\l"
     "The Tomboyish Mermaid!$"
 }
 
 text gFameCheckerFlavorText_Misty1 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
     "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My policy is an all-out offensive\n"
-    "with WATER-type POKéMON!$"
+    "with Water-type Pokémon!$"
 }
 
 text gFameCheckerFlavorText_Misty2 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MISTY is a TRAINER who's going to\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Misty is a Trainer who's going to\n"
     "keep improving.\p"
     "She won't lose to someone like you!$"
 }
 
 text gFameCheckerFlavorText_Misty3 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Strong TRAINERS and WATER POKéMON\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Strong Trainers and Water Pokémon\n"
     "are common sights in these parts.\p"
-    "They say that MISTY of the\n"
-    "CERULEAN GYM trains here.$"
+    "They say that Misty of the\n"
+    "Cerulean Gym trains here.$"
 }
 
 text gFameCheckerFlavorText_Misty4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
     "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}This cape is a famous date spot.\p"
-    "MISTY, the GYM LEADER, has high\n"
+    "Misty, the Gym Leader, has high\n"
     "hopes about this place.$"
 }
 
 text gFameCheckerFlavorText_Misty5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MISTY is said to worship LORELEI\n"
-    "of the ELITE FOUR.$"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Misty is said to worship Lorelei\n"
+    "of the Elite Four.$"
 }
 
 text gFameCheckerFlavorText_LtSurge0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}VERMILION CITY POKéMON GYM\n"
-    "LEADER: LT. SURGE\l"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Vermilion City Pokémon Gym\n"
+    "Leader: Lt. Surge\l"
     "The Lightning American!$"
 }
 
 text gFameCheckerFlavorText_LtSurge1 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I tell you, kid, electric POKéMON\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I tell you, kid, electric Pokémon\n"
     "saved me during the war!$"
 }
 
 text gFameCheckerFlavorText_LtSurge2 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}When I was in the Army, LT. SURGE\n"
-    "was my strict CO.\p"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}When I was in the Army, Lt. Surge\n"
+    "was my strict Co.\p"
     "He was a hard taskmaster.$"
 }
 
 text gFameCheckerFlavorText_LtSurge3 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}LT. SURGE was always famous for\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Lt. Surge was always famous for\n"
     "his cautious nature in the Army.$"
 }
 
 text gFameCheckerFlavorText_LtSurge4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}LT. SURGE installed the traps in\n"
-    "the GYM himself.\p"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Lt. Surge installed the traps in\n"
+    "the Gym himself.\p"
     "He set up double locks everywhere.$"
 }
 
 text gFameCheckerFlavorText_LtSurge5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}LT. SURGE is rumored to have been\n"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Lt. Surge is rumored to have been\n"
     "a pilot while home in America.\p"
     "He used the electricity generated\n"
-    "by POKéMON to power his plane.$"
+    "by Pokémon to power his plane.$"
 }
 
 text gFameCheckerFlavorText_Erika0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}CELADON CITY POKéMON GYM\n"
-    "LEADER: ERIKA\l"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Celadon City Pokémon Gym\n"
+    "Leader: Erika\l"
     "The Nature-Loving Princess!$"
 }
 
 text gFameCheckerFlavorText_Erika1 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
     "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am a student of the art of\n"
     "flower arranging.\p"
-    "My POKéMON are solely of the\n"
-    "GRASS type.$"
+    "My Pokémon are solely of the\n"
+    "Grass type.$"
 }
 
 text gFameCheckerFlavorText_Erika2 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Our LEADER ERIKA might be quiet,\n"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Our Leader Erika might be quiet,\n"
     "but she's famous around here.$"
 }
 
 text gFameCheckerFlavorText_Erika3 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We only use GRASS-type POKéMON at\n"
-    "our GYM.\p"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We only use Grass-type Pokémon at\n"
+    "our Gym.\p"
     "Why? We also use them for making\n"
     "flower arrangements!$"
 }
 
 text gFameCheckerFlavorText_Erika4 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I would never collect POKéMON if\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I would never collect Pokémon if\n"
     "they were unattractive.$"
 }
 
 text gFameCheckerFlavorText_Erika5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
     "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Rumor has it that if you peek into\n"
-    "CELADON GYM, you can often\l"
-    "see ERIKA snoozing.$"
+    "Celadon Gym, you can often\l"
+    "see Erika snoozing.$"
 }
 
 text gFameCheckerFlavorText_Koga0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}FUCHSIA CITY POKéMON GYM\n"
-    "LEADER: KOGA\l"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Fuchsia City Pokémon Gym\n"
+    "Leader: Koga\l"
     "The Poisonous Ninja Master$"
 }
 
 text gFameCheckerFlavorText_Koga1 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Despair to the creeping horror of\n"
-    "POISON-type POKéMON!$"
+    "Poison-type Pokémon!$"
 }
 
 text gFameCheckerFlavorText_Koga2 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Even though I've lost, I will keep\n"
     "training according to the teachings\l"
-    "of KOGA, my ninja master.$"
+    "of Koga, my ninja master.$"
 }
 
 text gFameCheckerFlavorText_Koga3 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My father is the GYM LEADER of\n"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My father is the Gym Leader of\n"
     "this town.\p"
-    "I'm training to use POISON POKéMON\n"
+    "I'm training to use Poison Pokémon\n"
     "as well as my father.$"
 }
 
 text gFameCheckerFlavorText_Koga4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}KOGA is said to have a thorough\n"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Koga is said to have a thorough\n"
     "knowledge of medicine.\p"
     "He even concocts medicine to nurse\n"
-    "his POKéMON to health.$"
+    "his Pokémon to health.$"
 }
 
 text gFameCheckerFlavorText_Koga5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The SAFARI ZONE's huge, wouldn't\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The Safari Zone's huge, wouldn't\n"
     "you say?\p"
-    "FUCHSIA's GYM LEADER, KOGA, \n"
+    "Fuchsia's Gym Leader, Koga, \n"
     "patrols the grounds every so often.\p"
     "Thanks to him, we can play here\n"
     "knowing that we're safe.$"
@@ -306,16 +306,16 @@ text gFameCheckerFlavorText_Koga5 {
 
 text gFameCheckerFlavorText_Sabrina0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}SAFFRON CITY POKéMON GYM\n"
-    "LEADER: SABRINA\l"
-    "The Master of PSYCHIC POKéMON!$"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Saffron City Pokémon Gym\n"
+    "Leader: Sabrina\l"
+    "The Master of Psychic Pokémon!$"
 }
 
 text gFameCheckerFlavorText_Sabrina1 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You know about a girl GYM LEADER\n"
-    "in SAFFRON CITY?\p"
-    "She uses PSYCHIC-type POKéMON,\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You know about a girl Gym Leader\n"
+    "in Saffron City?\p"
+    "She uses Psychic-type Pokémon,\n"
     "right?$"
 }
 
@@ -335,138 +335,138 @@ text gFameCheckerFlavorText_Sabrina3 {
 
 text gFameCheckerFlavorText_Sabrina4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}People say that SABRINA can\n"
-    "communicate with her POKéMON\l"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}People say that Sabrina can\n"
+    "communicate with her Pokémon\l"
     "during battle without speaking.$"
 }
 
 text gFameCheckerFlavorText_Sabrina5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}SABRINA just wiped out the KARATE\n"
-    "MASTER next door.$"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Sabrina just wiped out the Karate\n"
+    "Master next door.$"
 }
 
 text gFameCheckerFlavorText_Blaine0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}CINNABAR ISLAND POKéMON GYM\n"
-    "LEADER: BLAINE\l"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Cinnabar Island Pokémon Gym\n"
+    "Leader: Blaine\l"
     "The Hotheaded Quiz Master!$"
 }
 
 text gFameCheckerFlavorText_Blaine1 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My fiery POKéMON are all rough\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My fiery Pokémon are all rough\n"
     "and ready with intense heat!\p"
     "They incinerate all challengers!$"
 }
 
 text gFameCheckerFlavorText_Blaine2 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Our LEADER, BLAINE, became lost\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Our Leader, Blaine, became lost\n"
     "in the mountains but good.\p"
     "Night fell when a fiery bird\n"
-    "POKéMON appeared.\p"
-    "Its light allowed BLAINE to find\n"
+    "Pokémon appeared.\p"
+    "Its light allowed Blaine to find\n"
     "his way down safely.$"
 }
 
 text gFameCheckerFlavorText_Blaine3 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}CINNABAR GYM's BLAINE is quite the\n"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Cinnabar Gym's Blaine is quite the\n"
     "odd fellow.\p"
     "He's lived on the island since way\n"
-    "before the LAB was built.$"
+    "before the Lab was built.$"
 }
 
 text gFameCheckerFlavorText_Blaine4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}It's a photo of BLAINE and\n"
-    "MR. FUJI.\p"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}It's a photo of Blaine and\n"
+    "Mr. Fuji.\p"
     "They're standing shoulder to\n"
     "shoulder with big grins.$"
 }
 
 text gFameCheckerFlavorText_Blaine5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BLAINE is said to remove his dark\n"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Blaine is said to remove his dark\n"
     "shades only when he is thinking up\l"
     "new quiz questions.$"
 }
 
 text gFameCheckerFlavorText_Lorelei0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am LORELEI of the ELITE FOUR.$"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am Lorelei of the Elite Four.$"
 }
 
 text gFameCheckerFlavorText_Lorelei1 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
     "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}No one can best me when it comes\n"
-    "to icy POKéMON.$"
+    "to icy Pokémon.$"
 }
 
 text gFameCheckerFlavorText_Lorelei2 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Where was this person born?\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We've had a great and powerful\n"
-    "TRAINER grow up on this island.\p"
+    "Trainer grow up on this island.\p"
     "I bet even you'd know her.\n"
-    "It's LORELEI of the ELITE FOUR!$"
+    "It's Lorelei of the Elite Four!$"
 }
 
 text gFameCheckerFlavorText_Lorelei3 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
     "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Known for her logical, calculated,\n"
-    "and cool battling style, LORELEI\l"
+    "and cool battling style, Lorelei\l"
     "has a surprising secret!$"
 }
 
 text gFameCheckerFlavorText_Lorelei4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Did you know that LORELEI has lots\n"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Did you know that Lorelei has lots\n"
     "and lots of stuffed dolls?\p"
     "Every time she comes back to\n"
-    "FOUR ISLAND, her collection grows!$"
+    "Four Island, her collection grows!$"
 }
 
 text gFameCheckerFlavorText_Lorelei5 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The LAPRAS she has, I imagine it\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The Lapras she has, I imagine it\n"
     "to be the one she met as a child.\p"
-    "I believe it was in ICEFALL CAVE\n"
+    "I believe it was in Icefall Cave\n"
     "that she caught it.\p"
-    "Perhaps that POKéMON has been with\n"
+    "Perhaps that Pokémon has been with\n"
     "her ever since.$"
 }
 
 text gFameCheckerFlavorText_Bruno0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am BRUNO of the ELITE FOUR!$"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am Bruno of the Elite Four!$"
 }
 
 text gFameCheckerFlavorText_Bruno1 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I've lived and trained with my\n"
-    "fighting POKéMON!$"
+    "fighting Pokémon!$"
 }
 
 text gFameCheckerFlavorText_Bruno2 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BRUNO apparently joined the ELITE\n"
-    "FOUR out of his burning ambition to\l"
-    "battle the best TRAINERS.$"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Bruno apparently joined the Elite\n"
+    "Four out of his burning ambition to\l"
+    "battle the best Trainers.$"
 }
 
 text gFameCheckerFlavorText_Bruno3 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BRUNO, who's a senior ahead of me,\n"
-    "visits the SPA on occasion.\p"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Bruno, who's a senior ahead of me,\n"
+    "visits the Spa on occasion.\p"
     "He comes to rehab injuries, both\n"
-    "his own and his POKéMON's.$"
+    "his own and his Pokémon's.$"
 }
 
 text gFameCheckerFlavorText_Bruno4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}He's one of the ELITE FOUR.\n"
-    "His name is BRUNO.\p"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}He's one of the Elite Four.\n"
+    "His name is Bruno.\p"
     "He went away disappointed when he\n"
     "found out that they were all sold\l"
     "out of Rage Candybars.$"
@@ -474,19 +474,19 @@ text gFameCheckerFlavorText_Bruno4 {
 
 text gFameCheckerFlavorText_Bruno5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Even BRUNO…\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Even Bruno…\n"
     "He trained with a fellow by the\l"
-    "name of BRAWLY before.$"
+    "name of Brawly before.$"
 }
 
 text gFameCheckerFlavorText_Agatha0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am AGATHA of the ELITE FOUR.$"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am Agatha of the Elite Four.$"
 }
 
 text gFameCheckerFlavorText_Agatha1 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}AGATHA's GHOST-type POKéMON are\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Agatha's Ghost-type Pokémon are\n"
     "horrifically terrifying in toughness.$"
 }
 
@@ -500,14 +500,14 @@ text gFameCheckerFlavorText_Agatha2 {
 
 text gFameCheckerFlavorText_Agatha3 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}In her youth, AGATHA and PROF.\n"
-    "OAK were rivals who vied for\l"
-    "supremacy as TRAINERS.$"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}In her youth, Agatha and Prof.\n"
+    "Oak were rivals who vied for\l"
+    "supremacy as Trainers.$"
 }
 
 text gFameCheckerFlavorText_Agatha4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I hear OAK's taken a lot of\n"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I hear Oak's taken a lot of\n"
     "interest in you, child.\p"
     "That old duff was once tough and\n"
     "handsome.\p"
@@ -517,22 +517,22 @@ text gFameCheckerFlavorText_Agatha4 {
 
 text gFameCheckerFlavorText_Agatha5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Take AGATHA, for example.\p"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Take Agatha, for example.\p"
     "She set a record for being the\n"
-    "oldest-ever ELITE FOUR member.$"
+    "oldest-ever Elite Four member.$"
 }
 
 text gFameCheckerFlavorText_Lance0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I lead the ELITE FOUR.\p"
-    "You can call me LANCE the dragon\n"
-    "TRAINER.$"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I lead the Elite Four.\p"
+    "You can call me Lance the dragon\n"
+    "Trainer.$"
 }
 
 text gFameCheckerFlavorText_Lance1 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You know that dragons are\n"
-    "mythical POKéMON.\p"
+    "mythical Pokémon.\p"
     "They're hard to catch and raise,\n"
     "but their powers are superior.\p"
     "They're virtually indestructible.\n"
@@ -543,12 +543,12 @@ text gFameCheckerFlavorText_Lance2 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
     "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}He stands for justice!\n"
     "He's cool, and yet passionate!\l"
-    "He's the greatest, LANCE!$"
+    "He's the greatest, Lance!$"
 }
 
 text gFameCheckerFlavorText_Lance3 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
-    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We have a customer, LANCE, who\n"
+    "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We have a customer, Lance, who\n"
     "occasionally comes.\p"
     "He always buys capes.\p"
     "I wonder… Does he have many\n"
@@ -557,29 +557,29 @@ text gFameCheckerFlavorText_Lance3 {
 
 text gFameCheckerFlavorText_Lance4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}LANCE's grandfather is thought to\n"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Lance's grandfather is thought to\n"
     "be the elder of a famous clan of\l"
     "dragon masters.$"
 }
 
 text gFameCheckerFlavorText_Lance5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}From what I've heard, LANCE has\n"
-    "a cousin who's a GYM LEADER\l"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}From what I've heard, Lance has\n"
+    "a cousin who's a Gym Leader\l"
     "somewhere far away.$"
 }
 
 text gFameCheckerFlavorText_Bill0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}After all, BILL's world-famous as a\n"
-    "POKéMANIAC.\p"
-    "He invented the POKéMON Storage\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}After all, Bill's world-famous as a\n"
+    "Pokémaniac.\p"
+    "He invented the Pokémon Storage\n"
     "System on PC, too.$"
 }
 
 text gFameCheckerFlavorText_Bill1 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BILL has lots of POKéMON!\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Bill has lots of Pokémon!\n"
     "He collects rare ones, too!$"
 }
 
@@ -591,16 +591,16 @@ text gFameCheckerFlavorText_Bill2 {
 }
 
 text gFameCheckerFlavorText_Bill3 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BILL is a POKéMANIAC, so he loves\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Bill is a Pokémaniac, so he loves\n"
     "every kind.\p"
     "Apparently, the first one he caught\n"
-    "was an ABRA.$"
+    "was an Abra.$"
 }
 
 text gFameCheckerFlavorText_Bill4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BILL's hometown is GOLDENROD CITY,\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Bill's hometown is Goldenrod City,\n"
     "where his folks still live.\p"
     "I've heard that it's quite the\n"
     "festive, bustling city.$"
@@ -608,7 +608,7 @@ text gFameCheckerFlavorText_Bill4 {
 
 text gFameCheckerFlavorText_Bill5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Apparently, BILL simply can't\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Apparently, Bill simply can't\n"
     "stomach milk at all.$"
 }
 
@@ -616,22 +616,22 @@ text gFameCheckerFlavorText_MrFuji0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
     "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}He's really kind.\p"
     "He looks after abandoned and\n"
-    "orphaned POKéMON.$"
+    "orphaned Pokémon.$"
 }
 
 text gFameCheckerFlavorText_MrFuji1 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}This old guy marched right up to\n"
-    "our HIDEOUT.\p"
+    "our Hideout.\p"
     "Then, he starts ranting about how\n"
-    "TEAM ROCKET's abusing POKéMON.\p"
+    "Team Rocket's abusing Pokémon.\p"
     "So, we're just talking it over as\n"
     "adults.$"
 }
 
 text gFameCheckerFlavorText_MrFuji2 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}POKéMON FAN MAGAZINE\n"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Pokémon Fan Magazine\n"
     "Monthly Grand Prize Drawing!\p"
     "The application form is…\p"
     "Gone! It's been clipped out.\n"
@@ -640,48 +640,48 @@ text gFameCheckerFlavorText_MrFuji2 {
 
 text gFameCheckerFlavorText_MrFuji3 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I hear that MR. FUJI's not from\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I hear that Mr. Fuji's not from\n"
     "these parts originally, either.$"
 }
 
 text gFameCheckerFlavorText_MrFuji4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}It's a photo of BLAINE and\n"
-    "MR. FUJI.\p"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}It's a photo of Blaine and\n"
+    "Mr. Fuji.\p"
     "They're standing shoulder to\n"
     "shoulder with big grins.$"
 }
 
 text gFameCheckerFlavorText_MrFuji5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Editor: The shy MR. FUJI turned\n"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Editor: The shy Mr. Fuji turned\n"
     "down our interview requests.\p"
     "He is a kindly man who is adored\n"
-    "and respected in LAVENDER TOWN.$"
+    "and respected in Lavender Town.$"
 }
 
 text gFameCheckerFlavorText_Giovanni0 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}TEAM ROCKET captures POKéMON from\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Team Rocket captures Pokémon from\n"
     "around the world.\p"
     "They're important tools for keeping\n"
     "our criminal enterprise going.\p"
-    "I am the leader, GIOVANNI!$"
+    "I am the leader, Giovanni!$"
 }
 
 text gFameCheckerFlavorText_Giovanni1 {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of Pokémon?\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Those thugs that took over our\n"
     "building…\p"
-    "Their BOSS said he was looking for\n"
-    "strong POKéMON.$"
+    "Their Boss said he was looking for\n"
+    "strong Pokémon.$"
 }
 
 text gFameCheckerFlavorText_Giovanni2 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}TEAM ROCKET's BOSS is terribly\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Team Rocket's Boss is terribly\n"
     "cruel!\p"
-    "To him, POKéMON are just tools to\n"
+    "To him, Pokémon are just tools to\n"
     "be used.$"
 }
 
@@ -689,44 +689,44 @@ text gFameCheckerFlavorText_Giovanni3 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Welcome to my hideout!\p"
     "It shall be so until I can restore\n"
-    "TEAM ROCKET to its former glory.$"
+    "Team Rocket to its former glory.$"
 }
 
 text gFameCheckerFlavorText_Giovanni4 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Blow me away! GIOVANNI was the\n"
-    "GYM LEADER of VIRIDIAN?$"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Blow me away! Giovanni was the\n"
+    "Gym Leader of Viridian?$"
 }
 
 text gFameCheckerFlavorText_Giovanni5 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You… You're not GIOVANNI's kid,\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You… You're not Giovanni's kid,\n"
     "are you?\p"
     "No, that can't be right.\n"
-    "GIOVANNI's kid has red hair.$"
+    "Giovanni's kid has red hair.$"
 }
 
 text gFameCheckerPersonName_ProfOak {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}PROF. OAK$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Prof. Oak$"
 }
 
 text gFameCheckerPersonQuote_ProfOak {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: PROF. OAK\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Prof. Oak\n"
     "To: {PLAYER}\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Why do POKéMON compete and battle\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Why do Pokémon compete and battle\n"
     "so hard for you?\p"
     "They do so because they can see\n"
     "the love and trust you have\l"
-    "towards POKéMON.\p"
+    "towards Pokémon.\p"
     "Never forget that.$"
 }
 
 text gFameCheckerPersonName_Daisy {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}DAISY$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Daisy$"
 }
 
 text gFameCheckerPersonQuote_Daisy {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: DAISY\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Daisy\n"
     "To: {PLAYER}\p"
     "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}While I was comfortably enjoying\n"
     "my tea breaks, you've grown very\l"
@@ -736,55 +736,55 @@ text gFameCheckerPersonQuote_Daisy {
 }
 
 text gFameCheckerPersonName_Brock {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}BROCK$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Brock$"
 }
 
 text gFameCheckerPersonQuote_Brock {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: BROCK\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Brock\n"
     "To: {PLAYER}\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}In this big world of ours, there\n"
-    "must be many tough TRAINERS.\p"
+    "must be many tough Trainers.\p"
     "Let's both keep training and\n"
     "making ourselves stronger!$"
 }
 
 text gFameCheckerPersonName_Misty {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}MISTY$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Misty$"
 }
 
 text gFameCheckerPersonQuote_Misty {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: MISTY\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Misty\n"
     "To: {PLAYER}\p"
     "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I'm going to keep training here at\n"
-    "this GYM.\p"
+    "this Gym.\p"
     "When I get better, I'd love to hit\n"
     "the road and travel.$"
 }
 
 text gFameCheckerPersonName_LtSurge {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}LT. SURGE$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Lt. Surge$"
 }
 
 text gFameCheckerPersonQuote_LtSurge {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: LT. SURGE\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Lt. Surge\n"
     "To: {PLAYER}\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, kid!\n"
     "You electrified me in our battle!\p"
     "I didn't know that there were\n"
-    "gutsy TRAINERS like you.\p"
+    "gutsy Trainers like you.\p"
     "It made me change my mind about\n"
     "you!$"
 }
 
 text gFameCheckerPersonName_Erika {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}ERIKA$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Erika$"
 }
 
 text gFameCheckerPersonQuote_Erika {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: ERIKA\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Erika\n"
     "To: {PLAYER}\p"
     "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am so glad that there are strong\n"
-    "TRAINERS like you.\p"
+    "Trainers like you.\p"
     "That awareness alone inspires and\n"
     "motivates me to try harder.\p"
     "Please visit me again.\n"
@@ -792,11 +792,11 @@ text gFameCheckerPersonQuote_Erika {
 }
 
 text gFameCheckerPersonName_Koga {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}KOGA$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Koga$"
 }
 
 text gFameCheckerPersonQuote_Koga {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: KOGA\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Koga\n"
     "To: {PLAYER}\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You and I, we must both set our\n"
     "sights higher and work towards\l"
@@ -805,37 +805,37 @@ text gFameCheckerPersonQuote_Koga {
 }
 
 text gFameCheckerPersonName_Sabrina {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}SABRINA$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sabrina$"
 }
 
 text gFameCheckerPersonQuote_Sabrina {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: SABRINA\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Sabrina\n"
     "To: {PLAYER}\p"
     "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The love you have towards your\n"
-    "POKéMON…\p"
+    "Pokémon…\p"
     "It was a power that was never\n"
     "bested by my psychic power.$"
 }
 
 text gFameCheckerPersonName_Blaine {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}BLAINE$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Blaine$"
 }
 
 text gFameCheckerPersonQuote_Blaine {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: BLAINE\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Blaine\n"
     "To: {PLAYER}\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My fire POKéMON!\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My fire Pokémon!\n"
     "They'll become even more powerful!\p"
     "And now, a quiz. How many kinds of\n"
-    "FIRE-type POKéMON are there?$"
+    "Fire-type Pokémon are there?$"
 }
 
 text gFameCheckerPersonName_Lorelei {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}LORELEI$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Lorelei$"
 }
 
 text gFameCheckerPersonQuote_Lorelei {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: LORELEI\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Lorelei\n"
     "To: {PLAYER}\p"
     "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I needed to thank you for your\n"
     "help.\p"
@@ -845,78 +845,78 @@ text gFameCheckerPersonQuote_Lorelei {
 }
 
 text gFameCheckerPersonName_Bruno {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}BRUNO$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Bruno$"
 }
 
 text gFameCheckerPersonQuote_Bruno {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: BRUNO\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Bruno\n"
     "To: {PLAYER}\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The super power of your POKéMON\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The super power of your Pokémon\n"
     "and you I've experienced myself.\p"
     "Next time, maybe I should show you\n"
     "how to train yourself.$"
 }
 
 text gFameCheckerPersonName_Agatha {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}AGATHA$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Agatha$"
 }
 
 text gFameCheckerPersonQuote_Agatha {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: AGATHA\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Agatha\n"
     "To: {PLAYER}\p"
     "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}When you grow older, don't you\n"
-    "dare go soft like that coot OAK!\p"
+    "dare go soft like that coot Oak!\p"
     "Be like me and keep battling on!$"
 }
 
 text gFameCheckerPersonName_Lance {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}LANCE$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Lance$"
 }
 
 text gFameCheckerPersonQuote_Lance {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: LANCE\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Lance\n"
     "To: {PLAYER}\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I'm considering going back to my\n"
     "hometown.\p"
-    "I want to retrain my DRAGON-type\n"
-    "POKéMON and strengthen them.\p"
+    "I want to retrain my Dragon-type\n"
+    "Pokémon and strengthen them.\p"
     "I'd like to invite you to my\n"
     "hometown one day.$"
 }
 
 text gFameCheckerPersonName_Bill {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}BILL$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Bill$"
 }
 
 text gFameCheckerPersonQuote_Bill {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: BILL\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Bill\n"
     "To: {PLAYER}\p"
-    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, there! CELIO had nothing but\n"
+    "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, there! Celio had nothing but\n"
     "praise for you.\p"
     "Hearing that makes me happy.\p"
-    "When you catch some rare POKéMON,\n"
+    "When you catch some rare Pokémon,\n"
     "come show me, okay? Promise!$"
 }
 
 text gFameCheckerPersonName_MrFuji {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}MR. FUJI$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Mr. Fuji$"
 }
 
 text gFameCheckerPersonQuote_MrFuji {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: MR. FUJI\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Mr. Fuji\n"
     "To: {PLAYER}\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Instead of hoping for the happiness\n"
-    "of just your POKéMON…\p"
+    "of just your Pokémon…\p"
     "…Can I get you to wish for the\n"
-    "happiness of all POKéMON?$"
+    "happiness of all Pokémon?$"
 }
 
 text gFameCheckerPersonName_Giovanni {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}GIOVANNI$"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Giovanni$"
 }
 
 text gFameCheckerPersonQuote_Giovanni {
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: GIOVANNI\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: Giovanni\n"
     "To: {PLAYER}\p"
     "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There is nothing that I wish to say\n"
     "to you.\p"
@@ -925,699 +925,699 @@ text gFameCheckerPersonQuote_Giovanni {
 }
 
 text gFameCheckerFlavorTextOriginLocation_ProfOak0 {
-    "PALLET TOWN$"
+    "Pallet Town$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_ProfOak1 {
-    "RESEARCH LAB$"
+    "Research Lab$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_ProfOak2 {
-    "RESEARCH LAB$"
+    "Research Lab$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_ProfOak3 {
-    "VIRIDIAN CITY$"
+    "Viridian City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_ProfOak4 {
-    "POKéMON LEAGUE$"
+    "Pokémon League$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_ProfOak5 {
-    "RESEARCH LAB$"
+    "Research Lab$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Daisy0 {
-    "RESEARCH LAB$"
+    "Research Lab$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Daisy1 {
-    "VERMILION CITY$"
+    "Vermilion City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Daisy2 {
-    "WATER LABYRINTH$"
+    "Water Labyrinth$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Daisy3 {
-    "VIRIDIAN CITY$"
+    "Viridian City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Daisy4 {
-    "CELADON MANSION$"
+    "Celadon Mansion$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Daisy5 {
-    "FOUR ISLAND$"
+    "Four Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Brock0 {
-    "PEWTER CITY$"
+    "Pewter City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Brock1 {
-    "PEWTER GYM$"
+    "Pewter Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Brock2 {
-    "PEWTER CITY$"
+    "Pewter City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Brock3 {
-    "ROUTE 4$"
+    "Route 4$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Brock4 {
-    "MT. MOON$"
+    "Mt. Moon$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Brock5 {
-    "PEWTER MUSEUM$"
+    "Pewter Museum$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Misty0 {
-    "CERULEAN CITY$"
+    "Cerulean City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Misty1 {
-    "CERULEAN GYM$"
+    "Cerulean Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Misty2 {
-    "CERULEAN GYM$"
+    "Cerulean Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Misty3 {
-    "SEAFOAM ISLANDS$"
+    "Seafoam Islands$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Misty4 {
-    "CERULEAN CAPE$"
+    "Cerulean Cape$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Misty5 {
-    "CERULEAN CITY$"
+    "Cerulean City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_LtSurge0 {
-    "VERMILION CITY$"
+    "Vermilion City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_LtSurge1 {
-    "VERMILION GYM$"
+    "Vermilion Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_LtSurge2 {
-    "VERMILION GYM$"
+    "Vermilion Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_LtSurge3 {
-    "VERMILION GYM$"
+    "Vermilion Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_LtSurge4 {
-    "VERMILION GYM$"
+    "Vermilion Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_LtSurge5 {
-    "VERMILION CITY$"
+    "Vermilion City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Erika0 {
-    "CELADON CITY$"
+    "Celadon City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Erika1 {
-    "CELADON GYM$"
+    "Celadon Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Erika2 {
-    "CELADON GYM$"
+    "Celadon Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Erika3 {
-    "CELADON GYM$"
+    "Celadon Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Erika4 {
-    "CELADON GYM$"
+    "Celadon Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Erika5 {
-    "CELADON MANSION$"
+    "Celadon Mansion$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Koga0 {
-    "FUCHSIA CITY$"
+    "Fuchsia City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Koga1 {
-    "FUCHSIA GYM$"
+    "Fuchsia Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Koga2 {
-    "FUCHSIA GYM$"
+    "Fuchsia Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Koga3 {
-    "FUCHSIA CITY$"
+    "Fuchsia City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Koga4 {
-    "FUCHSIA CITY$"
+    "Fuchsia City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Koga5 {
-    "SAFARI ZONE$"
+    "Safari Zone$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Sabrina0 {
-    "SAFFRON CITY$"
+    "Saffron City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Sabrina1 {
-    "THREE ISLAND$"
+    "Three Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Sabrina2 {
-    "SAFFRON GYM$"
+    "Saffron Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Sabrina3 {
-    "SAFFRON GYM$"
+    "Saffron Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Sabrina4 {
-    "SAFFRON CITY$"
+    "Saffron City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Sabrina5 {
-    "SAFFRON GYM$"
+    "Saffron Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Blaine0 {
-    "CINNABAR ISLAND$"
+    "Cinnabar Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Blaine1 {
-    "CINNABAR GYM$"
+    "Cinnabar Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Blaine2 {
-    "CINNABAR GYM$"
+    "Cinnabar Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Blaine3 {
-    "CINNABAR ISLAND$"
+    "Cinnabar Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Blaine4 {
-    "CINNABAR GYM$"
+    "Cinnabar Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Blaine5 {
-    "RESORT GORGEOUS$"
+    "Resort Gorgeous$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Lorelei0 {
-    "POKéMON LEAGUE$"
+    "Pokémon League$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Lorelei1 {
-    "POKéMON LEAGUE$"
+    "Pokémon League$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Lorelei2 {
-    "FOUR ISLAND$"
+    "Four Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Lorelei3 {
-    "FIVE ISLAND$"
+    "Five Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Lorelei4 {
-    "FOUR ISLAND$"
+    "Four Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Lorelei5 {
-    "FOUR ISLAND$"
+    "Four Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Bruno0 {
-    "POKéMON LEAGUE$"
+    "Pokémon League$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Bruno1 {
-    "POKéMON LEAGUE$"
+    "Pokémon League$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Bruno2 {
-    "SAFFRON CITY$"
+    "Saffron City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Bruno3 {
-    "EMBER SPA$"
+    "Ember Spa$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Bruno4 {
-    "TWO ISLAND$"
+    "Two Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Bruno5 {
-    "SEVAULT CANYON$"
+    "Sevault Canyon$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Agatha0 {
-    "POKéMON LEAGUE$"
+    "Pokémon League$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Agatha1 {
-    "INDIGO PLATEAU$"
+    "Indigo Plateau$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Agatha2 {
-    "INDIGO PLATEAU$"
+    "Indigo Plateau$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Agatha3 {
-    "SEVEN ISLAND$"
+    "Seven Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Agatha4 {
-    "POKéMON LEAGUE$"
+    "Pokémon League$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Agatha5 {
-    "SIX ISLAND$"
+    "Six Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Lance0 {
-    "POKéMON LEAGUE$"
+    "Pokémon League$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Lance1 {
-    "POKéMON LEAGUE$"
+    "Pokémon League$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Lance2 {
-    "SAFFRON CITY$"
+    "Saffron City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Lance3 {
-    "CELADON DEPT.$"
+    "Celadon Dept.$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Lance4 {
-    "INDIGO PLATEAU$"
+    "Indigo Plateau$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Lance5 {
-    "INDIGO PLATEAU$"
+    "Indigo Plateau$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Bill0 {
-    "CERULEAN CITY$"
+    "Cerulean City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Bill1 {
-    "CERULEAN CITY$"
+    "Cerulean City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Bill2 {
-    "FUCHSIA CITY$"
+    "Fuchsia City$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Bill3 {
-    "ONE ISLAND$"
+    "One Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Bill4 {
-    "ONE ISLAND$"
+    "One Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Bill5 {
-    "ONE ISLAND$"
+    "One Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_MrFuji0 {
-    "LAVENDER TOWN$"
+    "Lavender Town$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_MrFuji1 {
-    "POKéMON TOWER$"
+    "Pokémon Tower$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_MrFuji2 {
-    "LAVENDER TOWN$"
+    "Lavender Town$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_MrFuji3 {
-    "LAVENDER TOWN$"
+    "Lavender Town$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_MrFuji4 {
-    "CINNABAR GYM$"
+    "Cinnabar Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_MrFuji5 {
-    "CINNABAR ISLAND$"
+    "Cinnabar Island$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Giovanni0 {
-    "ROCKET HIDEOUT$"
+    "Rocket Hideout$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Giovanni1 {
-    "SILPH CO.$"
+    "Silph Co.$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Giovanni2 {
-    "SILPH CO.$"
+    "Silph Co.$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Giovanni3 {
-    "VIRIDIAN GYM$"
+    "Viridian Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Giovanni4 {
-    "VIRIDIAN GYM$"
+    "Viridian Gym$"
 }
 
 text gFameCheckerFlavorTextOriginLocation_Giovanni5 {
-    "ROCKET WAREHOUSE$"
+    "Rocket Warehouse$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_ProfOak0 {
-    "SIGN$"
+    "Sign$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_ProfOak1 {
-    "PROF. OAK$"
+    "Prof. Oak$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_ProfOak2 {
-    "AIDE$"
+    "Aide$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_ProfOak3 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_ProfOak4 {
-    "AGATHA$"
+    "Agatha$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_ProfOak5 {
-    "AIDE$"
+    "Aide$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Daisy0 {
-    "AIDE$"
+    "Aide$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Daisy1 {
-    "WOMAN$"
+    "Woman$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Daisy2 {
-    "MAN$"
+    "Man$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Daisy3 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Daisy4 {
-    "OLD LADY$"
+    "Old Lady$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Daisy5 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Brock0 {
-    "SIGN$"
+    "Sign$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Brock1 {
-    "BROCK$"
+    "Brock$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Brock2 {
-    "YOUNG MAN$"
+    "Young Man$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Brock3 {
-    "BOY$"
+    "Boy$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Brock4 {
-    "MAN$"
+    "Man$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Brock5 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Misty0 {
-    "SIGN$"
+    "Sign$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Misty1 {
-    "MISTY$"
+    "Misty$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Misty2 {
-    "LUIS$"
+    "Luis$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Misty3 {
-    "YOUNG MAN$"
+    "Young Man$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Misty4 {
-    "DAME$"
+    "Dame$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Misty5 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_LtSurge0 {
-    "SIGN$"
+    "Sign$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_LtSurge1 {
-    "LT. SURGE$"
+    "Lt. Surge$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_LtSurge2 {
-    "TUCKER$"
+    "Tucker$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_LtSurge3 {
-    "TUCKER$"
+    "Tucker$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_LtSurge4 {
-    "DWAYNE$"
+    "Dwayne$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_LtSurge5 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Erika0 {
-    "SIGN$"
+    "Sign$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Erika1 {
-    "ERIKA$"
+    "Erika$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Erika2 {
-    "LOLA$"
+    "Lola$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Erika3 {
-    "TAMIA$"
+    "Tamia$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Erika4 {
-    "ERIKA$"
+    "Erika$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Erika5 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Koga0 {
-    "SIGN$"
+    "Sign$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Koga1 {
-    "KOGA$"
+    "Koga$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Koga2 {
-    "KIRK$"
+    "Kirk$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Koga3 {
-    "CHARINE$"
+    "Charine$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Koga4 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Koga5 {
-    "MAN$"
+    "Man$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Sabrina0 {
-    "SIGN$"
+    "Sign$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Sabrina1 {
-    "YOUNG MAN$"
+    "Young Man$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Sabrina2 {
-    "SABRINA$"
+    "Sabrina$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Sabrina3 {
-    "SABRINA$"
+    "Sabrina$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Sabrina4 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Sabrina5 {
-    "TYRON$"
+    "Tyron$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Blaine0 {
-    "SIGN$"
+    "Sign$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Blaine1 {
-    "BLAINE$"
+    "Blaine$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Blaine2 {
-    "DEREK$"
+    "Derek$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Blaine3 {
-    "WOMAN$"
+    "Woman$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Blaine4 {
-    "PHOTO$"
+    "Photo$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Blaine5 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Lorelei0 {
-    "LORELEI$"
+    "Lorelei$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Lorelei1 {
-    "LORELEI$"
+    "Lorelei$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Lorelei2 {
-    "OLD MAN$"
+    "Old Man$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Lorelei3 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Lorelei4 {
-    "LITTLE GIRL$"
+    "Little Girl$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Lorelei5 {
-    "OLD LADY$"
+    "Old Lady$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Bruno0 {
-    "BRUNO$"
+    "Bruno$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Bruno1 {
-    "BRUNO$"
+    "Bruno$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Bruno2 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Bruno3 {
-    "CRUSHER$"
+    "Crusher$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Bruno4 {
-    "WOMAN$"
+    "Woman$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Bruno5 {
-    "CRUSHER$"
+    "Crusher$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Agatha0 {
-    "AGATHA$"
+    "Agatha$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Agatha1 {
-    "CRUSHER$"
+    "Crusher$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Agatha2 {
-    "CRUSHER$"
+    "Crusher$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Agatha3 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Agatha4 {
-    "AGATHA$"
+    "Agatha$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Agatha5 {
-    "OLD LADY$"
+    "Old Lady$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Lance0 {
-    "LANCE$"
+    "Lance$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Lance1 {
-    "LANCE$"
+    "Lance$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Lance2 {
-    "WOMAN$"
+    "Woman$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Lance3 {
-    "LITTLE GIRL$"
+    "Little Girl$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Lance4 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Lance5 {
-    "YOUNG MAN$"
+    "Young Man$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Bill0 {
@@ -1625,196 +1625,196 @@ text gFameCheckerFlavorTextOriginObjectName_Bill0 {
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Bill1 {
-    "LITTLE BOY$"
+    "Little Boy$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Bill2 {
-    "OLD MAN$"
+    "Old Man$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Bill3 {
-    "CELIO$"
+    "Celio$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Bill4 {
-    "CELIO$"
+    "Celio$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Bill5 {
-    "CELIO$"
+    "Celio$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_MrFuji0 {
-    "LITTLE GIRL$"
+    "Little Girl$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_MrFuji1 {
-    "TEAM ROCKET$"
+    "Team Rocket$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_MrFuji2 {
-    "MAGAZINE$"
+    "Magazine$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_MrFuji3 {
-    "MAN$"
+    "Man$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_MrFuji4 {
-    "PHOTO$"
+    "Photo$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_MrFuji5 {
-    "POKéMON JOURNAL$"
+    "Pokémon Journal$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Giovanni0 {
-    "GIOVANNI$"
+    "Giovanni$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Giovanni1 {
-    "SCIENTIST$"
+    "Scientist$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Giovanni2 {
-    "SCIENTIST$"
+    "Scientist$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Giovanni3 {
-    "GIOVANNI$"
+    "Giovanni$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Giovanni4 {
-    "MAN$"
+    "Man$"
 }
 
 text gFameCheckerFlavorTextOriginObjectName_Giovanni5 {
-    "GIDEON$"
+    "Gideon$"
 }
 
 text PokemonJournal_Text_SpecialFeatureBrock {
-    "POKéMON JOURNAL\p"
-    "Special Feature: PEWTER GYM\n"
-    "LEADER BROCK!\p"
-    "BROCK rarely laughs, but is said to\n"
+    "Pokémon Journal\p"
+    "Special Feature: Pewter Gym\n"
+    "Leader Brock!\p"
+    "Brock rarely laughs, but is said to\n"
     "be unable to stop if he starts.$"
 }
 
 text PokemonJournal_Text_SpecialFeatureMisty {
-    "POKéMON JOURNAL\p"
-    "Special Feature: CERULEAN GYM\n"
-    "LEADER MISTY!\p"
-    "MISTY is said to worship LORELEI\n"
-    "of the ELITE FOUR.$"
+    "Pokémon Journal\p"
+    "Special Feature: Cerulean Gym\n"
+    "Leader Misty!\p"
+    "Misty is said to worship Lorelei\n"
+    "of the Elite Four.$"
 }
 
 text PokemonJournal_Text_SpecialFeatureLtSurge {
-    "POKéMON JOURNAL\p"
-    "Special Feature: VERMILION GYM\n"
-    "LEADER LT. SURGE!\p"
-    "LT. SURGE is rumored to have been\n"
+    "Pokémon Journal\p"
+    "Special Feature: Vermilion Gym\n"
+    "Leader Lt. Surge!\p"
+    "Lt. Surge is rumored to have been\n"
     "a pilot while home in America.\p"
     "He used the electricity generated\n"
-    "by POKéMON to power his plane.$"
+    "by Pokémon to power his plane.$"
 }
 
 text PokemonJournal_Text_SpecialFeatureErika {
-    "POKéMON JOURNAL\p"
-    "Special Feature: CELADON GYM\n"
-    "LEADER ERIKA!\p"
+    "Pokémon Journal\p"
+    "Special Feature: Celadon Gym\n"
+    "Leader Erika!\p"
     "Rumor has it that if you peek into\n"
-    "CELADON GYM, you can often\l"
-    "see ERIKA snoozing.$"
+    "Celadon Gym, you can often\l"
+    "see Erika snoozing.$"
 }
 
 text PokemonJournal_Text_SpecialFeatureKoga {
-    "POKéMON JOURNAL\p"
-    "Special Feature: FUCHSIA GYM\n"
-    "LEADER KOGA!\p"
-    "KOGA is said to have a thorough\n"
+    "Pokémon Journal\p"
+    "Special Feature: Fuchsia Gym\n"
+    "Leader Koga!\p"
+    "Koga is said to have a thorough\n"
     "knowledge of medicine.\p"
     "He even concocts medicine to nurse\n"
-    "his POKéMON to health.$"
+    "his Pokémon to health.$"
 }
 
 text PokemonJournal_Text_SpecialFeatureSabrina {
-    "POKéMON JOURNAL\p"
-    "Special Feature: SAFFRON GYM\n"
-    "LEADER SABRINA!\p"
-    "People say that SABRINA can\n"
-    "communicate with her POKéMON\l"
+    "Pokémon Journal\p"
+    "Special Feature: Saffron Gym\n"
+    "Leader Sabrina!\p"
+    "People say that Sabrina can\n"
+    "communicate with her Pokémon\l"
     "during battle without speaking.$"
 }
 
 text PokemonJournal_Text_SpecialFeatureBlaine {
-    "POKéMON JOURNAL\p"
-    "Special Feature: CINNABAR GYM\n"
-    "LEADER BLAINE!\p"
-    "BLAINE is said to remove his dark\n"
+    "Pokémon Journal\p"
+    "Special Feature: Cinnabar Gym\n"
+    "Leader Blaine!\p"
+    "Blaine is said to remove his dark\n"
     "shades only when he is thinking up\l"
     "new quiz questions.$"
 }
 
 text PokemonJournal_Text_SpecialFeatureLorelei {
-    "POKéMON JOURNAL\p"
+    "Pokémon Journal\p"
     "Special Feature:\n"
-    "ELITE FOUR's LORELEI!\p"
+    "Elite Four's Lorelei!\p"
     "Known for her logical, calculated,\n"
-    "and cool battling style, LORELEI\l"
+    "and cool battling style, Lorelei\l"
     "has a surprising secret!$"
 }
 
 text PokemonJournal_Text_SpecialFeatureBruno {
-    "POKéMON JOURNAL\p"
+    "Pokémon Journal\p"
     "Special Feature:\n"
-    "ELITE FOUR's BRUNO!\p"
-    "BRUNO apparently joined the ELITE\n"
-    "FOUR out of his burning ambition to\l"
-    "battle the best TRAINERS.$"
+    "Elite Four's Bruno!\p"
+    "Bruno apparently joined the Elite\n"
+    "Four out of his burning ambition to\l"
+    "battle the best Trainers.$"
 }
 
 text PokemonJournal_Text_SpecialFeatureAgatha {
-    "POKéMON JOURNAL\p"
+    "Pokémon Journal\p"
     "Special Feature:\n"
-    "ELITE FOUR's AGATHA!\p"
-    "In her youth, AGATHA and PROF.\n"
-    "OAK were rivals who vied for\l"
-    "supremacy as TRAINERS.$"
+    "Elite Four's Agatha!\p"
+    "In her youth, Agatha and Prof.\n"
+    "Oak were rivals who vied for\l"
+    "supremacy as Trainers.$"
 }
 
 text PokemonJournal_Text_SpecialFeatureLance {
-    "POKéMON JOURNAL\p"
+    "Pokémon Journal\p"
     "Special Feature:\n"
-    "ELITE FOUR's LANCE!\p"
-    "LANCE's grandfather is thought to\n"
+    "Elite Four's Lance!\p"
+    "Lance's grandfather is thought to\n"
     "be the elder of a famous clan of\l"
     "dragon masters.$"
 }
 
 text PokemonJournal_Text_SpecialFeatureProfOak {
-    "POKéMON JOURNAL\p"
-    "Special Feature: PROF. OAK,\n"
-    "the POKéMON Researcher!\p"
-    "PROF. OAK reportedly lives with his\n"
-    "grandchildren DAISY and {RIVAL}.$"
+    "Pokémon Journal\p"
+    "Special Feature: Prof. Oak,\n"
+    "the Pokémon Researcher!\p"
+    "Prof. Oak reportedly lives with his\n"
+    "grandchildren Daisy and {RIVAL}.$"
 }
 
 text PokemonJournal_Text_SpecialFeatureDaisyOak {
-    "This is a POKéMON JOURNAL from\n"
+    "This is a Pokémon Journal from\n"
     "years ago…\p"
-    "POKéMON JOURNAL\n"
-    "CONTEST Special!\p"
-    "The Spring POKéMON CONTEST's\n"
-    "Grand Champion is DAISY OAK of\l"
-    "PALLET TOWN!$"
+    "Pokémon Journal\n"
+    "Contest Special!\p"
+    "The Spring Pokémon Contest's\n"
+    "Grand Champion is Daisy Oak of\l"
+    "Pallet Town!$"
 }
 
 text PokemonJournal_Text_SpecialFeatureMrFuji {
-    "POKéMON JOURNAL\p"
+    "Pokémon Journal\p"
     "Special Feature:\n"
-    "MR. FUJI of POKéMON HOUSE!\p"
-    "Editor: The shy MR. FUJI turned\n"
+    "Mr. Fuji of Pokémon House!\p"
+    "Editor: The shy Mr. Fuji turned\n"
     "down our interview requests.\p"
     "He is a kindly man who is adored\n"
-    "and respected in LAVENDER TOWN.$"
+    "and respected in Lavender Town.$"
 }

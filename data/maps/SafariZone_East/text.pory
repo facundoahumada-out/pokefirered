@@ -1,14 +1,14 @@
 text SafariZone_East_Text_RestHouse {
-    "REST HOUSE$"
+    "Rest House$"
 }
 
 text SafariZone_East_Text_TimeDeclinesOnlyWhileYouWalk {
-    "TRAINER TIPS\p"
+    "Trainer Tips\p"
     "The remaining time declines only\n"
     "while you walk.$"
 }
 
 text SafariZone_East_Text_AreaSign {
-    "AREA 1\n"
-    "WEST: CENTER AREA$"
+    "Area 1\n"
+    "West: Center Area$"
 }

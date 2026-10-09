@@ -59,6 +59,6 @@ text PokemonTower_5F_Text_JanaePostBattle {
 text PokemonTower_5F_Text_PurifiedZoneMonsFullyHealed {
     "Entered the purified and protected\n"
     "zone.\p"
-    "{PLAYER}'s POKéMON were fully\n"
+    "{PLAYER}'s Pokémon were fully\n"
     "healed.$"
 }

@@ -1,25 +1,25 @@
 text Route12_Text_MonSprawledOutInSlumber {
-    "A POKéMON is sprawled out in\n"
+    "A Pokémon is sprawled out in\n"
     "a deep and comfortable slumber.$"
 }
 
 text Text_SnorlaxWokeUp {
-    "SNORLAX woke up!\p"
+    "Snorlax woke up!\p"
     "It attacked in a grumpy rage!$"
 }
 
 text Text_SnorlaxReturnedToMountains {
-    "SNORLAX calmed down.\n"
+    "Snorlax calmed down.\n"
     "It gave a huge yawn…\l"
     "And returned to the mountains.$"
 }
 
 text Text_WantToUsePokeFlute {
-    "Want to use the POKé FLUTE?$"
+    "Want to use the Poké Flute?$"
 }
 
 text Text_PlayedPokeFlute {
-    "{PLAYER} played the POKé FLUTE.$"
+    "{PLAYER} played the Poké Flute.$"
 }
 
 text Route12_Text_NedIntro {
@@ -47,12 +47,12 @@ text Route12_Text_ChipDefeat {
 }
 
 text Route12_Text_ChipPostBattle {
-    "With a better ROD, I could catch\n"
-    "better POKéMON…$"
+    "With a better Rod, I could catch\n"
+    "better Pokémon…$"
 }
 
 text Route12_Text_JustinIntro {
-    "I'm searching for a MOON STONE.\n"
+    "I'm searching for a Moon Stone.\n"
     "Have you found one?$"
 }
 
@@ -61,14 +61,14 @@ text Route12_Text_JustinDefeat {
 }
 
 text Route12_Text_JustinPostBattle {
-    "I could have made my POKéMON\n"
-    "evolve with a MOON STONE.\p"
+    "I could have made my Pokémon\n"
+    "evolve with a Moon Stone.\p"
     "I would have won then, I bet.$"
 }
 
 text Route12_Text_LucaIntro {
     "Electricity is my specialty.\p"
-    "I don't know a thing about POKéMON\n"
+    "I don't know a thing about Pokémon\n"
     "of the sea, though.$"
 }
 
@@ -78,12 +78,12 @@ text Route12_Text_LucaDefeat {
 
 text Route12_Text_LucaPostBattle {
     "Water conducts electricity, so you\n"
-    "should zap sea POKéMON.$"
+    "should zap sea Pokémon.$"
 }
 
 text Route12_Text_HankIntro {
-    "The FISHING FOOL versus POKéMON\n"
-    "KID!$"
+    "The Fishing Fool versus Pokémon\n"
+    "Kid!$"
 }
 
 text Route12_Text_HankDefeat {
@@ -93,7 +93,7 @@ text Route12_Text_HankDefeat {
 text Route12_Text_HankPostBattle {
     "I guess you get to be good at\n"
     "what you like.\p"
-    "Well, you beat me at POKéMON,\n"
+    "Well, you beat me at Pokémon,\n"
     "but you can't top me at fishing.$"
 }
 
@@ -123,58 +123,58 @@ text Route12_Text_AndrewDefeat {
 }
 
 text Route12_Text_AndrewPostBattle {
-    "What, MAGIKARP?\p"
+    "What, Magikarp?\p"
     "I catch them all the time, sure.\n"
     "But, boy are they wimpy.$"
 }
 
 text Route12_Text_RouteSign {
-    "ROUTE 12 \n"
-    "North to LAVENDER$"
+    "Route 12 \n"
+    "North to Lavender$"
 }
 
 text Route12_Text_SportfishingArea {
-    "SPORTFISHING AREA$"
+    "Sportfishing Area$"
 }
 
 text Route12_Text_JesIntro {
-    "JES: If I win, I'm going to\n"
-    "propose to GIA.$"
+    "Jes: If I win, I'm going to\n"
+    "propose to Gia.$"
 }
 
 text Route12_Text_JesDefeat {
-    "JES: Oh, please, why couldn't you\n"
+    "Jes: Oh, please, why couldn't you\n"
     "let us win?$"
 }
 
 text Route12_Text_JesPostBattle {
-    "JES: Oh, GIA, forgive me,\n"
+    "Jes: Oh, Gia, forgive me,\n"
     "my love!$"
 }
 
 text Route12_Text_JesNotEnoughMons {
-    "JES: GIA and I, we'll be\n"
+    "Jes: Gia and I, we'll be\n"
     "together forever.\p"
     "We won't battle unless you have\n"
-    "two POKéMON of your own.$"
+    "two Pokémon of your own.$"
 }
 
 text Route12_Text_GiaIntro {
-    "GIA: Hey, JES…\p"
+    "Gia: Hey, Jes…\p"
     "If we win, I'll marry you!$"
 }
 
 text Route12_Text_GiaDefeat {
-    "GIA: Oh, but why?$"
+    "Gia: Oh, but why?$"
 }
 
 text Route12_Text_GiaPostBattle {
-    "GIA: JES, you silly!\n"
+    "Gia: Jes, you silly!\n"
     "You ruined this!$"
 }
 
 text Route12_Text_GiaNotEnoughMons {
-    "GIA: I can't bear to battle\n"
-    "without my JES!\p"
-    "Don't you have one more POKéMON?$"
+    "Gia: I can't bear to battle\n"
+    "without my Jes!\p"
+    "Don't you have one more Pokémon?$"
 }

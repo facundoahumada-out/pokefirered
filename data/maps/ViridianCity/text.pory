@@ -1,22 +1,22 @@
 text ViridianCity_Text_CanCarryMonsAnywhere {
-    "Those POKé BALLS at your waist!\n"
-    "You have POKéMON, don't you?\p"
+    "Those Poké Balls at your waist!\n"
+    "You have Pokémon, don't you?\p"
     "It's great that you can carry and\n"
-    "use POKéMON anytime, anywhere.$"
+    "use Pokémon anytime, anywhere.$"
 }
 
 text ViridianCity_Text_GymClosedWonderWhoLeaderIs {
-    "This POKéMON GYM is always closed.\p"
-    "I wonder who the LEADER is?$"
+    "This Pokémon Gym is always closed.\p"
+    "I wonder who the Leader is?$"
 }
 
 text ViridianCity_Text_ViridiansGymLeaderReturned {
-    "VIRIDIAN GYM's LEADER returned!$"
+    "Viridian Gym's Leader returned!$"
 }
 
 text ViridianCity_Text_WantToKnowAboutCaterpillarMons {
     "You want to know about the two\n"
-    "kinds of caterpillar POKéMON?$"
+    "kinds of caterpillar Pokémon?$"
 }
 
 text ViridianCity_Text_OhOkayThen {
@@ -24,10 +24,10 @@ text ViridianCity_Text_OhOkayThen {
 }
 
 text ViridianCity_Text_ExplainCaterpieWeedle {
-    "CATERPIE has no poison,\n"
-    "but WEEDLE does.\p"
-    "Watch that your POKéMON aren't\n"
-    "stabbed by WEEDLE's POISON STING.$"
+    "Caterpie has no poison,\n"
+    "but Weedle does.\p"
+    "Watch that your Pokémon aren't\n"
+    "stabbed by Weedle's Poison Sting.$"
 }
 
 text ViridianCity_Text_GrandpaHasntHadCoffeeYet {
@@ -38,10 +38,10 @@ text ViridianCity_Text_GrandpaHasntHadCoffeeYet {
 }
 
 text ViridianCity_Text_GoShoppingInPewterOccasionally {
-    "I go shopping in PEWTER CITY\n"
+    "I go shopping in Pewter City\n"
     "occasionally.\p"
     "I have to take the winding trail in\n"
-    "VIRIDIAN FOREST when I go.$"
+    "Viridian Forest when I go.$"
 }
 
 text ViridianCity_Text_ThisIsPrivateProperty {
@@ -56,14 +56,14 @@ text ViridianCity_Text_ShowYouHowToCatchMons {
     "Hm?\n"
     "What is that red box you have?\p"
     "Ah, so you're working on your\n"
-    "POKéDEX.\p"
+    "Pokédex.\p"
     "Then let me give you a word of\n"
     "advice.\p"
-    "Whenever you catch a POKéMON,\n"
-    "the POKéDEX automatically updates\l"
+    "Whenever you catch a Pokémon,\n"
+    "the Pokédex automatically updates\l"
     "its data.\p"
     "…You don't know how to catch\n"
-    "a POKéMON?\p"
+    "a Pokémon?\p"
     "I suppose I had better show you\n"
     "then!$"
 }
@@ -78,7 +78,7 @@ text ViridianCity_Text_WatchThatToLearnBasics {
     "If there's something you don't\n"
     "understand, watch that.\p"
     "It will teach you about the basics\n"
-    "of being a POKéMON TRAINER.$"
+    "of being a Pokémon Trainer.$"
 }
 
 text ViridianCity_Text_WeakenMonsFirstToCatch {
@@ -87,9 +87,9 @@ text ViridianCity_Text_WeakenMonsFirstToCatch {
     "But I made it too strong.\n"
     "It gave me a headache…\p"
     "Incidentally, are you filling your\n"
-    "POKéDEX?\p"
+    "Pokédex?\p"
     "At first, focus on weakening the\n"
-    "POKéMON before trying to catch it.$"
+    "Pokémon before trying to catch it.$"
 }
 
 text ViridianCity_Text_HowsTeachyTVHelping {
@@ -97,7 +97,7 @@ text ViridianCity_Text_HowsTeachyTVHelping {
     "that's what I need to get going!\p"
     "But I made it too strong.\n"
     "It gave me a headache…\p"
-    "Incidentally, is my old TEACHY TV\n"
+    "Incidentally, is my old Teachy TV\n"
     "helping you?$"
 }
 
@@ -110,36 +110,36 @@ text ViridianCity_Text_MyGrandsonOnTheShow {
 
 text ViridianCity_Text_TooBusyForTeachyTV {
     "Hm… You're too busy to not even\n"
-    "have the time for TEACHY TV…\p"
+    "have the time for Teachy TV…\p"
     "Time is money, and neither should\n"
     "be ill spent…$"
 }
 
 text ViridianCity_Text_CitySign {
-    "VIRIDIAN CITY \n"
+    "Viridian City \n"
     "The Eternally Green Paradise$"
 }
 
 text ViridianCity_Text_CatchMonsForEasierBattles {
-    "TRAINER TIPS\p"
-    "Catch POKéMON and expand your\n"
+    "Trainer Tips\p"
+    "Catch Pokémon and expand your\n"
     "collection.\p"
     "The more you have, the easier it\n"
     "is to battle.$"
 }
 
 text ViridianCity_Text_MovesLimitedByPP {
-    "TRAINER TIPS\p"
-    "The battle moves of POKéMON are\n"
-    "limited by their POWER POINTS, PP.\p"
+    "Trainer Tips\p"
+    "The battle moves of Pokémon are\n"
+    "limited by their Power Points, PP.\p"
     "To replenish PP, rest your tired\n"
-    "POKéMON at a POKéMON CENTER.$"
+    "Pokémon at a Pokémon Center.$"
 }
 
 text ViridianCity_Text_GymSign {
-    "VIRIDIAN CITY POKéMON GYM$"
+    "Viridian City Pokémon Gym$"
 }
 
 text ViridianCity_Text_GymDoorsAreLocked {
-    "VIRIDIAN GYM's doors are locked…$"
+    "Viridian Gym's doors are locked…$"
 }

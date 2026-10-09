@@ -1,18 +1,18 @@
 text LavenderTown_PokemonCenter_1F_Text_RocketsDoAnythingForMoney {
-    "TEAM ROCKET will do anything for\n"
+    "Team Rocket will do anything for\n"
     "the sake of money!\p"
     "There is no job too dirty, no deed\n"
     "too heinous, no crime too wicked!$"
 }
 
 text LavenderTown_PokemonCenter_1F_Text_CubonesMotherKilledByRockets {
-    "I saw CUBONE's mother trying to\n"
-    "escape from TEAM ROCKET.\p"
+    "I saw Cubone's mother trying to\n"
+    "escape from Team Rocket.\p"
     "She was killed trying to get away…$"
 }
 
 text LavenderTown_PokemonCenter_1F_Text_PeoplePayForCuboneSkulls {
-    "You know how the CUBONE species\n"
+    "You know how the Cubone species\n"
     "wears skulls, right?\p"
     "People will pay a lot for one.$"
 }

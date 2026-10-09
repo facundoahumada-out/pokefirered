@@ -7,8 +7,8 @@ Text_SeismicTossTeach::
 	.string "But that should spur us to study\n"
 	.string "harder, not toss in the towel.\p"
 	.string "The only thing you should toss…\p"
-	.string "Well, how about SEISMIC TOSS?\n"
-	.string "Should I teach that to a POKéMON?$"
+	.string "Well, how about Seismic Toss?\n"
+	.string "Should I teach that to a Pokémon?$"
 
 Text_SeismicTossDeclined::
 # 13 "data/maps/PewterCity_Museum_2F/text.pory"
@@ -17,8 +17,8 @@ Text_SeismicTossDeclined::
 
 Text_SeismicTossWhichMon::
 # 18 "data/maps/PewterCity_Museum_2F/text.pory"
-	.string "Which POKéMON wants to learn\n"
-	.string "SEISMIC TOSS?$"
+	.string "Which Pokémon wants to learn\n"
+	.string "Seismic Toss?$"
 
 Text_SeismicTossTaught::
 # 23 "data/maps/PewterCity_Museum_2F/text.pory"
@@ -27,7 +27,7 @@ Text_SeismicTossTaught::
 
 PewterCity_Museum_1F_Text_WhatsSpecialAboutMoonStone::
 # 28 "data/maps/PewterCity_Museum_2F/text.pory"
-	.string "MOON STONE, huh?\p"
+	.string "Moon Stone, huh?\p"
 	.string "What's so special about it?\n"
 	.string "Looks like an ordinary rock to me.$"
 
@@ -46,13 +46,13 @@ PewterCity_Museum_1F_Text_RunningSpaceExhibitThisMonth::
 
 PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu::
 # 47 "data/maps/PewterCity_Museum_2F/text.pory"
-	.string "I want a PIKACHU!\n"
+	.string "I want a Pikachu!\n"
 	.string "It's so cute!\p"
 	.string "I asked my daddy to catch me one!$"
 
 PewterCity_Museum_1F_Text_PikachuSoonIPromise::
 # 53 "data/maps/PewterCity_Museum_2F/text.pory"
-	.string "Yeah, a PIKACHU soon, I promise!$"
+	.string "Yeah, a Pikachu soon, I promise!$"
 
 PewterCity_Museum_1F_Text_SpaceShuttle::
 # 57 "data/maps/PewterCity_Museum_2F/text.pory"
@@ -60,5 +60,5 @@ PewterCity_Museum_1F_Text_SpaceShuttle::
 
 PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon::
 # 61 "data/maps/PewterCity_Museum_2F/text.pory"
-	.string "A meteorite that fell on MT. MOON.\n"
-	.string "It is thought to be a MOON STONE.$"
+	.string "A meteorite that fell on Mt. Moon.\n"
+	.string "It is thought to be a Moon Stone.$"

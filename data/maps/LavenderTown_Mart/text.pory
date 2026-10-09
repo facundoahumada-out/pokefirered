@@ -1,24 +1,24 @@
 text LavenderTown_Mart_Text_SearchingForStatRaiseItems {
     "I'm searching for items that raise\n"
-    "the stats of POKéMON.\p"
+    "the stats of Pokémon.\p"
     "They're effective over the course\n"
     "of a single battle.\p"
-    "X ATTACK, X DEFEND, X SPEED, \n"
-    "and X SPECIAL are what I'm after.\p"
+    "X Attack, X Defend, X Speed, \n"
+    "and X Special are what I'm after.\p"
     "Do you know where I can get them?$"
 }
 
 text LavenderTown_Mart_Text_DidYouBuyRevives {
-    "Did you buy some REVIVES?\n"
-    "They revive any fainted POKéMON!$"
+    "Did you buy some Revives?\n"
+    "They revive any fainted Pokémon!$"
 }
 
 text LavenderTown_Mart_Text_TrainerDuosCanChallengeYou {
-    "Sometimes, a TRAINER duo will\n"
-    "challenge you with two POKéMON\l"
+    "Sometimes, a Trainer duo will\n"
+    "challenge you with two Pokémon\l"
     "at the same time.\p"
     "If that happens, you have to send\n"
-    "out two POKéMON to battle, too.$"
+    "out two Pokémon to battle, too.$"
 }
 
 text LavenderTown_Mart_Text_SoldNuggetFromMountainsFor5000 {

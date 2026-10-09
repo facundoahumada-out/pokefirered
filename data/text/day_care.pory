@@ -1,19 +1,19 @@
 // Same as Hoenn's day-care text, used by the Four Island Day-Care. Unused text translated in Emerald
 text DayCare_Text_ImDaycareManSpeakToMyWife {
-    "I'm the DAY-CARE MAN.\p"
+    "I'm the Day-Care Man.\p"
     "I help take care of the precious\n"
-    "POKéMON of TRAINERS.\p"
+    "Pokémon of Trainers.\p"
     "If you'd like me to raise your\n"
-    "POKéMON, have a word with my wife.$"
+    "Pokémon, have a word with my wife.$"
 }
 
 text DayCare_Text_DoYouWantEgg {
     "Ah, it's you!\p"
-    "We were raising your POKéMON, and\n"
+    "We were raising your Pokémon, and\n"
     "my goodness, were we surprised!\p"
-    "Your POKéMON had an EGG!\p"
+    "Your Pokémon had an Egg!\p"
     "We don't know how it got there,\n"
-    "but your POKéMON had it.\p"
+    "but your Pokémon had it.\p"
     "You do want it, yes?$"
 }
 
@@ -33,8 +33,8 @@ text DayCare_Text_YouHaveNoRoomForIt {
 }
 
 text DayCare_Text_ReceivedEgg {
-    "{PLAYER} received the EGG from\n"
-    "the DAY-CARE MAN.$"
+    "{PLAYER} received the Egg from\n"
+    "the Day-Care Man.$"
 }
 
 text DayCare_Text_TakeGoodCareOfIt {
@@ -57,13 +57,13 @@ text DayCare_Text_IWillKeepDoYouWantIt {
 }
 
 text DayCare_Text_WouldYouLikeUsToRaiseMon {
-    "I'm the DAY-CARE LADY.\p"
-    "We can raise POKéMON for you.\p"
+    "I'm the Day-Care Lady.\p"
+    "We can raise Pokémon for you.\p"
     "Would you like us to raise one?$"
 }
 
 text DayCare_Text_WhichMonShouldWeRaise {
-    "Which POKéMON should we raise for\n"
+    "Which Pokémon should we raise for\n"
     "you?$"
 }
 
@@ -74,9 +74,9 @@ text DayCare_Text_WellRaiseYourMon {
 }
 
 text DayCare_Text_WeCanRaiseOneMore {
-    "We can raise two of your POKéMON.\p"
+    "We can raise two of your Pokémon.\p"
     "Would you like us to raise one\n"
-    "more POKéMON for you?$"
+    "more Pokémon for you?$"
 }
 
 text DayCare_Text_HusbandWasLookingForYou {
@@ -105,7 +105,7 @@ text DayCare_Text_ComeAgain {
 text DayCare_Text_GoodToSeeYou {
     "Ah, it's you!\n"
     "Good to see you.\p"
-    "Your POKéMON can only be doing\n"
+    "Your Pokémon can only be doing\n"
     "good!$"
 }
 
@@ -115,7 +115,7 @@ text DayCare_Text_YourMonHasGrownXLevels {
 }
 
 text DayCare_Text_YourPartyIsFull {
-    "Your POKéMON party is full.\n"
+    "Your Pokémon party is full.\n"
     "Make room, then come see me.$"
 }
 
@@ -130,26 +130,26 @@ text DayCare_Text_ItWillCostX {
 
 text DayCare_Text_HeresYourMon {
     "Perfect!\n"
-    "Here's your POKéMON.$"
+    "Here's your Pokémon.$"
 }
 
 text DayCare_Text_TookBackMon {
     "{PLAYER} took back {STR_VAR_1} from\n"
-    "the DAY-CARE LADY.$"
+    "the Day-Care Lady.$"
 }
 
 text DayCare_Text_YouHaveJustOneMon {
     "Oh? But you have just one\n"
-    "POKéMON.\p"
+    "Pokémon.\p"
     "Come back another time.$"
 }
 
 text DayCare_Text_TakeYourMonBack {
-    "Will you take your POKéMON back?$"
+    "Will you take your Pokémon back?$"
 }
 
 text DayCare_Text_WhatWillYouBattleWith {
-    "If you leave me that POKéMON,\n"
+    "If you leave me that Pokémon,\n"
     "what will you battle with?\p"
     "Come back another time.$"
 }

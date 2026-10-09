@@ -1,5 +1,5 @@
 text SilphCo_8F_Text_WonderIfSilphIsFinished {
-    "I wonder if SILPH is finished…$"
+    "I wonder if Silph is finished…$"
 }
 
 text SilphCo_8F_Text_ThanksForSavingUs {
@@ -29,13 +29,13 @@ text SilphCo_8F_Text_ParkerDefeat {
 }
 
 text SilphCo_8F_Text_ParkerPostBattle {
-    "So, what do you think of SILPH\n"
-    "BUILDING's maze?$"
+    "So, what do you think of Silph\n"
+    "Building's maze?$"
 }
 
 text SilphCo_8F_Text_Grunt2Intro {
-    "I am one of the four ROCKET\n"
-    "BROTHERS!$"
+    "I am one of the four Rocket\n"
+    "Brothers!$"
 }
 
 text SilphCo_8F_Text_Grunt2Defeat {
@@ -48,14 +48,14 @@ text SilphCo_8F_Text_Grunt2PostBattle {
 }
 
 text SilphCo_8F_Text_FloorSign {
-    "SILPH CO. HEAD OFFICE\n"
+    "Silph Co. Head Office\n"
     "8F$"
 }
 
 text SilphCo_8F_Text_ToRocketBossMonsAreTools {
-    "TEAM ROCKET's BOSS is terribly\n"
+    "Team Rocket's Boss is terribly\n"
     "cruel!\p"
-    "To him, POKéMON are just tools to\n"
+    "To him, Pokémon are just tools to\n"
     "be used.\p"
     "What will happen if that tyrant\n"
     "takes over our company…$"

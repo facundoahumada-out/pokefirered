@@ -7,17 +7,17 @@ SaffronCity_House_Text_DontLookAtMyLetter::
 
 SaffronCity_House_Text_Pidgey::
 # 8 "data/maps/SaffronCity_House/text.pory"
-	.string "PIDGEY: Kurukkoo!$"
+	.string "Pidgey: Kurukkoo!$"
 
 SaffronCity_House_Text_GettingCopycatPokeDoll::
 # 12 "data/maps/SaffronCity_House/text.pory"
-	.string "The COPYCAT is cute!\n"
-	.string "I'm getting her a POKé DOLL.$"
+	.string "The Copycat is cute!\n"
+	.string "I'm getting her a Poké Doll.$"
 
 SaffronCity_House_Text_ExplainPPUp::
 # 17 "data/maps/SaffronCity_House/text.pory"
-	.string "I was given a PP UP as a gift.\p"
+	.string "I was given a PP Up as a gift.\p"
 	.string "It's used to increase the PP of\n"
-	.string "a POKéMON's move.\p"
+	.string "a Pokémon's move.\p"
 	.string "I should use it on a powerful move\n"
 	.string "with only a few PP.$"

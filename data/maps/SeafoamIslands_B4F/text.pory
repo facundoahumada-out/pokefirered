@@ -6,7 +6,7 @@ text Text_RockSlideTeach {
     "That'd be, like, waaaaaaaaaaah!\n"
     "Total terror!\p"
     "You don't seem to be scared.\n"
-    "Want to try using ROCK SLIDE?$"
+    "Want to try using Rock Slide?$"
 }
 
 text Text_RockSlideDeclined {
@@ -14,8 +14,8 @@ text Text_RockSlideDeclined {
 }
 
 text Text_RockSlideWhichMon {
-    "Which POKéMON should I teach\n"
-    "ROCK SLIDE?$"
+    "Which Pokémon should I teach\n"
+    "Rock Slide?$"
 }
 
 text Text_RockSlideTaught {
@@ -29,6 +29,6 @@ text SeafoamIslands_B4F_Text_BouldersMightChangeWaterFlow {
 }
 
 text SeafoamIslands_B4F_Text_DangerFastCurrent {
-    "DANGER\n"
+    "Danger\n"
     "Fast current!$"
 }

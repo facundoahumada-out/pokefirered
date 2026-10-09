@@ -1,25 +1,25 @@
 text SafariZone_North_Text_RestHouse {
-    "REST HOUSE$"
+    "Rest House$"
 }
 
 text SafariZone_North_Text_SecretHouseStillAhead {
-    "TRAINER TIPS\p"
-    "The SECRET HOUSE is still ahead.$"
+    "Trainer Tips\p"
+    "The Secret House is still ahead.$"
 }
 
 text SafariZone_North_Text_Area2 {
-    "AREA 2$"
+    "Area 2$"
 }
 
 text SafariZone_North_Text_ZigzagThroughTallGrass {
-    "TRAINER TIPS\p"
-    "POKéMON hide in tall grass.\p"
+    "Trainer Tips\p"
+    "Pokémon hide in tall grass.\p"
     "Zigzag through grassy areas to\n"
     "flush them out.$"
 }
 
 text SafariZone_North_Text_WinFreeHMFindSecretHouse {
-    "TRAINER TIPS\p"
+    "Trainer Tips\p"
     "Win a free HM for finding the\n"
-    "SECRET HOUSE.$"
+    "Secret House.$"
 }

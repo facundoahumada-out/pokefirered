@@ -1,5 +1,5 @@
 text Route15_Text_KindraIntro {
-    "I just got some POKéMON in trades.\n"
+    "I just got some Pokémon in trades.\n"
     "Can I try them out on you?$"
 }
 
@@ -9,8 +9,8 @@ text Route15_Text_KindraDefeat {
 
 text Route15_Text_KindraPostBattle {
     "You can't change the nickname of\n"
-    "any POKéMON you get in a trade.\p"
-    "Only the Original TRAINER can get\n"
+    "any Pokémon you get in a trade.\p"
+    "Only the Original Trainer can get\n"
     "the nickname changed.$"
 }
 
@@ -25,13 +25,13 @@ text Route15_Text_BeckyDefeat {
 }
 
 text Route15_Text_BeckyPostBattle {
-    "I'm afraid of BIKERS. They look so\n"
+    "I'm afraid of Bikers. They look so\n"
     "ugly and mean!$"
 }
 
 text Route15_Text_EdwinIntro {
     "When I whistle, I can summon bird\n"
-    "POKéMON.$"
+    "Pokémon.$"
 }
 
 text Route15_Text_EdwinDefeat {
@@ -56,13 +56,13 @@ text Route15_Text_ChesterDefeat {
 text Route15_Text_ChesterPostBattle {
     "This is so obvious, you should know\n"
     "this, but…\p"
-    "Moves like EARTHQUAKE and FISSURE\n"
-    "have no effect on bird POKéMON.$"
+    "Moves like Earthquake and Fissure\n"
+    "have no effect on bird Pokémon.$"
 }
 
 text Route15_Text_GraceIntro {
     "Oh, you're a little cutie!\n"
-    "So like a darling POKéMON!$"
+    "So like a darling Pokémon!$"
 }
 
 text Route15_Text_GraceDefeat {
@@ -76,17 +76,17 @@ text Route15_Text_GracePostBattle {
 }
 
 text Route15_Text_OliviaIntro {
-    "I raise POKéMON for protection\n"
+    "I raise Pokémon for protection\n"
     "because I live alone.$"
 }
 
 text Route15_Text_OliviaDefeat {
-    "POKéMON isn't about winning or\n"
+    "Pokémon isn't about winning or\n"
     "losing for me.$"
 }
 
 text Route15_Text_OliviaPostBattle {
-    "I love having my POKéMON greet me\n"
+    "I love having my Pokémon greet me\n"
     "when I get home.\p"
     "It's so reassuring.$"
 }
@@ -103,7 +103,7 @@ text Route15_Text_ErnestDefeat {
 text Route15_Text_ErnestPostBattle {
     "Life's too short.\n"
     "It's cool to live as an outlaw.\l"
-    "TEAM ROCKET RULES!$"
+    "Team Rocket Rules!$"
 }
 
 text Route15_Text_AlexIntro {
@@ -122,7 +122,7 @@ text Route15_Text_AlexPostBattle {
 
 text Route15_Text_CeliaIntro {
     "What's cool and happening?\n"
-    "Trading POKéMON!$"
+    "Trading Pokémon!$"
 }
 
 text Route15_Text_CeliaDefeat {
@@ -130,12 +130,12 @@ text Route15_Text_CeliaDefeat {
 }
 
 text Route15_Text_CeliaPostBattle {
-    "I trade POKéMON with my friends\n"
+    "I trade Pokémon with my friends\n"
     "all the time.$"
 }
 
 text Route15_Text_YazminIntro {
-    "Want to play with my POKéMON?$"
+    "Want to play with my Pokémon?$"
 }
 
 text Route15_Text_YazminDefeat {
@@ -147,47 +147,47 @@ text Route15_Text_YazminPostBattle {
 }
 
 text Route15_Text_RouteSign {
-    "ROUTE 15\n"
-    "West to FUCHSIA CITY$"
+    "Route 15\n"
+    "West to Fuchsia City$"
 }
 
 text Route15_Text_MyaIntro {
-    "MYA: You're perfect.\n"
+    "Mya: You're perfect.\n"
     "Help me train my little brother?$"
 }
 
 text Route15_Text_MyaDefeat {
-    "MYA: RON, you have to focus!\n"
+    "Mya: Ron, you have to focus!\n"
     "Concentrate on what you're doing!$"
 }
 
 text Route15_Text_MyaPostBattle {
-    "MYA: Okay, we'll turn it up.\n"
+    "Mya: Okay, we'll turn it up.\n"
     "I'll add to our training menu!$"
 }
 
 text Route15_Text_MyaNotEnoughMons {
-    "MYA: Do you want to challenge us?\n"
-    "You'll need two POKéMON, though.$"
+    "Mya: Do you want to challenge us?\n"
+    "You'll need two Pokémon, though.$"
 }
 
 text Route15_Text_RonIntro {
-    "RON: My sister gets scary when we\n"
+    "Ron: My sister gets scary when we\n"
     "lose.$"
 }
 
 text Route15_Text_RonDefeat {
-    "RON: Oh, no, no…\n"
+    "Ron: Oh, no, no…\n"
     "Sis, I'm sorry!$"
 }
 
 text Route15_Text_RonPostBattle {
-    "RON: Oh, bleah…\n"
+    "Ron: Oh, bleah…\n"
     "I wish I had a nice sister…$"
 }
 
 text Route15_Text_RonNotEnoughMons {
-    "RON: Did you want to battle with\n"
+    "Ron: Did you want to battle with\n"
     "my sister and me?\p"
-    "You need two POKéMON, then.$"
+    "You need two Pokémon, then.$"
 }

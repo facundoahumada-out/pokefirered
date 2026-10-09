@@ -54,9 +54,9 @@ EventScript_RepelWoreOff_End:
 
 Text_RepelWoreOff::
 # 32 "data/scripts/repel.pory"
-	.string "REPEL's effect wore off…$"
+	.string "Repel's effect wore off…$"
 
 Text_RepelWoreOff_UseAnother::
 # 36 "data/scripts/repel.pory"
-	.string "REPEL's effect wore off…\n"
+	.string "Repel's effect wore off…\n"
 	.string "Use another?$"

@@ -1,11 +1,11 @@
 text SaffronCity_Mart_Text_MaxRepelMoreEffectiveThanSuper {
-    "MAX REPEL keeps weaker POKéMON\n"
+    "Max Repel keeps weaker Pokémon\n"
     "from appearing.\p"
-    "MAX REPEL stays effective longer\n"
-    "than SUPER REPEL.$"
+    "Max Repel stays effective longer\n"
+    "than Super Repel.$"
 }
 
 text SaffronCity_Mart_Text_ReviveIsCostly {
-    "REVIVE is costly, but it revives\n"
-    "fainted POKéMON!$"
+    "Revive is costly, but it revives\n"
+    "fainted Pokémon!$"
 }

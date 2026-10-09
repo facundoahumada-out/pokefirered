@@ -11,14 +11,14 @@ SSAnne_B1F_Room1_Text_PhillipDefeat::
 SSAnne_B1F_Room1_Text_PhillipPostBattle::
 # 11 "data/maps/SSAnne_B1F_Room1/text.pory"
 	.string "When we're out at sea, jellyfish\n"
-	.string "POKéMON sometimes drift by.$"
+	.string "Pokémon sometimes drift by.$"
 
 SSAnne_B1F_Room1_Text_BarnyIntro::
 # 16 "data/maps/SSAnne_B1F_Room1/text.pory"
 	.string "Hello, stranger!\p"
 	.string "I can't tell if you're from the seas\n"
 	.string "or mountains, but stop and chat.\p"
-	.string "All my POKéMON are from the sea.$"
+	.string "All my Pokémon are from the sea.$"
 
 SSAnne_B1F_Room1_Text_BarnyDefeat::
 # 23 "data/maps/SSAnne_B1F_Room1/text.pory"

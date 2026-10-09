@@ -1,7 +1,7 @@
 text SafariZone_SecretHouse_Text_CongratsYouveWon {
     "Ah! Finally!\p"
     "You're the first person to reach\n"
-    "the SECRET HOUSE!\p"
+    "the Secret House!\p"
     "Although I made a campaign\n"
     "for our grand opening,\p"
     "I was getting worried that no one\n"
@@ -16,8 +16,8 @@ text SafariZone_SecretHouse_Text_ReceivedHM03FromAttendant {
 }
 
 text SafariZone_SecretHouse_Text_ExplainSurf {
-    "HM03 is SURF.\p"
-    "POKéMON will be able to ferry you\n"
+    "HM03 is Surf.\p"
+    "Pokémon will be able to ferry you\n"
     "across water using it.\p"
     "And, this HM isn't disposable, so\n"
     "you can use it over and over.\p"

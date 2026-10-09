@@ -1,5 +1,5 @@
 text ThreeIsland_Text_IslandSign {
-    "THREE ISLAND\n"
+    "Three Island\n"
     "Kin Island of Family Bonding$"
 }
 
@@ -13,7 +13,7 @@ text ThreeIsland_Text_GoBackToKanto {
     "We don't need you people bringing\n"
     "your noise and trouble here!\p"
     "We're asking you to go back to\n"
-    "KANTO!$"
+    "Kanto!$"
 }
 
 text ThreeIsland_Text_BossIsOnHisWay {
@@ -35,7 +35,7 @@ text ThreeIsland_Text_WhosGonnaMakeMe {
 
 text ThreeIsland_Text_AreYouBossGoBackToKanto {
     "Are you the boss?\n"
-    "Go back to KANTO right now!$"
+    "Go back to Kanto right now!$"
 }
 
 text ThreeIsland_Text_JustGotHerePal {
@@ -96,7 +96,7 @@ text ThreeIsland_Text_Biker1PostBattle {
 }
 
 text ThreeIsland_Text_Biker2Intro {
-    "Aren't you from KANTO?\n"
+    "Aren't you from Kanto?\n"
     "You should be on our side!$"
 }
 
@@ -149,23 +149,23 @@ text ThreeIsland_Text_PaxtonPostBattle {
 text ThreeIsland_Text_ThankYouOhYourMonGotHurt {
     "Thank you! Those goons were\n"
     "nothing but bad trouble.\p"
-    "Oh, look, your POKéMON got hurt\n"
+    "Oh, look, your Pokémon got hurt\n"
     "on my account.$"
 }
 
 text ThreeIsland_Text_GivenFullRestore {
     "{PLAYER} was given\n"
-    "a FULL RESTORE.$"
+    "a Full Restore.$"
 }
 
 text ThreeIsland_Text_OhYourBagIsFull {
     "Oh?\n"
-    "Your BAG is full.$"
+    "Your Bag is full.$"
 }
 
 text ThreeIsland_Text_YouveGotImpressiveMons {
     "You've got seriously impressive\n"
-    "POKéMON with you.$"
+    "Pokémon with you.$"
 }
 
 text ThreeIsland_Text_LostelleWentOffTowardsBondBridge {
@@ -174,26 +174,26 @@ text ThreeIsland_Text_LostelleWentOffTowardsBondBridge {
     "I hope you'll at least stay here\n"
     "a while.\p"
     "…I beg your pardon?\n"
-    "You're looking for LOSTELLE?\p"
-    "LOSTELLE went off towards BOND\n"
-    "BRIDGE a while ago.$"
+    "You're looking for Lostelle?\p"
+    "Lostelle went off towards Bond\n"
+    "Bridge a while ago.$"
 }
 
 text ThreeIsland_Text_WouldntWantToSeeBikersHereAgain {
-    "THREE ISLAND is actually the most\n"
+    "Three Island is actually the most\n"
     "populous of the islands here.\p"
     "Still, it could be less sleepy.\p"
     "But I wouldn't want to see goons\n"
-    "like those BIKERS here again.$"
+    "like those Bikers here again.$"
 }
 
 text ThreeIsland_Text_WhenDodouEvolvesGoingToPlayGame {
-    "I'm going to train my DODUO in the\n"
-    "BERRY FOREST.\p"
+    "I'm going to train my Doduo in the\n"
+    "Berry Forest.\p"
     "When it evolves, I'm going to play\n"
-    "a game on TWO ISLAND.$"
+    "a game on Two Island.$"
 }
 
 text ThreeIsland_Text_Doduo {
-    "DODUO: Gigiih!$"
+    "Doduo: Gigiih!$"
 }

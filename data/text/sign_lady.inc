@@ -14,8 +14,8 @@ PalletTown_Text_ReadItReadIt::
 
 PalletTown_Text_PressStartToOpenMenu::
 # 17 "data/text/sign_lady.pory"
-	.string "TRAINER TIPS\p"
-	.string "Press START to open the MENU!$"
+	.string "Trainer Tips\p"
+	.string "Press Start to open the Menu!$"
 
 PalletTown_Text_SignsAreUsefulArentThey::
 # 22 "data/text/sign_lady.pory"
@@ -25,9 +25,9 @@ PalletTown_Text_LookCopiedTrainerTipsSign::
 # 26 "data/text/sign_lady.pory"
 	.string "Look, look!\p"
 	.string "I copied what it said on one of\n"
-	.string "those TRAINER TIPS signs!$"
+	.string "those Trainer Tips signs!$"
 
 PalletTown_Text_PressStartToOpenMenuCopy::
 # 33 "data/text/sign_lady.pory"
-	.string "TRAINER TIPS!\p"
-	.string "Press START to open the MENU!$"
+	.string "Trainer Tips!\p"
+	.string "Press Start to open the Menu!$"

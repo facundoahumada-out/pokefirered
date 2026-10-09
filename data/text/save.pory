@@ -8,8 +8,8 @@ text gText_AlreadySaveFile_WouldLikeToOverwrite {
 }
 
 text gText_SavingDontTurnOffThePower {
-    "SAVING…\n"
-    "DON'T TURN OFF THE POWER.$"
+    "Saving…\n"
+    "Don't Turn Off the Power.$"
 }
 
 text gText_PlayerSavedTheGame {
@@ -21,12 +21,12 @@ text gText_SaveFailed2 {
 }
 
 text gText_DifferentGameFile {
-    "WARNING!\p"
+    "Warning!\p"
     "There is a different game file that\n"
     "is already saved.\p"
     "If you save now, the other file's\n"
     "adventure, including items and\l"
-    "POKéMON, will be entirely lost.\p"
+    "Pokémon, will be entirely lost.\p"
     "Are you sure you want to save now\n"
     "and overwrite the other save file?$"
 }

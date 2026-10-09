@@ -9,12 +9,12 @@ text RocketHideout_B1F_Text_Grunt1Defeat {
 }
 
 text RocketHideout_B1F_Text_Grunt1PostBattle {
-    "Blast it… You're dissing TEAM\n"
-    "ROCKET, aren't you?$"
+    "Blast it… You're dissing Team\n"
+    "Rocket, aren't you?$"
 }
 
 text RocketHideout_B1F_Text_Grunt2Intro {
-    "You broke into TEAM ROCKET's\n"
+    "You broke into Team Rocket's\n"
     "operation? What nerve!$"
 }
 
@@ -36,7 +36,7 @@ text RocketHideout_B1F_Text_Grunt3Defeat {
 }
 
 text RocketHideout_B1F_Text_Grunt3PostBattle {
-    "SILPH SCOPE? Humph!\n"
+    "Silph Scope? Humph!\n"
     "I don't know where it is.$"
 }
 
@@ -50,7 +50,7 @@ text RocketHideout_B1F_Text_Grunt4Defeat {
 
 text RocketHideout_B1F_Text_Grunt4PostBattle {
     "Okay, I'll talk…\n"
-    "Take the elevator to see my BOSS.$"
+    "Take the elevator to see my Boss.$"
 }
 
 text RocketHideout_B1F_Text_Grunt5Intro {

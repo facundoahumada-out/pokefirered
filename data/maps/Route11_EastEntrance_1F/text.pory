@@ -6,18 +6,18 @@ text Route11_EastEntrance_1F_Text_BagIsFull {
 
 text Route11_EastEntrance_1F_Text_ManInLavenderRatesNames {
     "Don't you think it's hard to think\n"
-    "up good names for POKéMON?\p"
+    "up good names for Pokémon?\p"
     "Especially if you've caught a\n"
     "whole bunch?\p"
-    "In LAVENDER TOWN, there's a man\n"
-    "who rates POKéMON nicknames.\p"
+    "In Lavender Town, there's a man\n"
+    "who rates Pokémon nicknames.\p"
     "He can even help you rename your\n"
-    "POKéMON, too.$"
+    "Pokémon, too.$"
 }
 
 text Route11_EastEntrance_1F_Text_RockTunnelToReachLavender {
-    "If you're aiming to reach LAVENDER\n"
-    "TOWN, take ROCK TUNNEL.\p"
-    "You can get to ROCK TUNNEL from\n"
-    "CERULEAN CITY.$"
+    "If you're aiming to reach Lavender\n"
+    "Town, take Rock Tunnel.\p"
+    "You can get to Rock Tunnel from\n"
+    "Cerulean City.$"
 }

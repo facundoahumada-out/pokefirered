@@ -1,21 +1,21 @@
 text FourIsland_Text_IslandSign {
-    "FOUR ISLAND\n"
+    "Four Island\n"
     "The Warm, Blue, Floe Island$"
 }
 
 text FourIsland_Text_LoreleiHasReturned {
-    "LORELEI has returned.\p"
+    "Lorelei has returned.\p"
     "Did she find the city life too\n"
     "stressful, I wonder?$"
 }
 
 text FourIsland_Text_LoreleiMetLaprasAsChild {
-    "LORELEI has gone back.\p"
-    "The LAPRAS she has, I imagine it\n"
+    "Lorelei has gone back.\p"
+    "The Lapras she has, I imagine it\n"
     "to be the one she met as a child.\p"
-    "I believe it was in ICEFALL CAVE\n"
+    "I believe it was in Icefall Cave\n"
     "that she caught it.\p"
-    "Perhaps that POKéMON has been with\n"
+    "Perhaps that Pokémon has been with\n"
     "her ever since.$"
 }
 
@@ -23,15 +23,15 @@ text FourIsland_Text_RivalAlreadyGotEggBeSmellingYa {
     "{RIVAL}: Hey!\n"
     "{PLAYER}!\p"
     "What are you doing here in the\n"
-    "SEVII ISLANDS?\p"
+    "Sevii Islands?\p"
     "You should quit copying me,\n"
     "you know?\p"
-    "Anyways, I already got my POKéMON\n"
-    "EGG, so I'm done with this island.\p"
+    "Anyways, I already got my Pokémon\n"
+    "Egg, so I'm done with this island.\p"
     "Heh, I bet you don't even know\n"
-    "about POKéMON EGGS.\p"
-    "You'll never fill your NATIONAL\n"
-    "POKéDEX that way.\p"
+    "about Pokémon Eggs.\p"
+    "You'll never fill your National\n"
+    "Pokédex that way.\p"
     "By the way, I saw someone we both\n"
     "know on this island.\p"
     "Why don't you go look around if\n"
@@ -43,20 +43,20 @@ text FourIsland_Text_RivalAlreadyGotEggBeSmellingYa {
 
 text FourIsland_Text_LoreleiHasLotsOfStuffedDolls {
     "Oh, you found me!\n"
-    "Please don't tell LORELEI.\p"
-    "Did you know that LORELEI has lots\n"
+    "Please don't tell Lorelei.\p"
+    "Did you know that Lorelei has lots\n"
     "and lots of stuffed dolls?\p"
     "Every time she comes back to\n"
-    "FOUR ISLAND, her collection grows!$"
+    "Four Island, her collection grows!$"
 }
 
 text FourIsland_Text_MadeSlushieUsingIcefallCaveIce {
     "Ooh, chilly!\p"
     "I made a slushie using ice I\n"
-    "shaved inside ICEFALL CAVE.\p"
+    "shaved inside Icefall Cave.\p"
     "It's chilly and tasty!$"
 }
 
 text FourIsland_Text_LoreleisHouse {
-    "LORELEI'S HOUSE$"
+    "Lorelei's House$"
 }

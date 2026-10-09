@@ -410,9 +410,9 @@ EventScript_EndRockClimb:
 
 Text_CutTreeDown::
 # 53 "data/scripts/field_moves.pory"
-	.string "This tree looks like it can be CUT\n"
+	.string "This tree looks like it can be Cut\n"
 	.string "down!\p"
-	.string "Would you like to CUT it?$"
+	.string "Would you like to Cut it?$"
 
 Text_MonUsedMove::
 # 59 "data/scripts/field_moves.pory"
@@ -420,39 +420,39 @@ Text_MonUsedMove::
 
 Text_TreeCanBeCutDown::
 # 63 "data/scripts/field_moves.pory"
-	.string "This tree looks like it can be CUT\n"
+	.string "This tree looks like it can be Cut\n"
 	.string "down!$"
 
 Text_UseRockSmash::
 # 127 "data/scripts/field_moves.pory"
 	.string "This rock appears to be breakable.\n"
-	.string "Would you like to use ROCK SMASH?$"
+	.string "Would you like to use Rock Smash?$"
 
 Text_MonMaySmashRock::
 # 132 "data/scripts/field_moves.pory"
-	.string "It's a rugged rock, but a POKéMON\n"
+	.string "It's a rugged rock, but a Pokémon\n"
 	.string "may be able to smash it.$"
 
 Text_UseStrength::
 # 184 "data/scripts/field_moves.pory"
-	.string "It's a big boulder, but a POKéMON\n"
+	.string "It's a big boulder, but a Pokémon\n"
 	.string "may be able to push it aside.\p"
-	.string "Would you like to use STRENGTH?$"
+	.string "Would you like to use Strength?$"
 
 Text_MonUsedStrengthCanMoveBoulders::
 # 190 "data/scripts/field_moves.pory"
-	.string "{STR_VAR_1} used STRENGTH!\p"
-	.string "{STR_VAR_1}'s STRENGTH made it\n"
+	.string "{STR_VAR_1} used Strength!\p"
+	.string "{STR_VAR_1}'s Strength made it\n"
 	.string "possible to move boulders around!$"
 
 Text_MonMayPushBoulder::
 # 196 "data/scripts/field_moves.pory"
-	.string "It's a big boulder, but a POKéMON\n"
+	.string "It's a big boulder, but a Pokémon\n"
 	.string "may be able to push it aside.$"
 
 Text_StrengthMadeMovingBouldersPossible::
 # 201 "data/scripts/field_moves.pory"
-	.string "STRENGTH made it possible to move\n"
+	.string "Strength made it possible to move\n"
 	.string "boulders around.$"
 
 Text_WallOfWaterCrashingDown::
@@ -463,40 +463,40 @@ Text_WallOfWaterCrashingDown::
 Text_UseWaterfall::
 # 234 "data/scripts/field_moves.pory"
 	.string "It's a large waterfall.\n"
-	.string "Would you like to use WATERFALL?$"
+	.string "Would you like to use Waterfall?$"
 
 Text_MonUsedWaterfall::
 # 239 "data/scripts/field_moves.pory"
-	.string "{STR_VAR_1} used WATERFALL.$"
+	.string "{STR_VAR_1} used Waterfall.$"
 
 Text_MonMayGoUnderwater::
 # 295 "data/scripts/field_moves.pory"
-	.string "The sea is deep here. A POKéMON\n"
+	.string "The sea is deep here. A Pokémon\n"
 	.string "may be able to go underwater.$"
 
 Text_SeaIsDeepUseDive::
 # 300 "data/scripts/field_moves.pory"
 	.string "The sea is deep here.\n"
-	.string "Would you like to use DIVE?$"
+	.string "Would you like to use Dive?$"
 
 Text_MonUsedDive::
 # 305 "data/scripts/field_moves.pory"
-	.string "{STR_VAR_1} used DIVE.$"
+	.string "{STR_VAR_1} used Dive.$"
 
 Text_MonMaySurface::
 # 309 "data/scripts/field_moves.pory"
 	.string "Light is filtering down from above.\n"
-	.string "A POKéMON may be able to surface.$"
+	.string "A Pokémon may be able to surface.$"
 
 Text_LightFilteringUseDive::
 # 314 "data/scripts/field_moves.pory"
 	.string "Light is filtering down from above.\n"
-	.string "Would you like to use DIVE?$"
+	.string "Would you like to use Dive?$"
 
 Text_DiveCantBeUsedHere::
 # 319 "data/scripts/field_moves.pory"
 	.string "There is an obstacle above.\n"
-	.string "DIVE can't be used here.$"
+	.string "Dive can't be used here.$"
 
 Text_LooksLikeNothingHere::
 # 329 "data/scripts/field_moves.pory"
@@ -505,13 +505,13 @@ Text_LooksLikeNothingHere::
 Text_WantToRockClimb::
 # 353 "data/scripts/field_moves.pory"
 	.string "The cliff is steep.\n"
-	.string "Would you like to use ROCK CLIMB?$"
+	.string "Would you like to use Rock Climb?$"
 
 Text_MonUsedRockClimb::
 # 358 "data/scripts/field_moves.pory"
-	.string "{STR_VAR_1} used ROCK CLIMB!$"
+	.string "{STR_VAR_1} used Rock Climb!$"
 
 Text_CantRockClimb::
 # 362 "data/scripts/field_moves.pory"
 	.string "The cliff is steep.\n"
-	.string "A POKéMON may be able to climb it.$"
+	.string "A Pokémon may be able to climb it.$"

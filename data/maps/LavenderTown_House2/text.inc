@@ -1,13 +1,13 @@
 LavenderTown_House2_Text_WantMeToRateNicknames::
 # 1 "data/maps/LavenderTown_House2/text.pory"
 	.string "Hello, hello!\n"
-	.string "I am the official NAME RATER!\p"
+	.string "I am the official Name Rater!\p"
 	.string "Want me to rate the nicknames of\n"
-	.string "your POKéMON?$"
+	.string "your Pokémon?$"
 
 LavenderTown_House2_Text_CritiqueWhichMonsNickname::
 # 8 "data/maps/LavenderTown_House2/text.pory"
-	.string "Which POKéMON's nickname should\n"
+	.string "Which Pokémon's nickname should\n"
 	.string "I critique?$"
 
 LavenderTown_House2_Text_GiveItANicerName::
@@ -25,7 +25,7 @@ LavenderTown_House2_Text_WhatShallNewNicknameBe::
 
 LavenderTown_House2_Text_FromNowOnShallBeKnownAsName::
 # 26 "data/maps/LavenderTown_House2/text.pory"
-	.string "Done! From now on, this POKéMON\n"
+	.string "Done! From now on, this Pokémon\n"
 	.string "shall be known as {STR_VAR_1}!\p"
 	.string "It is a better name than before!\n"
 	.string "How fortunate for you!$"
@@ -37,7 +37,7 @@ LavenderTown_House2_Text_ISeeComeVisitAgain::
 
 LavenderTown_House2_Text_FromNowOnShallBeKnownAsSameName::
 # 38 "data/maps/LavenderTown_House2/text.pory"
-	.string "Done! From now on, this POKéMON\n"
+	.string "Done! From now on, this Pokémon\n"
 	.string "shall be known as {STR_VAR_1}!\p"
 	.string "It looks no different from before,\n"
 	.string "and yet, this is vastly superior!\p"
@@ -52,4 +52,4 @@ LavenderTown_House2_Text_TrulyImpeccableName::
 LavenderTown_House2_Text_ThatIsMerelyAnEgg::
 # 52 "data/maps/LavenderTown_House2/text.pory"
 	.string "Now, now.\n"
-	.string "That is merely an EGG!$"
+	.string "That is merely an Egg!$"

@@ -30,10 +30,10 @@ EventScript_RepelWoreOff_End:
 }
 
 text Text_RepelWoreOff {
-    "REPEL's effect wore off…$"
+    "Repel's effect wore off…$"
 }
 
 text Text_RepelWoreOff_UseAnother {
-    "REPEL's effect wore off…\n"
+    "Repel's effect wore off…\n"
     "Use another?$"
 }

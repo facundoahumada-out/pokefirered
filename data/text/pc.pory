@@ -11,7 +11,7 @@ text Text_AccessedSomeonesPC {
 }
 
 text Text_OpenedPkmnStorage {
-    "POKéMON Storage System opened.$"
+    "Pokémon Storage System opened.$"
 }
 
 text Text_AccessedPlayersPC {
@@ -19,5 +19,5 @@ text Text_AccessedPlayersPC {
 }
 
 text Text_AccessedBillsPC {
-    "Accessed BILL's PC.$"
+    "Accessed Bill's PC.$"
 }

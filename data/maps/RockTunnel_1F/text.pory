@@ -8,7 +8,7 @@ text RockTunnel_1F_Text_LennyDefeat {
 }
 
 text RockTunnel_1F_Text_LennyPostBattle {
-    "Watch for ONIX.\n"
+    "Watch for Onix.\n"
     "They appear only occasionally.\p"
     "High-level ones can put the\n"
     "squeeze on you!$"
@@ -26,7 +26,7 @@ text RockTunnel_1F_Text_OliverDefeat {
 }
 
 text RockTunnel_1F_Text_OliverPostBattle {
-    "That sleeping POKéMON on ROUTE 12\n"
+    "That sleeping Pokémon on Route 12\n"
     "forced me to take this detour.$"
 }
 
@@ -44,7 +44,7 @@ text RockTunnel_1F_Text_LucasPostBattle {
 }
 
 text RockTunnel_1F_Text_AshtonIntro {
-    "POKéMON fight!\n"
+    "Pokémon fight!\n"
     "Ready, go!$"
 }
 
@@ -53,7 +53,7 @@ text RockTunnel_1F_Text_AshtonDefeat {
 }
 
 text RockTunnel_1F_Text_AshtonPostBattle {
-    "Oh well, I'll get a ZUBAT as I go!$"
+    "Oh well, I'll get a Zubat as I go!$"
 }
 
 text RockTunnel_1F_Text_LeahIntro {
@@ -67,16 +67,16 @@ text RockTunnel_1F_Text_LeahDefeat {
 }
 
 text RockTunnel_1F_Text_LeahPostBattle {
-    "I saw a MACHOP in this tunnel.$"
+    "I saw a Machop in this tunnel.$"
 }
 
 text RockTunnel_1F_Text_DanaIntro {
     "I came this far looking for wild\n"
-    "POKéMON.$"
+    "Pokémon.$"
 }
 
 text RockTunnel_1F_Text_DanaDefeat {
-    "I'm out of POKéMON!$"
+    "I'm out of Pokémon!$"
 }
 
 text RockTunnel_1F_Text_DanaPostBattle {
@@ -85,7 +85,7 @@ text RockTunnel_1F_Text_DanaPostBattle {
 }
 
 text RockTunnel_1F_Text_ArianaIntro {
-    "You have POKéMON!\n"
+    "You have Pokémon!\n"
     "Let's start!$"
 }
 
@@ -99,6 +99,6 @@ text RockTunnel_1F_Text_ArianaPostBattle {
 }
 
 text RockTunnel_1F_Text_RouteSign {
-    "ROCK TUNNEL\n"
-    "CERULEAN CITY - LAVENDER TOWN$"
+    "Rock Tunnel\n"
+    "Cerulean City - Lavender Town$"
 }

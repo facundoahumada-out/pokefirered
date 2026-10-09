@@ -3,7 +3,7 @@ text Text_ObtainedTheX {
 }
 
 text Text_BagIsFull {
-    "The BAG is full…$"
+    "The Bag is full…$"
 }
 
 text Text_PutItemAway {
@@ -17,7 +17,7 @@ text Text_FoundOneItem {
 
 text Text_TooBadBagFull {
     "Too bad!\n"
-    "The BAG is full…$"
+    "The Bag is full…$"
 }
 
 text Text_FoundXCoins {
@@ -26,13 +26,13 @@ text Text_FoundXCoins {
 }
 
 text Text_PutCoinsAwayInCoinCase {
-    "{PLAYER} put the COINS away in\n"
-    "the COIN CASE.$"
+    "{PLAYER} put the Coins away in\n"
+    "the Coin Case.$"
 }
 
 text Text_CoinCaseIsFull {
     "Too bad!\n"
-    "The COIN CASE is full…$"
+    "The Coin Case is full…$"
 }
 
 text Text_NothingToPutThemIn {

@@ -1,25 +1,25 @@
 text CeladonCity_DepartmentStore_5F_Text_ExplainStatEnhancers {
-    "POKéMON stat enhancers can be\n"
+    "Pokémon stat enhancers can be\n"
     "bought only here.\p"
-    "HP UP increases the base HP of a\n"
-    "POKéMON.\p"
-    "CALCIUM raises the base SP. ATK\n"
-    "stat of one POKéMON.\p"
-    "ZINC boosts the base SP. DEF stat\n"
-    "of one POKéMON.\p"
-    "CARBOS enhances the base SPEED\n"
+    "HP Up increases the base HP of a\n"
+    "Pokémon.\p"
+    "Calcium raises the base Sp. Atk\n"
+    "stat of one Pokémon.\p"
+    "Zinc boosts the base Sp. Def stat\n"
+    "of one Pokémon.\p"
+    "Carbos enhances the base Speed\n"
     "stat.$"
 }
 
 text CeladonCity_DepartmentStore_5F_Text_HereForStatEnhancers {
-    "I'm here for POKéMON stat\n"
+    "I'm here for Pokémon stat\n"
     "enhancers.\p"
-    "PROTEIN increases the base ATTACK\n"
+    "Protein increases the base Attack\n"
     "power.\p"
-    "IRON increases the base DEFENSE\n"
+    "Iron increases the base Defense\n"
     "stat.$"
 }
 
 text CeladonCity_DepartmentStore_5F_Text_Drugstore {
-    "5F: DRUGSTORE$"
+    "5F: Drugstore$"
 }

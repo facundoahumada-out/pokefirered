@@ -11,7 +11,7 @@ text SixIsland_WaterPath_Text_RoseDefeat {
 text SixIsland_WaterPath_Text_RosePostBattle {
     "I want to go to the woods over\n"
     "there, but…\p"
-    "There are lots of BUG POKéMON.\n"
+    "There are lots of Bug Pokémon.\n"
     "They scare me a little.$"
 }
 
@@ -31,7 +31,7 @@ text SixIsland_WaterPath_Text_EdwardPostBattle {
 
 text SixIsland_WaterPath_Text_SamirIntro {
     "What, you're suggesting that you're\n"
-    "sick of seeing SWIMMERS like me?\p"
+    "sick of seeing Swimmers like me?\p"
     "Aww, don't be hatin'!$"
 }
 
@@ -41,7 +41,7 @@ text SixIsland_WaterPath_Text_SamirDefeat {
 
 text SixIsland_WaterPath_Text_SamirPostBattle {
     "I couldn't lift the stigma of being\n"
-    "a SWIMMER…$"
+    "a Swimmer…$"
 }
 
 text SixIsland_WaterPath_Text_DeniseIntro {
@@ -55,7 +55,7 @@ text SixIsland_WaterPath_Text_DeniseDefeat {
 
 text SixIsland_WaterPath_Text_DenisePostBattle {
     "When I can't be with my boyfriend,\n"
-    "I spend time with the POKéMON he\l"
+    "I spend time with the Pokémon he\l"
     "gave me.$"
 }
 
@@ -75,43 +75,43 @@ text SixIsland_WaterPath_Text_EarlPostBattle {
 }
 
 text SixIsland_WaterPath_Text_MiuIntro {
-    "MIU: Hello, POKéMON!\n"
+    "Miu: Hello, Pokémon!\n"
     "It's time to play!$"
 }
 
 text SixIsland_WaterPath_Text_MiuDefeat {
-    "MIU: Oh, no!\n"
+    "Miu: Oh, no!\n"
     "Mommy!$"
 }
 
 text SixIsland_WaterPath_Text_MiuPostBattle {
-    "MIU: It makes me all sad inside\n"
+    "Miu: It makes me all sad inside\n"
     "when we lose…$"
 }
 
 text SixIsland_WaterPath_Text_MiuNotEnoughMons {
-    "MIU: MIA and I are TWINS.\n"
+    "Miu: Mia and I are Twins.\n"
     "We want to battle together.$"
 }
 
 text SixIsland_WaterPath_Text_MiaIntro {
-    "MIA: Hello, POKéMON!\n"
+    "Mia: Hello, Pokémon!\n"
     "It's time to battle!$"
 }
 
 text SixIsland_WaterPath_Text_MiaDefeat {
-    "MIA: You're mean!\n"
+    "Mia: You're mean!\n"
     "You're bad for winning!$"
 }
 
 text SixIsland_WaterPath_Text_MiaPostBattle {
-    "MIA: Ohh…\n"
-    "I'm sorry, my POKéMON…$"
+    "Mia: Ohh…\n"
+    "I'm sorry, my Pokémon…$"
 }
 
 text SixIsland_WaterPath_Text_MiaNotEnoughMons {
-    "MIA: Oh, you only have one\n"
-    "POKéMON?\p"
+    "Mia: Oh, you only have one\n"
+    "Pokémon?\p"
     "Don't you feel lonesome?$"
 }
 
@@ -121,6 +121,6 @@ text SixIsland_WaterPath_Text_WantedUltimateHorn {
 }
 
 text SixIsland_WaterPath_Text_RouteSign {
-    "WATER PATH\n"
-    "Leads to RUIN VALLEY$"
+    "Water Path\n"
+    "Leads to Ruin Valley$"
 }

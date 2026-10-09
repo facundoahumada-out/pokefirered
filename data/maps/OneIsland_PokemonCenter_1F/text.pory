@@ -1,55 +1,55 @@
 text OneIsland_PokemonCenter_1F_Text_BillHeyThereCelio {
-    "BILL: Hey, there!\n"
-    "CELIO!$"
+    "Bill: Hey, there!\n"
+    "Celio!$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_CelioCantBelieveYouCameOut {
-    "CELIO: BILL!\n"
+    "Celio: Bill!\n"
     "I can't believe you came out here.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_BillHowsYourResearchComing {
-    "BILL: Well, absolutely!\n"
+    "Bill: Well, absolutely!\n"
     "How's your research coming along?\p"
     "…Oh, wait a sec.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_ThisIsMyBuddyCelio {
-    "{PLAYER}, this is my buddy CELIO.\n"
-    "He's one dedicated PC MANIAC!$"
+    "{PLAYER}, this is my buddy Celio.\n"
+    "He's one dedicated PC Maniac!$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_PlayerIsRisingPokemonChamp {
-    "CELIO, this is {PLAYER}, a rising\n"
-    "contender as the POKéMON CHAMP!$"
+    "Celio, this is {PLAYER}, a rising\n"
+    "contender as the Pokémon Champ!$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_PlayerIsReigningPokemonChamp {
-    "CELIO, this is {PLAYER}, the\n"
-    "reigning POKéMON CHAMP!$"
+    "Celio, this is {PLAYER}, the\n"
+    "reigning Pokémon Champ!$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_CelioThatsReallyImpressive {
-    "CELIO: That's really impressive.\p"
+    "Celio: That's really impressive.\p"
     "I hate to say it, but I have zero\n"
     "aptitude for battling.\p"
     "Anyways, I'm glad to meet you.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_BillBringMeUpToSpeed {
-    "BILL: So, bring me up to speed.\n"
+    "Bill: So, bring me up to speed.\n"
     "How's your machine running?$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_CelioPCsCantLinkWithYours {
-    "CELIO: It's running fine, but we're\n"
+    "Celio: It's running fine, but we're\n"
     "too remote out here.\p"
     "The PCs on this island just can't\n"
-    "link with your PC, BILL.$"
+    "link with your PC, Bill.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_BillLetMeHelpYou {
-    "BILL: Oh, yeah?\n"
+    "Bill: Oh, yeah?\n"
     "Okay, let me take a look-see.\p"
     "…Hang on here…\n"
     "I think we can make it work.\l"
@@ -62,47 +62,47 @@ text OneIsland_PokemonCenter_1F_Text_CanYouDeliverThisMeteoritePlayer {
     "…Actually, can I get you to do\n"
     "me a favor?\p"
     "The island next to this one's\n"
-    "called TWO ISLAND.\p"
+    "called Two Island.\p"
     "There's a guy there that runs\n"
-    "a GAME CORNER.\p"
+    "a Game Corner.\p"
     "He has this thing for rare rocks\n"
     "and gems.\p"
     "We keep in touch, being fellow\n"
     "maniacs.\p"
     "So, can I get you to deliver this\n"
-    "METEORITE to him?$"
+    "Meteorite to him?$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_AcceptedMeteoriteFromBill {
-    "{PLAYER} accepted the METEORITE\n"
-    "from BILL.$"
+    "{PLAYER} accepted the Meteorite\n"
+    "from Bill.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_CelioPleaseTakeThis {
-    "CELIO: {PLAYER}, if you are going\n"
-    "to TWO ISLAND, please take this.$"
+    "Celio: {PLAYER}, if you are going\n"
+    "to Two Island, please take this.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_PassLetsYouTravelBetweenIslands {
-    "It's a PASS for the ferry service\n"
+    "It's a Pass for the ferry service\n"
     "serving the local islands.\p"
     "It will let you travel between the\n"
-    "ISLANDS ONE, TWO, and THREE.\p"
+    "Islands One, Two, and Three.\p"
     "Oh, you should have this, too.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_ReceivedExtraPageForTownMap {
     "{PLAYER} received an extra page\n"
-    "for the TOWN MAP!$"
+    "for the Town Map!$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_ReceivedTownMap {
     "{PLAYER} received\n"
-    "a TOWN MAP!$"
+    "a Town Map!$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_BillCatchYouLater {
-    "BILL: I'll catch you later!\n"
+    "Bill: I'll catch you later!\n"
     "Say hi to the guy for me!$"
 }
 
@@ -116,14 +116,14 @@ text OneIsland_PokemonCenter_1F_Text_GotPCWorkingStrollAWhileMore {
     "Did you see?\n"
     "We got the PC working!\p"
     "I've got a few things to show\n"
-    "CELIO here.\p"
+    "Celio here.\p"
     "Can you go out on a stroll or\n"
     "something for a while more?$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_SorryForBeingPoorHost {
     "I'm sorry for taking up so much of\n"
-    "BILL's time.\p"
+    "Bill's time.\p"
     "I'm also sorry for being such a \n"
     "poor host on your visit here.$"
 }
@@ -134,51 +134,51 @@ text OneIsland_PokemonCenter_1F_Text_UsualPCServicesUnavailable {
 }
 
 text OneIsland_PokemonCenter_1F_Text_BillOhHeyPlayer {
-    "BILL: Oh, hey!\n"
+    "Bill: Oh, hey!\n"
     "{PLAYER}!$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_BillWeGotItDone {
-    "BILL: What kept you so long?\n"
+    "Bill: What kept you so long?\n"
     "Been out having a good time?\p"
     "We got it done.\n"
     "The PCs are up and running!$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_CelioJobWentQuick {
-    "CELIO: The job went incredibly\n"
+    "Celio: The job went incredibly\n"
     "quick.\p"
-    "BILL is one amazing guy…$"
+    "Bill is one amazing guy…$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_BillYouveLearnedALot {
-    "BILL: No, no! There was almost\n"
+    "Bill: No, no! There was almost\n"
     "nothing left for me to do.\p"
-    "CELIO, I have to hand it to you.\n"
+    "Celio, I have to hand it to you.\n"
     "You've learned a lot.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_CelioOhReallyEhehe {
-    "CELIO: Oh, really?\n"
+    "Celio: Oh, really?\n"
     "Ehehe…$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_BillWeShouldHeadBackToKanto {
-    "BILL: Well, there you have it.\n"
+    "Bill: Well, there you have it.\n"
     "I'm finished with the job.\l"
-    "We should head back to KANTO.\p"
-    "CELIO, I'll be seeing you again.$"
+    "We should head back to Kanto.\p"
+    "Celio, I'll be seeing you again.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_CelioPromiseIllShowYouAroundSometime {
-    "CELIO: {PLAYER}, I'm really sorry\n"
+    "Celio: {PLAYER}, I'm really sorry\n"
     "that we sent you off alone today.\p"
     "I promise, I will show you around\n"
     "these islands sometime.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_CelioImModifyingMyNetworkMachine {
-    "CELIO: Hello!\n"
+    "Celio: Hello!\n"
     "You look awfully busy as always.\p"
     "How am I doing?\p"
     "Well, I'm modifying my Network\n"
@@ -189,10 +189,10 @@ text OneIsland_PokemonCenter_1F_Text_CelioImModifyingMyNetworkMachine {
 }
 
 text OneIsland_PokemonCenter_1F_Text_CelioCaughtMoreMonMaybeICanBeUseful {
-    "CELIO: {PLAYER}, how have things\n"
+    "Celio: {PLAYER}, how have things\n"
     "been for you?\p"
     "Oh, is that right?\n"
-    "You've caught more POKéMON.\p"
+    "You've caught more Pokémon.\p"
     "Do you know what?\n"
     "Maybe I can be useful to you.$"
 }
@@ -203,15 +203,15 @@ text OneIsland_PokemonCenter_1F_Text_YoullBeTradingFromTrainersFarAway {
     "I'm changing it so it can handle\n"
     "trades over long distances.\p"
     "When I get finished, you'll be\n"
-    "trading for exotic POKéMON from\l"
-    "TRAINERS far away.$"
+    "trading for exotic Pokémon from\l"
+    "Trainers far away.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_NeedsSpecialGemstone {
     "But, there is a slight catch.\p"
     "For the link to work, the Machine\n"
     "needs a special gemstone.\p"
-    "It's supposed to be on ONE ISLAND,\n"
+    "It's supposed to be on One Island,\n"
     "but I haven't found one yet.\p"
     "Who knows where it could be.$"
 }
@@ -221,7 +221,7 @@ text OneIsland_PokemonCenter_1F_Text_TryingToFindGem {
     "even while I was studying.\p"
     "As a result, I've made no headway\n"
     "in both my search and studies…\p"
-    "If I relied on BILL, I'm sure my\n"
+    "If I relied on Bill, I'm sure my\n"
     "research would progress.\p"
     "But this time, I want to try to do\n"
     "things by myself.$"
@@ -233,8 +233,8 @@ text OneIsland_PokemonCenter_1F_Text_OhThats {
 }
 
 text OneIsland_PokemonCenter_1F_Text_HandedRubyToCelio {
-    "{PLAYER} handed the RUBY\n"
-    "to CELIO.$"
+    "{PLAYER} handed the Ruby\n"
+    "to Celio.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_MayIAskOneMoreFavor {
@@ -254,41 +254,41 @@ text OneIsland_PokemonCenter_1F_Text_AnotherGemstoneInSeviiIslands {
     "While I was studying gemstones,\n"
     "I discovered something important.\p"
     "There is another gem that forms\n"
-    "a pair with this RUBY.\p"
+    "a pair with this Ruby.\p"
     "That other gemstone is supposed to\n"
-    "be in the SEVII ISLANDS.\p"
+    "be in the Sevii Islands.\p"
     "{PLAYER}, please, I need you to go\n"
     "find the other gem.\p"
     "{PLAYER}, may I have your ferry\n"
-    "PASS and the TOWN MAP?$"
+    "Pass and the Town Map?$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_ReturnedTriPassForRainbowPass {
-    "{PLAYER} returned the TRI-PASS and\n"
-    "received the RAINBOW PASS.$"
+    "{PLAYER} returned the Tri-Pass and\n"
+    "received the Rainbow Pass.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_ObtainedExtraMapPage {
     "Obtained an extra page for the\n"
-    "TOWN MAP!$"
+    "Town Map!$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_PassLetYouGetToAllIslands {
-    "This is my own ferry PASS.\p"
+    "This is my own ferry Pass.\p"
     "It will let you get to all the\n"
-    "SEVII ISLANDS.\p"
+    "Sevii Islands.\p"
     "{PLAYER}, please, I can't do\n"
     "it without your help.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_HandedSapphireToCelio {
-    "{PLAYER} handed the SAPPHIRE\n"
-    "to CELIO.$"
+    "{PLAYER} handed the Sapphire\n"
+    "to Celio.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_ThankYouGiveMeTime {
-    "CELIO: So this is the gem that\n"
-    "forms a pair with the RUBY…\p"
+    "Celio: So this is the gem that\n"
+    "forms a pair with the Ruby…\p"
     "{PLAYER}, you've gone through a lot\n"
     "to get this, didn't you?\p"
     "You don't have to tell me. I know\n"
@@ -304,14 +304,14 @@ text OneIsland_PokemonCenter_1F_Text_OkayThisIsGood {
 
 text OneIsland_PokemonCenter_1F_Text_LinkedUpWithLanette {
     "I did it!\n"
-    "I linked up with LANETTE!$"
+    "I linked up with Lanette!$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_ManagedToLinkWithHoennThankYou {
     "{PLAYER}…\n"
     "{PLAYER}, I did it!\p"
     "I've managed to link up with\n"
-    "TRAINERS in the HOENN region!\p"
+    "Trainers in the Hoenn region!\p"
     "Finally, the Network Machine is\n"
     "fully operational!\p"
     "{PLAYER}, I owe it all to you!\p"
@@ -324,31 +324,31 @@ text OneIsland_PokemonCenter_1F_Text_WishYouBestOfLuck {
     "I'm not crying.\p"
     "That's enough about me!\p"
     "{PLAYER}, you're going to keep\n"
-    "looking for exotic POKéMON, right?\p"
+    "looking for exotic Pokémon, right?\p"
     "I wish you the best of luck!$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_CelioHearingRumorsAboutYou {
-    "CELIO: Hello!\p"
+    "Celio: Hello!\p"
     "{PLAYER}, I've been hearing rumors\n"
     "about you.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_BillsFirstMonWasAbra {
     "{PLAYER}, what's your favorite kind\n"
-    "of POKéMON?\p"
-    "BILL is a POKéMANIAC, so he loves\n"
+    "of Pokémon?\p"
+    "Bill is a Pokémaniac, so he loves\n"
     "every kind.\p"
     "Apparently, the first one he caught\n"
-    "was an ABRA.$"
+    "was an Abra.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_BillsHometownInGoldenrod {
     "By the way, {PLAYER}, you're from\n"
-    "PALLET TOWN, aren't you?\p"
+    "Pallet Town, aren't you?\p"
     "I've heard that it's a quiet and\n"
     "pleasant place.\p"
-    "BILL's hometown is GOLDENROD CITY,\n"
+    "Bill's hometown is Goldenrod City,\n"
     "where his folks still live.\p"
     "I've heard that it's quite the\n"
     "festive, bustling city.\p"
@@ -358,14 +358,14 @@ text OneIsland_PokemonCenter_1F_Text_BillsHometownInGoldenrod {
 text OneIsland_PokemonCenter_1F_Text_BillCantStomachMilk {
     "{PLAYER}, is there anything that\n"
     "you can't stand?\p"
-    "Apparently, BILL simply can't\n"
+    "Apparently, Bill simply can't\n"
     "stomach milk at all.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_CameFromPalletDontKnowIt {
     "Oh, you're a stranger here!\n"
     "Hi! Where did you come from?\p"
-    "…PALLET TOWN?\n"
+    "…Pallet Town?\n"
     "I don't know it!$"
 }
 
@@ -377,39 +377,39 @@ text OneIsland_PokemonCenter_1F_Text_EnormousVolcanoOnIsland {
 }
 
 text OneIsland_PokemonCenter_1F_Text_WishICouldTradeWithBoyfriend {
-    "I wish I could trade POKéMON with\n"
+    "I wish I could trade Pokémon with\n"
     "my boyfriend who lives far away…$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_TradedWithFarAwayBoyfriend {
-    "I traded POKéMON with my boyfriend\n"
+    "I traded Pokémon with my boyfriend\n"
     "far away!\p"
     "Everyone's saying that we can\n"
-    "thank you and CELIO.\p"
+    "thank you and Celio.\p"
     "So, thank you!$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_MachineUnderAdjustment {
     "Network Machine\n"
     "Link Level 0\p"
-    "…POKéMON Storage System under\n"
+    "…Pokémon Storage System under\n"
     "adjustment…$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKanto {
     "Network Machine\n"
     "Link Level 1\p"
-    "Link established with the KANTO\n"
+    "Link established with the Kanto\n"
     "region.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKantoAndHoenn {
     "Network Machine\n"
     "Link Level 2\p"
-    "Link established with the KANTO\n"
-    "and HOENN regions.$"
+    "Link established with the Kanto\n"
+    "and Hoenn regions.$"
 }
 
 text OneIsland_PokemonCenter_1F_Text_ObtainedTriPass {
-    "Obtained the TRI-PASS!$"
+    "Obtained the Tri-Pass!$"
 }

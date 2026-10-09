@@ -2,7 +2,7 @@ text SevenIsland_House_Room1_Text_OnlyEnjoymentWatchingBattles {
     "I may not look like much now,\n"
     "but when I was younger…\p"
     "I flew everywhere, challenging\n"
-    "TRAINERS wherever I found them.\p"
+    "Trainers wherever I found them.\p"
     "Now, my only source of enjoyment\n"
     "is reminiscing about the past while\l"
     "watching battles.$"
@@ -18,7 +18,7 @@ text SevenIsland_House_Room1_Text_ChallengeVisitingTrainer {
     "Welcome, my friend!\p"
     "Let me tell you something. There's\n"
     "a hidden room in the basement.\p"
-    "A TRAINER named {STR_VAR_1} is\n"
+    "A Trainer named {STR_VAR_1} is\n"
     "waiting there now.\p"
     "Tell me, you did come to challenge\n"
     "{STR_VAR_1}, am I right?$"
@@ -43,7 +43,7 @@ text SevenIsland_House_Room1_Text_LimitThreeMonsPerSide {
     "This hidden room is not built very\n"
     "sturdy.\p"
     "Can I get you to limit it to\n"
-    "battles of three POKéMON per side?$"
+    "battles of three Pokémon per side?$"
 }
 
 text SevenIsland_House_Room1_Text_SaveProgressBeforeBattle {

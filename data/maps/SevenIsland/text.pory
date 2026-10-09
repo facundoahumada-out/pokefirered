@@ -4,7 +4,7 @@ text Text_SwordsDanceTeach {
     "I'll get stronger and stronger.\p"
     "Yep, stronger and stronger…\p"
     "How would you like to learn a move\n"
-    "like that? It's SWORDS DANCE.$"
+    "like that? It's Swords Dance.$"
 }
 
 text Text_SwordsDanceDeclined {
@@ -12,7 +12,7 @@ text Text_SwordsDanceDeclined {
 }
 
 text Text_SwordsDanceWhichMon {
-    "All right, pick which POKéMON\n"
+    "All right, pick which Pokémon\n"
     "I should teach it to.$"
 }
 
@@ -22,13 +22,13 @@ text Text_SwordsDanceTaught {
 }
 
 text SevenIsland_Text_IslandSign {
-    "SEVEN ISLAND\n"
+    "Seven Island\n"
     "Quest Island of Infinity$"
 }
 
 text SevenIsland_Text_IslandsMadeInSevenDays {
-    "These islands are called the SEVII\n"
-    "ISLANDS because there are seven.\p"
+    "These islands are called the Sevii\n"
+    "Islands because there are seven.\p"
     "…Or at least that's what the young\n"
     "people believe.\p"
     "The truth is, these islands are so\n"

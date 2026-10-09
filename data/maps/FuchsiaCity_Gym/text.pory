@@ -1,5 +1,5 @@
 text FuchsiaCity_Gym_Text_KogaIntro {
-    "KOGA: Fwahahaha!\p"
+    "Koga: Fwahahaha!\p"
     "A mere child like you dares to\n"
     "challenge me?\p"
     "The very idea makes me shiver\n"
@@ -9,18 +9,18 @@ text FuchsiaCity_Gym_Text_KogaIntro {
     "Poison brings steady doom.\n"
     "Sleep renders foes helpless.\p"
     "Despair to the creeping horror of\n"
-    "POISON-type POKéMON!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    "Poison-type Pokémon!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 }
 
 text FuchsiaCity_Gym_Text_KogaDefeat {
     "Humph!\n"
     "You have proven your worth!\p"
     "Here!\n"
-    "Take the SOULBADGE!$"
+    "Take the Soulbadge!$"
 }
 
 text FuchsiaCity_Gym_Text_KogaPostBattle {
-    "When afflicted by TOXIC, a POKéMON\n"
+    "When afflicted by Toxic, a Pokémon\n"
     "suffers more and more.\p"
     "It suffers worsening damage as the\n"
     "battle wears on!\p"
@@ -28,9 +28,9 @@ text FuchsiaCity_Gym_Text_KogaPostBattle {
 }
 
 text FuchsiaCity_Gym_Text_KogaExplainSoulBadge {
-    "Now that you have the SOULBADGE,\n"
-    "the DEFENSE of your POKéMON rises.\p"
-    "It also lets you SURF outside of\n"
+    "Now that you have the Soulbadge,\n"
+    "the Defense of your Pokémon rises.\p"
+    "It also lets you Surf outside of\n"
     "battle.\p"
     "Ah!\n"
     "Take this, too!$"
@@ -38,12 +38,12 @@ text FuchsiaCity_Gym_Text_KogaExplainSoulBadge {
 
 text FuchsiaCity_Gym_Text_ReceivedTM06FromKoga {
     "{PLAYER} received TM06\n"
-    "from KOGA.$"
+    "from Koga.$"
 }
 
 text FuchsiaCity_Gym_Text_KogaExplainTM06 {
     "Sealed within that TM06 lies\n"
-    "TOXIC!\p"
+    "Toxic!\p"
     "It is a secret technique dating\n"
     "back some four hundred years.$"
 }
@@ -53,9 +53,9 @@ text FuchsiaCity_Gym_Text_MakeSpaceForThis {
 }
 
 text FuchsiaCity_Gym_Text_KaydenIntro {
-    "Strength isn't the key for POKéMON.\n"
+    "Strength isn't the key for Pokémon.\n"
     "Do you understand this?\p"
-    "POKéMON is about strategy!\p"
+    "Pokémon is about strategy!\p"
     "I'll show you how strategy can\n"
     "beat brute strength.$"
 }
@@ -69,13 +69,13 @@ text FuchsiaCity_Gym_Text_KaydenPostBattle {
     "So, you mix brawn with brains?\n"
     "Good strategy!\p"
     "That's remarkable for a child\n"
-    "TRAINER.$"
+    "Trainer.$"
 }
 
 text FuchsiaCity_Gym_Text_KirkIntro {
     "I was a magician once upon a time.\p"
     "But I dreamt of becoming a ninja,\n"
-    "so I joined this GYM.$"
+    "so I joined this Gym.$"
 }
 
 text FuchsiaCity_Gym_Text_KirkDefeat {
@@ -85,7 +85,7 @@ text FuchsiaCity_Gym_Text_KirkDefeat {
 text FuchsiaCity_Gym_Text_KirkPostBattle {
     "Even though I've lost, I will keep\n"
     "training according to the teachings\l"
-    "of KOGA, my ninja master.$"
+    "of Koga, my ninja master.$"
 }
 
 text FuchsiaCity_Gym_Text_NateIntro {
@@ -105,7 +105,7 @@ text FuchsiaCity_Gym_Text_NatePostBattle {
 text FuchsiaCity_Gym_Text_PhilIntro {
     "Stop right there!\p"
     "The famed invisible walls of\n"
-    "FUCHSIA GYM have you frustrated?$"
+    "Fuchsia Gym have you frustrated?$"
 }
 
 text FuchsiaCity_Gym_Text_PhilDefeat {
@@ -122,7 +122,7 @@ text FuchsiaCity_Gym_Text_PhilPostBattle {
 
 text FuchsiaCity_Gym_Text_EdgarIntro {
     "I also study the way of the ninja\n"
-    "with Master KOGA!\p"
+    "with Master Koga!\p"
     "Ninja have a long history of using\n"
     "animals!$"
 }
@@ -136,7 +136,7 @@ text FuchsiaCity_Gym_Text_EdgarPostBattle {
 }
 
 text FuchsiaCity_Gym_Text_ShawnIntro {
-    "Master KOGA comes from a long line\n"
+    "Master Koga comes from a long line\n"
     "of ninjas.\p"
     "What did you descend from?$"
 }
@@ -156,9 +156,9 @@ text FuchsiaCity_Gym_Text_ShawnPostBattle {
 text FuchsiaCity_Gym_Text_GymGuyAdvice {
     "Yo!\n"
     "Champ in the making!\p"
-    "FUCHSIA GYM is a tricked-up place.\n"
+    "Fuchsia Gym is a tricked-up place.\n"
     "It's riddled with invisible walls!\p"
-    "KOGA might appear close, but he's\n"
+    "Koga might appear close, but he's\n"
     "blocked off.\p"
     "You have to find gaps in the walls\n"
     "to reach him.$"
@@ -170,15 +170,15 @@ text FuchsiaCity_Gym_Text_GymGuyPostVictory {
 }
 
 text FuchsiaCity_Gym_Text_GymStatue {
-    "FUCHSIA POKéMON GYM\n"
-    "LEADER: KOGA\p"
-    "WINNING TRAINERS:\n"
+    "Fuchsia Pokémon Gym\n"
+    "Leader: Koga\p"
+    "Winning Trainers:\n"
     "{RIVAL}$"
 }
 
 text FuchsiaCity_Gym_Text_GymStatuePlayerWon {
-    "FUCHSIA POKéMON GYM\n"
-    "LEADER: KOGA\p"
-    "WINNING TRAINERS:\n"
+    "Fuchsia Pokémon Gym\n"
+    "Leader: Koga\p"
+    "Winning Trainers:\n"
     "{RIVAL}, {PLAYER}$"
 }

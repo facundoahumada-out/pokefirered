@@ -1,19 +1,19 @@
 text SevenIsland_Mart_Text_MonHavePersonalitiesOfTheirOwn {
-    "POKéMON have personalities of their\n"
+    "Pokémon have personalities of their\n"
     "own, just like people.\p"
-    "My PIKACHU has a HASTY nature,\n"
-    "so it grew to be a speedy POKéMON.$"
+    "My Pikachu has a Hasty nature,\n"
+    "so it grew to be a speedy Pokémon.$"
 }
 
 text SevenIsland_Mart_Text_PreparationsCompleteForRuins {
     "Okay, preparations are complete\n"
-    "for me to explore the RUINS.$"
+    "for me to explore the Ruins.$"
 }
 
 text SevenIsland_Mart_Text_NeedToFishOnSevenIsland {
-    "I need to fish on SEVEN ISLAND.\p"
+    "I need to fish on Seven Island.\p"
     "That will complete my fishing tour\n"
-    "of the SEVII ISLANDS.\p"
+    "of the Sevii Islands.\p"
     "I'd better stock up on some\n"
-    "POKé BALLS first, though.$"
+    "Poké Balls first, though.$"
 }

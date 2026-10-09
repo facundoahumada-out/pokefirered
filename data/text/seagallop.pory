@@ -5,5 +5,5 @@ text Text_WhereDoYouWantToGo {
 
 text Text_AllAboardSeagallopNum {
     "All right!\n"
-    "All aboard SEAGALLOP HI-SPEED {STR_VAR_1}!$"
+    "All aboard Seagallop Hi-Speed {STR_VAR_1}!$"
 }

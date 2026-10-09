@@ -5,7 +5,7 @@ text Route8_WestEntrance_Text_ThirstyOnGuardDuty {
 }
 
 text Route8_WestEntrance_Text_ThatTeaLooksTasty {
-    "Oh, that TEA…\n"
+    "Oh, that Tea…\n"
     "It looks awfully tasty…$"
 }
 
@@ -16,11 +16,11 @@ text Route8_WestEntrance_Text_ThanksIllShareTeaWithGuards {
     "Glug, glug…\l"
     "… …\l"
     "Gulp…\l"
-    "If you want to go to SAFFRON\l"
-    "CITY…\l"
+    "If you want to go to Saffron\l"
+    "City…\l"
     "… …\l"
     "You can go on through.\p"
-    "I'll share this TEA with the other\n"
+    "I'll share this Tea with the other\n"
     "guards!$"
 }
 

@@ -1,8 +1,8 @@
 text Route2_Text_RouteSign {
-    "ROUTE 2\n"
-    "VIRIDIAN CITY - PEWTER CITY$"
+    "Route 2\n"
+    "Viridian City - Pewter City$"
 }
 
 text Route2_Text_DiglettsCave {
-    "DIGLETT'S CAVE$"
+    "Diglett's Cave$"
 }

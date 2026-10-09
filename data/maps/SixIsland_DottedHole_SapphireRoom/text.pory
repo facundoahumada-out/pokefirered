@@ -1,5 +1,5 @@
 text SixIsland_DottedHole_SapphireRoom_Text_FoundSapphire {
-    "{PLAYER} found a SAPPHIRE!$"
+    "{PLAYER} found a Sapphire!$"
 }
 
 text SixIsland_DottedHole_SapphireRoom_Text_IWasRightInTailingYou {
@@ -9,18 +9,18 @@ text SixIsland_DottedHole_SapphireRoom_Text_IWasRightInTailingYou {
 }
 
 text SixIsland_DottedHole_SapphireRoom_Text_SellToTeamRocketTellPassword {
-    "I knew that there was a SAPPHIRE\n"
+    "I knew that there was a Sapphire\n"
     "here, so it belongs to me!\p"
-    "I'll sell it to TEAM ROCKET for\n"
+    "I'll sell it to Team Rocket for\n"
     "serious money.\p"
     "…D-don't glare at me like that!\p"
     "If you want it back, why don't you\n"
     "go get it after I sell it?\p"
     "I'll even tell you one of the\n"
-    "passwords to TEAM ROCKET's\l"
-    "WAREHOUSE.\p"
-    "The WAREHOUSE password I know is\n"
-    "“Yes, nah, CHANSEY.”\p"
+    "passwords to Team Rocket's\l"
+    "Warehouse.\p"
+    "The Warehouse password I know is\n"
+    "“Yes, nah, Chansey.”\p"
     "I'm done.\n"
     "Don't think badly of me!$"
 }

@@ -1,5 +1,5 @@
 text FiveIsland_ResortGorgeous_House_Text_PleaseHearMyWish {
-    "SELPHY: Oh?\n"
+    "Selphy: Oh?\n"
     "Do I know you from somewhere?\p"
     "Oh, but that doesn't matter.\p"
     "I am exquisitely bored.\n"
@@ -7,21 +7,21 @@ text FiveIsland_ResortGorgeous_House_Text_PleaseHearMyWish {
 }
 
 text FiveIsland_ResortGorgeous_House_Text_WishToSeeMonPlease {
-    "I wish to see a POKéMON.\n"
+    "I wish to see a Pokémon.\n"
     "A darling {STR_VAR_1}.\p"
     "I want to see one right away.\n"
     "Please, make my wish come true.$"
 }
 
 text FiveIsland_ResortGorgeous_House_Text_OhImTiredOfWaiting {
-    "SELPHY: Oh, I'm tired of this.\n"
+    "Selphy: Oh, I'm tired of this.\n"
     "I'm tired of waiting for you.\p"
     "I'll forgive you this time, but\n"
     "please don't fail me next time.$"
 }
 
 text FiveIsland_ResortGorgeous_House_Text_MonYouCaughtForMeThankYou {
-    "SELPHY: Oh, hello, there.\p"
+    "Selphy: Oh, hello, there.\p"
     "Oh, my gracious. That must be the\n"
     "{STR_VAR_1} you caught for me.\p"
     "Giggle…\n"
@@ -32,7 +32,7 @@ text FiveIsland_ResortGorgeous_House_Text_MonYouCaughtForMeThankYou {
     "You may leave.\p"
     "… …  … …  … …\n"
     "Oh, fine. I understand now.\p"
-    "SEBASTIAN!\n"
+    "Sebastian!\n"
     "I need you here this instant!$"
 }
 
@@ -41,7 +41,7 @@ text FiveIsland_ResortGorgeous_House_Text_ButlerYesMyLady {
 }
 
 text FiveIsland_ResortGorgeous_House_Text_SelphyGiveTokenOfAppreciation {
-    "SELPHY: See to it that this person\n"
+    "Selphy: See to it that this person\n"
     "is given a token of appreciation.$"
 }
 
@@ -52,12 +52,12 @@ text FiveIsland_ResortGorgeous_House_Text_ButlerIShallDoAsYouBid {
 
 text FiveIsland_ResortGorgeous_House_Text_ButlerPleaseAcceptThisAsHerThanks {
     "Butler: I sincerely thank you for\n"
-    "pleasing Lady SELPHY.\p"
+    "pleasing Lady Selphy.\p"
     "Please accept this as her thanks…$"
 }
 
 text FiveIsland_ResortGorgeous_House_Text_ButlerBagAppearsToBeFull {
-    "Butler: Your BAG appears to be\n"
+    "Butler: Your Bag appears to be\n"
     "unfortunately full.$"
 }
 
@@ -67,13 +67,13 @@ text FiveIsland_ResortGorgeous_House_Text_OhHowDisappointing {
 }
 
 text FiveIsland_ResortGorgeous_House_Text_SelphyWishYouBestOfLuck {
-    "SELPHY: I wish you the best of\n"
+    "Selphy: I wish you the best of\n"
     "luck.$"
 }
 
 text FiveIsland_ResortGorgeous_House_Text_LadySelphySmileHasBrillianceOfSun {
-    "Butler: The smile of Lady SELPHY\n"
+    "Butler: The smile of Lady Selphy\n"
     "has the brilliance of the sun.\p"
     "Please, I beg you to bring joy\n"
-    "to Lady SELPHY.$"
+    "to Lady Selphy.$"
 }

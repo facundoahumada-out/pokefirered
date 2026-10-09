@@ -2,19 +2,19 @@ text ViridianCity_Gym_Text_GiovanniIntro {
     "Fwahahaha!\n"
     "Welcome to my hideout!\p"
     "It shall be so until I can restore\n"
-    "TEAM ROCKET to its former glory.\p"
+    "Team Rocket to its former glory.\p"
     "But, you have found me again.\n"
     "So be it.\l"
     "This time, I'm not holding back!\p"
     "Once more, you shall face\n"
-    "GIOVANNI, the greatest TRAINER!{PLAY_BGM}{MUS_ENCOUNTER_ROCKET}$"
+    "Giovanni, the greatest Trainer!{PLAY_BGM}{MUS_ENCOUNTER_ROCKET}$"
 }
 
 text ViridianCity_Gym_Text_GiovanniDefeat {
     "Ha!\n"
     "That was a truly intense fight.\l"
     "You have won!\p"
-    "As proof, here is the EARTHBADGE!\n"
+    "As proof, here is the Earthbadge!\n"
     "{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}$"
 }
 
@@ -22,7 +22,7 @@ text ViridianCity_Gym_Text_GiovanniPostBattle {
     "Having lost in this fashion, \n"
     "I can't face my followers.\l"
     "I have betrayed their trust.\p"
-    "As of today, TEAM ROCKET is\n"
+    "As of today, Team Rocket is\n"
     "finished forever!\p"
     "As for myself, I shall dedicate\n"
     "my life to training again.\p"
@@ -31,27 +31,27 @@ text ViridianCity_Gym_Text_GiovanniPostBattle {
 }
 
 text ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis {
-    "The EARTHBADGE makes POKéMON of\n"
+    "The Earthbadge makes Pokémon of\n"
     "any level obey without question.\p"
     "It is evidence of your mastery as\n"
-    "a POKéMON TRAINER.\p"
+    "a Pokémon Trainer.\p"
     "With it, you can challenge the\n"
-    "POKéMON LEAGUE.\p"
+    "Pokémon League.\p"
     "Also, take this TM.\p"
-    "Consider it a gift for your POKéMON\n"
-    "LEAGUE challenge.$"
+    "Consider it a gift for your Pokémon\n"
+    "League challenge.$"
 }
 
 text ViridianCity_Gym_Text_ReceivedTM26FromGiovanni {
     "{PLAYER} received TM26\n"
-    "from GIOVANNI.$"
+    "from Giovanni.$"
 }
 
 text ViridianCity_Gym_Text_ExplainTM26 {
-    "TM26 contains EARTHQUAKE.\p"
+    "TM26 contains Earthquake.\p"
     "It is a powerful attack that causes\n"
     "a massive tremor.\p"
-    "I made it when I ran the GYM here,\n"
+    "I made it when I ran the Gym here,\n"
     "far too long ago… $"
 }
 
@@ -71,7 +71,7 @@ text ViridianCity_Gym_Text_YujiDefeat {
 
 text ViridianCity_Gym_Text_YujiPostBattle {
     "You'll need power to keep up with\n"
-    "our GYM LEADER.$"
+    "our Gym Leader.$"
 }
 
 text ViridianCity_Gym_Text_AtsushiIntro {
@@ -88,7 +88,7 @@ text ViridianCity_Gym_Text_AtsushiPostBattle {
 }
 
 text ViridianCity_Gym_Text_JasonIntro {
-    "POKéMON and I, we make wonderful\n"
+    "Pokémon and I, we make wonderful\n"
     "music together!$"
 }
 
@@ -98,7 +98,7 @@ text ViridianCity_Gym_Text_JasonDefeat {
 
 text ViridianCity_Gym_Text_JasonPostBattle {
     "Do you know the identity of our\n"
-    "GYM LEADER?$"
+    "Gym Leader?$"
 }
 
 text ViridianCity_Gym_Text_KiyoIntro {
@@ -111,7 +111,7 @@ text ViridianCity_Gym_Text_KiyoDefeat {
 }
 
 text ViridianCity_Gym_Text_KiyoPostBattle {
-    "If my POKéMON were as good at\n"
+    "If my Pokémon were as good at\n"
     "karate as I…$"
 }
 
@@ -124,12 +124,12 @@ text ViridianCity_Gym_Text_WarrenDefeat {
 }
 
 text ViridianCity_Gym_Text_WarrenPostBattle {
-    "The LEADER will scold me for\n"
+    "The Leader will scold me for\n"
     "losing this way…$"
 }
 
 text ViridianCity_Gym_Text_TakashiIntro {
-    "I'm the KARATE KING!\n"
+    "I'm the Karate King!\n"
     "Your fate rests with me!$"
 }
 
@@ -138,12 +138,12 @@ text ViridianCity_Gym_Text_TakashiDefeat {
 }
 
 text ViridianCity_Gym_Text_TakashiPostBattle {
-    "The POKéMON LEAGUE?\n"
+    "The Pokémon League?\n"
     "You? Don't get cocky!$"
 }
 
 text ViridianCity_Gym_Text_ColeIntro {
-    "Your POKéMON will cower at the\n"
+    "Your Pokémon will cower at the\n"
     "crack of my whip!$"
 }
 
@@ -158,9 +158,9 @@ text ViridianCity_Gym_Text_ColePostBattle {
 }
 
 text ViridianCity_Gym_Text_SamuelIntro {
-    "VIRIDIAN GYM was closed for a\n"
+    "Viridian Gym was closed for a\n"
     "long time.\p"
-    "But now, our LEADER is back!$"
+    "But now, our Leader is back!$"
 }
 
 text ViridianCity_Gym_Text_SamuelDefeat {
@@ -168,38 +168,38 @@ text ViridianCity_Gym_Text_SamuelDefeat {
 }
 
 text ViridianCity_Gym_Text_SamuelPostBattle {
-    "You can go on to the POKéMON\n"
-    "LEAGUE only by defeating our GYM\l"
-    "LEADER!$"
+    "You can go on to the Pokémon\n"
+    "League only by defeating our Gym\l"
+    "Leader!$"
 }
 
 text ViridianCity_Gym_Text_GymGuyAdvice {
     "Yo!\n"
     "Champ in the making!\p"
-    "Even I don't know the VIRIDIAN\n"
-    "LEADER's identity.\p"
+    "Even I don't know the Viridian\n"
+    "Leader's identity.\p"
     "But one thing's certain.\n"
     "This will be the toughest of all\l"
-    "the GYM LEADERS.\p"
-    "Also, I heard that the TRAINERS\n"
-    "here like GROUND-type POKéMON.$"
+    "the Gym Leaders.\p"
+    "Also, I heard that the Trainers\n"
+    "here like Ground-type Pokémon.$"
 }
 
 text ViridianCity_Gym_Text_GymGuyPostVictory {
-    "Blow me away! GIOVANNI was the\n"
-    "GYM LEADER of VIRIDIAN?$"
+    "Blow me away! Giovanni was the\n"
+    "Gym Leader of Viridian?$"
 }
 
 text ViridianCity_Gym_Text_GymStatue {
-    "VIRIDIAN POKéMON GYM\n"
-    "LEADER: ?\p"
-    "WINNING TRAINERS:\n"
+    "Viridian Pokémon Gym\n"
+    "Leader: ?\p"
+    "Winning Trainers:\n"
     "{RIVAL}$"
 }
 
 text ViridianCity_Gym_Text_GymStatuePlayerWon {
-    "VIRIDIAN POKéMON GYM\n"
-    "LEADER: GIOVANNI\p"
-    "WINNING TRAINERS:\n"
+    "Viridian Pokémon Gym\n"
+    "Leader: Giovanni\p"
+    "Winning Trainers:\n"
     "{RIVAL}, {PLAYER}$"
 }

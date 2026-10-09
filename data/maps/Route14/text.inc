@@ -1,7 +1,7 @@
 Route14_Text_CarterIntro::
 # 1 "data/maps/Route14/text.pory"
 	.string "You need to use TMs to teach good\n"
-	.string "moves to POKéMON.$"
+	.string "moves to Pokémon.$"
 
 Route14_Text_CarterDefeat::
 # 6 "data/maps/Route14/text.pory"
@@ -9,12 +9,12 @@ Route14_Text_CarterDefeat::
 
 Route14_Text_CarterPostBattle::
 # 10 "data/maps/Route14/text.pory"
-	.string "You have some HMs, right? POKéMON\n"
+	.string "You have some HMs, right? Pokémon\n"
 	.string "can't forget those moves easily.$"
 
 Route14_Text_MitchIntro::
 # 15 "data/maps/Route14/text.pory"
-	.string "My bird POKéMON should be ready\n"
+	.string "My bird Pokémon should be ready\n"
 	.string "for battle.$"
 
 Route14_Text_MitchDefeat::
@@ -23,13 +23,13 @@ Route14_Text_MitchDefeat::
 
 Route14_Text_MitchPostBattle::
 # 24 "data/maps/Route14/text.pory"
-	.string "My bird POKéMON need to learn\n"
+	.string "My bird Pokémon need to learn\n"
 	.string "better moves.$"
 
 Route14_Text_BeckIntro::
 # 29 "data/maps/Route14/text.pory"
 	.string "They have TMs on sale at the\n"
-	.string "CELADON DEPT. STORE.\p"
+	.string "Celadon Dept. Store.\p"
 	.string "TMs aren't really rare, but not\n"
 	.string "many people have HMs.$"
 
@@ -39,15 +39,15 @@ Route14_Text_BeckDefeat::
 
 Route14_Text_BeckPostBattle::
 # 40 "data/maps/Route14/text.pory"
-	.string "Try teaching POKéMON a move that's\n"
+	.string "Try teaching Pokémon a move that's\n"
 	.string "the same type as it.\p"
 	.string "That apparently boosts the power\n"
 	.string "of the move.$"
 
 Route14_Text_MarlonIntro::
 # 47 "data/maps/Route14/text.pory"
-	.string "Have you taught your bird POKéMON\n"
-	.string "how to FLY?\p"
+	.string "Have you taught your bird Pokémon\n"
+	.string "how to Fly?\p"
 	.string "You'll be able to soar with it into\n"
 	.string "the sky!$"
 
@@ -57,7 +57,7 @@ Route14_Text_MarlonDefeat::
 
 Route14_Text_MarlonPostBattle::
 # 58 "data/maps/Route14/text.pory"
-	.string "Bird POKéMON are my one true love.\n"
+	.string "Bird Pokémon are my one true love.\n"
 	.string "I don't want to raise anything else.$"
 
 Route14_Text_DonaldIntro::
@@ -73,9 +73,9 @@ Route14_Text_DonaldDefeat::
 Route14_Text_DonaldPostBattle::
 # 73 "data/maps/Route14/text.pory"
 	.string "Well, the winged mirages are the\n"
-	.string "legendary bird POKéMON.\p"
-	.string "There are three of them: ARTICUNO,\n"
-	.string "ZAPDOS, and MOLTRES.$"
+	.string "legendary bird Pokémon.\p"
+	.string "There are three of them: Articuno,\n"
+	.string "Zapdos, and Moltres.$"
 
 Route14_Text_BennyIntro::
 # 80 "data/maps/Route14/text.pory"
@@ -118,7 +118,7 @@ Route14_Text_IsaacDefeat::
 
 Route14_Text_IsaacPostBattle::
 # 119 "data/maps/Route14/text.pory"
-	.string "Raising POKéMON is a drag, man.$"
+	.string "Raising Pokémon is a drag, man.$"
 
 Route14_Text_GeraldIntro::
 # 123 "data/maps/Route14/text.pory"
@@ -131,14 +131,14 @@ Route14_Text_GeraldDefeat::
 
 Route14_Text_GeraldPostBattle::
 # 132 "data/maps/Route14/text.pory"
-	.string "It's cool you made your POKéMON so\n"
+	.string "It's cool you made your Pokémon so\n"
 	.string "strong.\p"
 	.string "Might is right!\n"
 	.string "And you know it!$"
 
 Route14_Text_MalikIntro::
 # 139 "data/maps/Route14/text.pory"
-	.string "POKéMON battle?\n"
+	.string "Pokémon battle?\n"
 	.string "Cool! Rumble!$"
 
 Route14_Text_MalikDefeat::
@@ -152,44 +152,44 @@ Route14_Text_MalikPostBattle::
 
 Route14_Text_RouteSign::
 # 153 "data/maps/Route14/text.pory"
-	.string "ROUTE 14\n"
-	.string "West to FUCHSIA CITY$"
+	.string "Route 14\n"
+	.string "West to Fuchsia City$"
 
 Route14_Text_KiriIntro::
 # 158 "data/maps/Route14/text.pory"
-	.string "KIRI: JAN, let's try really,\n"
+	.string "Kiri: Jan, let's try really,\n"
 	.string "really hard together.$"
 
 Route14_Text_KiriDefeat::
 # 163 "data/maps/Route14/text.pory"
-	.string "KIRI: Whimper…\n"
+	.string "Kiri: Whimper…\n"
 	.string "We lost, didn't we?$"
 
 Route14_Text_KiriPostBattle::
 # 168 "data/maps/Route14/text.pory"
-	.string "KIRI: Did we lose because of me?$"
+	.string "Kiri: Did we lose because of me?$"
 
 Route14_Text_KiriNotEnoughMons::
 # 172 "data/maps/Route14/text.pory"
-	.string "KIRI: We can battle if you have\n"
-	.string "two POKéMON.$"
+	.string "Kiri: We can battle if you have\n"
+	.string "two Pokémon.$"
 
 Route14_Text_JanIntro::
 # 177 "data/maps/Route14/text.pory"
-	.string "JAN: KIRI, here we go!\n"
+	.string "Jan: Kiri, here we go!\n"
 	.string "We have to try hard!$"
 
 Route14_Text_JanDefeat::
 # 182 "data/maps/Route14/text.pory"
-	.string "JAN: Eeeeh!\n"
+	.string "Jan: Eeeeh!\n"
 	.string "No fair!$"
 
 Route14_Text_JanPostBattle::
 # 187 "data/maps/Route14/text.pory"
-	.string "JAN: KIRI, don't cry!\n"
+	.string "Jan: Kiri, don't cry!\n"
 	.string "We'll just try harder next time.$"
 
 Route14_Text_JanNotEnoughMons::
 # 192 "data/maps/Route14/text.pory"
-	.string "JAN: You want to battle?\n"
-	.string "You don't have enough POKéMON.$"
+	.string "Jan: You want to battle?\n"
+	.string "You don't have enough Pokémon.$"

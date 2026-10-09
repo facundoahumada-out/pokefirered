@@ -11,22 +11,22 @@ CeladonCity_Condominiums_3F_Text_ImTheGraphicArtist::
 CeladonCity_Condominiums_3F_Text_IWroteTheStory::
 # 11 "data/maps/CeladonCity_Condominiums_3F/text.pory"
 	.string "I wrote the story!\n"
-	.string "Isn't ERIKA cute?\p"
-	.string "I like MISTY a lot, too!\n"
-	.string "Oh, and SABRINA, I like her!$"
+	.string "Isn't Erika cute?\p"
+	.string "I like Misty a lot, too!\n"
+	.string "Oh, and Sabrina, I like her!$"
 
 CeladonCity_Condominiums_3F_Text_ImGameDesignerShowMeFinishedPokedex::
 # 18 "data/maps/CeladonCity_Condominiums_3F/text.pory"
 	.string "Is that right?\p"
 	.string "I'm the game designer!\p"
-	.string "Filling up your POKéDEX is tough,\n"
+	.string "Filling up your Pokédex is tough,\n"
 	.string "but don't quit!\p"
 	.string "When you finish, come tell me!$"
 
 CeladonCity_Condominiums_3F_Text_CompletedPokedexCongratulations::
 # 26 "data/maps/CeladonCity_Condominiums_3F/text.pory"
 	.string "Wow! Excellent!\n"
-	.string "You completed your POKéDEX!\l"
+	.string "You completed your Pokédex!\l"
 	.string "Congratulations!\l"
 	.string "…$"
 
@@ -47,4 +47,4 @@ CeladonCity_Condominiums_3F_Text_ItsScriptBetterNotLookAtEnding::
 
 CeladonCity_Condominiums_3F_Text_GameFreakDevelopmentRoom::
 # 48 "data/maps/CeladonCity_Condominiums_3F/text.pory"
-	.string "GAME FREAK Development Room$"
+	.string "Game Freak Development Room$"

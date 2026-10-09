@@ -18,7 +18,7 @@ text OneIsland_KindleRoad_EmberSpa_Text_EnjoyBowlOfChowder {
 text OneIsland_KindleRoad_EmberSpa_Text_WaterExquisiteFullyRefreshed {
     "The water is perfectly warm.\n"
     "It feels exquisite…\p"
-    "{PLAYER} and the POKéMON were\n"
+    "{PLAYER} and the Pokémon were\n"
     "fully refreshed!$"
 }
 
@@ -38,16 +38,16 @@ text OneIsland_KindleRoad_EmberSpa_Text_BrunoVisitsSpaOnOccasion {
     "After an honest day of training,\n"
     "nothing beats a relaxing soak in\l"
     "the hot spring pool.\p"
-    "BRUNO, who's a senior ahead of me,\n"
-    "visits the SPA on occasion.\p"
+    "Bruno, who's a senior ahead of me,\n"
+    "visits the Spa on occasion.\p"
     "He comes to rehab injuries, both\n"
-    "his own and his POKéMON's.$"
+    "his own and his Pokémon's.$"
 }
 
 text OneIsland_KindleRoad_EmberSpa_Text_UsedThisToMakeEmberSpa {
     "Hot springs go hand-in-hand with\n"
     "volcanoes.\p"
-    "The EMBER SPA here, well,\n"
+    "The Ember Spa here, well,\n"
     "I made it years ago.\p"
     "I hewed the pool right out of a\n"
     "gigantic boulder by hand.\p"

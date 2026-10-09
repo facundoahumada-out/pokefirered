@@ -1,25 +1,25 @@
 text CeruleanCity_House2_Text_RocketsStoleTMForDig {
-    "Those miserable ROCKETS!\p"
+    "Those miserable Rockets!\p"
     "Look what they've done to my\n"
     "house!\p"
     "They stole a TM for teaching\n"
-    "POKéMON how to DIG holes!\p"
+    "Pokémon how to Dig holes!\p"
     "I was going to use it on a\n"
-    "MANKEY or a SANDSHREW…\p"
+    "Mankey or a Sandshrew…\p"
     "That cost me a bundle, it did!$"
 }
 
 text CeruleanCity_House2_Text_TeachDiglettDigWithoutTM {
     "I figure what's lost is lost.\p"
-    "I decided to teach DIGLETT how to\n"
-    "DIG without a TM.$"
+    "I decided to teach Diglett how to\n"
+    "Dig without a TM.$"
 }
 
 text CeruleanCity_House2_Text_TeamRocketTryingToDigIntoNoGood {
-    "TEAM ROCKET must be trying to DIG\n"
+    "Team Rocket must be trying to Dig\n"
     "their way into no good!$"
 }
 
 text CeruleanCity_House2_Text_TeamRocketLeftWayOut {
-    "TEAM ROCKET left a way out!$"
+    "Team Rocket left a way out!$"
 }

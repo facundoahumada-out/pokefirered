@@ -1,5 +1,5 @@
 text Route25_Text_JoeyIntro {
-    "Local TRAINERS come here to\n"
+    "Local Trainers come here to\n"
     "practice.$"
 }
 
@@ -8,15 +8,15 @@ text Route25_Text_JoeyDefeat {
 }
 
 text Route25_Text_JoeyPostBattle {
-    "All POKéMON have weaknesses.\n"
+    "All Pokémon have weaknesses.\n"
     "Even the strongest ones.\p"
     "That's why it's best to raise\n"
-    "POKéMON of different types.$"
+    "Pokémon of different types.$"
 }
 
 text Route25_Text_DanIntro {
     "Dad took me to a great party on\n"
-    "the S.S. ANNE at VERMILION CITY.$"
+    "the S.S. Anne at Vermilion City.$"
 }
 
 text Route25_Text_DanDefeat {
@@ -24,7 +24,7 @@ text Route25_Text_DanDefeat {
 }
 
 text Route25_Text_DanPostBattle {
-    "On the S.S. ANNE, I saw TRAINERS\n"
+    "On the S.S. Anne, I saw Trainers\n"
     "from around the world.$"
 }
 
@@ -66,13 +66,13 @@ text Route25_Text_ChadDefeat {
 }
 
 text Route25_Text_ChadPostBattle {
-    "If your POKéMON gets confused,\n"
+    "If your Pokémon gets confused,\n"
     "switch it out.\p"
     "That's a good tactic.$"
 }
 
 text Route25_Text_HaleyIntro {
-    "My friend has many cute POKéMON.\n"
+    "My friend has many cute Pokémon.\n"
     "I'm so jealous!$"
 }
 
@@ -81,12 +81,12 @@ text Route25_Text_HaleyDefeat {
 }
 
 text Route25_Text_HaleyPostBattle {
-    "You came from MT. MOON?\n"
-    "May I have a CLEFAIRY?$"
+    "You came from Mt. Moon?\n"
+    "May I have a Clefairy?$"
 }
 
 text Route25_Text_FranklinIntro {
-    "I just got down from MT. MOON,\n"
+    "I just got down from Mt. Moon,\n"
     "but I've still got gas in the tank!$"
 }
 
@@ -96,11 +96,11 @@ text Route25_Text_FranklinDefeat {
 
 text Route25_Text_FranklinPostBattle {
     "Drat!\n"
-    "A ZUBAT bit me back in that cave.$"
+    "A Zubat bit me back in that cave.$"
 }
 
 text Route25_Text_NobIntro {
-    "I'm off to see a POKéMANIAC's\n"
+    "I'm off to see a Pokémaniac's\n"
     "collection at the cape.$"
 }
 
@@ -110,14 +110,14 @@ text Route25_Text_NobDefeat {
 }
 
 text Route25_Text_NobPostBattle {
-    "The POKéMANIAC sure lives up to\n"
+    "The Pokémaniac sure lives up to\n"
     "his name.\p"
     "His collection includes many rare\n"
-    "species of POKéMON.$"
+    "species of Pokémon.$"
 }
 
 text Route25_Text_WayneIntro {
-    "You're going to see BILL?\n"
+    "You're going to see Bill?\n"
     "First, we battle!$"
 }
 
@@ -127,22 +127,22 @@ text Route25_Text_WayneDefeat {
 
 text Route25_Text_WaynePostBattle {
     "The trail below is a shortcut to\n"
-    "CERULEAN CITY.$"
+    "Cerulean City.$"
 }
 
 text Route25_Text_SeaCottageSign {
-    "SEA COTTAGE\n"
-    "BILL lives here!$"
+    "Sea Cottage\n"
+    "Bill lives here!$"
 }
 
 text Route25_Text_MistyHighHopesAboutThisPlace {
     "This cape is a famous date spot.\p"
-    "MISTY, the GYM LEADER, has high\n"
+    "Misty, the Gym Leader, has high\n"
     "hopes about this place.$"
 }
 
 text Route25_Text_AreYouHereAlone {
     "Hello, are you here alone?\p"
-    "If you're out at CERULEAN's cape…\n"
+    "If you're out at Cerulean's cape…\n"
     "Well, it should be as a couple.$"
 }

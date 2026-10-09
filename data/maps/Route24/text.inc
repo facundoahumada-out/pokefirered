@@ -1,13 +1,13 @@
 Route24_Text_JustEarnedFabulousPrize::
 # 1 "data/maps/Route24/text.pory"
 	.string "Congratulations! You beat our\n"
-	.string "five contest TRAINERS!\p"
+	.string "five contest Trainers!\p"
 	.string "You just earned a fabulous prize!$"
 
 Route24_Text_ReceivedNuggetFromMysteryTrainer::
 # 7 "data/maps/Route24/text.pory"
-	.string "{PLAYER} received a NUGGET\n"
-	.string "from the mystery TRAINER!$"
+	.string "{PLAYER} received a Nugget\n"
+	.string "from the mystery Trainer!$"
 
 Route24_Text_YouDontHaveAnyRoom::
 # 12 "data/maps/Route24/text.pory"
@@ -16,9 +16,9 @@ Route24_Text_YouDontHaveAnyRoom::
 Route24_Text_JoinTeamRocket::
 # 16 "data/maps/Route24/text.pory"
 	.string "By the way, how would you like to\n"
-	.string "join TEAM ROCKET?\p"
+	.string "join Team Rocket?\p"
 	.string "We're a group of professional\n"
-	.string "criminals specializing in POKéMON!\p"
+	.string "criminals specializing in Pokémon!\p"
 	.string "Want to join?\p"
 	.string "Are you sure?\p"
 	.string "Come on, join us!\p"
@@ -35,7 +35,7 @@ Route24_Text_RocketDefeat::
 Route24_Text_YoudBecomeTopRocketLeader::
 # 35 "data/maps/Route24/text.pory"
 	.string "With your ability, you'd become\n"
-	.string "a top leader in TEAM ROCKET.\p"
+	.string "a top leader in Team Rocket.\p"
 	.string "Come on, think of the opportunity!\n"
 	.string "Don't let this chance go to waste.$"
 
@@ -108,9 +108,9 @@ Route24_Text_AliPostBattle::
 
 Route24_Text_CaleIntro::
 # 109 "data/maps/Route24/text.pory"
-	.string "People call this the NUGGET\n"
-	.string "BRIDGE!\p"
-	.string "Beat us five TRAINERS and win\n"
+	.string "People call this the Nugget\n"
+	.string "Bridge!\p"
+	.string "Beat us five Trainers and win\n"
 	.string "a fabulous prize!\p"
 	.string "Think you got what it takes?$"
 

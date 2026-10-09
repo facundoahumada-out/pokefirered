@@ -1,7 +1,7 @@
 text CeladonCity_GameCorner_Text_TryPokemonPrinter {
-    "It's a POKéMON PRINTER!\p"
-    "It can put a print of your POKéMON\n"
-    "on the back of your TRAINER CARD.\p"
+    "It's a Pokémon Printer!\p"
+    "It can put a print of your Pokémon\n"
+    "on the back of your Trainer Card.\p"
     "It costs only ¥50.\n"
     "Would you like to try it?$"
 }
@@ -21,13 +21,13 @@ text CeladonCity_GameCorner_Text_BigSmileForPhoto {
 }
 
 text CeladonCity_GameCorner_Text_PrintIsReadyCheckTrainerCard {
-    "Your POKéMON print is ready!\n"
-    "Check your TRAINER CARD.$"
+    "Your Pokémon print is ready!\n"
+    "Check your Trainer Card.$"
 }
 
 text FourIsland_House2_Text_WishICouldShowOffStickers {
     "Giggle…\n"
-    "I collected a ton of STICKERS.\l"
+    "I collected a ton of Stickers.\l"
     "I wish I could show them off…$"
 }
 
@@ -35,11 +35,11 @@ text FourIsland_House2_Text_GiveYouStickerIfYouBrag {
     "Oh, excellent!\n"
     "You've come to the right place!\p"
     "Look, look! See? See?\n"
-    "These are my STICKERS!\l"
+    "These are my Stickers!\l"
     "Look how many I got!\p"
     "I bet you want some.\n"
     "I bet you do!\p"
-    "I'll give a STICKER if you can tell\n"
+    "I'll give a Sticker if you can tell\n"
     "me something awesome about\l"
     "yourself.\p"
     "What will you brag about?$"
@@ -47,7 +47,7 @@ text FourIsland_House2_Text_GiveYouStickerIfYouBrag {
 
 text FourIsland_House2_Text_BragAboutSomethingForMe {
     "Brag about something for me.\n"
-    "I'll give you a STICKER.$"
+    "I'll give you a Sticker.$"
 }
 
 text FourIsland_House2_Text_BragAboutWhatToday {
@@ -59,36 +59,36 @@ text FourIsland_House2_Text_BragAboutWhatToday {
 
 text FourIsland_House2_Text_WowHoFLowest {
     "Oh, wow, you made it into the\n"
-    "HALL OF FAME.\p"
+    "Hall of Fame.\p"
     "That's pretty good, yup!\n"
     "I'll give you one of these.$"
 }
 
 text FourIsland_House2_Text_WowHoFLow {
     "Oh, wow, you've entered the\n"
-    "HALL OF FAME often!\p"
+    "Hall of Fame often!\p"
     "That's impressive, yup!\n"
     "I'll give you one of these.$"
 }
 
 text FourIsland_House2_Text_WowHoFHigh {
     "Whoa! You've made it into the\n"
-    "HALL OF FAME that often?\l"
+    "Hall of Fame that often?\l"
     "That's seriously incredible, yup!\p"
-    "You own the POKéMON LEAGUE!\n"
+    "You own the Pokémon League!\n"
     "I'll give you one of these.$"
 }
 
 text FourIsland_House2_Text_WowHoFHighest {
     "No way! You've gone into the\n"
-    "HALL OF FAME that many times?\p"
+    "Hall of Fame that many times?\p"
     "You're beyond incredible, yup!\n"
     "That's it, I have to give you this.$"
 }
 
 text FourIsland_House2_Text_HoFStickerApplied {
-    "The HALL OF FAME STICKER was\n"
-    "applied to the TRAINER CARD.$"
+    "The Hall of Fame Sticker was\n"
+    "applied to the Trainer Card.$"
 }
 
 text FourIsland_House2_Text_ComeBackWithBetterStoryHoF {
@@ -100,18 +100,18 @@ text FourIsland_House2_Text_ComeBackWithBetterStoryHoF {
 text FourIsland_House2_Text_LivingLegendHoF {
     "Oh, no, no can do.\p"
     "You're practically a living legend.\n"
-    "I have no SITCKERS left to give.$"
+    "I have no Sitckers left to give.$"
 }
 
 text FourIsland_House2_Text_WowEggsLowest {
-    "Oh, wow, there are POKéMON EGGS?\n"
+    "Oh, wow, there are Pokémon Eggs?\n"
     "I didn't know that!\p"
     "That's pretty good, yup!\n"
     "I'll give you one of these.$"
 }
 
 text FourIsland_House2_Text_WowEggsLow {
-    "You've hatched that many EGGS?\n"
+    "You've hatched that many Eggs?\n"
     "You really must like them!\p"
     "That's impressive, yup!\n"
     "I'll give you one of these.$"
@@ -119,22 +119,22 @@ text FourIsland_House2_Text_WowEggsLow {
 
 text FourIsland_House2_Text_WowEggsHigh {
     "Whoa! You've hatched a whole\n"
-    "bunch of EGGS!\p"
-    "You're an EGG-hatching machine!\n"
+    "bunch of Eggs!\p"
+    "You're an Egg-hatching machine!\n"
     "I'll give you one of these.$"
 }
 
 text FourIsland_House2_Text_WowEggsHighest {
-    "Wh… You hatched that many EGGS?\p"
-    "What's behind your love of EGGS?\n"
+    "Wh… You hatched that many Eggs?\p"
+    "What's behind your love of Eggs?\n"
     "It's beyond incredible, yup!\p"
     "You're too awesome, I tell you.\n"
     "That's it, I have to give you this.$"
 }
 
 text FourIsland_House2_Text_EggStickerApplied {
-    "The EGG STICKER was applied\n"
-    "to the TRAINER CARD.$"
+    "The Egg Sticker was applied\n"
+    "to the Trainer Card.$"
 }
 
 text FourIsland_House2_Text_ComeBackWithBetterStoryEggs {
@@ -146,7 +146,7 @@ text FourIsland_House2_Text_ComeBackWithBetterStoryEggs {
 text FourIsland_House2_Text_LivingLegendEggs {
     "Oh, no, no can do.\p"
     "You're practically a living legend.\n"
-    "I have no SITCKERS left to give.$"
+    "I have no Sitckers left to give.$"
 }
 
 text FourIsland_House2_Text_WowLinkWinsLowest {
@@ -180,8 +180,8 @@ text FourIsland_House2_Text_WowLinkWinsHighest {
 }
 
 text FourIsland_House2_Text_VictoryStickerApplied {
-    "The VICTORY STICKER was applied\n"
-    "to the TRAINER CARD.$"
+    "The Victory Sticker was applied\n"
+    "to the Trainer Card.$"
 }
 
 text FourIsland_House2_Text_ComeBackWithBetterStoryLinkWins {
@@ -193,5 +193,5 @@ text FourIsland_House2_Text_ComeBackWithBetterStoryLinkWins {
 text FourIsland_House2_Text_LivingLegendLinkWins {
     "Oh, no, no can do.\p"
     "You're practically a living legend.\n"
-    "I have no SITCKERS left to give.$"
+    "I have no Sitckers left to give.$"
 }

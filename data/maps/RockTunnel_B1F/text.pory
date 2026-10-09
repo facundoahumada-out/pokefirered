@@ -30,7 +30,7 @@ text RockTunnel_B1F_Text_DudleyPostBattle {
 }
 
 text RockTunnel_B1F_Text_CooperIntro {
-    "You have a POKéDEX?\n"
+    "You have a Pokédex?\n"
     "I want one, too.$"
 }
 
@@ -40,12 +40,12 @@ text RockTunnel_B1F_Text_CooperDefeat {
 }
 
 text RockTunnel_B1F_Text_CooperPostBattle {
-    "When you finish your POKéDEX,\n"
+    "When you finish your Pokédex,\n"
     "can I have it?$"
 }
 
 text RockTunnel_B1F_Text_SteveIntro {
-    "Um… Do you know about POKéMON\n"
+    "Um… Do you know about Pokémon\n"
     "cosplay?$"
 }
 
@@ -54,13 +54,13 @@ text RockTunnel_B1F_Text_SteveDefeat {
 }
 
 text RockTunnel_B1F_Text_StevePostBattle {
-    "POKéMON cosplay is dressing up as\n"
-    "POKéMON for fun.\p"
-    "CLEFAIRY is a favorite.$"
+    "Pokémon cosplay is dressing up as\n"
+    "Pokémon for fun.\p"
+    "Clefairy is a favorite.$"
 }
 
 text RockTunnel_B1F_Text_AllenIntro {
-    "My POKéMON techniques will leave\n"
+    "My Pokémon techniques will leave\n"
     "you crying!$"
 }
 
@@ -71,7 +71,7 @@ text RockTunnel_B1F_Text_AllenDefeat {
 
 text RockTunnel_B1F_Text_AllenPostBattle {
     "In mountains, you'll often find\n"
-    "ROCK-type POKéMON.$"
+    "Rock-type Pokémon.$"
 }
 
 text RockTunnel_B1F_Text_MarthaIntro {
@@ -85,7 +85,7 @@ text RockTunnel_B1F_Text_MarthaDefeat {
 }
 
 text RockTunnel_B1F_Text_MarthaPostBattle {
-    "I like tiny POKéMON.\n"
+    "I like tiny Pokémon.\n"
     "Big ones are too scary!$"
 }
 
@@ -98,12 +98,12 @@ text RockTunnel_B1F_Text_EricDefeat {
 }
 
 text RockTunnel_B1F_Text_EricPostBattle {
-    "I'll raise my POKéMON to beat\n"
+    "I'll raise my Pokémon to beat\n"
     "yours, kid.$"
 }
 
 text RockTunnel_B1F_Text_WinstonIntro {
-    "I draw illustrations of POKéMON\n"
+    "I draw illustrations of Pokémon\n"
     "when I'm home.$"
 }
 

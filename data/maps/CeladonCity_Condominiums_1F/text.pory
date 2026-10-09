@@ -1,5 +1,5 @@
 text CeladonCity_Condominiums_1F_Text_Meowth {
-    "MEOWTH: Meow!$"
+    "Meowth: Meow!$"
 }
 
 text CeladonCity_Condominiums_1F_Text_TryThisDrinkInstead {
@@ -10,35 +10,35 @@ text CeladonCity_Condominiums_1F_Text_TryThisDrinkInstead {
 
 text CeladonCity_Condominiums_1F_Text_NothingBeatsThirstLikeTea {
     "Nothing beats thirst like some hot\n"
-    "TEA.\p"
+    "Tea.\p"
     "It really is the best.$"
 }
 
 text CeladonCity_Condominiums_1F_Text_MyDearMonsKeepMeCompany {
-    "My dear POKéMON keep me company.\n"
-    "MEOWTH even brings money home!$"
+    "My dear Pokémon keep me company.\n"
+    "Meowth even brings money home!$"
 }
 
 text CeladonCity_Condominiums_1F_Text_DaisyComesToBuyTea {
     "Oh, hello, dearie.\n"
-    "Did you enjoy my TEA?\p"
+    "Did you enjoy my Tea?\p"
     "By the way, dear. Are you, by any\n"
-    "chance, from PALLET TOWN?\p"
-    "A girl from PALLET TOWN, DAISY,\n"
-    "she enjoys TEA every day.\p"
-    "She visits the CELADON DEPT. STORE\n"
-    "to buy some TEA.$"
+    "chance, from Pallet Town?\p"
+    "A girl from Pallet Town, Daisy,\n"
+    "she enjoys Tea every day.\p"
+    "She visits the Celadon Dept. Store\n"
+    "to buy some Tea.$"
 }
 
 text CeladonCity_Condominiums_1F_Text_Clefairy {
-    "CLEFAIRY: Pi pippippi!$"
+    "Clefairy: Pi pippippi!$"
 }
 
 text CeladonCity_Condominiums_1F_Text_Nidoran {
-    "NIDORAN♀: Kya kyaoo!$"
+    "Nidoran♀: Kya kyaoo!$"
 }
 
 text CeladonCity_Condominiums_1F_Text_ManagersSuite {
-    "CELADON MANSION\n"
+    "Celadon Mansion\n"
     "Manager's Suite$"
 }

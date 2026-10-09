@@ -1,12 +1,12 @@
 text LavenderTown_House2_Text_WantMeToRateNicknames {
     "Hello, hello!\n"
-    "I am the official NAME RATER!\p"
+    "I am the official Name Rater!\p"
     "Want me to rate the nicknames of\n"
-    "your POKéMON?$"
+    "your Pokémon?$"
 }
 
 text LavenderTown_House2_Text_CritiqueWhichMonsNickname {
-    "Which POKéMON's nickname should\n"
+    "Which Pokémon's nickname should\n"
     "I critique?$"
 }
 
@@ -24,7 +24,7 @@ text LavenderTown_House2_Text_WhatShallNewNicknameBe {
 }
 
 text LavenderTown_House2_Text_FromNowOnShallBeKnownAsName {
-    "Done! From now on, this POKéMON\n"
+    "Done! From now on, this Pokémon\n"
     "shall be known as {STR_VAR_1}!\p"
     "It is a better name than before!\n"
     "How fortunate for you!$"
@@ -36,7 +36,7 @@ text LavenderTown_House2_Text_ISeeComeVisitAgain {
 }
 
 text LavenderTown_House2_Text_FromNowOnShallBeKnownAsSameName {
-    "Done! From now on, this POKéMON\n"
+    "Done! From now on, this Pokémon\n"
     "shall be known as {STR_VAR_1}!\p"
     "It looks no different from before,\n"
     "and yet, this is vastly superior!\p"
@@ -51,5 +51,5 @@ text LavenderTown_House2_Text_TrulyImpeccableName {
 
 text LavenderTown_House2_Text_ThatIsMerelyAnEgg {
     "Now, now.\n"
-    "That is merely an EGG!$"
+    "That is merely an Egg!$"
 }

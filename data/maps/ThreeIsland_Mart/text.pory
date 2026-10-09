@@ -1,19 +1,19 @@
 text ThreeIsland_Mart_Text_TrueThatCeldadonDeptStoreBigger {
     "Is it true?\p"
-    "CELADON DEPT. STORE is several\n"
+    "Celadon Dept. Store is several\n"
     "times bigger than this shop?$"
 }
 
 text ThreeIsland_Mart_Text_PeopleHealWithBerriesFromForest {
     "I sometimes buy medicine here.\p"
-    "But a lot of people heal POKéMON\n"
-    "with BERRIES from BERRY FOREST.\p"
-    "After all, BERRIES are free and\n"
+    "But a lot of people heal Pokémon\n"
+    "with Berries from Berry Forest.\p"
+    "After all, Berries are free and\n"
     "they never run out.$"
 }
 
 text ThreeIsland_Mart_Text_BikersWereAboutToTrashMart {
-    "Those BIKERS were about to trash\n"
-    "this POKéMON MART.\p"
+    "Those Bikers were about to trash\n"
+    "this Pokémon Mart.\p"
     "Am I glad they decided to leave!$"
 }

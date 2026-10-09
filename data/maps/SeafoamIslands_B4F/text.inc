@@ -7,7 +7,7 @@ Text_RockSlideTeach::
 	.string "That'd be, like, waaaaaaaaaaah!\n"
 	.string "Total terror!\p"
 	.string "You don't seem to be scared.\n"
-	.string "Want to try using ROCK SLIDE?$"
+	.string "Want to try using Rock Slide?$"
 
 Text_RockSlideDeclined::
 # 12 "data/maps/SeafoamIslands_B4F/text.pory"
@@ -15,8 +15,8 @@ Text_RockSlideDeclined::
 
 Text_RockSlideWhichMon::
 # 16 "data/maps/SeafoamIslands_B4F/text.pory"
-	.string "Which POKéMON should I teach\n"
-	.string "ROCK SLIDE?$"
+	.string "Which Pokémon should I teach\n"
+	.string "Rock Slide?$"
 
 Text_RockSlideTaught::
 # 21 "data/maps/SeafoamIslands_B4F/text.pory"
@@ -30,5 +30,5 @@ SeafoamIslands_B4F_Text_BouldersMightChangeWaterFlow::
 
 SeafoamIslands_B4F_Text_DangerFastCurrent::
 # 31 "data/maps/SeafoamIslands_B4F/text.pory"
-	.string "DANGER\n"
+	.string "Danger\n"
 	.string "Fast current!$"

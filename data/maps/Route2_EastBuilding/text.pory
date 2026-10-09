@@ -1,36 +1,36 @@
 text Route2_EastBuilding_Text_GiveHM05IfSeen10Mons {
     "Hi! Remember me?\n"
-    "I'm one of PROF. OAK's AIDES.\p"
-    "If your POKéDEX has complete data\n"
+    "I'm one of Prof. Oak's Aides.\p"
+    "If your Pokédex has complete data\n"
     "on ten species, I'm supposed to\l"
     "give you a reward.\p"
-    "PROF. OAK entrusted me with\n"
+    "Prof. Oak entrusted me with\n"
     "HM05 for you.\p"
     "So, {PLAYER}, let me ask you.\p"
     "Have you gathered data on at least\n"
-    "ten kinds of POKéMON?$"
+    "ten kinds of Pokémon?$"
 }
 
 text Route2_EastBuilding_Text_GreatHereYouGo {
     "Great! You have caught or owned\n"
-    "{STR_VAR_3} kinds of POKéMON!\p"
+    "{STR_VAR_3} kinds of Pokémon!\p"
     "Congratulations!\n"
     "Here you go!$"
 }
 
 text Route2_EastBuilding_Text_ReceivedHM05FromAide {
     "{PLAYER} received HM05\n"
-    "from the AIDE.$"
+    "from the Aide.$"
 }
 
 text Route2_EastBuilding_Text_ExplainHM05 {
     "HM05 contains the hidden move\n"
-    "FLASH.\p"
-    "FLASH lights up even the darkest\n"
+    "Flash.\p"
+    "Flash lights up even the darkest\n"
     "of caves and dungeons.$"
 }
 
 text Route2_EastBuilding_Text_CanGetThroughRockTunnel {
-    "Once a POKéMON learns FLASH, you\n"
-    "can get through ROCK TUNNEL.$"
+    "Once a Pokémon learns Flash, you\n"
+    "can get through Rock Tunnel.$"
 }

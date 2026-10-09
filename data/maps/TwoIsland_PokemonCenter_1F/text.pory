@@ -1,5 +1,5 @@
 text TwoIsland_PokemonCenter_1F_Text_HaveYouVisitedGameCorner {
-    "Have you visited the GAME CORNER\n"
+    "Have you visited the Game Corner\n"
     "already?\p"
     "It's no good to go alone.\n"
     "You have to take a friend along.$"
@@ -7,7 +7,7 @@ text TwoIsland_PokemonCenter_1F_Text_HaveYouVisitedGameCorner {
 
 text TwoIsland_PokemonCenter_1F_Text_OldLadyLivesOutOnCape {
     "Not many people live on\n"
-    "TWO ISLAND.\p"
+    "Two Island.\p"
     "There is this old lady who lives\n"
     "out on the cape.\p"
     "She's been there since I don't know\n"

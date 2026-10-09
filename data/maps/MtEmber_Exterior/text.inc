@@ -5,7 +5,7 @@ Text_ExplosionTeach::
 	.string "The explosion would be the end of\n"
 	.string "us. How terrifying is that?\p"
 	.string "While we're terrified, would you\n"
-	.string "like me to teach EXPLOSION?$"
+	.string "like me to teach Explosion?$"
 
 Text_ExplosionDeclined::
 # 10 "data/maps/MtEmber_Exterior/text.pory"
@@ -15,12 +15,12 @@ Text_ExplosionDeclined::
 Text_ExplosionWhichMon::
 # 15 "data/maps/MtEmber_Exterior/text.pory"
 	.string "You're terribly brave!\p"
-	.string "Which POKéMON should I teach\n"
-	.string "EXPLOSION?$"
+	.string "Which Pokémon should I teach\n"
+	.string "Explosion?$"
 
 Text_ExplosionTaught::
 # 21 "data/maps/MtEmber_Exterior/text.pory"
-	.string "Using EXPLOSION while on this\n"
+	.string "Using Explosion while on this\n"
 	.string "volcano…\p"
 	.string "What a terrifying thrill!$"
 
@@ -52,7 +52,7 @@ MtEmber_Exterior_Text_WellTryDiggingHere::
 # 52 "data/maps/MtEmber_Exterior/text.pory"
 	.string "Over here.\n"
 	.string "We'll try digging here.\p"
-	.string "That treasure the ADMINS've been\n"
+	.string "That treasure the Admins've been\n"
 	.string "talking about should be here.$"
 
 MtEmber_Exterior_Text_YoureInTheWayGetLost::
@@ -68,15 +68,15 @@ MtEmber_Exterior_Text_PunchedThroughAtLast::
 MtEmber_Exterior_Text_WhatsPasswordAgain::
 # 69 "data/maps/MtEmber_Exterior/text.pory"
 	.string "Any treasure we find, we haul back\n"
-	.string "to the WAREHOUSE, understood?\p"
+	.string "to the Warehouse, understood?\p"
 	.string "…Oh, and what're the passwords?\n"
-	.string "At the ROCKET WAREHOUSE, I mean.$"
+	.string "At the Rocket Warehouse, I mean.$"
 
 MtEmber_Exterior_Text_FirstPasswordGoldeen::
 # 76 "data/maps/MtEmber_Exterior/text.pory"
 	.string "What, you forgot the password?\n"
 	.string "There're actually two.\p"
-	.string "The first one's “GOLDEEN need\n"
+	.string "The first one's “Goldeen need\n"
 	.string "log.”\p"
 	.string "And the second one is…$"
 

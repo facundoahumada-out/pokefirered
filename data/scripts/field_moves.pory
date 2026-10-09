@@ -51,9 +51,9 @@ script EventScript_DontCutTree {
 }
 
 text Text_CutTreeDown {
-    "This tree looks like it can be CUT\n"
+    "This tree looks like it can be Cut\n"
     "down!\p"
-    "Would you like to CUT it?$"
+    "Would you like to Cut it?$"
 }
 
 text Text_MonUsedMove {
@@ -61,7 +61,7 @@ text Text_MonUsedMove {
 }
 
 text Text_TreeCanBeCutDown {
-    "This tree looks like it can be CUT\n"
+    "This tree looks like it can be Cut\n"
     "down!$"
 }
 
@@ -126,11 +126,11 @@ script EventScript_DontSmashRock {
 
 text Text_UseRockSmash {
     "This rock appears to be breakable.\n"
-    "Would you like to use ROCK SMASH?$"
+    "Would you like to use Rock Smash?$"
 }
 
 text Text_MonMaySmashRock {
-    "It's a rugged rock, but a POKéMON\n"
+    "It's a rugged rock, but a Pokémon\n"
     "may be able to smash it.$"
 }
 
@@ -182,24 +182,24 @@ script EventScript_DontUseStrength {
 }
 
 text Text_UseStrength {
-    "It's a big boulder, but a POKéMON\n"
+    "It's a big boulder, but a Pokémon\n"
     "may be able to push it aside.\p"
-    "Would you like to use STRENGTH?$"
+    "Would you like to use Strength?$"
 }
 
 text Text_MonUsedStrengthCanMoveBoulders {
-    "{STR_VAR_1} used STRENGTH!\p"
-    "{STR_VAR_1}'s STRENGTH made it\n"
+    "{STR_VAR_1} used Strength!\p"
+    "{STR_VAR_1}'s Strength made it\n"
     "possible to move boulders around!$"
 }
 
 text Text_MonMayPushBoulder {
-    "It's a big boulder, but a POKéMON\n"
+    "It's a big boulder, but a Pokémon\n"
     "may be able to push it aside.$"
 }
 
 text Text_StrengthMadeMovingBouldersPossible {
-    "STRENGTH made it possible to move\n"
+    "Strength made it possible to move\n"
     "boulders around.$"
 }
 
@@ -233,11 +233,11 @@ text Text_WallOfWaterCrashingDown {
 
 text Text_UseWaterfall {
     "It's a large waterfall.\n"
-    "Would you like to use WATERFALL?$"
+    "Would you like to use Waterfall?$"
 }
 
 text Text_MonUsedWaterfall {
-    "{STR_VAR_1} used WATERFALL.$"
+    "{STR_VAR_1} used Waterfall.$"
 }
 
 // Unused leftover from R/S
@@ -293,32 +293,32 @@ EventScript_EndSurface:
 }
 
 text Text_MonMayGoUnderwater {
-    "The sea is deep here. A POKéMON\n"
+    "The sea is deep here. A Pokémon\n"
     "may be able to go underwater.$"
 }
 
 text Text_SeaIsDeepUseDive {
     "The sea is deep here.\n"
-    "Would you like to use DIVE?$"
+    "Would you like to use Dive?$"
 }
 
 text Text_MonUsedDive {
-    "{STR_VAR_1} used DIVE.$"
+    "{STR_VAR_1} used Dive.$"
 }
 
 text Text_MonMaySurface {
     "Light is filtering down from above.\n"
-    "A POKéMON may be able to surface.$"
+    "A Pokémon may be able to surface.$"
 }
 
 text Text_LightFilteringUseDive {
     "Light is filtering down from above.\n"
-    "Would you like to use DIVE?$"
+    "Would you like to use Dive?$"
 }
 
 text Text_DiveCantBeUsedHere {
     "There is an obstacle above.\n"
-    "DIVE can't be used here.$"
+    "Dive can't be used here.$"
 }
 
 script EventScript_FailSweetScent {
@@ -352,14 +352,14 @@ EventScript_EndRockClimb:
 
 text Text_WantToRockClimb {
     "The cliff is steep.\n"
-    "Would you like to use ROCK CLIMB?$"
+    "Would you like to use Rock Climb?$"
 }
 
 text Text_MonUsedRockClimb {
-    "{STR_VAR_1} used ROCK CLIMB!$"
+    "{STR_VAR_1} used Rock Climb!$"
 }
 
 text Text_CantRockClimb {
     "The cliff is steep.\n"
-    "A POKéMON may be able to climb it.$"
+    "A Pokémon may be able to climb it.$"
 }

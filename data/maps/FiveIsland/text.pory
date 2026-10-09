@@ -1,11 +1,11 @@
 text FiveIsland_Text_IslandSign {
-    "FIVE ISLAND\n"
+    "Five Island\n"
     "Chrono Island: Where Time Goes$"
 }
 
 text FiveIsland_Text_WeirdBuildingInMeadow {
     "Oh, this stinks. I wanted to play in\n"
-    "the MEADOW.\p"
+    "the Meadow.\p"
     "But they put up a weird building\n"
     "on it, so I can't play there.$"
 }

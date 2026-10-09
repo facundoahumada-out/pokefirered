@@ -12,17 +12,17 @@ text ViridianCity_School_Text_ReadBlackboardCarefully {
 text ViridianCity_School_Text_NotebookFirstPage {
     "Let's check out the notebook.\p"
     "First page…\p"
-    "POKé BALLS are used to catch\n"
-    "POKéMON.\p"
-    "Up to six POKéMON can be carried\n"
+    "Poké Balls are used to catch\n"
+    "Pokémon.\p"
+    "Up to six Pokémon can be carried\n"
     "in your party.\p"
     "People who raise and battle\n"
-    "with POKéMON are called TRAINERS.$"
+    "with Pokémon are called Trainers.$"
 }
 
 text ViridianCity_School_Text_NotebookSecondPage {
     "Second page…\p"
-    "A healthy POKéMON may be hard to\n"
+    "A healthy Pokémon may be hard to\n"
     "catch, so weaken it first.\p"
     "Poison, burn, or cause another\n"
     "status problem to weaken it.$"
@@ -30,23 +30,23 @@ text ViridianCity_School_Text_NotebookSecondPage {
 
 text ViridianCity_School_Text_NotebookThirdPage {
     "Third page…\p"
-    "POKéMON TRAINERS seek others to\n"
-    "engage in POKéMON battles.\p"
-    "To TRAINERS, the taste of victory\n"
+    "Pokémon Trainers seek others to\n"
+    "engage in Pokémon battles.\p"
+    "To Trainers, the taste of victory\n"
     "is sweet, indeed.\p"
     "Battles are constantly waged at\n"
-    "POKéMON GYMS everywhere.$"
+    "Pokémon Gyms everywhere.$"
 }
 
 text ViridianCity_School_Text_NotebookFourthPage {
     "Fourth page…\p"
-    "The ultimate goal for all POKéMON\n"
-    "TRAINERS is simple.\p"
+    "The ultimate goal for all Pokémon\n"
+    "Trainers is simple.\p"
     "It is to defeat the top eight\n"
-    "POKéMON GYM LEADERS.\p"
+    "Pokémon Gym Leaders.\p"
     "Do so to earn the right to face…\p"
-    "The ELITE FOUR of the POKéMON\n"
-    "LEAGUE!$"
+    "The Elite Four of the Pokémon\n"
+    "League!$"
 }
 
 text ViridianCity_School_Text_TurnThePage {
@@ -54,13 +54,13 @@ text ViridianCity_School_Text_TurnThePage {
 }
 
 text ViridianCity_School_Text_HeyDontLookAtMyNotes {
-    "GIRL: Hey!\n"
+    "Girl: Hey!\n"
     "Don't look at my notes!$"
 }
 
 text ViridianCity_School_Text_BlackboardListsStatusProblems {
-    "The blackboard lists POKéMON\n"
-    "STATUS problems during battles.$"
+    "The blackboard lists Pokémon\n"
+    "Status problems during battles.$"
 }
 
 text ViridianCity_School_Text_ReadWhichTopic {
@@ -68,40 +68,40 @@ text ViridianCity_School_Text_ReadWhichTopic {
 }
 
 text ViridianCity_School_Text_ExplainSleep {
-    "A POKéMON can't attack if it's\n"
+    "A Pokémon can't attack if it's\n"
     "asleep.\p"
-    "POKéMON will stay asleep even\n"
+    "Pokémon will stay asleep even\n"
     "after battles.\p"
-    "Use AWAKENING to awaken one\n"
+    "Use Awakening to awaken one\n"
     "from sleep.$"
 }
 
 text ViridianCity_School_Text_ExplainBurn {
-    "A burn reduces ATTACK power.\n"
+    "A burn reduces Attack power.\n"
     "It also causes ongoing HP loss.\p"
     "A burn remains after a battle.\n"
-    "Use BURN HEAL to cure a burn.$"
+    "Use Burn Heal to cure a burn.$"
 }
 
 text ViridianCity_School_Text_ExplainPoison {
-    "When poisoned, a POKéMON's health\n"
+    "When poisoned, a Pokémon's health\n"
     "steadily drops.\p"
     "Poison lingers after battles.\n"
-    "Use an ANTIDOTE to cure poison!$"
+    "Use an Antidote to cure poison!$"
 }
 
 text ViridianCity_School_Text_ExplainFreeze {
-    "A frozen POKéMON becomes\n"
+    "A frozen Pokémon becomes\n"
     "helplessly immobile.\p"
     "It stays frozen even after the\n"
     "battle ends.\p"
-    "Use ICE HEAL to thaw out the\n"
-    "suffering POKéMON.$"
+    "Use Ice Heal to thaw out the\n"
+    "suffering Pokémon.$"
 }
 
 text ViridianCity_School_Text_ExplainParalysis {
-    "Paralysis reduces SPEED and may\n"
-    "prevent the POKéMON from moving.\p"
+    "Paralysis reduces Speed and may\n"
+    "prevent the Pokémon from moving.\p"
     "Paralysis remains after battles.\n"
-    "Use PARLYZ HEAL for treatment.$"
+    "Use Parlyz Heal for treatment.$"
 }

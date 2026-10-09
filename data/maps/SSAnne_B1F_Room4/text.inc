@@ -24,5 +24,5 @@ SSAnne_B1F_Room4_Text_DuncanDefeat::
 
 SSAnne_B1F_Room4_Text_DuncanPostBattle::
 # 25 "data/maps/SSAnne_B1F_Room4/text.pory"
-	.string "Did you see the FISHING GURU in\n"
-	.string "VERMILION CITY?$"
+	.string "Did you see the Fishing Guru in\n"
+	.string "Vermilion City?$"

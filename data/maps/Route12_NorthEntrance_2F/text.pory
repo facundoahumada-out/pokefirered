@@ -1,14 +1,14 @@
 // Male and female text identical, differ (presumably) in JP
 text Route12_NorthEntrance_2F_Text_TakeTMDontNeedAnymoreMale {
-    "My POKéMON's ashes are stored in\n"
-    "POKéMON TOWER.\p"
+    "My Pokémon's ashes are stored in\n"
+    "Pokémon Tower.\p"
     "You can have this TM.\n"
     "I don't need it anymore…$"
 }
 
 text Route12_NorthEntrance_2F_Text_TakeTMDontNeedAnymoreFemale {
-    "My POKéMON's ashes are stored in\n"
-    "POKéMON TOWER.\p"
+    "My Pokémon's ashes are stored in\n"
+    "Pokémon Tower.\p"
     "You can have this TM.\n"
     "I don't need it anymore…$"
 }
@@ -19,8 +19,8 @@ text Route12_NorthEntrance_2F_Text_ReceivedTM27FromLittleGirl {
 }
 
 text Route12_NorthEntrance_2F_Text_ExplainTM27 {
-    "TM27 is a move called RETURN…\p"
-    "If you treat your POKéMON good,\n"
+    "TM27 is a move called Return…\p"
+    "If you treat your Pokémon good,\n"
     "it will return your love by working\l"
     "its hardest in battle.$"
 }
@@ -38,5 +38,5 @@ text Route12_NorthEntrance_2F_Text_TheresManFishing {
 text Route12_NorthEntrance_2F_Text_ItsPokemonTower {
     "Let's see what the binoculars have\n"
     "to show…\p"
-    "It's POKéMON TOWER!$"
+    "It's Pokémon Tower!$"
 }

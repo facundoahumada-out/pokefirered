@@ -2,11 +2,11 @@ text Text_DreamEaterTeach {
     "Yawn!\n"
     "I must have dozed off in the sun.\p"
     "I had this weird dream about\n"
-    "a DROWZEE eating my dream.\p"
+    "a Drowzee eating my dream.\p"
     "And…\n"
     "I learned how to eat dreams…\p"
     "Oogh, this is too spooky!\p"
-    "Let me teach it to a POKéMON so\n"
+    "Let me teach it to a Pokémon so\n"
     "I can forget about it!$"
 }
 
@@ -15,37 +15,37 @@ text Text_DreamEaterDeclined {
 }
 
 text Text_DreamEaterWhichMon {
-    "Which POKéMON wants to learn\n"
-    "DREAM EATER?$"
+    "Which Pokémon wants to learn\n"
+    "Dream Eater?$"
 }
 
 text Text_DreamEaterTaught {
-    "…ZZZ…\n"
+    "…Zzz…\n"
     "I…can't eat…anymore…$"
 }
 
 text PewterCity_Text_ClefairyCameFromMoon {
-    "CLEFAIRY came from the moon.\n"
+    "Clefairy came from the moon.\n"
     "That's what the rumor is.\p"
-    "They appeared after MOON STONES\n"
-    "fell on MT. MOON.$"
+    "They appeared after Moon Stones\n"
+    "fell on Mt. Moon.$"
 }
 
 text PewterCity_Text_BrockOnlySeriousTrainerHere {
-    "There aren't many serious POKéMON\n"
-    "TRAINERS here.\p"
-    "They're all like BUG CATCHERS,\n"
+    "There aren't many serious Pokémon\n"
+    "Trainers here.\p"
+    "They're all like Bug Catchers,\n"
     "you know, just hobbyists.\p"
-    "But PEWTER GYM's BROCK isn't like\n"
+    "But Pewter Gym's Brock isn't like\n"
     "that, not one bit.$"
 }
 
 text PewterCity_Text_DidYouCheckOutMuseum {
-    "Did you check out the MUSEUM?$"
+    "Did you check out the Museum?$"
 }
 
 text PewterCity_Text_WerentThoseFossilsAmazing {
-    "Weren't those fossils from MT. MOON\n"
+    "Weren't those fossils from Mt. Moon\n"
     "amazing?$"
 }
 
@@ -55,7 +55,7 @@ text PewterCity_Text_ReallyYouHaveToGo {
 }
 
 text PewterCity_Text_ThisIsTheMuseum {
-    "This is it, the MUSEUM.\p"
+    "This is it, the Museum.\p"
     "You have to pay to get in, but it's\n"
     "worth it. See you around!$"
 }
@@ -71,47 +71,47 @@ text PewterCity_Text_ThatsRightItsHardWork {
 }
 
 text PewterCity_Text_SprayingRepelToKeepWildMonsOut {
-    "I'm spraying REPEL to keep wild\n"
-    "POKéMON out of my garden!$"
+    "I'm spraying Repel to keep wild\n"
+    "Pokémon out of my garden!$"
 }
 
 text PewterCity_Text_BrocksLookingForChallengersFollowMe {
-    "You're a TRAINER, right?\p"
-    "BROCK's looking for new\n"
+    "You're a Trainer, right?\p"
+    "Brock's looking for new\n"
     "challengers. Follow me!$"
 }
 
 text PewterCity_Text_GoTakeOnBrock {
     "If you have the right stuff,\n"
-    "go take on BROCK!$"
+    "go take on Brock!$"
 }
 
 text PewterCity_Text_TrainerTipsEarningEXP {
-    "TRAINER TIPS\p"
-    "All POKéMON that appear in battle,\n"
+    "Trainer Tips\p"
+    "All Pokémon that appear in battle,\n"
     "however briefly, earn EXP Points.$"
 }
 
 text PewterCity_Text_CallPoliceIfInfoOnThieves {
-    "NOTICE!\p"
-    "Thieves have been stealing POKéMON\n"
-    "fossils from MT. MOON.\p"
-    "Please call the PEWTER POLICE if\n"
+    "Notice!\p"
+    "Thieves have been stealing Pokémon\n"
+    "fossils from Mt. Moon.\p"
+    "Please call the Pewter Police if\n"
     "you have any information.$"
 }
 
 text PewterCity_Text_MuseumOfScience {
-    "PEWTER MUSEUM OF SCIENCE$"
+    "Pewter Museum of Science$"
 }
 
 text PewterCity_Text_GymSign {
-    "PEWTER CITY POKéMON GYM\n"
-    "LEADER: BROCK\l"
-    "The Rock-Solid POKéMON TRAINER!$"
+    "Pewter City Pokémon Gym\n"
+    "Leader: Brock\l"
+    "The Rock-Solid Pokémon Trainer!$"
 }
 
 text PewterCity_Text_CitySign {
-    "PEWTER CITY\n"
+    "Pewter City\n"
     "A Stone Gray City$"
 }
 
@@ -146,19 +146,19 @@ text PewterCity_Text_OhPlayer {
 
 text PewterCity_Text_AskedToDeliverThis {
     "I'm glad I caught up to you.\n"
-    "I'm PROF. OAK's AIDE.\p"
+    "I'm Prof. Oak's Aide.\p"
     "I've been asked to deliver this,\n"
     "so here you go.$"
 }
 
 text PewterCity_Text_ReceivedRunningShoesFromAide {
     "{PLAYER} received the\n"
-    "RUNNING SHOES from the AIDE.$"
+    "Running Shoes from the Aide.$"
 }
 
 text PewterCity_Text_SwitchedShoesWithRunningShoes {
     "{PLAYER} switched shoes with the\n"
-    "RUNNING SHOES.$"
+    "Running Shoes.$"
 }
 
 text PewterCity_Text_ExplainRunningShoes {
@@ -168,14 +168,14 @@ text PewterCity_Text_ExplainRunningShoes {
 
 text PewterCity_Text_MustBeGoingBackToLab {
     "Well, I must be going back to\n"
-    "the LAB.\p"
+    "the Lab.\p"
     "Bye-bye!$"
 }
 
 text PewterCity_Text_RunningShoesLetterFromMom {
     "There's a letter attached…\p"
     "Dear {PLAYER},\p"
-    "Here is a pair of RUNNING SHOES\n"
+    "Here is a pair of Running Shoes\n"
     "for my beloved challenger.\p"
     "Remember, I'll always cheer for\n"
     "you! Don't ever give up!\p"

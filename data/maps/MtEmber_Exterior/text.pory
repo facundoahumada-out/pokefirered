@@ -4,7 +4,7 @@ text Text_ExplosionTeach {
     "The explosion would be the end of\n"
     "us. How terrifying is that?\p"
     "While we're terrified, would you\n"
-    "like me to teach EXPLOSION?$"
+    "like me to teach Explosion?$"
 }
 
 text Text_ExplosionDeclined {
@@ -14,12 +14,12 @@ text Text_ExplosionDeclined {
 
 text Text_ExplosionWhichMon {
     "You're terribly brave!\p"
-    "Which POKéMON should I teach\n"
-    "EXPLOSION?$"
+    "Which Pokémon should I teach\n"
+    "Explosion?$"
 }
 
 text Text_ExplosionTaught {
-    "Using EXPLOSION while on this\n"
+    "Using Explosion while on this\n"
     "volcano…\p"
     "What a terrifying thrill!$"
 }
@@ -52,7 +52,7 @@ text Text_ExplosionTaughtJP {
 text MtEmber_Exterior_Text_WellTryDiggingHere {
     "Over here.\n"
     "We'll try digging here.\p"
-    "That treasure the ADMINS've been\n"
+    "That treasure the Admins've been\n"
     "talking about should be here.$"
 }
 
@@ -68,15 +68,15 @@ text MtEmber_Exterior_Text_PunchedThroughAtLast {
 
 text MtEmber_Exterior_Text_WhatsPasswordAgain {
     "Any treasure we find, we haul back\n"
-    "to the WAREHOUSE, understood?\p"
+    "to the Warehouse, understood?\p"
     "…Oh, and what're the passwords?\n"
-    "At the ROCKET WAREHOUSE, I mean.$"
+    "At the Rocket Warehouse, I mean.$"
 }
 
 text MtEmber_Exterior_Text_FirstPasswordGoldeen {
     "What, you forgot the password?\n"
     "There're actually two.\p"
-    "The first one's “GOLDEEN need\n"
+    "The first one's “Goldeen need\n"
     "log.”\p"
     "And the second one is…$"
 }

@@ -1,5 +1,5 @@
 text ThreeIsland_Port_Text_WereKantoRiderFederation {
-    "We're the KANTO RIDER FEDERATION!\n"
+    "We're the Kanto Rider Federation!\n"
     "Vroom! Vavavavooom! Vroom!\p"
     "My bike's wimpy, so I have to\n"
     "make exhaust noises myself!$"
@@ -17,14 +17,14 @@ text ThreeIsland_Port_Text_IllCallThePolice {
 }
 
 text ThreeIsland_Port_Text_ThankGoodnessBikersGone {
-    "Those BIKERS…\n"
+    "Those Bikers…\n"
     "Are they gone?\p"
     "Oh, thank goodness!\n"
     "They certainly had me terrified!$"
 }
 
 text ThreeIsland_Port_Text_EverythingTurnedOutForBest {
-    "Those BIKERS ran off, and\n"
-    "LOSTELLE was found safe.\p"
+    "Those Bikers ran off, and\n"
+    "Lostelle was found safe.\p"
     "Everything turned out for the best!$"
 }

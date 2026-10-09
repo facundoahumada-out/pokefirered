@@ -1,8 +1,8 @@
 Route2_Text_RouteSign::
 # 1 "data/maps/Route2/text.pory"
-	.string "ROUTE 2\n"
-	.string "VIRIDIAN CITY - PEWTER CITY$"
+	.string "Route 2\n"
+	.string "Viridian City - Pewter City$"
 
 Route2_Text_DiglettsCave::
 # 6 "data/maps/Route2/text.pory"
-	.string "DIGLETT'S CAVE$"
+	.string "Diglett's Cave$"

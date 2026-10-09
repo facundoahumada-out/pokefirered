@@ -39,6 +39,6 @@ text PokemonMansion_1F_Text_BraydonPostBattle {
 
 text PokemonMansion_1F_Text_MewGaveBirthToMewtwo {
     "Diary: Feb. 6\n"
-    "MEW gave birth.\p"
-    "We named the newborn MEWTWO.$"
+    "Mew gave birth.\p"
+    "We named the newborn Mewtwo.$"
 }

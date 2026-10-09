@@ -6,15 +6,15 @@ CeladonCity_House1_Text_SlotsReelInTheDough::
 
 CeladonCity_House1_Text_ShippedMonsAsSlotPrizes::
 # 7 "data/maps/CeladonCity_House1/text.pory"
-	.string "CHIEF!\p"
+	.string "Chief!\p"
 	.string "We just shipped two thousand\n"
-	.string "more POKéMON as slot prizes\l"
+	.string "more Pokémon as slot prizes\l"
 	.string "again today!$"
 
 CeladonCity_House1_Text_DontTouchGameCornerPoster::
 # 14 "data/maps/CeladonCity_House1/text.pory"
-	.string "Don't touch the poster at the GAME\n"
-	.string "CORNER!\p"
+	.string "Don't touch the poster at the Game\n"
+	.string "Corner!\p"
 	.string "There's no secret switch behind it!$"
 
 Text_ItsABuddhistAltar::

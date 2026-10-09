@@ -10,7 +10,7 @@ text PokemonTower_3F_Text_HopeDefeat {
 
 text PokemonTower_3F_Text_HopePostBattle {
     "The ghosts can be identified by\n"
-    "the SILPH SCOPE.$"
+    "the Silph Scope.$"
 }
 
 text PokemonTower_3F_Text_CarlyIntro {

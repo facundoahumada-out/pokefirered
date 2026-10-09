@@ -1,6 +1,6 @@
 text SevenIsland_SevaultCanyon_House_Text_ChanseyDanceJoinIn {
     "Dance, dance!\n"
-    "CHANSEY Dance!\p"
+    "Chansey Dance!\p"
     "You join in, too!\n"
     "Dance, dance!$"
 }
@@ -14,7 +14,7 @@ text SevenIsland_SevaultCanyon_House_Text_ComeOnDance {
 }
 
 text SevenIsland_SevaultCanyon_House_Text_DancedChanseyDance {
-    "{PLAYER} danced the CHANSEY Dance!$"
+    "{PLAYER} danced the Chansey Dance!$"
 }
 
 text SevenIsland_SevaultCanyon_House_Text_YoureAllChipperNow {
@@ -24,5 +24,5 @@ text SevenIsland_SevaultCanyon_House_Text_YoureAllChipperNow {
 }
 
 text SevenIsland_SevaultCanyon_House_Text_Chansey {
-    "CHANSEY: Chansi! Chansi!$"
+    "Chansey: Chansi! Chansi!$"
 }

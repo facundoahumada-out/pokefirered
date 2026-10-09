@@ -1,15 +1,15 @@
 text Route13_Text_SebastianIntro {
-    "My bird POKéMON want to battle\n"
+    "My bird Pokémon want to battle\n"
     "with you!$"
 }
 
 text Route13_Text_SebastianDefeat {
-    "My PIDGEY and PIDGEOTTO combo\n"
+    "My Pidgey and Pidgeotto combo\n"
     "lost?$"
 }
 
 text Route13_Text_SebastianPostBattle {
-    "My POKéMON look happy even though\n"
+    "My Pokémon look happy even though\n"
     "they lost.$"
 }
 
@@ -23,13 +23,13 @@ text Route13_Text_SusieDefeat {
 }
 
 text Route13_Text_SusiePostBattle {
-    "I want to become a good TRAINER.\n"
+    "I want to become a good Trainer.\n"
     "I'll train hard, just watch.$"
 }
 
 text Route13_Text_ValerieIntro {
     "Wow!\n"
-    "Your BADGES are too cool!$"
+    "Your Badges are too cool!$"
 }
 
 text Route13_Text_ValerieDefeat {
@@ -37,12 +37,12 @@ text Route13_Text_ValerieDefeat {
 }
 
 text Route13_Text_ValeriePostBattle {
-    "You got those BADGES from GYM\n"
-    "LEADERS. I know!$"
+    "You got those Badges from Gym\n"
+    "Leaders. I know!$"
 }
 
 text Route13_Text_GwenIntro {
-    "My cute POKéMON wish to make your\n"
+    "My cute Pokémon wish to make your\n"
     "acquaintance.$"
 }
 
@@ -52,12 +52,12 @@ text Route13_Text_GwenDefeat {
 }
 
 text Route13_Text_GwenPostBattle {
-    "You have to make POKéMON battle\n"
+    "You have to make Pokémon battle\n"
     "to toughen them up.$"
 }
 
 text Route13_Text_AlmaIntro {
-    "I found CARBOS in a cave once\n"
+    "I found Carbos in a cave once\n"
     "while I was spelunking.$"
 }
 
@@ -67,8 +67,8 @@ text Route13_Text_AlmaDefeat {
 }
 
 text Route13_Text_AlmaPostBattle {
-    "CARBOS boosted the SPEED of my\n"
-    "POKéMON.$"
+    "Carbos boosted the Speed of my\n"
+    "Pokémon.$"
 }
 
 text Route13_Text_PerryIntro {
@@ -82,7 +82,7 @@ text Route13_Text_PerryDefeat {
 
 text Route13_Text_PerryPostBattle {
     "I'm beat.\n"
-    "I guess I'll FLY home.$"
+    "I guess I'll Fly home.$"
 }
 
 text Route13_Text_LolaIntro {
@@ -96,12 +96,12 @@ text Route13_Text_LolaDefeat {
 
 text Route13_Text_LolaPostBattle {
     "I wonder which is stronger, male or\n"
-    "female POKéMON?$"
+    "female Pokémon?$"
 }
 
 text Route13_Text_SheilaIntro {
     "Do you want to battle some\n"
-    "POKéMON with me?$"
+    "Pokémon with me?$"
 }
 
 text Route13_Text_SheilaDefeat {
@@ -110,7 +110,7 @@ text Route13_Text_SheilaDefeat {
 
 text Route13_Text_SheilaPostBattle {
     "I don't know anything about\n"
-    "POKéMON actually.\p"
+    "Pokémon actually.\p"
     "The ones I use… I picked them\n"
     "for their looks!$"
 }
@@ -129,7 +129,7 @@ text Route13_Text_JaredPostBattle {
 }
 
 text Route13_Text_RobertIntro {
-    "I always go with bird POKéMON.\n"
+    "I always go with bird Pokémon.\n"
     "I've dedicated myself to them.$"
 }
 
@@ -138,23 +138,23 @@ text Route13_Text_RobertDefeat {
 }
 
 text Route13_Text_RobertPostBattle {
-    "I wish I could fly like PIDGEY and\n"
-    "PIDGEOTTO…$"
+    "I wish I could fly like Pidgey and\n"
+    "Pidgeotto…$"
 }
 
 text Route13_Text_LookToLeftOfThatPost {
-    "TRAINER TIPS\p"
+    "Trainer Tips\p"
     "Look, look!\n"
     "Look to the left of that post!$"
 }
 
 text Route13_Text_SelectToSwitchItems {
-    "TRAINER TIPS\p"
-    "Use SELECT to switch items in the\n"
-    "ITEMS window.$"
+    "Trainer Tips\p"
+    "Use Select to switch items in the\n"
+    "Items window.$"
 }
 
 text Route13_Text_RouteSign {
-    "ROUTE 13\n"
-    "North to SILENCE BRIDGE$"
+    "Route 13\n"
+    "North to Silence Bridge$"
 }

@@ -12,7 +12,7 @@ SixIsland_WaterPath_Text_RosePostBattle::
 # 11 "data/maps/SixIsland_WaterPath/text.pory"
 	.string "I want to go to the woods over\n"
 	.string "there, but…\p"
-	.string "There are lots of BUG POKéMON.\n"
+	.string "There are lots of Bug Pokémon.\n"
 	.string "They scare me a little.$"
 
 SixIsland_WaterPath_Text_EdwardIntro::
@@ -32,7 +32,7 @@ SixIsland_WaterPath_Text_EdwardPostBattle::
 SixIsland_WaterPath_Text_SamirIntro::
 # 32 "data/maps/SixIsland_WaterPath/text.pory"
 	.string "What, you're suggesting that you're\n"
-	.string "sick of seeing SWIMMERS like me?\p"
+	.string "sick of seeing Swimmers like me?\p"
 	.string "Aww, don't be hatin'!$"
 
 SixIsland_WaterPath_Text_SamirDefeat::
@@ -42,7 +42,7 @@ SixIsland_WaterPath_Text_SamirDefeat::
 SixIsland_WaterPath_Text_SamirPostBattle::
 # 42 "data/maps/SixIsland_WaterPath/text.pory"
 	.string "I couldn't lift the stigma of being\n"
-	.string "a SWIMMER…$"
+	.string "a Swimmer…$"
 
 SixIsland_WaterPath_Text_DeniseIntro::
 # 47 "data/maps/SixIsland_WaterPath/text.pory"
@@ -56,7 +56,7 @@ SixIsland_WaterPath_Text_DeniseDefeat::
 SixIsland_WaterPath_Text_DenisePostBattle::
 # 56 "data/maps/SixIsland_WaterPath/text.pory"
 	.string "When I can't be with my boyfriend,\n"
-	.string "I spend time with the POKéMON he\l"
+	.string "I spend time with the Pokémon he\l"
 	.string "gave me.$"
 
 SixIsland_WaterPath_Text_EarlIntro::
@@ -76,43 +76,43 @@ SixIsland_WaterPath_Text_EarlPostBattle::
 
 SixIsland_WaterPath_Text_MiuIntro::
 # 77 "data/maps/SixIsland_WaterPath/text.pory"
-	.string "MIU: Hello, POKéMON!\n"
+	.string "Miu: Hello, Pokémon!\n"
 	.string "It's time to play!$"
 
 SixIsland_WaterPath_Text_MiuDefeat::
 # 82 "data/maps/SixIsland_WaterPath/text.pory"
-	.string "MIU: Oh, no!\n"
+	.string "Miu: Oh, no!\n"
 	.string "Mommy!$"
 
 SixIsland_WaterPath_Text_MiuPostBattle::
 # 87 "data/maps/SixIsland_WaterPath/text.pory"
-	.string "MIU: It makes me all sad inside\n"
+	.string "Miu: It makes me all sad inside\n"
 	.string "when we lose…$"
 
 SixIsland_WaterPath_Text_MiuNotEnoughMons::
 # 92 "data/maps/SixIsland_WaterPath/text.pory"
-	.string "MIU: MIA and I are TWINS.\n"
+	.string "Miu: Mia and I are Twins.\n"
 	.string "We want to battle together.$"
 
 SixIsland_WaterPath_Text_MiaIntro::
 # 97 "data/maps/SixIsland_WaterPath/text.pory"
-	.string "MIA: Hello, POKéMON!\n"
+	.string "Mia: Hello, Pokémon!\n"
 	.string "It's time to battle!$"
 
 SixIsland_WaterPath_Text_MiaDefeat::
 # 102 "data/maps/SixIsland_WaterPath/text.pory"
-	.string "MIA: You're mean!\n"
+	.string "Mia: You're mean!\n"
 	.string "You're bad for winning!$"
 
 SixIsland_WaterPath_Text_MiaPostBattle::
 # 107 "data/maps/SixIsland_WaterPath/text.pory"
-	.string "MIA: Ohh…\n"
-	.string "I'm sorry, my POKéMON…$"
+	.string "Mia: Ohh…\n"
+	.string "I'm sorry, my Pokémon…$"
 
 SixIsland_WaterPath_Text_MiaNotEnoughMons::
 # 112 "data/maps/SixIsland_WaterPath/text.pory"
-	.string "MIA: Oh, you only have one\n"
-	.string "POKéMON?\p"
+	.string "Mia: Oh, you only have one\n"
+	.string "Pokémon?\p"
 	.string "Don't you feel lonesome?$"
 
 SixIsland_WaterPath_Text_WantedUltimateHorn::
@@ -122,5 +122,5 @@ SixIsland_WaterPath_Text_WantedUltimateHorn::
 
 SixIsland_WaterPath_Text_RouteSign::
 # 123 "data/maps/SixIsland_WaterPath/text.pory"
-	.string "WATER PATH\n"
-	.string "Leads to RUIN VALLEY$"
+	.string "Water Path\n"
+	.string "Leads to Ruin Valley$"

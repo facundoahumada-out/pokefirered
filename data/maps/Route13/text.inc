@@ -1,16 +1,16 @@
 Route13_Text_SebastianIntro::
 # 1 "data/maps/Route13/text.pory"
-	.string "My bird POKéMON want to battle\n"
+	.string "My bird Pokémon want to battle\n"
 	.string "with you!$"
 
 Route13_Text_SebastianDefeat::
 # 6 "data/maps/Route13/text.pory"
-	.string "My PIDGEY and PIDGEOTTO combo\n"
+	.string "My Pidgey and Pidgeotto combo\n"
 	.string "lost?$"
 
 Route13_Text_SebastianPostBattle::
 # 11 "data/maps/Route13/text.pory"
-	.string "My POKéMON look happy even though\n"
+	.string "My Pokémon look happy even though\n"
 	.string "they lost.$"
 
 Route13_Text_SusieIntro::
@@ -24,13 +24,13 @@ Route13_Text_SusieDefeat::
 
 Route13_Text_SusiePostBattle::
 # 25 "data/maps/Route13/text.pory"
-	.string "I want to become a good TRAINER.\n"
+	.string "I want to become a good Trainer.\n"
 	.string "I'll train hard, just watch.$"
 
 Route13_Text_ValerieIntro::
 # 30 "data/maps/Route13/text.pory"
 	.string "Wow!\n"
-	.string "Your BADGES are too cool!$"
+	.string "Your Badges are too cool!$"
 
 Route13_Text_ValerieDefeat::
 # 35 "data/maps/Route13/text.pory"
@@ -38,12 +38,12 @@ Route13_Text_ValerieDefeat::
 
 Route13_Text_ValeriePostBattle::
 # 39 "data/maps/Route13/text.pory"
-	.string "You got those BADGES from GYM\n"
-	.string "LEADERS. I know!$"
+	.string "You got those Badges from Gym\n"
+	.string "Leaders. I know!$"
 
 Route13_Text_GwenIntro::
 # 44 "data/maps/Route13/text.pory"
-	.string "My cute POKéMON wish to make your\n"
+	.string "My cute Pokémon wish to make your\n"
 	.string "acquaintance.$"
 
 Route13_Text_GwenDefeat::
@@ -53,12 +53,12 @@ Route13_Text_GwenDefeat::
 
 Route13_Text_GwenPostBattle::
 # 54 "data/maps/Route13/text.pory"
-	.string "You have to make POKéMON battle\n"
+	.string "You have to make Pokémon battle\n"
 	.string "to toughen them up.$"
 
 Route13_Text_AlmaIntro::
 # 59 "data/maps/Route13/text.pory"
-	.string "I found CARBOS in a cave once\n"
+	.string "I found Carbos in a cave once\n"
 	.string "while I was spelunking.$"
 
 Route13_Text_AlmaDefeat::
@@ -68,8 +68,8 @@ Route13_Text_AlmaDefeat::
 
 Route13_Text_AlmaPostBattle::
 # 69 "data/maps/Route13/text.pory"
-	.string "CARBOS boosted the SPEED of my\n"
-	.string "POKéMON.$"
+	.string "Carbos boosted the Speed of my\n"
+	.string "Pokémon.$"
 
 Route13_Text_PerryIntro::
 # 74 "data/maps/Route13/text.pory"
@@ -83,7 +83,7 @@ Route13_Text_PerryDefeat::
 Route13_Text_PerryPostBattle::
 # 83 "data/maps/Route13/text.pory"
 	.string "I'm beat.\n"
-	.string "I guess I'll FLY home.$"
+	.string "I guess I'll Fly home.$"
 
 Route13_Text_LolaIntro::
 # 88 "data/maps/Route13/text.pory"
@@ -97,12 +97,12 @@ Route13_Text_LolaDefeat::
 Route13_Text_LolaPostBattle::
 # 97 "data/maps/Route13/text.pory"
 	.string "I wonder which is stronger, male or\n"
-	.string "female POKéMON?$"
+	.string "female Pokémon?$"
 
 Route13_Text_SheilaIntro::
 # 102 "data/maps/Route13/text.pory"
 	.string "Do you want to battle some\n"
-	.string "POKéMON with me?$"
+	.string "Pokémon with me?$"
 
 Route13_Text_SheilaDefeat::
 # 107 "data/maps/Route13/text.pory"
@@ -111,7 +111,7 @@ Route13_Text_SheilaDefeat::
 Route13_Text_SheilaPostBattle::
 # 111 "data/maps/Route13/text.pory"
 	.string "I don't know anything about\n"
-	.string "POKéMON actually.\p"
+	.string "Pokémon actually.\p"
 	.string "The ones I use… I picked them\n"
 	.string "for their looks!$"
 
@@ -130,7 +130,7 @@ Route13_Text_JaredPostBattle::
 
 Route13_Text_RobertIntro::
 # 131 "data/maps/Route13/text.pory"
-	.string "I always go with bird POKéMON.\n"
+	.string "I always go with bird Pokémon.\n"
 	.string "I've dedicated myself to them.$"
 
 Route13_Text_RobertDefeat::
@@ -139,22 +139,22 @@ Route13_Text_RobertDefeat::
 
 Route13_Text_RobertPostBattle::
 # 140 "data/maps/Route13/text.pory"
-	.string "I wish I could fly like PIDGEY and\n"
-	.string "PIDGEOTTO…$"
+	.string "I wish I could fly like Pidgey and\n"
+	.string "Pidgeotto…$"
 
 Route13_Text_LookToLeftOfThatPost::
 # 145 "data/maps/Route13/text.pory"
-	.string "TRAINER TIPS\p"
+	.string "Trainer Tips\p"
 	.string "Look, look!\n"
 	.string "Look to the left of that post!$"
 
 Route13_Text_SelectToSwitchItems::
 # 151 "data/maps/Route13/text.pory"
-	.string "TRAINER TIPS\p"
-	.string "Use SELECT to switch items in the\n"
-	.string "ITEMS window.$"
+	.string "Trainer Tips\p"
+	.string "Use Select to switch items in the\n"
+	.string "Items window.$"
 
 Route13_Text_RouteSign::
 # 157 "data/maps/Route13/text.pory"
-	.string "ROUTE 13\n"
-	.string "North to SILENCE BRIDGE$"
+	.string "Route 13\n"
+	.string "North to Silence Bridge$"

@@ -1,7 +1,7 @@
 text Route5_PokemonDayCare_Text_WantMeToRaiseMon {
-    "I run the DAY-CARE service.\p"
+    "I run the Day-Care service.\p"
     "Would you like me to raise one of\n"
-    "your POKéMON?$"
+    "your Pokémon?$"
 }
 
 text Route5_PokemonDayCare_Text_ComeAgain {
@@ -9,7 +9,7 @@ text Route5_PokemonDayCare_Text_ComeAgain {
 }
 
 text Route5_PokemonDayCare_Text_WhichMonShouldIRaise {
-    "Which POKéMON should I raise?$"
+    "Which Pokémon should I raise?$"
 }
 
 text Route5_PokemonDayCare_Text_ComeAnytimeYouLike {
@@ -34,26 +34,26 @@ text Route5_PokemonDayCare_Text_MonNeedsToSpendMoreTime {
 
 text Route5_PokemonDayCare_Text_OweMeXForMonsReturn {
     "You owe me ¥{STR_VAR_2} for the return\n"
-    "of this POKéMON.$"
+    "of this Pokémon.$"
 }
 
 text Route5_PokemonDayCare_Text_ThankYouHeresMon {
     "Thank you!\n"
-    "Here's your POKéMON.$"
+    "Here's your Pokémon.$"
 }
 
 text Route5_PokemonDayCare_Text_PlayerGotMonBack {
     "{PLAYER} got {STR_VAR_1} back\n"
-    "from the DAY-CARE MAN.$"
+    "from the Day-Care Man.$"
 }
 
 text Route5_PokemonDayCare_Text_OnlyHaveOneMonWithYou {
-    "Oh? You only have one POKéMON\n"
+    "Oh? You only have one Pokémon\n"
     "with you.$"
 }
 
 text Route5_PokemonDayCare_Text_WhatWillYouBattleWith {
-    "If you leave me that POKéMON,\n"
+    "If you leave me that Pokémon,\n"
     "what will you battle with?$"
 }
 
@@ -66,7 +66,7 @@ text Route5_PokemonDayCare_Text_MonHasGrownByXLevels {
 }
 
 text Route5_PokemonDayCare_Text_YouveGotNoRoomForIt {
-    "You can't take this POKéMON back\n"
+    "You can't take this Pokémon back\n"
     "if you've got no room for it.$"
 }
 

@@ -6,13 +6,13 @@ CeladonCity_Restaurant_Text_TakingBreakRightNow::
 
 CeladonCity_Restaurant_Text_OftenGoToDrugstore::
 # 7 "data/maps/CeladonCity_Restaurant/text.pory"
-	.string "My POKéMON are weak, so I often\n"
-	.string "have to go to the DRUGSTORE.$"
+	.string "My Pokémon are weak, so I often\n"
+	.string "have to go to the Drugstore.$"
 
 CeladonCity_Restaurant_Text_PsstBasementUnderGameCorner::
 # 12 "data/maps/CeladonCity_Restaurant/text.pory"
 	.string "Psst! There's a basement under the\n"
-	.string "GAME CORNER, I hear.$"
+	.string "Game Corner, I hear.$"
 
 CeladonCity_Restaurant_Text_ManLostItAllAtSlots::
 # 17 "data/maps/CeladonCity_Restaurant/text.pory"
@@ -31,7 +31,7 @@ CeladonCity_Restaurant_Text_TakeThisImBusted::
 
 CeladonCity_Restaurant_Text_ReceivedCoinCaseFromMan::
 # 32 "data/maps/CeladonCity_Restaurant/text.pory"
-	.string "{PLAYER} received a COIN CASE\n"
+	.string "{PLAYER} received a Coin Case\n"
 	.string "from the man.$"
 
 CeladonCity_Restaurant_Text_MakeRoomForThis::

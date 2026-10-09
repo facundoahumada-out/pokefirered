@@ -1,5 +1,5 @@
 text Route12_FishingHouse_Text_DoYouLikeToFish {
-    "I'm the FISHING GURU's younger\n"
+    "I'm the Fishing Guru's younger\n"
     "brother.\p"
     "I simply looove fishing!\n"
     "I can't bear to go without.\p"
@@ -13,8 +13,8 @@ text Route12_FishingHouse_Text_TakeThisAndFish {
 }
 
 text Route12_FishingHouse_Text_ReceivedSuperRod {
-    "{PLAYER} received a SUPER ROD from\n"
-    "the FISHING GURU's brother.$"
+    "{PLAYER} received a Super Rod from\n"
+    "the Fishing Guru's brother.$"
 }
 
 text Route12_FishingHouse_Text_IfYouCatchBigMagikarpShowMe {
@@ -23,10 +23,10 @@ text Route12_FishingHouse_Text_IfYouCatchBigMagikarpShowMe {
     "From the seas to rivers, go out\n"
     "and land the big one, my friend.\p"
     "Now, I have a request.\p"
-    "If you catch a big MAGIKARP \n"
-    "with that ROD, I want to see it.\p"
+    "If you catch a big Magikarp \n"
+    "with that Rod, I want to see it.\p"
     "As much as I love to fish, I also\n"
-    "love seeing gigantic MAGIKARP.$"
+    "love seeing gigantic Magikarp.$"
 }
 
 text Route12_FishingHouse_Text_OhThatsDisappointing {
@@ -37,17 +37,17 @@ text Route12_FishingHouse_Text_OhThatsDisappointing {
 text Route12_FishingHouse_Text_TryFishingBringMeMagikarp {
     "Hello there, {PLAYER}!\n"
     "Have you been fishing?\p"
-    "Try fishing with the SUPER ROD in\n"
+    "Try fishing with the Super Rod in\n"
     "any body of water.\p"
-    "You'll find different POKéMON in\n"
+    "You'll find different Pokémon in\n"
     "different places.\p"
     "Oh, and don't forget to bring me\n"
-    "gigantic MAGIKARP.$"
+    "gigantic Magikarp.$"
 }
 
 text Route12_FishingHouse_Text_OhMagikarpAllowMeToSee {
     "Oh? {PLAYER}?\n"
-    "Why, if it isn't a MAGIKARP!\p"
+    "Why, if it isn't a Magikarp!\p"
     "Allow me to see it, quick!$"
 }
 
@@ -81,7 +81,7 @@ text Route12_FishingHouse_Text_HmmXInchesDoesntMeasureUp {
 
 text Route12_FishingHouse_Text_DoesntLookLikeMagikarp {
     "Uh… That doesn't look much like\n"
-    "a MAGIKARP.$"
+    "a Magikarp.$"
 }
 
 text Route12_FishingHouse_Text_NoRoomForGift {
@@ -91,7 +91,7 @@ text Route12_FishingHouse_Text_NoRoomForGift {
 }
 
 text Route12_FishingHouse_Text_MostGiganticMagikarpXInches {
-    "The most gigantic MAGIKARP\n"
+    "The most gigantic Magikarp\n"
     "I have ever witnessed…\p"
     "{STR_VAR_3} inches!$"
 }

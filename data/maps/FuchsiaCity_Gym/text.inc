@@ -1,6 +1,6 @@
 FuchsiaCity_Gym_Text_KogaIntro::
 # 1 "data/maps/FuchsiaCity_Gym/text.pory"
-	.string "KOGA: Fwahahaha!\p"
+	.string "Koga: Fwahahaha!\p"
 	.string "A mere child like you dares to\n"
 	.string "challenge me?\p"
 	.string "The very idea makes me shiver\n"
@@ -10,18 +10,18 @@ FuchsiaCity_Gym_Text_KogaIntro::
 	.string "Poison brings steady doom.\n"
 	.string "Sleep renders foes helpless.\p"
 	.string "Despair to the creeping horror of\n"
-	.string "POISON-type POKéMON!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+	.string "Poison-type Pokémon!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 
 FuchsiaCity_Gym_Text_KogaDefeat::
 # 15 "data/maps/FuchsiaCity_Gym/text.pory"
 	.string "Humph!\n"
 	.string "You have proven your worth!\p"
 	.string "Here!\n"
-	.string "Take the SOULBADGE!$"
+	.string "Take the Soulbadge!$"
 
 FuchsiaCity_Gym_Text_KogaPostBattle::
 # 22 "data/maps/FuchsiaCity_Gym/text.pory"
-	.string "When afflicted by TOXIC, a POKéMON\n"
+	.string "When afflicted by Toxic, a Pokémon\n"
 	.string "suffers more and more.\p"
 	.string "It suffers worsening damage as the\n"
 	.string "battle wears on!\p"
@@ -29,9 +29,9 @@ FuchsiaCity_Gym_Text_KogaPostBattle::
 
 FuchsiaCity_Gym_Text_KogaExplainSoulBadge::
 # 30 "data/maps/FuchsiaCity_Gym/text.pory"
-	.string "Now that you have the SOULBADGE,\n"
-	.string "the DEFENSE of your POKéMON rises.\p"
-	.string "It also lets you SURF outside of\n"
+	.string "Now that you have the Soulbadge,\n"
+	.string "the Defense of your Pokémon rises.\p"
+	.string "It also lets you Surf outside of\n"
 	.string "battle.\p"
 	.string "Ah!\n"
 	.string "Take this, too!$"
@@ -39,12 +39,12 @@ FuchsiaCity_Gym_Text_KogaExplainSoulBadge::
 FuchsiaCity_Gym_Text_ReceivedTM06FromKoga::
 # 39 "data/maps/FuchsiaCity_Gym/text.pory"
 	.string "{PLAYER} received TM06\n"
-	.string "from KOGA.$"
+	.string "from Koga.$"
 
 FuchsiaCity_Gym_Text_KogaExplainTM06::
 # 44 "data/maps/FuchsiaCity_Gym/text.pory"
 	.string "Sealed within that TM06 lies\n"
-	.string "TOXIC!\p"
+	.string "Toxic!\p"
 	.string "It is a secret technique dating\n"
 	.string "back some four hundred years.$"
 
@@ -54,9 +54,9 @@ FuchsiaCity_Gym_Text_MakeSpaceForThis::
 
 FuchsiaCity_Gym_Text_KaydenIntro::
 # 55 "data/maps/FuchsiaCity_Gym/text.pory"
-	.string "Strength isn't the key for POKéMON.\n"
+	.string "Strength isn't the key for Pokémon.\n"
 	.string "Do you understand this?\p"
-	.string "POKéMON is about strategy!\p"
+	.string "Pokémon is about strategy!\p"
 	.string "I'll show you how strategy can\n"
 	.string "beat brute strength.$"
 
@@ -70,13 +70,13 @@ FuchsiaCity_Gym_Text_KaydenPostBattle::
 	.string "So, you mix brawn with brains?\n"
 	.string "Good strategy!\p"
 	.string "That's remarkable for a child\n"
-	.string "TRAINER.$"
+	.string "Trainer.$"
 
 FuchsiaCity_Gym_Text_KirkIntro::
 # 75 "data/maps/FuchsiaCity_Gym/text.pory"
 	.string "I was a magician once upon a time.\p"
 	.string "But I dreamt of becoming a ninja,\n"
-	.string "so I joined this GYM.$"
+	.string "so I joined this Gym.$"
 
 FuchsiaCity_Gym_Text_KirkDefeat::
 # 81 "data/maps/FuchsiaCity_Gym/text.pory"
@@ -86,7 +86,7 @@ FuchsiaCity_Gym_Text_KirkPostBattle::
 # 85 "data/maps/FuchsiaCity_Gym/text.pory"
 	.string "Even though I've lost, I will keep\n"
 	.string "training according to the teachings\l"
-	.string "of KOGA, my ninja master.$"
+	.string "of Koga, my ninja master.$"
 
 FuchsiaCity_Gym_Text_NateIntro::
 # 91 "data/maps/FuchsiaCity_Gym/text.pory"
@@ -106,7 +106,7 @@ FuchsiaCity_Gym_Text_PhilIntro::
 # 105 "data/maps/FuchsiaCity_Gym/text.pory"
 	.string "Stop right there!\p"
 	.string "The famed invisible walls of\n"
-	.string "FUCHSIA GYM have you frustrated?$"
+	.string "Fuchsia Gym have you frustrated?$"
 
 FuchsiaCity_Gym_Text_PhilDefeat::
 # 111 "data/maps/FuchsiaCity_Gym/text.pory"
@@ -123,7 +123,7 @@ FuchsiaCity_Gym_Text_PhilPostBattle::
 FuchsiaCity_Gym_Text_EdgarIntro::
 # 123 "data/maps/FuchsiaCity_Gym/text.pory"
 	.string "I also study the way of the ninja\n"
-	.string "with Master KOGA!\p"
+	.string "with Master Koga!\p"
 	.string "Ninja have a long history of using\n"
 	.string "animals!$"
 
@@ -137,7 +137,7 @@ FuchsiaCity_Gym_Text_EdgarPostBattle::
 
 FuchsiaCity_Gym_Text_ShawnIntro::
 # 138 "data/maps/FuchsiaCity_Gym/text.pory"
-	.string "Master KOGA comes from a long line\n"
+	.string "Master Koga comes from a long line\n"
 	.string "of ninjas.\p"
 	.string "What did you descend from?$"
 
@@ -157,9 +157,9 @@ FuchsiaCity_Gym_Text_GymGuyAdvice::
 # 156 "data/maps/FuchsiaCity_Gym/text.pory"
 	.string "Yo!\n"
 	.string "Champ in the making!\p"
-	.string "FUCHSIA GYM is a tricked-up place.\n"
+	.string "Fuchsia Gym is a tricked-up place.\n"
 	.string "It's riddled with invisible walls!\p"
-	.string "KOGA might appear close, but he's\n"
+	.string "Koga might appear close, but he's\n"
 	.string "blocked off.\p"
 	.string "You have to find gaps in the walls\n"
 	.string "to reach him.$"
@@ -171,14 +171,14 @@ FuchsiaCity_Gym_Text_GymGuyPostVictory::
 
 FuchsiaCity_Gym_Text_GymStatue::
 # 172 "data/maps/FuchsiaCity_Gym/text.pory"
-	.string "FUCHSIA POKéMON GYM\n"
-	.string "LEADER: KOGA\p"
-	.string "WINNING TRAINERS:\n"
+	.string "Fuchsia Pokémon Gym\n"
+	.string "Leader: Koga\p"
+	.string "Winning Trainers:\n"
 	.string "{RIVAL}$"
 
 FuchsiaCity_Gym_Text_GymStatuePlayerWon::
 # 179 "data/maps/FuchsiaCity_Gym/text.pory"
-	.string "FUCHSIA POKéMON GYM\n"
-	.string "LEADER: KOGA\p"
-	.string "WINNING TRAINERS:\n"
+	.string "Fuchsia Pokémon Gym\n"
+	.string "Leader: Koga\p"
+	.string "Winning Trainers:\n"
 	.string "{RIVAL}, {PLAYER}$"

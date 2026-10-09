@@ -1,12 +1,12 @@
 text Route24_Text_JustEarnedFabulousPrize {
     "Congratulations! You beat our\n"
-    "five contest TRAINERS!\p"
+    "five contest Trainers!\p"
     "You just earned a fabulous prize!$"
 }
 
 text Route24_Text_ReceivedNuggetFromMysteryTrainer {
-    "{PLAYER} received a NUGGET\n"
-    "from the mystery TRAINER!$"
+    "{PLAYER} received a Nugget\n"
+    "from the mystery Trainer!$"
 }
 
 text Route24_Text_YouDontHaveAnyRoom {
@@ -15,9 +15,9 @@ text Route24_Text_YouDontHaveAnyRoom {
 
 text Route24_Text_JoinTeamRocket {
     "By the way, how would you like to\n"
-    "join TEAM ROCKET?\p"
+    "join Team Rocket?\p"
     "We're a group of professional\n"
-    "criminals specializing in POKéMON!\p"
+    "criminals specializing in Pokémon!\p"
     "Want to join?\p"
     "Are you sure?\p"
     "Come on, join us!\p"
@@ -34,7 +34,7 @@ text Route24_Text_RocketDefeat {
 
 text Route24_Text_YoudBecomeTopRocketLeader {
     "With your ability, you'd become\n"
-    "a top leader in TEAM ROCKET.\p"
+    "a top leader in Team Rocket.\p"
     "Come on, think of the opportunity!\n"
     "Don't let this chance go to waste.$"
 }
@@ -107,9 +107,9 @@ text Route24_Text_AliPostBattle {
 }
 
 text Route24_Text_CaleIntro {
-    "People call this the NUGGET\n"
-    "BRIDGE!\p"
-    "Beat us five TRAINERS and win\n"
+    "People call this the Nugget\n"
+    "Bridge!\p"
+    "Beat us five Trainers and win\n"
     "a fabulous prize!\p"
     "Think you got what it takes?$"
 }

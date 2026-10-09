@@ -19,17 +19,17 @@ text Text_YouKnowThoseWords {
     "Oh, hello!\n"
     "You know those words?\p"
     "That means you must know about\n"
-    "the MYSTERY GIFT.\p"
+    "the Mystery Gift.\p"
     "From now on, you should be\n"
-    "receiving MYSTERY GIFTS!$"
+    "receiving Mystery Gifts!$"
 }
 
 text Text_YouCanAccessMysteryGift {
     "Once you save your game, you can\n"
-    "access the MYSTERY GIFT.$"
+    "access the Mystery Gift.$"
 }
 
 text Text_ThankYouForAccessingMysteryGift {
     "Thank you for accessing the\n"
-    "MYSTERY GIFT System.$"
+    "Mystery Gift System.$"
 }

@@ -1,12 +1,12 @@
 text CeladonCity_GameCorner_Text_CanExchangeCoinsNextDoor {
     "Welcome!\p"
-    "You can exchange your COINS for\n"
+    "You can exchange your Coins for\n"
     "fabulous prizes next door.$"
 }
 
 text CeladonCity_GameCorner_Text_WelcomeBuySomeCoins {
-    "Welcome to ROCKET GAME CORNER!\p"
-    "Do you need some game COINS?\n"
+    "Welcome to Rocket Game Corner!\p"
+    "Do you need some game Coins?\n"
     "Would you like to buy some?$"
 }
 
@@ -17,27 +17,27 @@ text CeladonCity_GameCorner_Text_ComePlaySometime {
 
 text CeladonCity_GameCorner_Text_SorryDontHaveCoinCase {
     "Oh, I'm sorry.\n"
-    "You don't have a COIN CASE.$"
+    "You don't have a Coin Case.$"
 }
 
 text CeladonCity_GameCorner_Text_CoinCaseIsFull {
     "Whoops!\n"
-    "Your COIN CASE is full.$"
+    "Your Coin Case is full.$"
 }
 
 text CeladonCity_GameCorner_Text_CantAffordCoins {
-    "You can't afford the COINS.$"
+    "You can't afford the Coins.$"
 }
 
 text CeladonCity_GameCorner_Text_HereAreYourCoins {
     "Thank you.\n"
-    "Here are your COINS!$"
+    "Here are your Coins!$"
 }
 
 text CeladonCity_GameCorner_Text_RumoredTeamRocketRunsThisPlace {
     "Keep this quiet.\p"
     "It's rumored that this place is run\n"
-    "by TEAM ROCKET.$"
+    "by Team Rocket.$"
 }
 
 text CeladonCity_GameCorner_Text_ThinkMachinesHaveDifferentOdds {
@@ -50,12 +50,12 @@ text CeladonCity_GameCorner_Text_DoYouWantToPlay {
 }
 
 text CeladonCity_GameCorner_Text_Received10CoinsFromMan {
-    "{PLAYER} received 10 COINS\n"
+    "{PLAYER} received 10 Coins\n"
     "from the man.$"
 }
 
 text CeladonCity_GameCorner_Text_DontNeedMyCoins {
-    "You don't need my COINS!$"
+    "You don't need my Coins!$"
 }
 
 text CeladonCity_GameCorner_Text_WinsComeAndGo {
@@ -72,9 +72,9 @@ text CeladonCity_GameCorner_Text_GymGuyAdvice {
     "Hey!\p"
     "You have better things to do,\n"
     "champ in the making!\p"
-    "CELADON GYM's LEADER is ERIKA.\p"
-    "She is a user of GRASS-type\n"
-    "POKéMON, and at one with nature.\p"
+    "Celadon Gym's Leader is Erika.\p"
+    "She is a user of Grass-type\n"
+    "Pokémon, and at one with nature.\p"
     "She might appear docile because of\n"
     "her flower arranging…\p"
     "But she's not one to be taken\n"
@@ -82,8 +82,8 @@ text CeladonCity_GameCorner_Text_GymGuyAdvice {
 }
 
 text CeladonCity_GameCorner_Text_RareMonsForCoins {
-    "They offer rare POKéMON that can\n"
-    "be exchanged for your COINS.\p"
+    "They offer rare Pokémon that can\n"
+    "be exchanged for your Coins.\p"
     "But, I just can't seem to win!$"
 }
 
@@ -94,36 +94,36 @@ text CeladonCity_GameCorner_Text_SoEasyToGetHooked {
 
 text CeladonCity_GameCorner_Text_WantSomeCoins {
     "What's up?\n"
-    "Want some COINS?$"
+    "Want some Coins?$"
 }
 
 text CeladonCity_GameCorner_Text_Received20CoinsFromNiceGuy {
-    "{PLAYER} received 20 COINS\n"
+    "{PLAYER} received 20 Coins\n"
     "from the nice guy.$"
 }
 
 text CeladonCity_GameCorner_Text_YouHaveLotsOfCoins {
-    "You have lots of COINS!$"
+    "You have lots of Coins!$"
 }
 
 text CeladonCity_GameCorner_Text_NeedMoreCoinsForMonIWant {
-    "Darn! I need more COINS for the\n"
-    "POKéMON I want!$"
+    "Darn! I need more Coins for the\n"
+    "Pokémon I want!$"
 }
 
 text CeladonCity_GameCorner_Text_HereAreSomeCoinsShoo {
     "Hey, what? You're throwing me off!\n"
-    "Here are some COINS, so shoo!$"
+    "Here are some Coins, so shoo!$"
 }
 
 text CeladonCity_GameCorner_Text_Received20CoinsFromMan {
-    "{PLAYER} received 20 COINS\n"
+    "{PLAYER} received 20 Coins\n"
     "from the man.$"
 }
 
 text CeladonCity_GameCorner_Text_YouveGotPlentyCoins {
     "You've got plenty of your own\n"
-    "COINS!$"
+    "Coins!$"
 }
 
 text CeladonCity_GameCorner_Text_WatchReelsClosely {
@@ -141,9 +141,9 @@ text CeladonCity_GameCorner_Text_GruntDefeat {
 }
 
 text CeladonCity_GameCorner_Text_GruntPostBattle {
-    "The TEAM ROCKET HIDEOUT might\n"
+    "The Team Rocket Hideout might\n"
     "be discovered!\p"
-    "I better tell BOSS!$"
+    "I better tell Boss!$"
 }
 
 text CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt {
@@ -153,12 +153,12 @@ text CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt {
 }
 
 text CeladonCity_GameCorner_Text_CoinCaseIsRequired {
-    "A COIN CASE is required…$"
+    "A Coin Case is required…$"
 }
 
 text CeladonCity_GameCorner_Text_DontHaveCoinCase {
     "Oops!\n"
-    "Don't have the COIN CASE!$"
+    "Don't have the Coin Case!$"
 }
 
 text CeladonCity_GameCorner_Text_SlotMachineWantToPlay {
@@ -167,12 +167,12 @@ text CeladonCity_GameCorner_Text_SlotMachineWantToPlay {
 }
 
 text CeladonCity_GameCorner_Text_OutOfOrder {
-    "OUT OF ORDER\n"
+    "Out of Order\n"
     "This is broken.$"
 }
 
 text CeladonCity_GameCorner_Text_OutToLunch {
-    "OUT TO LUNCH\n"
+    "Out to Lunch\n"
     "This is reserved.$"
 }
 

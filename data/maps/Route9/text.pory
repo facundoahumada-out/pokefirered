@@ -1,5 +1,5 @@
 text Route9_Text_AliciaIntro {
-    "You have POKéMON with you!\n"
+    "You have Pokémon with you!\n"
     "You're mine!$"
 }
 
@@ -10,13 +10,13 @@ text Route9_Text_AliciaDefeat {
 text Route9_Text_AliciaPostBattle {
     "The tunnel coming up is pitch-black\n"
     "inside.\p"
-    "You'll need FLASH to get through\n"
+    "You'll need Flash to get through\n"
     "there.$"
 }
 
 text Route9_Text_ChrisIntro {
     "Who's that walking there with those\n"
-    "good-looking POKéMON?$"
+    "good-looking Pokémon?$"
 }
 
 text Route9_Text_ChrisDefeat {
@@ -28,8 +28,8 @@ text Route9_Text_ChrisPostBattle {
 }
 
 text Route9_Text_DrewIntro {
-    "I'm taking the ROCK TUNNEL to\n"
-    "go to LAVENDER…$"
+    "I'm taking the Rock Tunnel to\n"
+    "go to Lavender…$"
 }
 
 text Route9_Text_DrewDefeat {
@@ -37,7 +37,7 @@ text Route9_Text_DrewDefeat {
 }
 
 text Route9_Text_DrewPostBattle {
-    "Are you off to ROCK TUNNEL, too?$"
+    "Are you off to Rock Tunnel, too?$"
 }
 
 text Route9_Text_CaitlinIntro {
@@ -62,7 +62,7 @@ text Route9_Text_JeremyIntro {
 text Route9_Text_JeremyDefeat {
     "Keep it coming, eh!\p"
     "Oh wait.\n"
-    "I'm out of POKéMON!$"
+    "I'm out of Pokémon!$"
 }
 
 text Route9_Text_JeremyPostBattle {
@@ -86,11 +86,11 @@ text Route9_Text_BricePostBattle {
 
 text Route9_Text_BrentIntro {
     "I got up early every day to raise\n"
-    "my POKéMON from cocoons!$"
+    "my Pokémon from cocoons!$"
 }
 
 text Route9_Text_BrentDefeat {
-    "WHAT?\p"
+    "What?\p"
     "What a total waste of time!$"
 }
 
@@ -115,7 +115,7 @@ text Route9_Text_AlanPostBattle {
 }
 
 text Route9_Text_ConnerIntro {
-    "Go, my super BUG POKéMON!$"
+    "Go, my super Bug Pokémon!$"
 }
 
 text Route9_Text_ConnerDefeat {
@@ -123,11 +123,11 @@ text Route9_Text_ConnerDefeat {
 }
 
 text Route9_Text_ConnerPostBattle {
-    "If you don't like BUG POKéMON,\n"
+    "If you don't like Bug Pokémon,\n"
     "you bug me!$"
 }
 
 text Route9_Text_RouteSign {
-    "ROUTE 9\n"
-    "CERULEAN CITY - ROCK TUNNEL$"
+    "Route 9\n"
+    "Cerulean City - Rock Tunnel$"
 }

@@ -6,8 +6,8 @@ text Text_SeismicTossTeach {
     "But that should spur us to study\n"
     "harder, not toss in the towel.\p"
     "The only thing you should toss…\p"
-    "Well, how about SEISMIC TOSS?\n"
-    "Should I teach that to a POKéMON?$"
+    "Well, how about Seismic Toss?\n"
+    "Should I teach that to a Pokémon?$"
 }
 
 text Text_SeismicTossDeclined {
@@ -16,8 +16,8 @@ text Text_SeismicTossDeclined {
 }
 
 text Text_SeismicTossWhichMon {
-    "Which POKéMON wants to learn\n"
-    "SEISMIC TOSS?$"
+    "Which Pokémon wants to learn\n"
+    "Seismic Toss?$"
 }
 
 text Text_SeismicTossTaught {
@@ -26,7 +26,7 @@ text Text_SeismicTossTaught {
 }
 
 text PewterCity_Museum_1F_Text_WhatsSpecialAboutMoonStone {
-    "MOON STONE, huh?\p"
+    "Moon Stone, huh?\p"
     "What's so special about it?\n"
     "Looks like an ordinary rock to me.$"
 }
@@ -45,13 +45,13 @@ text PewterCity_Museum_1F_Text_RunningSpaceExhibitThisMonth {
 }
 
 text PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu {
-    "I want a PIKACHU!\n"
+    "I want a Pikachu!\n"
     "It's so cute!\p"
     "I asked my daddy to catch me one!$"
 }
 
 text PewterCity_Museum_1F_Text_PikachuSoonIPromise {
-    "Yeah, a PIKACHU soon, I promise!$"
+    "Yeah, a Pikachu soon, I promise!$"
 }
 
 text PewterCity_Museum_1F_Text_SpaceShuttle {
@@ -59,6 +59,6 @@ text PewterCity_Museum_1F_Text_SpaceShuttle {
 }
 
 text PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon {
-    "A meteorite that fell on MT. MOON.\n"
-    "It is thought to be a MOON STONE.$"
+    "A meteorite that fell on Mt. Moon.\n"
+    "It is thought to be a Moon Stone.$"
 }

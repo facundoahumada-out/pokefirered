@@ -1,6 +1,6 @@
 text SSAnne_2F_Room4_Text_LamarIntro {
     "Which do you find more worthy,\n"
-    "a strong or a rare POKéMON?$"
+    "a strong or a rare Pokémon?$"
 }
 
 text SSAnne_2F_Room4_Text_LamarDefeat {
@@ -9,7 +9,7 @@ text SSAnne_2F_Room4_Text_LamarDefeat {
 
 text SSAnne_2F_Room4_Text_LamarPostBattle {
     "Personally, I prefer strong and\n"
-    "rare POKéMON.$"
+    "rare Pokémon.$"
 }
 
 text SSAnne_2F_Room4_Text_DawnIntro {
@@ -22,6 +22,6 @@ text SSAnne_2F_Room4_Text_DawnDefeat {
 }
 
 text SSAnne_2F_Room4_Text_DawnPostBattle {
-    "Oh, I adore your strong POKéMON!\n"
+    "Oh, I adore your strong Pokémon!\n"
     "Oh, how I envy you for them!$"
 }

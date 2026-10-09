@@ -1,5 +1,5 @@
 text MtMoon_1F_Text_MarcosIntro {
-    "WHOA!\n"
+    "Whoa!\n"
     "You shocked me!\l"
     "…Oh, you're just a kid!$"
 }
@@ -50,11 +50,11 @@ text MtMoon_1F_Text_JovanIntro {
 }
 
 text MtMoon_1F_Text_JovanDefeat {
-    "My POKéMON won't do!$"
+    "My Pokémon won't do!$"
 }
 
 text MtMoon_1F_Text_JovanPostBattle {
-    "I have to find stronger POKéMON.\n"
+    "I have to find stronger Pokémon.\n"
     "Where might they be?$"
 }
 
@@ -84,12 +84,12 @@ text MtMoon_1F_Text_KentDefeat {
 
 text MtMoon_1F_Text_KentPostBattle {
     "I saw them!\n"
-    "I'm sure they're from TEAM ROCKET!$"
+    "I'm sure they're from Team Rocket!$"
 }
 
 text MtMoon_1F_Text_RobbyIntro {
     "You need to go through this cave\n"
-    "to get to CERULEAN CITY.$"
+    "to get to Cerulean City.$"
 }
 
 text MtMoon_1F_Text_RobbyDefeat {
@@ -97,19 +97,19 @@ text MtMoon_1F_Text_RobbyDefeat {
 }
 
 text MtMoon_1F_Text_RobbyPostBattle {
-    "ZUBAT is tough!\n"
+    "Zubat is tough!\n"
     "But if you can catch one, you'll\l"
     "be able to count on it.$"
 }
 
 text MtMoon_1F_Text_ZubatIsABloodsucker {
     "Beware!\n"
-    "ZUBAT is a bloodsucker!$"
+    "Zubat is a bloodsucker!$"
 }
 
 text MtMoon_1F_Text_BrockHelpsExcavateFossils {
     "Hi, I'm excavating for fossils here\n"
-    "under MT. MOON.\p"
-    "Sometimes, BROCK of PEWTER GYM\n"
+    "under Mt. Moon.\p"
+    "Sometimes, Brock of Pewter Gym\n"
     "lends me a hand.$"
 }

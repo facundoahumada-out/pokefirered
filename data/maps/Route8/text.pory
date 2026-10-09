@@ -1,5 +1,5 @@
 text Route8_Text_AidanIntro {
-    "You look good at POKéMON, but how\n"
+    "You look good at Pokémon, but how\n"
     "is your chemistry grade?$"
 }
 
@@ -36,12 +36,12 @@ text Route8_Text_GlennDefeat {
 }
 
 text Route8_Text_GlennPostBattle {
-    "Go with GRIMER first…and…\n"
+    "Go with Grimer first…and…\n"
     "…and…then…$"
 }
 
 text Route8_Text_PaigeIntro {
-    "I like NIDORAN, so I collect them!$"
+    "I like Nidoran, so I collect them!$"
 }
 
 text Route8_Text_PaigeDefeat {
@@ -50,12 +50,12 @@ text Route8_Text_PaigeDefeat {
 }
 
 text Route8_Text_PaigePostBattle {
-    "When POKéMON grow up, they get\n"
+    "When Pokémon grow up, they get\n"
     "ugly! They shouldn't evolve.$"
 }
 
 text Route8_Text_LeslieIntro {
-    "School is fun, but so are POKéMON.$"
+    "School is fun, but so are Pokémon.$"
 }
 
 text Route8_Text_LeslieDefeat {
@@ -67,11 +67,11 @@ text Route8_Text_LesliePostBattle {
     "I was planning on getting some\n"
     "fresh air for a change, but…\p"
     "We're stuck here because of the\n"
-    "gates at SAFFRON.$"
+    "gates at Saffron.$"
 }
 
 text Route8_Text_AndreaIntro {
-    "MEOWTH is so cute, meow, meow,\n"
+    "Meowth is so cute, meow, meow,\n"
     "meow!$"
 }
 
@@ -80,7 +80,7 @@ text Route8_Text_AndreaDefeat {
 }
 
 text Route8_Text_AndreaPostBattle {
-    "I think PIDGEY and RATTATA are\n"
+    "I think Pidgey and Rattata are\n"
     "cute, too!$"
 }
 
@@ -91,11 +91,11 @@ text Route8_Text_MeganIntro {
 
 text Route8_Text_MeganDefeat {
     "Look what you did to my poor, cute\n"
-    "POKéMON!$"
+    "Pokémon!$"
 }
 
 text Route8_Text_MeganPostBattle {
-    "SAFFRON's gatekeeper won't let us\n"
+    "Saffron's gatekeeper won't let us\n"
     "go through.\p"
     "I know he's doing his job, but I\n"
     "think he's mean.$"
@@ -110,69 +110,69 @@ text Route8_Text_RichDefeat {
 }
 
 text Route8_Text_RichPostBattle {
-    "Playing games and POKéMON are like\n"
+    "Playing games and Pokémon are like\n"
     "eating peanuts! I just can't stop!$"
 }
 
 text Route8_Text_JuliaIntro {
     "What's a cute, round, and fluffy\n"
-    "POKéMON?$"
+    "Pokémon?$"
 }
 
 text Route8_Text_JuliaDefeat {
     "Stop!\p"
-    "Don't be so mean to my CLEFAIRY!$"
+    "Don't be so mean to my Clefairy!$"
 }
 
 text Route8_Text_JuliaPostBattle {
-    "I read that CLEFAIRY evolves when\n"
-    "it's exposed to a MOON STONE.\p"
-    "I read that in a POKéMON JOURNAL.\n"
+    "I read that Clefairy evolves when\n"
+    "it's exposed to a Moon Stone.\p"
+    "I read that in a Pokémon Journal.\n"
     "I wonder if it's true?$"
 }
 
 text Route8_Text_UndergroundPathSign {
-    "UNDERGROUND PATH\n"
-    "CELADON CITY - LAVENDER TOWN$"
+    "Underground Path\n"
+    "Celadon City - Lavender Town$"
 }
 
 text Route8_Text_EliIntro {
-    "ELI: Twin power is fantastic.\n"
+    "Eli: Twin power is fantastic.\n"
     "Did you know?$"
 }
 
 text Route8_Text_EliDefeat {
-    "ELI: But…\n"
+    "Eli: But…\n"
     "We used our twin power…$"
 }
 
 text Route8_Text_EliPostBattle {
-    "ELI: I caught my POKéMON with\n"
-    "ANNE!$"
+    "Eli: I caught my Pokémon with\n"
+    "Anne!$"
 }
 
 text Route8_Text_EliNotEnoughMons {
-    "ELI: We can't battle if you don't\n"
-    "have two POKéMON.$"
+    "Eli: We can't battle if you don't\n"
+    "have two Pokémon.$"
 }
 
 text Route8_Text_AnneIntro {
-    "ANNE: We'll shock you with our twin\n"
+    "Anne: We'll shock you with our twin\n"
     "power!$"
 }
 
 text Route8_Text_AnneDefeat {
-    "ANNE: Our twin power…$"
+    "Anne: Our twin power…$"
 }
 
 text Route8_Text_AnnePostBattle {
-    "ANNE: I'm raising POKéMON with\n"
-    "ELI.$"
+    "Anne: I'm raising Pokémon with\n"
+    "Eli.$"
 }
 
 text Route8_Text_AnneNotEnoughMons {
-    "ANNE: Hi, hi! Let's battle!\n"
-    "But bring two POKéMON.$"
+    "Anne: Hi, hi! Let's battle!\n"
+    "But bring two Pokémon.$"
 }
 
 text Route8_Text_RicardoIntro {

@@ -1,5 +1,5 @@
 text Trade_Text_LookingForMonWannaTradeForMon {
-    "I'm looking for the POKéMON\n"
+    "I'm looking for the Pokémon\n"
     "{STR_VAR_1}!\p"
     "Wanna trade one for my\n"
     "{STR_VAR_2}?$"

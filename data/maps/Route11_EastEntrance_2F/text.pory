@@ -1,32 +1,32 @@
 text Route11_EastEntrance_2F_Text_GiveItemfinderIfCaught30 {
     "Hi! Remember me?\n"
-    "I'm one of PROF. OAK's AIDES.\p"
-    "If your POKéDEX has complete data\n"
+    "I'm one of Prof. Oak's Aides.\p"
+    "If your Pokédex has complete data\n"
     "on {STR_VAR_1} species, I'm supposed to\l"
     "give you a reward.\p"
-    "PROF. OAK entrusted me with the\n"
+    "Prof. Oak entrusted me with the\n"
     "{STR_VAR_2} for you.\p"
     "So, {PLAYER}, let me ask you.\p"
     "Have you gathered data on at least\n"
-    "{STR_VAR_1} kinds of POKéMON?$"
+    "{STR_VAR_1} kinds of Pokémon?$"
 }
 
 text Route11_EastEntrance_2F_Text_GreatHereYouGo {
     "Great! You have caught or owned\n"
-    "{STR_VAR_3} kinds of POKéMON!\p"
+    "{STR_VAR_3} kinds of Pokémon!\p"
     "Congratulations!\n"
     "Here you go!$"
 }
 
 text Route11_EastEntrance_2F_Text_ReceivedItemfinderFromAide {
     "{PLAYER} received the {STR_VAR_2}\n"
-    "from the AIDE.$"
+    "from the Aide.$"
 }
 
 text Route11_EastEntrance_2F_Text_ExplainItemfinder {
     "There are items on the ground that\n"
     "may be hidden from view.\p"
-    "Use the ITEMFINDER to detect any\n"
+    "Use the Itemfinder to detect any\n"
     "hidden items close to you.\p"
     "The machine is a bit limited.\n"
     "It can't pinpoint item locations.\p"
@@ -39,7 +39,7 @@ text Route11_EastEntrance_2F_Text_ExplainItemfinder {
 text Route11_EastEntrance_2F_Text_BigMonAsleepOnRoad {
     "Let's see what the binoculars have\n"
     "to show…\p"
-    "A big POKéMON is asleep on a road!$"
+    "A big Pokémon is asleep on a road!$"
 }
 
 text Route11_EastEntrance_2F_Text_WhatABreathtakingView {
@@ -51,8 +51,8 @@ text Route11_EastEntrance_2F_Text_WhatABreathtakingView {
 text Route11_EastEntrance_2F_Text_RockTunnelGoodRouteToLavender {
     "Let's see what the binoculars have\n"
     "to show…\p"
-    "To get to LAVENDER TOWN from\n"
-    "CERULEAN CITY…\p"
-    "ROCK TUNNEL appears to be a good\n"
+    "To get to Lavender Town from\n"
+    "Cerulean City…\p"
+    "Rock Tunnel appears to be a good\n"
     "route to take.$"
 }

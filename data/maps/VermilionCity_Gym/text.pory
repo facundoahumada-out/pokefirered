@@ -3,7 +3,7 @@ text VermilionCity_Gym_Text_LtSurgeIntro {
     "doing here?\p"
     "You won't live long in combat!\n"
     "Not with your puny power!\p"
-    "I tell you, kid, electric POKéMON\n"
+    "I tell you, kid, electric Pokémon\n"
     "saved me during the war!\p"
     "They zapped my enemies into\n"
     "paralysis!\p"
@@ -13,14 +13,14 @@ text VermilionCity_Gym_Text_LtSurgeIntro {
 text VermilionCity_Gym_Text_LtSurgePostBattle {
     "A little word of advice, kid!\p"
     "Electricity is sure powerful!\p"
-    "But, it's useless against GROUND-\n"
-    "type POKéMON!$"
+    "But, it's useless against Ground-\n"
+    "type Pokémon!$"
 }
 
 text VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis {
-    "The THUNDERBADGE cranks up your\n"
-    "POKéMON's SPEED!\p"
-    "It also lets your POKéMON FLY\n"
+    "The Thunderbadge cranks up your\n"
+    "Pokémon's Speed!\p"
+    "It also lets your Pokémon Fly\n"
     "lightning-quick anytime, kid!\p"
     "You're special, kid!\n"
     "Take this!$"
@@ -28,27 +28,27 @@ text VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis {
 
 text VermilionCity_Gym_Text_ReceivedTM34FromLtSurge {
     "{PLAYER} received TM34\n"
-    "from LT. SURGE.$"
+    "from Lt. Surge.$"
 }
 
 text VermilionCity_Gym_Text_ExplainTM34 {
-    "TM34 contains SHOCK WAVE!\p"
-    "Teach it to an ELECTRIC POKéMON!$"
+    "TM34 contains Shock Wave!\p"
+    "Teach it to an Electric Pokémon!$"
 }
 
 text VermilionCity_Gym_Text_MakeRoomInYourBag {
-    "Yo, kid, make room in your BAG!$"
+    "Yo, kid, make room in your Bag!$"
 }
 
 text VermilionCity_Gym_Text_LtSurgeDefeat {
     "Now that's a shocker!\p"
     "You're the real deal, kid!\p"
-    "Fine, then, take the THUNDERBADGE!$"
+    "Fine, then, take the Thunderbadge!$"
 }
 
 text VermilionCity_Gym_Text_TuckerIntro {
-    "When I was in the Army, LT. SURGE\n"
-    "was my strict CO.\p"
+    "When I was in the Army, Lt. Surge\n"
+    "was my strict Co.\p"
     "He was a hard taskmaster.$"
 }
 
@@ -59,14 +59,14 @@ text VermilionCity_Gym_Text_TuckerDefeat {
 
 text VermilionCity_Gym_Text_TuckerPostBattle {
     "It's not easy opening that door.\p"
-    "LT. SURGE was always famous for\n"
+    "Lt. Surge was always famous for\n"
     "his cautious nature in the Army.$"
 }
 
 text VermilionCity_Gym_Text_BailyIntro {
     "I'm a lightweight, but I'm good\n"
     "with electricity!\p"
-    "That's why I joined this GYM.$"
+    "That's why I joined this Gym.$"
 }
 
 text VermilionCity_Gym_Text_BailyDefeat {
@@ -75,7 +75,7 @@ text VermilionCity_Gym_Text_BailyDefeat {
 
 text VermilionCity_Gym_Text_BailyPostBattle {
     "Okay, I'll talk!\p"
-    "LT. SURGE said he hid door\n"
+    "Lt. Surge said he hid door\n"
     "switches inside something.$"
 }
 
@@ -90,8 +90,8 @@ text VermilionCity_Gym_Text_DwayneDefeat {
 }
 
 text VermilionCity_Gym_Text_DwaynePostBattle {
-    "LT. SURGE installed the traps in\n"
-    "the GYM himself.\p"
+    "Lt. Surge installed the traps in\n"
+    "the Gym himself.\p"
     "He set up double locks everywhere.\n"
     "Let me give you a hint.\p"
     "When you open the first lock, the\n"
@@ -101,15 +101,15 @@ text VermilionCity_Gym_Text_DwaynePostBattle {
 text VermilionCity_Gym_Text_GymGuyAdvice {
     "Yo!\n"
     "Champ in the making!\p"
-    "LT. SURGE has a nickname.\p"
+    "Lt. Surge has a nickname.\p"
     "People refer to him as the\n"
     "Lightning American!\p"
     "He's an expert on electric\n"
-    "POKéMON.\p"
-    "BIRD/WATER-type POKéMON match\n"
-    "poorly against the ELECTRIC type.\p"
+    "Pokémon.\p"
+    "Bird/Water-type Pokémon match\n"
+    "poorly against the Electric type.\p"
     "Beware of paralysis, too.\p"
-    "LT. SURGE is very cautious.\p"
+    "Lt. Surge is very cautious.\p"
     "He's locked himself in, so it won't\n"
     "be easy getting to him.$"
 }
@@ -120,16 +120,16 @@ text VermilionCity_Gym_Text_GymGuyPostVictory {
 }
 
 text VermilionCity_Gym_Text_GymStatue {
-    "VERMILION POKéMON GYM\n"
-    "LEADER: LT. SURGE\p"
-    "WINNING TRAINERS:\n"
+    "Vermilion Pokémon Gym\n"
+    "Leader: Lt. Surge\p"
+    "Winning Trainers:\n"
     "{RIVAL}$"
 }
 
 text VermilionCity_Gym_Text_GymStatuePlayerWon {
-    "VERMILION POKéMON GYM\n"
-    "LEADER: LT. SURGE\p"
-    "WINNING TRAINERS:\n"
+    "Vermilion Pokémon Gym\n"
+    "Leader: Lt. Surge\p"
+    "Winning Trainers:\n"
     "{RIVAL}, {PLAYER}$"
 }
 

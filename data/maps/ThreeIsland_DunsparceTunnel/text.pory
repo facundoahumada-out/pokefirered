@@ -4,7 +4,7 @@ text ThreeIsland_DunsparceTunnel_Text_ProspectingForGold {
     "What am I doing here, you ask?\n"
     "Why, I'm prospecting for gold!\p"
     "When I strike it rich, I'm buying\n"
-    "a house in KANTO.$"
+    "a house in Kanto.$"
 }
 
 text ThreeIsland_DunsparceTunnel_Text_StruckGoldThisIsForYou {
@@ -19,12 +19,12 @@ text ThreeIsland_DunsparceTunnel_Text_StruckGoldThisIsForYou {
 }
 
 text ThreeIsland_DunsparceTunnel_Text_ThatsANugget {
-    "That's a NUGGET!\p"
+    "That's a Nugget!\p"
     "I can't give you any nuggets of\n"
     "wisdom, so that'll have to do!$"
 }
 
 text ThreeIsland_DunsparceTunnel_Text_WhoopsBagCrammedFull {
-    "Whoops, your BAG is crammed full!\n"
+    "Whoops, your Bag is crammed full!\n"
     "I'll give this to you later.$"
 }

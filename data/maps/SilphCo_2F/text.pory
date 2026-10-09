@@ -1,16 +1,16 @@
 text SilphCo_2F_Text_ConnorIntro {
     "Help!\n"
-    "I'm a SILPH employee.$"
+    "I'm a Silph employee.$"
 }
 
 text SilphCo_2F_Text_ConnorDefeat {
     "How did you know\n"
-    "I was a ROCKET?$"
+    "I was a Rocket?$"
 }
 
 text SilphCo_2F_Text_ConnorPostBattle {
-    "I work for both SILPH and TEAM\n"
-    "ROCKET.$"
+    "I work for both Silph and Team\n"
+    "Rocket.$"
 }
 
 text SilphCo_2F_Text_JerryIntro {
@@ -52,39 +52,39 @@ text SilphCo_2F_Text_Grunt2Defeat {
 }
 
 text SilphCo_2F_Text_Grunt2PostBattle {
-    "SILPH CO. will be associated with\n"
-    "TEAM ROCKET!$"
+    "Silph Co. will be associated with\n"
+    "Team Rocket!$"
 }
 
 text Text_ThunderWaveTeach {
     "Eeek!\n"
     "No! Stop! Help!\p"
-    "Oh, you're not with TEAM ROCKET.\n"
+    "Oh, you're not with Team Rocket.\n"
     "I'm sorry, I thought…\p"
     "Will you forgive me if I teach\n"
-    "you the THUNDER WAVE technique?$"
+    "you the Thunder Wave technique?$"
 }
 
 text Text_ThunderWaveDeclined {
     "Oh…\n"
-    "But THUNDER WAVE is convenient…$"
+    "But Thunder Wave is convenient…$"
 }
 
 text Text_ThunderWaveWhichMon {
-    "Which POKéMON should I teach\n"
-    "THUNDER WAVE?$"
+    "Which Pokémon should I teach\n"
+    "Thunder Wave?$"
 }
 
 text Text_ThunderWaveTaught {
-    "THUNDER WAVE causes paralysis in\n"
-    "the target POKéMON.\p"
-    "A paralyzed POKéMON may be unable\n"
+    "Thunder Wave causes paralysis in\n"
+    "the target Pokémon.\p"
+    "A paralyzed Pokémon may be unable\n"
     "to move in battle.\p"
-    "It's an ELECTRIC-type move, so it\n"
-    "won't work on some POKéMON.$"
+    "It's an Electric-type move, so it\n"
+    "won't work on some Pokémon.$"
 }
 
 text SilphCo_2F_Text_FloorSign {
-    "SILPH CO. HEAD OFFICE\n"
+    "Silph Co. Head Office\n"
     "2F$"
 }

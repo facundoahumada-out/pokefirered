@@ -25,24 +25,24 @@ text PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen {
 
 text PalletTown_ProfessorOaksLab_Text_RivalReceivedMonFromOak {
     "{RIVAL} received the {STR_VAR_1}\n"
-    "from PROF. OAK!$"
+    "from Prof. Oak!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_RivalMyMonLooksTougher {
-    "{RIVAL}: My POKéMON looks a lot\n"
+    "{RIVAL}: My Pokémon looks a lot\n"
     "tougher than yours.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons {
     "{RIVAL}: Wait, {PLAYER}!\n"
-    "Let's check out our POKéMON!\p"
+    "Let's check out our Pokémon!\p"
     "Come on, I'll take you on!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_RivalDefeat {
-    "WHAT?\n"
+    "What?\n"
     "Unbelievable!\l"
-    "I picked the wrong POKéMON!$"
+    "I picked the wrong Pokémon!$"
 }
 
 // Also used for early Route 22 battle
@@ -53,7 +53,7 @@ text Text_RivalVictory {
 
 text PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon {
     "{RIVAL}: Okay! I'll make my\n"
-    "POKéMON battle to toughen it up!\p"
+    "Pokémon battle to toughen it up!\p"
     "{PLAYER}! Gramps!\n"
     "Smell you later!$"
 }
@@ -75,7 +75,7 @@ text PalletTown_ProfessorOaksLab_Text_RivalLeaveItToMeGramps {
 text PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouMap {
     "{PLAYER}, I hate to say it, but you\n"
     "won't be necessary for this.\p"
-    "I know! I'll borrow a TOWN MAP\n"
+    "I know! I'll borrow a Town Map\n"
     "from my sis!\p"
     "I'll tell her not to lend you one,\n"
     "{PLAYER}! Hahaha!\p"
@@ -84,17 +84,17 @@ text PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouMap {
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne {
-    "OAK: {RIVAL}?\n"
+    "Oak: {RIVAL}?\n"
     "Let me think…\p"
     "Oh, that's right, I told you to\n"
     "come! Just wait!\p"
     "Here, {PLAYER}.\p"
-    "There are three POKéMON here.\p"
+    "There are three Pokémon here.\p"
     "Haha!\p"
-    "The POKéMON are held inside\n"
-    "these POKé BALLS.\p"
+    "The Pokémon are held inside\n"
+    "these Poké Balls.\p"
     "When I was young, I was a serious\n"
-    "POKéMON TRAINER.\p"
+    "Pokémon Trainer.\p"
     "But now, in my old age, I have\n"
     "only these three left.\p"
     "You can have one.\n"
@@ -102,138 +102,138 @@ text PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne {
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakBePatientRival {
-    "OAK: Be patient, {RIVAL}.\n"
+    "Oak: Be patient, {RIVAL}.\n"
     "You can have one, too!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakWhichOneWillYouChoose {
-    "OAK: Now, {PLAYER}.\p"
-    "Inside those three POKé BALLS are\n"
-    "POKéMON.\p"
+    "Oak: Now, {PLAYER}.\p"
+    "Inside those three Poké Balls are\n"
+    "Pokémon.\p"
     "Which one will you choose for\n"
     "yourself?$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakHeyDontGoAwayYet {
-    "OAK: Hey!\n"
+    "Oak: Hey!\n"
     "Don't go away yet!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakChoosingCharmander {
-    "Ah! CHARMANDER is your choice.\n"
+    "Ah! Charmander is your choice.\n"
     "You should raise it patiently.\p"
     "So, {PLAYER}, you're claiming the\n"
-    "FIRE POKéMON CHARMANDER?$"
+    "Fire Pokémon Charmander?$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakChoosingSquirtle {
-    "Hm! SQUIRTLE is your choice.\n"
+    "Hm! Squirtle is your choice.\n"
     "It's one worth raising.\p"
     "So, {PLAYER}, you've decided on the\n"
-    "WATER POKéMON SQUIRTLE?$"
+    "Water Pokémon Squirtle?$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur {
-    "I see! BULBASAUR is your choice.\n"
+    "I see! Bulbasaur is your choice.\n"
     "It's very easy to raise.\p"
     "So, {PLAYER}, you want to go with\n"
-    "the GRASS POKéMON BULBASAUR?$"
+    "the Grass Pokémon Bulbasaur?$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic {
-    "This POKéMON is really quite\n"
+    "This Pokémon is really quite\n"
     "energetic!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak {
     "{PLAYER} received the {STR_VAR_1}\n"
-    "from PROF. OAK!$"
+    "from Prof. Oak!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakCanReachNextTownWithMon {
-    "OAK: If a wild POKéMON appears,\n"
-    "your POKéMON can battle it.\p"
+    "Oak: If a wild Pokémon appears,\n"
+    "your Pokémon can battle it.\p"
     "With it at your side, you should be\n"
     "able to reach the next town.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow {
-    "OAK: {PLAYER}, raise your young\n"
-    "POKéMON by making it battle.\p"
+    "Oak: {PLAYER}, raise your young\n"
+    "Pokémon by making it battle.\p"
     "It has to battle for it to grow.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe {
-    "OAK: Oh, {PLAYER}!\n"
-    "How is my old POKéMON?\p"
+    "Oak: Oh, {PLAYER}!\n"
+    "How is my old Pokémon?\p"
     "Well, it seems to be growing more\n"
     "attached to you.\p"
-    "You must be talented as a POKéMON\n"
-    "TRAINER.\p"
+    "You must be talented as a Pokémon\n"
+    "Trainer.\p"
     "What's that?\n"
     "You have something for me?$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_DeliveredOaksParcel {
-    "{PLAYER} delivered OAK'S PARCEL.$"
+    "{PLAYER} delivered Oak's Parcel.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakCustomBallIOrdered {
     "Ah! \n"
-    "It's the custom POKé BALL!\p"
+    "It's the custom Poké Ball!\p"
     "I had it on order.\n"
     "Thank you!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakHaveRequestForYouTwo {
-    "OAK: Oh, right!\n"
+    "Oak: Oh, right!\n"
     "I have a request for you two.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakPokedexOnDesk {
     "On the desk there is my invention,\n"
-    "the POKéDEX!\p"
+    "the Pokédex!\p"
     "It automatically records data on\n"
-    "POKéMON you've seen or caught.\p"
+    "Pokémon you've seen or caught.\p"
     "It's a high-tech encyclopedia!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakTakeTheseWithYou {
-    "OAK: {PLAYER} and {RIVAL}.\n"
+    "Oak: {PLAYER} and {RIVAL}.\n"
     "Take these with you.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_ReceivedPokedexFromOak {
-    "{PLAYER} received the POKéDEX\n"
-    "from PROF. OAK.$"
+    "{PLAYER} received the Pokédex\n"
+    "from Prof. Oak.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese {
-    "OAK: You can't get detailed data\n"
-    "on POKéMON by just seeing them.\p"
+    "Oak: You can't get detailed data\n"
+    "on Pokémon by just seeing them.\p"
     "You must catch them to obtain\n"
     "complete data.\p"
     "So, here are some tools for\n"
-    "catching wild POKéMON.$"
+    "catching wild Pokémon.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls {
-    "{PLAYER} received five POKé BALLS.$"
+    "{PLAYER} received five Poké Balls.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakExplainCatching {
-    "When a wild POKéMON appears,\n"
+    "When a wild Pokémon appears,\n"
     "it's fair game.\p"
-    "Just throw a POKé BALL at it and\n"
+    "Just throw a Poké Ball at it and\n"
     "try to catch it!\p"
     "This won't always work, however.\p"
-    "A healthy POKéMON can escape.\n"
+    "A healthy Pokémon can escape.\n"
     "You have to be lucky!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream {
     "To make a complete guide on all\n"
-    "the POKéMON in the world…\p"
+    "the Pokémon in the world…\p"
     "That was my dream!\p"
     "But, I'm too old.\n"
     "I can't get the job done.\p"
@@ -241,21 +241,21 @@ text PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream {
     "dream for me.\p"
     "Get moving, you two.\p"
     "This is a great undertaking in\n"
-    "POKéMON history!$"
+    "Pokémon history!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait {
-    "POKéMON around the world wait for\n"
+    "Pokémon around the world wait for\n"
     "you, {PLAYER}!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakAddedNothingToPokedex {
     "Ah, {PLAYER}!\n"
-    "How is your POKéDEX shaping up?\p"
+    "How is your Pokédex shaping up?\p"
     "{RIVAL} has already caught some\n"
-    "POKéMON and added to the data.\p"
+    "Pokémon and added to the data.\p"
     "So, {PLAYER}, let's have a look at\n"
-    "your POKéDEX.\p"
+    "your Pokédex.\p"
     "…What's the matter?\n"
     "You've added no new data at all.\p"
     "I'll give you these, so do try a\n"
@@ -263,9 +263,9 @@ text PalletTown_ProfessorOaksLab_Text_OakAddedNothingToPokedex {
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakComeSeeMeSometime {
-    "OAK: Come see me sometime.\p"
+    "Oak: Come see me sometime.\p"
     "After all, I want to know how your\n"
-    "POKéDEX is coming along.$"
+    "Pokédex is coming along.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_BlankEncyclopedia {
@@ -274,25 +274,25 @@ text PalletTown_ProfessorOaksLab_Text_BlankEncyclopedia {
 }
 
 text PalletTown_ProfessorOaksLab_Text_ThoseArePokeBalls {
-    "Those are POKé BALLS.\n"
-    "They contain POKéMON!$"
+    "Those are Poké Balls.\n"
+    "They contain Pokémon!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OaksLastMon {
-    "That's PROF. OAK's last POKéMON.$"
+    "That's Prof. Oak's last Pokémon.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_PressStartToOpenMenu {
-    "Press START to open the MENU!$"
+    "Press Start to open the Menu!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_SaveOptionInMenu {
-    "The SAVE option is on the MENU.\n"
+    "The Save option is on the Menu.\n"
     "Use it regularly.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_AllMonTypesHaveStrongAndWeakPoints {
-    "All POKéMON types have strong and\n"
+    "All Pokémon types have strong and\n"
     "weak points against others.$"
 }
 
@@ -300,46 +300,46 @@ text PalletTown_ProfessorOaksLab_Text_EmailMessage {
     "There's an e-mail message here.\p"
     "…\p"
     "Finally!\n"
-    "The ultimate TRAINERS of the\l"
-    "POKéMON LEAGUE are ready to\l"
+    "The ultimate Trainers of the\l"
+    "Pokémon League are ready to\l"
     "take on all comers!\p"
-    "Bring your best POKéMON and see\n"
-    "how you rate as a TRAINER!\p"
-    "POKéMON LEAGUE HQ\n"
-    "INDIGO PLATEAU\p"
-    "PROF. OAK, please visit us!\n"
+    "Bring your best Pokémon and see\n"
+    "how you rate as a Trainer!\p"
+    "Pokémon League HQ\n"
+    "Indigo Plateau\p"
+    "Prof. Oak, please visit us!\n"
     "…$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide {
-    "I study POKéMON as PROF. OAK's\n"
-    "AIDE.$"
+    "I study Pokémon as Prof. Oak's\n"
+    "Aide.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_DaisyWillGroomMons {
     "Hi, {PLAYER}. I bet you've become\n"
-    "good friends with your POKéMON.\p"
+    "good friends with your Pokémon.\p"
     "By the way, did you know about\n"
-    "DAISY?\p"
-    "If you show DAISY your POKéMON,\n"
+    "Daisy?\p"
+    "If you show Daisy your Pokémon,\n"
     "she can tell how much it likes you.\p"
     "Occasionally, she will even groom\n"
-    "a POKéMON for you.\p"
+    "a Pokémon for you.\p"
     "This is a secret, so please don't\n"
     "tell anyone.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakIsGoingToHaveRadioShow {
-    "PROF. OAK is going to have his own\n"
+    "Prof. Oak is going to have his own\n"
     "radio show soon.\p"
-    "The program will be called PROF.\n"
-    "OAK's POKéMON SEMINAR.$"
+    "The program will be called Prof.\n"
+    "Oak's Pokémon Seminar.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakIsAuthorityOnMons {
-    "PROF. OAK may not look like much,\n"
-    "but he's the authority on POKéMON.\p"
-    "Many POKéMON TRAINERS hold him in\n"
+    "Prof. Oak may not look like much,\n"
+    "but he's the authority on Pokémon.\p"
+    "Many Pokémon Trainers hold him in\n"
     "high regard.$"
 }
 
@@ -352,9 +352,9 @@ text PalletTown_ProfessorOaksLab_Text_OakFavorToAskYouPlayer {
 
 text PalletTown_ProfessorOaksLab_Text_OakSightingsOfRareMons {
     "Recently, there have been sightings\n"
-    "of many rare POKéMON species.\p"
-    "I'm talking about POKéMON that\n"
-    "have never been seen in KANTO.\p"
+    "of many rare Pokémon species.\p"
+    "I'm talking about Pokémon that\n"
+    "have never been seen in Kanto.\p"
     "I would love to go see things for\n"
     "myself, but I'm much too old.\p"
     "Since I can't do it, {PLAYER}, I'd\n"
@@ -365,21 +365,21 @@ text PalletTown_ProfessorOaksLab_Text_RivalJustLetMeHandleEverything {
     "{RIVAL}: Hey, I heard that!\p"
     "Gramps, what's with favoring\n"
     "{PLAYER} over me all the time?\p"
-    "I went and collected more POKéMON,\n"
+    "I went and collected more Pokémon,\n"
     "and faster, too.\p"
     "You should just let me handle\n"
     "everything.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakNeedYourHelpTooNeedToSeePokedexes {
-    "OAK: I know, I know.\n"
+    "Oak: I know, I know.\n"
     "Of course I need your help, too.\p"
     "Now, I need to see both your\n"
-    "POKéDEXES.$"
+    "Pokédexes.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakTookBothPokedexUnits {
-    "PROF. OAK took both POKéDEX\n"
+    "Prof. Oak took both Pokédex\n"
     "units.$"
 }
 
@@ -388,29 +388,29 @@ text PalletTown_ProfessorOaksLab_Text_OakNowTheseUnitsCanRecordMoreData {
     "… … …  … … …\p"
     "…And that's done!\p"
     "Now these units can record data on\n"
-    "a lot more POKéMON.$"
+    "a lot more Pokémon.$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_PlayersPokedexWasUpgraded {
-    "{PLAYER}'s POKéDEX was upgraded!$"
+    "{PLAYER}'s Pokédex was upgraded!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_OakMustReallyWorkToFillPokedex {
     "Now, {PLAYER} and {RIVAL}!\p"
     "This time, you really must work\n"
-    "towards filling your POKéDEXES.\p"
+    "towards filling your Pokédexes.\p"
     "I urge you to make them the best\n"
     "and the most complete of all time!\p"
     "Truly, this is a monumentally great\n"
-    "undertaking in POKéMON history!$"
+    "undertaking in Pokémon history!$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex {
     "{RIVAL}: Gramps, calm down.\n"
     "Don't get so excited.\p"
-    "I'll get the POKéDEX completed,\n"
+    "I'll get the Pokédex completed,\n"
     "don't you worry about a thing.\p"
     "I think I'll try looking around\n"
-    "ONE ISLAND first…\p"
+    "One Island first…\p"
     "Anyways, I'm outta here!$"
 }

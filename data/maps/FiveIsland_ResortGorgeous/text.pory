@@ -25,7 +25,7 @@ text FiveIsland_ResortGorgeous_Text_CelinaDefeat {
 }
 
 text FiveIsland_ResortGorgeous_Text_CelinaPostBattle {
-    "GILLIAN?\n"
+    "Gillian?\n"
     "Please tilt your head slightly…\l"
     "There! That's the look I want!$"
 }
@@ -63,7 +63,7 @@ text FiveIsland_ResortGorgeous_Text_JackiPostBattle {
 
 text FiveIsland_ResortGorgeous_Text_GillianIntro {
     "I'm thinking of having a pool\n"
-    "made specially for POKéMON.$"
+    "made specially for Pokémon.$"
 }
 
 text FiveIsland_ResortGorgeous_Text_GillianDefeat {
@@ -106,10 +106,10 @@ text FiveIsland_ResortGorgeous_Text_TobyPostBattle {
 }
 
 text FiveIsland_ResortGorgeous_Text_SelphyThanksYouMayGoNow {
-    "SELPHY: Thank you.\p"
+    "Selphy: Thank you.\p"
     "You may go now.$"
 }
 
 text FiveIsland_ResortGorgeous_Text_SelphysHouse {
-    "SELPHY'S HOUSE$"
+    "Selphy's House$"
 }

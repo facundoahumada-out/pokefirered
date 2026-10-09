@@ -1,7 +1,7 @@
 SSAnne_2F_Room4_Text_LamarIntro::
 # 1 "data/maps/SSAnne_2F_Room4/text.pory"
 	.string "Which do you find more worthy,\n"
-	.string "a strong or a rare POKéMON?$"
+	.string "a strong or a rare Pokémon?$"
 
 SSAnne_2F_Room4_Text_LamarDefeat::
 # 6 "data/maps/SSAnne_2F_Room4/text.pory"
@@ -10,7 +10,7 @@ SSAnne_2F_Room4_Text_LamarDefeat::
 SSAnne_2F_Room4_Text_LamarPostBattle::
 # 10 "data/maps/SSAnne_2F_Room4/text.pory"
 	.string "Personally, I prefer strong and\n"
-	.string "rare POKéMON.$"
+	.string "rare Pokémon.$"
 
 SSAnne_2F_Room4_Text_DawnIntro::
 # 15 "data/maps/SSAnne_2F_Room4/text.pory"
@@ -23,5 +23,5 @@ SSAnne_2F_Room4_Text_DawnDefeat::
 
 SSAnne_2F_Room4_Text_DawnPostBattle::
 # 24 "data/maps/SSAnne_2F_Room4/text.pory"
-	.string "Oh, I adore your strong POKéMON!\n"
+	.string "Oh, I adore your strong Pokémon!\n"
 	.string "Oh, how I envy you for them!$"

@@ -1,12 +1,12 @@
 text SixIsland_WaterPath_House1_Text_LoveItNeedItHeracross {
-    "Hera, hera, HERACROSS!\n"
+    "Hera, hera, Heracross!\n"
     "Big and shiny, it's the bug boss!\l"
-    "Love it, need it, HERACROSS!$"
+    "Love it, need it, Heracross!$"
 }
 
 text SixIsland_WaterPath_House1_Text_MayIMeasureHeracross {
     "Eeeeek!\n"
-    "That's a HERACROSS!\p"
+    "That's a Heracross!\p"
     "Please, please, may I measure how\n"
     "big it is?$"
 }
@@ -19,9 +19,9 @@ text SixIsland_WaterPath_House1_Text_ItsXInchesDeserveReward {
 
 text SixIsland_WaterPath_House1_Text_WantToSeeBiggerOne {
     "I want to see a much, much bigger\n"
-    "HERACROSS than that one.\p"
+    "Heracross than that one.\p"
     "Oh, how I adore them, big\n"
-    "HERACROSS!$"
+    "Heracross!$"
 }
 
 text SixIsland_WaterPath_House1_Text_ItsXInchesSameAsBefore {
@@ -31,24 +31,24 @@ text SixIsland_WaterPath_House1_Text_ItsXInchesSameAsBefore {
 
 text SixIsland_WaterPath_House1_Text_ItsXInchesYInchesWasBiggest {
     "Oh, it's just {STR_VAR_2} inches.\n"
-    "The HERACROSS before was bigger.\p"
+    "The Heracross before was bigger.\p"
     "It was {STR_VAR_3} inches, the biggest\n"
-    "HERACROSS you've brought me.$"
+    "Heracross you've brought me.$"
 }
 
 text SixIsland_WaterPath_House1_Text_ThisWontDo {
     "Oh, no! This won't do!\p"
-    "HERACROSS looks much more macho\n"
+    "Heracross looks much more macho\n"
     "and cool, and has a lovely horn!$"
 }
 
 text SixIsland_WaterPath_House1_Text_YourBagIsFull {
-    "Your BAG is full.\n"
+    "Your Bag is full.\n"
     "My reward won't fit.$"
 }
 
 text SixIsland_WaterPath_House1_Text_BiggestHeracrossIsXInches {
-    "The biggest HERACROSS that I have\n"
+    "The biggest Heracross that I have\n"
     "ever seen measured so far is:\p"
     "{STR_VAR_3} inches!$"
 }

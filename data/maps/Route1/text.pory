@@ -1,32 +1,32 @@
 text Route1_Text_WorkAtPokeMartTakeSample {
     "Hi!\n"
-    "I work at a POKéMON MART.\p"
+    "I work at a Pokémon Mart.\p"
     "It's part of a convenient chain\n"
     "selling all sorts of items.\p"
-    "Please, visit us in VIRIDIAN CITY.\p"
+    "Please, visit us in Viridian City.\p"
     "I know, I'll give you a sample.\n"
     "Here you go!$"
 }
 
 text Route1_Text_ComeSeeUsIfYouNeedPokeBalls {
     "Please come see us if you need\n"
-    "POKé BALLS for catching POKéMON.$"
+    "Poké Balls for catching Pokémon.$"
 }
 
 text Route1_Text_PutPotionAway {
-    "{PLAYER} put the POTION away in\n"
-    "the BAG's ITEMS POCKET.$"
+    "{PLAYER} put the Potion away in\n"
+    "the Bag's Items Pocket.$"
 }
 
 text Route1_Text_CanJumpFromLedges {
     "See those ledges along the road?\p"
     "It's a bit scary, but you can jump\n"
     "from them.\p"
-    "You can get back to PALLET TOWN\n"
+    "You can get back to Pallet Town\n"
     "quicker that way.$"
 }
 
 text Route1_Text_RouteSign {
-    "ROUTE 1\n"
-    "PALLET TOWN - VIRIDIAN CITY$"
+    "Route 1\n"
+    "Pallet Town - Viridian City$"
 }

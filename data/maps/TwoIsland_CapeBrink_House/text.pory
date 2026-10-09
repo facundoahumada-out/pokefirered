@@ -15,7 +15,7 @@ text Text_JustMistaken {
 
 text Text_AllowMeToTeachMonUltimateMove {
     "Oh! This is the one!\n"
-    "This is the POKéMON!\p"
+    "This is the Pokémon!\p"
     "This {STR_VAR_1} is worthy of\n"
     "learning my ultimate move!\p"
     "Will you allow it?\p"

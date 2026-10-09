@@ -1,14 +1,14 @@
 SixIsland_Text_IslandSign::
 # 1 "data/maps/SixIsland/text.pory"
-	.string "SIX ISLAND\n"
+	.string "Six Island\n"
 	.string "Fortune Island of Aged Wisdom$"
 
 SixIsland_Text_ThatWayToWaterPathRuinValley::
 # 6 "data/maps/SixIsland/text.pory"
 	.string "Keep going this way and you'll get\n"
-	.string "to the WATER PATH.\p"
+	.string "to the Water Path.\p"
 	.string "Stay on that and you'll get to\n"
-	.string "the RUIN VALLEY.$"
+	.string "the Ruin Valley.$"
 
 SixIsland_Text_SkyAtNightIsFantastic::
 # 13 "data/maps/SixIsland/text.pory"

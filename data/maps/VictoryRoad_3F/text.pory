@@ -1,9 +1,9 @@
 text Text_DoubleEdgeTeach {
     "You should be proud of yourself,\n"
     "having battled your way through\l"
-    "VICTORY ROAD so courageously.\p"
+    "Victory Road so courageously.\p"
     "In recognition of your feat,\n"
-    "I'll teach you DOUBLE-EDGE.\p"
+    "I'll teach you Double-Edge.\p"
     "Would you like me to teach that\n"
     "technique?$"
 }
@@ -14,13 +14,13 @@ text Text_DoubleEdgeDeclined {
 }
 
 text Text_DoubleEdgeWhichMon {
-    "Which POKéMON should I teach\n"
-    "DOUBLE-EDGE?$"
+    "Which Pokémon should I teach\n"
+    "Double-Edge?$"
 }
 
 text Text_DoubleEdgeTaught {
     "Keep that drive going for the\n"
-    "POKéMON LEAGUE!\p"
+    "Pokémon League!\p"
     "Take a run at them and knock 'em\n"
     "out!$"
 }
@@ -34,12 +34,12 @@ text VictoryRoad_3F_Text_GeorgeDefeat {
 }
 
 text VictoryRoad_3F_Text_GeorgePostBattle {
-    "So, it was you who beat GIOVANNI\n"
-    "of TEAM ROCKET?$"
+    "So, it was you who beat Giovanni\n"
+    "of Team Rocket?$"
 }
 
 text VictoryRoad_3F_Text_AlexaIntro {
-    "TRAINERS live to seek stronger\n"
+    "Trainers live to seek stronger\n"
     "opponents.$"
 }
 
@@ -76,48 +76,48 @@ text VictoryRoad_3F_Text_ColbyDefeat {
 }
 
 text VictoryRoad_3F_Text_ColbyPostBattle {
-    "All TRAINERS here are headed to\n"
-    "the POKéMON LEAGUE.\p"
+    "All Trainers here are headed to\n"
+    "the Pokémon League.\p"
     "Don't let down your guard.$"
 }
 
 text VictoryRoad_3F_Text_RayIntro {
-    "RAY: Together, the two of us are\n"
+    "Ray: Together, the two of us are\n"
     "destined for greatness!$"
 }
 
 text VictoryRoad_3F_Text_RayDefeat {
-    "RAY: Ludicrous!\n"
+    "Ray: Ludicrous!\n"
     "This can't be!$"
 }
 
 text VictoryRoad_3F_Text_RayPostBattle {
-    "RAY: You've beaten us.\n"
+    "Ray: You've beaten us.\n"
     "Greatness remains elusive…$"
 }
 
 text VictoryRoad_3F_Text_RayNotEnoughMons {
-    "RAY: Together, the two of us are\n"
+    "Ray: Together, the two of us are\n"
     "striving for the pinnacle.\p"
-    "We need you to bring two POKéMON\n"
+    "We need you to bring two Pokémon\n"
     "into battle with us.$"
 }
 
 text VictoryRoad_3F_Text_TyraIntro {
-    "TYRA: We're trying to become\n"
+    "Tyra: We're trying to become\n"
     "champions together.$"
 }
 
 text VictoryRoad_3F_Text_TyraDefeat {
-    "TYRA: Oh, but…$"
+    "Tyra: Oh, but…$"
 }
 
 text VictoryRoad_3F_Text_TyraPostBattle {
-    "TYRA: You've taught me that power\n"
+    "Tyra: You've taught me that power\n"
     "can be infinite in shape and form.$"
 }
 
 text VictoryRoad_3F_Text_TyraNotEnoughMons {
-    "TYRA: You can't battle with us if\n"
-    "you have only one POKéMON.$"
+    "Tyra: You can't battle with us if\n"
+    "you have only one Pokémon.$"
 }

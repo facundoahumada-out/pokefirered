@@ -1,5 +1,5 @@
 text Route21_South_Text_JackIntro {
-    "I caught my POKéMON at sea.$"
+    "I caught my Pokémon at sea.$"
 }
 
 text Route21_South_Text_JackDefeat {
@@ -8,7 +8,7 @@ text Route21_South_Text_JackDefeat {
 }
 
 text Route21_South_Text_JackPostBattle {
-    "Where'd you catch your POKéMON?$"
+    "Where'd you catch your Pokémon?$"
 }
 
 text Route21_South_Text_JeromeIntro {
@@ -68,43 +68,43 @@ text Route21_South_Text_NolanPostBattle {
 }
 
 text Route21_North_Text_LilIntro {
-    "LIL: Huh? A battle?\n"
-    "IAN, can't you do it alone?$"
+    "Lil: Huh? A battle?\n"
+    "Ian, can't you do it alone?$"
 }
 
 text Route21_North_Text_LilDefeat {
-    "LIL: Oh, see?\n"
+    "Lil: Oh, see?\n"
     "We lost. Happy now?$"
 }
 
 text Route21_North_Text_LilPostBattle {
-    "LIL: I'm tired.\n"
+    "Lil: I'm tired.\n"
     "Can't we go home already?$"
 }
 
 text Route21_North_Text_LilNotEnoughMons {
-    "LIL: Huh? A battle?\n"
+    "Lil: Huh? A battle?\n"
     "I can't be bothered to do it alone.\l"
-    "Bring two POKéMON, won't you?$"
+    "Bring two Pokémon, won't you?$"
 }
 
 text Route21_North_Text_IanIntro {
-    "IAN: My sis doesn't get enough\n"
+    "Ian: My sis doesn't get enough\n"
     "exercise, so I made her come.$"
 }
 
 text Route21_North_Text_IanDefeat {
-    "IAN: Awww, Sis!\n"
+    "Ian: Awww, Sis!\n"
     "Get it together!$"
 }
 
 text Route21_North_Text_IanPostBattle {
-    "IAN: Come on, Sis!\p"
+    "Ian: Come on, Sis!\p"
     "You're not going to lose weight\n"
     "like this!$"
 }
 
 text Route21_North_Text_IanNotEnoughMons {
-    "IAN: We want a two-on-two battle.\n"
-    "So can you bring two POKéMON?$"
+    "Ian: We want a two-on-two battle.\n"
+    "So can you bring two Pokémon?$"
 }

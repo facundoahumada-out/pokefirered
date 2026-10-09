@@ -60,5 +60,5 @@ PokemonTower_5F_Text_PurifiedZoneMonsFullyHealed::
 # 59 "data/maps/PokemonTower_5F/text.pory"
 	.string "Entered the purified and protected\n"
 	.string "zone.\p"
-	.string "{PLAYER}'s POKéMON were fully\n"
+	.string "{PLAYER}'s Pokémon were fully\n"
 	.string "healed.$"

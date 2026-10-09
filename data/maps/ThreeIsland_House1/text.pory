@@ -1,5 +1,5 @@
 text ThreeIsland_House1_Text_YoureAlwaysSoCool {
-    "LOSTELLE: Hi, {PLAYER}!\n"
+    "Lostelle: Hi, {PLAYER}!\n"
     "You're always so cool!\p"
     "I'll make lunch for you, too, one\n"
     "day, {PLAYER}.$"

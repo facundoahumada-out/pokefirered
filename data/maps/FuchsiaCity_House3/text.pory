@@ -1,13 +1,13 @@
 text FuchsiaCity_House3_Text_WouldYouLikeToForgetMove {
     "Uh…\n"
-    "Oh, yes, I'm the MOVE DELETER.\p"
-    "I can make POKéMON forget their\n"
+    "Oh, yes, I'm the Move Deleter.\p"
+    "I can make Pokémon forget their\n"
     "moves.\p"
     "Would you like me to do that?$"
 }
 
 text FuchsiaCity_House3_Text_WhichMonShouldForgetMove {
-    "Which POKéMON should forget a\n"
+    "Which Pokémon should forget a\n"
     "move?$"
 }
 
@@ -38,5 +38,5 @@ text FuchsiaCity_House3_Text_ComeAgainToForgetOtherMoves {
 
 text FuchsiaCity_House3_Text_NoEggShouldKnowMoves {
     "What?\n"
-    "No EGG should know any moves.$"
+    "No Egg should know any moves.$"
 }

@@ -15,8 +15,8 @@ text PalletTown_Text_ReadItReadIt {
 
 // Used by sign
 text PalletTown_Text_PressStartToOpenMenu {
-    "TRAINER TIPS\p"
-    "Press START to open the MENU!$"
+    "Trainer Tips\p"
+    "Press Start to open the Menu!$"
 }
 
 text PalletTown_Text_SignsAreUsefulArentThey {
@@ -26,11 +26,11 @@ text PalletTown_Text_SignsAreUsefulArentThey {
 text PalletTown_Text_LookCopiedTrainerTipsSign {
     "Look, look!\p"
     "I copied what it said on one of\n"
-    "those TRAINER TIPS signs!$"
+    "those Trainer Tips signs!$"
 }
 
 // Used by NPC
 text PalletTown_Text_PressStartToOpenMenuCopy {
-    "TRAINER TIPS!\p"
-    "Press START to open the MENU!$"
+    "Trainer Tips!\p"
+    "Press Start to open the Menu!$"
 }

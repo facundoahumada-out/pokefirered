@@ -6,18 +6,18 @@ text SaffronCity_House_Text_DontLookAtMyLetter {
 }
 
 text SaffronCity_House_Text_Pidgey {
-    "PIDGEY: Kurukkoo!$"
+    "Pidgey: Kurukkoo!$"
 }
 
 text SaffronCity_House_Text_GettingCopycatPokeDoll {
-    "The COPYCAT is cute!\n"
-    "I'm getting her a POKé DOLL.$"
+    "The Copycat is cute!\n"
+    "I'm getting her a Poké Doll.$"
 }
 
 text SaffronCity_House_Text_ExplainPPUp {
-    "I was given a PP UP as a gift.\p"
+    "I was given a PP Up as a gift.\p"
     "It's used to increase the PP of\n"
-    "a POKéMON's move.\p"
+    "a Pokémon's move.\p"
     "I should use it on a powerful move\n"
     "with only a few PP.$"
 }

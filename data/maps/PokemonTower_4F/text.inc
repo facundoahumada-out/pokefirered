@@ -37,5 +37,5 @@ PokemonTower_4F_Text_JodyDefeat::
 
 PokemonTower_4F_Text_JodyPostBattle::
 # 38 "data/maps/PokemonTower_4F/text.pory"
-	.string "May the departed POKéMON rest in\n"
+	.string "May the departed Pokémon rest in\n"
 	.string "peace…$"

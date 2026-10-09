@@ -36,6 +36,6 @@ text SilphCo_10F_Text_KeepMeCryingASecret {
 }
 
 text SilphCo_10F_Text_FloorSign {
-    "SILPH CO. HEAD OFFICE\n"
+    "Silph Co. Head Office\n"
     "10F$"
 }

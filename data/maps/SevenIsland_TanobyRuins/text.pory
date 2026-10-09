@@ -9,14 +9,14 @@ text SevenIsland_TanobyRuins_Text_BrandonDefeat {
 }
 
 text SevenIsland_TanobyRuins_Text_BrandonPostBattle {
-    "The TANOBY RUINS date back at\n"
+    "The Tanoby Ruins date back at\n"
     "least 1,500 years.\p"
     "But it's a baffling mystery as to\n"
     "why it was built in the first place.$"
 }
 
 text SevenIsland_TanobyRuins_Text_BenjaminIntro {
-    "A mystic POKéMON is said to sleep\n"
+    "A mystic Pokémon is said to sleep\n"
     "inside here.$"
 }
 
@@ -28,11 +28,11 @@ text SevenIsland_TanobyRuins_Text_BenjaminPostBattle {
     "I hear there are other ruins like\n"
     "the one here.\p"
     "Might they be the resting places\n"
-    "of other mystic POKéMON?$"
+    "of other mystic Pokémon?$"
 }
 
 text SevenIsland_TanobyRuins_Text_EdnaIntro {
-    "CLIFFORD is teaching me how to\n"
+    "Clifford is teaching me how to\n"
     "paint.$"
 }
 
@@ -44,7 +44,7 @@ text SevenIsland_TanobyRuins_Text_EdnaDefeat {
 text SevenIsland_TanobyRuins_Text_EdnaPostBattle {
     "I said that I wanted to paint an\n"
     "old building.\p"
-    "So CLIFFORD brought me here.$"
+    "So Clifford brought me here.$"
 }
 
 text SevenIsland_TanobyRuins_Text_CliffordIntro {
@@ -57,7 +57,7 @@ text SevenIsland_TanobyRuins_Text_CliffordDefeat {
 }
 
 text SevenIsland_TanobyRuins_Text_CliffordPostBattle {
-    "Ah, so you are studying POKéMON\n"
+    "Ah, so you are studying Pokémon\n"
     "on your own…\p"
     "Yes, you certainly are quite the\n"
     "extraordinary person, indeed.$"

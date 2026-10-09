@@ -1,19 +1,19 @@
 text CinnabarIsland_PokemonLab_ResearchRoom_Text_EeveeCanEvolveIntroThreeMons {
-    "EEVEE can evolve into one of three\n"
-    "kinds of POKéMON.$"
+    "Eevee can evolve into one of three\n"
+    "kinds of Pokémon.$"
 }
 
 text CinnabarIsland_PokemonLab_ResearchRoom_Text_LegendaryBirdEmail {
     "There's an e-mail message.\p"
     "… … …\p"
     "There are three legendary bird\n"
-    "POKéMON.\p"
-    "They are ARTICUNO, ZAPDOS, and\n"
-    "MOLTRES.\p"
+    "Pokémon.\p"
+    "They are Articuno, Zapdos, and\n"
+    "Moltres.\p"
     "Their whereabouts are unknown.\p"
     "We plan to explore the cavern\n"
-    "close to CERULEAN.\p"
-    "From: POKéMON RESEARCH TEAM…$"
+    "close to Cerulean.\p"
+    "From: Pokémon Research Team…$"
 }
 
 text CinnabarIsland_PokemonLab_ResearchRoom_Text_AnAmberPipe {

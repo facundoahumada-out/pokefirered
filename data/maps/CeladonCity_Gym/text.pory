@@ -4,12 +4,12 @@ text CeladonCity_Gym_Text_ErikaIntro {
     "It's so pleasant…\p"
     "…Oh, dear…\n"
     "I must have dozed off. Welcome.\p"
-    "My name is ERIKA.\n"
-    "I am the LEADER of CELADON GYM.\p"
+    "My name is Erika.\n"
+    "I am the Leader of Celadon Gym.\p"
     "I am a student of the art of\n"
     "flower arranging.\p"
-    "My POKéMON are solely of the\n"
-    "GRASS type.\p"
+    "My Pokémon are solely of the\n"
+    "Grass type.\p"
     "…Oh, I'm sorry, I had no idea that\n"
     "you wished to challenge me.\p"
     "Very well, but I shall not lose.{PLAY_BGM MUS_ENCOUNTER_GYM_LEADER}$"
@@ -20,33 +20,33 @@ text CeladonCity_Gym_Text_ErikaDefeat {
     "I concede defeat.\l"
     "You are remarkably strong.\p"
     "I must confer on you the\n"
-    "RAINBOWBADGE.$"
+    "Rainbowbadge.$"
 }
 
 text CeladonCity_Gym_Text_ErikaPostBattle {
-    "You are cataloging POKéMON?\n"
+    "You are cataloging Pokémon?\n"
     "I must say I'm impressed.\p"
-    "I would never collect POKéMON if\n"
+    "I would never collect Pokémon if\n"
     "they were unattractive.$"
 }
 
 text CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis {
-    "The RAINBOWBADGE will make\n"
-    "POKéMON up to Lv. 50 obey.\p"
-    "It also allows POKéMON to use\n"
-    "STRENGTH in and out of battle.\p"
+    "The Rainbowbadge will make\n"
+    "Pokémon up to Lv. 50 obey.\p"
+    "It also allows Pokémon to use\n"
+    "Strength in and out of battle.\p"
     "Please also take this with you.$"
 }
 
 text CeladonCity_Gym_Text_ReceivedTM19FromErika {
     "{PLAYER} received TM19\n"
-    "from ERIKA.$"
+    "from Erika.$"
 }
 
 text CeladonCity_Gym_Text_ExplainTM19 {
-    "TM19 contains GIGA DRAIN.\p"
+    "TM19 contains Giga Drain.\p"
     "Half the damage it inflicts is\n"
-    "drained to heal your POKéMON.\p"
+    "drained to heal your Pokémon.\p"
     "Wouldn't you agree that it's a\n"
     "wonderful move?$"
 }
@@ -56,7 +56,7 @@ text CeladonCity_Gym_Text_ShouldMakeRoomForThis {
 }
 
 text CeladonCity_Gym_Text_KayIntro {
-    "I should tell you about this GYM.\p"
+    "I should tell you about this Gym.\p"
     "Only real ladies are allowed in\n"
     "here!$"
 }
@@ -67,7 +67,7 @@ text CeladonCity_Gym_Text_KayDefeat {
 
 text CeladonCity_Gym_Text_KayPostBattle {
     "Bleaah!\n"
-    "I hope ERIKA wipes you out!$"
+    "I hope Erika wipes you out!$"
 }
 
 text CeladonCity_Gym_Text_BridgetIntro {
@@ -80,10 +80,10 @@ text CeladonCity_Gym_Text_BridgetDefeat {
 }
 
 text CeladonCity_Gym_Text_BridgetPostBattle {
-    "GRASS-type POKéMON are tough\n"
-    "against the WATER type.\p"
-    "They also have an edge on ROCK-\n"
-    "and GROUND-type POKéMON.$"
+    "Grass-type Pokémon are tough\n"
+    "against the Water type.\p"
+    "They also have an edge on Rock-\n"
+    "and Ground-type Pokémon.$"
 }
 
 text CeladonCity_Gym_Text_TinaIntro {
@@ -96,14 +96,14 @@ text CeladonCity_Gym_Text_TinaDefeat {
 }
 
 text CeladonCity_Gym_Text_TinaPostBattle {
-    "Oh, you were looking at ERIKA…\n"
+    "Oh, you were looking at Erika…\n"
     "You weren't looking at me…$"
 }
 
 text CeladonCity_Gym_Text_TamiaIntro {
     "Look, look!\n"
-    "See my POKéMON!\p"
-    "I like the GRASS type.\n"
+    "See my Pokémon!\p"
+    "I like the Grass type.\n"
     "I like how they're easy to raise.$"
 }
 
@@ -112,16 +112,16 @@ text CeladonCity_Gym_Text_TamiaDefeat {
 }
 
 text CeladonCity_Gym_Text_TamiaPostBattle {
-    "We only use GRASS-type POKéMON at\n"
-    "our GYM.\p"
+    "We only use Grass-type Pokémon at\n"
+    "our Gym.\p"
     "Why? We also use them for making\n"
     "flower arrangements!$"
 }
 
 text CeladonCity_Gym_Text_LisaIntro {
     "Oh, hey!\p"
-    "We don't like BUG- or FIRE-type\n"
-    "POKéMON in here!$"
+    "We don't like Bug- or Fire-type\n"
+    "Pokémon in here!$"
 }
 
 text CeladonCity_Gym_Text_LisaDefeat {
@@ -130,13 +130,13 @@ text CeladonCity_Gym_Text_LisaDefeat {
 }
 
 text CeladonCity_Gym_Text_LisaPostBattle {
-    "Our LEADER ERIKA might be quiet,\n"
+    "Our Leader Erika might be quiet,\n"
     "but she's famous around here.$"
 }
 
 text CeladonCity_Gym_Text_LoriIntro {
     "Pleased to meet you.\n"
-    "My hobby is POKéMON training.$"
+    "My hobby is Pokémon training.$"
 }
 
 text CeladonCity_Gym_Text_LoriDefeat {
@@ -151,7 +151,7 @@ text CeladonCity_Gym_Text_LoriPostBattle {
 }
 
 text CeladonCity_Gym_Text_MaryIntro {
-    "Welcome to CELADON GYM!\p"
+    "Welcome to Celadon Gym!\p"
     "You'd better not underestimate\n"
     "the nice ladies here.$"
 }
@@ -162,20 +162,20 @@ text CeladonCity_Gym_Text_MaryDefeat {
 }
 
 text CeladonCity_Gym_Text_MaryPostBattle {
-    "I didn't bring my best POKéMON.\n"
+    "I didn't bring my best Pokémon.\n"
     "Wait until next time!$"
 }
 
 text CeladonCity_Gym_Text_GymStatue {
-    "CELADON POKéMON GYM\n"
-    "LEADER: ERIKA\p"
-    "WINNING TRAINERS:\n"
+    "Celadon Pokémon Gym\n"
+    "Leader: Erika\p"
+    "Winning Trainers:\n"
     "{RIVAL}$"
 }
 
 text CeladonCity_Gym_Text_GymStatuePlayerWon {
-    "CELADON POKéMON GYM\n"
-    "LEADER: ERIKA\p"
-    "WINNING TRAINERS:\n"
+    "Celadon Pokémon Gym\n"
+    "Leader: Erika\p"
+    "Winning Trainers:\n"
     "{RIVAL}, {PLAYER}$"
 }

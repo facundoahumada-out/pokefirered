@@ -7,7 +7,7 @@ text SevenIsland_PokemonCenter_1F_Text_EventsDependingOnConnections {
 }
 
 text SevenIsland_PokemonCenter_1F_Text_DidYouRideSeagallopHere {
-    "Did you ride a SEAGALLOP ferry\n"
+    "Did you ride a Seagallop ferry\n"
     "to get here?\p"
     "There are at least ten of those\n"
     "high-speed ships.\p"
@@ -17,5 +17,5 @@ text SevenIsland_PokemonCenter_1F_Text_DidYouRideSeagallopHere {
 
 text SevenIsland_PokemonCenter_1F_Text_CheckOutTrainerTower {
     "If you're confident, you should\n"
-    "check out TRAINER TOWER.$"
+    "check out Trainer Tower.$"
 }

@@ -1,10 +1,10 @@
 text Route16_NorthEntrance_1F_Text_NoPedestriansOnCyclingRoad {
     "No pedestrians are allowed on\n"
-    "CYCLING ROAD!$"
+    "Cycling Road!$"
 }
 
 text Route16_NorthEntrance_1F_Text_CyclingRoadIsDownhillCourse {
-    "CYCLING ROAD is a downhill course\n"
+    "Cycling Road is a downhill course\n"
     "by the sea. It's a great ride.$"
 }
 

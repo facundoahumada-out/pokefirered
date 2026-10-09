@@ -1,24 +1,24 @@
 VermilionCity_PokemonCenter_1F_Text_TrainerMonsStrongerThanWild::
 # 1 "data/maps/VermilionCity_PokemonCenter_1F/text.pory"
 	.string "Even if they are the same level,\n"
-	.string "POKéMON can have very different\l"
+	.string "Pokémon can have very different\l"
 	.string "stats and abilities.\p"
-	.string "A POKéMON raised by a TRAINER is\n"
+	.string "A Pokémon raised by a Trainer is\n"
 	.string "stronger than one in the wild.$"
 
 VermilionCity_PokemonCenter_1F_Text_PoisonedMonFaintedWhileWalking::
 # 9 "data/maps/VermilionCity_PokemonCenter_1F/text.pory"
-	.string "My POKéMON was poisoned!\n"
+	.string "My Pokémon was poisoned!\n"
 	.string "It fainted while we were walking!$"
 
 VermilionCity_PokemonCenter_1F_Text_AllMonWeakToSpecificTypes::
 # 14 "data/maps/VermilionCity_PokemonCenter_1F/text.pory"
 	.string "It is true that a higher-level\n"
-	.string "POKéMON will be more powerful…\p"
-	.string "But, all POKéMON will have weak\n"
+	.string "Pokémon will be more powerful…\p"
+	.string "But, all Pokémon will have weak\n"
 	.string "points against specific types.\p"
 	.string "So, there appears to be no\n"
-	.string "universally strong POKéMON.$"
+	.string "universally strong Pokémon.$"
 
 VermilionCity_PokemonCenter_1F_Text_UrgeToBattleSomeoneAgain::
 # 23 "data/maps/VermilionCity_PokemonCenter_1F/text.pory"
@@ -34,17 +34,17 @@ VermilionCity_PokemonCenter_1F_Text_UrgeToBattleSomeoneAgain::
 VermilionCity_PokemonCenter_1F_Text_UseDeviceForRematches::
 # 34 "data/maps/VermilionCity_PokemonCenter_1F/text.pory"
 	.string "Use that device and you'll find\n"
-	.string "TRAINERS looking for a rematch.\p"
+	.string "Trainers looking for a rematch.\p"
 	.string "You have to charge its battery to\n"
 	.string "use it, though.$"
 
 VermilionCity_PokemonCenter_1F_Text_ExplainVSSeeker::
 # 41 "data/maps/VermilionCity_PokemonCenter_1F/text.pory"
-	.string "How do you use the VS SEEKER?\n"
+	.string "How do you use the VS Seeker?\n"
 	.string "There's nothing to it.\p"
 	.string "Use it like beep-beep-beep, and\n"
-	.string "TRAINERS around you will notice.\p"
-	.string "If any TRAINER wants a rematch,\n"
+	.string "Trainers around you will notice.\p"
+	.string "If any Trainer wants a rematch,\n"
 	.string "it will let you know immediately.\p"
 	.string "Charge its battery and use it\n"
 	.string "while you're on a road.$"

@@ -1,17 +1,17 @@
 text SafariZone_East_Text_KeepAnyItemFoundOnSafari {
     "You can keep any item you find in\n"
-    "the SAFARI ZONE.\p"
+    "the Safari Zone.\p"
     "But, you'll run out of time if you\n"
     "try for all of them at once.$"
 }
 
 text SafariZone_East_Text_PrizeInDeepestPartOfSafariZone {
     "Go to the deepest part of the\n"
-    "SAFARI ZONE. You will win a prize!$"
+    "Safari Zone. You will win a prize!$"
 }
 
 text SafariZone_East_Text_MyEeveeEvolvedIntoFlareon {
-    "My EEVEE evolved into FLAREON.\p"
-    "But, a friend's EEVEE turned into a\n"
-    "VAPOREON. I wonder why?$"
+    "My Eevee evolved into Flareon.\p"
+    "But, a friend's Eevee turned into a\n"
+    "Vaporeon. I wonder why?$"
 }

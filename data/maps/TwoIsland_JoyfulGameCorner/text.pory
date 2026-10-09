@@ -1,5 +1,5 @@
 text TwoIsland_JoyfulGameCorner_Text_WhereHasLostelleGottenTo {
-    "Now, where's LOSTELLE gotten to\n"
+    "Now, where's Lostelle gotten to\n"
     "today?\p"
     "She always brings me lunch every\n"
     "day right about now…$"
@@ -7,32 +7,32 @@ text TwoIsland_JoyfulGameCorner_Text_WhereHasLostelleGottenTo {
 
 text TwoIsland_JoyfulGameCorner_Text_PleaseHelpFindLostelle {
     "Hm? You, there!\n"
-    "Are you a friend of LOSTELLE's?\p"
-    "Have you seen LOSTELLE around?\n"
+    "Are you a friend of Lostelle's?\p"
+    "Have you seen Lostelle around?\n"
     "I don't know where she might be.\l"
     "She should've been here long ago.\p"
-    "LOSTELLE's a cutie - she got my\n"
+    "Lostelle's a cutie - she got my\n"
     "looks - so what if someone…\p"
     "What if something's happened to\n"
-    "my LOSTELLE?!\p"
+    "my Lostelle?!\p"
     "Please, help me find her!\n"
-    "Please go search THREE ISLAND!$"
+    "Please go search Three Island!$"
 }
 
 text TwoIsland_JoyfulGameCorner_Text_IsThisOnlyThreeIsland {
-    "Hah? What is this GAME CORNER?\n"
+    "Hah? What is this Game Corner?\n"
     "How much sadder can this get?\p"
     "Those clowns…\p"
     "They said they'd be waiting on the\n"
     "island, so where are they?\p"
-    "Hey, you! Is this the only THREE\n"
-    "ISLAND around here?$"
+    "Hey, you! Is this the only Three\n"
+    "Island around here?$"
 }
 
 text TwoIsland_JoyfulGameCorner_Text_ThisIsTwoIslandMoveIt {
     "Try waking up before you crawl out\n"
     "of bed, you punk.\p"
-    "This is TWO ISLAND!\p"
+    "This is Two Island!\p"
     "Move it! Get your filthy motorbike\n"
     "out of my place!$"
 }
@@ -51,11 +51,11 @@ text TwoIsland_JoyfulGameCorner_Text_PunkScuffedUpMyFloor {
 
 text TwoIsland_JoyfulGameCorner_Text_PleaseGoToThreeIsland {
     "Hey, but listen! I'm begging you,\n"
-    "you have to go to THREE ISLAND.\p"
+    "you have to go to Three Island.\p"
     "If anything were to happen to my\n"
-    "LOSTELLE…\p"
+    "Lostelle…\p"
     "My place is the house with the red\n"
-    "roof on THREE ISLAND.\p"
+    "roof on Three Island.\p"
     "She may just show up late here,\n"
     "so I can't run off anywhere.\p"
     "That's why I have to get you to do\n"
@@ -73,15 +73,15 @@ text TwoIsland_JoyfulGameCorner_Text_GetGamesGoingSoon {
 }
 
 text TwoIsland_JoyfulGameCorner_Text_YouRescuedLostelle {
-    "So you rescued LOSTELLE?\n"
+    "So you rescued Lostelle?\n"
     "How can I thank you?\p"
-    "LOSTELLE, darling, forgive me!\p"
+    "Lostelle, darling, forgive me!\p"
     "Daddy didn't know you were scared\n"
     "and in trouble!$"
 }
 
 text TwoIsland_JoyfulGameCorner_Text_LostelleItsOkayDaddy {
-    "LOSTELLE: It's okay, Daddy.\n"
+    "Lostelle: It's okay, Daddy.\n"
     "I got to be friends with {PLAYER}!$"
 }
 
@@ -95,29 +95,29 @@ text TwoIsland_JoyfulGameCorner_Text_ThisIsForMe {
 }
 
 text TwoIsland_JoyfulGameCorner_Text_HandedMeteoriteToLostellesDaddy {
-    "{PLAYER} handed the METEORITE\n"
-    "to LOSTELLE's daddy.$"
+    "{PLAYER} handed the Meteorite\n"
+    "to Lostelle's daddy.$"
 }
 
 text TwoIsland_JoyfulGameCorner_Text_OhThisIsFromBill {
-    "Oh, I see, this is from BILL!\n"
+    "Oh, I see, this is from Bill!\n"
     "You have to thank him for me!\p"
     "You know, you've been fantastic.\n"
     "I want you to have this.$"
 }
 
 text TwoIsland_JoyfulGameCorner_Text_ReceivedMoonStoneFromLostellesDaddy {
-    "{PLAYER} received a MOON STONE\n"
-    "from LOSTELLE's daddy.$"
+    "{PLAYER} received a Moon Stone\n"
+    "from Lostelle's daddy.$"
 }
 
 text TwoIsland_JoyfulGameCorner_Text_NotGoingToFitInBag {
-    "Your BAG's not going to fit another\n"
+    "Your Bag's not going to fit another\n"
     "thing…$"
 }
 
 text TwoIsland_JoyfulGameCorner_Text_IllGetGameCornerRunning {
-    "All right, I'll get the GAME CORNER\n"
+    "All right, I'll get the Game Corner\n"
     "running right away.\p"
     "You have to come visit with a\n"
     "friend.$"

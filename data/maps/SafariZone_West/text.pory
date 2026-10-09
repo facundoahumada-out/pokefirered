@@ -1,23 +1,23 @@
 text SafariZone_West_Text_RestHouse {
-    "REST HOUSE$"
+    "Rest House$"
 }
 
 text SafariZone_West_Text_PleaseFindWardensLostTeeth {
-    "REQUEST NOTICE\p"
-    "Please find the SAFARI WARDEN's\n"
-    "lost GOLD TEETH.\l"
+    "Request Notice\p"
+    "Please find the Safari Warden's\n"
+    "lost Gold Teeth.\l"
     "They're around here somewhere.\p"
     "Reward offered!\n"
-    "Contact: WARDEN$"
+    "Contact: Warden$"
 }
 
 text SafariZone_West_Text_SearchForSecretHouse {
-    "TRAINER TIPS\p"
+    "Trainer Tips\p"
     "Zone Exploration Campaign!\n"
-    "The Search for the SECRET HOUSE!$"
+    "The Search for the Secret House!$"
 }
 
 text SafariZone_West_Text_AreaSign {
-    "AREA 3\n"
-    "EAST: CENTER AREA$"
+    "Area 3\n"
+    "East: Center Area$"
 }

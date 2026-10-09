@@ -1,35 +1,35 @@
 Route25_SeaCottage_Text_ImBillHelpMeOutPal::
 # 1 "data/maps/Route25_SeaCottage/text.pory"
-	.string "Hiya! I'm a POKéMON…\n"
+	.string "Hiya! I'm a Pokémon…\n"
 	.string "…No I'm not!\p"
-	.string "Call me BILL!\n"
-	.string "I'm a true-blue POKéMANIAC!\p"
+	.string "Call me Bill!\n"
+	.string "I'm a true-blue Pokémaniac!\p"
 	.string "Hey!\n"
 	.string "What's with that skeptical look?\p"
 	.string "I'm not joshing you, pal.\p"
 	.string "I screwed up an experiment and got\n"
-	.string "combined with a POKéMON!\p"
+	.string "combined with a Pokémon!\p"
 	.string "So, how about it?\n"
 	.string "Help me out here!$"
 
 Route25_SeaCottage_Text_ImBillHelpMeOutLady::
 # 15 "data/maps/Route25_SeaCottage/text.pory"
-	.string "Hiya! I'm a POKéMON…\n"
+	.string "Hiya! I'm a Pokémon…\n"
 	.string "…No I'm not!\p"
-	.string "Call me BILL!\n"
-	.string "I'm a true-blue POKéMANIAC!\p"
+	.string "Call me Bill!\n"
+	.string "I'm a true-blue Pokémaniac!\p"
 	.string "Hey!\n"
 	.string "What's with that skeptical look?\p"
 	.string "I'm not joshing you, lady.\p"
 	.string "I screwed up an experiment and got\n"
-	.string "combined with a POKéMON!\p"
+	.string "combined with a Pokémon!\p"
 	.string "So, how about it?\n"
 	.string "Help me out here!$"
 
 Route25_SeaCottage_Text_RunCellSeparationOnPC::
 # 29 "data/maps/Route25_SeaCottage/text.pory"
 	.string "Wait till I get inside the\n"
-	.string "TELEPORTER.\p"
+	.string "Teleporter.\p"
 	.string "When I do, go to my PC and run\n"
 	.string "the Cell Separation System.$"
 
@@ -57,10 +57,10 @@ Route25_SeaCottage_Text_NoPleaseBeautiful::
 
 Route25_SeaCottage_Text_ThanksBudTakeThis::
 # 58 "data/maps/Route25_SeaCottage/text.pory"
-	.string "BILL: Yeehah!\n"
+	.string "Bill: Yeehah!\n"
 	.string "Thanks, bud! I owe you one!\p"
 	.string "So, did you come to see my\n"
-	.string "POKéMON collection?\p"
+	.string "Pokémon collection?\p"
 	.string "You didn't?\n"
 	.string "That's a bummer.\p"
 	.string "I've got to thank you…\n"
@@ -68,10 +68,10 @@ Route25_SeaCottage_Text_ThanksBudTakeThis::
 
 Route25_SeaCottage_Text_ThanksLadyTakeThis::
 # 69 "data/maps/Route25_SeaCottage/text.pory"
-	.string "BILL: Yeehah!\n"
+	.string "Bill: Yeehah!\n"
 	.string "Thanks, lady! I owe you one!\p"
 	.string "So, did you come to see my\n"
-	.string "POKéMON collection?\p"
+	.string "Pokémon collection?\p"
 	.string "You didn't?\n"
 	.string "That's a bummer.\p"
 	.string "I've got to thank you…\n"
@@ -79,8 +79,8 @@ Route25_SeaCottage_Text_ThanksLadyTakeThis::
 
 Route25_SeaCottage_Text_ReceivedSSTicketFromBill::
 # 80 "data/maps/Route25_SeaCottage/text.pory"
-	.string "{PLAYER} received an S.S. TICKET\n"
-	.string "from BILL.$"
+	.string "{PLAYER} received an S.S. Ticket\n"
+	.string "from Bill.$"
 
 Route25_SeaCottage_Text_YouveGotTooMuchStuff::
 # 85 "data/maps/Route25_SeaCottage/text.pory"
@@ -88,9 +88,9 @@ Route25_SeaCottage_Text_YouveGotTooMuchStuff::
 
 Route25_SeaCottage_Text_SSAnnePartyYouGoInstead::
 # 89 "data/maps/Route25_SeaCottage/text.pory"
-	.string "That cruise ship S.S. ANNE is in\n"
-	.string "VERMILION CITY.\p"
-	.string "I hear there are lots of TRAINERS\n"
+	.string "That cruise ship S.S. Anne is in\n"
+	.string "Vermilion City.\p"
+	.string "I hear there are lots of Trainers\n"
 	.string "on board, too.\p"
 	.string "They invited me to their party, but\n"
 	.string "I can't stand fancy do's.\p"
@@ -99,24 +99,24 @@ Route25_SeaCottage_Text_SSAnnePartyYouGoInstead::
 
 Route25_SeaCottage_Text_CheckOutRareMonsOnPC::
 # 100 "data/maps/Route25_SeaCottage/text.pory"
-	.string "BILL: Feel like checking out some\n"
-	.string "of my rare POKéMON on my PC?\p"
+	.string "Bill: Feel like checking out some\n"
+	.string "of my rare Pokémon on my PC?\p"
 	.string "Go on, check out my PC.$"
 
 Route25_SeaCottage_Text_TeleporterIsDisplayed::
 # 106 "data/maps/Route25_SeaCottage/text.pory"
-	.string "TELEPORTER is displayed on the PC\n"
+	.string "Teleporter is displayed on the PC\n"
 	.string "monitor.$"
 
 Route25_SeaCottage_Text_InitiatedTeleportersCellSeparator::
 # 111 "data/maps/Route25_SeaCottage/text.pory"
-	.string "{PLAYER} initiated the TELEPORTER's\n"
+	.string "{PLAYER} initiated the Teleporter's\n"
 	.string "Cell Separator.$"
 
 Route25_SeaCottage_Text_BillsFavoriteMonList::
 # 116 "data/maps/Route25_SeaCottage/text.pory"
-	.string "BILL's favorite POKéMON list!$"
+	.string "Bill's favorite Pokémon list!$"
 
 Route25_SeaCottage_Text_SeeWhichMon::
 # 120 "data/maps/Route25_SeaCottage/text.pory"
-	.string "Which POKéMON do you want to see?$"
+	.string "Which Pokémon do you want to see?$"

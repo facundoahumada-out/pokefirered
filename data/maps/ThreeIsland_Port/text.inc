@@ -1,6 +1,6 @@
 ThreeIsland_Port_Text_WereKantoRiderFederation::
 # 1 "data/maps/ThreeIsland_Port/text.pory"
-	.string "We're the KANTO RIDER FEDERATION!\n"
+	.string "We're the Kanto Rider Federation!\n"
 	.string "Vroom! Vavavavooom! Vroom!\p"
 	.string "My bike's wimpy, so I have to\n"
 	.string "make exhaust noises myself!$"
@@ -18,13 +18,13 @@ ThreeIsland_Port_Text_IllCallThePolice::
 
 ThreeIsland_Port_Text_ThankGoodnessBikersGone::
 # 19 "data/maps/ThreeIsland_Port/text.pory"
-	.string "Those BIKERS…\n"
+	.string "Those Bikers…\n"
 	.string "Are they gone?\p"
 	.string "Oh, thank goodness!\n"
 	.string "They certainly had me terrified!$"
 
 ThreeIsland_Port_Text_EverythingTurnedOutForBest::
 # 26 "data/maps/ThreeIsland_Port/text.pory"
-	.string "Those BIKERS ran off, and\n"
-	.string "LOSTELLE was found safe.\p"
+	.string "Those Bikers ran off, and\n"
+	.string "Lostelle was found safe.\p"
 	.string "Everything turned out for the best!$"

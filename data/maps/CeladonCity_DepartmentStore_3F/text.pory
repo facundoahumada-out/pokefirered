@@ -1,27 +1,27 @@
 text CeladonCity_DepartmentStore_3F_Text_OTStandsForOriginalTrainer {
-    "Captured POKéMON are registered\n"
+    "Captured Pokémon are registered\n"
     "with an ID No. and the OT.\p"
-    "OT stands for “Original TRAINER” -\n"
-    "the TRAINER that caught it first.$"
+    "OT stands for “Original Trainer” -\n"
+    "the Trainer that caught it first.$"
 }
 
 text CeladonCity_DepartmentStore_3F_Text_BuddyTradingKangaskhanForHaunter {
     "All right!\p"
     "My buddy's going to trade me his\n"
-    "KANGASKHAN for my HAUNTER!$"
+    "Kangaskhan for my Haunter!$"
 }
 
 text CeladonCity_DepartmentStore_3F_Text_HaunterEvolvedOnTrade {
-    "Come on, HAUNTER!\p"
-    "I love HAUNTER!\n"
+    "Come on, Haunter!\p"
+    "I love Haunter!\n"
     "I collect them!\p"
     "Huh?\p"
-    "HAUNTER turned into a different\n"
-    "POKéMON while being traded!$"
+    "Haunter turned into a different\n"
+    "Pokémon while being traded!$"
 }
 
 text CeladonCity_DepartmentStore_3F_Text_CanIdentifyTradeMonsByID {
-    "You can identify POKéMON you get\n"
+    "You can identify Pokémon you get\n"
     "in trades by their ID Numbers.$"
 }
 
@@ -50,21 +50,21 @@ text CeladonCity_DepartmentStore_3F_Text_FightingGame {
 }
 
 text CeladonCity_DepartmentStore_3F_Text_TVGameShop {
-    "3F: TV GAME SHOP$"
+    "3F: TV Game Shop$"
 }
 
 text CeladonCity_DepartmentStore_3F_Text_RedGreenBothArePokemon {
     "Red and Green!\n"
-    "Both are POKéMON!$"
+    "Both are Pokémon!$"
 }
 
 text Text_CounterTeach {
     "Oh, hi!\n"
-    "I finally finished POKéMON.\p"
+    "I finally finished Pokémon.\p"
     "Not done yet? How about I teach\n"
     "you a good move?\p"
     "The move I have in mind is\n"
-    "COUNTER.\p"
+    "Counter.\p"
     "Not like the one I'm leaning on,\n"
     "mind you!$"
 }
@@ -75,11 +75,11 @@ text Text_CounterDeclined {
 }
 
 text Text_CounterWhichMon {
-    "Which POKéMON should I teach\n"
-    "COUNTER to?$"
+    "Which Pokémon should I teach\n"
+    "Counter to?$"
 }
 
 text Text_CounterTaught {
-    "Are you using that COUNTER move\n"
-    "I taught your POKéMON?$"
+    "Are you using that Counter move\n"
+    "I taught your Pokémon?$"
 }

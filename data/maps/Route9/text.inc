@@ -1,6 +1,6 @@
 Route9_Text_AliciaIntro::
 # 1 "data/maps/Route9/text.pory"
-	.string "You have POKéMON with you!\n"
+	.string "You have Pokémon with you!\n"
 	.string "You're mine!$"
 
 Route9_Text_AliciaDefeat::
@@ -11,13 +11,13 @@ Route9_Text_AliciaPostBattle::
 # 10 "data/maps/Route9/text.pory"
 	.string "The tunnel coming up is pitch-black\n"
 	.string "inside.\p"
-	.string "You'll need FLASH to get through\n"
+	.string "You'll need Flash to get through\n"
 	.string "there.$"
 
 Route9_Text_ChrisIntro::
 # 17 "data/maps/Route9/text.pory"
 	.string "Who's that walking there with those\n"
-	.string "good-looking POKéMON?$"
+	.string "good-looking Pokémon?$"
 
 Route9_Text_ChrisDefeat::
 # 22 "data/maps/Route9/text.pory"
@@ -29,8 +29,8 @@ Route9_Text_ChrisPostBattle::
 
 Route9_Text_DrewIntro::
 # 30 "data/maps/Route9/text.pory"
-	.string "I'm taking the ROCK TUNNEL to\n"
-	.string "go to LAVENDER…$"
+	.string "I'm taking the Rock Tunnel to\n"
+	.string "go to Lavender…$"
 
 Route9_Text_DrewDefeat::
 # 35 "data/maps/Route9/text.pory"
@@ -38,7 +38,7 @@ Route9_Text_DrewDefeat::
 
 Route9_Text_DrewPostBattle::
 # 39 "data/maps/Route9/text.pory"
-	.string "Are you off to ROCK TUNNEL, too?$"
+	.string "Are you off to Rock Tunnel, too?$"
 
 Route9_Text_CaitlinIntro::
 # 43 "data/maps/Route9/text.pory"
@@ -63,7 +63,7 @@ Route9_Text_JeremyDefeat::
 # 62 "data/maps/Route9/text.pory"
 	.string "Keep it coming, eh!\p"
 	.string "Oh wait.\n"
-	.string "I'm out of POKéMON!$"
+	.string "I'm out of Pokémon!$"
 
 Route9_Text_JeremyPostBattle::
 # 68 "data/maps/Route9/text.pory"
@@ -87,11 +87,11 @@ Route9_Text_BricePostBattle::
 Route9_Text_BrentIntro::
 # 87 "data/maps/Route9/text.pory"
 	.string "I got up early every day to raise\n"
-	.string "my POKéMON from cocoons!$"
+	.string "my Pokémon from cocoons!$"
 
 Route9_Text_BrentDefeat::
 # 92 "data/maps/Route9/text.pory"
-	.string "WHAT?\p"
+	.string "What?\p"
 	.string "What a total waste of time!$"
 
 Route9_Text_BrentPostBattle::
@@ -116,7 +116,7 @@ Route9_Text_AlanPostBattle::
 
 Route9_Text_ConnerIntro::
 # 117 "data/maps/Route9/text.pory"
-	.string "Go, my super BUG POKéMON!$"
+	.string "Go, my super Bug Pokémon!$"
 
 Route9_Text_ConnerDefeat::
 # 121 "data/maps/Route9/text.pory"
@@ -124,10 +124,10 @@ Route9_Text_ConnerDefeat::
 
 Route9_Text_ConnerPostBattle::
 # 125 "data/maps/Route9/text.pory"
-	.string "If you don't like BUG POKéMON,\n"
+	.string "If you don't like Bug Pokémon,\n"
 	.string "you bug me!$"
 
 Route9_Text_RouteSign::
 # 130 "data/maps/Route9/text.pory"
-	.string "ROUTE 9\n"
-	.string "CERULEAN CITY - ROCK TUNNEL$"
+	.string "Route 9\n"
+	.string "Cerulean City - Rock Tunnel$"

@@ -1,8 +1,8 @@
 text IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice {
     "Yo!\n"
     "Champ in the making!\p"
-    "At the POKéMON LEAGUE, you will\n"
-    "face the ELITE FOUR all in a row.\p"
+    "At the Pokémon League, you will\n"
+    "face the Elite Four all in a row.\p"
     "If you lose, you have to start all\n"
     "over again!\p"
     "This is it!\n"
@@ -11,26 +11,26 @@ text IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice {
 
 text IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck {
     "From here on, you face the\n"
-    "ELITE FOUR one by one.\p"
+    "Elite Four one by one.\p"
     "If you win, a door opens to the\n"
-    "next TRAINER. Good luck!$"
+    "next Trainer. Good luck!$"
 }
 
 text IndigoPlateau_PokemonCenter_1F_Text_LoreleiIsAbsentClosedForTimeBeing {
     "I am so sorry, but you've wasted\n"
     "your time coming here.\p"
-    "LORELEI of the ELITE FOUR is\n"
+    "Lorelei of the Elite Four is\n"
     "absent, you see.\p"
-    "As a result, the POKéMON LEAGUE is\n"
+    "As a result, the Pokémon League is\n"
     "closed for the time being.$"
 }
 
 text IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs {
-    "AGATHA's GHOST-type POKéMON are\n"
+    "Agatha's Ghost-type Pokémon are\n"
     "horrifically terrifying in toughness.\p"
-    "I took my FIGHTING-type POKéMON\n"
+    "I took my Fighting-type Pokémon\n"
     "and raised them to the max.\p"
-    "I went at AGATHA feeling pretty\n"
+    "I went at Agatha feeling pretty\n"
     "confident, but she whupped us.\p"
     "That old lady's also got a really\n"
     "short fuse, too.\p"
@@ -39,9 +39,9 @@ text IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs {
 }
 
 text IndigoPlateau_PokemonCenter_1F_Text_LancesCousinGymLeaderFarAway {
-    "Maybe becoming an ELITE FOUR\n"
+    "Maybe becoming an Elite Four\n"
     "member is in the blood.\p"
-    "From what I've heard, LANCE has\n"
-    "a cousin who's a GYM LEADER\l"
+    "From what I've heard, Lance has\n"
+    "a cousin who's a Gym Leader\l"
     "somewhere far away.$"
 }

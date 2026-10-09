@@ -5,13 +5,13 @@ text CeladonCity_Restaurant_Text_TakingBreakRightNow {
 }
 
 text CeladonCity_Restaurant_Text_OftenGoToDrugstore {
-    "My POKéMON are weak, so I often\n"
-    "have to go to the DRUGSTORE.$"
+    "My Pokémon are weak, so I often\n"
+    "have to go to the Drugstore.$"
 }
 
 text CeladonCity_Restaurant_Text_PsstBasementUnderGameCorner {
     "Psst! There's a basement under the\n"
-    "GAME CORNER, I hear.$"
+    "Game Corner, I hear.$"
 }
 
 text CeladonCity_Restaurant_Text_ManLostItAllAtSlots {
@@ -30,7 +30,7 @@ text CeladonCity_Restaurant_Text_TakeThisImBusted {
 }
 
 text CeladonCity_Restaurant_Text_ReceivedCoinCaseFromMan {
-    "{PLAYER} received a COIN CASE\n"
+    "{PLAYER} received a Coin Case\n"
     "from the man.$"
 }
 

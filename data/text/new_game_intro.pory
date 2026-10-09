@@ -1,173 +1,173 @@
 text gOtherText_NewName {
-    "NEW NAME$"
+    "New Name$"
 }
 
 text gNameChoice_Green {
-    "GREEN$"
+    "Green$"
 }
 
 text gNameChoice_Blue {
-    "BLUE$"
+    "Blue$"
 }
 
 text gNameChoice_Red {
-    "RED$"
+    "Red$"
 }
 
 text gNameChoice_Leaf {
-    "LEAF$"
+    "Leaf$"
 }
 
 text gNameChoice_Fire {
-    "FIRE$"
+    "Fire$"
 }
 
 text gNameChoice_Gary {
-    "GARY$"
+    "Gary$"
 }
 
 text gNameChoice_Kaz {
-    "KAZ$"
+    "Kaz$"
 }
 
 text gNameChoice_Toru {
-    "TORU$"
+    "Toru$"
 }
 
 text gNameChoice_Ash {
-    "ASH$"
+    "Ash$"
 }
 
 text gNameChoice_Kene {
-    "KENE$"
+    "Kene$"
 }
 
 text gNameChoice_Geki {
-    "GEKI$"
+    "Geki$"
 }
 
 text gNameChoice_Jak {
-    "JAK$"
+    "Jak$"
 }
 
 text gNameChoice_Janne {
-    "JANNE$"
+    "Janne$"
 }
 
 text gNameChoice_Jonn {
-    "JONN$"
+    "Jonn$"
 }
 
 text gNameChoice_Kamon {
-    "KAMON$"
+    "Kamon$"
 }
 
 text gNameChoice_Karl {
-    "KARL$"
+    "Karl$"
 }
 
 text gNameChoice_Taylor {
-    "TAYLOR$"
+    "Taylor$"
 }
 
 text gNameChoice_Oscar {
-    "OSCAR$"
+    "Oscar$"
 }
 
 text gNameChoice_Hiro {
-    "HIRO$"
+    "Hiro$"
 }
 
 text gNameChoice_Max {
-    "MAX$"
+    "Max$"
 }
 
 text gNameChoice_Jon {
-    "JON$"
+    "Jon$"
 }
 
 text gNameChoice_Ralph {
-    "RALPH$"
+    "Ralph$"
 }
 
 text gNameChoice_Kay {
-    "KAY$"
+    "Kay$"
 }
 
 text gNameChoice_Tosh {
-    "TOSH$"
+    "Tosh$"
 }
 
 text gNameChoice_Roak {
-    "ROAK$"
+    "Roak$"
 }
 
 text gNameChoice_Omi {
-    "OMI$"
+    "Omi$"
 }
 
 text gNameChoice_Jodi {
-    "JODI$"
+    "Jodi$"
 }
 
 text gNameChoice_Amanda {
-    "AMANDA$"
+    "Amanda$"
 }
 
 text gNameChoice_Hillary {
-    "HILLARY$"
+    "Hillary$"
 }
 
 text gNameChoice_Makey {
-    "MAKEY$"
+    "Makey$"
 }
 
 text gNameChoice_Michi {
-    "MICHI$"
+    "Michi$"
 }
 
 text gNameChoice_Paula {
-    "PAULA$"
+    "Paula$"
 }
 
 text gNameChoice_June {
-    "JUNE$"
+    "June$"
 }
 
 text gNameChoice_Cassie {
-    "CASSIE$"
+    "Cassie$"
 }
 
 text gNameChoice_Rey {
-    "REY$"
+    "Rey$"
 }
 
 text gNameChoice_Seda {
-    "SEDA$"
+    "Seda$"
 }
 
 text gNameChoice_Kiko {
-    "KIKO$"
+    "Kiko$"
 }
 
 text gNameChoice_Mina {
-    "MINA$"
+    "Mina$"
 }
 
 text gNameChoice_Norie {
-    "NORIE$"
+    "Norie$"
 }
 
 text gNameChoice_Sai {
-    "SAI$"
+    "Sai$"
 }
 
 text gNameChoice_Momo {
-    "MOMO$"
+    "Momo$"
 }
 
 text gNameChoice_Suzi {
-    "SUZI$"
+    "Suzi$"
 }
 
 text gControlsGuide_Text_Intro {
@@ -193,7 +193,7 @@ text gControlsGuide_Text_BButton {
 
 text gControlsGuide_Text_StartButton {
     "Press this button to open the\n"
-    "MENU.$"
+    "Menu.$"
 }
 
 text gControlsGuide_Text_SelectButton {
@@ -246,10 +246,10 @@ text gPikachuIntro_Text_Page3 {
 text gOakSpeech_Text_WelcomeToTheWorld {
     "Hello, there!\n"
     "Glad to meet you!\p"
-    "Welcome to the world of POKéMON!\p"
-    "My name is OAK.\p"
+    "Welcome to the world of Pokémon!\p"
+    "My name is Oak.\p"
     "People affectionately refer to me\n"
-    "as the POKéMON PROFESSOR.\p$"
+    "as the Pokémon Professor.\p$"
 }
 
 text gOakSpeech_Text_ThisWorld {
@@ -258,14 +258,14 @@ text gOakSpeech_Text_ThisWorld {
 
 text gOakSpeech_Text_IsInhabitedFarAndWide {
     "…is inhabited far and wide by\n"
-    "creatures called POKéMON.\p$"
+    "creatures called Pokémon.\p$"
 }
 
 text gOakSpeech_Text_IStudyPokemon {
-    "For some people, POKéMON are pets.\n"
+    "For some people, Pokémon are pets.\n"
     "Others use them for battling.\p"
     "As for myself…\p"
-    "I study POKéMON as a profession.\p$"
+    "I study Pokémon as a profession.\p$"
 }
 
 text gOakSpeech_Text_TellMeALittleAboutYourself {
@@ -305,8 +305,8 @@ text gOakSpeech_Text_RememberRivalsName {
 
 text gOakSpeech_Text_LetsGo {
     "{PLAYER}!\p"
-    "Your very own POKéMON legend is\n"
+    "Your very own Pokémon legend is\n"
     "about to unfold!\p"
     "A world of dreams and adventures\n"
-    "with POKéMON awaits! Let's go!$"
+    "with Pokémon awaits! Let's go!$"
 }

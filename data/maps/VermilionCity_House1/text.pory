@@ -1,5 +1,5 @@
 text VermilionCity_House1_Text_ImFishingGuruDoYouLikeToFish {
-    "I'm the FISHING GURU!\p"
+    "I'm the Fishing Guru!\p"
     "I simply looove fishing!\n"
     "I can't bear to go without.\p"
     "Tell me, do you like to fish?$"
@@ -12,8 +12,8 @@ text VermilionCity_House1_Text_TakeThisAndFish {
 }
 
 text VermilionCity_House1_Text_ReceivedOldRodFromFishingGuru {
-    "{PLAYER} received an OLD ROD from\n"
-    "the FISHING GURU.$"
+    "{PLAYER} received an Old Rod from\n"
+    "the Fishing Guru.$"
 }
 
 text VermilionCity_House1_Text_FishingIsAWayOfLife {

@@ -1,11 +1,11 @@
 text SilphCo_3F_Text_WhatAmIToDo {
-    "I work for SILPH CO.\n"
+    "I work for Silph Co.\n"
     "What am I to do?$"
 }
 
 text SilphCo_3F_Text_YouAndYourMonsSavedUs {
     "{PLAYER}!\n"
-    "You and your POKéMON saved us!$"
+    "You and your Pokémon saved us!$"
 }
 
 text SilphCo_3F_Text_GruntIntro {
@@ -18,12 +18,12 @@ text SilphCo_3F_Text_GruntDefeat {
 
 text SilphCo_3F_Text_GruntPostBattle {
     "A hint? You can open doors with\n"
-    "a CARD KEY!$"
+    "a Card Key!$"
 }
 
 text SilphCo_3F_Text_JoseIntro {
-    "I support TEAM ROCKET more than\n"
-    "I support SILPH CO.!$"
+    "I support Team Rocket more than\n"
+    "I support Silph Co.!$"
 }
 
 text SilphCo_3F_Text_JoseDefeat {
@@ -32,11 +32,11 @@ text SilphCo_3F_Text_JoseDefeat {
 
 text SilphCo_3F_Text_JosePostBattle {
     "Humph…\p"
-    "TEAM ROCKET said that if I helped\n"
-    "them, they'd let me study POKéMON.$"
+    "Team Rocket said that if I helped\n"
+    "them, they'd let me study Pokémon.$"
 }
 
 text SilphCo_3F_Text_FloorSign {
-    "SILPH CO. HEAD OFFICE\n"
+    "Silph Co. Head Office\n"
     "3F$"
 }

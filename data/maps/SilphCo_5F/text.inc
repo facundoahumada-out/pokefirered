@@ -1,12 +1,12 @@
 SilphCo_5F_Text_RocketsInUproarAboutIntruder::
 # 1 "data/maps/SilphCo_5F/text.pory"
-	.string "TEAM ROCKET is in an uproar over\n"
+	.string "Team Rocket is in an uproar over\n"
 	.string "some intruder.\p"
 	.string "That's you, right?$"
 
 SilphCo_5F_Text_YoureOurHeroThankYou::
 # 7 "data/maps/SilphCo_5F/text.pory"
-	.string "TEAM ROCKET took off!\n"
+	.string "Team Rocket took off!\n"
 	.string "You're our hero! Thank you!$"
 
 SilphCo_5F_Text_Grunt1Intro::
@@ -21,11 +21,11 @@ SilphCo_5F_Text_Grunt1Defeat::
 SilphCo_5F_Text_Grunt1PostBattle::
 # 21 "data/maps/SilphCo_5F/text.pory"
 	.string "It's not smart to pick a fight with\n"
-	.string "TEAM ROCKET!$"
+	.string "Team Rocket!$"
 
 SilphCo_5F_Text_BeauIntro::
 # 26 "data/maps/SilphCo_5F/text.pory"
-	.string "We study POKé BALL technology on\n"
+	.string "We study Poké Ball technology on\n"
 	.string "this floor.$"
 
 SilphCo_5F_Text_BeauDefeat::
@@ -35,8 +35,8 @@ SilphCo_5F_Text_BeauDefeat::
 
 SilphCo_5F_Text_BeauPostBattle::
 # 36 "data/maps/SilphCo_5F/text.pory"
-	.string "We worked on the ultimate POKé\n"
-	.string "BALL which would catch anything.$"
+	.string "We worked on the ultimate Poké\n"
+	.string "Ball which would catch anything.$"
 
 SilphCo_5F_Text_DaltonIntro::
 # 41 "data/maps/SilphCo_5F/text.pory"
@@ -51,11 +51,11 @@ SilphCo_5F_Text_DaltonDefeat::
 SilphCo_5F_Text_DaltonPostBattle::
 # 51 "data/maps/SilphCo_5F/text.pory"
 	.string "You're only on 5F.\n"
-	.string "It's a long way to my BOSS!$"
+	.string "It's a long way to my Boss!$"
 
 SilphCo_5F_Text_Grunt2Intro::
 # 56 "data/maps/SilphCo_5F/text.pory"
-	.string "Show TEAM ROCKET a little respect!$"
+	.string "Show Team Rocket a little respect!$"
 
 SilphCo_5F_Text_Grunt2Defeat::
 # 60 "data/maps/SilphCo_5F/text.pory"
@@ -65,36 +65,36 @@ SilphCo_5F_Text_Grunt2Defeat::
 SilphCo_5F_Text_Grunt2PostBattle::
 # 65 "data/maps/SilphCo_5F/text.pory"
 	.string "Which reminds me.\p"
-	.string "KOFFING evolves into WEEZING!$"
+	.string "Koffing evolves into Weezing!$"
 
 SilphCo_5F_Text_PorygonFirstVRMon::
 # 70 "data/maps/SilphCo_5F/text.pory"
-	.string "It's a POKéMON REPORT!\p"
-	.string "POKéMON LAB created PORYGON,\n"
-	.string "the first virtual-reality POKéMON.$"
+	.string "It's a Pokémon Report!\p"
+	.string "Pokémon Lab created Porygon,\n"
+	.string "the first virtual-reality Pokémon.$"
 
 SilphCo_5F_Text_Over350TechniquesConfirmed::
 # 76 "data/maps/SilphCo_5F/text.pory"
-	.string "It's a POKéMON REPORT!\p"
-	.string "Over 350 POKéMON techniques have\n"
+	.string "It's a Pokémon Report!\p"
+	.string "Over 350 Pokémon techniques have\n"
 	.string "been confirmed.$"
 
 SilphCo_5F_Text_SomeMonsEvolveWhenTraded::
 # 82 "data/maps/SilphCo_5F/text.pory"
-	.string "It's a POKéMON REPORT!\p"
-	.string "Some POKéMON have been confirmed\n"
+	.string "It's a Pokémon Report!\p"
+	.string "Some Pokémon have been confirmed\n"
 	.string "to evolve when they are traded.$"
 
 SilphCo_5F_Text_FloorSign::
 # 88 "data/maps/SilphCo_5F/text.pory"
-	.string "SILPH CO. HEAD OFFICE\n"
+	.string "Silph Co. Head Office\n"
 	.string "5F$"
 
 SilphCo_5F_Text_RocketBossLookingForStrongMons::
 # 93 "data/maps/SilphCo_5F/text.pory"
 	.string "Those thugs that took over our\n"
 	.string "building…\p"
-	.string "Their BOSS said he was looking for\n"
-	.string "strong POKéMON.\p"
-	.string "I hope our PRESIDENT managed to\n"
+	.string "Their Boss said he was looking for\n"
+	.string "strong Pokémon.\p"
+	.string "I hope our President managed to\n"
 	.string "avoid trouble…$"

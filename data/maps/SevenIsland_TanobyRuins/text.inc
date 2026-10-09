@@ -10,14 +10,14 @@ SevenIsland_TanobyRuins_Text_BrandonDefeat::
 
 SevenIsland_TanobyRuins_Text_BrandonPostBattle::
 # 11 "data/maps/SevenIsland_TanobyRuins/text.pory"
-	.string "The TANOBY RUINS date back at\n"
+	.string "The Tanoby Ruins date back at\n"
 	.string "least 1,500 years.\p"
 	.string "But it's a baffling mystery as to\n"
 	.string "why it was built in the first place.$"
 
 SevenIsland_TanobyRuins_Text_BenjaminIntro::
 # 18 "data/maps/SevenIsland_TanobyRuins/text.pory"
-	.string "A mystic POKéMON is said to sleep\n"
+	.string "A mystic Pokémon is said to sleep\n"
 	.string "inside here.$"
 
 SevenIsland_TanobyRuins_Text_BenjaminDefeat::
@@ -29,11 +29,11 @@ SevenIsland_TanobyRuins_Text_BenjaminPostBattle::
 	.string "I hear there are other ruins like\n"
 	.string "the one here.\p"
 	.string "Might they be the resting places\n"
-	.string "of other mystic POKéMON?$"
+	.string "of other mystic Pokémon?$"
 
 SevenIsland_TanobyRuins_Text_EdnaIntro::
 # 34 "data/maps/SevenIsland_TanobyRuins/text.pory"
-	.string "CLIFFORD is teaching me how to\n"
+	.string "Clifford is teaching me how to\n"
 	.string "paint.$"
 
 SevenIsland_TanobyRuins_Text_EdnaDefeat::
@@ -45,7 +45,7 @@ SevenIsland_TanobyRuins_Text_EdnaPostBattle::
 # 44 "data/maps/SevenIsland_TanobyRuins/text.pory"
 	.string "I said that I wanted to paint an\n"
 	.string "old building.\p"
-	.string "So CLIFFORD brought me here.$"
+	.string "So Clifford brought me here.$"
 
 SevenIsland_TanobyRuins_Text_CliffordIntro::
 # 50 "data/maps/SevenIsland_TanobyRuins/text.pory"
@@ -58,7 +58,7 @@ SevenIsland_TanobyRuins_Text_CliffordDefeat::
 
 SevenIsland_TanobyRuins_Text_CliffordPostBattle::
 # 59 "data/maps/SevenIsland_TanobyRuins/text.pory"
-	.string "Ah, so you are studying POKéMON\n"
+	.string "Ah, so you are studying Pokémon\n"
 	.string "on your own…\p"
 	.string "Yes, you certainly are quite the\n"
 	.string "extraordinary person, indeed.$"

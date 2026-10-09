@@ -1,7 +1,7 @@
 text FiveIsland_WaterLabyrinth_Text_LetMeTakeLookAtMons {
     "You travel all over the place,\n"
     "don't you?\p"
-    "You're not driving your POKéMON\n"
+    "You're not driving your Pokémon\n"
     "too harshly, are you?\p"
     "Let me take a look.\n"
     "… … …   … … …$"
@@ -14,14 +14,14 @@ text FiveIsland_WaterLabyrinth_Text_HmmISeeIsee {
 
 text FiveIsland_WaterLabyrinth_Text_TreatMonRightHaveThis {
     "Oh, impressive.\n"
-    "You treat your POKéMON right.\p"
+    "You treat your Pokémon right.\p"
     "I think you can be entrusted with\n"
     "this.\p"
     "Please, I'd like you to have this.$"
 }
 
 text FiveIsland_WaterLabyrinth_Text_ReceivedEggFromMan {
-    "{PLAYER} received an EGG\n"
+    "{PLAYER} received an Egg\n"
     "from the man!$"
 }
 
@@ -40,7 +40,7 @@ text FiveIsland_WaterLabyrinth_Text_YouveComeBackForTheEgg {
 }
 
 text FiveIsland_WaterLabyrinth_Text_GladIMetSomeoneLikeYou {
-    "I received that EGG while I was\n"
+    "I received that Egg while I was\n"
     "traveling.\p"
     "I'm glad I met someone like you.$"
 }
@@ -50,23 +50,23 @@ text FiveIsland_WaterLabyrinth_Text_CuteMonRemindsMeOfDaisy {
     "That's a cute {STR_VAR_2}.\p"
     "Seeing it reminds me of a sweet \n"
     "little girl I met while traveling.\p"
-    "She was gently grooming POKéMON…\n"
+    "She was gently grooming Pokémon…\n"
     "She was a little angel.\p"
     "That little girl's name…\n"
-    "I think it was DAISY.$"
+    "I think it was Daisy.$"
 }
 
 text FiveIsland_WaterLabyrinth_Text_AlizeIntro {
     "This is an excellent environment\n"
-    "for raising POKéMON.$"
+    "for raising Pokémon.$"
 }
 
 text FiveIsland_WaterLabyrinth_Text_AlizeDefeat {
-    "Your POKéMON are growing up\n"
+    "Your Pokémon are growing up\n"
     "admirably well!$"
 }
 
 text FiveIsland_WaterLabyrinth_Text_AlizePostBattle {
     "You know, I think you have the\n"
-    "talent to be a good BREEDER.$"
+    "talent to be a good Breeder.$"
 }

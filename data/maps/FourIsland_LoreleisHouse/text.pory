@@ -1,22 +1,22 @@
 text FourIsland_LoreleisHouse_Text_IfAnythingWereToHappenToIsland {
-    "LORELEI: There's something weighing\n"
+    "Lorelei: There's something weighing\n"
     "heavily on my mind.\p"
     "If anything were to happen on\n"
     "the island where I was born…\p"
     "I wouldn't know about it if I were\n"
-    "in the POKéMON LEAGUE.\p"
+    "in the Pokémon League.\p"
     "I wonder if that would make me\n"
     "irresponsible to my home…$"
 }
 
 text FourIsland_LoreleisHouse_Text_IllReturnToLeagueInShortWhile {
-    "LORELEI: So, you managed to solve\n"
+    "Lorelei: So, you managed to solve\n"
     "all the problems here?\p"
     "That's wonderful.\p"
     "That means there isn't any reason\n"
     "for me to be here all the time.\p"
     "Thank you…\p"
-    "I'll return to the POKéMON LEAGUE\n"
+    "I'll return to the Pokémon League\n"
     "in a short while.$"
 }
 
@@ -28,5 +28,5 @@ text FourIsland_LoreleisHouse_Text_WillDoWhatICanHereAndNow {
 }
 
 text FourIsland_LoreleisHouse_Text_StuffedMonDollsGalore {
-    "Stuffed POKéMON dolls galore!$"
+    "Stuffed Pokémon dolls galore!$"
 }

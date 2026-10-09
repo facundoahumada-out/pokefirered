@@ -9,7 +9,7 @@ RockTunnel_1F_Text_LennyDefeat::
 
 RockTunnel_1F_Text_LennyPostBattle::
 # 10 "data/maps/RockTunnel_1F/text.pory"
-	.string "Watch for ONIX.\n"
+	.string "Watch for Onix.\n"
 	.string "They appear only occasionally.\p"
 	.string "High-level ones can put the\n"
 	.string "squeeze on you!$"
@@ -27,7 +27,7 @@ RockTunnel_1F_Text_OliverDefeat::
 
 RockTunnel_1F_Text_OliverPostBattle::
 # 28 "data/maps/RockTunnel_1F/text.pory"
-	.string "That sleeping POKéMON on ROUTE 12\n"
+	.string "That sleeping Pokémon on Route 12\n"
 	.string "forced me to take this detour.$"
 
 RockTunnel_1F_Text_LucasIntro::
@@ -45,7 +45,7 @@ RockTunnel_1F_Text_LucasPostBattle::
 
 RockTunnel_1F_Text_AshtonIntro::
 # 46 "data/maps/RockTunnel_1F/text.pory"
-	.string "POKéMON fight!\n"
+	.string "Pokémon fight!\n"
 	.string "Ready, go!$"
 
 RockTunnel_1F_Text_AshtonDefeat::
@@ -54,7 +54,7 @@ RockTunnel_1F_Text_AshtonDefeat::
 
 RockTunnel_1F_Text_AshtonPostBattle::
 # 55 "data/maps/RockTunnel_1F/text.pory"
-	.string "Oh well, I'll get a ZUBAT as I go!$"
+	.string "Oh well, I'll get a Zubat as I go!$"
 
 RockTunnel_1F_Text_LeahIntro::
 # 59 "data/maps/RockTunnel_1F/text.pory"
@@ -68,16 +68,16 @@ RockTunnel_1F_Text_LeahDefeat::
 
 RockTunnel_1F_Text_LeahPostBattle::
 # 69 "data/maps/RockTunnel_1F/text.pory"
-	.string "I saw a MACHOP in this tunnel.$"
+	.string "I saw a Machop in this tunnel.$"
 
 RockTunnel_1F_Text_DanaIntro::
 # 73 "data/maps/RockTunnel_1F/text.pory"
 	.string "I came this far looking for wild\n"
-	.string "POKéMON.$"
+	.string "Pokémon.$"
 
 RockTunnel_1F_Text_DanaDefeat::
 # 78 "data/maps/RockTunnel_1F/text.pory"
-	.string "I'm out of POKéMON!$"
+	.string "I'm out of Pokémon!$"
 
 RockTunnel_1F_Text_DanaPostBattle::
 # 82 "data/maps/RockTunnel_1F/text.pory"
@@ -86,7 +86,7 @@ RockTunnel_1F_Text_DanaPostBattle::
 
 RockTunnel_1F_Text_ArianaIntro::
 # 87 "data/maps/RockTunnel_1F/text.pory"
-	.string "You have POKéMON!\n"
+	.string "You have Pokémon!\n"
 	.string "Let's start!$"
 
 RockTunnel_1F_Text_ArianaDefeat::
@@ -100,5 +100,5 @@ RockTunnel_1F_Text_ArianaPostBattle::
 
 RockTunnel_1F_Text_RouteSign::
 # 101 "data/maps/RockTunnel_1F/text.pory"
-	.string "ROCK TUNNEL\n"
-	.string "CERULEAN CITY - LAVENDER TOWN$"
+	.string "Rock Tunnel\n"
+	.string "Cerulean City - Lavender Town$"

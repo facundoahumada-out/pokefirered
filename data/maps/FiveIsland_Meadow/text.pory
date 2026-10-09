@@ -6,7 +6,7 @@ text FiveIsland_Meadow_Text_DoorNeedsTwoPasswords {
 
 text FiveIsland_Meadow_Text_EnteredPasswordAnotherNeeded {
     "{PLAYER} entered a password.\p"
-    "“GOLDEEN need log.”\p"
+    "“Goldeen need log.”\p"
     "… …  … …  … …\p"
     "Another password is needed to\n"
     "open the door…$"
@@ -14,14 +14,14 @@ text FiveIsland_Meadow_Text_EnteredPasswordAnotherNeeded {
 
 text FiveIsland_Meadow_Text_EnteredPasswordDoorOpened {
     "{PLAYER} entered two passwords.\p"
-    "“GOLDEEN need log.”\n"
-    "“Yes, nah, CHANSEY.”\p"
+    "“Goldeen need log.”\n"
+    "“Yes, nah, Chansey.”\p"
     "… …  … …  … …\p"
-    "The WAREHOUSE's door opened!$"
+    "The Warehouse's door opened!$"
 }
 
 text FiveIsland_Meadow_Text_WarehouseDoorAlreadyOpen {
-    "The WAREHOUSE's door is already\n"
+    "The Warehouse's door is already\n"
     "open.$"
 }
 
@@ -41,7 +41,7 @@ text FiveIsland_Meadow_Text_Rocket1PostBattle {
 
 text FiveIsland_Meadow_Text_Rocket2Intro {
     "There's nothing past here except\n"
-    "our WAREHOUSE.\p"
+    "our Warehouse.\p"
     "So what brings you here?$"
 }
 
@@ -51,7 +51,7 @@ text FiveIsland_Meadow_Text_Rocket2Defeat {
 
 text FiveIsland_Meadow_Text_Rocket2PostBattle {
     "You're wanting to know what's inside\n"
-    "this WAREHOUSE?\p"
+    "this Warehouse?\p"
     "It's better you didn't know.\n"
     "For your own sake, I mean.$"
 }

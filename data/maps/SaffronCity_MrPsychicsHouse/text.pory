@@ -5,12 +5,12 @@ text SaffronCity_MrPsychicsHouse_Text_YouWantedThis {
 
 text SaffronCity_MrPsychicsHouse_Text_ReceivedTM29FromMrPsychic {
     "{PLAYER} received TM29\n"
-    "from MR. PSYCHIC.$"
+    "from Mr. Psychic.$"
 }
 
 text SaffronCity_MrPsychicsHouse_Text_ExplainTM29 {
     "You already know, don't you?\n"
-    "TM29 is PSYCHIC.\p"
+    "TM29 is Psychic.\p"
     "It's an attack that may also lower\n"
     "the target's special stats.$"
 }

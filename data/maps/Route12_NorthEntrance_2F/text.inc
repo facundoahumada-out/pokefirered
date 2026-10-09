@@ -1,14 +1,14 @@
 Route12_NorthEntrance_2F_Text_TakeTMDontNeedAnymoreMale::
 # 2 "data/maps/Route12_NorthEntrance_2F/text.pory"
-	.string "My POKéMON's ashes are stored in\n"
-	.string "POKéMON TOWER.\p"
+	.string "My Pokémon's ashes are stored in\n"
+	.string "Pokémon Tower.\p"
 	.string "You can have this TM.\n"
 	.string "I don't need it anymore…$"
 
 Route12_NorthEntrance_2F_Text_TakeTMDontNeedAnymoreFemale::
 # 9 "data/maps/Route12_NorthEntrance_2F/text.pory"
-	.string "My POKéMON's ashes are stored in\n"
-	.string "POKéMON TOWER.\p"
+	.string "My Pokémon's ashes are stored in\n"
+	.string "Pokémon Tower.\p"
 	.string "You can have this TM.\n"
 	.string "I don't need it anymore…$"
 
@@ -19,8 +19,8 @@ Route12_NorthEntrance_2F_Text_ReceivedTM27FromLittleGirl::
 
 Route12_NorthEntrance_2F_Text_ExplainTM27::
 # 21 "data/maps/Route12_NorthEntrance_2F/text.pory"
-	.string "TM27 is a move called RETURN…\p"
-	.string "If you treat your POKéMON good,\n"
+	.string "TM27 is a move called Return…\p"
+	.string "If you treat your Pokémon good,\n"
 	.string "it will return your love by working\l"
 	.string "its hardest in battle.$"
 
@@ -38,4 +38,4 @@ Route12_NorthEntrance_2F_Text_ItsPokemonTower::
 # 38 "data/maps/Route12_NorthEntrance_2F/text.pory"
 	.string "Let's see what the binoculars have\n"
 	.string "to show…\p"
-	.string "It's POKéMON TOWER!$"
+	.string "It's Pokémon Tower!$"

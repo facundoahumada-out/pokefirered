@@ -1,5 +1,5 @@
 text SilphCo_6F_Text_RocketsTookOverBuilding {
-    "The ROCKETS came and took over\n"
+    "The Rockets came and took over\n"
     "the building!$"
 }
 
@@ -28,28 +28,28 @@ text SilphCo_6F_Text_NeedsMeToLookAfterHim {
 }
 
 text SilphCo_6F_Text_RocketsTryingToConquerWorld {
-    "TEAM ROCKET is trying to conquer\n"
-    "the world with POKéMON.$"
+    "Team Rocket is trying to conquer\n"
+    "the world with Pokémon.$"
 }
 
 text SilphCo_6F_Text_RocketsRanAwayBecauseOfYou {
-    "TEAM ROCKET ran away, and it's all\n"
+    "Team Rocket ran away, and it's all\n"
     "because of you!$"
 }
 
 text SilphCo_6F_Text_TargetedSilphForOurMonProducts {
-    "They must have targeted SILPH for\n"
-    "our POKéMON products.$"
+    "They must have targeted Silph for\n"
+    "our Pokémon products.$"
 }
 
 text SilphCo_6F_Text_ComeWorkForSilphWhenYoureOlder {
-    "Come work for SILPH when you\n"
+    "Come work for Silph when you\n"
     "get older.$"
 }
 
 text SilphCo_6F_Text_Grunt1Intro {
-    "I am one of the four ROCKET\n"
-    "BROTHERS!$"
+    "I am one of the four Rocket\n"
+    "Brothers!$"
 }
 
 text SilphCo_6F_Text_Grunt1Defeat {
@@ -62,10 +62,10 @@ text SilphCo_6F_Text_Grunt1PostBattle {
 }
 
 text SilphCo_6F_Text_TaylorIntro {
-    "That rotten PRESIDENT!\p"
+    "That rotten President!\p"
     "Serves him right for shipping me\n"
-    "off to the TIKSI BRANCH!\p"
-    "That's why TEAM ROCKET came after\n"
+    "off to the Tiksi Branch!\p"
+    "That's why Team Rocket came after\n"
     "us, I'm sure of it!$"
 }
 
@@ -74,12 +74,12 @@ text SilphCo_6F_Text_TaylorDefeat {
 }
 
 text SilphCo_6F_Text_TaylorPostBattle {
-    "TIKSI BRANCH?\n"
+    "Tiksi Branch?\n"
     "It's in Russian no-man's-land!$"
 }
 
 text SilphCo_6F_Text_Grunt2Intro {
-    "You dare betray TEAM ROCKET?$"
+    "You dare betray Team Rocket?$"
 }
 
 text SilphCo_6F_Text_Grunt2Defeat {
@@ -92,6 +92,6 @@ text SilphCo_6F_Text_Grunt2PostBattle {
 }
 
 text SilphCo_6F_Text_FloorSign {
-    "SILPH CO. HEAD OFFICE\n"
+    "Silph Co. Head Office\n"
     "6F$"
 }

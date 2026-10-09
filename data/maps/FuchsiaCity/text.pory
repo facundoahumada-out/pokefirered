@@ -1,18 +1,18 @@
 text FuchsiaCity_Text_DidYouTrySafariGame {
-    "Did you try the SAFARI GAME?\p"
-    "There are some rare POKéMON that\n"
+    "Did you try the Safari Game?\p"
+    "There are some rare Pokémon that\n"
     "can only be caught there.$"
 }
 
 text FuchsiaCity_Text_SafariZoneZooInFront {
-    "The SAFARI ZONE has a zoo in front\n"
+    "The Safari Zone has a zoo in front\n"
     "of the entrance.\p"
-    "Out back is the SAFARI GAME for\n"
-    "catching POKéMON.$"
+    "Out back is the Safari Game for\n"
+    "catching Pokémon.$"
 }
 
 text FuchsiaCity_Text_WheresSara {
-    "ERIK: Where's SARA?\n"
+    "Erik: Where's Sara?\n"
     "I said I'd meet her here.$"
 }
 
@@ -20,76 +20,76 @@ text FuchsiaCity_Text_ItemBallInThere {
     "That item ball in there…\n"
     "Were you wanting that?\p"
     "Me, too!\n"
-    "…Huh? That's a POKéMON?$"
+    "…Huh? That's a Pokémon?$"
 }
 
 text FuchsiaCity_Text_CitySign {
-    "FUCHSIA CITY\n"
+    "Fuchsia City\n"
     "Behold! It's Passion Pink!$"
 }
 
 text FuchsiaCity_Text_SafariZoneSign {
-    "POKéMON PARADISE\n"
-    "SAFARI ZONE$"
+    "Pokémon Paradise\n"
+    "Safari Zone$"
 }
 
 text FuchsiaCity_Text_SafariGameSign {
-    "SAFARI GAME\n"
-    "POKéMON-U-CATCH!$"
+    "Safari Game\n"
+    "Pokémon-U-Catch!$"
 }
 
 text FuchsiaCity_Text_WardensHomeSign {
-    "SAFARI ZONE\n"
-    "WARDEN'S HOME$"
+    "Safari Zone\n"
+    "Warden's Home$"
 }
 
 text FuchsiaCity_Text_SafariZoneOfficeSign {
-    "POKéMON PARADISE!\n"
-    "Welcome to the SAFARI ZONE!\l"
-    "SAFARI ZONE OFFICE$"
+    "Pokémon Paradise!\n"
+    "Welcome to the Safari Zone!\l"
+    "Safari Zone Office$"
 }
 
 text FuchsiaCity_Text_GymSign {
-    "FUCHSIA CITY POKéMON GYM\n"
-    "LEADER: KOGA\l"
+    "Fuchsia City Pokémon Gym\n"
+    "Leader: Koga\l"
     "The Poisonous Ninja Master$"
 }
 
 text FuchsiaCity_Text_ChanseySign {
-    "Name: CHANSEY\n"
+    "Name: Chansey\n"
     "Catching one is all up to chance.$"
 }
 
 text FuchsiaCity_Text_VoltorbSign {
-    "Name: VOLTORB\n"
-    "The very image of a POKé BALL.$"
+    "Name: Voltorb\n"
+    "The very image of a Poké Ball.$"
 }
 
 text FuchsiaCity_Text_KangaskhanSign {
-    "Name: KANGASKHAN\p"
-    "A maternal POKéMON that raises its\n"
+    "Name: Kangaskhan\p"
+    "A maternal Pokémon that raises its\n"
     "young in a pouch on its belly.$"
 }
 
 text FuchsiaCity_Text_SlowpokeSign {
-    "Name: SLOWPOKE\n"
+    "Name: Slowpoke\n"
     "Friendly and very slow moving.$"
 }
 
 text FuchsiaCity_Text_LaprasSign {
-    "Name: LAPRAS\n"
-    "AKA the king of the seas.$"
+    "Name: Lapras\n"
+    "Aka the king of the seas.$"
 }
 
 text FuchsiaCity_Text_OmanyteSign {
-    "Name: OMANYTE\n"
-    "An extremely rare POKéMON that was\l"
+    "Name: Omanyte\n"
+    "An extremely rare Pokémon that was\l"
     "regenerated from a fossil.$"
 }
 
 text FuchsiaCity_Text_KabutoSign {
-    "Name: KABUTO\n"
-    "An extremely rare POKéMON that was\l"
+    "Name: Kabuto\n"
+    "An extremely rare Pokémon that was\l"
     "regenerated from a fossil.$"
 }
 
@@ -99,36 +99,36 @@ text FuchsiaCity_Text_Ellipsis {
 }
 
 text Text_SubstituteTeach {
-    "Aww, I wish I was a KANGASKHAN\n"
+    "Aww, I wish I was a Kangaskhan\n"
     "baby.\p"
     "I'd love to be a substitute for the\n"
     "baby…\p"
     "And snuggle in the mother\n"
-    "KANGASKHAN's belly pouch.\p"
-    "But only POKéMON can use the\n"
-    "technique SUBSTITUTE…\p"
-    "Want me to teach SUBSTITUTE to\n"
-    "one of your POKéMON?$"
+    "Kangaskhan's belly pouch.\p"
+    "But only Pokémon can use the\n"
+    "technique Substitute…\p"
+    "Want me to teach Substitute to\n"
+    "one of your Pokémon?$"
 }
 
 text Text_SubstituteDeclined {
     "Oh, really?\n"
-    "SUBSTITUTE seems so fun…$"
+    "Substitute seems so fun…$"
 }
 
 text Text_SubstituteWhichMon {
-    "Which POKéMON wants to learn\n"
-    "SUBSTITUTE?$"
+    "Which Pokémon wants to learn\n"
+    "Substitute?$"
 }
 
 text Text_SubstituteTaught {
     "Boy, what I'd give to crawl inside\n"
-    "a KANGASKHAN belly pouch…$"
+    "a Kangaskhan belly pouch…$"
 }
 
 text FuchsiaCity_Text_MyFatherIsGymLeader {
-    "My father is the GYM LEADER of\n"
+    "My father is the Gym Leader of\n"
     "this town.\p"
-    "I'm training to use POISON POKéMON\n"
+    "I'm training to use Poison Pokémon\n"
     "as well as my father.$"
 }

@@ -1,7 +1,7 @@
 text CeruleanCity_BikeShop_Text_WelcomeToBikeShop {
     "Hi!\n"
-    "Welcome to our BIKE SHOP.\p"
-    "Have we got just the BIKE for\n"
+    "Welcome to our Bike Shop.\p"
+    "Have we got just the Bike for\n"
     "you!$"
 }
 
@@ -12,14 +12,14 @@ text CeruleanCity_BikeShop_Text_SorryYouCantAffordIt {
 
 text CeruleanCity_BikeShop_Text_OhBikeVoucherHereYouGo {
     "Oh, that's…\p"
-    "A BIKE VOUCHER!\p"
+    "A Bike Voucher!\p"
     "Okay!\n"
     "Here you go!$"
 }
 
 text CeruleanCity_BikeShop_Text_ExchangedVoucherForBicycle {
     "{PLAYER} exchanged the\n"
-    "BIKE VOUCHER for a BICYCLE.$"
+    "Bike Voucher for a Bicycle.$"
 }
 
 text CeruleanCity_BikeShop_Text_ThankYouComeAgain {
@@ -28,15 +28,15 @@ text CeruleanCity_BikeShop_Text_ThankYouComeAgain {
 }
 
 text CeruleanCity_BikeShop_Text_HowDoYouLikeNewBicycle {
-    "How do you like your new BICYCLE?\n"
+    "How do you like your new Bicycle?\n"
     "Do you like how it rides?\p"
-    "You can take it out on CYCLING\n"
-    "ROAD and even into caves!$"
+    "You can take it out on Cycling\n"
+    "Road and even into caves!$"
 }
 
 text CeruleanCity_BikeShop_Text_MakeRoomForBicycle {
     "You better make room for your\n"
-    "BICYCLE!$"
+    "Bicycle!$"
 }
 
 text CeruleanCity_BikeShop_Text_CityBikeGoodEnoughForMe {
@@ -53,7 +53,7 @@ text CeruleanCity_BikeShop_Text_BikesCoolButExpensive {
 
 text CeruleanCity_BikeShop_Text_WowYourBikeIsCool {
     "Wow.\n"
-    "Your BIKE is really cool!$"
+    "Your Bike is really cool!$"
 }
 
 // Unused
@@ -64,5 +64,5 @@ text CeruleanCity_BikeShop_Text_GermanFoldableBicyleFinallyOnMarket {
 }
 
 text CeruleanCity_BikeShop_Text_ShinyNewBicycle {
-    "A shiny new BICYCLE!$"
+    "A shiny new Bicycle!$"
 }

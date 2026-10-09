@@ -1,6 +1,6 @@
 CeladonCity_GameCorner_PrizeRoom_Text_FancyThatPorygon::
 # 1 "data/maps/CeladonCity_GameCorner_PrizeRoom/text.pory"
-	.string "I sure do fancy that PORYGON!\n"
+	.string "I sure do fancy that Porygon!\n"
 	.string "But, it's hard to win at slots!$"
 
 CeladonCity_GameCorner_PrizeRoom_Text_RakedItInToday::
@@ -10,11 +10,11 @@ CeladonCity_GameCorner_PrizeRoom_Text_RakedItInToday::
 
 CeladonCity_GameCorner_PrizeRoom_Text_CoinCaseRequired::
 # 11 "data/maps/CeladonCity_GameCorner_PrizeRoom/text.pory"
-	.string "A COIN CASE is required…$"
+	.string "A Coin Case is required…$"
 
 CeladonCity_GameCorner_PrizeRoom_Text_WeExchangeCoinsForPrizes::
 # 15 "data/maps/CeladonCity_GameCorner_PrizeRoom/text.pory"
-	.string "We exchange your COINS for prizes.$"
+	.string "We exchange your Coins for prizes.$"
 
 CeladonCity_GameCorner_PrizeRoom_Text_WhichPrize::
 # 19 "data/maps/CeladonCity_GameCorner_PrizeRoom/text.pory"
@@ -35,7 +35,7 @@ CeladonCity_GameCorner_PrizeRoom_Text_YouWantTM::
 
 CeladonCity_GameCorner_PrizeRoom_Text_NeedMoreCoins::
 # 36 "data/maps/CeladonCity_GameCorner_PrizeRoom/text.pory"
-	.string "Sorry, you'll need more COINS\n"
+	.string "Sorry, you'll need more Coins\n"
 	.string "than that.$"
 
 CeladonCity_GameCorner_PrizeRoom_Text_OopsNotEnoughRoom::

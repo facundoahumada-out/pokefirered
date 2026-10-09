@@ -4,7 +4,7 @@ Text_ObtainedTheX::
 
 Text_BagIsFull::
 # 5 "data/text/obtain_item.pory"
-	.string "The BAG is full…$"
+	.string "The Bag is full…$"
 
 Text_PutItemAway::
 # 9 "data/text/obtain_item.pory"
@@ -18,7 +18,7 @@ Text_FoundOneItem::
 Text_TooBadBagFull::
 # 18 "data/text/obtain_item.pory"
 	.string "Too bad!\n"
-	.string "The BAG is full…$"
+	.string "The Bag is full…$"
 
 Text_FoundXCoins::
 # 23 "data/text/obtain_item.pory"
@@ -27,13 +27,13 @@ Text_FoundXCoins::
 
 Text_PutCoinsAwayInCoinCase::
 # 28 "data/text/obtain_item.pory"
-	.string "{PLAYER} put the COINS away in\n"
-	.string "the COIN CASE.$"
+	.string "{PLAYER} put the Coins away in\n"
+	.string "the Coin Case.$"
 
 Text_CoinCaseIsFull::
 # 33 "data/text/obtain_item.pory"
 	.string "Too bad!\n"
-	.string "The COIN CASE is full…$"
+	.string "The Coin Case is full…$"
 
 Text_NothingToPutThemIn::
 # 38 "data/text/obtain_item.pory"

@@ -1,27 +1,27 @@
 text PalletTown_PlayersHouse_1F_Text_AllBoysLeaveOakLookingForYou {
-    "MOM: …Right.\n"
+    "Mom: …Right.\n"
     "All boys leave home someday.\l"
     "It said so on TV.\p"
-    "Oh, yes. PROF. OAK, next door, was\n"
+    "Oh, yes. Prof. Oak, next door, was\n"
     "looking for you.$"
 }
 
 text PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou {
-    "MOM: …Right.\n"
+    "Mom: …Right.\n"
     "All girls dream of traveling.\l"
     "It said so on TV.\p"
-    "Oh, yes. PROF. OAK, next door, was\n"
+    "Oh, yes. Prof. Oak, next door, was\n"
     "looking for you.$"
 }
 
 text PalletTown_PlayersHouse_1F_Text_YouShouldTakeQuickRest {
-    "MOM: {PLAYER}!\n"
+    "Mom: {PLAYER}!\n"
     "You should take a quick rest.$"
 }
 
 text PalletTown_PlayersHouse_1F_Text_LookingGreatTakeCare {
-    "MOM: Oh, good! You and your\n"
-    "POKéMON are looking great.\l"
+    "Mom: Oh, good! You and your\n"
+    "Pokémon are looking great.\l"
     "Take care now!$"
 }
 

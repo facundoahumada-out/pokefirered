@@ -1,7 +1,7 @@
 text SixIsland_GreenPath_Text_JaclynIntro {
     "…Huh?\p"
     "I was envisioning my house, but\n"
-    "this is where I TELEPORT?$"
+    "this is where I Teleport?$"
 }
 
 text SixIsland_GreenPath_Text_JaclynDefeat {
@@ -10,16 +10,16 @@ text SixIsland_GreenPath_Text_JaclynDefeat {
 
 text SixIsland_GreenPath_Text_JaclynPostBattle {
     "I am so scatterbrained!\p"
-    "I need to focus so I can TELEPORT\n"
+    "I need to focus so I can Teleport\n"
     "properly to my house!$"
 }
 
 text SixIsland_GreenPath_Text_LeftRouteSign {
-    "GREEN PATH\n"
-    "PATTERN BUSH AHEAD$"
+    "Green Path\n"
+    "Pattern Bush Ahead$"
 }
 
 text SixIsland_GreenPath_Text_RightRouteSign {
-    "GREEN PATH\n"
+    "Green Path\n"
     "Think Green, Keep Nature Clean!$"
 }

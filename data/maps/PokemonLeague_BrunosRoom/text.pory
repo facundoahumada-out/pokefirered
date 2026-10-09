@@ -1,10 +1,10 @@
 text PokemonLeague_BrunosRoom_Text_Intro {
-    "I am BRUNO of the ELITE FOUR!\p"
+    "I am Bruno of the Elite Four!\p"
     "Through rigorous training, people\n"
-    "and POKéMON can become stronger\l"
+    "and Pokémon can become stronger\l"
     "without limit.\p"
     "I've lived and trained with my\n"
-    "fighting POKéMON!\l"
+    "fighting Pokémon!\l"
     "And that will never change!\p"
     "{PLAYER}!\p"
     "We will grind you down with our\n"
@@ -13,12 +13,12 @@ text PokemonLeague_BrunosRoom_Text_Intro {
 }
 
 text PokemonLeague_BrunosRoom_Text_RematchIntro {
-    "I am BRUNO of the ELITE FOUR!\p"
+    "I am Bruno of the Elite Four!\p"
     "Through rigorous training, people\n"
-    "and POKéMON can become stronger\l"
+    "and Pokémon can become stronger\l"
     "without limit.\p"
     "I've lived and trained with my\n"
-    "fighting POKéMON!\l"
+    "fighting Pokémon!\l"
     "And that will never change!\p"
     "{PLAYER}!\p"
     "We will grind you down with our\n"

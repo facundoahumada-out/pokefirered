@@ -28,7 +28,7 @@ text PokemonMansion_B1F_Text_IvanPostBattle {
 
 text PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful {
     "Diary: Sept. 1\n"
-    "MEWTWO is far too powerful.\p"
+    "Mewtwo is far too powerful.\p"
     "We have failed to curb its vicious\n"
     "tendencies…$"
 }

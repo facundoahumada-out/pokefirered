@@ -1,36 +1,36 @@
 text Route4_PokemonCenter_1F_Text_CanHaveSixMonsWithYou {
-    "Okay, set six POKé BALLS in my\n"
+    "Okay, set six Poké Balls in my\n"
     "belt…\p"
     "Yeah, that'll do it. At most, you\n"
-    "can have six POKéMON with you.$"
+    "can have six Pokémon with you.$"
 }
 
 text Route4_PokemonCenter_1F_Text_TeamRocketAttacksCerulean {
-    "TEAM ROCKET attacks CERULEAN\n"
+    "Team Rocket attacks Cerulean\n"
     "citizens…\p"
-    "Not a day goes by without TEAM\n"
-    "ROCKET being in the news.$"
+    "Not a day goes by without Team\n"
+    "Rocket being in the news.$"
 }
 
 text Route4_PokemonCenter_1F_Text_LaddieBuyMagikarpForJust500 {
-    "MAN: Hello there, laddie!\n"
+    "Man: Hello there, laddie!\n"
     "Have I got a deal just for you!\p"
-    "I'll let you have a secret POKéMON\n"
-    "- a MAGIKARP - for just ¥500!\p"
+    "I'll let you have a secret Pokémon\n"
+    "- a Magikarp - for just ¥500!\p"
     "So, you'll buy it, am I right?$"
 }
 
 text Route4_PokemonCenter_1F_Text_SweetieBuyMagikarpForJust500 {
-    "MAN: Hello there, sweetie pie!\n"
+    "Man: Hello there, sweetie pie!\n"
     "Have I got a deal just for you!\p"
-    "I'll let you have a secret POKéMON\n"
-    "- a MAGIKARP - for just ¥500!\p"
+    "I'll let you have a secret Pokémon\n"
+    "- a Magikarp - for just ¥500!\p"
     "So, you'll buy it, am I right?$"
 }
 
 text Route4_PokemonCenter_1F_Text_PaidOutrageouslyForMagikarp {
     "{PLAYER} paid an outrageous ¥500\n"
-    "and bought the MAGIKARP…$"
+    "and bought the Magikarp…$"
 }
 
 text Route4_PokemonCenter_1F_Text_OnlyDoingThisAsFavorToYou {
@@ -40,7 +40,7 @@ text Route4_PokemonCenter_1F_Text_OnlyDoingThisAsFavorToYou {
 
 text Route4_PokemonCenter_1F_Text_NoRoomForMorePokemon {
     "There's no more room for any more\n"
-    "POKéMON, it looks like.$"
+    "Pokémon, it looks like.$"
 }
 
 text Route4_PokemonCenter_1F_Text_YoullNeedMoreMoney {
@@ -48,13 +48,13 @@ text Route4_PokemonCenter_1F_Text_YoullNeedMoreMoney {
 }
 
 text Route4_PokemonCenter_1F_Text_IDontGiveRefunds {
-    "MAN: Well, I don't give refunds.\n"
+    "Man: Well, I don't give refunds.\n"
     "You knew what you were getting!$"
 }
 
 text Route4_PokemonCenter_1F_Text_ShouldStoreMonsUsingPC {
     "Sometimes, you'll have too many\n"
-    "POKéMON with you to add any more.\p"
+    "Pokémon with you to add any more.\p"
     "In that case, you should just\n"
     "store some using any PC.$"
 }

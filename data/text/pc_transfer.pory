@@ -2,28 +2,28 @@ text Text_MonSentToBoxInSomeonesPC {
     "{STR_VAR_2} was transferred to\n"
     "Someone's PC.\p"
     "It was placed in \n"
-    "BOX “{STR_VAR_1}.”$"
+    "Box “{STR_VAR_1}.”$"
 }
 
 text Text_MonSentToBoxInBillsPC {
     "{STR_VAR_2} was transferred to\n"
-    "BILL'S PC.\p"
+    "Bill's PC.\p"
     "It was placed in \n"
-    "BOX “{STR_VAR_1}.”$"
+    "Box “{STR_VAR_1}.”$"
 }
 
 text Text_MonSentToBoxSomeonesBoxFull {
-    "BOX “{STR_VAR_3}” on\n"
+    "Box “{STR_VAR_3}” on\n"
     "Someone's PC was full.\p"
     "{STR_VAR_2} was transferred to\n"
-    "BOX “{STR_VAR_1}.”$"
+    "Box “{STR_VAR_1}.”$"
 }
 
 text Text_MonSentToBoxBillsBoxFull {
-    "BOX “{STR_VAR_3}” on\n"
-    "BILL'S PC was full.\p"
+    "Box “{STR_VAR_3}” on\n"
+    "Bill's PC was full.\p"
     "{STR_VAR_2} was transferred to\n"
-    "BOX “{STR_VAR_1}.”$"
+    "Box “{STR_VAR_1}.”$"
 }
 
 text Text_PlayerObtainedTheMon {
@@ -40,7 +40,7 @@ text Text_MonSentToBoxInPC {
 }
 
 text Text_NoMoreRoomForPokemon {
-    "There's no more room for POKéMON!\p"
-    "The POKéMON BOXES are full and\n"
+    "There's no more room for Pokémon!\p"
+    "The Pokémon Boxes are full and\n"
     "can't accept any more!$"
 }

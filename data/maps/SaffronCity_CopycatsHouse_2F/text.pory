@@ -1,40 +1,40 @@
 text SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyMale {
     "{PLAYER}: Hi!\n"
-    "Do you like POKéMON?\p"
+    "Do you like Pokémon?\p"
     "{PLAYER}: Uh, no, I just asked you.\p"
     "{PLAYER}: Huh?\n"
     "You're strange!\p"
-    "COPYCAT: Hmm? Quit mimicking?\n"
+    "Copycat: Hmm? Quit mimicking?\n"
     "But, that's my favorite hobby!$"
 }
 
 text SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyFemale {
     "{PLAYER}: Hi.\n"
-    "You must like POKéMON.\p"
+    "You must like Pokémon.\p"
     "{PLAYER}: No, not me.\n"
     "I asked you.\p"
     "{PLAYER}: Pardon?\n"
     "You're weird!\l"
     " \l"
-    "COPYCAT: Hmm? Quit mimicking?\l"
+    "Copycat: Hmm? Quit mimicking?\l"
     "But that's my favorite hobby!$"
 }
 
 text Text_MimicTeach {
     "Oh wow!\n"
-    "A POKé DOLL!\p"
+    "A Poké Doll!\p"
     "For me?\n"
     "Thank you!\p"
     "You know what?\n"
-    "I can teach the move MIMIC.$"
+    "I can teach the move Mimic.$"
 }
 
 text Text_MimicDeclined {
-    "Don't you like MIMIC?$"
+    "Don't you like Mimic?$"
 }
 
 text Text_MimicWhichMon {
-    "I really love MIMIC!\n"
+    "I really love Mimic!\n"
     "Who's going to learn it?$"
 }
 
@@ -44,7 +44,7 @@ text Text_MimicTaughtMale {
     "{PLAYER}: Pardon?\p"
     "{PLAYER}: Is it that fun to mimic my\n"
     "every move?\p"
-    "COPYCAT: You bet!\n"
+    "Copycat: You bet!\n"
     "It's a scream!$"
 }
 
@@ -54,7 +54,7 @@ text Text_MimicTaughtFemale {
     "{PLAYER}: Pardon?\p"
     "{PLAYER}: Is it really that fun to\n"
     "copy what I say and do?\p"
-    "COPYCAT: You bet!\n"
+    "Copycat: You bet!\n"
     "It's a scream!$"
 }
 
@@ -89,18 +89,18 @@ text SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyFemaleJP {
 }
 
 text SaffronCity_CopycatsHouse_2F_Text_Doduo {
-    "DODUO: Giiih!\p"
-    "PRETTY MIRROR LOOK AT ME,\n"
-    "SEE HOW PRETTY I CAN BE?$"
+    "Doduo: Giiih!\p"
+    "Pretty Mirror Look at Me,\n"
+    "See How Pretty I Can Be?$"
 }
 
 text SaffronCity_CopycatsHouse_2F_Text_RareMonOnlyDoll {
-    "This is a rare POKéMON!\n"
+    "This is a rare Pokémon!\n"
     "Huh? It's only a doll!$"
 }
 
 text SaffronCity_CopycatsHouse_2F_Text_MarioWearingABucket {
-    "A game with MARIO wearing a bucket\n"
+    "A game with Mario wearing a bucket\n"
     "on his head!$"
 }
 
@@ -109,7 +109,7 @@ text SaffronCity_CopycatsHouse_2F_Text_MySecrets {
     "My Secrets!\p"
     "Skill: Mimicry!\n"
     "Hobby: Collecting dolls!\l"
-    "Favorite POKéMON: CLEFAIRY!$"
+    "Favorite Pokémon: Clefairy!$"
 }
 
 text SaffronCity_CopycatsHouse_2F_Text_HuhCantSee {

@@ -7,4 +7,4 @@ OneIsland_House1_Text_GazeUponVolcanoOnSunnyDays::
 OneIsland_House1_Text_LastTimeMtEmberErupted::
 # 7 "data/maps/OneIsland_House1/text.pory"
 	.string "Let me think… When was the last\n"
-	.string "time MT. EMBER erupted?$"
+	.string "time Mt. Ember erupted?$"

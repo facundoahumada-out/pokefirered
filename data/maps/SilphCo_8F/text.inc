@@ -1,6 +1,6 @@
 SilphCo_8F_Text_WonderIfSilphIsFinished::
 # 1 "data/maps/SilphCo_8F/text.pory"
-	.string "I wonder if SILPH is finished…$"
+	.string "I wonder if Silph is finished…$"
 
 SilphCo_8F_Text_ThanksForSavingUs::
 # 5 "data/maps/SilphCo_8F/text.pory"
@@ -30,13 +30,13 @@ SilphCo_8F_Text_ParkerDefeat::
 
 SilphCo_8F_Text_ParkerPostBattle::
 # 31 "data/maps/SilphCo_8F/text.pory"
-	.string "So, what do you think of SILPH\n"
-	.string "BUILDING's maze?$"
+	.string "So, what do you think of Silph\n"
+	.string "Building's maze?$"
 
 SilphCo_8F_Text_Grunt2Intro::
 # 36 "data/maps/SilphCo_8F/text.pory"
-	.string "I am one of the four ROCKET\n"
-	.string "BROTHERS!$"
+	.string "I am one of the four Rocket\n"
+	.string "Brothers!$"
 
 SilphCo_8F_Text_Grunt2Defeat::
 # 41 "data/maps/SilphCo_8F/text.pory"
@@ -49,14 +49,14 @@ SilphCo_8F_Text_Grunt2PostBattle::
 
 SilphCo_8F_Text_FloorSign::
 # 50 "data/maps/SilphCo_8F/text.pory"
-	.string "SILPH CO. HEAD OFFICE\n"
+	.string "Silph Co. Head Office\n"
 	.string "8F$"
 
 SilphCo_8F_Text_ToRocketBossMonsAreTools::
 # 55 "data/maps/SilphCo_8F/text.pory"
-	.string "TEAM ROCKET's BOSS is terribly\n"
+	.string "Team Rocket's Boss is terribly\n"
 	.string "cruel!\p"
-	.string "To him, POKéMON are just tools to\n"
+	.string "To him, Pokémon are just tools to\n"
 	.string "be used.\p"
 	.string "What will happen if that tyrant\n"
 	.string "takes over our company…$"

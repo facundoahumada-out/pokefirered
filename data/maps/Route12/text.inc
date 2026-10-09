@@ -1,26 +1,26 @@
 Route12_Text_MonSprawledOutInSlumber::
 # 1 "data/maps/Route12/text.pory"
-	.string "A POKéMON is sprawled out in\n"
+	.string "A Pokémon is sprawled out in\n"
 	.string "a deep and comfortable slumber.$"
 
 Text_SnorlaxWokeUp::
 # 6 "data/maps/Route12/text.pory"
-	.string "SNORLAX woke up!\p"
+	.string "Snorlax woke up!\p"
 	.string "It attacked in a grumpy rage!$"
 
 Text_SnorlaxReturnedToMountains::
 # 11 "data/maps/Route12/text.pory"
-	.string "SNORLAX calmed down.\n"
+	.string "Snorlax calmed down.\n"
 	.string "It gave a huge yawn…\l"
 	.string "And returned to the mountains.$"
 
 Text_WantToUsePokeFlute::
 # 17 "data/maps/Route12/text.pory"
-	.string "Want to use the POKé FLUTE?$"
+	.string "Want to use the Poké Flute?$"
 
 Text_PlayedPokeFlute::
 # 21 "data/maps/Route12/text.pory"
-	.string "{PLAYER} played the POKé FLUTE.$"
+	.string "{PLAYER} played the Poké Flute.$"
 
 Route12_Text_NedIntro::
 # 25 "data/maps/Route12/text.pory"
@@ -48,12 +48,12 @@ Route12_Text_ChipDefeat::
 
 Route12_Text_ChipPostBattle::
 # 49 "data/maps/Route12/text.pory"
-	.string "With a better ROD, I could catch\n"
-	.string "better POKéMON…$"
+	.string "With a better Rod, I could catch\n"
+	.string "better Pokémon…$"
 
 Route12_Text_JustinIntro::
 # 54 "data/maps/Route12/text.pory"
-	.string "I'm searching for a MOON STONE.\n"
+	.string "I'm searching for a Moon Stone.\n"
 	.string "Have you found one?$"
 
 Route12_Text_JustinDefeat::
@@ -62,14 +62,14 @@ Route12_Text_JustinDefeat::
 
 Route12_Text_JustinPostBattle::
 # 63 "data/maps/Route12/text.pory"
-	.string "I could have made my POKéMON\n"
-	.string "evolve with a MOON STONE.\p"
+	.string "I could have made my Pokémon\n"
+	.string "evolve with a Moon Stone.\p"
 	.string "I would have won then, I bet.$"
 
 Route12_Text_LucaIntro::
 # 69 "data/maps/Route12/text.pory"
 	.string "Electricity is my specialty.\p"
-	.string "I don't know a thing about POKéMON\n"
+	.string "I don't know a thing about Pokémon\n"
 	.string "of the sea, though.$"
 
 Route12_Text_LucaDefeat::
@@ -79,12 +79,12 @@ Route12_Text_LucaDefeat::
 Route12_Text_LucaPostBattle::
 # 79 "data/maps/Route12/text.pory"
 	.string "Water conducts electricity, so you\n"
-	.string "should zap sea POKéMON.$"
+	.string "should zap sea Pokémon.$"
 
 Route12_Text_HankIntro::
 # 84 "data/maps/Route12/text.pory"
-	.string "The FISHING FOOL versus POKéMON\n"
-	.string "KID!$"
+	.string "The Fishing Fool versus Pokémon\n"
+	.string "Kid!$"
 
 Route12_Text_HankDefeat::
 # 89 "data/maps/Route12/text.pory"
@@ -94,7 +94,7 @@ Route12_Text_HankPostBattle::
 # 93 "data/maps/Route12/text.pory"
 	.string "I guess you get to be good at\n"
 	.string "what you like.\p"
-	.string "Well, you beat me at POKéMON,\n"
+	.string "Well, you beat me at Pokémon,\n"
 	.string "but you can't top me at fishing.$"
 
 Route12_Text_ElliotIntro::
@@ -124,57 +124,57 @@ Route12_Text_AndrewDefeat::
 
 Route12_Text_AndrewPostBattle::
 # 125 "data/maps/Route12/text.pory"
-	.string "What, MAGIKARP?\p"
+	.string "What, Magikarp?\p"
 	.string "I catch them all the time, sure.\n"
 	.string "But, boy are they wimpy.$"
 
 Route12_Text_RouteSign::
 # 131 "data/maps/Route12/text.pory"
-	.string "ROUTE 12 \n"
-	.string "North to LAVENDER$"
+	.string "Route 12 \n"
+	.string "North to Lavender$"
 
 Route12_Text_SportfishingArea::
 # 136 "data/maps/Route12/text.pory"
-	.string "SPORTFISHING AREA$"
+	.string "Sportfishing Area$"
 
 Route12_Text_JesIntro::
 # 140 "data/maps/Route12/text.pory"
-	.string "JES: If I win, I'm going to\n"
-	.string "propose to GIA.$"
+	.string "Jes: If I win, I'm going to\n"
+	.string "propose to Gia.$"
 
 Route12_Text_JesDefeat::
 # 145 "data/maps/Route12/text.pory"
-	.string "JES: Oh, please, why couldn't you\n"
+	.string "Jes: Oh, please, why couldn't you\n"
 	.string "let us win?$"
 
 Route12_Text_JesPostBattle::
 # 150 "data/maps/Route12/text.pory"
-	.string "JES: Oh, GIA, forgive me,\n"
+	.string "Jes: Oh, Gia, forgive me,\n"
 	.string "my love!$"
 
 Route12_Text_JesNotEnoughMons::
 # 155 "data/maps/Route12/text.pory"
-	.string "JES: GIA and I, we'll be\n"
+	.string "Jes: Gia and I, we'll be\n"
 	.string "together forever.\p"
 	.string "We won't battle unless you have\n"
-	.string "two POKéMON of your own.$"
+	.string "two Pokémon of your own.$"
 
 Route12_Text_GiaIntro::
 # 162 "data/maps/Route12/text.pory"
-	.string "GIA: Hey, JES…\p"
+	.string "Gia: Hey, Jes…\p"
 	.string "If we win, I'll marry you!$"
 
 Route12_Text_GiaDefeat::
 # 167 "data/maps/Route12/text.pory"
-	.string "GIA: Oh, but why?$"
+	.string "Gia: Oh, but why?$"
 
 Route12_Text_GiaPostBattle::
 # 171 "data/maps/Route12/text.pory"
-	.string "GIA: JES, you silly!\n"
+	.string "Gia: Jes, you silly!\n"
 	.string "You ruined this!$"
 
 Route12_Text_GiaNotEnoughMons::
 # 176 "data/maps/Route12/text.pory"
-	.string "GIA: I can't bear to battle\n"
-	.string "without my JES!\p"
-	.string "Don't you have one more POKéMON?$"
+	.string "Gia: I can't bear to battle\n"
+	.string "without my Jes!\p"
+	.string "Don't you have one more Pokémon?$"

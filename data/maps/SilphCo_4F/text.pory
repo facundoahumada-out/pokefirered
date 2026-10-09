@@ -5,12 +5,12 @@ text SilphCo_4F_Text_CantYouSeeImHiding {
 
 text SilphCo_4F_Text_TeamRocketIsGone {
     "Huh?\n"
-    "TEAM ROCKET is gone?$"
+    "Team Rocket is gone?$"
 }
 
 text SilphCo_4F_Text_Grunt1Intro {
-    "TEAM ROCKET has taken control\n"
-    "of SILPH CO.!$"
+    "Team Rocket has taken control\n"
+    "of Silph Co.!$"
 }
 
 text SilphCo_4F_Text_Grunt1Defeat {
@@ -19,22 +19,22 @@ text SilphCo_4F_Text_Grunt1Defeat {
 
 text SilphCo_4F_Text_Grunt1PostBattle {
     "Fwahahaha!\n"
-    "My BOSS has been after this place!$"
+    "My Boss has been after this place!$"
 }
 
 text SilphCo_4F_Text_RodneyIntro {
-    "My POKéMON is my loyal servant.$"
+    "My Pokémon is my loyal servant.$"
 }
 
 text SilphCo_4F_Text_RodneyDefeat {
     "Darn!\n"
-    "You weak POKéMON!$"
+    "You weak Pokémon!$"
 }
 
 text SilphCo_4F_Text_RodneyPostBattle {
     "The doors are electronically\n"
     "locked.\p"
-    "It takes a CARD KEY to open the\n"
+    "It takes a Card Key to open the\n"
     "doors here.$"
 }
 
@@ -47,10 +47,10 @@ text SilphCo_4F_Text_Grunt2Defeat {
 }
 
 text SilphCo_4F_Text_Grunt2PostBattle {
-    "I better tell the BOSS on 11F!$"
+    "I better tell the Boss on 11F!$"
 }
 
 text SilphCo_4F_Text_FloorSign {
-    "SILPH CO. HEAD OFFICE\n"
+    "Silph Co. Head Office\n"
     "4F$"
 }

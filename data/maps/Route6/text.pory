@@ -38,7 +38,7 @@ text Route6_Text_KeigoDefeat {
 
 text Route6_Text_KeigoPostBattle {
     "I like bugs, so I'm going back to\n"
-    "VIRIDIAN FOREST.$"
+    "Viridian Forest.$"
 }
 
 text Route6_Text_JeffIntro {
@@ -52,7 +52,7 @@ text Route6_Text_JeffDefeat {
 }
 
 text Route6_Text_JeffPostBattle {
-    "I should bring more POKéMON with\n"
+    "I should bring more Pokémon with\n"
     "me. I'll feel safer that way.$"
 }
 
@@ -80,12 +80,12 @@ text Route6_Text_ElijahDefeat {
 }
 
 text Route6_Text_ElijahPostBattle {
-    "Are my POKéMON weak?\n"
+    "Are my Pokémon weak?\n"
     "Or, am I just bad?\l"
     "Which do you think?$"
 }
 
 text Route6_Text_UndergroundPathSign {
-    "UNDERGROUND PATH\n"
-    "CERULEAN CITY - VERMILION CITY$"
+    "Underground Path\n"
+    "Cerulean City - Vermilion City$"
 }

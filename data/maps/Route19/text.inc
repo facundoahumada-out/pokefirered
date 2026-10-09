@@ -24,7 +24,7 @@ Route19_Text_ReeceDefeat::
 
 Route19_Text_ReecePostBattle::
 # 25 "data/maps/Route19/text.pory"
-	.string "Watch out for TENTACOOL.\n"
+	.string "Watch out for Tentacool.\n"
 	.string "They sting so painfully.$"
 
 Route19_Text_MatthewIntro::
@@ -38,7 +38,7 @@ Route19_Text_MatthewDefeat::
 
 Route19_Text_MatthewPostBattle::
 # 39 "data/maps/Route19/text.pory"
-	.string "I can beat even marine POKéMON\n"
+	.string "I can beat even marine Pokémon\n"
 	.string "at swimming.$"
 
 Route19_Text_DouglasIntro::
@@ -56,7 +56,7 @@ Route19_Text_DouglasPostBattle::
 
 Route19_Text_DavidIntro::
 # 57 "data/maps/Route19/text.pory"
-	.string "I tried diving for POKéMON, but it\n"
+	.string "I tried diving for Pokémon, but it\n"
 	.string "was a no-go.$"
 
 Route19_Text_DavidDefeat::
@@ -66,7 +66,7 @@ Route19_Text_DavidDefeat::
 Route19_Text_DavidPostBattle::
 # 66 "data/maps/Route19/text.pory"
 	.string "I guess you have to fish for sea\n"
-	.string "POKéMON.$"
+	.string "Pokémon.$"
 
 Route19_Text_TonyIntro::
 # 71 "data/maps/Route19/text.pory"
@@ -95,8 +95,8 @@ Route19_Text_AnyaDefeat::
 Route19_Text_AnyaPostBattle::
 # 95 "data/maps/Route19/text.pory"
 	.string "It's still a long way to go to\n"
-	.string "SEAFOAM ISLANDS…\p"
-	.string "I want to go back to FUCHSIA…$"
+	.string "Seafoam Islands…\p"
+	.string "I want to go back to Fuchsia…$"
 
 Route19_Text_AliceIntro::
 # 101 "data/maps/Route19/text.pory"
@@ -110,7 +110,7 @@ Route19_Text_AliceDefeat::
 Route19_Text_AlicePostBattle::
 # 110 "data/maps/Route19/text.pory"
 	.string "My boyfriend wanted to swim to\n"
-	.string "SEAFOAM ISLANDS.$"
+	.string "Seafoam Islands.$"
 
 Route19_Text_AxleIntro::
 # 115 "data/maps/Route19/text.pory"
@@ -138,56 +138,56 @@ Route19_Text_ConnieDefeat::
 
 Route19_Text_ConniePostBattle::
 # 139 "data/maps/Route19/text.pory"
-	.string "If I were to ride a POKéMON on\n"
-	.string "the sea, I'd like a LAPRAS.\p"
-	.string "LAPRAS is so big, I bet it\n"
+	.string "If I were to ride a Pokémon on\n"
+	.string "the sea, I'd like a Lapras.\p"
+	.string "Lapras is so big, I bet it\n"
 	.string "would keep me dry on water.$"
 
 Route19_Text_RouteSign::
 # 146 "data/maps/Route19/text.pory"
-	.string "SEA ROUTE 19\n"
-	.string "FUCHSIA CITY - SEAFOAM ISLANDS$"
+	.string "Sea Route 19\n"
+	.string "Fuchsia City - Seafoam Islands$"
 
 Route19_Text_LiaIntro::
 # 151 "data/maps/Route19/text.pory"
-	.string "LIA: I'm looking after my brother.\n"
-	.string "He just became a TRAINER.$"
+	.string "Lia: I'm looking after my brother.\n"
+	.string "He just became a Trainer.$"
 
 Route19_Text_LiaDefeat::
 # 156 "data/maps/Route19/text.pory"
-	.string "LIA: That's no way to treat my\n"
+	.string "Lia: That's no way to treat my\n"
 	.string "little brother!$"
 
 Route19_Text_LiaPostBattle::
 # 161 "data/maps/Route19/text.pory"
-	.string "LIA: Do you have a younger\n"
+	.string "Lia: Do you have a younger\n"
 	.string "brother?\p"
 	.string "I hope you're teaching him all\n"
 	.string "sorts of things.$"
 
 Route19_Text_LiaNotEnoughMons::
 # 168 "data/maps/Route19/text.pory"
-	.string "LIA: I want to battle together\n"
+	.string "Lia: I want to battle together\n"
 	.string "with my little brother.\p"
-	.string "Don't you have two POKéMON?$"
+	.string "Don't you have two Pokémon?$"
 
 Route19_Text_LucIntro::
 # 174 "data/maps/Route19/text.pory"
-	.string "LUC: My big sis taught me how\n"
-	.string "to swim and train POKéMON.$"
+	.string "Luc: My big sis taught me how\n"
+	.string "to swim and train Pokémon.$"
 
 Route19_Text_LucDefeat::
 # 179 "data/maps/Route19/text.pory"
-	.string "LUC: Oh, wow!\n"
+	.string "Luc: Oh, wow!\n"
 	.string "Someone tougher than my big sis!$"
 
 Route19_Text_LucPostBattle::
 # 184 "data/maps/Route19/text.pory"
-	.string "LUC: My big sis is strong and nice.\n"
+	.string "Luc: My big sis is strong and nice.\n"
 	.string "I think she's awesome!$"
 
 Route19_Text_LucNotEnoughMons::
 # 189 "data/maps/Route19/text.pory"
-	.string "LUC: I don't want to if I can't\n"
+	.string "Luc: I don't want to if I can't\n"
 	.string "battle you with my big sis.\p"
-	.string "Don't you have two POKéMON?$"
+	.string "Don't you have two Pokémon?$"

@@ -1,23 +1,23 @@
 text SaffronCity_PokemonCenter_1F_Text_GrowthRatesDifferBySpecies {
-    "POKéMON growth rates differ from\n"
+    "Pokémon growth rates differ from\n"
     "species to species.$"
 }
 
 text SaffronCity_PokemonCenter_1F_Text_SilphCoVictimOfFame {
-    "SILPH CO. is widely known to all.\p"
+    "Silph Co. is widely known to all.\p"
     "It's a victim of its own fame - it\n"
-    "attracted TEAM ROCKET.$"
+    "attracted Team Rocket.$"
 }
 
 text SaffronCity_PokemonCenter_1F_Text_GreatIfEliteFourCameBeatRockets {
     "Sigh…\n"
     "Wouldn't this be great?\p"
-    "If the ELITE FOUR came and\n"
-    "stomped TEAM ROCKET?$"
+    "If the Elite Four came and\n"
+    "stomped Team Rocket?$"
 }
 
 text SaffronCity_PokemonCenter_1F_Text_TeamRocketTookOff {
-    "TEAM ROCKET took off!\n"
+    "Team Rocket took off!\n"
     "We can go out safely again!\l"
     "That's great!$"
 }

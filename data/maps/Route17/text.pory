@@ -9,7 +9,7 @@ text Route17_Text_RaulDefeat {
 
 text Route17_Text_RaulPostBattle {
     "You can find good stuff lying\n"
-    "around on CYCLING ROAD.\p"
+    "around on Cycling Road.\p"
     "There's good money in picking them\n"
     "up and selling them.$"
 }
@@ -29,7 +29,7 @@ text Route17_Text_IsaiahPostBattle {
 }
 
 text Route17_Text_VirgilIntro {
-    "You heading to FUCHSIA?$"
+    "You heading to Fuchsia?$"
 }
 
 text Route17_Text_VirgilDefeat {
@@ -41,7 +41,7 @@ text Route17_Text_VirgilPostBattle {
 }
 
 text Route17_Text_BillyIntro {
-    "We're BIKERS!\n"
+    "We're Bikers!\n"
     "We rule the roads, man!$"
 }
 
@@ -54,7 +54,7 @@ text Route17_Text_BillyPostBattle {
 }
 
 text Route17_Text_NikolasIntro {
-    "Let VOLTORB electrify you!$"
+    "Let Voltorb electrify you!$"
 }
 
 text Route17_Text_NikolasDefeat {
@@ -62,12 +62,12 @@ text Route17_Text_NikolasDefeat {
 }
 
 text Route17_Text_NikolasPostBattle {
-    "I got my VOLTORB at the abandoned\n"
-    "POWER PLANT.$"
+    "I got my Voltorb at the abandoned\n"
+    "Power Plant.$"
 }
 
 text Route17_Text_ZeekIntro {
-    "I leveled up my POKéMON, but it\n"
+    "I leveled up my Pokémon, but it\n"
     "won't evolve. Why?$"
 }
 
@@ -76,8 +76,8 @@ text Route17_Text_ZeekDefeat {
 }
 
 text Route17_Text_ZeekPostBattle {
-    "Maybe some POKéMON need element\n"
-    "STONES to evolve.$"
+    "Maybe some Pokémon need element\n"
+    "Stones to evolve.$"
 }
 
 text Route17_Text_JamalIntro {
@@ -106,7 +106,7 @@ text Route17_Text_CoreyPostBattle {
 }
 
 text Route17_Text_JaxonIntro {
-    "Nice BIKE!\n"
+    "Nice Bike!\n"
     "How's it handle?$"
 }
 
@@ -137,30 +137,30 @@ text Route17_Text_WatchOutForDiscardedItems {
 }
 
 text Route17_Text_SameSpeciesGrowDifferentRates {
-    "TRAINER TIPS\p"
-    "All POKéMON are unique.\p"
-    "Even POKéMON of the same species\n"
+    "Trainer Tips\p"
+    "All Pokémon are unique.\p"
+    "Even Pokémon of the same species\n"
     "and level grow at different rates.$"
 }
 
 text Route17_Text_PressBToStayInPlace {
-    "TRAINER TIPS\p"
+    "Trainer Tips\p"
     "Press the B Button to stay in place\n"
     "while on a slope.$"
 }
 
 text Route17_Text_RouteSign {
-    "ROUTE 17\n"
-    "CELADON CITY - FUCHSIA CITY$"
+    "Route 17\n"
+    "Celadon City - Fuchsia City$"
 }
 
 text Route17_Text_DontThrowGameThrowBalls {
     "It's a notice!\p"
-    "Don't throw the game, throw POKé\n"
-    "BALLS instead!$"
+    "Don't throw the game, throw Poké\n"
+    "Balls instead!$"
 }
 
 text Route17_Text_CyclingRoadSign {
-    "CYCLING ROAD\n"
+    "Cycling Road\n"
     "Slope ends here!$"
 }

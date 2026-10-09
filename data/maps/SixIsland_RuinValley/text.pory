@@ -54,7 +54,7 @@ text SixIsland_RuinValley_Text_FosterDefeat {
 
 text SixIsland_RuinValley_Text_FosterPostBattle {
     "There are several ruins on the\n"
-    "SEVII ISLANDS.\p"
+    "Sevii Islands.\p"
     "The majority of them date back\n"
     "a long way.$"
 }

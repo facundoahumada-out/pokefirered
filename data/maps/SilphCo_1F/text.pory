@@ -1,6 +1,6 @@
 text SilphCo_1F_Text_WelcomePresidentInBoardroom {
     "Welcome.\p"
-    "The PRESIDENT is in the boardroom\n"
+    "The President is in the boardroom\n"
     "on 11F.$"
 }
 
@@ -11,6 +11,6 @@ text SilphCo_1F_Text_DestroyedWontBeFixedForWhile {
 }
 
 text SilphCo_1F_Text_FloorSign {
-    "SILPH CO. HEAD OFFICE\n"
+    "Silph Co. Head Office\n"
     "1F$"
 }

@@ -1,7 +1,7 @@
 text PokemonTower_2F_Text_RivalIntro {
     "{RIVAL}: Hey, {PLAYER}!\n"
     "What brings you here?\l"
-    "Is your POKéMON dead?\p"
+    "Is your Pokémon dead?\p"
     "Hey! It's alive!\p"
     "I can at least make them faint!\n"
     "Let's go!$"
@@ -23,9 +23,9 @@ text PokemonTower_2F_Text_RivalVictory {
 }
 
 text PokemonTower_2F_Text_RivalPostBattle {
-    "How's your POKéDEX coming?\n"
-    "I just caught a CUBONE!\p"
-    "I can't find the bigger MAROWAK.\n"
+    "How's your Pokédex coming?\n"
+    "I just caught a Cubone!\p"
+    "I can't find the bigger Marowak.\n"
     "Where could they be?\p"
     "I bet there aren't any left!\p"
     "Well, I better get going.\n"
@@ -37,6 +37,6 @@ text PokemonTower_2F_Text_RivalPostBattle {
 text PokemonTower_2F_Text_SilphScopeCouldUnmaskGhosts {
     "Even we could not identify the\n"
     "wayward ghosts.\p"
-    "A SILPH SCOPE might be able to\n"
+    "A Silph Scope might be able to\n"
     "unmask them.$"
 }

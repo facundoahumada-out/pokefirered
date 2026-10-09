@@ -1,31 +1,31 @@
 text SilphCo_7F_Text_HaveMonForSavingUs {
-    "Oh! Hi! You're not a ROCKET!\n"
+    "Oh! Hi! You're not a Rocket!\n"
     "You came to save us?\l"
     "Why, thank you!\p"
-    "I want you to have this POKéMON\n"
+    "I want you to have this Pokémon\n"
     "for saving us.$"
 }
 
 text SilphCo_7F_Text_ObtainedLaprasFromEmployee {
-    "{PLAYER} obtained a LAPRAS from\n"
-    "the SILPH employee!$"
+    "{PLAYER} obtained a Lapras from\n"
+    "the Silph employee!$"
 }
 
 text SilphCo_7F_Text_ExplainLapras {
-    "It's a LAPRAS.\n"
-    "It's a very intelligent POKéMON.\p"
+    "It's a Lapras.\n"
+    "It's a very intelligent Pokémon.\p"
     "We kept it in our lab, but it will\n"
     "be much better off with you.\p"
-    "I think you will be a good TRAINER\n"
-    "for LAPRAS!\p"
+    "I think you will be a good Trainer\n"
+    "for Lapras!\p"
     "It's a good swimmer.\n"
     "It'll give you a lift across water!$"
 }
 
 text SilphCo_7F_Text_RocketBossWentToBoardroom {
-    "TEAM ROCKET's BOSS went to the\n"
+    "Team Rocket's Boss went to the\n"
     "boardroom!\p"
-    "Is our PRESIDENT okay?\n"
+    "Is our President okay?\n"
     "I'm worried.$"
 }
 
@@ -38,23 +38,23 @@ text SilphCo_7F_Text_SavedAtLast {
 }
 
 text SilphCo_7F_Text_RocketsAfterMasterBall {
-    "TEAM ROCKET was after the MASTER\n"
-    "BALL, which catches any POKéMON.$"
+    "Team Rocket was after the Master\n"
+    "Ball, which catches any Pokémon.$"
 }
 
 text SilphCo_7F_Text_CanceledMasterBallProject {
-    "We canceled the MASTER BALL\n"
-    "project because of TEAM ROCKET.$"
+    "We canceled the Master Ball\n"
+    "project because of Team Rocket.$"
 }
 
 text SilphCo_7F_Text_BadIfTeamRocketTookOver {
-    "It would be bad if TEAM ROCKET\n"
-    "took over SILPH or our POKéMON.$"
+    "It would be bad if Team Rocket\n"
+    "took over Silph or our Pokémon.$"
 }
 
 text SilphCo_7F_Text_WowYouChasedOffTeamRocket {
     "Wow!\p"
-    "You chased off TEAM ROCKET all by\n"
+    "You chased off Team Rocket all by\n"
     "yourself?$"
 }
 
@@ -79,13 +79,13 @@ text SilphCo_7F_Text_Grunt3Defeat {
 }
 
 text SilphCo_7F_Text_Grunt3PostBattle {
-    "You won't find my BOSS by just\n"
+    "You won't find my Boss by just\n"
     "scurrying around!$"
 }
 
 text SilphCo_7F_Text_JoshuaIntro {
     "Heheh!\p"
-    "You mistook me for a SILPH worker?$"
+    "You mistook me for a Silph worker?$"
 }
 
 text SilphCo_7F_Text_JoshuaDefeat {
@@ -94,12 +94,12 @@ text SilphCo_7F_Text_JoshuaDefeat {
 
 text SilphCo_7F_Text_JoshuaPostBattle {
     "Despite your age, you are a\n"
-    "skilled TRAINER!$"
+    "skilled Trainer!$"
 }
 
 text SilphCo_7F_Text_Grunt1Intro {
-    "I am one of the four ROCKET\n"
-    "BROTHERS!$"
+    "I am one of the four Rocket\n"
+    "Brothers!$"
 }
 
 text SilphCo_7F_Text_Grunt1Defeat {
@@ -123,7 +123,7 @@ text SilphCo_7F_Text_Grunt2Defeat {
 }
 
 text SilphCo_7F_Text_Grunt2PostBattle {
-    "Go on home before my BOSS gets\n"
+    "Go on home before my Boss gets\n"
     "ticked off!$"
 }
 
@@ -134,16 +134,16 @@ text SilphCo_7F_Text_RivalWhatKeptYou {
 text SilphCo_7F_Text_RivalIntro {
     "{RIVAL}: Hahaha! I thought you'd\n"
     "turn up if I waited here!\p"
-    "I guess TEAM ROCKET slowed you\n"
+    "I guess Team Rocket slowed you\n"
     "down! Not that I care!\p"
-    "I saw you in SAFFRON, so I decided\n"
+    "I saw you in Saffron, so I decided\n"
     "to see if you got better!$"
 }
 
 text SilphCo_7F_Text_RivalDefeat {
     "Oh, man!\n"
-    "So, you are ready for BOSS\l"
-    "ROCKET!$"
+    "So, you are ready for Boss\l"
+    "Rocket!$"
 }
 
 text SilphCo_7F_Text_RivalVictory {
@@ -156,20 +156,20 @@ text SilphCo_7F_Text_RivalVictory {
 text SilphCo_7F_Text_RivalPostBattle {
     "Well, {PLAYER}!\n"
     "I'm moving on up and ahead!\p"
-    "By checking my POKéDEX, I'm\n"
+    "By checking my Pokédex, I'm\n"
     "starting to see what's strong and\l"
     "how they evolve!\p"
     "Am I a genius or what?\p"
-    "I'm going to the POKéMON LEAGUE to\n"
-    "boot out the ELITE FOUR.\p"
+    "I'm going to the Pokémon League to\n"
+    "boot out the Elite Four.\p"
     "I'll become the world's most\n"
-    "powerful TRAINER!\p"
+    "powerful Trainer!\p"
     "{PLAYER}, well, good luck to you!\n"
     "Don't sweat it!\l"
     "Smell ya!$"
 }
 
 text SilphCo_7F_Text_FloorSign {
-    "SILPH CO. HEAD OFFICE\n"
+    "Silph Co. Head Office\n"
     "7F$"
 }

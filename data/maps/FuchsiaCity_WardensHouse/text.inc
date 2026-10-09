@@ -1,6 +1,6 @@
 FuchsiaCity_WardensHouse_Text_HifFuffHefifoo::
 # 1 "data/maps/FuchsiaCity_WardensHouse/text.pory"
-	.string "WARDEN: Hif fuff hefifoo!\p"
+	.string "Warden: Hif fuff hefifoo!\p"
 	.string "Ha lof ha feef ee hafahi ho.\n"
 	.string "Heff hee fwee!$"
 
@@ -16,48 +16,48 @@ FuchsiaCity_WardensHouse_Text_HeOhayHeHaHoo::
 
 FuchsiaCity_WardensHouse_Text_GaveGoldTeethToWarden::
 # 17 "data/maps/FuchsiaCity_WardensHouse/text.pory"
-	.string "{PLAYER} gave the GOLD TEETH\n"
-	.string "to the WARDEN.$"
+	.string "{PLAYER} gave the Gold Teeth\n"
+	.string "to the Warden.$"
 
 FuchsiaCity_WardensHouse_Text_WardenPoppedInHisTeeth::
 # 22 "data/maps/FuchsiaCity_WardensHouse/text.pory"
-	.string "The WARDEN popped in his teeth!$"
+	.string "The Warden popped in his teeth!$"
 
 FuchsiaCity_WardensHouse_Text_ThanksSonGiveYouSomething::
 # 26 "data/maps/FuchsiaCity_WardensHouse/text.pory"
-	.string "WARDEN: Thanks, son!\n"
+	.string "Warden: Thanks, son!\n"
 	.string "You're a real lifesaver!\p"
 	.string "No one could understand a word\n"
 	.string "that I said, not a one!\p"
 	.string "I was too ashamed to show my face\n"
-	.string "around the OFFICE, even.\p"
+	.string "around the Office, even.\p"
 	.string "Let me give you something for your\n"
 	.string "trouble.$"
 
 FuchsiaCity_WardensHouse_Text_ThanksLassieGiveYouSomething::
 # 37 "data/maps/FuchsiaCity_WardensHouse/text.pory"
-	.string "WARDEN: Thank you, lassie!\n"
+	.string "Warden: Thank you, lassie!\n"
 	.string "You're a real lifesaver!\p"
 	.string "No one could understand a word\n"
 	.string "that I said, not a one!\p"
 	.string "I was too ashamed to show my face\n"
-	.string "around the OFFICE, even.\p"
+	.string "around the Office, even.\p"
 	.string "Let me give you something for your\n"
 	.string "trouble.$"
 
 FuchsiaCity_WardensHouse_Text_ReceivedHM04FromWarden::
 # 48 "data/maps/FuchsiaCity_WardensHouse/text.pory"
 	.string "{PLAYER} received HM04\n"
-	.string "from the WARDEN.$"
+	.string "from the Warden.$"
 
 FuchsiaCity_WardensHouse_Text_ExplainStrength::
 # 53 "data/maps/FuchsiaCity_WardensHouse/text.pory"
-	.string "WARDEN: Inside HM04 you'll find\n"
-	.string "STRENGTH.\p"
-	.string "It lets POKéMON move boulders when\n"
+	.string "Warden: Inside HM04 you'll find\n"
+	.string "Strength.\p"
+	.string "It lets Pokémon move boulders when\n"
 	.string "you're outside of battle.\p"
-	.string "Oh yes, did you find the SECRET\n"
-	.string "HOUSE in the SAFARI ZONE?$"
+	.string "Oh yes, did you find the Secret\n"
+	.string "House in the Safari Zone?$"
 
 FuchsiaCity_WardensHouse_Text_YouHaveTooMuchStuff::
 # 63 "data/maps/FuchsiaCity_WardensHouse/text.pory"
@@ -66,10 +66,10 @@ FuchsiaCity_WardensHouse_Text_YouHaveTooMuchStuff::
 
 FuchsiaCity_WardensHouse_Text_MonPhotosFossilsOnDisplay::
 # 68 "data/maps/FuchsiaCity_WardensHouse/text.pory"
-	.string "POKéMON photos and fossils are on\n"
+	.string "Pokémon photos and fossils are on\n"
 	.string "display.$"
 
 FuchsiaCity_WardensHouse_Text_OldMonMerchandiseOnDisplay::
 # 73 "data/maps/FuchsiaCity_WardensHouse/text.pory"
-	.string "Old POKéMON merchandise is on\n"
+	.string "Old Pokémon merchandise is on\n"
 	.string "display.$"

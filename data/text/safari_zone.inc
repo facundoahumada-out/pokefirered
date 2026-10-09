@@ -1,19 +1,19 @@
 SafariZone_Text_WouldYouLikeToExit::
 # 2 "data/text/safari_zone.pory"
-	.string "Would you like to exit the SAFARI\n"
-	.string "ZONE right now?$"
+	.string "Would you like to exit the Safari\n"
+	.string "Zone right now?$"
 
 SafariZone_Text_TimesUp::
 # 7 "data/text/safari_zone.pory"
-	.string "PA: Ding-dong!\p"
+	.string "Pa: Ding-dong!\p"
 	.string "Time's up!\p"
-	.string "PA: Your SAFARI GAME is over!$"
+	.string "Pa: Your Safari Game is over!$"
 
 SafariZone_Text_OutOfBalls::
 # 13 "data/text/safari_zone.pory"
-	.string "PA: Ding-dong!\p"
-	.string "You are out of SAFARI BALLS!\p"
-	.string "PA: Your SAFARI GAME is over!$"
+	.string "Pa: Ding-dong!\p"
+	.string "You are out of Safari Balls!\p"
+	.string "Pa: Your Safari Game is over!$"
 
 SafariZone_Text_WelcomeToSafariZone::
 # 19 "data/text/safari_zone.pory"
@@ -85,7 +85,7 @@ SafariZone_Text_PleaseEnjoyYourself::
 SafariZone_Text_ExcuseMeYourPCBoxIsFull::
 # 86 "data/text/safari_zone.pory"
 	.string "Excuse me!\n"
-	.string "Your PC BOX is full.$"
+	.string "Your PC Box is full.$"
 
 SafariZone_Text_YouNeedPokeblockCase::
 # 91 "data/text/safari_zone.pory"

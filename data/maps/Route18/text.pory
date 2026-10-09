@@ -1,6 +1,6 @@
 text Route18_Text_WiltonIntro {
     "I always check every grassy area\n"
-    "for new POKéMON.$"
+    "for new Pokémon.$"
 }
 
 text Route18_Text_WiltonDefeat {
@@ -8,7 +8,7 @@ text Route18_Text_WiltonDefeat {
 }
 
 text Route18_Text_WiltonPostBattle {
-    "I wish I had a BIKE!$"
+    "I wish I had a Bike!$"
 }
 
 text Route18_Text_RamiroIntro {
@@ -21,7 +21,7 @@ text Route18_Text_RamiroDefeat {
 }
 
 text Route18_Text_RamiroPostBattle {
-    "I collect sea POKéMON on weekends\n"
+    "I collect sea Pokémon on weekends\n"
     "because the sea is so close.$"
 }
 
@@ -36,15 +36,15 @@ text Route18_Text_JacobDefeat {
 
 text Route18_Text_JacobPostBattle {
     "This is my fave area for catching\n"
-    "POKéMON.$"
+    "Pokémon.$"
 }
 
 text Route18_Text_RouteSign {
-    "ROUTE 18\n"
-    "CELADON CITY - FUCHSIA CITY$"
+    "Route 18\n"
+    "Celadon City - Fuchsia City$"
 }
 
 text Route18_Text_CyclingRoadSign {
-    "CYCLING ROAD\n"
+    "Cycling Road\n"
     "No pedestrians permitted!$"
 }

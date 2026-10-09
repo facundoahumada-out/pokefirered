@@ -1,15 +1,15 @@
 text TwoIsland_Text_IslandSign {
-    "TWO ISLAND\n"
+    "Two Island\n"
     "Boon Island for Two$"
 }
 
 text TwoIsland_Text_JoyfulGameCornerSign {
     "Skip & Chomp!\n"
-    "Joyful GAME CORNER$"
+    "Joyful Game Corner$"
 }
 
 text TwoIsland_Text_DangerFastCurrent {
-    "DANGER! FAST CURRENT!\n"
+    "Danger! Fast Current!\n"
     "Fishing and surfing prohibited!$"
 }
 
@@ -23,12 +23,12 @@ text TwoIsland_Text_WelcomeToShopMerchandiseLimited {
 
 text TwoIsland_Text_AddedMerchandiseForLostelle {
     "I can't tell you how grateful I am\n"
-    "for your rescue of LOSTELLE.\p"
+    "for your rescue of Lostelle.\p"
     "Thanks to your feat, the people of\n"
-    "THREE ISLAND have changed their\l"
-    "attitudes about KANTO people.\p"
-    "And, I'm from KANTO, you see.\p"
-    "The people of THREE ISLAND\n"
+    "Three Island have changed their\l"
+    "attitudes about Kanto people.\p"
+    "And, I'm from Kanto, you see.\p"
+    "The people of Three Island\n"
     "helped me add to my merchandise.$"
 }
 
@@ -48,7 +48,7 @@ text TwoIsland_Text_BringingItemsFromDistantLands {
 
 text TwoIsland_Text_FellowMovedFromCeladonCity {
     "That fellow there, he moved here\n"
-    "from CELADON CITY.\p"
+    "from Celadon City.\p"
     "He started up a shop with his\n"
     "younger brother.\p"
     "You have to wonder if he knew what\n"
@@ -57,7 +57,7 @@ text TwoIsland_Text_FellowMovedFromCeladonCity {
 
 text TwoIsland_Text_ShopkeepersBrotherWorksGameCorner {
     "The shopkeeper's brother took\n"
-    "a job at the GAME CORNER.\p"
+    "a job at the Game Corner.\p"
     "He's trying to pull together money\n"
     "so they can buy more merchandise.$"
 }
@@ -65,31 +65,31 @@ text TwoIsland_Text_ShopkeepersBrotherWorksGameCorner {
 text TwoIsland_Text_BrunoCameToIslandWhileBack {
     "Listen, listen.\n"
     "Did you know?\p"
-    "A famous TRAINER came to the\n"
-    "ISLAND a little while back.\p"
-    "He's one of the ELITE FOUR.\n"
-    "His name is BRUNO.\p"
+    "A famous Trainer came to the\n"
+    "Island a little while back.\p"
+    "He's one of the Elite Four.\n"
+    "His name is Bruno.\p"
     "He went away disappointed when he\n"
     "found out that they were all sold\l"
     "out of Rage Candybars.$"
 }
 
 text TwoIsland_Text_BuyRareItemsHere {
-    "The discerning TRAINER knows to\n"
+    "The discerning Trainer knows to\n"
     "buy rare items here!$"
 }
 
 text TwoIsland_Text_OldWomanLivesOutOnCape {
     "There's an old woman who lives in\n"
     "a cottage out on the cape.\p"
-    "She gives the eye to POKéMON.\n"
+    "She gives the eye to Pokémon.\n"
     "It's a bit unnerving.$"
 }
 
 text TwoIsland_Text_HaveYouTriedJumpingGame {
     "Boing! Boing!\n"
     "Have you tried the jumping game?\p"
-    "The POKéMON you can enter…\n"
+    "The Pokémon you can enter…\n"
     "Boing!\p"
     "Some go boing!\p"
     "And some go boooooooing!\p"

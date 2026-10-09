@@ -1,7 +1,7 @@
 SilphCo_1F_Text_WelcomePresidentInBoardroom::
 # 1 "data/maps/SilphCo_1F/text.pory"
 	.string "Welcome.\p"
-	.string "The PRESIDENT is in the boardroom\n"
+	.string "The President is in the boardroom\n"
 	.string "on 11F.$"
 
 SilphCo_1F_Text_DestroyedWontBeFixedForWhile::
@@ -11,5 +11,5 @@ SilphCo_1F_Text_DestroyedWontBeFixedForWhile::
 
 SilphCo_1F_Text_FloorSign::
 # 13 "data/maps/SilphCo_1F/text.pory"
-	.string "SILPH CO. HEAD OFFICE\n"
+	.string "Silph Co. Head Office\n"
 	.string "1F$"

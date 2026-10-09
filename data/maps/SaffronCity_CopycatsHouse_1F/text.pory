@@ -7,9 +7,9 @@ text SaffronCity_CopycatsHouse_1F_Text_DaughterLikesToMimicPeople {
     "My daughter likes to mimic people.\n"
     "It's rather vexing.\p"
     "Her mimicry has earned her the\n"
-    "nickname COPYCAT around here.$"
+    "nickname Copycat around here.$"
 }
 
 text SaffronCity_CopycatsHouse_1F_Text_Chansey {
-    "CHANSEY: Chaan! Sii!$"
+    "Chansey: Chaan! Sii!$"
 }

@@ -5,20 +5,20 @@ text VSSeeker_Text_BatteryNotChargedNeedXSteps {
 }
 
 text VSSeeker_Text_NoTrainersWithinRange {
-    "There are no TRAINERS within range\n"
+    "There are no Trainers within range\n"
     "who can battle…\p"
-    "The VS SEEKER was turned off.{PAUSE_UNTIL_PRESS}$"
+    "The VS Seeker was turned off.{PAUSE_UNTIL_PRESS}$"
 }
 
 text VSSeeker_Text_TrainersNotReady {
-    "The other TRAINERS don't appear\n"
+    "The other Trainers don't appear\n"
     "to be ready for battle.\p"
     "Let's wait till later.{PAUSE_UNTIL_PRESS}$"
 }
 
 text Route3_Text_ColtonRematchIntro {
     "Hey!\n"
-    "I saw you in VIRIDIAN FOREST!$"
+    "I saw you in Viridian Forest!$"
 }
 
 text Route3_Text_BenRematchIntro {
@@ -33,7 +33,7 @@ text Route3_Text_JaniceRematchIntro {
 }
 
 text Route3_Text_GregRematchIntro {
-    "You're a TRAINER, aren't you?\n"
+    "You're a Trainer, aren't you?\n"
     "Let's get with it right away!$"
 }
 
@@ -48,7 +48,7 @@ text Route3_Text_CalvinRematchIntro {
 }
 
 text Route3_Text_JamesRematchIntro {
-    "I'll battle you with the POKéMON\n"
+    "I'll battle you with the Pokémon\n"
     "I started raising.$"
 }
 
@@ -58,8 +58,8 @@ text Route3_Text_RobinRematchIntro {
 }
 
 text Route4_Text_CrissyRematchIntro {
-    "I always catch mushroom POKéMON\n"
-    "on MT. MOON.$"
+    "I always catch mushroom Pokémon\n"
+    "on Mt. Moon.$"
 }
 
 text Route6_Text_RickyRematchIntro {
@@ -76,7 +76,7 @@ text Route6_Text_NancyRematchIntro {
 
 text Route6_Text_KeigoRematchIntro {
     "I'm trying to find something good\n"
-    "that's not a BUG POKéMON, but…$"
+    "that's not a Bug Pokémon, but…$"
 }
 
 text Route6_Text_JeffRematchIntro {
@@ -95,7 +95,7 @@ text Route6_Text_ElijahRematchIntro {
 }
 
 text Route8_Text_AidanRematchIntro {
-    "You are good at POKéMON, but how\n"
+    "You are good at Pokémon, but how\n"
     "is your chemistry grade?$"
 }
 
@@ -111,17 +111,17 @@ text Route8_Text_GlennRematchIntro {
 }
 
 text Route8_Text_PaigeRematchIntro {
-    "I've collected many NIDORAN.\n"
+    "I've collected many Nidoran.\n"
     "I don't want them to evolve, but…$"
 }
 
 text Route8_Text_LeslieRematchIntro {
     "School is fun, but I still think\n"
-    "POKéMON are fun, too.$"
+    "Pokémon are fun, too.$"
 }
 
 text Route8_Text_AndreaRematchIntro {
-    "MEOWTH and PERSIAN are so cute,\n"
+    "Meowth and Persian are so cute,\n"
     "meow, meow, meow!$"
 }
 
@@ -137,7 +137,7 @@ text Route8_Text_RichRematchIntro {
 
 text Route8_Text_JuliaRematchIntro {
     "What's a cute, round, and fluffy\n"
-    "POKéMON?\p"
+    "Pokémon?\p"
     "You already know, don't you?$"
 }
 
@@ -151,12 +151,12 @@ text Route8_Text_JarenRematchIntro {
 }
 
 text Route8_Text_EliRematchIntro {
-    "ELI: Our twin power became even\n"
+    "Eli: Our twin power became even\n"
     "better!$"
 }
 
 text Route8_Text_AnneRematchIntro {
-    "ANNE: Our twin power powered up!$"
+    "Anne: Our twin power powered up!$"
 }
 
 text Route9_Text_AliciaRematchIntro {
@@ -166,12 +166,12 @@ text Route9_Text_AliciaRematchIntro {
 
 text Route9_Text_ChrisRematchIntro {
     "I haven't forgotten you were with\n"
-    "those good-looking POKéMON.$"
+    "those good-looking Pokémon.$"
 }
 
 text Route9_Text_DrewRematchIntro {
-    "I'm taking ROCK TUNNEL to go to\n"
-    "LAVENDER…\p"
+    "I'm taking Rock Tunnel to go to\n"
+    "Lavender…\p"
     "But I keep getting stopped by\n"
     "everyone along the way…$"
 }
@@ -193,7 +193,7 @@ text Route9_Text_BriceRematchIntro {
 
 text Route9_Text_BrentRematchIntro {
     "I got up early every day to train\n"
-    "my POKéMON from cocoons!$"
+    "my Pokémon from cocoons!$"
 }
 
 text Route9_Text_AlanRematchIntro {
@@ -202,12 +202,12 @@ text Route9_Text_AlanRematchIntro {
 }
 
 text Route9_Text_ConnerRematchIntro {
-    "Go win, my super BUG POKéMON!$"
+    "Go win, my super Bug Pokémon!$"
 }
 
 text Route10_Text_MarkRematchIntro {
     "Wow, you came here again?\n"
-    "Maybe you're a POKéMANIAC, too?\l"
+    "Maybe you're a Pokémaniac, too?\l"
     "Want to see my collection?$"
 }
 
@@ -218,11 +218,11 @@ text Route10_Text_ClarkRematchIntro {
 
 text Route10_Text_HermanRematchIntro {
     "Hi, kid!\n"
-    "Did I show you my POKéMON?$"
+    "Did I show you my Pokémon?$"
 }
 
 text Route10_Text_HeidiRematchIntro {
-    "I went out to a POKéMON GYM again.\p"
+    "I went out to a Pokémon Gym again.\p"
     "…But I lost as usual.$"
 }
 
@@ -259,7 +259,7 @@ text Route11_Text_BraxtonRematchIntro {
 }
 
 text Route11_Text_DillonRematchIntro {
-    "I became a TRAINER a while ago.\n"
+    "I became a Trainer a while ago.\n"
     "But, I think I can win.$"
 }
 
@@ -286,7 +286,7 @@ text Route11_Text_BernieRematchIntro {
 }
 
 text Route11_Text_DaveRematchIntro {
-    "I raised my POKéMON carefully.\n"
+    "I raised my Pokémon carefully.\n"
     "They should be ready by now.\l"
     "This time, they should win, too.$"
 }
@@ -303,19 +303,19 @@ text Route12_Text_ChipRematchIntro {
 }
 
 text Route12_Text_JustinRematchIntro {
-    "Still can't find a MOON STONE…\n"
+    "Still can't find a Moon Stone…\n"
     "Have you found one?$"
 }
 
 text Route12_Text_LucaRematchIntro {
     "Electricity has always been my\n"
     "specialty.\p"
-    "I don't know a thing about POKéMON\n"
+    "I don't know a thing about Pokémon\n"
     "of the sea, though.$"
 }
 
 text Route12_Text_HankRematchIntro {
-    "The FISHING FOOL vs. POKéMON KID!\n"
+    "The Fishing Fool vs. Pokémon Kid!\n"
     "Another round, fight!$"
 }
 
@@ -332,38 +332,38 @@ text Route12_Text_AndrewRematchIntro {
 }
 
 text Route12_Text_JesRematchIntro {
-    "JES: I'll win here today and\n"
-    "propose to my GIA.$"
+    "Jes: I'll win here today and\n"
+    "propose to my Gia.$"
 }
 
 text Route12_Text_GiaRematchIntro {
-    "GIA: Hey, JES…\n"
+    "Gia: Hey, Jes…\n"
     "I've been waiting a long time now.\p"
     "If we win today, I'll marry you!$"
 }
 
 text Route13_Text_SebastianRematchIntro {
-    "My bird POKéMON remember you!$"
+    "My bird Pokémon remember you!$"
 }
 
 text Route13_Text_SusieRematchIntro {
-    "I want to be the best TRAINER \n"
+    "I want to be the best Trainer \n"
     "while I'm a kid!$"
 }
 
 text Route13_Text_ValerieRematchIntro {
     "Wow!\n"
-    "You got more cool BADGES!$"
+    "You got more cool Badges!$"
 }
 
 text Route13_Text_GwenRematchIntro {
-    "My cutely grown POKéMON wish to\n"
+    "My cutely grown Pokémon wish to\n"
     "become reacquainted with you.$"
 }
 
 text Route13_Text_AlmaRematchIntro {
     "I cleaned out my savings and\n"
-    "bought more CARBOS.$"
+    "bought more Carbos.$"
 }
 
 text Route13_Text_PerryRematchIntro {
@@ -387,28 +387,28 @@ text Route13_Text_JaredRematchIntro {
 }
 
 text Route13_Text_RobertRematchIntro {
-    "I always go with bird POKéMON.\n"
+    "I always go with bird Pokémon.\n"
     "I've dedicated myself to them.$"
 }
 
 text Route14_Text_CarterRematchIntro {
     "I used TMs to teach good moves\n"
-    "to my POKéMON.$"
+    "to my Pokémon.$"
 }
 
 text Route14_Text_MitchRematchIntro {
-    "My bird POKéMON should be ready\n"
+    "My bird Pokémon should be ready\n"
     "for battle this time.$"
 }
 
 text Route14_Text_BeckRematchIntro {
-    "Are you using TMs on POKéMON?\n"
+    "Are you using TMs on Pokémon?\n"
     "Just holding them is useless.$"
 }
 
 text Route14_Text_MarlonRematchIntro {
-    "Have you taught your bird POKéMON\n"
-    "how to FLY?\p"
+    "Have you taught your bird Pokémon\n"
+    "how to Fly?\p"
     "You'll be able to soar with it into\n"
     "the sky! Give it a try.$"
 }
@@ -441,22 +441,22 @@ text Route14_Text_GeraldRematchIntro {
 }
 
 text Route14_Text_MalikRematchIntro {
-    "POKéMON battle, right?\n"
+    "Pokémon battle, right?\n"
     "Cool! Rumble!$"
 }
 
 text Route14_Text_KiriRematchIntro {
-    "KIRI: JAN, I hope we win today.$"
+    "Kiri: Jan, I hope we win today.$"
 }
 
 text Route14_Text_JanRematchIntro {
-    "JAN: KIRI, here we go!\n"
+    "Jan: Kiri, here we go!\n"
     "Let's win for sure this time!$"
 }
 
 text Route15_Text_KindraRematchIntro {
     "I'm going to keep battling with the\n"
-    "POKéMON I got in trades.$"
+    "Pokémon I got in trades.$"
 }
 
 text Route15_Text_BeckyRematchIntro {
@@ -466,24 +466,24 @@ text Route15_Text_BeckyRematchIntro {
 }
 
 text Route15_Text_EdwinRematchIntro {
-    "When I whistle, bird POKéMON\n"
+    "When I whistle, bird Pokémon\n"
     "gather around.\p"
     "They're amazingly cute!$"
 }
 
 text Route15_Text_ChesterRematchIntro {
     "Hmm? My birds are shivering!\n"
-    "Wait, aren't you that TRAINER…$"
+    "Wait, aren't you that Trainer…$"
 }
 
 text Route15_Text_GraceRematchIntro {
     "Oh, you're a little cutie!\n"
-    "So like a darling POKéMON!\l"
+    "So like a darling Pokémon!\l"
     "I remember you now!$"
 }
 
 text Route15_Text_OliviaRematchIntro {
-    "I raise POKéMON for protection\n"
+    "I raise Pokémon for protection\n"
     "because I live alone.\p"
     "That hasn't changed.$"
 }
@@ -500,23 +500,23 @@ text Route15_Text_AlexRematchIntro {
 
 text Route15_Text_CeliaRematchIntro {
     "What's cool and happening?\n"
-    "Trading POKéMON, of course.$"
+    "Trading Pokémon, of course.$"
 }
 
 text Route15_Text_YazminRematchIntro {
-    "Want to play with my POKéMON\n"
+    "Want to play with my Pokémon\n"
     "again?$"
 }
 
 text Route15_Text_MyaRematchIntro {
-    "MYA: Hi, we keep meeting,\n"
+    "Mya: Hi, we keep meeting,\n"
     "don't we?\p"
     "Help me train my little brother\n"
     "again?$"
 }
 
 text Route15_Text_RonRematchIntro {
-    "RON: My sister's gotten more\n"
+    "Ron: My sister's gotten more\n"
     "powerful…$"
 }
 
@@ -525,7 +525,7 @@ text Route16_Text_LaoRematchIntro {
 }
 
 text Route16_Text_KojiRematchIntro {
-    "Nice BIKE!\n"
+    "Nice Bike!\n"
     "Hand it over quick!$"
 }
 
@@ -550,12 +550,12 @@ text Route16_Text_RubenRematchIntro {
 }
 
 text Route16_Text_JedRematchIntro {
-    "JED: Are you here to see our\n"
+    "Jed: Are you here to see our\n"
     "love, which knows no bounds?$"
 }
 
 text Route16_Text_LeaRematchIntro {
-    "LEA: Sometimes, the intensity of\n"
+    "Lea: Sometimes, the intensity of\n"
     "our love scares me.$"
 }
 
@@ -574,17 +574,17 @@ text Route17_Text_VirgilRematchIntro {
 }
 
 text Route17_Text_BillyRematchIntro {
-    "We're BIKERS!\n"
+    "We're Bikers!\n"
     "We rule the roads, man!$"
 }
 
 text Route17_Text_NikolasRematchIntro {
-    "VOLTORB's going to seriously\n"
+    "Voltorb's going to seriously\n"
     "electrify you today!$"
 }
 
 text Route17_Text_ZeekRematchIntro {
-    "I leveled up my POKéMON, but it\n"
+    "I leveled up my Pokémon, but it\n"
     "absolutely won't evolve. Why?$"
 }
 
@@ -598,7 +598,7 @@ text Route17_Text_CoreyRematchIntro {
 }
 
 text Route17_Text_JaxonRematchIntro {
-    "Yep, that's a nice BIKE!\n"
+    "Yep, that's a nice Bike!\n"
     "How's it handle?$"
 }
 
@@ -609,7 +609,7 @@ text Route17_Text_WilliamRematchIntro {
 
 text Route18_Text_WiltonRematchIntro {
     "I've been checking every grassy\n"
-    "area for new POKéMON.\p"
+    "area for new Pokémon.\p"
     "But it's not always easy…$"
 }
 
@@ -645,7 +645,7 @@ text Route19_Text_DouglasRematchIntro {
 }
 
 text Route19_Text_DavidRematchIntro {
-    "I tried diving for POKéMON again,\n"
+    "I tried diving for Pokémon again,\n"
     "but it was a no-go like before.$"
 }
 
@@ -657,7 +657,7 @@ text Route19_Text_TonyRematchIntro {
 
 text Route19_Text_AnyaRematchIntro {
     "You always get to ride your\n"
-    "POKéMON…\p"
+    "Pokémon…\p"
     "It looks so relaxing.\n"
     "Can I have it if I win?$"
 }
@@ -679,15 +679,15 @@ text Route19_Text_ConnieRematchIntro {
 }
 
 text Route19_Text_LiaRematchIntro {
-    "LIA: You know my brother just\n"
-    "became a TRAINER, right?\p"
+    "Lia: You know my brother just\n"
+    "became a Trainer, right?\p"
     "I want to make him better, so I\n"
     "need your help again.$"
 }
 
 text Route19_Text_LucRematchIntro {
-    "LUC: My big sis taught me all\n"
-    "about POKéMON.\p"
+    "Luc: My big sis taught me all\n"
+    "about Pokémon.\p"
     "I wonder if I'm better?$"
 }
 
@@ -698,7 +698,7 @@ text Route20_Text_BarryRematchIntro {
 
 text Route20_Text_ShirleyRematchIntro {
     "Are you jealous that I'm\n"
-    "vacationing on SEAFOAM?$"
+    "vacationing on Seafoam?$"
 }
 
 text Route20_Text_TiffanyRematchIntro {
@@ -717,12 +717,12 @@ text Route20_Text_DeanRematchIntro {
 }
 
 text Route20_Text_DarrinRematchIntro {
-    "Why are you riding a POKéMON?\n"
+    "Why are you riding a Pokémon?\n"
     "Haven't you learned to swim yet?$"
 }
 
 text Route20_Text_RogerRematchIntro {
-    "I rode my bird POKéMON here.$"
+    "I rode my bird Pokémon here.$"
 }
 
 text Route20_Text_NoraRematchIntro {
@@ -731,13 +731,13 @@ text Route20_Text_NoraRematchIntro {
 }
 
 text Route20_Text_MissyRematchIntro {
-    "I swam here from CINNABAR ISLAND.\n"
+    "I swam here from Cinnabar Island.\n"
     "It wasn't easy, like I said.$"
 }
 
 text Route20_Text_MelissaRematchIntro {
-    "CINNABAR, in the west, has a LAB\n"
-    "for POKéMON.\p"
+    "Cinnabar, in the west, has a Lab\n"
+    "for Pokémon.\p"
     "My daddy works there.$"
 }
 
@@ -762,7 +762,7 @@ text Route21_North_Text_CueBallRematchIntro {
 }
 
 text Route21_South_Text_JackRematchIntro {
-    "I caught my POKéMON at sea.\n"
+    "I caught my Pokémon at sea.\n"
     "And that's where I train them.$"
 }
 
@@ -786,12 +786,12 @@ text Route21_South_Text_NolanRematchIntro {
 }
 
 text Route21_North_Text_LilRematchIntro {
-    "LIL: Huh? A battle again?\n"
-    "IAN, can't you do it alone?$"
+    "Lil: Huh? A battle again?\n"
+    "Ian, can't you do it alone?$"
 }
 
 text Route21_North_Text_IanRematchIntro {
-    "IAN: My sis is still a slob.\n"
+    "Ian: My sis is still a slob.\n"
     "Help me get her into shape!$"
 }
 
@@ -801,7 +801,7 @@ text Route25_Text_JoeyRematchIntro {
 
 text Route25_Text_DanRematchIntro {
     "Dad took me to a great party on\n"
-    "the S.S. ANNE at VERMILION CITY.$"
+    "the S.S. Anne at Vermilion City.$"
 }
 
 text Route25_Text_FlintRematchIntro {
@@ -823,22 +823,22 @@ text Route25_Text_ChadRematchIntro {
 }
 
 text Route25_Text_HaleyRematchIntro {
-    "My friend has many cute POKéMON.\n"
+    "My friend has many cute Pokémon.\n"
     "I'm so jealous!$"
 }
 
 text Route25_Text_FranklinRematchIntro {
-    "I just trained up on MT. MOON,\n"
+    "I just trained up on Mt. Moon,\n"
     "but I've still got gas in the tank!$"
 }
 
 text Route25_Text_NobRematchIntro {
-    "A POKéMANIAC lives on the cape.\n"
+    "A Pokémaniac lives on the cape.\n"
     "Have you seen his collection?$"
 }
 
 text Route25_Text_WayneRematchIntro {
-    "You're going to see BILL again?\n"
+    "You're going to see Bill again?\n"
     "First, we battle!$"
 }
 
@@ -858,7 +858,7 @@ text Route24_Text_ReliRematchIntro {
 
 text Route24_Text_TimmyRematchIntro {
     "You really must love coming to\n"
-    "NUGGET BRIDGE.$"
+    "Nugget Bridge.$"
 }
 
 text Route24_Text_AliRematchIntro {
@@ -868,8 +868,8 @@ text Route24_Text_AliRematchIntro {
 }
 
 text Route24_Text_CaleRematchIntro {
-    "People call this the NUGGET\n"
-    "BRIDGE!\p"
+    "People call this the Nugget\n"
+    "Bridge!\p"
     "You've already beaten us, so you're\n"
     "not allowed to take the challenge…\p"
     "…But, you're welcome to battle with\n"
@@ -937,13 +937,13 @@ text OneIsland_KindleRoad_Text_ClaireRematchIntro {
 }
 
 text OneIsland_KindleRoad_Text_KiaRematchIntro {
-    "KIA: My big brother and I make\n"
+    "Kia: My big brother and I make\n"
     "an awesome combination!\p"
     "We won't lose this time!$"
 }
 
 text OneIsland_KindleRoad_Text_MikRematchIntro {
-    "MIK: Together with KIA, we're\n"
+    "Mik: Together with Kia, we're\n"
     "afraid of nothing!\p"
     "We'll prove it to you this time!$"
 }
@@ -964,7 +964,7 @@ text ThreeIsland_BondBridge_Text_AmiraRematchIntro {
 
 text ThreeIsland_BondBridge_Text_AlexisRematchIntro {
     "Yay, yay!\n"
-    "POKéMON!$"
+    "Pokémon!$"
 }
 
 text ThreeIsland_BondBridge_Text_TishaRematchIntro {
@@ -973,17 +973,17 @@ text ThreeIsland_BondBridge_Text_TishaRematchIntro {
 }
 
 text ThreeIsland_BondBridge_Text_JoyRematchIntro {
-    "JOY: We've gotten stronger!\n"
+    "Joy: We've gotten stronger!\n"
     "Lots and lots!$"
 }
 
 text ThreeIsland_BondBridge_Text_MegRematchIntro {
-    "MEG: You can't beat us today!$"
+    "Meg: You can't beat us today!$"
 }
 
 text FiveIsland_WaterLabyrinth_Text_AlizeRematchIntro {
     "Oh, hello!\p"
-    "Are you raising your POKéMON in a\n"
+    "Are you raising your Pokémon in a\n"
     "good environment?$"
 }
 
@@ -1010,7 +1010,7 @@ text FiveIsland_ResortGorgeous_Text_JackiRematchIntro {
 
 text FiveIsland_ResortGorgeous_Text_GillianRematchIntro {
     "They're almost finished making the\n"
-    "pool for my POKéMON.\p"
+    "pool for my Pokémon.\p"
     "You must drop in for a visit.$"
 }
 
@@ -1025,22 +1025,22 @@ text FiveIsland_ResortGorgeous_Text_TobyRematchIntro {
 }
 
 text FiveIsland_MemorialPillar_Text_MiloRematchIntro {
-    "I'm the eldest of the BIRD\n"
-    "BROTHERS. Remember me?\p"
+    "I'm the eldest of the Bird\n"
+    "Brothers. Remember me?\p"
     "That's right, I'm the one who loves\n"
     "birds for their beaks!$"
 }
 
 text FiveIsland_MemorialPillar_Text_ChazRematchIntro {
-    "I'm the middle kid of the BIRD\n"
-    "BROTHERS.\p"
+    "I'm the middle kid of the Bird\n"
+    "Brothers.\p"
     "I'm the one that loves wings.\n"
     "Let's battle again!$"
 }
 
 text FiveIsland_MemorialPillar_Text_HaroldRematchIntro {
-    "I'm the youngest of the BIRD\n"
-    "BROTHERS.\p"
+    "I'm the youngest of the Bird\n"
+    "Brothers.\p"
     "I love birds for their down.\n"
     "I didn't think I'd see you again!$"
 }
@@ -1052,7 +1052,7 @@ text SixIsland_OutcastIsland_Text_TylorRematchIntro {
 
 text SixIsland_OutcastIsland_Text_MymoRematchIntro {
     "Gasp… Gasp…\p"
-    "I swam here from SIX ISLAND's port\n"
+    "I swam here from Six Island's port\n"
     "in one go again.$"
 }
 
@@ -1062,18 +1062,18 @@ text SixIsland_OutcastIsland_Text_NicoleRematchIntro {
 }
 
 text SixIsland_OutcastIsland_Text_AvaRematchIntro {
-    "AVA: Let's have another\n"
+    "Ava: Let's have another\n"
     "two-on-two marine battle today!$"
 }
 
 text SixIsland_OutcastIsland_Text_GebRematchIntro {
-    "GEB: My big sister and I are way\n"
+    "Geb: My big sister and I are way\n"
     "tougher than before!$"
 }
 
 text SixIsland_GreenPath_Text_JaclynRematchIntro {
     "…Huh?\p"
-    "I envision my house, but TELEPORT\n"
+    "I envision my house, but Teleport\n"
     "always brings me here!$"
 }
 
@@ -1089,7 +1089,7 @@ text SixIsland_WaterPath_Text_EdwardRematchIntro {
 
 text SixIsland_WaterPath_Text_SamirRematchIntro {
     "What, you're sick of seeing\n"
-    "SWIMMERS like me?\p"
+    "Swimmers like me?\p"
     "Aww, don't be hatin'!\n"
     "Battle with me again.$"
 }
@@ -1105,12 +1105,12 @@ text SixIsland_WaterPath_Text_EarlRematchIntro {
 }
 
 text SixIsland_WaterPath_Text_MiuRematchIntro {
-    "MIU: Hello, POKéMON!\n"
+    "Miu: Hello, Pokémon!\n"
     "It's time to play again!$"
 }
 
 text SixIsland_WaterPath_Text_MiaRematchIntro {
-    "MIA: Hello, POKéMON!\n"
+    "Mia: Hello, Pokémon!\n"
     "It's time to battle again!$"
 }
 
@@ -1146,7 +1146,7 @@ text SevenIsland_TrainerTower_Text_DarioRematchIntro {
 
 text SevenIsland_TrainerTower_Text_RodetteRematchIntro {
     "Somewhere on this island, peculiar\n"
-    "POKéMON are sleeping.$"
+    "Pokémon are sleeping.$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_MiahRematchIntro {
@@ -1167,16 +1167,16 @@ text SevenIsland_SevaultCanyon_Entrance_Text_NicolasRematchIntro {
 
 text SevenIsland_SevaultCanyon_Entrance_Text_MadelineRematchIntro {
     "I don't forgive people who abuse\n"
-    "POKéMON!$"
+    "Pokémon!$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_EveRematchIntro {
-    "EVE: I'll team up with JON and\n"
+    "Eve: I'll team up with Jon and\n"
     "battle together again.$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_JonRematchIntro {
-    "JON: When I'm with EVE, it feels\n"
+    "Jon: When I'm with Eve, it feels\n"
     "like we could never lose, not ever.$"
 }
 
@@ -1187,7 +1187,7 @@ text SevenIsland_SevaultCanyon_Text_CyndyRematchIntro {
 
 text SevenIsland_SevaultCanyon_Text_EvanRematchIntro {
     "It doesn't matter if you happen to\n"
-    "have the strongest POKéMON…\p"
+    "have the strongest Pokémon…\p"
     "It doesn't mean a thing if you don't\n"
     "know how to use them properly!$"
 }
@@ -1215,13 +1215,13 @@ text SevenIsland_SevaultCanyon_Text_MichelleRematchIntro {
 }
 
 text SevenIsland_SevaultCanyon_Text_LexRematchIntro {
-    "LEX: My darling NYA, together\n"
+    "Lex: My darling Nya, together\n"
     "we will win for certain!$"
 }
 
 text SevenIsland_SevaultCanyon_Text_NyaRematchIntro {
-    "NYA: I won't drag down my mentor\n"
-    "LEX! We're going to win!$"
+    "Nya: I won't drag down my mentor\n"
+    "Lex! We're going to win!$"
 }
 
 text SevenIsland_TanobyRuins_Text_BrandonRematchIntro {
@@ -1230,7 +1230,7 @@ text SevenIsland_TanobyRuins_Text_BrandonRematchIntro {
 }
 
 text SevenIsland_TanobyRuins_Text_BenjaminRematchIntro {
-    "A mystic POKéMON is said to sleep\n"
+    "A mystic Pokémon is said to sleep\n"
     "inside here.$"
 }
 

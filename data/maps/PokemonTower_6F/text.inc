@@ -46,7 +46,7 @@ PokemonTower_6F_Text_BeGoneIntruders::
 PokemonTower_6F_Text_GhostWasCubonesMother::
 # 46 "data/maps/PokemonTower_6F/text.pory"
 	.string "The ghost was the restless spirit\n"
-	.string "of CUBONE's mother!$"
+	.string "of Cubone's mother!$"
 
 PokemonTower_6F_Text_MothersSpiritWasCalmed::
 # 51 "data/maps/PokemonTower_6F/text.pory"

@@ -10,7 +10,7 @@ Route17_Text_RaulDefeat::
 Route17_Text_RaulPostBattle::
 # 10 "data/maps/Route17/text.pory"
 	.string "You can find good stuff lying\n"
-	.string "around on CYCLING ROAD.\p"
+	.string "around on Cycling Road.\p"
 	.string "There's good money in picking them\n"
 	.string "up and selling them.$"
 
@@ -30,7 +30,7 @@ Route17_Text_IsaiahPostBattle::
 
 Route17_Text_VirgilIntro::
 # 31 "data/maps/Route17/text.pory"
-	.string "You heading to FUCHSIA?$"
+	.string "You heading to Fuchsia?$"
 
 Route17_Text_VirgilDefeat::
 # 35 "data/maps/Route17/text.pory"
@@ -42,7 +42,7 @@ Route17_Text_VirgilPostBattle::
 
 Route17_Text_BillyIntro::
 # 43 "data/maps/Route17/text.pory"
-	.string "We're BIKERS!\n"
+	.string "We're Bikers!\n"
 	.string "We rule the roads, man!$"
 
 Route17_Text_BillyDefeat::
@@ -55,7 +55,7 @@ Route17_Text_BillyPostBattle::
 
 Route17_Text_NikolasIntro::
 # 56 "data/maps/Route17/text.pory"
-	.string "Let VOLTORB electrify you!$"
+	.string "Let Voltorb electrify you!$"
 
 Route17_Text_NikolasDefeat::
 # 60 "data/maps/Route17/text.pory"
@@ -63,12 +63,12 @@ Route17_Text_NikolasDefeat::
 
 Route17_Text_NikolasPostBattle::
 # 64 "data/maps/Route17/text.pory"
-	.string "I got my VOLTORB at the abandoned\n"
-	.string "POWER PLANT.$"
+	.string "I got my Voltorb at the abandoned\n"
+	.string "Power Plant.$"
 
 Route17_Text_ZeekIntro::
 # 69 "data/maps/Route17/text.pory"
-	.string "I leveled up my POKéMON, but it\n"
+	.string "I leveled up my Pokémon, but it\n"
 	.string "won't evolve. Why?$"
 
 Route17_Text_ZeekDefeat::
@@ -77,8 +77,8 @@ Route17_Text_ZeekDefeat::
 
 Route17_Text_ZeekPostBattle::
 # 78 "data/maps/Route17/text.pory"
-	.string "Maybe some POKéMON need element\n"
-	.string "STONES to evolve.$"
+	.string "Maybe some Pokémon need element\n"
+	.string "Stones to evolve.$"
 
 Route17_Text_JamalIntro::
 # 83 "data/maps/Route17/text.pory"
@@ -107,7 +107,7 @@ Route17_Text_CoreyPostBattle::
 
 Route17_Text_JaxonIntro::
 # 108 "data/maps/Route17/text.pory"
-	.string "Nice BIKE!\n"
+	.string "Nice Bike!\n"
 	.string "How's it handle?$"
 
 Route17_Text_JaxonDefeat::
@@ -138,29 +138,29 @@ Route17_Text_WatchOutForDiscardedItems::
 
 Route17_Text_SameSpeciesGrowDifferentRates::
 # 139 "data/maps/Route17/text.pory"
-	.string "TRAINER TIPS\p"
-	.string "All POKéMON are unique.\p"
-	.string "Even POKéMON of the same species\n"
+	.string "Trainer Tips\p"
+	.string "All Pokémon are unique.\p"
+	.string "Even Pokémon of the same species\n"
 	.string "and level grow at different rates.$"
 
 Route17_Text_PressBToStayInPlace::
 # 146 "data/maps/Route17/text.pory"
-	.string "TRAINER TIPS\p"
+	.string "Trainer Tips\p"
 	.string "Press the B Button to stay in place\n"
 	.string "while on a slope.$"
 
 Route17_Text_RouteSign::
 # 152 "data/maps/Route17/text.pory"
-	.string "ROUTE 17\n"
-	.string "CELADON CITY - FUCHSIA CITY$"
+	.string "Route 17\n"
+	.string "Celadon City - Fuchsia City$"
 
 Route17_Text_DontThrowGameThrowBalls::
 # 157 "data/maps/Route17/text.pory"
 	.string "It's a notice!\p"
-	.string "Don't throw the game, throw POKé\n"
-	.string "BALLS instead!$"
+	.string "Don't throw the game, throw Poké\n"
+	.string "Balls instead!$"
 
 Route17_Text_CyclingRoadSign::
 # 163 "data/maps/Route17/text.pory"
-	.string "CYCLING ROAD\n"
+	.string "Cycling Road\n"
 	.string "Slope ends here!$"

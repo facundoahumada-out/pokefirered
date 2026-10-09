@@ -9,13 +9,13 @@ PalletTown_RivalsHouse_Text_ThereYouGoAllDone::
 # 81 "data/maps/PalletTown_RivalsHouse/text.pory"
     .string "{COLOR DARK_GRAY}{STR_VAR_1} looks dreamily content…\p"
 # 82 "data/maps/PalletTown_RivalsHouse/text.pory"
-    .string "{COLOR RED}DAISY: There you go! All done.\n"
+    .string "{COLOR RED}Daisy: There you go! All done.\n"
 # 83 "data/maps/PalletTown_RivalsHouse/text.pory"
 #else @ In the JP games, gender-based text used a different font instead of different colors.
 # 84 "data/maps/PalletTown_RivalsHouse/text.pory"
     .string "{FONT_NORMAL}{STR_VAR_1} looks dreamily content…\p"
 # 85 "data/maps/PalletTown_RivalsHouse/text.pory"
-    .string "{FONT_FEMALE}DAISY: There you go! All done.\n"
+    .string "{FONT_FEMALE}Daisy: There you go! All done.\n"
 # 86 "data/maps/PalletTown_RivalsHouse/text.pory"
 #endif
 # 87 "data/maps/PalletTown_RivalsHouse/text.pory"
@@ -23,7 +23,7 @@ PalletTown_RivalsHouse_Text_ThereYouGoAllDone::
 # 88 "data/maps/PalletTown_RivalsHouse/text.pory"
     .string "Giggle…\n"
 # 89 "data/maps/PalletTown_RivalsHouse/text.pory"
-    .string "It's such a cute POKéMON.$"
+    .string "It's such a cute Pokémon.$"
 # 90 "data/maps/PalletTown_RivalsHouse/text.pory"
 
 # 91 "data/maps/PalletTown_RivalsHouse/text.pory"
@@ -31,17 +31,17 @@ PalletTown_RivalsHouse_Text_CantGroomAnEgg::
 # 92 "data/maps/PalletTown_RivalsHouse/text.pory"
     .string "Oh, sorry. I honestly can't\n"
 # 93 "data/maps/PalletTown_RivalsHouse/text.pory"
-    .string "groom an EGG.$"
+    .string "groom an Egg.$"
 
 PalletTown_RivalsHouse_Text_HiBrothersAtLab::
 # 1 "data/maps/PalletTown_RivalsHouse/text.pory"
-	.string "DAISY: Hi, {PLAYER}!\p"
+	.string "Daisy: Hi, {PLAYER}!\p"
 	.string "My brother, {RIVAL}, is out at\n"
-	.string "Grandpa's LAB.$"
+	.string "Grandpa's Lab.$"
 
 PalletTown_RivalsHouse_Text_HeardYouBattledRival::
 # 7 "data/maps/PalletTown_RivalsHouse/text.pory"
-	.string "DAISY: {PLAYER}, I heard you had\n"
+	.string "Daisy: {PLAYER}, I heard you had\n"
 	.string "a battle against {RIVAL}.\p"
 	.string "I wish I'd seen that!$"
 
@@ -54,45 +54,45 @@ PalletTown_RivalsHouse_Text_ErrandForGrandpaThisWillHelp::
 
 PalletTown_RivalsHouse_Text_ReceivedTownMapFromDaisy::
 # 20 "data/maps/PalletTown_RivalsHouse/text.pory"
-	.string "{PLAYER} received a TOWN MAP\n"
-	.string "from DAISY.$"
+	.string "{PLAYER} received a Town Map\n"
+	.string "from Daisy.$"
 
 PalletTown_RivalsHouse_Text_DontHaveSpaceForThis::
 # 25 "data/maps/PalletTown_RivalsHouse/text.pory"
 	.string "You don't have space for this in\n"
-	.string "your BAG.$"
+	.string "your Bag.$"
 
 PalletTown_RivalsHouse_Text_ExplainTownMap::
 # 30 "data/maps/PalletTown_RivalsHouse/text.pory"
-	.string "You can use the TOWN MAP to find\n"
+	.string "You can use the Town Map to find\n"
 	.string "out where you are, or check the\l"
 	.string "names of places.$"
 
 PalletTown_RivalsHouse_Text_PleaseGiveMonsRest::
 # 36 "data/maps/PalletTown_RivalsHouse/text.pory"
-	.string "DAISY: Just like people, POKéMON\n"
+	.string "Daisy: Just like people, Pokémon\n"
 	.string "are living things.\p"
 	.string "When they get tired, please give\n"
 	.string "them a rest.$"
 
 PalletTown_RivalsHouse_Text_ItsBigMapOfKanto::
 # 43 "data/maps/PalletTown_RivalsHouse/text.pory"
-	.string "It's a big map of the KANTO region.\n"
+	.string "It's a big map of the Kanto region.\n"
 	.string "Now this would be useful!$"
 
 PalletTown_RivalsHouse_Text_ShelvesCrammedFullOfBooks::
 # 48 "data/maps/PalletTown_RivalsHouse/text.pory"
 	.string "The shelves are crammed full of\n"
-	.string "books on POKéMON.$"
+	.string "books on Pokémon.$"
 
 PalletTown_RivalsHouse_Text_LikeMeToGroomMon::
 # 53 "data/maps/PalletTown_RivalsHouse/text.pory"
-	.string "DAISY: Hi, {PLAYER}!\n"
+	.string "Daisy: Hi, {PLAYER}!\n"
 	.string "Good timing.\p"
 	.string "I'm about to have some tea.\n"
 	.string "Would you like to join me?\p"
 	.string "Oh, but look.\n"
-	.string "Your POKéMON are a little dirty.\p"
+	.string "Your Pokémon are a little dirty.\p"
 	.string "Would you like me to groom one?$"
 
 PalletTown_RivalsHouse_Text_DontNeedAnyGrooming::
@@ -106,21 +106,21 @@ PalletTown_RivalsHouse_Text_GroomWhichOne::
 
 PalletTown_RivalsHouse_Text_LookingNiceInNoTime::
 # 72 "data/maps/PalletTown_RivalsHouse/text.pory"
-	.string "DAISY: Okay, I'll get it looking\n"
+	.string "Daisy: Okay, I'll get it looking\n"
 	.string "nice in no time.$"
 
 PalletTown_RivalsHouse_Text_MayISeeFirstMon::
 # 96 "data/maps/PalletTown_RivalsHouse/text.pory"
-	.string "DAISY: Your POKéMON grow to love\n"
+	.string "Daisy: Your Pokémon grow to love\n"
 	.string "you if you raise them with love.\p"
 	.string "For example, {PLAYER}, may I see\n"
-	.string "your first POKéMON?$"
+	.string "your first Pokémon?$"
 
 PalletTown_RivalsHouse_Text_CouldntLoveYouMore::
 # 103 "data/maps/PalletTown_RivalsHouse/text.pory"
 	.string "It couldn't possibly love you\n"
 	.string "any more than it does now.\p"
-	.string "Your POKéMON is happy beyond\n"
+	.string "Your Pokémon is happy beyond\n"
 	.string "words.$"
 
 PalletTown_RivalsHouse_Text_ItLooksVeryHappy::
@@ -143,7 +143,7 @@ PalletTown_RivalsHouse_Text_NotFamiliarWithYouYet::
 # 126 "data/maps/PalletTown_RivalsHouse/text.pory"
 	.string "It's not quite familiar with you\n"
 	.string "yet.\p"
-	.string "POKéMON are all quite wary when\n"
+	.string "Pokémon are all quite wary when\n"
 	.string "you first get them.$"
 
 PalletTown_RivalsHouse_Text_DontLikeWayItGlaresAtYou::
@@ -158,9 +158,9 @@ PalletTown_RivalsHouse_Text_WhyWouldMonHateYouSoMuch::
 	.string "…Um, it's not easy for me to say\n"
 	.string "this, but…\p"
 	.string "Is there some reason why your\n"
-	.string "POKéMON would hate you so much?$"
+	.string "Pokémon would hate you so much?$"
 
 PalletTown_RivalsHouse_Text_LovelyAndSweetClefairy::
 # 147 "data/maps/PalletTown_RivalsHouse/text.pory"
 	.string "“The lovely and sweet\n"
-	.string "CLEFAIRY”$"
+	.string "Clefairy”$"

@@ -1,19 +1,19 @@
 DayCare_Text_ImDaycareManSpeakToMyWife::
 # 2 "data/text/day_care.pory"
-	.string "I'm the DAY-CARE MAN.\p"
+	.string "I'm the Day-Care Man.\p"
 	.string "I help take care of the precious\n"
-	.string "POKéMON of TRAINERS.\p"
+	.string "Pokémon of Trainers.\p"
 	.string "If you'd like me to raise your\n"
-	.string "POKéMON, have a word with my wife.$"
+	.string "Pokémon, have a word with my wife.$"
 
 DayCare_Text_DoYouWantEgg::
 # 10 "data/text/day_care.pory"
 	.string "Ah, it's you!\p"
-	.string "We were raising your POKéMON, and\n"
+	.string "We were raising your Pokémon, and\n"
 	.string "my goodness, were we surprised!\p"
-	.string "Your POKéMON had an EGG!\p"
+	.string "Your Pokémon had an Egg!\p"
 	.string "We don't know how it got there,\n"
-	.string "but your POKéMON had it.\p"
+	.string "but your Pokémon had it.\p"
 	.string "You do want it, yes?$"
 
 DayCare_Text_YourMonIsDoingFine::
@@ -33,8 +33,8 @@ DayCare_Text_YouHaveNoRoomForIt::
 
 DayCare_Text_ReceivedEgg::
 # 35 "data/text/day_care.pory"
-	.string "{PLAYER} received the EGG from\n"
-	.string "the DAY-CARE MAN.$"
+	.string "{PLAYER} received the Egg from\n"
+	.string "the Day-Care Man.$"
 
 DayCare_Text_TakeGoodCareOfIt::
 # 40 "data/text/day_care.pory"
@@ -57,13 +57,13 @@ DayCare_Text_IWillKeepDoYouWantIt::
 
 DayCare_Text_WouldYouLikeUsToRaiseMon::
 # 59 "data/text/day_care.pory"
-	.string "I'm the DAY-CARE LADY.\p"
-	.string "We can raise POKéMON for you.\p"
+	.string "I'm the Day-Care Lady.\p"
+	.string "We can raise Pokémon for you.\p"
 	.string "Would you like us to raise one?$"
 
 DayCare_Text_WhichMonShouldWeRaise::
 # 65 "data/text/day_care.pory"
-	.string "Which POKéMON should we raise for\n"
+	.string "Which Pokémon should we raise for\n"
 	.string "you?$"
 
 DayCare_Text_WellRaiseYourMon::
@@ -74,9 +74,9 @@ DayCare_Text_WellRaiseYourMon::
 
 DayCare_Text_WeCanRaiseOneMore::
 # 76 "data/text/day_care.pory"
-	.string "We can raise two of your POKéMON.\p"
+	.string "We can raise two of your Pokémon.\p"
 	.string "Would you like us to raise one\n"
-	.string "more POKéMON for you?$"
+	.string "more Pokémon for you?$"
 
 DayCare_Text_HusbandWasLookingForYou::
 # 82 "data/text/day_care.pory"
@@ -105,7 +105,7 @@ DayCare_Text_GoodToSeeYou::
 # 105 "data/text/day_care.pory"
 	.string "Ah, it's you!\n"
 	.string "Good to see you.\p"
-	.string "Your POKéMON can only be doing\n"
+	.string "Your Pokémon can only be doing\n"
 	.string "good!$"
 
 DayCare_Text_YourMonHasGrownXLevels::
@@ -115,7 +115,7 @@ DayCare_Text_YourMonHasGrownXLevels::
 
 DayCare_Text_YourPartyIsFull::
 # 117 "data/text/day_care.pory"
-	.string "Your POKéMON party is full.\n"
+	.string "Your Pokémon party is full.\n"
 	.string "Make room, then come see me.$"
 
 DayCare_Text_TakeBackWhichMon::
@@ -130,26 +130,26 @@ DayCare_Text_ItWillCostX::
 DayCare_Text_HeresYourMon::
 # 131 "data/text/day_care.pory"
 	.string "Perfect!\n"
-	.string "Here's your POKéMON.$"
+	.string "Here's your Pokémon.$"
 
 DayCare_Text_TookBackMon::
 # 136 "data/text/day_care.pory"
 	.string "{PLAYER} took back {STR_VAR_1} from\n"
-	.string "the DAY-CARE LADY.$"
+	.string "the Day-Care Lady.$"
 
 DayCare_Text_YouHaveJustOneMon::
 # 141 "data/text/day_care.pory"
 	.string "Oh? But you have just one\n"
-	.string "POKéMON.\p"
+	.string "Pokémon.\p"
 	.string "Come back another time.$"
 
 DayCare_Text_TakeYourMonBack::
 # 147 "data/text/day_care.pory"
-	.string "Will you take your POKéMON back?$"
+	.string "Will you take your Pokémon back?$"
 
 DayCare_Text_WhatWillYouBattleWith::
 # 151 "data/text/day_care.pory"
-	.string "If you leave me that POKéMON,\n"
+	.string "If you leave me that Pokémon,\n"
 	.string "what will you battle with?\p"
 	.string "Come back another time.$"
 

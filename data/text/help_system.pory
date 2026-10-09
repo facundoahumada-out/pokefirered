@@ -19,11 +19,11 @@ text Help_Text_TypeMatchupList {
 }
 
 text Help_Text_Exit {
-    "EXIT$"
+    "Exit$"
 }
 
 text Help_Text_Cancel {
-    "CANCEL$"
+    "Cancel$"
 }
 
 text Help_Text_TryDoingItOnYourOwn {
@@ -51,16 +51,16 @@ text Help_Text_DescAboutThisGame {
 }
 
 text Help_Text_DescTypeMatchupList {
-    "The matchups of  POKéMON types\n"
+    "The matchups of  Pokémon types\n"
     "and moves are listed.$"
 }
 
 text Help_Text_DescExit {
-    "Select to exit the HELP System.$"
+    "Select to exit the Help System.$"
 }
 
 text Help_Text_Greetings {
-    "Greetings! This is the HELP System.\n"
+    "Greetings! This is the Help System.\n"
     "Call me up whenever and wherever you\l"
     "need by pressing the L or R Button.\l"
     "The help messages change to suit the\l"
@@ -132,11 +132,11 @@ text Help_Text_HowDoIPrepareForBattle {
 }
 
 text Help_Text_WhatIsAMonsVitality {
-    "What is a POKéMON's vitality?$"
+    "What is a Pokémon's vitality?$"
 }
 
 text Help_Text_MyMonsAreHurt {
-    "My POKéMON are hurt!$"
+    "My Pokémon are hurt!$"
 }
 
 text Help_Text_WhatIsStatusProblem {
@@ -144,39 +144,39 @@ text Help_Text_WhatIsStatusProblem {
 }
 
 text Help_Text_WhatHappensIfAllMyMonsFaint {
-    "What happens if all my POKéMON faint?$"
+    "What happens if all my Pokémon faint?$"
 }
 
 text Help_Text_CantCatchMons {
-    "I can't catch POKéMON!$"
+    "I can't catch Pokémon!$"
 }
 
 text Help_Text_RanOutOfPotions {
-    "I ran out of POTIONS.$"
+    "I ran out of Potions.$"
 }
 
 text Help_Text_CanIBuyPokeBalls {
-    "Can I buy POKé BALLS?$"
+    "Can I buy Poké Balls?$"
 }
 
 text Help_Text_WhatsATrainer {
-    "What's a TRAINER?$"
+    "What's a Trainer?$"
 }
 
 text Help_Text_HowDoIWinAgainstTrainer {
-    "How do I win against a TRAINER?$"
+    "How do I win against a Trainer?$"
 }
 
 text Help_Text_WhereDoMonsAppear {
-    "Where do POKéMON appear?$"
+    "Where do Pokémon appear?$"
 }
 
 text Help_Text_WhatAreMoves {
-    "What are POKéMON moves?$"
+    "What are Pokémon moves?$"
 }
 
 text Help_Text_WhatAreHiddenMoves {
-    "What are HIDDEN moves?$"
+    "What are Hidden moves?$"
 }
 
 text Help_Text_WhatMovesShouldIUse {
@@ -188,11 +188,11 @@ text Help_Text_WantToAddMoreMoves {
 }
 
 text Help_Text_WantToMakeMonStronger {
-    "I want to make my POKéMON stronger.$"
+    "I want to make my Pokémon stronger.$"
 }
 
 text Help_Text_FoeMonsTooStrong {
-    "The foe POKéMON are too strong!$"
+    "The foe Pokémon are too strong!$"
 }
 
 text Help_Text_WhatDoIDoInCave {
@@ -204,11 +204,11 @@ text Help_Text_NothingIWantToKnow {
 }
 
 text Help_Text_WhatsPokemonCenter {
-    "What's a POKéMON CENTER?$"
+    "What's a Pokémon Center?$"
 }
 
 text Help_Text_WhatsPokemonMart {
-    "What's a POKéMON MART?$"
+    "What's a Pokémon Mart?$"
 }
 
 text Help_Text_WantToEndGame {
@@ -216,7 +216,7 @@ text Help_Text_WantToEndGame {
 }
 
 text Help_Text_WhatsAMon {
-    "What's a POKéMON?$"
+    "What's a Pokémon?$"
 }
 
 text Help_Text_WhatIsThatPersonLike {
@@ -224,32 +224,32 @@ text Help_Text_WhatIsThatPersonLike {
 }
 
 text Help_Text_WhatDoesHiddenMoveDo {
-    "What does a HIDDEN move do?$"
+    "What does a Hidden move do?$"
 }
 
 text Help_Text_WhatDoIDoInSafari {
-    "What do I do in a SAFARI GAME?$"
+    "What do I do in a Safari Game?$"
 }
 
 text Help_Text_WhatAreSafariRules {
-    "What are the SAFARI GAME rules?$"
+    "What are the Safari Game rules?$"
 }
 
 text Help_Text_WantToEndSafari {
-    "I want to end this SAFARI GAME!$"
+    "I want to end this Safari Game!$"
 }
 
 text Help_Text_WhatIsAGym {
-    "What is a GYM?$"
+    "What is a Gym?$"
 }
 
 text Help_Text_AnswerPlayingForFirstTime {
     "You become the main character,\n"
-    "exploring the world of POKéMON.\l"
+    "exploring the world of Pokémon.\l"
     "By talking to people and solving\l"
     "mysteries, new paths will open to you.\l"
     "Strive for the goal together with your\l"
-    "wonderful POKéMON.$"
+    "wonderful Pokémon.$"
 }
 
 text Help_Text_AnswerWhatShouldIBeDoing {
@@ -313,22 +313,22 @@ text Help_Text_AnswerOutOfThingsToDo {
 
 text Help_Text_AnswerWhatHappenedToItemIGot {
     "Any item that you are given by another\n"
-    "character goes in your BAG.\l"
+    "character goes in your Bag.\l"
     "The item is automatically sorted and\l"
     "placed in one of three pockets.\l"
-    "For instructions on the BAG's use,\l"
-    "please refer to the HELP System's\l"
+    "For instructions on the Bag's use,\l"
+    "please refer to the Help System's\l"
     "“How do I do this?” heading.$"
 }
 
 text Help_Text_AnswerWhatAreMyAdventureBasics {
-    "If POKéMON are hurt in battle,\n"
-    "take them to a POKéMON CENTER and\l"
+    "If Pokémon are hurt in battle,\n"
+    "take them to a Pokémon Center and\l"
     "have them healed by the staff.\l"
     "Get in the habit of saving your\l"
     "game and recording your progress.\l"
     "Stock up on healing items at\l"
-    "POKéMON MARTS before traveling far.$"
+    "Pokémon Marts before traveling far.$"
 }
 
 text Help_Text_AnswerHowAreRoadsForestsDifferent {
@@ -340,16 +340,16 @@ text Help_Text_AnswerHowAreRoadsForestsDifferent {
 
 text Help_Text_AnswerHowAreCavesDifferent {
     "Caves are dark and dangerous. Wild\n"
-    "POKéMON can appear anywhere in them.\l"
+    "Pokémon can appear anywhere in them.\l"
     "If there is an emergency, rush to a\l"
-    "POKéMON CENTER or use items.\l"
+    "Pokémon Center or use items.\l"
     "New towns await discovery beyond some\l"
     "caves, so don't give up.$"
 }
 
 text Help_Text_AnswerHowDoIProgress {
     "The object of the game is to train\n"
-    "your POKéMON and move forward.\l"
+    "your Pokémon and move forward.\l"
     "You must collect info and solve\l"
     "problems. For example, what do you\l"
     "need to get around an obstacle?\l"
@@ -367,93 +367,93 @@ text Help_Text_AnswerWhenCanIUseItem {
 }
 
 text Help_Text_AnswerWhatsABattle {
-    "In a battle, POKéMON try to reduce\n"
+    "In a battle, Pokémon try to reduce\n"
     "one another's vitality, expressed as\l"
-    "HP. If a POKéMON's HP falls to zero,\l"
-    "it faints, and the other POKéMON\l"
-    "wins. By winning a battle, POKéMON\l"
+    "HP. If a Pokémon's HP falls to zero,\l"
+    "it faints, and the other Pokémon\l"
+    "wins. By winning a battle, Pokémon\l"
     "earn EXP. Points, which help them\l"
     "level up (grow stronger).$"
 }
 
 text Help_Text_AnswerHowDoIPrepareForBattle {
-    "First, fully heal the POKéMON in your\n"
-    "party (the POKéMON with you) at any\l"
-    "POKéMON CENTER.\l"
+    "First, fully heal the Pokémon in your\n"
+    "party (the Pokémon with you) at any\l"
+    "Pokémon Center.\l"
     "You should also buy healing items for\l"
-    "emergencies at a POKéMON MART.$"
+    "emergencies at a Pokémon Mart.$"
 }
 
 text Help_Text_AnswerWhatIsAMonsVitality {
-    "A POKéMON's vitality is expressed in HP.\n"
-    "If a POKéMON is hurt in battle, HP is\l"
+    "A Pokémon's vitality is expressed in HP.\n"
+    "If a Pokémon is hurt in battle, HP is\l"
     "subtracted. If its HP drops to zero,\l"
-    "the POKéMON faints.\l"
-    "Heal hurt or fainted POKéMON at a\l"
-    "POKéMON CENTER or by using items.$"
+    "the Pokémon faints.\l"
+    "Heal hurt or fainted Pokémon at a\l"
+    "Pokémon Center or by using items.$"
 }
 
 text Help_Text_AnswerMyMonsAreHurt {
-    "A POKéMON CENTER is like an inn for\n"
-    "POKéMON. It will fully heal POKéMON of\l"
+    "A Pokémon Center is like an inn for\n"
+    "Pokémon. It will fully heal Pokémon of\l"
     "any status problems and fully restore\l"
     "their HP using a special machine.\l"
     "This service is free, so get in the\l"
-    "habit of healing your POKéMON often.$"
+    "habit of healing your Pokémon often.$"
 }
 
 text Help_Text_AnswerWhatIsStatusProblem {
     "A status problem refers to an ailment\n"
-    "that is inflicted on a POKéMON by its\l"
+    "that is inflicted on a Pokémon by its\l"
     "foe's attack. These include burns,\l"
     "paralysis, poisoning, sleep, and\l"
     "freezing. These can be healed by\l"
-    "visiting a POKéMON CENTER or using\l"
+    "visiting a Pokémon Center or using\l"
     "the appropriate item.$"
 }
 
 text Help_Text_AnswerWhatHappensIfAllMyMonsFaint {
-    "If all the POKéMON in your party\n"
-    "(all the POKéMON with you) faint, you\l"
-    "lose some MONEY, and you are\l"
-    "returned home or to a POKéMON\l"
-    "CENTER. To reduce that chance, visit\l"
-    "POKéMON CENTERS often. Also, get\l"
+    "If all the Pokémon in your party\n"
+    "(all the Pokémon with you) faint, you\l"
+    "lose some Money, and you are\l"
+    "returned home or to a Pokémon\l"
+    "Center. To reduce that chance, visit\l"
+    "Pokémon Centers often. Also, get\l"
     "in the habit of saving often.$"
 }
 
 text Help_Text_AnswerCantCatchMons {
-    "If a wild POKéMON escapes from a POKé\n"
-    "BALL, it's obviously still feisty.\l"
+    "If a wild Pokémon escapes from a Poké\n"
+    "Ball, it's obviously still feisty.\l"
     "Try reducing its HP some more, and\l"
     "try to weaken it with paralysis or sleep\l"
     "before trying to catch it.\l"
-    "If the POKé BALL rocks for a while,\l"
+    "If the Poké Ball rocks for a while,\l"
     "the quarry is close to being caught!$"
 }
 
 text Help_Text_AnswerRanOutOfPotions {
-    "There are shops, known as POKéMON\n"
-    "MARTS, that sell items.\l"
-    "You will not find POKéMON MARTS on\l"
+    "There are shops, known as Pokémon\n"
+    "Marts, that sell items.\l"
+    "You will not find Pokémon Marts on\l"
     "roads, in forests, or in caves.\l"
     "Stock up on needed items while you are\l"
-    "visiting a town with a POKéMON MART.$"
+    "visiting a town with a Pokémon Mart.$"
 }
 
 text Help_Text_AnswerCanIBuyPokeBalls {
-    "You may buy POKé BALLS at any\n"
-    "POKéMON MART in any town.\l"
-    "You will not find POKéMON MARTS on\l"
+    "You may buy Poké Balls at any\n"
+    "Pokémon Mart in any town.\l"
+    "You will not find Pokémon Marts on\l"
     "roads, in forests, or in caves.\l"
-    "Stock up on POKé BALLS while you are\l"
-    "visiting a town with a POKéMON MART.$"
+    "Stock up on Poké Balls while you are\l"
+    "visiting a town with a Pokémon Mart.$"
 }
 
 text Help_Text_AnswerWhatsATrainer {
-    "A TRAINER is a person who raises\n"
-    "POKéMON through battling.\l"
-    "TRAINERS will challenge you \l"
+    "A Trainer is a person who raises\n"
+    "Pokémon through battling.\l"
+    "Trainers will challenge you \l"
     "wherever they are - it could be on\l"
     "a road, in forests, caves, anywhere.\l"
     "If your eyes meet, you have to accept\l"
@@ -461,86 +461,86 @@ text Help_Text_AnswerWhatsATrainer {
 }
 
 text Help_Text_AnswerHowDoIWinAgainstTrainer {
-    "To beat a TRAINER in battle, use\n"
-    "POKéMON that have type advantages\l"
-    "over the foe's POKéMON. You may also\l"
-    "use highly trained POKéMON with\l"
+    "To beat a Trainer in battle, use\n"
+    "Pokémon that have type advantages\l"
+    "over the foe's Pokémon. You may also\l"
+    "use highly trained Pokémon with\l"
     "overwhelming power. Outnumbering the\l"
-    "foe's POKéMON is another obvious\l"
+    "foe's Pokémon is another obvious\l"
     "tactic.$"
 }
 
 text Help_Text_AnswerWhereDoMonsAppear {
-    "Wild POKéMON will appear in tall grass,\n"
+    "Wild Pokémon will appear in tall grass,\n"
     "on roads, and in forests. They will\l"
     "appear anywhere in dark caves.\l"
-    "There are no wild POKéMON or TRAINERS\l"
+    "There are no wild Pokémon or Trainers\l"
     "in towns, so they are safe places.$"
 }
 
 text Help_Text_AnswerWhatAreMoves {
-    "POKéMON may learn up to four different\n"
+    "Pokémon may learn up to four different\n"
     "techniques, or moves. There is a great\l"
     "variety of moves including attacks and\l"
     "those with special effects. The kinds\l"
     "of moves that can be learned vary\l"
-    "for each POKéMON. Some moves\l"
+    "for each Pokémon. Some moves\l"
     "can be learned from machines.$"
 }
 
 text Help_Text_AnswerWhatAreHiddenMoves {
-    "HIDDEN moves are those that are\n"
+    "Hidden moves are those that are\n"
     "especially important for your\l"
     "adventure. To use such a move outside\l"
-    "of battle, open the “POKéMON” MENU\l"
-    "and make the POKéMON that knows the\l"
-    "move use it. A fainted POKéMON may use\l"
-    "a HIDDEN move outside of battle.$"
+    "of battle, open the “Pokémon” Menu\l"
+    "and make the Pokémon that knows the\l"
+    "move use it. A fainted Pokémon may use\l"
+    "a Hidden move outside of battle.$"
 }
 
 text Help_Text_AnswerWhatMovesShouldIUse {
-    "Select “FIGHT,” and the MENU of moves\n"
+    "Select “Fight,” and the Menu of moves\n"
     "will appear. Consider the type\l"
     "matchups, and use the most effective\l"
     "moves. You can check the effects of\l"
-    "moves by opening “POKéMON,”\l"
-    "picking a POKéMON, opening “SUMMARY,”\l"
-    "then opening “POKéMON SKILLS.”$"
+    "moves by opening “Pokémon,”\l"
+    "picking a Pokémon, opening “Summary,”\l"
+    "then opening “Pokémon Skills.”$"
 }
 
 text Help_Text_AnswerWantToAddMoreMoves {
-    "The most a POKéMON can learn is four\n"
+    "The most a Pokémon can learn is four\n"
     "moves. They are learned as the\l"
-    "POKéMON levels up. It can also be\l"
+    "Pokémon levels up. It can also be\l"
     "taught a move using a TM (Technical\l"
     "Machine) or HM (Hidden Machine).\l"
     "There are also people who teach moves.$"
 }
 
 text Help_Text_AnswerWantToMakeMonStronger {
-    "The key to making your POKéMON\n"
+    "The key to making your Pokémon\n"
     "strong is to battle and win often.\l"
     "The EXP. (Experience) Points earned\l"
     "by winning battles accumulate to\l"
-    "level up POKéMON that participated in\l"
-    "them. Battle wild POKéMON often to\l"
+    "level up Pokémon that participated in\l"
+    "them. Battle wild Pokémon often to\l"
     "level up your party.$"
 }
 
 text Help_Text_AnswerFoeMonsTooStrong {
     "If your foes are too strong, try\n"
-    "leveling up your POKéMON some more.\l"
+    "leveling up your Pokémon some more.\l"
     "Go back the way you came and battle\l"
-    "wild POKéMON to level up your party.\l"
-    "You may also battle TRAINERS whom you\l"
+    "wild Pokémon to level up your party.\l"
+    "You may also battle Trainers whom you\l"
     "have not battled before.$"
 }
 
 text Help_Text_AnswerWhatDoIDoInCave {
-    "Unlike roads and forests, wild POKéMON\n"
+    "Unlike roads and forests, wild Pokémon\n"
     "can appear anywhere in caves.\l"
-    "If your POKéMON are hurt in a cave,\l"
-    "rush to a POKéMON CENTER or use items\l"
+    "If your Pokémon are hurt in a cave,\l"
+    "rush to a Pokémon Center or use items\l"
     "to heal them right away. It is very\l"
     "dangerous to force your luck in caves.$"
 }
@@ -551,26 +551,26 @@ text Help_Text_AnswerNothingIWantToKnow {
 }
 
 text Help_Text_AnswerWhatsPokemonCenter {
-    "A POKéMON CENTER is identified by its\n"
+    "A Pokémon Center is identified by its\n"
     "red roof and a “P.C” sign. Every\l"
-    "POKéMON CENTER offers such services as\l"
-    "fully healing POKéMON and free PC use,\l"
+    "Pokémon Center offers such services as\l"
+    "fully healing Pokémon and free PC use,\l"
     "making it essential for your travels.\l"
     "On the upper floor are facilities for\l"
     "linking with friends and others.$"
 }
 
 text Help_Text_AnswerWhatsPokemonMart {
-    "A POKéMON MART is identified by its\n"
-    "blue roof and a “MART” sign.\l"
+    "A Pokémon Mart is identified by its\n"
+    "blue roof and a “Mart” sign.\l"
     "Items can be bought and sold at any\l"
-    "POKéMON MART. Some MARTS carry items\l"
+    "Pokémon Mart. Some Marts carry items\l"
     "that are available only in their towns.$"
 }
 
 text Help_Text_AnswerWantToEndGame {
     "You can safely end your game by\n"
-    "selecting “SAVE” on the MENU.\l"
+    "selecting “Save” on the Menu.\l"
     "Once you have saved, the game can be\l"
     "safely turned off. When the game is\l"
     "turned back on, you can resume from\l"
@@ -578,23 +578,23 @@ text Help_Text_AnswerWantToEndGame {
 }
 
 text Help_Text_AnswerWhatsAMon {
-    "POKéMON are living beings about which\n"
+    "Pokémon are living beings about which\n"
     "many mysteries still remain. You may\l"
     "see them in grass, the sea, and caves.\l"
     "They appear to obey the wishes of the\l"
-    "TRAINERS that caught them.$"
+    "Trainers that caught them.$"
 }
 
 text Help_Text_AnswerWhatIsThatPersonLike {
-    "Use the FAME CHECKER among the\n"
-    "KEY ITEMS in your BAG.\l"
+    "Use the Fame Checker among the\n"
+    "Key Items in your Bag.\l"
     "It may give you a hint, so try it out.$"
 }
 
 text Help_Text_AnswerWhatDoesHiddenMoveDo {
-    "A HIDDEN move is taught to a POKéMON\n"
+    "A Hidden move is taught to a Pokémon\n"
     "using an HM (Hidden Machine).\l"
-    "A HIDDEN move is important for helping\l"
+    "A Hidden move is important for helping\l"
     "your adventure. For example, one is\l"
     "used to light up dark caves. Another\l"
     "cuts down small trees. There is one\l"
@@ -602,57 +602,57 @@ text Help_Text_AnswerWhatDoesHiddenMoveDo {
 }
 
 text Help_Text_AnswerWhatDoIDoInSafari {
-    "Try to catch wild POKéMON by throwing\n"
-    "the special SAFARI BALLS.\l"
+    "Try to catch wild Pokémon by throwing\n"
+    "the special Safari Balls.\l"
     "You may keep any item you find, too.$"
 }
 
 text Help_Text_AnswerWhatAreSafariRules {
-    "Your SAFARI GAME ends once you have\n"
+    "Your Safari Game ends once you have\n"
     "traveled a certain distance or thrown\l"
-    "all your SAFARI BALLS.\l"
-    "Open the MENU to check the remaining\l"
-    "number of steps and SAFARI BALLS.$"
+    "all your Safari Balls.\l"
+    "Open the Menu to check the remaining\l"
+    "number of steps and Safari Balls.$"
 }
 
 text Help_Text_AnswerWantToEndSafari {
-    "If you would like to cut your SAFARI\n"
-    "GAME short, open the MENU and select\l"
-    "“RETIRE” at the top of the list.$"
+    "If you would like to cut your Safari\n"
+    "Game short, open the Menu and select\l"
+    "“Retire” at the top of the list.$"
 }
 
 text Help_Text_AnswerWhatIsAGym {
-    "POKéMON GYMS are operated by the\n"
-    "POKéMON LEAGUE and are training\l"
-    "facilities for TRAINERS. They are all\l"
+    "Pokémon Gyms are operated by the\n"
+    "Pokémon League and are training\l"
+    "facilities for Trainers. They are all\l"
     "across the land in cities and towns.\l"
-    "Each one is headed by a LEADER, who\l"
-    "is a very skilled TRAINER. Beat the\l"
-    "LEADER to collect a BADGE.$"
+    "Each one is headed by a Leader, who\l"
+    "is a very skilled Trainer. Beat the\l"
+    "Leader to collect a Badge.$"
 }
 
 text Help_Text_UsingPokedex {
-    " Using “POKéDEX”$"
+    " Using “Pokédex”$"
 }
 
 text Help_Text_UsingPokemon {
-    " Using “POKéMON”$"
+    " Using “Pokémon”$"
 }
 
 text Help_Text_UsingSummary {
-    "  Using “SUMMARY”$"
+    "  Using “Summary”$"
 }
 
 text Help_Text_UsingSwitch {
-    "  Using “SWITCH”$"
+    "  Using “Switch”$"
 }
 
 text Help_Text_UsingItem {
-    "  Using “ITEM”$"
+    "  Using “Item”$"
 }
 
 text Help_Text_UsingBag {
-    " Using “BAG”$"
+    " Using “Bag”$"
 }
 
 text Help_Text_UsingAnItem {
@@ -664,7 +664,7 @@ text Help_Text_UsingKeyItem {
 }
 
 text Help_Text_UsingPokeBall {
-    "  Using a POKé BALL$"
+    "  Using a Poké Ball$"
 }
 
 text Help_Text_UsingPlayer {
@@ -672,19 +672,19 @@ text Help_Text_UsingPlayer {
 }
 
 text Help_Text_UsingSave {
-    " Using “SAVE”$"
+    " Using “Save”$"
 }
 
 text Help_Text_UsingOption {
-    " Using “OPTION”$"
+    " Using “Option”$"
 }
 
 text Help_Text_UsingPotion {
-    "    Using a POTION$"
+    "    Using a Potion$"
 }
 
 text Help_Text_UsingTownMap {
-    "    Using the TOWN MAP$"
+    "    Using the Town Map$"
 }
 
 text Help_Text_UsingTM {
@@ -700,7 +700,7 @@ text Help_Text_UsingMoveOutsideOfBattle {
 }
 
 text Help_Text_RidingBicycle {
-    "    Riding the BICYCLE$"
+    "    Riding the Bicycle$"
 }
 
 text Help_Text_EnteringName {
@@ -716,15 +716,15 @@ text Help_Text_UsingBillsPC {
 }
 
 text Help_Text_UsingWithdraw {
-    "  Using “WITHDRAW”$"
+    "  Using “Withdraw”$"
 }
 
 text Help_Text_UsingDeposit {
-    "  Using “DEPOSIT”$"
+    "  Using “Deposit”$"
 }
 
 text Help_Text_UsingMove {
-    "  Using “MOVE”$"
+    "  Using “Move”$"
 }
 
 text Help_Text_MovingItems {
@@ -736,47 +736,47 @@ text Help_Text_UsingPlayersPC {
 }
 
 text Help_Text_UsingWithdrawItem {
-    "  Using “WITHDRAW ITEM”$"
+    "  Using “Withdraw Item”$"
 }
 
 text Help_Text_UsingDepositItem {
-    "  Using “DEPOSIT ITEM”$"
+    "  Using “Deposit Item”$"
 }
 
 text Help_Text_UsingMailbox {
-    "  Using “MAILBOX”$"
+    "  Using “Mailbox”$"
 }
 
 text Help_Text_UsingProfOaksPC {
-    " Using “PROF. OAK'S PC”$"
+    " Using “Prof. Oak's PC”$"
 }
 
 text Help_Text_OpeningMenu {
-    "Opening the MENU$"
+    "Opening the Menu$"
 }
 
 text Help_Text_UsingFight {
-    " Using “FIGHT”$"
+    " Using “Fight”$"
 }
 
 text Help_Text_UsingPokemon2 {
-    " Using “POKéMON”$"
+    " Using “Pokémon”$"
 }
 
 text Help_Text_UsingShift {
-    "  Using “SHIFT”$"
+    "  Using “Shift”$"
 }
 
 text Help_Text_UsingSummary2 {
-    "  Using “SUMMARY”$"
+    "  Using “Summary”$"
 }
 
 text Help_Text_UsingBag2 {
-    " Using “BAG”$"
+    " Using “Bag”$"
 }
 
 text Help_Text_ReadingPokedex {
-    " Reading the “POKéDEX”$"
+    " Reading the “Pokédex”$"
 }
 
 text Help_Text_UsingHomePC {
@@ -788,136 +788,136 @@ text Help_Text_UsingItemStorage {
 }
 
 text Help_Text_UsingWithdrawItem2 {
-    "  Using “WITHDRAW ITEM”$"
+    "  Using “Withdraw Item”$"
 }
 
 text Help_Text_UsingDepositItem2 {
-    "  Using “DEPOSIT ITEM”$"
+    "  Using “Deposit Item”$"
 }
 
 text Help_Text_UsingMailbox2 {
-    "Using the MAILBOX$"
+    "Using the Mailbox$"
 }
 
 text Help_Text_UsingRun {
-    " Using “RUN”$"
+    " Using “Run”$"
 }
 
 text Help_Text_RegisterKeyItem {
-    "  “REGISTER” a key item$"
+    "  “Register” a key item$"
 }
 
 text Help_Text_UsingBall {
-    " Using “BALL”$"
+    " Using “Ball”$"
 }
 
 text Help_Text_UsingBait {
-    " Using “BAIT”$"
+    " Using “Bait”$"
 }
 
 text Help_Text_UsingRock {
-    " Using “ROCK”$"
+    " Using “Rock”$"
 }
 
 text Help_Text_UsingHallOfFame {
-    " Using “HALL OF FAME”$"
+    " Using “Hall of Fame”$"
 }
 
 text Help_Text_HowToUsePokedex {
-    "{CIRCLE_1} Select “POKéDEX” on the MENU.\n"
-    "{CIRCLE_2} Choose POKéMON using commands such\n"
-    "   as “POKéMON LIST,”\n"
-    "   “HABITATS OF POKéMON,” and\n"
-    "   “SEARCH.”\n"
-    "{CIRCLE_3} Select a POKéMON to obtain detailed\n"
+    "{CIRCLE_1} Select “Pokédex” on the Menu.\n"
+    "{CIRCLE_2} Choose Pokémon using commands such\n"
+    "   as “Pokémon List,”\n"
+    "   “Habitats of Pokémon,” and\n"
+    "   “Search.”\n"
+    "{CIRCLE_3} Select a Pokémon to obtain detailed\n"
     "   information.$"
 }
 
 text Help_Text_HowToUsePokemon {
-    "{CIRCLE_1} Select “POKéMON” on the MENU.\n"
-    "{CIRCLE_2} Choose a POKéMON in your party.\n"
-    "{CIRCLE_3} Select “SUMMARY,” “SWITCH,”\n"
-    "   or “ITEM.”$"
+    "{CIRCLE_1} Select “Pokémon” on the Menu.\n"
+    "{CIRCLE_2} Choose a Pokémon in your party.\n"
+    "{CIRCLE_3} Select “Summary,” “Switch,”\n"
+    "   or “Item.”$"
 }
 
 text Help_Text_HowToUseSummary {
-    "{CIRCLE_1} Select “SUMMARY.”\n"
+    "{CIRCLE_1} Select “Summary.”\n"
     "{CIRCLE_2} Press left or right on the {PLUS} Control\n"
     "   Pad to check the information:\n"
-    "   “POKéMON INFO”\n"
-    "   “POKéMON SKILLS”\n"
-    "   “KNOWN MOVES”$"
+    "   “Pokémon Info”\n"
+    "   “Pokémon Skills”\n"
+    "   “Known Moves”$"
 }
 
 text Help_Text_HowToUseSwitch {
-    "{CIRCLE_1} Choose the POKéMON you want to\n"
+    "{CIRCLE_1} Choose the Pokémon you want to\n"
     "   switch around.\n"
-    "{CIRCLE_2} Select “SWITCH.”\n"
-    "{CIRCLE_3} Select the POKéMON to switch with\n"
+    "{CIRCLE_2} Select “Switch.”\n"
+    "{CIRCLE_3} Select the Pokémon to switch with\n"
     "   the first one.\n"
-    "The POKéMON at the left of the screen\n"
+    "The Pokémon at the left of the screen\n"
     "will be the first one out in a battle.$"
 }
 
 text Help_Text_HowToUseItem {
-    "{CIRCLE_1} Select “ITEM.”\n"
-    "{CIRCLE_2} Select whether you want to “GIVE”\n"
-    "   an item to the POKéMON to hold,\n"
-    "   or “TAKE” an item it is holding.\n"
-    "A POKéMON can hold no more than one\n"
+    "{CIRCLE_1} Select “Item.”\n"
+    "{CIRCLE_2} Select whether you want to “Give”\n"
+    "   an item to the Pokémon to hold,\n"
+    "   or “Take” an item it is holding.\n"
+    "A Pokémon can hold no more than one\n"
     "item!$"
 }
 
 text Help_Text_HowToUseBag {
-    "{CIRCLE_1} Select “BAG” on the MENU.\n"
+    "{CIRCLE_1} Select “Bag” on the Menu.\n"
     "{CIRCLE_2} Press left or right on the {PLUS} Control\n"
     "   Pad to check the data headings:\n"
-    "   “ITEMS”\n"
-    "   “KEY ITEMS”\n"
-    "   “POKé BALLS”\n"
+    "   “Items”\n"
+    "   “Key Items”\n"
+    "   “Poké Balls”\n"
     "   Press up or down to select an item.$"
 }
 
 text Help_Text_HowToUseAnItem {
-    "{CIRCLE_1} Select the “ITEMS” POCKET.\n"
+    "{CIRCLE_1} Select the “Items” Pocket.\n"
     "{CIRCLE_2} Press up or down on the {PLUS} Control\n"
     "   Pad to select an item.\n"
-    "{CIRCLE_3} Select “USE” to use the selected\n"
+    "{CIRCLE_3} Select “Use” to use the selected\n"
     "   item.\n"
     "Some items may not be used depending\n"
     "on the place and/or situation.$"
 }
 
 text Help_Text_HowToUseKeyItem {
-    "{CIRCLE_1} Select the “KEY ITEMS” POCKET.\n"
+    "{CIRCLE_1} Select the “Key Items” Pocket.\n"
     "{CIRCLE_2} Press up or down on the {PLUS} Control\n"
     "   Pad to select a key item.\n"
-    "{CIRCLE_3} Select “USE” to use the selected\n"
+    "{CIRCLE_3} Select “Use” to use the selected\n"
     "   key item.$"
 }
 
 text Help_Text_HowToUsePokeBall {
-    "{CIRCLE_1} While battling a wild POKéMON,\n"
-    "   select the BAG's “POKé BALLS”\n"
-    "   POCKET.\n"
+    "{CIRCLE_1} While battling a wild Pokémon,\n"
+    "   select the Bag's “Poké Balls”\n"
+    "   Pocket.\n"
     "{CIRCLE_2} Press up or down on the {PLUS} Control\n"
-    "   Pad to select a POKé BALL.\n"
-    "{CIRCLE_3} Select “USE” to throw the selected\n"
-    "   POKé BALL.$"
+    "   Pad to select a Poké Ball.\n"
+    "{CIRCLE_3} Select “Use” to throw the selected\n"
+    "   Poké Ball.$"
 }
 
 text Help_Text_HowToUsePlayer {
-    "{CIRCLE_1} Select “{PLAYER}” on the MENU.\n"
-    "{CIRCLE_2} Your TRAINER CARD is displayed face\n"
+    "{CIRCLE_1} Select “{PLAYER}” on the Menu.\n"
+    "{CIRCLE_2} Your Trainer Card is displayed face\n"
     "   up with basic information. Press the\n"
-    "   A Button to turn the CARD over.\n"
+    "   A Button to turn the Card over.\n"
     "{CIRCLE_3} A variety of data can be found on\n"
-    "   the reverse side of the CARD.$"
+    "   the reverse side of the Card.$"
 }
 
 text Help_Text_HowToUseSave {
-    "{CIRCLE_1} Select “SAVE” on the MENU.\n"
-    "{CIRCLE_2} Select “YES” and your progress is\n"
+    "{CIRCLE_1} Select “Save” on the Menu.\n"
+    "{CIRCLE_2} Select “Yes” and your progress is\n"
     "   recorded in the save file.\n"
     "Once the game is saved, you may turn\n"
     "off the game. Your game can be resumed\n"
@@ -925,59 +925,59 @@ text Help_Text_HowToUseSave {
 }
 
 text Help_Text_HowToUseOption {
-    "{CIRCLE_1} Select “OPTION” on the MENU.\n"
+    "{CIRCLE_1} Select “Option” on the Menu.\n"
     "{CIRCLE_2} Press up or down on the {PLUS} Control\n"
     "   Pad to select an optional item, then\n"
     "   press left or right to alter the\n"
     "   settings.\n"
-    "{CIRCLE_3} Select “CANCEL” or press the\n"
+    "{CIRCLE_3} Select “Cancel” or press the\n"
     "   B Button after making changes.$"
 }
 
 text Help_Text_HowToUsePotion {
-    "{CIRCLE_1} Open the MENU.\n"
+    "{CIRCLE_1} Open the Menu.\n"
     "{CIRCLE_2} Press up or down on the {PLUS} Control\n"
-    "   Pad and select “BAG.”\n"
-    "{CIRCLE_3} Select “POTION” in the “ITEMS”\n"
-    "   POCKET.\n"
-    "{CIRCLE_4} Select “USE.”\n"
-    "{CIRCLE_5} Select the POKéMON to be healed.$"
+    "   Pad and select “Bag.”\n"
+    "{CIRCLE_3} Select “Potion” in the “Items”\n"
+    "   Pocket.\n"
+    "{CIRCLE_4} Select “Use.”\n"
+    "{CIRCLE_5} Select the Pokémon to be healed.$"
 }
 
 text Help_Text_HowToUseTownMap {
-    "{CIRCLE_1} Open the MENU.\n"
+    "{CIRCLE_1} Open the Menu.\n"
     "{CIRCLE_2} Press up or down on the {PLUS} Control\n"
-    "   Pad and select “BAG.”\n"
+    "   Pad and select “Bag.”\n"
     "{CIRCLE_3} Press left or right to open the\n"
-    "   “KEY ITEMS” POCKET, then press\n"
-    "   up or down to select “TOWN MAP.” \n"
-    "{CIRCLE_4} Select “USE” to open the TOWN MAP.$"
+    "   “Key Items” Pocket, then press\n"
+    "   up or down to select “Town Map.” \n"
+    "{CIRCLE_4} Select “Use” to open the Town Map.$"
 }
 
 text Help_Text_HowToUseTM {
-    "{CIRCLE_1} Open the MENU.\n"
-    "{CIRCLE_2} Open the “KEY ITEMS” POCKET in the\n"
-    "   “BAG.”\n"
-    "{CIRCLE_3} “OPEN” the TM CASE.\n"
-    "{CIRCLE_4} Select and “USE” a TM.\n"
-    "{CIRCLE_5} Select a POKéMON that can learn the\n"
+    "{CIRCLE_1} Open the Menu.\n"
+    "{CIRCLE_2} Open the “Key Items” Pocket in the\n"
+    "   “Bag.”\n"
+    "{CIRCLE_3} “Open” the TM Case.\n"
+    "{CIRCLE_4} Select and “Use” a TM.\n"
+    "{CIRCLE_5} Select a Pokémon that can learn the\n"
     "   move in the TM.$"
 }
 
 text Help_Text_HowToUseHM {
-    "{CIRCLE_1} Open the MENU.\n"
-    "{CIRCLE_2} Open the “KEY ITEMS” POCKET in the\n"
-    "   “BAG.”\n"
-    "{CIRCLE_3} “OPEN” the TM CASE.\n"
-    "{CIRCLE_4} Select and “USE” an HM.\n"
-    "{CIRCLE_5} Select a POKéMON that can learn it.\n"
+    "{CIRCLE_1} Open the Menu.\n"
+    "{CIRCLE_2} Open the “Key Items” Pocket in the\n"
+    "   “Bag.”\n"
+    "{CIRCLE_3} “Open” the TM Case.\n"
+    "{CIRCLE_4} Select and “Use” an HM.\n"
+    "{CIRCLE_5} Select a Pokémon that can learn it.\n"
     "HMs are hard to remove, so be careful!$"
 }
 
 text Help_Text_HowToUseMoveOutsideOfBattle {
-    "{CIRCLE_1} Open the MENU.\n"
-    "{CIRCLE_2} Select “POKéMON.”\n"
-    "{CIRCLE_3} Select a POKéMON that knows an\n"
+    "{CIRCLE_1} Open the Menu.\n"
+    "{CIRCLE_2} Select “Pokémon.”\n"
+    "{CIRCLE_3} Select a Pokémon that knows an\n"
     "   HM move. The usable HM move(s)\n"
     "   will be shown in blue. Select and\n"
     "   use the desired move to destroy an\n"
@@ -985,13 +985,13 @@ text Help_Text_HowToUseMoveOutsideOfBattle {
 }
 
 text Help_Text_HowToRideBicycle {
-    "{CIRCLE_1} Open the MENU. Open the\n"
-    "   “KEY ITEMS” POCKET in the “BAG”\n"
-    "   and select the “BICYCLE.”\n"
-    "{CIRCLE_2} The BICYCLE can be ridden by\n"
-    "   selecting “USE.” You may also\n"
-    "   “REGISTER” it for instant use by\n"
-    "   pressing SELECT.$"
+    "{CIRCLE_1} Open the Menu. Open the\n"
+    "   “Key Items” Pocket in the “Bag”\n"
+    "   and select the “Bicycle.”\n"
+    "{CIRCLE_2} The Bicycle can be ridden by\n"
+    "   selecting “Use.” You may also\n"
+    "   “Register” it for instant use by\n"
+    "   pressing Select.$"
 }
 
 text Help_Text_HowToEnterName {
@@ -999,87 +999,87 @@ text Help_Text_HowToEnterName {
     "   want with the {PLUS} Control Pad, then\n"
     "   press the A Button to enter it.\n"
     "{CIRCLE_2} Press the B Button to back up.\n"
-    "{CIRCLE_3} Press SELECT to switch between\n"
+    "{CIRCLE_3} Press Select to switch between\n"
     "   uppercase and lowercase letters.\n"
     "{CIRCLE_4} Press the A Button on “OK.”$"
 }
 
 text Help_Text_HowToUsePC {
-    "{CIRCLE_1} Go to any POKéMON CENTER, go up\n"
+    "{CIRCLE_1} Go to any Pokémon Center, go up\n"
     "   to the PC, then press the A Button.$"
 }
 
 text Help_Text_HowToUseBillsPC {
     "{CIRCLE_1} Select “{STR_VAR_1}'S PC” on the PC.\n"
     "{CIRCLE_2} Select from one of the top three\n"
-    "   MENU items to access the POKéMON\n"
+    "   Menu items to access the Pokémon\n"
     "   Storage System.\n"
-    "If you catch a POKéMON when you have\n"
-    "six in your party, the POKéMON is sent\n"
-    "automatically to a BOX in the System!$"
+    "If you catch a Pokémon when you have\n"
+    "six in your party, the Pokémon is sent\n"
+    "automatically to a Box in the System!$"
 }
 
 text Help_Text_HowToUseWithdraw {
-    "{CIRCLE_1} Select a POKéMON in the open BOX\n"
+    "{CIRCLE_1} Select a Pokémon in the open Box\n"
     "   with the {PLUS} Control Pad.\n"
-    "{CIRCLE_2} Select “WITHDRAW” to remove the\n"
-    "   POKéMON from the BOX and add it to\n"
+    "{CIRCLE_2} Select “Withdraw” to remove the\n"
+    "   Pokémon from the Box and add it to\n"
     "   your party.\n"
-    "You may not withdraw a POKéMON if you\n"
-    "already have six POKéMON with you!$"
+    "You may not withdraw a Pokémon if you\n"
+    "already have six Pokémon with you!$"
 }
 
 text Help_Text_HowToUseDeposit {
-    "{CIRCLE_1} Select a POKéMON in your party with\n"
+    "{CIRCLE_1} Select a Pokémon in your party with\n"
     "   the {PLUS} Control Pad.\n"
-    "{CIRCLE_2} Select “DEPOSIT.”\n"
-    "{CIRCLE_3} Select the BOX, then press the\n"
-    "   A Button to store the POKéMON.\n"
-    "If you have only one POKéMON with you,\n"
+    "{CIRCLE_2} Select “Deposit.”\n"
+    "{CIRCLE_3} Select the Box, then press the\n"
+    "   A Button to store the Pokémon.\n"
+    "If you have only one Pokémon with you,\n"
     "it may not be stored!$"
 }
 
 text Help_Text_HowToUseMove {
-    "{CIRCLE_1} Select a POKéMON in the open BOX.\n"
-    "{CIRCLE_2} Pick up the POKéMON by selecting\n"
-    "   “MOVE” and move it anywhere with\n"
+    "{CIRCLE_1} Select a Pokémon in the open Box.\n"
+    "{CIRCLE_2} Pick up the Pokémon by selecting\n"
+    "   “Move” and move it anywhere with\n"
     "   the {PLUS} Control Pad.\n"
-    "{CIRCLE_3} Move the POKéMON to the BOX name\n"
+    "{CIRCLE_3} Move the Pokémon to the Box name\n"
     "   and press left or right to move it\n"
-    "   to another BOX.$"
+    "   to another Box.$"
 }
 
 text Help_Text_HowToMoveItems {
-    "{CIRCLE_1} Faintly shown POKéMON can be made\n"
+    "{CIRCLE_1} Faintly shown Pokémon can be made\n"
     "   to hold an item by selecting it and\n"
     "   pressing the A Button.\n"
-    "{CIRCLE_2} Clearly shown POKéMON can be made\n"
+    "{CIRCLE_2} Clearly shown Pokémon can be made\n"
     "   to give the item they are holding to\n"
-    "   another POKéMON, or return the item\n"
-    "   to the BAG with the A Button.$"
+    "   another Pokémon, or return the item\n"
+    "   to the Bag with the A Button.$"
 }
 
 text Help_Text_HowToUsePlayersPC {
     "{CIRCLE_1} Select “{PLAYER}'s PC” on the PC.\n"
-    "{CIRCLE_2} Select either “ITEM STORAGE” or\n"
-    "   “MAILBOX.”\n"
+    "{CIRCLE_2} Select either “Item Storage” or\n"
+    "   “Mailbox.”\n"
     "You may store things in your own PC\n"
-    "if your BAG is full. You may also\n"
+    "if your Bag is full. You may also\n"
     "withdraw items stored in your PC.$"
 }
 
 text Help_Text_HowToUseWithdrawItem {
-    "{CIRCLE_1} Select “WITHDRAW ITEM.”\n"
+    "{CIRCLE_1} Select “Withdraw Item.”\n"
     "{CIRCLE_2} Select the item to be withdrawn.\n"
     "{CIRCLE_3} The item can be withdrawn and\n"
-    "   placed in the BAG's ITEMS POCKET.\n"
+    "   placed in the Bag's Items Pocket.\n"
     "   It may also be directly given to a\n"
-    "   POKéMON to hold.$"
+    "   Pokémon to hold.$"
 }
 
 text Help_Text_HowToUseDepositItem {
-    "{CIRCLE_1} Select “DEPOSIT ITEM.”\n"
-    "{CIRCLE_2} Select the item in the BAG to be\n"
+    "{CIRCLE_1} Select “Deposit Item.”\n"
+    "{CIRCLE_2} Select the item in the Bag to be\n"
     "   deposited using the {PLUS} Control Pad.\n"
     "{CIRCLE_3} If there is more than one \n"
     "   item to be deposited, enter the\n"
@@ -1088,176 +1088,176 @@ text Help_Text_HowToUseDepositItem {
 }
 
 text Help_Text_HowToUseMailbox {
-    "When MAIL is taken from a POKéMON,\n"
-    "it is moved to the MAILBOX. If it has\n"
-    "no MAIL, the MAILBOX can't be used.\n"
+    "When Mail is taken from a Pokémon,\n"
+    "it is moved to the Mailbox. If it has\n"
+    "no Mail, the Mailbox can't be used.\n"
     "{CIRCLE_1} Select “{PLAYER}'S PC” on the PC.\n"
-    "{CIRCLE_2} Select “MAILBOX” to read MAIL or\n"
-    "   make a POKéMON hold MAIL.$"
+    "{CIRCLE_2} Select “Mailbox” to read Mail or\n"
+    "   make a Pokémon hold Mail.$"
 }
 
 text Help_Text_HowToUseProfOaksPC {
-    "{CIRCLE_1} Select “PROF. OAK'S PC” on the PC.\n"
-    "{CIRCLE_2} PROF. OAK will evaluate your\n"
-    "   POKéDEX.\n"
+    "{CIRCLE_1} Select “Prof. Oak's PC” on the PC.\n"
+    "{CIRCLE_2} Prof. Oak will evaluate your\n"
+    "   Pokédex.\n"
     "His evaluations should give you hints\n"
-    "for catching more POKéMON!$"
+    "for catching more Pokémon!$"
 }
 
 text Help_Text_HowToOpenMenu {
-    "{CIRCLE_1} Press START.\n"
-    "{CIRCLE_2} The MENU will open on the right.\n"
-    "{CIRCLE_3} Depending on the situation, the MENU\n"
+    "{CIRCLE_1} Press Start.\n"
+    "{CIRCLE_2} The Menu will open on the right.\n"
+    "{CIRCLE_3} Depending on the situation, the Menu\n"
     "   may feature different headings.\n"
-    "The MENU will not open in certain\n"
+    "The Menu will not open in certain\n"
     "situations such as when talking, doing\n"
     "something, battling, etc.$"
 }
 
 text Help_Text_HowToUseFight {
-    "{CIRCLE_1} Select “FIGHT.”\n"
+    "{CIRCLE_1} Select “Fight.”\n"
     "{CIRCLE_2} Select one of the moves shown,\n"
     "and that move will be used!$"
 }
 
 text Help_Text_HowToUsePokemon2 {
-    "{CIRCLE_1} Select “POKéMON.”\n"
-    "{CIRCLE_2} Select the POKéMON in your party\n"
+    "{CIRCLE_1} Select “Pokémon.”\n"
+    "{CIRCLE_2} Select the Pokémon in your party\n"
     "   that you want to use.\n"
-    "{CIRCLE_3} If you have two or more POKéMON\n"
+    "{CIRCLE_3} If you have two or more Pokémon\n"
     "   with you, they may be switched by\n"
-    "   selecting “SHIFT.” Check POKéMON\n"
-    "   data by selecting “SUMMARY.”$"
+    "   selecting “Shift.” Check Pokémon\n"
+    "   data by selecting “Summary.”$"
 }
 
 text Help_Text_HowToUseShift {
-    "This command switches the POKéMON in\n"
+    "This command switches the Pokémon in\n"
     "battle with another one in your party.\n"
-    "{CIRCLE_1} Select the POKéMON to be sent out.\n"
-    "{CIRCLE_2} Select “SHIFT.”\n"
-    "{CIRCLE_3} The selected POKéMON will switch\n"
-    "   places with the POKéMON in battle!$"
+    "{CIRCLE_1} Select the Pokémon to be sent out.\n"
+    "{CIRCLE_2} Select “Shift.”\n"
+    "{CIRCLE_3} The selected Pokémon will switch\n"
+    "   places with the Pokémon in battle!$"
 }
 
 text Help_Text_HowToUseSummary2 {
-    "{CIRCLE_1} Select “SUMMARY.”\n"
+    "{CIRCLE_1} Select “Summary.”\n"
     "{CIRCLE_2} Press left or right on the {PLUS} Control\n"
     "   Pad to check the information:\n"
-    "   “POKéMON INFO”\n"
-    "   “POKéMON SKILLS”\n"
-    "   “KNOWN MOVES”$"
+    "   “Pokémon Info”\n"
+    "   “Pokémon Skills”\n"
+    "   “Known Moves”$"
 }
 
 text Help_Text_HowToUseBag2 {
-    "{CIRCLE_1} Select “BAG.”\n"
+    "{CIRCLE_1} Select “Bag.”\n"
     "{CIRCLE_2} Press left or right on the {PLUS} Control\n"
     "   Pad to check the data headings:\n"
-    "   “ITEMS”\n"
-    "   “KEY ITEMS”\n"
-    "   “POKé BALLS”\n"
+    "   “Items”\n"
+    "   “Key Items”\n"
+    "   “Poké Balls”\n"
     "   Press up or down to select an item.$"
 }
 
 raw `
 
 Help_Text_HowToReadPokedex::
-	.string "{CIRCLE_1} POKéMON that you have caught are\n"
-	.string "   identified by a POKé BALL mark on\n"
-	.string "   the POKéDEX list.\n"
-	.string "{CIRCLE_2} A caught POKéMON will provide a\n"
+	.string "{CIRCLE_1} Pokémon that you have caught are\n"
+	.string "   identified by a Poké Ball mark on\n"
+	.string "   the Pokédex list.\n"
+	.string "{CIRCLE_2} A caught Pokémon will provide a\n"
 	.string "   large amount of data.\n"
 	.if REVISION < 1
-	.string "{CIRCLE_3} Select “AREA” to display the TOWN\n"
-	.string "   MAP with the POKéMON's habitat(s).$"
+	.string "{CIRCLE_3} Select “Area” to display the Town\n"
+	.string "   Map with the Pokémon's habitat(s).$"
 	.else
-	.string "{CIRCLE_3} Select “NEXT DATA” to display the\n"
-	.string "   TOWN MAP with its habitat(s).$"
+	.string "{CIRCLE_3} Select “Next Data” to display the\n"
+	.string "   Town Map with its habitat(s).$"
 	.endif
 
 Help_Text_HowToUseHomePC::
 	.string "{CIRCLE_1} Go up to the PC at home, then press\n"
 	.string "   the A Button.\n"
 	.string "{CIRCLE_2} The PC will turn on.\n"
-	.string "{CIRCLE_3} Select either “ITEM STORAGE” or\n"
-	.string "   “MAILBOX.”$"
+	.string "{CIRCLE_3} Select either “Item Storage” or\n"
+	.string "   “Mailbox.”$"
 `
 
 text Help_Text_HowToUseItemStorage {
-    "{CIRCLE_1} Select “WITHDRAW ITEM” to withdraw\n"
+    "{CIRCLE_1} Select “Withdraw Item” to withdraw\n"
     "   an item stored on your PC.\n"
-    "{CIRCLE_2} Select “DEPOSIT ITEM” to put \n"
-    "   an item from your BAG into your PC.$"
+    "{CIRCLE_2} Select “Deposit Item” to put \n"
+    "   an item from your Bag into your PC.$"
 }
 
 text Help_Text_HowToUseWithdrawItem2 {
-    "{CIRCLE_1} Select “WITHDRAW ITEM.”\n"
+    "{CIRCLE_1} Select “Withdraw Item.”\n"
     "{CIRCLE_2} Select the item to be withdrawn.\n"
     "{CIRCLE_3} The item can be withdrawn and\n"
-    "   placed in the BAG's ITEMS POCKET.\n"
+    "   placed in the Bag's Items Pocket.\n"
     "   It may also be directly given to a\n"
-    "   POKéMON to hold.$"
+    "   Pokémon to hold.$"
 }
 
 text Help_Text_HowToUseDepositItem2 {
-    "{CIRCLE_1} Select “DEPOSIT ITEM.”\n"
-    "{CIRCLE_2} Select the item in the BAG to be\n"
+    "{CIRCLE_1} Select “Deposit Item.”\n"
+    "{CIRCLE_2} Select the item in the Bag to be\n"
     "   deposited using the {PLUS} Control Pad.\n"
-    "{CIRCLE_3} If there is nothing in the BAG, this\n"
+    "{CIRCLE_3} If there is nothing in the Bag, this\n"
     "   command can't be used!$"
 }
 
 text Help_Text_HowToUseMailbox2 {
-    "When MAIL is taken from a POKéMON,\n"
-    "it is moved to the MAILBOX. If it has\n"
-    "no MAIL, the MAILBOX can't be used.\n"
-    "{CIRCLE_1} Select MAIL by name to read it or\n"
-    "   make a POKéMON hold it.$"
+    "When Mail is taken from a Pokémon,\n"
+    "it is moved to the Mailbox. If it has\n"
+    "no Mail, the Mailbox can't be used.\n"
+    "{CIRCLE_1} Select Mail by name to read it or\n"
+    "   make a Pokémon hold it.$"
 }
 
 text Help_Text_HowToUseRun {
-    "You may not “RUN” from a TRAINER\n"
+    "You may not “Run” from a Trainer\n"
     "battle!\n"
-    "{CIRCLE_1} You may “RUN” from a wild POKéMON.\n"
+    "{CIRCLE_1} You may “Run” from a wild Pokémon.\n"
     "{CIRCLE_2} Your chance of escape is improved\n"
-    "   if your POKéMON in battle is fast.$"
+    "   if your Pokémon in battle is fast.$"
 }
 
 text Help_Text_HowToRegisterKeyItem {
-    "You may “REGISTER” a key item for\n"
-    "instant use by pressing SELECT!\n"
-    "{CIRCLE_1} Open the “KEY ITEMS” POCKET.\n"
+    "You may “Register” a key item for\n"
+    "instant use by pressing Select!\n"
+    "{CIRCLE_1} Open the “Key Items” Pocket.\n"
     "{CIRCLE_2} Select the key item, then select\n"
-    "   “REGISTER.”$"
+    "   “Register.”$"
 }
 
 text Help_Text_HowToUseBall {
-    "{CIRCLE_1} Select to throw the special POKé\n"
-    "   BALL used only in the SAFARI ZONE.\n"
-    "When wild POKéMON appear, throw lots\n"
-    "of SAFARI BALLS to catch them!$"
+    "{CIRCLE_1} Select to throw the special Poké\n"
+    "   Ball used only in the Safari Zone.\n"
+    "When wild Pokémon appear, throw lots\n"
+    "of Safari Balls to catch them!$"
 }
 
 text Help_Text_HowToUseBait {
     "{CIRCLE_1} Select to throw the special food\n"
-    "   used only in the SAFARI ZONE.\n"
-    "It is POKéMON food rolled up into\n"
-    "a ball for easy eating. When BAIT is\n"
-    "thrown, the wild POKéMON may get\n"
+    "   used only in the Safari Zone.\n"
+    "It is Pokémon food rolled up into\n"
+    "a ball for easy eating. When Bait is\n"
+    "thrown, the wild Pokémon may get\n"
     "attracted by it, and may not flee!$"
 }
 
 text Help_Text_HowToUseRock {
     "{CIRCLE_1} Select to throw a rock lying on\n"
-    "   the ground in the SAFARI ZONE.\n"
-    "Throwing a rock at a POKéMON may \n"
+    "   the ground in the Safari Zone.\n"
+    "Throwing a rock at a Pokémon may \n"
     "make it run away, but it becomes easier\n"
     "to catch!$"
 }
 
 text Help_Text_HowToUseHallOfFame {
-    "{CIRCLE_1} Select “HALL OF FAME” on the PC.\n"
-    "{CIRCLE_2} The POKéMON that have entered the\n"
-    "   HALL OF FAME can be examined.$"
+    "{CIRCLE_1} Select “Hall of Fame” on the PC.\n"
+    "{CIRCLE_2} The Pokémon that have entered the\n"
+    "   Hall of Fame can be examined.$"
 }
 
 text Help_Text_HP {
@@ -1269,27 +1269,27 @@ text Help_Text_EXP {
 }
 
 text Help_Text_Moves {
-    "MOVES$"
+    "Moves$"
 }
 
 text Help_Text_Attack {
-    "ATTACK$"
+    "Attack$"
 }
 
 text Help_Text_Defense {
-    "DEFENSE$"
+    "Defense$"
 }
 
 text Help_Text_SpAtk {
-    "SP. ATK$"
+    "Sp. Atk$"
 }
 
 text Help_Text_SpDef {
-    "SP. DEF$"
+    "Sp. Def$"
 }
 
 text Help_Text_Speed {
-    "SPEED$"
+    "Speed$"
 }
 
 text Help_Text_Level {
@@ -1297,7 +1297,7 @@ text Help_Text_Level {
 }
 
 text Help_Text_Type {
-    "TYPE$"
+    "Type$"
 }
 
 text Help_Text_OT {
@@ -1305,23 +1305,23 @@ text Help_Text_OT {
 }
 
 text Help_Text_Item {
-    "ITEM$"
+    "Item$"
 }
 
 text Help_Text_Ability {
-    "ABILITY$"
+    "Ability$"
 }
 
 text Help_Text_Money {
-    "MONEY$"
+    "Money$"
 }
 
 text Help_Text_MoveType {
-    "MOVE TYPE$"
+    "Move Type$"
 }
 
 text Help_Text_Nature {
-    "NATURE$"
+    "Nature$"
 }
 
 text Help_Text_IDNo {
@@ -1333,67 +1333,67 @@ text Help_Text_PP {
 }
 
 text Help_Text_Power {
-    "POWER$"
+    "Power$"
 }
 
 text Help_Text_Accuracy {
-    "ACCURACY$"
+    "Accuracy$"
 }
 
 text Help_Text_FNT {
-    "FNT$"
+    "Fnt$"
 }
 
 text Help_Text_Items {
-    "ITEMS$"
+    "Items$"
 }
 
 text Help_Text_KeyItems {
-    "KEY ITEMS$"
+    "Key Items$"
 }
 
 text Help_Text_PokeBalls {
-    "POKé BALLS$"
+    "Poké Balls$"
 }
 
 text Help_Text_Pokedex {
-    "POKéDEX$"
+    "Pokédex$"
 }
 
 text Help_Text_PlayTime {
-    "PLAY TIME$"
+    "Play Time$"
 }
 
 text Help_Text_Badges {
-    "BADGES$"
+    "Badges$"
 }
 
 text Help_Text_TextSpeed {
-    "TEXT SPEED$"
+    "Text Speed$"
 }
 
 text Help_Text_BattleScene {
-    "BATTLE SCENE$"
+    "Battle Scene$"
 }
 
 text Help_Text_BattleStyle {
-    "BATTLE STYLE$"
+    "Battle Style$"
 }
 
 text Help_Text_Sound {
-    "SOUND$"
+    "Sound$"
 }
 
 text Help_Text_ButtonMode {
-    "BUTTON MODE$"
+    "Button Mode$"
 }
 
 text Help_Text_Frame {
-    "FRAME$"
+    "Frame$"
 }
 
 text Help_Text_Cancel2 {
-    "CANCEL$"
+    "Cancel$"
 }
 
 text Help_Text_TM {
@@ -1405,19 +1405,19 @@ text Help_Text_HM {
 }
 
 text Help_Text_HMMove {
-    "HM MOVE$"
+    "HM Move$"
 }
 
 text Help_Text_Evolution {
-    "EVOLUTION$"
+    "Evolution$"
 }
 
 text Help_Text_StatusProblem {
-    "STATUS PROBLEM$"
+    "Status Problem$"
 }
 
 text Help_Text_Pokemon {
-    "POKéMON$"
+    "Pokémon$"
 }
 
 text Help_Text_IDNo2 {
@@ -1425,124 +1425,124 @@ text Help_Text_IDNo2 {
 }
 
 text Help_Text_Money2 {
-    "MONEY$"
+    "Money$"
 }
 
 text Help_Text_Badges2 {
-    "BADGES$"
+    "Badges$"
 }
 
 text Help_Text_DefineHP {
-    "HP indicates a POKéMON's vitality.\n"
-    "If a POKéMON's HP drops to zero, it\l"
+    "HP indicates a Pokémon's vitality.\n"
+    "If a Pokémon's HP drops to zero, it\l"
     "faints and is unable to battle.\l"
     "So, the key in battle is to try to\l"
     "reduce the foe's HP to zero.\l"
-    "If your POKéMON are hurt, restore their\l"
-    "HP at a POKéMON CENTER or use items.$"
+    "If your Pokémon are hurt, restore their\l"
+    "HP at a Pokémon Center or use items.$"
 }
 
 text Help_Text_DefineEXP {
     "EXP. Points stands for “Experience\n"
-    "Points.” POKéMON gain EXP. Points by\l"
+    "Points.” Pokémon gain EXP. Points by\l"
     "participating in winning battles.\l"
-    "When a POKéMON accumulates sufficient\l"
+    "When a Pokémon accumulates sufficient\l"
     "EXP. Points, it levels up. The EXP. Bar\l"
     "indicates accumulated EXP. Points.\l"
     "It returns to zero upon leveling up.$"
 }
 
 text Help_Text_DefineMoves {
-    "POKéMON may learn up to four different\n"
+    "Pokémon may learn up to four different\n"
     "moves. There are many kinds of moves\l"
     "including attacks and those with\l"
     "special effects. The kinds of moves\l"
     "that can be learned vary for each\l"
-    "POKéMON. Some moves can be learned\l"
+    "Pokémon. Some moves can be learned\l"
     "from items.$"
 }
 
 text Help_Text_DefineAttack {
-    "ATTACK indicates the power of an\n"
+    "Attack indicates the power of an\n"
     "offensive move. The higher this stat,\l"
     "the more powerful the move.\l"
     "It is applied for the following move\l"
-    "types: NORMAL, POISON, GROUND,\l"
-    "FLYING, BUG, FIGHTING, ROCK, GHOST,\l"
-    "and STEEL.$"
+    "types: Normal, Poison, Ground,\l"
+    "Flying, Bug, Fighting, Rock, Ghost,\l"
+    "and Steel.$"
 }
 
 text Help_Text_DefineDefense {
-    "DEFENSE indicates the resistance a\n"
-    "POKéMON has against physical attacks.\l"
+    "Defense indicates the resistance a\n"
+    "Pokémon has against physical attacks.\l"
     "The higher this stat, the less damage\l"
     "sustained from a foe's physical hit.$"
 }
 
 text Help_Text_DefineSpAtk {
-    "SP. ATK (Special Attack) indicates the\n"
+    "Sp. Atk (Special Attack) indicates the\n"
     "power of a special attack move.\l"
     "The higher this stat, the more powerful\l"
     "the special attack move.\l"
     "It is applied for the following move\l"
-    "types: FIRE, WATER, ELECTRIC, GRASS,\l"
-    "ICE, PSYCHIC, DRAGON, and DARK.$"
+    "types: Fire, Water, Electric, Grass,\l"
+    "Ice, Psychic, Dragon, and Dark.$"
 }
 
 text Help_Text_DefineSpDef {
-    "SP. DEF (Special Defense) indicates\n"
-    "the resistance a POKéMON has against\l"
+    "Sp. Def (Special Defense) indicates\n"
+    "the resistance a Pokémon has against\l"
     "special attacks.\l"
     "The higher this stat, the less damage\l"
     "sustained from a foe's special attack.$"
 }
 
 text Help_Text_DefineSpeed {
-    "SPEED indicates the agility of a\n"
-    "POKéMON. If this stat exceeds the foe's\l"
-    "in battle, the POKéMON can make a move\l"
+    "Speed indicates the agility of a\n"
+    "Pokémon. If this stat exceeds the foe's\l"
+    "in battle, the Pokémon can make a move\l"
     "before its slower opponent.$"
 }
 
 text Help_Text_DefineLevel {
     "Lv. (Level) indicates the growth and\n"
-    "strength of a POKéMON.\l"
-    "In general, when a POKéMON levels up,\l"
-    "its stats such as HP, ATTACK, and\l"
-    "DEFENSE rise, making it stronger.\l"
-    "POKéMON may learn a new move upon\l"
+    "strength of a Pokémon.\l"
+    "In general, when a Pokémon levels up,\l"
+    "its stats such as HP, Attack, and\l"
+    "Defense rise, making it stronger.\l"
+    "Pokémon may learn a new move upon\l"
     "leveling up.$"
 }
 
 text Help_Text_DefineType {
-    "POKéMON and moves are classified by\n"
+    "Pokémon and moves are classified by\n"
     "type. Every type has advantageous and\l"
     "disadvantageous matchups against\l"
     "other types. For example, like a rock-\l"
-    "paper-scissors game, the WATER type is\l"
-    "strong against the FIRE type and weak\l"
-    "against the GRASS type.$"
+    "paper-scissors game, the Water type is\l"
+    "strong against the Fire type and weak\l"
+    "against the Grass type.$"
 }
 
 text Help_Text_DefineOT {
-    "OT stands for “Original TRAINER,”\n"
-    "the first TRAINER to have caught the\l"
-    "selected POKéMON.\l"
-    "Even if the POKéMON is traded, the OT\l"
+    "OT stands for “Original Trainer,”\n"
+    "the first Trainer to have caught the\l"
+    "selected Pokémon.\l"
+    "Even if the Pokémon is traded, the OT\l"
     "name will remain unchanged.$"
 }
 
 text Help_Text_DefineItem {
-    "All POKéMON can be made to hold one\n"
+    "All Pokémon can be made to hold one\n"
     "item each. Some items will be used by\l"
-    "the POKéMON automatically in certain\l"
-    "situations. To make a POKéMON hold an\l"
-    "item, select the item from the BAG and\l"
-    "“GIVE” it to the POKéMON.$"
+    "the Pokémon automatically in certain\l"
+    "situations. To make a Pokémon hold an\l"
+    "item, select the item from the Bag and\l"
+    "“Give” it to the Pokémon.$"
 }
 
 text Help_Text_DefineAbility {
-    "All POKéMON have a special ABILITY.\n"
+    "All Pokémon have a special Ability.\n"
     "There are many different kinds of these\l"
     "abilities, some used in battle, some\l"
     "elsewhere. The abilities differ from\l"
@@ -1552,14 +1552,14 @@ text Help_Text_DefineAbility {
 
 text Help_Text_DefineMoney {
     "Whenever you win a battle against a\n"
-    "TRAINER, you are given prize money.\l"
+    "Trainer, you are given prize money.\l"
     "Save up your prize money so you can\l"
-    "enjoy shopping at POKéMON MARTS!$"
+    "enjoy shopping at Pokémon Marts!$"
 }
 
 text Help_Text_DefineMoveType {
     "Moves are also classified by types.\n"
-    "If a POKéMON of a certain type uses\l"
+    "If a Pokémon of a certain type uses\l"
     "a move of the same type, the move's\l"
     "power is boosted. If the move's type\l"
     "has a matchup advantage against the\l"
@@ -1568,20 +1568,20 @@ text Help_Text_DefineMoveType {
 }
 
 text Help_Text_DefineNature {
-    "All POKéMON have a personality,\n"
-    "or “NATURE.” The POKéMON's\l"
+    "All Pokémon have a personality,\n"
+    "or “Nature.” The Pokémon's\l"
     "nature appears to affect how the\l"
-    "POKéMON will grow upon leveling up.$"
+    "Pokémon will grow upon leveling up.$"
 }
 
 text Help_Text_DefineIDNo {
     "The ID No. is a special number assigned\n"
-    "specifically to you as a TRAINER.\l"
+    "specifically to you as a Trainer.\l"
     "Together with the OT name, the ID No.\l"
     "is used to precisely identify the\l"
-    "Original TRAINER.\l"
+    "Original Trainer.\l"
     "The ID No. does not change even if the\l"
-    "POKéMON is traded.$"
+    "Pokémon is traded.$"
 }
 
 text Help_Text_DefinePP {
@@ -1589,66 +1589,66 @@ text Help_Text_DefinePP {
     "It indicates the number of times a\l"
     "certain move can be used in battle.\l"
     "Like HP, PP can be restored by visiting\l"
-    "a POKéMON CENTER or using certain\l"
+    "a Pokémon Center or using certain\l"
     "items.$"
 }
 
 text Help_Text_DefinePower {
-    "POWER indicates the strength of an\n"
+    "Power indicates the strength of an\n"
     "attack. The higher this number, the\l"
     "greater the damage that can be\l"
     "inflicted on the foe!$"
 }
 
 text Help_Text_DefineAccuracy {
-    "ACCURACY indicates the probability of\n"
+    "Accuracy indicates the probability of\n"
     "the move hitting the foe.\l"
     "The higher this number, the more likely\l"
     "the move will strike the target.$"
 }
 
 text Help_Text_DefineFNT {
-    "FNT stands for “fainted.”\n"
-    "A POKéMON faints if its HP is reduced\l"
+    "Fnt stands for “fainted.”\n"
+    "A Pokémon faints if its HP is reduced\l"
     "to zero. It becomes incapable of taking\l"
     "part in battle.\l"
-    "Restore a fainted POKéMON at a POKéMON\l"
-    "CENTER, or use an item.$"
+    "Restore a fainted Pokémon at a Pokémon\l"
+    "Center, or use an item.$"
 }
 
 text Help_Text_DefineItems {
-    "Ordinary items bought at any POKéMON\n"
-    "MART are placed in the ITEMS POCKET.\l"
-    "Items may be used, given to a POKéMON\l"
+    "Ordinary items bought at any Pokémon\n"
+    "Mart are placed in the Items Pocket.\l"
+    "Items may be used, given to a Pokémon\l"
     "to hold, or tossed out as garbage.$"
 }
 
 text Help_Text_DefineKeyItems {
     "Important items that you find or \n"
     "receive from people are placed in the\l"
-    "KEY ITEMS POCKET.\l"
+    "Key Items Pocket.\l"
     "Key items may be used, or registered\l"
-    "for use instantly with SELECT. Once\l"
+    "for use instantly with Select. Once\l"
     "registered, the item can be used\l"
-    "without opening the MENU and BAG.$"
+    "without opening the Menu and Bag.$"
 }
 
 text Help_Text_DefinePokeBalls {
-    "POKé BALLS, which are used for\n"
-    "catching wild POKéMON, are placed in\l"
-    "the POKé BALLS POCKET.\l"
-    "POKé BALLS may be bought at POKéMON\l"
-    "MARTS. They may be used, given to a\l"
-    "POKéMON to hold, or tossed out as\l"
+    "Poké Balls, which are used for\n"
+    "catching wild Pokémon, are placed in\l"
+    "the Poké Balls Pocket.\l"
+    "Poké Balls may be bought at Pokémon\l"
+    "Marts. They may be used, given to a\l"
+    "Pokémon to hold, or tossed out as\l"
     "garbage.$"
 }
 
 text Help_Text_DefinePokedex {
     "This indicates the number of species of\n"
-    "POKéMON you have caught and/or\l"
-    "evolved to fill the POKéDEX.\l"
+    "Pokémon you have caught and/or\l"
+    "evolved to fill the Pokédex.\l"
     "Try hard to catch all sorts of\l"
-    "POKéMON!$"
+    "Pokémon!$"
 }
 
 text Help_Text_DefinePlayTime {
@@ -1657,42 +1657,42 @@ text Help_Text_DefinePlayTime {
 }
 
 text Help_Text_DefineBadges {
-    "The POKéMON LEAGUE BADGES that you\n"
+    "The Pokémon League Badges that you\n"
     "have won are registered and shown.\l"
-    "Earn BADGES by defeating GYM LEADERS\l"
+    "Earn Badges by defeating Gym Leaders\l"
     "in various cities and towns.$"
 }
 
 text Help_Text_DefineTextSpeed {
     "You can adjust how quickly the text is\n"
-    "displayed. Choose one: SLOW, MID,\l"
-    "or FAST.$"
+    "displayed. Choose one: Slow, Mid,\l"
+    "or Fast.$"
 }
 
 text Help_Text_DefineBattleScene {
     "You can choose to turn the battle\n"
-    "animation ON or OFF.$"
+    "animation On or Off.$"
 }
 
 text Help_Text_DefineBattleStyle {
     "You can choose whether or not a\n"
-    "TRAINER can switch a POKéMON after\l"
+    "Trainer can switch a Pokémon after\l"
     "it has made its foe faint.\l"
-    "Set to “SHIFT” if you would like the\l"
-    "chance to switch a POKéMON after it\l"
+    "Set to “Shift” if you would like the\l"
+    "chance to switch a Pokémon after it\l"
     "has made its foe faint.$"
 }
 
 text Help_Text_DefineSound {
-    "You can choose between MONO and\n"
-    "STEREO sound output.$"
+    "You can choose between Mono and\n"
+    "Stereo sound output.$"
 }
 
 text Help_Text_DefineButtonMode {
-    "Set to “HELP” to display help messages\n"
+    "Set to “Help” to display help messages\n"
     "by pressing the L or R Button.\l"
     "Set to “LR” to enable the switching\l"
-    "of the POKéDEX pages and BAG POCKETS\l"
+    "of the Pokédex pages and Bag Pockets\l"
     "using the L and R Buttons.\l"
     "Set to “L=A” to make the L Button\l"
     "work the same as the A Button.$"
@@ -1707,45 +1707,45 @@ text Help_Text_DefineFrame {
 text Help_Text_DefineCancel2 {
     "The settings will be changed to the\n"
     "selections shown in red, and you will\l"
-    "return to the MENU.$"
+    "return to the Menu.$"
 }
 
 text Help_Text_DefineTM {
     "A TM (Technical Machine) is a device\n"
-    "used to teach a move to a POKéMON.\l"
+    "used to teach a move to a Pokémon.\l"
     "There are many different kinds.\l"
     "Moves can be taught only to those\l"
-    "POKéMON capable of using them.\l"
+    "Pokémon capable of using them.\l"
     "A TM breaks after a single use.$"
 }
 
 text Help_Text_DefineHM {
     "An HM (Hidden Machine) is a device used\n"
-    "to teach a HIDDEN move to a POKéMON.\l"
-    "A HIDDEN move can be taught only to\l"
-    "those POKéMON capable of using it.\l"
+    "to teach a Hidden move to a Pokémon.\l"
+    "A Hidden move can be taught only to\l"
+    "those Pokémon capable of using it.\l"
     "Unlike a TM, an HM can be used over\l"
-    "and over. A HIDDEN move can be tough\l"
-    "for a POKéMON to forget.$"
+    "and over. A Hidden move can be tough\l"
+    "for a Pokémon to forget.$"
 }
 
 text Help_Text_DefineHMMove {
-    "HIDDEN moves are those that are\n"
+    "Hidden moves are those that are\n"
     "especially important for your\l"
     "adventure. To use such a move outside\l"
-    "of battle, open the “POKéMON” MENU\l"
-    "and make the POKéMON that knows the\l"
-    "move use it. A fainted POKéMON may use\l"
-    "a HIDDEN move outside of battle.$"
+    "of battle, open the “Pokémon” Menu\l"
+    "and make the Pokémon that knows the\l"
+    "move use it. A fainted Pokémon may use\l"
+    "a Hidden move outside of battle.$"
 }
 
 text Help_Text_DefineEvolution {
-    "Among POKéMON, there are some that\n"
+    "Among Pokémon, there are some that\n"
     "undergo major changes (evolution) upon\l"
     "growing to certain levels. Evolution\l"
-    "causes a POKéMON to alter form, change\l"
+    "causes a Pokémon to alter form, change\l"
     "its name, and perhaps change the moves\l"
-    "it may learn. Some POKéMON evolve\l"
+    "it may learn. Some Pokémon evolve\l"
     "due to reasons other than leveling up.$"
 }
 
@@ -1754,45 +1754,45 @@ text Help_Text_DefineStatusProblem {
     "Sleep: Can't use moves.\l"
     "Poison: Causes steady HP loss.\l"
     "Paralysis: May prevent moves.\l"
-    "Burn: HP loss and lowers ATTACK.\l"
+    "Burn: HP loss and lowers Attack.\l"
     "Freeze: Can't use moves.\l"
     "These can be healed with items, etc.$"
 }
 
 text Help_Text_DefinePokemon {
-    "POKéMON is a name given to describe\n"
+    "Pokémon is a name given to describe\n"
     "wondrous creatures that inhabit all\l"
     "corners of this world.\l"
-    "People raise POKéMON to be their pets,\l"
+    "People raise Pokémon to be their pets,\l"
     "use them for battling, and so on.$"
 }
 
 text Help_Text_DefineIDNo2 {
     "The ID No. is a special number assigned\n"
-    "specifically to you as a TRAINER.\l"
+    "specifically to you as a Trainer.\l"
     "Together with the OT name, the ID No.\l"
     "is used to precisely identify the\l"
-    "Original TRAINER.\l"
+    "Original Trainer.\l"
     "The ID No. does not change even if the\l"
-    "POKéMON is traded.$"
+    "Pokémon is traded.$"
 }
 
 text Help_Text_DefineMoney2 {
     "Whenever you win a battle against a\n"
-    "TRAINER, you are given prize money.\l"
+    "Trainer, you are given prize money.\l"
     "Save up your prize money so you can\l"
-    "enjoy shopping at POKéMON MARTS!$"
+    "enjoy shopping at Pokémon Marts!$"
 }
 
 text Help_Text_DefineBadges2 {
-    "This indicates the number of POKéMON\n"
-    "LEAGUE BADGES that you have won.\l"
-    "Earn BADGES by defeating GYM LEADERS\l"
+    "This indicates the number of Pokémon\n"
+    "League Badges that you have won.\l"
+    "Earn Badges by defeating Gym Leaders\l"
     "in various cities and towns.$"
 }
 
 text Help_Text_TheHelpSystem {
-    "The HELP System$"
+    "The Help System$"
 }
 
 text Help_Text_TheGame {
@@ -1816,7 +1816,7 @@ text Help_Text_GameFundamentals3 {
 }
 
 text Help_Text_WhatArePokemon {
-    "What are POKéMON?$"
+    "What are Pokémon?$"
 }
 
 text Help_Text_DescTheHelpSystem {
@@ -1825,16 +1825,16 @@ text Help_Text_DescTheHelpSystem {
     "game. They are designed to support you\l"
     "when you need them. If there is\l"
     "anything that you don't understand,\l"
-    "please look up the HELP System!$"
+    "please look up the Help System!$"
 }
 
 text Help_Text_DescTheGame {
     "You become the main character to\n"
-    "explore the world of POKéMON!\l"
+    "explore the world of Pokémon!\l"
     "By talking to people and solving\l"
     "mysteries, new paths will open to you.\l"
     "Strive for the goal together with your\l"
-    "wonderful POKéMON!$"
+    "wonderful Pokémon!$"
 }
 
 text Help_Text_DescWirelessAdapter {
@@ -1850,8 +1850,8 @@ text Help_Text_DescGameFundamentals1 {
     "Visit every city and town, travel every\n"
     "road, explore every cave, and face\l"
     "every challenge as you strive to\l"
-    "become the greatest TRAINER of\l"
-    "POKéMON!$"
+    "become the greatest Trainer of\l"
+    "Pokémon!$"
 }
 
 text Help_Text_DescGameFundamentals2 {
@@ -1865,17 +1865,17 @@ text Help_Text_DescGameFundamentals2 {
 
 text Help_Text_DescGameFundamentals3 {
     "Some of the obstacles in your way can\n"
-    "be removed once your POKéMON learn\l"
+    "be removed once your Pokémon learn\l"
     "specific moves.$"
 }
 
 text Help_Text_DescWhatArePokemon {
-    "POKéMON are wondrous creatures that\n"
+    "Pokémon are wondrous creatures that\n"
     "are shrouded in mystery. You may meet\l"
     "them all over the world…in tall\l"
     "grass, caves, the sea, and more.\l"
     "They appear to grow obedient to the\l"
-    "TRAINERS that caught them.$"
+    "Trainers that caught them.$"
 }
 
 text Help_Text_UsingTypeMatchupList {
@@ -1883,144 +1883,144 @@ text Help_Text_UsingTypeMatchupList {
 }
 
 text Help_Text_OwnMoveDark {
-    "Own move type: DARK$"
+    "Own move type: Dark$"
 }
 
 text Help_Text_OwnPokemonDark {
-    "Own POKéMON type: DARK$"
+    "Own Pokémon type: Dark$"
 }
 
 text Help_Text_OwnMoveRock {
-    "Own move type: ROCK$"
+    "Own move type: Rock$"
 }
 
 text Help_Text_OwnPokemonRock {
-    "Own POKéMON type: ROCK$"
+    "Own Pokémon type: Rock$"
 }
 
 text Help_Text_OwnMovePsychic {
-    "Own move type: PSYCHIC$"
+    "Own move type: Psychic$"
 }
 
 text Help_Text_OwnPokemonPsychic {
-    "Own POKéMON type: PSYCHIC$"
+    "Own Pokémon type: Psychic$"
 }
 
 text Help_Text_OwnMoveFighting {
-    "Own move type: FIGHTING$"
+    "Own move type: Fighting$"
 }
 
 text Help_Text_OwnPokemonFighting {
-    "Own POKéMON type: FIGHTING$"
+    "Own Pokémon type: Fighting$"
 }
 
 text Help_Text_OwnMoveGrass {
-    "Own move type: GRASS$"
+    "Own move type: Grass$"
 }
 
 text Help_Text_OwnPokemonGrass {
-    "Own POKéMON type: GRASS$"
+    "Own Pokémon type: Grass$"
 }
 
 text Help_Text_OwnMoveGhost {
-    "Own move type: GHOST$"
+    "Own move type: Ghost$"
 }
 
 text Help_Text_OwnPokemonGhost {
-    "Own POKéMON type: GHOST$"
+    "Own Pokémon type: Ghost$"
 }
 
 text Help_Text_OwnMoveIce {
-    "Own move type: ICE$"
+    "Own move type: Ice$"
 }
 
 text Help_Text_OwnPokemonIce {
-    "Own POKéMON type: ICE$"
+    "Own Pokémon type: Ice$"
 }
 
 text Help_Text_OwnMoveGround {
-    "Own move type: GROUND$"
+    "Own move type: Ground$"
 }
 
 text Help_Text_OwnPokemonGround {
-    "Own POKéMON type: GROUND$"
+    "Own Pokémon type: Ground$"
 }
 
 text Help_Text_OwnMoveElectric {
-    "Own move type: ELECTRIC$"
+    "Own move type: Electric$"
 }
 
 text Help_Text_OwnPokemonElectric {
-    "Own POKéMON type: ELECTRIC$"
+    "Own Pokémon type: Electric$"
 }
 
 text Help_Text_OwnMovePoison {
-    "Own move type: POISON$"
+    "Own move type: Poison$"
 }
 
 text Help_Text_OwnPokemonPoison {
-    "Own POKéMON type: POISON$"
+    "Own Pokémon type: Poison$"
 }
 
 text Help_Text_OwnMoveDragon {
-    "Own move type: DRAGON$"
+    "Own move type: Dragon$"
 }
 
 text Help_Text_OwnPokemonDragon {
-    "Own POKéMON type: DRAGON$"
+    "Own Pokémon type: Dragon$"
 }
 
 text Help_Text_OwnMoveNormal {
-    "Own move type: NORMAL$"
+    "Own move type: Normal$"
 }
 
 text Help_Text_OwnPokemonNormal {
-    "Own POKéMON type: NORMAL$"
+    "Own Pokémon type: Normal$"
 }
 
 text Help_Text_OwnMoveSteel {
-    "Own move type: STEEL$"
+    "Own move type: Steel$"
 }
 
 text Help_Text_OwnPokemonSteel {
-    "Own POKéMON type: STEEL$"
+    "Own Pokémon type: Steel$"
 }
 
 text Help_Text_OwnMoveFlying {
-    "Own move type: FLYING$"
+    "Own move type: Flying$"
 }
 
 text Help_Text_OwnPokemonFlying {
-    "Own POKéMON type: FLYING$"
+    "Own Pokémon type: Flying$"
 }
 
 text Help_Text_OwnMoveFire {
-    "Own move type: FIRE$"
+    "Own move type: Fire$"
 }
 
 text Help_Text_OwnPokemonFire {
-    "Own POKéMON type: FIRE$"
+    "Own Pokémon type: Fire$"
 }
 
 text Help_Text_OwnMoveWater {
-    "Own move type: WATER$"
+    "Own move type: Water$"
 }
 
 text Help_Text_OwnPokemonWater {
-    "Own POKéMON type: WATER$"
+    "Own Pokémon type: Water$"
 }
 
 text Help_Text_OwnMoveBug {
-    "Own move type: BUG$"
+    "Own move type: Bug$"
 }
 
 text Help_Text_OwnPokemonBug {
-    "Own POKéMON type: BUG$"
+    "Own Pokémon type: Bug$"
 }
 
 text Help_Text_HowToUseTypeMatchupList {
     "Depending on the matchup of the\n"
-    "move type and the target POKéMON's\l"
+    "move type and the target Pokémon's\l"
     "type, the move's effectiveness varies:\l"
     "{CIRCLE_DOT}: Super effective!\l"
     "{TRIANGLE}: Not very effective\l"
@@ -2029,222 +2029,222 @@ text Help_Text_HowToUseTypeMatchupList {
 }
 
 text Help_Text_TypeMatchupOwnMoveDark {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: PSYCHIC, GHOST\p"
-    "   {TRIANGLE}: FIGHTING, DARK, STEEL$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Psychic, Ghost\p"
+    "   {TRIANGLE}: Fighting, Dark, Steel$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonDark {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: FIGHTING, BUG\p"
-    "   {TRIANGLE}: GHOST, DARK\p"
-    "   {BIG_MULT_X}: PSYCHIC$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Fighting, Bug\p"
+    "   {TRIANGLE}: Ghost, Dark\p"
+    "   {BIG_MULT_X}: Psychic$"
 }
 
 text Help_Text_TypeMatchupOwnMoveRock {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: FIRE, ICE, FLYING, BUG\p"
-    "   {TRIANGLE}: FIGHTING, GROUND, STEEL$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Fire, Ice, Flying, Bug\p"
+    "   {TRIANGLE}: Fighting, Ground, Steel$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonRock {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: WATER, GRASS, FIGHTING,\n"
-    "       GROUND, STEEL\p"
-    "   {TRIANGLE}: NORMAL, FIRE, POISON, FLYING$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Water, Grass, Fighting,\n"
+    "       Ground, Steel\p"
+    "   {TRIANGLE}: Normal, Fire, Poison, Flying$"
 }
 
 text Help_Text_TypeMatchupOwnMovePsychic {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: FIGHTING, POISON\p"
-    "   {TRIANGLE}: PSYCHIC, STEEL\p"
-    "   {BIG_MULT_X}: DARK$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Fighting, Poison\p"
+    "   {TRIANGLE}: Psychic, Steel\p"
+    "   {BIG_MULT_X}: Dark$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonPsychic {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: BUG, GHOST, DARK\p"
-    "   {TRIANGLE}: FIGHTING, PSYCHIC$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Bug, Ghost, Dark\p"
+    "   {TRIANGLE}: Fighting, Psychic$"
 }
 
 text Help_Text_TypeMatchupOwnMoveFighting {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: NORMAL, ICE, ROCK, DARK, STEEL\p"
-    "   {TRIANGLE}: POISON, FLYING, PSYCHIC, BUG\p"
-    "   {BIG_MULT_X}: GHOST$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Normal, Ice, Rock, Dark, Steel\p"
+    "   {TRIANGLE}: Poison, Flying, Psychic, Bug\p"
+    "   {BIG_MULT_X}: Ghost$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonFighting {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: FLYING, PSYCHIC\p"
-    "   {TRIANGLE}: BUG, ROCK, DARK$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Flying, Psychic\p"
+    "   {TRIANGLE}: Bug, Rock, Dark$"
 }
 
 text Help_Text_TypeMatchupOwnMoveGrass {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: WATER, GROUND, ROCK\p"
-    "   {TRIANGLE}: FIRE, GRASS, POISON, FLYING,\n"
-    "       BUG, DRAGON, STEEL$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Water, Ground, Rock\p"
+    "   {TRIANGLE}: Fire, Grass, Poison, Flying,\n"
+    "       Bug, Dragon, Steel$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonGrass {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: FIRE, ICE, POISON, FLYING, BUG\p"
-    "   {TRIANGLE}: WATER, ELECTRIC, GRASS, GROUND$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Fire, Ice, Poison, Flying, Bug\p"
+    "   {TRIANGLE}: Water, Electric, Grass, Ground$"
 }
 
 text Help_Text_TypeMatchupOwnMoveGhost {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: PSYCHIC, GHOST\p"
-    "   {TRIANGLE}: DARK, STEEL\p"
-    "   {BIG_MULT_X}: NORMAL$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Psychic, Ghost\p"
+    "   {TRIANGLE}: Dark, Steel\p"
+    "   {BIG_MULT_X}: Normal$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonGhost {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: GHOST, DARK\p"
-    "   {TRIANGLE}: POISON, BUG\p"
-    "   {BIG_MULT_X}: NORMAL, FIGHTING$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Ghost, Dark\p"
+    "   {TRIANGLE}: Poison, Bug\p"
+    "   {BIG_MULT_X}: Normal, Fighting$"
 }
 
 text Help_Text_TypeMatchupOwnMoveIce {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: GRASS, GROUND, FLYING, DRAGON\p"
-    "   {TRIANGLE}: FIRE, WATER, ICE, STEEL$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Grass, Ground, Flying, Dragon\p"
+    "   {TRIANGLE}: Fire, Water, Ice, Steel$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonIce {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: FIRE, FIGHTING, ROCK, STEEL\p"
-    "   {TRIANGLE}: ICE$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Fire, Fighting, Rock, Steel\p"
+    "   {TRIANGLE}: Ice$"
 }
 
 text Help_Text_TypeMatchupOwnMoveGround {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: FIRE, ELECTRIC, POISON, ROCK,\n"
-    "       STEEL\p"
-    "   {TRIANGLE}: GRASS, BUG\n"
-    "   {BIG_MULT_X}: FLYING$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Fire, Electric, Poison, Rock,\n"
+    "       Steel\p"
+    "   {TRIANGLE}: Grass, Bug\n"
+    "   {BIG_MULT_X}: Flying$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonGround {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: WATER, GRASS, ICE\p"
-    "   {TRIANGLE}: POISON, ROCK\p"
-    "   {BIG_MULT_X}: ELECTRIC$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Water, Grass, Ice\p"
+    "   {TRIANGLE}: Poison, Rock\p"
+    "   {BIG_MULT_X}: Electric$"
 }
 
 text Help_Text_TypeMatchupOwnMoveElectric {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: WATER, FLYING\p"
-    "   {TRIANGLE}: ELECTRIC, GRASS, DRAGON\p"
-    "   {BIG_MULT_X}: GROUND$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Water, Flying\p"
+    "   {TRIANGLE}: Electric, Grass, Dragon\p"
+    "   {BIG_MULT_X}: Ground$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonElectric {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: GROUND\p"
-    "   {TRIANGLE}: ELECTRIC, FLYING, STEEL$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Ground\p"
+    "   {TRIANGLE}: Electric, Flying, Steel$"
 }
 
 text Help_Text_TypeMatchupOwnMovePoison {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: GRASS\p"
-    "   {TRIANGLE}: POISON, GROUND, ROCK, GHOST\p"
-    "   {BIG_MULT_X}: STEEL$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Grass\p"
+    "   {TRIANGLE}: Poison, Ground, Rock, Ghost\p"
+    "   {BIG_MULT_X}: Steel$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonPoison {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: GROUND, PSYCHIC\p"
-    "   {TRIANGLE}: GRASS, FIGHTING, POISON, BUG$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Ground, Psychic\p"
+    "   {TRIANGLE}: Grass, Fighting, Poison, Bug$"
 }
 
 text Help_Text_TypeMatchupOwnMoveDragon {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: DRAGON\p"
-    "   {TRIANGLE}: STEEL$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Dragon\p"
+    "   {TRIANGLE}: Steel$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonDragon {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: ICE, DRAGON\p"
-    "   {TRIANGLE}: FIRE, WATER, ELECTRIC, GRASS$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Ice, Dragon\p"
+    "   {TRIANGLE}: Fire, Water, Electric, Grass$"
 }
 
 text Help_Text_TypeMatchupOwnMoveNormal {
-    "Effect on the opposing POKéMON:\p"
-    "   {TRIANGLE}: ROCK, STEEL\p"
-    "   {BIG_MULT_X}: GHOST$"
+    "Effect on the opposing Pokémon:\p"
+    "   {TRIANGLE}: Rock, Steel\p"
+    "   {BIG_MULT_X}: Ghost$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonNormal {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: FIGHTING\p"
-    "   {BIG_MULT_X}: GHOST$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Fighting\p"
+    "   {BIG_MULT_X}: Ghost$"
 }
 
 text Help_Text_TypeMatchupOwnMoveSteel {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: ICE, ROCK\p"
-    "   {TRIANGLE}: FIRE, WATER, ELECTRIC, STEEL$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Ice, Rock\p"
+    "   {TRIANGLE}: Fire, Water, Electric, Steel$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonSteel {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: FIRE, FIGHTING, GROUND\n"
-    "   {TRIANGLE}: NORMAL, GRASS, ICE, FLYING,\l"
-    "       PSYCHIC, BUG, ROCK, GHOST,\l"
-    "       DRAGON, DARK, STEEL\l"
-    "   {BIG_MULT_X}: POISON$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Fire, Fighting, Ground\n"
+    "   {TRIANGLE}: Normal, Grass, Ice, Flying,\l"
+    "       Psychic, Bug, Rock, Ghost,\l"
+    "       Dragon, Dark, Steel\l"
+    "   {BIG_MULT_X}: Poison$"
 }
 
 text Help_Text_TypeMatchupOwnMoveFlying {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: GRASS, FIGHTING, BUG\p"
-    "   {TRIANGLE}: ELECTRIC, ROCK, STEEL$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Grass, Fighting, Bug\p"
+    "   {TRIANGLE}: Electric, Rock, Steel$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonFlying {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: ELECTRIC, ICE, ROCK\p"
-    "   {TRIANGLE}: GRASS, FIGHTING, BUG\p"
-    "   {BIG_MULT_X}: GROUND$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Electric, Ice, Rock\p"
+    "   {TRIANGLE}: Grass, Fighting, Bug\p"
+    "   {BIG_MULT_X}: Ground$"
 }
 
 text Help_Text_TypeMatchupOwnMoveFire {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: GRASS, ICE, BUG, STEEL\p"
-    "   {TRIANGLE}: FIRE, WATER, ROCK, DRAGON$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Grass, Ice, Bug, Steel\p"
+    "   {TRIANGLE}: Fire, Water, Rock, Dragon$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonFire {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: WATER, GROUND, ROCK\p"
-    "   {TRIANGLE}: FIRE, GRASS, ICE, BUG, STEEL$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Water, Ground, Rock\p"
+    "   {TRIANGLE}: Fire, Grass, Ice, Bug, Steel$"
 }
 
 text Help_Text_TypeMatchupOwnMoveWater {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: FIRE, GROUND, ROCK\p"
-    "   {TRIANGLE}: WATER, GRASS, DRAGON$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Fire, Ground, Rock\p"
+    "   {TRIANGLE}: Water, Grass, Dragon$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonWater {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: ELECTRIC, GRASS\p"
-    "   {TRIANGLE}: FIRE, WATER, ICE, STEEL$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Electric, Grass\p"
+    "   {TRIANGLE}: Fire, Water, Ice, Steel$"
 }
 
 text Help_Text_TypeMatchupOwnMoveBug {
-    "Effect on the opposing POKéMON:\p"
-    "   {CIRCLE_DOT}: GRASS, PSYCHIC, DARK\p"
-    "   {TRIANGLE}: FIRE, FIGHTING, POISON,\n"
-    "       FLYING, GHOST, STEEL$"
+    "Effect on the opposing Pokémon:\p"
+    "   {CIRCLE_DOT}: Grass, Psychic, Dark\p"
+    "   {TRIANGLE}: Fire, Fighting, Poison,\n"
+    "       Flying, Ghost, Steel$"
 }
 
 text Help_Text_TypeMatchupOwnPokemonBug {
-    "Effect of foe's move on own POKéMON:\p"
-    "   {CIRCLE_DOT}: FIRE, FLYING, ROCK\p"
-    "   {TRIANGLE}: GRASS, FIGHTING, GROUND$"
+    "Effect of foe's move on own Pokémon:\p"
+    "   {CIRCLE_DOT}: Fire, Flying, Rock\p"
+    "   {TRIANGLE}: Grass, Fighting, Ground$"
 }

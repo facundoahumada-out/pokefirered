@@ -8,12 +8,12 @@ text Route20_Text_BarryDefeat {
 }
 
 text Route20_Text_BarryPostBattle {
-    "I wish I could ride my POKéMON.\n"
+    "I wish I could ride my Pokémon.\n"
     "I bet you're not tired.$"
 }
 
 text Route20_Text_ShirleyIntro {
-    "SEAFOAM is a quiet getaway.\n"
+    "Seafoam is a quiet getaway.\n"
     "I'm vacationing here.$"
 }
 
@@ -48,7 +48,7 @@ text Route20_Text_IreneDefeat {
 }
 
 text Route20_Text_IrenePostBattle {
-    "SEAFOAM used to be a single island\n"
+    "Seafoam used to be a single island\n"
     "in the distant past.$"
 }
 
@@ -62,11 +62,11 @@ text Route20_Text_DeanDefeat {
 
 text Route20_Text_DeanPostBattle {
     "I should've been buffing up my\n"
-    "POKéMON, not me!$"
+    "Pokémon, not me!$"
 }
 
 text Route20_Text_DarrinIntro {
-    "Why are you riding a POKéMON?\n"
+    "Why are you riding a Pokémon?\n"
     "Can't you swim?$"
 }
 
@@ -76,11 +76,11 @@ text Route20_Text_DarrinDefeat {
 }
 
 text Route20_Text_DarrinPostBattle {
-    "Riding a POKéMON sure looks fun!$"
+    "Riding a Pokémon sure looks fun!$"
 }
 
 text Route20_Text_RogerIntro {
-    "I rode my bird POKéMON here.$"
+    "I rode my bird Pokémon here.$"
 }
 
 text Route20_Text_RogerDefeat {
@@ -90,7 +90,7 @@ text Route20_Text_RogerDefeat {
 
 text Route20_Text_RogerPostBattle {
     "My birds are exhausted.\n"
-    "They can't FLY me back!$"
+    "They can't Fly me back!$"
 }
 
 text Route20_Text_NoraIntro {
@@ -104,11 +104,11 @@ text Route20_Text_NoraDefeat {
 
 text Route20_Text_NoraPostBattle {
     "Will my pearls grow bigger inside\n"
-    "CLOYSTER?$"
+    "Cloyster?$"
 }
 
 text Route20_Text_MissyIntro {
-    "I swam here from CINNABAR ISLAND.\n"
+    "I swam here from Cinnabar Island.\n"
     "It wasn't easy, I tell you.$"
 }
 
@@ -117,15 +117,15 @@ text Route20_Text_MissyDefeat {
 }
 
 text Route20_Text_MissyPostBattle {
-    "POKéMON have taken over an\n"
-    "abandoned mansion on CINNABAR.\p"
-    "They call it the POKéMON MANSION\n"
+    "Pokémon have taken over an\n"
+    "abandoned mansion on Cinnabar.\p"
+    "They call it the Pokémon Mansion\n"
     "now.$"
 }
 
 text Route20_Text_MelissaIntro {
-    "CINNABAR, in the west, has a LAB\n"
-    "for POKéMON.\p"
+    "Cinnabar, in the west, has a Lab\n"
+    "for Pokémon.\p"
     "My daddy works there.$"
 }
 
@@ -135,18 +135,18 @@ text Route20_Text_MelissaDefeat {
 }
 
 text Route20_Text_MelissaPostBattle {
-    "CINNABAR is a volcanic island.\p"
+    "Cinnabar is a volcanic island.\p"
     "I heard it rose out of the sea\n"
     "when a volcano erupted.$"
 }
 
 text Route20_Text_SeafoamIslands {
-    "SEAFOAM ISLANDS$"
+    "Seafoam Islands$"
 }
 
 text Route20_Text_MistyTrainsHere {
-    "Strong TRAINERS and WATER POKéMON\n"
+    "Strong Trainers and Water Pokémon\n"
     "are common sights in these parts.\p"
-    "They say that MISTY of the\n"
-    "CERULEAN GYM trains here.$"
+    "They say that Misty of the\n"
+    "Cerulean Gym trains here.$"
 }

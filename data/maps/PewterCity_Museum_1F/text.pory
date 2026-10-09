@@ -25,21 +25,21 @@ text PewterCity_Museum_1F_Text_DoYouKnowWhatAmberIs {
     "You can't sneak in the back way!\n"
     "Nice try, kid, but no.\p"
     "Oh, whatever!\n"
-    "Do you know what AMBER is?$"
+    "Do you know what Amber is?$"
 }
 
 text PewterCity_Museum_1F_Text_AmberContainsGeneticMatter {
-    "AMBER contains the genetic matter\n"
-    "of ancient POKéMON.\p"
-    "There's a LAB somewhere trying to\n"
-    "resurrect POKéMON from AMBER.$"
+    "Amber contains the genetic matter\n"
+    "of ancient Pokémon.\p"
+    "There's a Lab somewhere trying to\n"
+    "resurrect Pokémon from Amber.$"
 }
 
 text PewterCity_Museum_1F_Text_AmberIsFossilizedSap {
-    "AMBER is actually sap, that gooey\n"
+    "Amber is actually sap, that gooey\n"
     "stuff that oozes from trees.\p"
     "The ancient sap fossilized over\n"
-    "time to become rock-hard AMBER.$"
+    "time to become rock-hard Amber.$"
 }
 
 // Unused
@@ -57,26 +57,26 @@ text PewterCity_Museum_1F_Text_ShouldBeGratefulForLongLife {
 text PewterCity_Museum_1F_Text_WantYouToGetAmberExamined {
     "Ssh! Listen, I need to share a\n"
     "secret with someone.\p"
-    "I think that this chunk of AMBER\n"
-    "contains POKéMON DNA!\p"
+    "I think that this chunk of Amber\n"
+    "contains Pokémon DNA!\p"
     "It would be a shattering scientific\n"
-    "breakthrough if POKéMON could be\l"
+    "breakthrough if Pokémon could be\l"
     "resurrected from it.\p"
     "But, my colleagues just ignore\n"
     "what I have to say.\p"
     "So, I have a favor to ask!\p"
     "I want you to get this examined at\n"
-    "a POKéMON LAB somewhere.$"
+    "a Pokémon Lab somewhere.$"
 }
 
 text PewterCity_Museum_1F_Text_ReceivedOldAmberFromMan {
-    "{PLAYER} received the OLD AMBER\n"
+    "{PLAYER} received the Old Amber\n"
     "from the man.$"
 }
 
 text PewterCity_Museum_1F_Text_GetOldAmberChecked {
     "Ssh!\n"
-    "Get the OLD AMBER checked!$"
+    "Get the Old Amber checked!$"
 }
 
 text PewterCity_Museum_1F_Text_DontHaveSpaceForThis {
@@ -85,20 +85,20 @@ text PewterCity_Museum_1F_Text_DontHaveSpaceForThis {
 
 text PewterCity_Museum_1F_Text_WeHaveTwoFossilsOnExhibit {
     "We have two fossils of rare,\n"
-    "prehistoric POKéMON on exhibit.$"
+    "prehistoric Pokémon on exhibit.$"
 }
 
 text PewterCity_Museum_1F_Text_BeautifulPieceOfAmber {
     "There is a beautiful piece of\n"
-    "AMBER in a clear gold color.$"
+    "Amber in a clear gold color.$"
 }
 
 text PewterCity_Museum_1F_Text_AerodactylFossil {
-    "AERODACTYL Fossil\n"
-    "A primitive and rare POKéMON.$"
+    "Aerodactyl Fossil\n"
+    "A primitive and rare Pokémon.$"
 }
 
 text PewterCity_Museum_1F_Text_KabutopsFossil {
-    "KABUTOPS Fossil\n"
-    "A primitive and rare POKéMON.$"
+    "Kabutops Fossil\n"
+    "A primitive and rare Pokémon.$"
 }

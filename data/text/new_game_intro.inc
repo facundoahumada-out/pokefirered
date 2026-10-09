@@ -1,174 +1,174 @@
 gOtherText_NewName::
 # 1 "data/text/new_game_intro.pory"
-	.string "NEW NAME$"
+	.string "New Name$"
 
 gNameChoice_Green::
 # 5 "data/text/new_game_intro.pory"
-	.string "GREEN$"
+	.string "Green$"
 
 gNameChoice_Blue::
 # 9 "data/text/new_game_intro.pory"
-	.string "BLUE$"
+	.string "Blue$"
 
 gNameChoice_Red::
 # 13 "data/text/new_game_intro.pory"
-	.string "RED$"
+	.string "Red$"
 
 gNameChoice_Leaf::
 # 17 "data/text/new_game_intro.pory"
-	.string "LEAF$"
+	.string "Leaf$"
 
 gNameChoice_Fire::
 # 21 "data/text/new_game_intro.pory"
-	.string "FIRE$"
+	.string "Fire$"
 
 gNameChoice_Gary::
 # 25 "data/text/new_game_intro.pory"
-	.string "GARY$"
+	.string "Gary$"
 
 gNameChoice_Kaz::
 # 29 "data/text/new_game_intro.pory"
-	.string "KAZ$"
+	.string "Kaz$"
 
 gNameChoice_Toru::
 # 33 "data/text/new_game_intro.pory"
-	.string "TORU$"
+	.string "Toru$"
 
 gNameChoice_Ash::
 # 37 "data/text/new_game_intro.pory"
-	.string "ASH$"
+	.string "Ash$"
 
 gNameChoice_Kene::
 # 41 "data/text/new_game_intro.pory"
-	.string "KENE$"
+	.string "Kene$"
 
 gNameChoice_Geki::
 # 45 "data/text/new_game_intro.pory"
-	.string "GEKI$"
+	.string "Geki$"
 
 gNameChoice_Jak::
 # 49 "data/text/new_game_intro.pory"
-	.string "JAK$"
+	.string "Jak$"
 
 gNameChoice_Janne::
 # 53 "data/text/new_game_intro.pory"
-	.string "JANNE$"
+	.string "Janne$"
 
 gNameChoice_Jonn::
 # 57 "data/text/new_game_intro.pory"
-	.string "JONN$"
+	.string "Jonn$"
 
 gNameChoice_Kamon::
 # 61 "data/text/new_game_intro.pory"
-	.string "KAMON$"
+	.string "Kamon$"
 
 gNameChoice_Karl::
 # 65 "data/text/new_game_intro.pory"
-	.string "KARL$"
+	.string "Karl$"
 
 gNameChoice_Taylor::
 # 69 "data/text/new_game_intro.pory"
-	.string "TAYLOR$"
+	.string "Taylor$"
 
 gNameChoice_Oscar::
 # 73 "data/text/new_game_intro.pory"
-	.string "OSCAR$"
+	.string "Oscar$"
 
 gNameChoice_Hiro::
 # 77 "data/text/new_game_intro.pory"
-	.string "HIRO$"
+	.string "Hiro$"
 
 gNameChoice_Max::
 # 81 "data/text/new_game_intro.pory"
-	.string "MAX$"
+	.string "Max$"
 
 gNameChoice_Jon::
 # 85 "data/text/new_game_intro.pory"
-	.string "JON$"
+	.string "Jon$"
 
 gNameChoice_Ralph::
 # 89 "data/text/new_game_intro.pory"
-	.string "RALPH$"
+	.string "Ralph$"
 
 gNameChoice_Kay::
 # 93 "data/text/new_game_intro.pory"
-	.string "KAY$"
+	.string "Kay$"
 
 gNameChoice_Tosh::
 # 97 "data/text/new_game_intro.pory"
-	.string "TOSH$"
+	.string "Tosh$"
 
 gNameChoice_Roak::
 # 101 "data/text/new_game_intro.pory"
-	.string "ROAK$"
+	.string "Roak$"
 
 gNameChoice_Omi::
 # 105 "data/text/new_game_intro.pory"
-	.string "OMI$"
+	.string "Omi$"
 
 gNameChoice_Jodi::
 # 109 "data/text/new_game_intro.pory"
-	.string "JODI$"
+	.string "Jodi$"
 
 gNameChoice_Amanda::
 # 113 "data/text/new_game_intro.pory"
-	.string "AMANDA$"
+	.string "Amanda$"
 
 gNameChoice_Hillary::
 # 117 "data/text/new_game_intro.pory"
-	.string "HILLARY$"
+	.string "Hillary$"
 
 gNameChoice_Makey::
 # 121 "data/text/new_game_intro.pory"
-	.string "MAKEY$"
+	.string "Makey$"
 
 gNameChoice_Michi::
 # 125 "data/text/new_game_intro.pory"
-	.string "MICHI$"
+	.string "Michi$"
 
 gNameChoice_Paula::
 # 129 "data/text/new_game_intro.pory"
-	.string "PAULA$"
+	.string "Paula$"
 
 gNameChoice_June::
 # 133 "data/text/new_game_intro.pory"
-	.string "JUNE$"
+	.string "June$"
 
 gNameChoice_Cassie::
 # 137 "data/text/new_game_intro.pory"
-	.string "CASSIE$"
+	.string "Cassie$"
 
 gNameChoice_Rey::
 # 141 "data/text/new_game_intro.pory"
-	.string "REY$"
+	.string "Rey$"
 
 gNameChoice_Seda::
 # 145 "data/text/new_game_intro.pory"
-	.string "SEDA$"
+	.string "Seda$"
 
 gNameChoice_Kiko::
 # 149 "data/text/new_game_intro.pory"
-	.string "KIKO$"
+	.string "Kiko$"
 
 gNameChoice_Mina::
 # 153 "data/text/new_game_intro.pory"
-	.string "MINA$"
+	.string "Mina$"
 
 gNameChoice_Norie::
 # 157 "data/text/new_game_intro.pory"
-	.string "NORIE$"
+	.string "Norie$"
 
 gNameChoice_Sai::
 # 161 "data/text/new_game_intro.pory"
-	.string "SAI$"
+	.string "Sai$"
 
 gNameChoice_Momo::
 # 165 "data/text/new_game_intro.pory"
-	.string "MOMO$"
+	.string "Momo$"
 
 gNameChoice_Suzi::
 # 169 "data/text/new_game_intro.pory"
-	.string "SUZI$"
+	.string "Suzi$"
 
 gControlsGuide_Text_Intro::
 # 173 "data/text/new_game_intro.pory"
@@ -194,7 +194,7 @@ gControlsGuide_Text_BButton::
 gControlsGuide_Text_StartButton::
 # 194 "data/text/new_game_intro.pory"
 	.string "Press this button to open the\n"
-	.string "MENU.$"
+	.string "Menu.$"
 
 gControlsGuide_Text_SelectButton::
 # 199 "data/text/new_game_intro.pory"
@@ -247,10 +247,10 @@ gOakSpeech_Text_WelcomeToTheWorld::
 # 246 "data/text/new_game_intro.pory"
 	.string "Hello, there!\n"
 	.string "Glad to meet you!\p"
-	.string "Welcome to the world of POKéMON!\p"
-	.string "My name is OAK.\p"
+	.string "Welcome to the world of Pokémon!\p"
+	.string "My name is Oak.\p"
 	.string "People affectionately refer to me\n"
-	.string "as the POKéMON PROFESSOR.\p$"
+	.string "as the Pokémon Professor.\p$"
 
 gOakSpeech_Text_ThisWorld::
 # 255 "data/text/new_game_intro.pory"
@@ -259,14 +259,14 @@ gOakSpeech_Text_ThisWorld::
 gOakSpeech_Text_IsInhabitedFarAndWide::
 # 259 "data/text/new_game_intro.pory"
 	.string "…is inhabited far and wide by\n"
-	.string "creatures called POKéMON.\p$"
+	.string "creatures called Pokémon.\p$"
 
 gOakSpeech_Text_IStudyPokemon::
 # 264 "data/text/new_game_intro.pory"
-	.string "For some people, POKéMON are pets.\n"
+	.string "For some people, Pokémon are pets.\n"
 	.string "Others use them for battling.\p"
 	.string "As for myself…\p"
-	.string "I study POKéMON as a profession.\p$"
+	.string "I study Pokémon as a profession.\p$"
 
 gOakSpeech_Text_TellMeALittleAboutYourself::
 # 271 "data/text/new_game_intro.pory"
@@ -306,7 +306,7 @@ gOakSpeech_Text_RememberRivalsName::
 gOakSpeech_Text_LetsGo::
 # 306 "data/text/new_game_intro.pory"
 	.string "{PLAYER}!\p"
-	.string "Your very own POKéMON legend is\n"
+	.string "Your very own Pokémon legend is\n"
 	.string "about to unfold!\p"
 	.string "A world of dreams and adventures\n"
-	.string "with POKéMON awaits! Let's go!$"
+	.string "with Pokémon awaits! Let's go!$"

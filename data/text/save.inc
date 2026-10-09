@@ -9,8 +9,8 @@ gText_AlreadySaveFile_WouldLikeToOverwrite::
 
 gText_SavingDontTurnOffThePower::
 # 10 "data/text/save.pory"
-	.string "SAVING…\n"
-	.string "DON'T TURN OFF THE POWER.$"
+	.string "Saving…\n"
+	.string "Don't Turn Off the Power.$"
 
 gText_PlayerSavedTheGame::
 # 15 "data/text/save.pory"
@@ -22,11 +22,11 @@ gText_SaveFailed2::
 
 gText_DifferentGameFile::
 # 23 "data/text/save.pory"
-	.string "WARNING!\p"
+	.string "Warning!\p"
 	.string "There is a different game file that\n"
 	.string "is already saved.\p"
 	.string "If you save now, the other file's\n"
 	.string "adventure, including items and\l"
-	.string "POKéMON, will be entirely lost.\p"
+	.string "Pokémon, will be entirely lost.\p"
 	.string "Are you sure you want to save now\n"
 	.string "and overwrite the other save file?$"

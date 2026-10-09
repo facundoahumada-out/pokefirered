@@ -1,10 +1,10 @@
 text FuchsiaCity_SafariZone_Entrance_Text_WelcomeToSafariZone {
-    "Welcome to the SAFARI ZONE!$"
+    "Welcome to the Safari Zone!$"
 }
 
 text FuchsiaCity_SafariZone_Entrance_Text_PlaySafariGameFor500 {
     "For just ¥500, you can play the\n"
-    "SAFARI GAME.\p"
+    "Safari Game.\p"
     "You can roam the wide-open safari\n"
     "and catch what you like.\p"
     "Would you like to play?$"
@@ -13,17 +13,17 @@ text FuchsiaCity_SafariZone_Entrance_Text_PlaySafariGameFor500 {
 text FuchsiaCity_SafariZone_Entrance_Text_ThatllBe500WeOnlyUseSpecialBalls {
     "That'll be ¥500, please!\p"
     "We only use a special kind of \n"
-    "POKé BALLS here.$"
+    "Poké Balls here.$"
 }
 
 text FuchsiaCity_SafariZone_Entrance_Text_PlayerReceived30SafariBalls {
-    "{PLAYER} received 30 SAFARI BALLS\n"
+    "{PLAYER} received 30 Safari Balls\n"
     "from the attendant.$"
 }
 
 text FuchsiaCity_SafariZone_Entrance_Text_CallYouOnPAWhenYouRunOut {
-    "We'll call you on the PA when you\n"
-    "run out of time or SAFARI BALLS.\p"
+    "We'll call you on the Pa when you\n"
+    "run out of time or Safari Balls.\p"
     "Well, I'll wish you the best of\n"
     "luck!$"
 }
@@ -40,11 +40,11 @@ text FuchsiaCity_SafariZone_Entrance_Text_OopsNotEnoughMoney {
 
 text FuchsiaCity_SafariZone_Entrance_Text_GoingToLeaveSafariZoneEarly {
     "Are you going to leave the\n"
-    "SAFARI ZONE early?$"
+    "Safari Zone early?$"
 }
 
 text FuchsiaCity_SafariZone_Entrance_Text_PleaseReturnSafariBalls {
-    "Please return any SAFARI BALLS\n"
+    "Please return any Safari Balls\n"
     "you may have left.$"
 }
 
@@ -59,26 +59,26 @@ text FuchsiaCity_SafariZone_Entrance_Text_CatchFairShareComeAgain {
 
 text FuchsiaCity_SafariZone_Entrance_Text_FirstTimeAtSafariZone {
     "Hi! Is it your first time here at\n"
-    "the SAFARI ZONE?$"
+    "the Safari Zone?$"
 }
 
 text FuchsiaCity_SafariZone_Entrance_Text_ExplainSafariZone {
-    "The SAFARI ZONE actually has\n"
+    "The Safari Zone actually has\n"
     "four zones in it.\p"
     "Each zone has different kinds of\n"
-    "POKéMON, even some rare ones.\p"
-    "Use the supplied SAFARI BALLS to\n"
+    "Pokémon, even some rare ones.\p"
+    "Use the supplied Safari Balls to\n"
     "catch them.\p"
-    "You can also throw BAIT or ROCKS\n"
-    "besides the SAFARI BALLS.\p"
-    "If you throw BAIT, the POKéMON\n"
+    "You can also throw Bait or Rocks\n"
+    "besides the Safari Balls.\p"
+    "If you throw Bait, the Pokémon\n"
     "becomes less likely to flee, but\l"
     "harder to catch.\p"
-    "If you throw ROCKS, the POKéMON\n"
+    "If you throw Rocks, the Pokémon\n"
     "becomes more likely to flee, but\l"
     "easier to catch.\p"
-    "When you run out of time or SAFARI\n"
-    "BALLS, it's game over for you!$"
+    "When you run out of time or Safari\n"
+    "Balls, it's game over for you!$"
 }
 
 text FuchsiaCity_SafariZone_Entrance_Text_SorryYoureARegularHere {

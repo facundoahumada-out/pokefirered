@@ -1,22 +1,22 @@
 text SixIsland_PatternBush_Text_BethanyIntro {
     "I'm curious, how do you raise your\n"
-    "POKéMON?$"
+    "Pokémon?$"
 }
 
 text SixIsland_PatternBush_Text_BethanyDefeat {
-    "You raise your POKéMON with a\n"
+    "You raise your Pokémon with a\n"
     "whole lot of love!$"
 }
 
 text SixIsland_PatternBush_Text_BethanyPostBattle {
     "In the same way your mother raised\n"
     "you full of love, you should raise\l"
-    "your POKéMON.$"
+    "your Pokémon.$"
 }
 
 text SixIsland_PatternBush_Text_AllisonIntro {
     "I'm working to preserve the natural\n"
-    "ecology of POKéMON here.$"
+    "ecology of Pokémon here.$"
 }
 
 text SixIsland_PatternBush_Text_AllisonDefeat {
@@ -26,34 +26,34 @@ text SixIsland_PatternBush_Text_AllisonDefeat {
 
 text SixIsland_PatternBush_Text_AllisonPostBattle {
     "I'm not saying that you shouldn't\n"
-    "catch POKéMON.\p"
+    "catch Pokémon.\p"
     "I just want people to raise their\n"
-    "POKéMON responsibly.$"
+    "Pokémon responsibly.$"
 }
 
 text SixIsland_PatternBush_Text_GarretIntro {
-    "I caught a BUG POKéMON that lives\n"
+    "I caught a Bug Pokémon that lives\n"
     "only around here!$"
 }
 
 text SixIsland_PatternBush_Text_GarretDefeat {
     "Heheh…\n"
-    "Isn't my POKéMON awesome?$"
+    "Isn't my Pokémon awesome?$"
 }
 
 text SixIsland_PatternBush_Text_GarretPostBattle {
-    "There's a girl near the BUSH who\n"
-    "measures HERACROSS for TRAINERS.$"
+    "There's a girl near the Bush who\n"
+    "measures Heracross for Trainers.$"
 }
 
 text SixIsland_PatternBush_Text_JonahIntro {
     "You know, it just doesn't feel right\n"
-    "if I don't use BUG POKéMON.$"
+    "if I don't use Bug Pokémon.$"
 }
 
 text SixIsland_PatternBush_Text_JonahDefeat {
     "It's okay, losing is a fun part of\n"
-    "POKéMON's appeal, too.$"
+    "Pokémon's appeal, too.$"
 }
 
 text SixIsland_PatternBush_Text_JonahPostBattle {
@@ -65,7 +65,7 @@ text SixIsland_PatternBush_Text_JonahPostBattle {
 
 text SixIsland_PatternBush_Text_VanceIntro {
     "Yeah, yeah, yeah!\n"
-    "Look at all the BUG POKéMON!$"
+    "Look at all the Bug Pokémon!$"
 }
 
 text SixIsland_PatternBush_Text_VanceDefeat {
@@ -128,7 +128,7 @@ text SixIsland_PatternBush_Text_DaliaPostBattle {
 }
 
 text SixIsland_PatternBush_Text_JoanaIntro {
-    "I love BUG POKéMON.\n"
+    "I love Bug Pokémon.\n"
     "That's why I'm here all the time.\p"
     "Am I the only girl like that?$"
 }
@@ -140,7 +140,7 @@ text SixIsland_PatternBush_Text_JoanaDefeat {
 
 text SixIsland_PatternBush_Text_JoanaPostBattle {
     "I'm going to keep on collecting\n"
-    "BUG POKéMON.\p"
+    "Bug Pokémon.\p"
     "Am I the only girl like that?$"
 }
 
@@ -184,8 +184,8 @@ text SixIsland_PatternBush_Text_LaytonDefeat {
 }
 
 text SixIsland_PatternBush_Text_LaytonPostBattle {
-    "There are places here in PATTERN\n"
-    "BUSH where grass won't grow.\p"
+    "There are places here in Pattern\n"
+    "Bush where grass won't grow.\p"
     "What could be the cause of such\n"
     "a phenomenon?$"
 }

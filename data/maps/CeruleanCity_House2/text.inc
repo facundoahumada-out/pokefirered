@@ -1,25 +1,25 @@
 CeruleanCity_House2_Text_RocketsStoleTMForDig::
 # 1 "data/maps/CeruleanCity_House2/text.pory"
-	.string "Those miserable ROCKETS!\p"
+	.string "Those miserable Rockets!\p"
 	.string "Look what they've done to my\n"
 	.string "house!\p"
 	.string "They stole a TM for teaching\n"
-	.string "POKéMON how to DIG holes!\p"
+	.string "Pokémon how to Dig holes!\p"
 	.string "I was going to use it on a\n"
-	.string "MANKEY or a SANDSHREW…\p"
+	.string "Mankey or a Sandshrew…\p"
 	.string "That cost me a bundle, it did!$"
 
 CeruleanCity_House2_Text_TeachDiglettDigWithoutTM::
 # 12 "data/maps/CeruleanCity_House2/text.pory"
 	.string "I figure what's lost is lost.\p"
-	.string "I decided to teach DIGLETT how to\n"
-	.string "DIG without a TM.$"
+	.string "I decided to teach Diglett how to\n"
+	.string "Dig without a TM.$"
 
 CeruleanCity_House2_Text_TeamRocketTryingToDigIntoNoGood::
 # 18 "data/maps/CeruleanCity_House2/text.pory"
-	.string "TEAM ROCKET must be trying to DIG\n"
+	.string "Team Rocket must be trying to Dig\n"
 	.string "their way into no good!$"
 
 CeruleanCity_House2_Text_TeamRocketLeftWayOut::
 # 23 "data/maps/CeruleanCity_House2/text.pory"
-	.string "TEAM ROCKET left a way out!$"
+	.string "Team Rocket left a way out!$"

@@ -1,7 +1,7 @@
 text CinnabarIsland_Mart_Text_DontTheyHaveXAttack {
-    "Don't they have X ATTACK?\p"
+    "Don't they have X Attack?\p"
     "I like it because it raises the\n"
-    "ATTACK stat in battle.$"
+    "Attack stat in battle.$"
 }
 
 text CinnabarIsland_Mart_Text_ExtraItemsNeverHurt {

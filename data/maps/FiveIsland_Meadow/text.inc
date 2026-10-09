@@ -6,7 +6,7 @@ FiveIsland_Meadow_Text_DoorNeedsTwoPasswords::
 FiveIsland_Meadow_Text_EnteredPasswordAnotherNeeded::
 # 7 "data/maps/FiveIsland_Meadow/text.pory"
 	.string "{PLAYER} entered a password.\p"
-	.string "“GOLDEEN need log.”\p"
+	.string "“Goldeen need log.”\p"
 	.string "… …  … …  … …\p"
 	.string "Another password is needed to\n"
 	.string "open the door…$"
@@ -14,14 +14,14 @@ FiveIsland_Meadow_Text_EnteredPasswordAnotherNeeded::
 FiveIsland_Meadow_Text_EnteredPasswordDoorOpened::
 # 15 "data/maps/FiveIsland_Meadow/text.pory"
 	.string "{PLAYER} entered two passwords.\p"
-	.string "“GOLDEEN need log.”\n"
-	.string "“Yes, nah, CHANSEY.”\p"
+	.string "“Goldeen need log.”\n"
+	.string "“Yes, nah, Chansey.”\p"
 	.string "… …  … …  … …\p"
-	.string "The WAREHOUSE's door opened!$"
+	.string "The Warehouse's door opened!$"
 
 FiveIsland_Meadow_Text_WarehouseDoorAlreadyOpen::
 # 23 "data/maps/FiveIsland_Meadow/text.pory"
-	.string "The WAREHOUSE's door is already\n"
+	.string "The Warehouse's door is already\n"
 	.string "open.$"
 
 FiveIsland_Meadow_Text_Rocket1Intro::
@@ -41,7 +41,7 @@ FiveIsland_Meadow_Text_Rocket1PostBattle::
 FiveIsland_Meadow_Text_Rocket2Intro::
 # 42 "data/maps/FiveIsland_Meadow/text.pory"
 	.string "There's nothing past here except\n"
-	.string "our WAREHOUSE.\p"
+	.string "our Warehouse.\p"
 	.string "So what brings you here?$"
 
 FiveIsland_Meadow_Text_Rocket2Defeat::
@@ -51,7 +51,7 @@ FiveIsland_Meadow_Text_Rocket2Defeat::
 FiveIsland_Meadow_Text_Rocket2PostBattle::
 # 52 "data/maps/FiveIsland_Meadow/text.pory"
 	.string "You're wanting to know what's inside\n"
-	.string "this WAREHOUSE?\p"
+	.string "this Warehouse?\p"
 	.string "It's better you didn't know.\n"
 	.string "For your own sake, I mean.$"
 

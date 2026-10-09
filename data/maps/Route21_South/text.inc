@@ -1,6 +1,6 @@
 Route21_South_Text_JackIntro::
 # 1 "data/maps/Route21_South/text.pory"
-	.string "I caught my POKéMON at sea.$"
+	.string "I caught my Pokémon at sea.$"
 
 Route21_South_Text_JackDefeat::
 # 5 "data/maps/Route21_South/text.pory"
@@ -9,7 +9,7 @@ Route21_South_Text_JackDefeat::
 
 Route21_South_Text_JackPostBattle::
 # 10 "data/maps/Route21_South/text.pory"
-	.string "Where'd you catch your POKéMON?$"
+	.string "Where'd you catch your Pokémon?$"
 
 Route21_South_Text_JeromeIntro::
 # 14 "data/maps/Route21_South/text.pory"
@@ -69,42 +69,42 @@ Route21_South_Text_NolanPostBattle::
 
 Route21_North_Text_LilIntro::
 # 70 "data/maps/Route21_South/text.pory"
-	.string "LIL: Huh? A battle?\n"
-	.string "IAN, can't you do it alone?$"
+	.string "Lil: Huh? A battle?\n"
+	.string "Ian, can't you do it alone?$"
 
 Route21_North_Text_LilDefeat::
 # 75 "data/maps/Route21_South/text.pory"
-	.string "LIL: Oh, see?\n"
+	.string "Lil: Oh, see?\n"
 	.string "We lost. Happy now?$"
 
 Route21_North_Text_LilPostBattle::
 # 80 "data/maps/Route21_South/text.pory"
-	.string "LIL: I'm tired.\n"
+	.string "Lil: I'm tired.\n"
 	.string "Can't we go home already?$"
 
 Route21_North_Text_LilNotEnoughMons::
 # 85 "data/maps/Route21_South/text.pory"
-	.string "LIL: Huh? A battle?\n"
+	.string "Lil: Huh? A battle?\n"
 	.string "I can't be bothered to do it alone.\l"
-	.string "Bring two POKéMON, won't you?$"
+	.string "Bring two Pokémon, won't you?$"
 
 Route21_North_Text_IanIntro::
 # 91 "data/maps/Route21_South/text.pory"
-	.string "IAN: My sis doesn't get enough\n"
+	.string "Ian: My sis doesn't get enough\n"
 	.string "exercise, so I made her come.$"
 
 Route21_North_Text_IanDefeat::
 # 96 "data/maps/Route21_South/text.pory"
-	.string "IAN: Awww, Sis!\n"
+	.string "Ian: Awww, Sis!\n"
 	.string "Get it together!$"
 
 Route21_North_Text_IanPostBattle::
 # 101 "data/maps/Route21_South/text.pory"
-	.string "IAN: Come on, Sis!\p"
+	.string "Ian: Come on, Sis!\p"
 	.string "You're not going to lose weight\n"
 	.string "like this!$"
 
 Route21_North_Text_IanNotEnoughMons::
 # 107 "data/maps/Route21_South/text.pory"
-	.string "IAN: We want a two-on-two battle.\n"
-	.string "So can you bring two POKéMON?$"
+	.string "Ian: We want a two-on-two battle.\n"
+	.string "So can you bring two Pokémon?$"

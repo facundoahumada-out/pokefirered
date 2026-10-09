@@ -5,7 +5,7 @@ SafariZone_East_Text_HowManyDidYouCatch::
 
 SafariZone_East_Text_CaughtChanseyAllWorthwhile::
 # 6 "data/maps/SafariZone_East_RestHouse/text.pory"
-	.string "I caught a CHANSEY!\p"
+	.string "I caught a Chansey!\p"
 	.string "That makes this all worthwhile.$"
 
 SafariZone_East_Text_TiredFromAllTheFun::

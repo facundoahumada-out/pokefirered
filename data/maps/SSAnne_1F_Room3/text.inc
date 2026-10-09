@@ -5,9 +5,9 @@ SSAnne_1F_Room3_Text_CruiseIsElegantAndCozy::
 
 SSAnne_1F_Room3_Text_AlwaysTravelWithWigglytuff::
 # 6 "data/maps/SSAnne_1F_Room3/text.pory"
-	.string "I always travel with WIGGLYTUFF.\n"
+	.string "I always travel with Wigglytuff.\n"
 	.string "I never leave home without it.$"
 
 SSAnne_1F_Room3_Text_Wigglytuff::
 # 11 "data/maps/SSAnne_1F_Room3/text.pory"
-	.string "WIGGLYTUFF: Puup pupuu!$"
+	.string "Wigglytuff: Puup pupuu!$"

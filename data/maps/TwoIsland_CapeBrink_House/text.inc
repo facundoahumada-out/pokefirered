@@ -16,7 +16,7 @@ Text_JustMistaken::
 Text_AllowMeToTeachMonUltimateMove::
 # 16 "data/maps/TwoIsland_CapeBrink_House/text.pory"
 	.string "Oh! This is the one!\n"
-	.string "This is the POKéMON!\p"
+	.string "This is the Pokémon!\p"
 	.string "This {STR_VAR_1} is worthy of\n"
 	.string "learning my ultimate move!\p"
 	.string "Will you allow it?\p"

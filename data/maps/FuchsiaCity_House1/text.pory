@@ -1,19 +1,19 @@
 text FuchsiaCity_House1_Text_WardenIsOldHasFalseTeeth {
-    "The SAFARI ZONE's WARDEN is old, \n"
+    "The Safari Zone's Warden is old, \n"
     "but he's still very much active.\p"
     "All his teeth are false, though.$"
 }
 
 text FuchsiaCity_House1_Text_BillIsMyGrandson {
     "Hmm?\n"
-    "You've met BILL?\p"
+    "You've met Bill?\p"
     "He's my grandson!\p"
     "He always liked collecting things,\n"
     "even as a child!$"
 }
 
 text FuchsiaCity_House1_Text_BillFilesHisOwnMonData {
-    "BILL files his own POKéMON data on\n"
+    "Bill files his own Pokémon data on\n"
     "his PC.\p"
     "Did he show you?$"
 }

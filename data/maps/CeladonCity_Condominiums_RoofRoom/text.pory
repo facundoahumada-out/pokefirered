@@ -1,14 +1,14 @@
 text CeladonCity_Condominiums_RoofRoom_Text_TheresNothingIDontKnow {
     "There is nothing that I don't know,\n"
     "like I wrote on the blackboard.\p"
-    "I know about the world of POKéMON\n"
-    "in your GAME BOY ADVANCE!\p"
+    "I know about the world of Pokémon\n"
+    "in your Game Boy Advance!\p"
     "Get together with your friends and\n"
-    "enjoy trading POKéMON!$"
+    "enjoy trading Pokémon!$"
 }
 
 text CeladonCity_Condominiums_RoofRoom_Text_ObtainedAnEevee {
-    "{PLAYER} obtained an EEVEE!$"
+    "{PLAYER} obtained an Eevee!$"
 }
 
 text CeladonCity_Condominiums_RoofRoom_Text_BoxIsFull {
@@ -17,7 +17,7 @@ text CeladonCity_Condominiums_RoofRoom_Text_BoxIsFull {
 }
 
 text CeladonCity_Condominiums_RoofRoom_Text_WirelessAdapterLecture {
-    "POKéMON Lecture\p"
+    "Pokémon Lecture\p"
     "Playing with the Wireless Adapter$"
 }
 
@@ -26,28 +26,28 @@ text CeladonCity_Condominiums_RoofRoom_Text_ReadWhichHeading {
 }
 
 text CeladonCity_Condominiums_RoofRoom_Text_ExplainWirelessClub {
-    "The POKéMON WIRELESS CLUB is\n"
-    "upstairs at any POKéMON CENTER.\p"
+    "The Pokémon Wireless Club is\n"
+    "upstairs at any Pokémon Center.\p"
     "Visit one to link up with friend(s)\n"
     "using your Wireless Adapter.$"
 }
 
 text CeladonCity_Condominiums_RoofRoom_Text_ExplainDirectCorner {
     "To link only with a friend, go to\n"
-    "the DIRECT CORNER.\p"
+    "the Direct Corner.\p"
     "It is the right counter at the\n"
-    "POKéMON WIRELESS CLUB.\p"
-    "Go into the TRADE CORNER or the\n"
-    "COLOSSEUM with your friend.$"
+    "Pokémon Wireless Club.\p"
+    "Go into the Trade Corner or the\n"
+    "Colosseum with your friend.$"
 }
 
 text CeladonCity_Condominiums_RoofRoom_Text_ExplainUnionRoom {
     "To link and communicate with\n"
-    "anyone, go to the UNION ROOM.\p"
+    "anyone, go to the Union Room.\p"
     "It is the left counter at the\n"
-    "POKéMON WIRELESS CLUB.\p"
-    "Go to the UNION ROOM and enjoy\n"
-    "meeting other TRAINERS.$"
+    "Pokémon Wireless Club.\p"
+    "Go to the Union Room and enjoy\n"
+    "meeting other Trainers.$"
 }
 
 text CeladonCity_Condominiums_RoofRoom_Text_PamphletOnTMs {
@@ -56,5 +56,5 @@ text CeladonCity_Condominiums_RoofRoom_Text_PamphletOnTMs {
     "There are fifty TMs in all.\p"
     "There are also seven HMs that\n"
     "can be used repeatedly.\p"
-    "SILPH CO.$"
+    "Silph Co.$"
 }

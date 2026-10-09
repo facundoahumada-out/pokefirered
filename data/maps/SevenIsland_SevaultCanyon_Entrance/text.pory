@@ -27,7 +27,7 @@ text SevenIsland_SevaultCanyon_Entrance_Text_MasonDefeat {
 
 text SevenIsland_SevaultCanyon_Entrance_Text_MasonPostBattle {
     "Lalalah…\n"
-    "My POKéMON, I send them out,\l"
+    "My Pokémon, I send them out,\l"
     "all the girls scream and shout!$"
 }
 
@@ -41,73 +41,73 @@ text SevenIsland_SevaultCanyon_Entrance_Text_NicolasDefeat {
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_NicolasPostBattle {
-    "TRAINERS like you from cities,\n"
+    "Trainers like you from cities,\n"
     "they sure are tough.\p"
-    "You'll be headed for the TOWER,\n"
+    "You'll be headed for the Tower,\n"
     "won't you?$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_MadelineIntro {
     "I punish people who abuse\n"
-    "POKéMON!$"
+    "Pokémon!$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_MadelineDefeat {
     "You don't seem to be a problem\n"
-    "TRAINER.$"
+    "Trainer.$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_MadelinePostBattle {
-    "If you treat your POKéMON with\n"
+    "If you treat your Pokémon with\n"
     "kindness, they'll understand.$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_EveIntro {
-    "EVE: I'll team up with JON and\n"
+    "Eve: I'll team up with Jon and\n"
     "battle together.$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_EveDefeat {
-    "EVE: Me and JON, we lost.\n"
+    "Eve: Me and Jon, we lost.\n"
     "Ehehe.$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_EvePostBattle {
-    "EVE: I'm going to work harder with\n"
-    "JON.$"
+    "Eve: I'm going to work harder with\n"
+    "Jon.$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_EveNotEnoughMons {
-    "EVE: I want to team up with JON\n"
+    "Eve: I want to team up with Jon\n"
     "when I battle you.\p"
-    "Come back with two POKéMON, okay?$"
+    "Come back with two Pokémon, okay?$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_JonIntro {
-    "JON: When I'm with EVE, it feels\n"
+    "Jon: When I'm with Eve, it feels\n"
     "like we could never lose.$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_JonDefeat {
-    "JON: When I'm with EVE,\n"
+    "Jon: When I'm with Eve,\n"
     "it doesn't feel like I've lost!$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_JonPostBattle {
-    "JON: When I'm with EVE, I feel\n"
+    "Jon: When I'm with Eve, I feel\n"
     "giddy whether I win or lose.\p"
     "It's magical!$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_JonNotEnoughMons {
-    "JON: If it's with EVE, I'll be\n"
+    "Jon: If it's with Eve, I'll be\n"
     "happy to battle with you.\p"
     "So, I'd like to make it a\n"
     "two-on-two battle, if I may.$"
 }
 
 text SevenIsland_SevaultCanyon_Entrance_Text_RouteSign {
-    "SEVAULT CANYON ENTRANCE\p"
-    "TRAINERS are asked to refrain from\n"
-    "damaging plants in the CANYON.$"
+    "Sevault Canyon Entrance\p"
+    "Trainers are asked to refrain from\n"
+    "damaging plants in the Canyon.$"
 }

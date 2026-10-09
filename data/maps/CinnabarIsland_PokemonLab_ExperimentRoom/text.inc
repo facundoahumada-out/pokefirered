@@ -2,9 +2,9 @@ Text_MetronomeTeach::
 # 1 "data/maps/CinnabarIsland_PokemonLab_ExperimentRoom/text.pory"
 	.string "Tch-tch-tch!\n"
 	.string "I'll teach you a nifty move.\p"
-	.string "Teach it to a POKéMON, and watch\n"
+	.string "Teach it to a Pokémon, and watch\n"
 	.string "the fun unfold!\p"
-	.string "It's a move called METRONOME.\n"
+	.string "It's a move called Metronome.\n"
 	.string "Does it strike your fancy?$"
 
 Text_MetronomeDeclined::
@@ -14,13 +14,13 @@ Text_MetronomeDeclined::
 Text_MetronomeWhichMon::
 # 14 "data/maps/CinnabarIsland_PokemonLab_ExperimentRoom/text.pory"
 	.string "Okay!\n"
-	.string "Which POKéMON should I teach?$"
+	.string "Which Pokémon should I teach?$"
 
 Text_MetronomeTaught::
 # 19 "data/maps/CinnabarIsland_PokemonLab_ExperimentRoom/text.pory"
 	.string "Tch-tch-tch!\n"
-	.string "That's the sound of a METRONOME.\p"
-	.string "It tweaks your POKéMON's brain into\n"
+	.string "That's the sound of a Metronome.\p"
+	.string "It tweaks your Pokémon's brain into\n"
 	.string "using moves it doesn't even know.$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_HaveYouAFossilForMe::
@@ -28,7 +28,7 @@ CinnabarIsland_PokemonLab_ExperimentRoom_Text_HaveYouAFossilForMe::
 	.string "Hiya!\p"
 	.string "I am important doctor.\n"
 	.string "Yes, very much so, indeed.\p"
-	.string "Here, I study rare POKéMON fossils.\n"
+	.string "Here, I study rare Pokémon fossils.\n"
 	.string "All the time, I study.\p"
 	.string "You!\n"
 	.string "Have you a fossil for me?$"
@@ -65,9 +65,9 @@ CinnabarIsland_PokemonLab_ExperimentRoom_Text_ThatFossilIsOfMonMakeItLiveAgain::
 	.string "Oh!\n"
 	.string "That is {STR_VAR_2}, it is!\p"
 	.string "It is fossil of {STR_VAR_1},\n"
-	.string "a POKéMON that is already extinct!\p"
+	.string "a Pokémon that is already extinct!\p"
 	.string "My Resurrection Machine will make\n"
-	.string "that POKéMON live again!$"
+	.string "that Pokémon live again!$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_HandedFossilToWeirdDoctor::
 # 75 "data/maps/CinnabarIsland_PokemonLab_ExperimentRoom/text.pory"

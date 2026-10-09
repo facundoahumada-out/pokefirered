@@ -1,11 +1,11 @@
 text Route4_Text_TrippedOverGeodude {
     "Ouch! I tripped over a rocky\n"
-    "POKéMON, GEODUDE!$"
+    "Pokémon, Geodude!$"
 }
 
 text Route4_Text_CrissyIntro {
-    "I came to MT. MOON in search of\n"
-    "mushroom POKéMON.$"
+    "I came to Mt. Moon in search of\n"
+    "mushroom Pokémon.$"
 }
 
 text Route4_Text_CrissyDefeat {
@@ -19,33 +19,33 @@ text Route4_Text_CrissyPostBattle {
 }
 
 text Route4_Text_MtMoonEntrance {
-    "MT. MOON\n"
+    "Mt. Moon\n"
     "Tunnel Entrance$"
 }
 
 text Route4_Text_RouteSign {
-    "ROUTE 4\n"
-    "MT. MOON - CERULEAN CITY$"
+    "Route 4\n"
+    "Mt. Moon - Cerulean City$"
 }
 
 text Text_MegaPunchTeach {
     "A punch of roaring ferocity!\p"
     "Packed with destructive power!\p"
     "When the chips are down,\n"
-    "MEGA PUNCH is the ultimate attack!\l"
+    "Mega Punch is the ultimate attack!\l"
     "You agree, yes?\p"
     "Now!\n"
-    "Let me teach it to your POKéMON!$"
+    "Let me teach it to your Pokémon!$"
 }
 
 text Text_MegaPunchDeclined {
     "You'll be back when you understand\n"
-    "the worth of MEGA PUNCH.$"
+    "the worth of Mega Punch.$"
 }
 
 text Text_MegaPunchWhichMon {
     "Fine!\n"
-    "Which POKéMON will learn it?$"
+    "Which Pokémon will learn it?$"
 }
 
 text Text_MegaPunchTaught {
@@ -60,20 +60,20 @@ text Text_MegaKickTeach {
     "A kick of brutal ferocity!\p"
     "Packed with destructive power!\p"
     "When you get right down to it,\n"
-    "MEGA KICK is the ultimate attack!\l"
+    "Mega Kick is the ultimate attack!\l"
     "Don't you agree?\p"
     "Okay!\n"
-    "I'll teach it to your POKéMON!$"
+    "I'll teach it to your Pokémon!$"
 }
 
 text Text_MegaKickDeclined {
     "You'll come crawling back when you\n"
-    "realize the value of MEGA KICK.$"
+    "realize the value of Mega Kick.$"
 }
 
 text Text_MegaKickWhichMon {
     "All right!\n"
-    "Which POKéMON wants to learn it?$"
+    "Which Pokémon wants to learn it?$"
 }
 
 text Text_MegaKickTaught {
@@ -85,10 +85,10 @@ text Text_MegaKickTaught {
 }
 
 text Route4_Text_PeopleLikeAndRespectBrock {
-    "Oh, wow, that's the BOULDERBADGE!\n"
-    "You got it from BROCK, didn't you?\p"
-    "BROCK is cool. He's not just tough.\n"
+    "Oh, wow, that's the Boulderbadge!\n"
+    "You got it from Brock, didn't you?\p"
+    "Brock is cool. He's not just tough.\n"
     "People like and respect him.\p"
-    "I want to become a GYM LEADER\n"
+    "I want to become a Gym Leader\n"
     "like him.$"
 }

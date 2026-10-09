@@ -13,7 +13,7 @@ SilphCo_9F_Text_ThankYouSoMuch::
 
 SilphCo_9F_Text_Grunt1Intro::
 # 14 "data/maps/SilphCo_9F/text.pory"
-	.string "Your POKéMON seem to adore you,\n"
+	.string "Your Pokémon seem to adore you,\n"
 	.string "kid!$"
 
 SilphCo_9F_Text_Grunt1Defeat::
@@ -22,12 +22,12 @@ SilphCo_9F_Text_Grunt1Defeat::
 
 SilphCo_9F_Text_Grunt1PostBattle::
 # 23 "data/maps/SilphCo_9F/text.pory"
-	.string "If I had started as a TRAINER at\n"
+	.string "If I had started as a Trainer at\n"
 	.string "your age…$"
 
 SilphCo_9F_Text_EdIntro::
 # 28 "data/maps/SilphCo_9F/text.pory"
-	.string "Your POKéMON have weak points!\n"
+	.string "Your Pokémon have weak points!\n"
 	.string "I can nail them!$"
 
 SilphCo_9F_Text_EdDefeat::
@@ -41,8 +41,8 @@ SilphCo_9F_Text_EdPostBattle::
 
 SilphCo_9F_Text_Grunt2Intro::
 # 42 "data/maps/SilphCo_9F/text.pory"
-	.string "I am one of the four ROCKET\n"
-	.string "BROTHERS!$"
+	.string "I am one of the four Rocket\n"
+	.string "Brothers!$"
 
 SilphCo_9F_Text_Grunt2Defeat::
 # 47 "data/maps/SilphCo_9F/text.pory"
@@ -55,5 +55,5 @@ SilphCo_9F_Text_Grunt2PostBattle::
 
 SilphCo_9F_Text_FloorSign::
 # 56 "data/maps/SilphCo_9F/text.pory"
-	.string "SILPH CO. HEAD OFFICE\n"
+	.string "Silph Co. Head Office\n"
 	.string "9F$"

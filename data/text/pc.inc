@@ -12,7 +12,7 @@ Text_AccessedSomeonesPC::
 
 Text_OpenedPkmnStorage::
 # 13 "data/text/pc.pory"
-	.string "POKéMON Storage System opened.$"
+	.string "Pokémon Storage System opened.$"
 
 Text_AccessedPlayersPC::
 # 17 "data/text/pc.pory"
@@ -20,4 +20,4 @@ Text_AccessedPlayersPC::
 
 Text_AccessedBillsPC::
 # 21 "data/text/pc.pory"
-	.string "Accessed BILL's PC.$"
+	.string "Accessed Bill's PC.$"

@@ -8,7 +8,7 @@ text Route11_Text_HugoDefeat {
 }
 
 text Route11_Text_HugoPostBattle {
-    "POKéMON is life!\n"
+    "Pokémon is life!\n"
     "And to live is to play games!$"
 }
 
@@ -23,7 +23,7 @@ text Route11_Text_JasperDefeat {
 
 text Route11_Text_JasperPostBattle {
     "You can't be a coward in the world\n"
-    "of POKéMON!$"
+    "of Pokémon!$"
 }
 
 text Route11_Text_EddieIntro {
@@ -54,12 +54,12 @@ text Route11_Text_BraxtonPostBattle {
 }
 
 text Route11_Text_DillonIntro {
-    "I just became a TRAINER.\n"
+    "I just became a Trainer.\n"
     "But, I think I can win.$"
 }
 
 text Route11_Text_DillonDefeat {
-    "My POKéMON couldn't win…\n"
+    "My Pokémon couldn't win…\n"
     "Haven't they grown enough?$"
 }
 
@@ -100,11 +100,11 @@ text Route11_Text_YasuIntro {
 
 text Route11_Text_YasuDefeat {
     "Darn!\n"
-    "My POKéMON need to be stronger!$"
+    "My Pokémon need to be stronger!$"
 }
 
 text Route11_Text_YasuPostBattle {
-    "There's a fat POKéMON that comes\n"
+    "There's a fat Pokémon that comes\n"
     "down from the mountains.\p"
     "I bet it'd be strong if you can\n"
     "catch it.$"
@@ -124,7 +124,7 @@ text Route11_Text_BerniePostBattle {
 }
 
 text Route11_Text_DaveIntro {
-    "I raised my POKéMON carefully.\n"
+    "I raised my Pokémon carefully.\n"
     "They should be ready by now!$"
 }
 
@@ -139,5 +139,5 @@ text Route11_Text_DavePostBattle {
 }
 
 text Route11_Text_DiglettsCave {
-    "DIGLETT'S CAVE$"
+    "Diglett's Cave$"
 }

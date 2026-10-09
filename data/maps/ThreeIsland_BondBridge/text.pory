@@ -10,7 +10,7 @@ text ThreeIsland_BondBridge_Text_NikkiDefeat {
 
 text ThreeIsland_BondBridge_Text_NikkiPostBattle {
     "Perhaps that reek is your sweaty\n"
-    "POKéMON's body odor…$"
+    "Pokémon's body odor…$"
 }
 
 text ThreeIsland_BondBridge_Text_VioletIntro {
@@ -20,12 +20,12 @@ text ThreeIsland_BondBridge_Text_VioletIntro {
 
 text ThreeIsland_BondBridge_Text_VioletDefeat {
     "You're raising some wonderful\n"
-    "POKéMON.$"
+    "Pokémon.$"
 }
 
 text ThreeIsland_BondBridge_Text_VioletPostBattle {
     "If you keep going this way, you'll\n"
-    "eventually reach BERRY FOREST.$"
+    "eventually reach Berry Forest.$"
 }
 
 text ThreeIsland_BondBridge_Text_AmiraIntro {
@@ -45,7 +45,7 @@ text ThreeIsland_BondBridge_Text_AmiraPostBattle {
 
 text ThreeIsland_BondBridge_Text_AlexisIntro {
     "Yay, yay!\n"
-    "POKéMON!$"
+    "Pokémon!$"
 }
 
 text ThreeIsland_BondBridge_Text_AlexisDefeat {
@@ -68,58 +68,58 @@ text ThreeIsland_BondBridge_Text_TishaDefeat {
 }
 
 text ThreeIsland_BondBridge_Text_TishaPostBattle {
-    "A POKéMON bit through my \n"
+    "A Pokémon bit through my \n"
     "swimsuit.\p"
     "I can't get out of the water!$"
 }
 
 text ThreeIsland_BondBridge_Text_JoyIntro {
-    "JOY: We'll teach you what our\n"
-    "favorite POKéMON is!$"
+    "Joy: We'll teach you what our\n"
+    "favorite Pokémon is!$"
 }
 
 text ThreeIsland_BondBridge_Text_JoyDefeat {
-    "JOY: Ohh…\n"
-    "MEG!$"
+    "Joy: Ohh…\n"
+    "Meg!$"
 }
 
 text ThreeIsland_BondBridge_Text_JoyPostBattle {
-    "JOY: Wasn't that fun?\n"
+    "Joy: Wasn't that fun?\n"
     "I hope we can battle again!$"
 }
 
 text ThreeIsland_BondBridge_Text_JoyNotEnoughMons {
-    "JOY: I really want to battle with\n"
-    "MEG.\p"
-    "One POKéMON isn't enough.$"
+    "Joy: I really want to battle with\n"
+    "Meg.\p"
+    "One Pokémon isn't enough.$"
 }
 
 text ThreeIsland_BondBridge_Text_MegIntro {
-    "MEG: We'll show you our favorite\n"
-    "POKéMON.$"
+    "Meg: We'll show you our favorite\n"
+    "Pokémon.$"
 }
 
 text ThreeIsland_BondBridge_Text_MegDefeat {
-    "MEG: Ohh…\n"
-    "JOY!$"
+    "Meg: Ohh…\n"
+    "Joy!$"
 }
 
 text ThreeIsland_BondBridge_Text_MegPostBattle {
-    "MEG: JOY, wasn't that fun?$"
+    "Meg: Joy, wasn't that fun?$"
 }
 
 text ThreeIsland_BondBridge_Text_MegNotEnoughMons {
-    "MEG: I want to battle together\n"
-    "with JOY.\p"
-    "One POKéMON isn't enough.$"
+    "Meg: I want to battle together\n"
+    "with Joy.\p"
+    "One Pokémon isn't enough.$"
 }
 
 text ThreeIsland_BondBridge_Text_BerryForestAhead {
-    "BERRY FOREST AHEAD$"
+    "Berry Forest Ahead$"
 }
 
 text ThreeIsland_BondBridge_Text_BondBridgeSign {
-    "BOND BRIDGE\n"
+    "Bond Bridge\n"
     "Please be quiet when crossing.\p"
-    "BERRY FOREST AHEAD$"
+    "Berry Forest Ahead$"
 }

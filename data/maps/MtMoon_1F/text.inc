@@ -1,6 +1,6 @@
 MtMoon_1F_Text_MarcosIntro::
 # 1 "data/maps/MtMoon_1F/text.pory"
-	.string "WHOA!\n"
+	.string "Whoa!\n"
 	.string "You shocked me!\l"
 	.string "…Oh, you're just a kid!$"
 
@@ -51,11 +51,11 @@ MtMoon_1F_Text_JovanIntro::
 
 MtMoon_1F_Text_JovanDefeat::
 # 52 "data/maps/MtMoon_1F/text.pory"
-	.string "My POKéMON won't do!$"
+	.string "My Pokémon won't do!$"
 
 MtMoon_1F_Text_JovanPostBattle::
 # 56 "data/maps/MtMoon_1F/text.pory"
-	.string "I have to find stronger POKéMON.\n"
+	.string "I have to find stronger Pokémon.\n"
 	.string "Where might they be?$"
 
 MtMoon_1F_Text_IrisIntro::
@@ -85,12 +85,12 @@ MtMoon_1F_Text_KentDefeat::
 MtMoon_1F_Text_KentPostBattle::
 # 85 "data/maps/MtMoon_1F/text.pory"
 	.string "I saw them!\n"
-	.string "I'm sure they're from TEAM ROCKET!$"
+	.string "I'm sure they're from Team Rocket!$"
 
 MtMoon_1F_Text_RobbyIntro::
 # 90 "data/maps/MtMoon_1F/text.pory"
 	.string "You need to go through this cave\n"
-	.string "to get to CERULEAN CITY.$"
+	.string "to get to Cerulean City.$"
 
 MtMoon_1F_Text_RobbyDefeat::
 # 95 "data/maps/MtMoon_1F/text.pory"
@@ -98,18 +98,18 @@ MtMoon_1F_Text_RobbyDefeat::
 
 MtMoon_1F_Text_RobbyPostBattle::
 # 99 "data/maps/MtMoon_1F/text.pory"
-	.string "ZUBAT is tough!\n"
+	.string "Zubat is tough!\n"
 	.string "But if you can catch one, you'll\l"
 	.string "be able to count on it.$"
 
 MtMoon_1F_Text_ZubatIsABloodsucker::
 # 105 "data/maps/MtMoon_1F/text.pory"
 	.string "Beware!\n"
-	.string "ZUBAT is a bloodsucker!$"
+	.string "Zubat is a bloodsucker!$"
 
 MtMoon_1F_Text_BrockHelpsExcavateFossils::
 # 110 "data/maps/MtMoon_1F/text.pory"
 	.string "Hi, I'm excavating for fossils here\n"
-	.string "under MT. MOON.\p"
-	.string "Sometimes, BROCK of PEWTER GYM\n"
+	.string "under Mt. Moon.\p"
+	.string "Sometimes, Brock of Pewter Gym\n"
 	.string "lends me a hand.$"

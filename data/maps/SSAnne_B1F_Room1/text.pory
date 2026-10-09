@@ -10,14 +10,14 @@ text SSAnne_B1F_Room1_Text_PhillipDefeat {
 
 text SSAnne_B1F_Room1_Text_PhillipPostBattle {
     "When we're out at sea, jellyfish\n"
-    "POKéMON sometimes drift by.$"
+    "Pokémon sometimes drift by.$"
 }
 
 text SSAnne_B1F_Room1_Text_BarnyIntro {
     "Hello, stranger!\p"
     "I can't tell if you're from the seas\n"
     "or mountains, but stop and chat.\p"
-    "All my POKéMON are from the sea.$"
+    "All my Pokémon are from the sea.$"
 }
 
 text SSAnne_B1F_Room1_Text_BarnyDefeat {

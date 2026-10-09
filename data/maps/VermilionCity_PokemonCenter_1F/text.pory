@@ -1,23 +1,23 @@
 text VermilionCity_PokemonCenter_1F_Text_TrainerMonsStrongerThanWild {
     "Even if they are the same level,\n"
-    "POKéMON can have very different\l"
+    "Pokémon can have very different\l"
     "stats and abilities.\p"
-    "A POKéMON raised by a TRAINER is\n"
+    "A Pokémon raised by a Trainer is\n"
     "stronger than one in the wild.$"
 }
 
 text VermilionCity_PokemonCenter_1F_Text_PoisonedMonFaintedWhileWalking {
-    "My POKéMON was poisoned!\n"
+    "My Pokémon was poisoned!\n"
     "It fainted while we were walking!$"
 }
 
 text VermilionCity_PokemonCenter_1F_Text_AllMonWeakToSpecificTypes {
     "It is true that a higher-level\n"
-    "POKéMON will be more powerful…\p"
-    "But, all POKéMON will have weak\n"
+    "Pokémon will be more powerful…\p"
+    "But, all Pokémon will have weak\n"
     "points against specific types.\p"
     "So, there appears to be no\n"
-    "universally strong POKéMON.$"
+    "universally strong Pokémon.$"
 }
 
 text VermilionCity_PokemonCenter_1F_Text_UrgeToBattleSomeoneAgain {
@@ -33,17 +33,17 @@ text VermilionCity_PokemonCenter_1F_Text_UrgeToBattleSomeoneAgain {
 
 text VermilionCity_PokemonCenter_1F_Text_UseDeviceForRematches {
     "Use that device and you'll find\n"
-    "TRAINERS looking for a rematch.\p"
+    "Trainers looking for a rematch.\p"
     "You have to charge its battery to\n"
     "use it, though.$"
 }
 
 text VermilionCity_PokemonCenter_1F_Text_ExplainVSSeeker {
-    "How do you use the VS SEEKER?\n"
+    "How do you use the VS Seeker?\n"
     "There's nothing to it.\p"
     "Use it like beep-beep-beep, and\n"
-    "TRAINERS around you will notice.\p"
-    "If any TRAINER wants a rematch,\n"
+    "Trainers around you will notice.\p"
+    "If any Trainer wants a rematch,\n"
     "it will let you know immediately.\p"
     "Charge its battery and use it\n"
     "while you're on a road.$"

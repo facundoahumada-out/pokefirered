@@ -9,7 +9,7 @@ text Route21_North_Text_RonaldDefeat {
 
 text Route21_North_Text_RonaldPostBattle {
     "I can't catch anything good.\n"
-    "Not one good POKéMON to be had!$"
+    "Not one good Pokémon to be had!$"
 }
 
 text Route21_North_Text_WadeIntro {
@@ -18,12 +18,12 @@ text Route21_North_Text_WadeIntro {
 }
 
 text Route21_North_Text_WadeDefeat {
-    "Heheh, MAGIKARP just don't make\n"
+    "Heheh, Magikarp just don't make\n"
     "the grade, do they?$"
 }
 
 text Route21_North_Text_WadePostBattle {
-    "I seem to only catch MAGIKARP!$"
+    "I seem to only catch Magikarp!$"
 }
 
 text Route21_North_Text_SpencerIntro {

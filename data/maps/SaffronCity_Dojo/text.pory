@@ -1,7 +1,7 @@
 text SaffronCity_Dojo_Text_MasterKoichiIntro {
     "Grunt!\p"
-    "I am the KARATE MASTER!\n"
-    "I am the LEADER here!\p"
+    "I am the Karate Master!\n"
+    "I am the Leader here!\p"
     "You wish to challenge us?\n"
     "Expect no mercy!\p"
     "Fwaaa!$"
@@ -17,7 +17,7 @@ text SaffronCity_Dojo_Text_ChoosePrizedFightingMon {
     "But, I beseech you, do not take\n"
     "our emblem as your trophy!\p"
     "In return, I will give you a prized\n"
-    "FIGHTING POKéMON!\p"
+    "Fighting Pokémon!\p"
     "Choose whichever one you like!$"
 }
 
@@ -36,7 +36,7 @@ text SaffronCity_Dojo_Text_MikeDefeat {
 }
 
 text SaffronCity_Dojo_Text_MikePostBattle {
-    "You wait 'til you see our MASTER!\n"
+    "You wait 'til you see our Master!\n"
     "I'm a small fry compared to him!$"
 }
 
@@ -51,7 +51,7 @@ text SaffronCity_Dojo_Text_HidekiDefeat {
 }
 
 text SaffronCity_Dojo_Text_HidekiPostBattle {
-    "Our MASTER is a pro fighter.\n"
+    "Our Master is a pro fighter.\n"
     "Be prepared to lose!$"
 }
 
@@ -75,7 +75,7 @@ text SaffronCity_Dojo_Text_AaronPostBattle {
 text SaffronCity_Dojo_Text_HitoshiIntro {
     "Hwaah!\p"
     "You're trespassing in our\n"
-    "FIGHTING DOJO!$"
+    "Fighting Dojo!$"
 }
 
 text SaffronCity_Dojo_Text_HitoshiDefeat {
@@ -90,17 +90,17 @@ text SaffronCity_Dojo_Text_HitoshiPostBattle {
 
 text SaffronCity_Dojo_Text_YouWantHitmonlee {
     "You want the hard-kicking\n"
-    "HITMONLEE?$"
+    "Hitmonlee?$"
 }
 
 text SaffronCity_Dojo_Text_ReceivedMonFromKarateMaster {
     "{PLAYER} received the {STR_VAR_1}\n"
-    "from the KARATE MASTER.$"
+    "from the Karate Master.$"
 }
 
 text SaffronCity_Dojo_Text_YouWantHitmonchan {
     "You want the piston-punching\n"
-    "HITMONCHAN?$"
+    "Hitmonchan?$"
 }
 
 text SaffronCity_Dojo_Text_ReceivedMonFromKarateMaster2 {
@@ -121,5 +121,5 @@ text SaffronCity_Dojo_Text_GoesAroundComesAround {
 }
 
 text SaffronCity_Dojo_Text_FightingDojo {
-    "FIGHTING DOJO$"
+    "Fighting Dojo$"
 }

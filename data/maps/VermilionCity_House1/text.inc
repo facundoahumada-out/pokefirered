@@ -1,6 +1,6 @@
 VermilionCity_House1_Text_ImFishingGuruDoYouLikeToFish::
 # 1 "data/maps/VermilionCity_House1/text.pory"
-	.string "I'm the FISHING GURU!\p"
+	.string "I'm the Fishing Guru!\p"
 	.string "I simply looove fishing!\n"
 	.string "I can't bear to go without.\p"
 	.string "Tell me, do you like to fish?$"
@@ -13,8 +13,8 @@ VermilionCity_House1_Text_TakeThisAndFish::
 
 VermilionCity_House1_Text_ReceivedOldRodFromFishingGuru::
 # 14 "data/maps/VermilionCity_House1/text.pory"
-	.string "{PLAYER} received an OLD ROD from\n"
-	.string "the FISHING GURU.$"
+	.string "{PLAYER} received an Old Rod from\n"
+	.string "the Fishing Guru.$"
 
 VermilionCity_House1_Text_FishingIsAWayOfLife::
 # 19 "data/maps/VermilionCity_House1/text.pory"

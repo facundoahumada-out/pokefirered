@@ -1,6 +1,6 @@
 Trade_Text_LookingForMonWannaTradeForMon::
 # 1 "data/text/ingame_trade.pory"
-	.string "I'm looking for the POKéMON\n"
+	.string "I'm looking for the Pokémon\n"
 	.string "{STR_VAR_1}!\p"
 	.string "Wanna trade one for my\n"
 	.string "{STR_VAR_2}?$"

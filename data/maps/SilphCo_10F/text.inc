@@ -37,5 +37,5 @@ SilphCo_10F_Text_KeepMeCryingASecret::
 
 SilphCo_10F_Text_FloorSign::
 # 38 "data/maps/SilphCo_10F/text.pory"
-	.string "SILPH CO. HEAD OFFICE\n"
+	.string "Silph Co. Head Office\n"
 	.string "10F$"

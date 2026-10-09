@@ -1,20 +1,20 @@
 PalletTown_Text_OakDontGoOut::
 # 1 "data/maps/PalletTown/text.pory"
-	.string "OAK: Hey! Wait!\n"
+	.string "Oak: Hey! Wait!\n"
 	.string "Don't go out!$"
 
 PalletTown_Text_OakGrassUnsafeNeedMon::
 # 6 "data/maps/PalletTown/text.pory"
-	.string "OAK: It's unsafe!\n"
-	.string "Wild POKéMON live in tall grass!\p"
-	.string "You need your own POKéMON for\n"
+	.string "Oak: It's unsafe!\n"
+	.string "Wild Pokémon live in tall grass!\p"
+	.string "You need your own Pokémon for\n"
 	.string "your protection.\p"
 	.string "I know!\n"
 	.string "Here, come with me!$"
 
 PalletTown_Text_RaisingMonsToo::
 # 15 "data/maps/PalletTown/text.pory"
-	.string "I'm raising POKéMON, too.\p"
+	.string "I'm raising Pokémon, too.\p"
 	.string "When they get strong, they can\n"
 	.string "protect me.$"
 
@@ -22,11 +22,11 @@ PalletTown_Text_CanStoreItemsAndMonsInPC::
 # 21 "data/maps/PalletTown/text.pory"
 	.string "Technology is incredible!\p"
 	.string "You can now store and recall items\n"
-	.string "and POKéMON as data via PC.$"
+	.string "and Pokémon as data via PC.$"
 
 PalletTown_Text_OakPokemonResearchLab::
 # 27 "data/maps/PalletTown/text.pory"
-	.string "OAK POKéMON RESEARCH LAB$"
+	.string "Oak Pokémon Research Lab$"
 
 PalletTown_Text_PlayersHouse::
 # 31 "data/maps/PalletTown/text.pory"
@@ -38,15 +38,15 @@ PalletTown_Text_RivalsHouse::
 
 PalletTown_Text_TownSign::
 # 39 "data/maps/PalletTown/text.pory"
-	.string "PALLET TOWN\n"
+	.string "Pallet Town\n"
 	.string "Shades of your journey await!$"
 
 PalletTown_Text_OakLetMeSeePokedex::
 # 44 "data/maps/PalletTown/text.pory"
-	.string "OAK: Ah, {PLAYER}!\n"
+	.string "Oak: Ah, {PLAYER}!\n"
 	.string "You're back, are you?\p"
 	.string "How much have you filled in your\n"
-	.string "POKéDEX?\p"
+	.string "Pokédex?\p"
 	.string "May I see it?\p"
 	.string "Let's see…$"
 
@@ -69,7 +69,7 @@ PalletTown_Text_CaughtXImpressiveFollowMe::
 
 PalletTown_Text_OakYouEnjoyingTraveling::
 # 70 "data/maps/PalletTown/text.pory"
-	.string "OAK: Ah, {PLAYER}!\n"
+	.string "Oak: Ah, {PLAYER}!\n"
 	.string "You seem to be enjoying traveling.\p"
 	.string "Knowing you, {PLAYER}, I can easily\n"
 	.string "imagine you going out to even more\l"

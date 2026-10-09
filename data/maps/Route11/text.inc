@@ -9,7 +9,7 @@ Route11_Text_HugoDefeat::
 
 Route11_Text_HugoPostBattle::
 # 10 "data/maps/Route11/text.pory"
-	.string "POKéMON is life!\n"
+	.string "Pokémon is life!\n"
 	.string "And to live is to play games!$"
 
 Route11_Text_JasperIntro::
@@ -24,7 +24,7 @@ Route11_Text_JasperDefeat::
 Route11_Text_JasperPostBattle::
 # 24 "data/maps/Route11/text.pory"
 	.string "You can't be a coward in the world\n"
-	.string "of POKéMON!$"
+	.string "of Pokémon!$"
 
 Route11_Text_EddieIntro::
 # 29 "data/maps/Route11/text.pory"
@@ -55,12 +55,12 @@ Route11_Text_BraxtonPostBattle::
 
 Route11_Text_DillonIntro::
 # 56 "data/maps/Route11/text.pory"
-	.string "I just became a TRAINER.\n"
+	.string "I just became a Trainer.\n"
 	.string "But, I think I can win.$"
 
 Route11_Text_DillonDefeat::
 # 61 "data/maps/Route11/text.pory"
-	.string "My POKéMON couldn't win…\n"
+	.string "My Pokémon couldn't win…\n"
 	.string "Haven't they grown enough?$"
 
 Route11_Text_DillonPostBattle::
@@ -101,11 +101,11 @@ Route11_Text_YasuIntro::
 Route11_Text_YasuDefeat::
 # 101 "data/maps/Route11/text.pory"
 	.string "Darn!\n"
-	.string "My POKéMON need to be stronger!$"
+	.string "My Pokémon need to be stronger!$"
 
 Route11_Text_YasuPostBattle::
 # 106 "data/maps/Route11/text.pory"
-	.string "There's a fat POKéMON that comes\n"
+	.string "There's a fat Pokémon that comes\n"
 	.string "down from the mountains.\p"
 	.string "I bet it'd be strong if you can\n"
 	.string "catch it.$"
@@ -125,7 +125,7 @@ Route11_Text_BerniePostBattle::
 
 Route11_Text_DaveIntro::
 # 126 "data/maps/Route11/text.pory"
-	.string "I raised my POKéMON carefully.\n"
+	.string "I raised my Pokémon carefully.\n"
 	.string "They should be ready by now!$"
 
 Route11_Text_DaveDefeat::
@@ -140,4 +140,4 @@ Route11_Text_DavePostBattle::
 
 Route11_Text_DiglettsCave::
 # 141 "data/maps/Route11/text.pory"
-	.string "DIGLETT'S CAVE$"
+	.string "Diglett's Cave$"

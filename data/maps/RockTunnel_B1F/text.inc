@@ -31,7 +31,7 @@ RockTunnel_B1F_Text_DudleyPostBattle::
 
 RockTunnel_B1F_Text_CooperIntro::
 # 32 "data/maps/RockTunnel_B1F/text.pory"
-	.string "You have a POKéDEX?\n"
+	.string "You have a Pokédex?\n"
 	.string "I want one, too.$"
 
 RockTunnel_B1F_Text_CooperDefeat::
@@ -41,12 +41,12 @@ RockTunnel_B1F_Text_CooperDefeat::
 
 RockTunnel_B1F_Text_CooperPostBattle::
 # 42 "data/maps/RockTunnel_B1F/text.pory"
-	.string "When you finish your POKéDEX,\n"
+	.string "When you finish your Pokédex,\n"
 	.string "can I have it?$"
 
 RockTunnel_B1F_Text_SteveIntro::
 # 47 "data/maps/RockTunnel_B1F/text.pory"
-	.string "Um… Do you know about POKéMON\n"
+	.string "Um… Do you know about Pokémon\n"
 	.string "cosplay?$"
 
 RockTunnel_B1F_Text_SteveDefeat::
@@ -55,13 +55,13 @@ RockTunnel_B1F_Text_SteveDefeat::
 
 RockTunnel_B1F_Text_StevePostBattle::
 # 56 "data/maps/RockTunnel_B1F/text.pory"
-	.string "POKéMON cosplay is dressing up as\n"
-	.string "POKéMON for fun.\p"
-	.string "CLEFAIRY is a favorite.$"
+	.string "Pokémon cosplay is dressing up as\n"
+	.string "Pokémon for fun.\p"
+	.string "Clefairy is a favorite.$"
 
 RockTunnel_B1F_Text_AllenIntro::
 # 62 "data/maps/RockTunnel_B1F/text.pory"
-	.string "My POKéMON techniques will leave\n"
+	.string "My Pokémon techniques will leave\n"
 	.string "you crying!$"
 
 RockTunnel_B1F_Text_AllenDefeat::
@@ -72,7 +72,7 @@ RockTunnel_B1F_Text_AllenDefeat::
 RockTunnel_B1F_Text_AllenPostBattle::
 # 72 "data/maps/RockTunnel_B1F/text.pory"
 	.string "In mountains, you'll often find\n"
-	.string "ROCK-type POKéMON.$"
+	.string "Rock-type Pokémon.$"
 
 RockTunnel_B1F_Text_MarthaIntro::
 # 77 "data/maps/RockTunnel_B1F/text.pory"
@@ -86,7 +86,7 @@ RockTunnel_B1F_Text_MarthaDefeat::
 
 RockTunnel_B1F_Text_MarthaPostBattle::
 # 87 "data/maps/RockTunnel_B1F/text.pory"
-	.string "I like tiny POKéMON.\n"
+	.string "I like tiny Pokémon.\n"
 	.string "Big ones are too scary!$"
 
 RockTunnel_B1F_Text_EricIntro::
@@ -99,12 +99,12 @@ RockTunnel_B1F_Text_EricDefeat::
 
 RockTunnel_B1F_Text_EricPostBattle::
 # 100 "data/maps/RockTunnel_B1F/text.pory"
-	.string "I'll raise my POKéMON to beat\n"
+	.string "I'll raise my Pokémon to beat\n"
 	.string "yours, kid.$"
 
 RockTunnel_B1F_Text_WinstonIntro::
 # 105 "data/maps/RockTunnel_B1F/text.pory"
-	.string "I draw illustrations of POKéMON\n"
+	.string "I draw illustrations of Pokémon\n"
 	.string "when I'm home.$"
 
 RockTunnel_B1F_Text_WinstonDefeat::

@@ -1,5 +1,5 @@
 text FuchsiaCity_House2_Text_DoYouLikeToFish {
-    "I'm the FISHING GURU's older\n"
+    "I'm the Fishing Guru's older\n"
     "brother.\p"
     "I simply looove fishing!\n"
     "I can't bear to go without.\p"
@@ -13,17 +13,17 @@ text FuchsiaCity_House2_Text_LikeYourStyleTakeThis {
 }
 
 text FuchsiaCity_House2_Text_ReceivedGoodRod {
-    "{PLAYER} received a GOOD ROD from\n"
-    "the FISHING GURU's brother.$"
+    "{PLAYER} received a Good Rod from\n"
+    "the Fishing Guru's brother.$"
 }
 
 text FuchsiaCity_House2_Text_GoodRodCanCatchBetterMons {
     "Fishing is a way of life!\n"
     "It is like the finest poetry.\p"
-    "A crummy OLD ROD could only catch\n"
-    "MAGIKARP, yes?\p"
-    "But with a GOOD ROD, you can\n"
-    "catch much better POKéMON.$"
+    "A crummy Old Rod could only catch\n"
+    "Magikarp, yes?\p"
+    "But with a Good Rod, you can\n"
+    "catch much better Pokémon.$"
 }
 
 text FuchsiaCity_House2_Text_OhThatsDisappointing {

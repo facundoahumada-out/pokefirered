@@ -10,22 +10,22 @@ text CeladonCity_Condominiums_3F_Text_ImTheGraphicArtist {
 
 text CeladonCity_Condominiums_3F_Text_IWroteTheStory {
     "I wrote the story!\n"
-    "Isn't ERIKA cute?\p"
-    "I like MISTY a lot, too!\n"
-    "Oh, and SABRINA, I like her!$"
+    "Isn't Erika cute?\p"
+    "I like Misty a lot, too!\n"
+    "Oh, and Sabrina, I like her!$"
 }
 
 text CeladonCity_Condominiums_3F_Text_ImGameDesignerShowMeFinishedPokedex {
     "Is that right?\p"
     "I'm the game designer!\p"
-    "Filling up your POKéDEX is tough,\n"
+    "Filling up your Pokédex is tough,\n"
     "but don't quit!\p"
     "When you finish, come tell me!$"
 }
 
 text CeladonCity_Condominiums_3F_Text_CompletedPokedexCongratulations {
     "Wow! Excellent!\n"
-    "You completed your POKéDEX!\l"
+    "You completed your Pokédex!\l"
     "Congratulations!\l"
     "…$"
 }
@@ -46,5 +46,5 @@ text CeladonCity_Condominiums_3F_Text_ItsScriptBetterNotLookAtEnding {
 }
 
 text CeladonCity_Condominiums_3F_Text_GameFreakDevelopmentRoom {
-    "GAME FREAK Development Room$"
+    "Game Freak Development Room$"
 }

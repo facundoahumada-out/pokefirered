@@ -36,6 +36,6 @@ text PokemonTower_4F_Text_JodyDefeat {
 }
 
 text PokemonTower_4F_Text_JodyPostBattle {
-    "May the departed POKéMON rest in\n"
+    "May the departed Pokémon rest in\n"
     "peace…$"
 }

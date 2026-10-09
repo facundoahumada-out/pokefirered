@@ -2135,19 +2135,22 @@ static void PrintNameChoiceOptions(u8 taskId, u8 hasPlayerBeenNamed)
     CopyWindowToVram(tMenuWindowId, COPYWIN_FULL);
 }
 
-static void GetDefaultName(u8 hasPlayerBeenNamed, u8 rivalNameChoice)
+static void GetDefaultName(u8 hasPlayerBeenNamed, u8 nameChoice)
 {
     const u8 *src;
     u8 *dest;
     u8 i;
     if (hasPlayerBeenNamed == FALSE)
     {
-        src = gNameChoice_Red;
+        if (gSaveBlock2Ptr->playerGender == MALE)
+            src = sMaleNameChoices[nameChoice];
+        else
+            src = sFemaleNameChoices[nameChoice];
         dest = gSaveBlock2Ptr->playerName;
     }
     else
     {
-        src = sRivalNameChoices[rivalNameChoice];
+        src = sRivalNameChoices[nameChoice];
         dest = gSaveBlock1Ptr->rivalName;
     }
     for (i = 0; i < PLAYER_NAME_LENGTH && src[i] != EOS; i++)

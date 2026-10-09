@@ -1,13 +1,13 @@
 CeladonCity_GameCorner_Text_CanExchangeCoinsNextDoor::
 # 1 "data/maps/CeladonCity_GameCorner/text.pory"
 	.string "Welcome!\p"
-	.string "You can exchange your COINS for\n"
+	.string "You can exchange your Coins for\n"
 	.string "fabulous prizes next door.$"
 
 CeladonCity_GameCorner_Text_WelcomeBuySomeCoins::
 # 7 "data/maps/CeladonCity_GameCorner/text.pory"
-	.string "Welcome to ROCKET GAME CORNER!\p"
-	.string "Do you need some game COINS?\n"
+	.string "Welcome to Rocket Game Corner!\p"
+	.string "Do you need some game Coins?\n"
 	.string "Would you like to buy some?$"
 
 CeladonCity_GameCorner_Text_ComePlaySometime::
@@ -18,27 +18,27 @@ CeladonCity_GameCorner_Text_ComePlaySometime::
 CeladonCity_GameCorner_Text_SorryDontHaveCoinCase::
 # 18 "data/maps/CeladonCity_GameCorner/text.pory"
 	.string "Oh, I'm sorry.\n"
-	.string "You don't have a COIN CASE.$"
+	.string "You don't have a Coin Case.$"
 
 CeladonCity_GameCorner_Text_CoinCaseIsFull::
 # 23 "data/maps/CeladonCity_GameCorner/text.pory"
 	.string "Whoops!\n"
-	.string "Your COIN CASE is full.$"
+	.string "Your Coin Case is full.$"
 
 CeladonCity_GameCorner_Text_CantAffordCoins::
 # 28 "data/maps/CeladonCity_GameCorner/text.pory"
-	.string "You can't afford the COINS.$"
+	.string "You can't afford the Coins.$"
 
 CeladonCity_GameCorner_Text_HereAreYourCoins::
 # 32 "data/maps/CeladonCity_GameCorner/text.pory"
 	.string "Thank you.\n"
-	.string "Here are your COINS!$"
+	.string "Here are your Coins!$"
 
 CeladonCity_GameCorner_Text_RumoredTeamRocketRunsThisPlace::
 # 37 "data/maps/CeladonCity_GameCorner/text.pory"
 	.string "Keep this quiet.\p"
 	.string "It's rumored that this place is run\n"
-	.string "by TEAM ROCKET.$"
+	.string "by Team Rocket.$"
 
 CeladonCity_GameCorner_Text_ThinkMachinesHaveDifferentOdds::
 # 43 "data/maps/CeladonCity_GameCorner/text.pory"
@@ -51,12 +51,12 @@ CeladonCity_GameCorner_Text_DoYouWantToPlay::
 
 CeladonCity_GameCorner_Text_Received10CoinsFromMan::
 # 52 "data/maps/CeladonCity_GameCorner/text.pory"
-	.string "{PLAYER} received 10 COINS\n"
+	.string "{PLAYER} received 10 Coins\n"
 	.string "from the man.$"
 
 CeladonCity_GameCorner_Text_DontNeedMyCoins::
 # 57 "data/maps/CeladonCity_GameCorner/text.pory"
-	.string "You don't need my COINS!$"
+	.string "You don't need my Coins!$"
 
 CeladonCity_GameCorner_Text_WinsComeAndGo::
 # 61 "data/maps/CeladonCity_GameCorner/text.pory"
@@ -73,9 +73,9 @@ CeladonCity_GameCorner_Text_GymGuyAdvice::
 	.string "Hey!\p"
 	.string "You have better things to do,\n"
 	.string "champ in the making!\p"
-	.string "CELADON GYM's LEADER is ERIKA.\p"
-	.string "She is a user of GRASS-type\n"
-	.string "POKéMON, and at one with nature.\p"
+	.string "Celadon Gym's Leader is Erika.\p"
+	.string "She is a user of Grass-type\n"
+	.string "Pokémon, and at one with nature.\p"
 	.string "She might appear docile because of\n"
 	.string "her flower arranging…\p"
 	.string "But she's not one to be taken\n"
@@ -83,8 +83,8 @@ CeladonCity_GameCorner_Text_GymGuyAdvice::
 
 CeladonCity_GameCorner_Text_RareMonsForCoins::
 # 84 "data/maps/CeladonCity_GameCorner/text.pory"
-	.string "They offer rare POKéMON that can\n"
-	.string "be exchanged for your COINS.\p"
+	.string "They offer rare Pokémon that can\n"
+	.string "be exchanged for your Coins.\p"
 	.string "But, I just can't seem to win!$"
 
 CeladonCity_GameCorner_Text_SoEasyToGetHooked::
@@ -95,36 +95,36 @@ CeladonCity_GameCorner_Text_SoEasyToGetHooked::
 CeladonCity_GameCorner_Text_WantSomeCoins::
 # 95 "data/maps/CeladonCity_GameCorner/text.pory"
 	.string "What's up?\n"
-	.string "Want some COINS?$"
+	.string "Want some Coins?$"
 
 CeladonCity_GameCorner_Text_Received20CoinsFromNiceGuy::
 # 100 "data/maps/CeladonCity_GameCorner/text.pory"
-	.string "{PLAYER} received 20 COINS\n"
+	.string "{PLAYER} received 20 Coins\n"
 	.string "from the nice guy.$"
 
 CeladonCity_GameCorner_Text_YouHaveLotsOfCoins::
 # 105 "data/maps/CeladonCity_GameCorner/text.pory"
-	.string "You have lots of COINS!$"
+	.string "You have lots of Coins!$"
 
 CeladonCity_GameCorner_Text_NeedMoreCoinsForMonIWant::
 # 109 "data/maps/CeladonCity_GameCorner/text.pory"
-	.string "Darn! I need more COINS for the\n"
-	.string "POKéMON I want!$"
+	.string "Darn! I need more Coins for the\n"
+	.string "Pokémon I want!$"
 
 CeladonCity_GameCorner_Text_HereAreSomeCoinsShoo::
 # 114 "data/maps/CeladonCity_GameCorner/text.pory"
 	.string "Hey, what? You're throwing me off!\n"
-	.string "Here are some COINS, so shoo!$"
+	.string "Here are some Coins, so shoo!$"
 
 CeladonCity_GameCorner_Text_Received20CoinsFromMan::
 # 119 "data/maps/CeladonCity_GameCorner/text.pory"
-	.string "{PLAYER} received 20 COINS\n"
+	.string "{PLAYER} received 20 Coins\n"
 	.string "from the man.$"
 
 CeladonCity_GameCorner_Text_YouveGotPlentyCoins::
 # 124 "data/maps/CeladonCity_GameCorner/text.pory"
 	.string "You've got plenty of your own\n"
-	.string "COINS!$"
+	.string "Coins!$"
 
 CeladonCity_GameCorner_Text_WatchReelsClosely::
 # 129 "data/maps/CeladonCity_GameCorner/text.pory"
@@ -142,9 +142,9 @@ CeladonCity_GameCorner_Text_GruntDefeat::
 
 CeladonCity_GameCorner_Text_GruntPostBattle::
 # 143 "data/maps/CeladonCity_GameCorner/text.pory"
-	.string "The TEAM ROCKET HIDEOUT might\n"
+	.string "The Team Rocket Hideout might\n"
 	.string "be discovered!\p"
-	.string "I better tell BOSS!$"
+	.string "I better tell Boss!$"
 
 CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt::
 # 149 "data/maps/CeladonCity_GameCorner/text.pory"
@@ -154,12 +154,12 @@ CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt::
 
 CeladonCity_GameCorner_Text_CoinCaseIsRequired::
 # 155 "data/maps/CeladonCity_GameCorner/text.pory"
-	.string "A COIN CASE is required…$"
+	.string "A Coin Case is required…$"
 
 CeladonCity_GameCorner_Text_DontHaveCoinCase::
 # 159 "data/maps/CeladonCity_GameCorner/text.pory"
 	.string "Oops!\n"
-	.string "Don't have the COIN CASE!$"
+	.string "Don't have the Coin Case!$"
 
 CeladonCity_GameCorner_Text_SlotMachineWantToPlay::
 # 164 "data/maps/CeladonCity_GameCorner/text.pory"
@@ -168,12 +168,12 @@ CeladonCity_GameCorner_Text_SlotMachineWantToPlay::
 
 CeladonCity_GameCorner_Text_OutOfOrder::
 # 169 "data/maps/CeladonCity_GameCorner/text.pory"
-	.string "OUT OF ORDER\n"
+	.string "Out of Order\n"
 	.string "This is broken.$"
 
 CeladonCity_GameCorner_Text_OutToLunch::
 # 174 "data/maps/CeladonCity_GameCorner/text.pory"
-	.string "OUT TO LUNCH\n"
+	.string "Out to Lunch\n"
 	.string "This is reserved.$"
 
 CeladonCity_GameCorner_Text_SomeonesKeys::

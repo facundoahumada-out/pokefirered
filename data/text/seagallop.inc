@@ -6,4 +6,4 @@ Text_WhereDoYouWantToGo::
 Text_AllAboardSeagallopNum::
 # 6 "data/text/seagallop.pory"
 	.string "All right!\n"
-	.string "All aboard SEAGALLOP HI-SPEED {STR_VAR_1}!$"
+	.string "All aboard Seagallop Hi-Speed {STR_VAR_1}!$"

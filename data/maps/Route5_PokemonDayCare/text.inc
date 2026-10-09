@@ -1,8 +1,8 @@
 Route5_PokemonDayCare_Text_WantMeToRaiseMon::
 # 1 "data/maps/Route5_PokemonDayCare/text.pory"
-	.string "I run the DAY-CARE service.\p"
+	.string "I run the Day-Care service.\p"
 	.string "Would you like me to raise one of\n"
-	.string "your POKéMON?$"
+	.string "your Pokémon?$"
 
 Route5_PokemonDayCare_Text_ComeAgain::
 # 7 "data/maps/Route5_PokemonDayCare/text.pory"
@@ -10,7 +10,7 @@ Route5_PokemonDayCare_Text_ComeAgain::
 
 Route5_PokemonDayCare_Text_WhichMonShouldIRaise::
 # 11 "data/maps/Route5_PokemonDayCare/text.pory"
-	.string "Which POKéMON should I raise?$"
+	.string "Which Pokémon should I raise?$"
 
 Route5_PokemonDayCare_Text_ComeAnytimeYouLike::
 # 15 "data/maps/Route5_PokemonDayCare/text.pory"
@@ -35,26 +35,26 @@ Route5_PokemonDayCare_Text_MonNeedsToSpendMoreTime::
 Route5_PokemonDayCare_Text_OweMeXForMonsReturn::
 # 35 "data/maps/Route5_PokemonDayCare/text.pory"
 	.string "You owe me ¥{STR_VAR_2} for the return\n"
-	.string "of this POKéMON.$"
+	.string "of this Pokémon.$"
 
 Route5_PokemonDayCare_Text_ThankYouHeresMon::
 # 40 "data/maps/Route5_PokemonDayCare/text.pory"
 	.string "Thank you!\n"
-	.string "Here's your POKéMON.$"
+	.string "Here's your Pokémon.$"
 
 Route5_PokemonDayCare_Text_PlayerGotMonBack::
 # 45 "data/maps/Route5_PokemonDayCare/text.pory"
 	.string "{PLAYER} got {STR_VAR_1} back\n"
-	.string "from the DAY-CARE MAN.$"
+	.string "from the Day-Care Man.$"
 
 Route5_PokemonDayCare_Text_OnlyHaveOneMonWithYou::
 # 50 "data/maps/Route5_PokemonDayCare/text.pory"
-	.string "Oh? You only have one POKéMON\n"
+	.string "Oh? You only have one Pokémon\n"
 	.string "with you.$"
 
 Route5_PokemonDayCare_Text_WhatWillYouBattleWith::
 # 55 "data/maps/Route5_PokemonDayCare/text.pory"
-	.string "If you leave me that POKéMON,\n"
+	.string "If you leave me that Pokémon,\n"
 	.string "what will you battle with?$"
 
 Route5_PokemonDayCare_Text_MonHasGrownByXLevels::
@@ -67,7 +67,7 @@ Route5_PokemonDayCare_Text_MonHasGrownByXLevels::
 
 Route5_PokemonDayCare_Text_YouveGotNoRoomForIt::
 # 68 "data/maps/Route5_PokemonDayCare/text.pory"
-	.string "You can't take this POKéMON back\n"
+	.string "You can't take this Pokémon back\n"
 	.string "if you've got no room for it.$"
 
 Route5_PokemonDayCare_Text_DontHaveEnoughMoney::

@@ -25,7 +25,7 @@ SSAnne_Deck_Text_EdmondDefeat::
 
 SSAnne_Deck_Text_EdmondPostBattle::
 # 26 "data/maps/SSAnne_Deck/text.pory"
-	.string "How many kinds of POKéMON do you\n"
+	.string "How many kinds of Pokémon do you\n"
 	.string "think there are in this big world?$"
 
 SSAnne_Deck_Text_TrevorIntro::
@@ -40,4 +40,4 @@ SSAnne_Deck_Text_TrevorDefeat::
 SSAnne_Deck_Text_TrevorPostBattle::
 # 40 "data/maps/SSAnne_Deck/text.pory"
 	.string "My pa said there are 100 kinds of\n"
-	.string "POKéMON. I think there are more.$"
+	.string "Pokémon. I think there are more.$"

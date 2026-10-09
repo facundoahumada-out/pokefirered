@@ -1,11 +1,11 @@
 text SilphCo_5F_Text_RocketsInUproarAboutIntruder {
-    "TEAM ROCKET is in an uproar over\n"
+    "Team Rocket is in an uproar over\n"
     "some intruder.\p"
     "That's you, right?$"
 }
 
 text SilphCo_5F_Text_YoureOurHeroThankYou {
-    "TEAM ROCKET took off!\n"
+    "Team Rocket took off!\n"
     "You're our hero! Thank you!$"
 }
 
@@ -20,11 +20,11 @@ text SilphCo_5F_Text_Grunt1Defeat {
 
 text SilphCo_5F_Text_Grunt1PostBattle {
     "It's not smart to pick a fight with\n"
-    "TEAM ROCKET!$"
+    "Team Rocket!$"
 }
 
 text SilphCo_5F_Text_BeauIntro {
-    "We study POKé BALL technology on\n"
+    "We study Poké Ball technology on\n"
     "this floor.$"
 }
 
@@ -34,8 +34,8 @@ text SilphCo_5F_Text_BeauDefeat {
 }
 
 text SilphCo_5F_Text_BeauPostBattle {
-    "We worked on the ultimate POKé\n"
-    "BALL which would catch anything.$"
+    "We worked on the ultimate Poké\n"
+    "Ball which would catch anything.$"
 }
 
 text SilphCo_5F_Text_DaltonIntro {
@@ -50,11 +50,11 @@ text SilphCo_5F_Text_DaltonDefeat {
 
 text SilphCo_5F_Text_DaltonPostBattle {
     "You're only on 5F.\n"
-    "It's a long way to my BOSS!$"
+    "It's a long way to my Boss!$"
 }
 
 text SilphCo_5F_Text_Grunt2Intro {
-    "Show TEAM ROCKET a little respect!$"
+    "Show Team Rocket a little respect!$"
 }
 
 text SilphCo_5F_Text_Grunt2Defeat {
@@ -64,37 +64,37 @@ text SilphCo_5F_Text_Grunt2Defeat {
 
 text SilphCo_5F_Text_Grunt2PostBattle {
     "Which reminds me.\p"
-    "KOFFING evolves into WEEZING!$"
+    "Koffing evolves into Weezing!$"
 }
 
 text SilphCo_5F_Text_PorygonFirstVRMon {
-    "It's a POKéMON REPORT!\p"
-    "POKéMON LAB created PORYGON,\n"
-    "the first virtual-reality POKéMON.$"
+    "It's a Pokémon Report!\p"
+    "Pokémon Lab created Porygon,\n"
+    "the first virtual-reality Pokémon.$"
 }
 
 text SilphCo_5F_Text_Over350TechniquesConfirmed {
-    "It's a POKéMON REPORT!\p"
-    "Over 350 POKéMON techniques have\n"
+    "It's a Pokémon Report!\p"
+    "Over 350 Pokémon techniques have\n"
     "been confirmed.$"
 }
 
 text SilphCo_5F_Text_SomeMonsEvolveWhenTraded {
-    "It's a POKéMON REPORT!\p"
-    "Some POKéMON have been confirmed\n"
+    "It's a Pokémon Report!\p"
+    "Some Pokémon have been confirmed\n"
     "to evolve when they are traded.$"
 }
 
 text SilphCo_5F_Text_FloorSign {
-    "SILPH CO. HEAD OFFICE\n"
+    "Silph Co. Head Office\n"
     "5F$"
 }
 
 text SilphCo_5F_Text_RocketBossLookingForStrongMons {
     "Those thugs that took over our\n"
     "building…\p"
-    "Their BOSS said he was looking for\n"
-    "strong POKéMON.\p"
-    "I hope our PRESIDENT managed to\n"
+    "Their Boss said he was looking for\n"
+    "strong Pokémon.\p"
+    "I hope our President managed to\n"
     "avoid trouble…$"
 }

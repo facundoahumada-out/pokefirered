@@ -10,7 +10,7 @@ Route21_North_Text_RonaldDefeat::
 Route21_North_Text_RonaldPostBattle::
 # 10 "data/maps/Route21_North/text.pory"
 	.string "I can't catch anything good.\n"
-	.string "Not one good POKéMON to be had!$"
+	.string "Not one good Pokémon to be had!$"
 
 Route21_North_Text_WadeIntro::
 # 15 "data/maps/Route21_North/text.pory"
@@ -19,12 +19,12 @@ Route21_North_Text_WadeIntro::
 
 Route21_North_Text_WadeDefeat::
 # 20 "data/maps/Route21_North/text.pory"
-	.string "Heheh, MAGIKARP just don't make\n"
+	.string "Heheh, Magikarp just don't make\n"
 	.string "the grade, do they?$"
 
 Route21_North_Text_WadePostBattle::
 # 25 "data/maps/Route21_North/text.pory"
-	.string "I seem to only catch MAGIKARP!$"
+	.string "I seem to only catch Magikarp!$"
 
 Route21_North_Text_SpencerIntro::
 # 29 "data/maps/Route21_North/text.pory"

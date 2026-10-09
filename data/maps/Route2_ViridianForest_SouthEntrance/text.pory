@@ -1,11 +1,11 @@
 text Route2_ViridianForest_SouthEntrance_Text_ForestIsMaze {
-    "Are you going to VIRIDIAN FOREST?\n"
+    "Are you going to Viridian Forest?\n"
     "It's a natural maze in there.\l"
     "Be careful you don't get lost.$"
 }
 
 text Route2_ViridianForest_SouthEntrance_Text_RattataHasWickedBite {
-    "RATTATA may be small, but don't\n"
+    "Rattata may be small, but don't\n"
     "underestimate its wicked bite.\p"
     "Have you caught one already?$"
 }

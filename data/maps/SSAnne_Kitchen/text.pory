@@ -5,7 +5,7 @@ text SSAnne_Kitchen_Text_BusyOutOfTheWay {
 }
 
 text SSAnne_Kitchen_Text_SawOddBerryInTrash {
-    "I saw an odd BERRY in the trash.\n"
+    "I saw an odd Berry in the trash.\n"
     "I wonder what that was?$"
 }
 
@@ -21,10 +21,10 @@ text SSAnne_Kitchen_Text_PeelSpudsEveryDay {
 }
 
 text SSAnne_Kitchen_Text_HearAboutSnorlaxItsAGlutton {
-    "Did you hear about SNORLAX?\n"
+    "Did you hear about Snorlax?\n"
     "It's a glutton.\p"
-    "No other POKéMON eats and sleeps\n"
-    "the way SNORLAX can and does!$"
+    "No other Pokémon eats and sleeps\n"
+    "the way Snorlax can and does!$"
 }
 
 text SSAnne_Kitchen_Text_OnlyGetToPeelOnions {
@@ -35,7 +35,7 @@ text SSAnne_Kitchen_Text_OnlyGetToPeelOnions {
 
 text SSAnne_Kitchen_Text_IAmLeChefMainCourseIs {
     "Er-hem!\n"
-    "Indeed I am le CHEF!\p"
+    "Indeed I am le Chef!\p"
     "Le main course is$"
 }
 

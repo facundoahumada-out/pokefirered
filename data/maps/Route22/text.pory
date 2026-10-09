@@ -1,12 +1,12 @@
 text Route22_Text_EarlyRivalIntro {
     "{RIVAL}: Hey! {PLAYER}!\p"
-    "You're off to the POKéMON LEAGUE?\n"
+    "You're off to the Pokémon League?\n"
     "Forget about it!\p"
     "You probably don't have any\n"
-    "BADGES, do you?\p"
+    "Badges, do you?\p"
     "The guard won't let you through\n"
     "without them.\p"
-    "By the way, did your POKéMON get\n"
+    "By the way, did your Pokémon get\n"
     "any stronger?$"
 }
 
@@ -16,15 +16,15 @@ text Route22_Text_EarlyRivalDefeat {
 }
 
 text Route22_Text_EarlyRivalPostBattle {
-    "I heard the POKéMON LEAGUE is\n"
-    "crawling with tough TRAINERS.\p"
+    "I heard the Pokémon League is\n"
+    "crawling with tough Trainers.\p"
     "I have to figure out how to get\n"
     "past them.\p"
     "You should quit dawdling and get a\n"
     "move on!$"
 }
 
-// Translated in RB as "{RIVAL}: What? Why do I have 2 POKéMON? You should catch some more too!"
+// Translated in RB as "{RIVAL}: What? Why do I have 2 Pokémon? You should catch some more too!"
 text Route22_Text_RivalShouldCatchSomeMons {
     "{RIVAL}“なんだ？\n"
     "ポケモン　2ひきも\l"
@@ -36,12 +36,12 @@ text Route22_Text_RivalShouldCatchSomeMons {
 text Route22_Text_LateRivalIntro {
     "{RIVAL}: What? {PLAYER}!\n"
     "What a surprise to see you here!\p"
-    "So you're going to the POKéMON\n"
-    "LEAGUE?\p"
-    "You collected all the BADGES, too?\n"
+    "So you're going to the Pokémon\n"
+    "League?\p"
+    "You collected all the Badges, too?\n"
     "That's cool!\p"
     "Then I'll whip you, {PLAYER}, as a\n"
-    "warm-up for the POKéMON LEAGUE!\p"
+    "warm-up for the Pokémon League!\p"
     "Come on!$"
 }
 
@@ -52,7 +52,7 @@ text Route22_Text_LateRivalDefeat {
 
 text Route22_Text_LateRivalPostBattle {
     "That loosened me up.\n"
-    "I'm ready for the POKéMON LEAGUE!\p"
+    "I'm ready for the Pokémon League!\p"
     "{PLAYER}, you need more practice.\p"
     "But hey, you know that!\n"
     "I'm out of here. Smell ya!$"
@@ -69,6 +69,6 @@ text Route22_Text_LateRivalVictory {
 }
 
 text Route22_Text_LeagueGateSign {
-    "POKéMON LEAGUE\n"
+    "Pokémon League\n"
     "Front Gate$"
 }

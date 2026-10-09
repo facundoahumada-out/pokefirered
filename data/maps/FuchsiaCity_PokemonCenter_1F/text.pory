@@ -1,20 +1,20 @@
 text FuchsiaCity_PokemonCenter_1F_Text_CantBecomeGoodTrainerWithOneMon {
-    "You can't become a good TRAINER\n"
-    "with just one strong POKéMON.\p"
-    "But raising many POKéMON evenly\n"
+    "You can't become a good Trainer\n"
+    "with just one strong Pokémon.\p"
+    "But raising many Pokémon evenly\n"
     "is no easy task, either.$"
 }
 
 text FuchsiaCity_PokemonCenter_1F_Text_PokemonLeagueWestOfViridian {
     "There's a narrow trail west of\n"
-    "VIRIDIAN CITY.\p"
-    "It goes to the POKéMON LEAGUE HQ.\n"
-    "The HQ governs all TRAINERS.$"
+    "Viridian City.\p"
+    "It goes to the Pokémon League HQ.\n"
+    "The HQ governs all Trainers.$"
 }
 
 text FuchsiaCity_PokemonCenter_1F_Text_VisitSafariZoneForPokedex {
-    "If you're working on a POKéDEX,\n"
-    "visit the SAFARI ZONE.\p"
-    "All sorts of rare POKéMON breed\n"
+    "If you're working on a Pokédex,\n"
+    "visit the Safari Zone.\p"
+    "All sorts of rare Pokémon breed\n"
     "there.$"
 }

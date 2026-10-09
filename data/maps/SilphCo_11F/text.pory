@@ -1,6 +1,6 @@
 text SilphCo_11F_Text_ThanksForSavingMeDearBoy {
-    "PRESIDENT: Oh, dear boy!\n"
-    "Thank you for saving SILPH.\p"
+    "President: Oh, dear boy!\n"
+    "Thank you for saving Silph.\p"
     "I will never forget you saved us in\n"
     "our moment of peril.\p"
     "I have to thank you in some way.\p"
@@ -10,8 +10,8 @@ text SilphCo_11F_Text_ThanksForSavingMeDearBoy {
 }
 
 text SilphCo_11F_Text_ThanksForSavingMeDearGirl {
-    "PRESIDENT: Oh, dear girl!\n"
-    "Thank you for saving SILPH.\p"
+    "President: Oh, dear girl!\n"
+    "Thank you for saving Silph.\p"
     "I will never forget you saved us in\n"
     "our moment of peril.\p"
     "I have to thank you in some way.\p"
@@ -21,16 +21,16 @@ text SilphCo_11F_Text_ThanksForSavingMeDearGirl {
 }
 
 text SilphCo_11F_Text_ObtainedMasterBallFromPresident {
-    "{PLAYER} obtained a MASTER BALL\n"
-    "from the PRESIDENT!$"
+    "{PLAYER} obtained a Master Ball\n"
+    "from the President!$"
 }
 
 text SilphCo_11F_Text_ThatsOurSecretPrototype {
-    "PRESIDENT: You can't buy that\n"
+    "President: You can't buy that\n"
     "anywhere.\p"
-    "It's our secret prototype MASTER\n"
-    "BALL.\p"
-    "It will catch any POKéMON without\n"
+    "It's our secret prototype Master\n"
+    "Ball.\p"
+    "It will catch any Pokémon without\n"
     "fail!\p"
     "You should be quiet about using it,\n"
     "though.$"
@@ -41,16 +41,16 @@ text SilphCo_11F_Text_YouHaveNoRoomForThis {
 }
 
 text SilphCo_11F_Text_ThanksForRescuingUs {
-    "SECRETARY: Thank you for rescuing\n"
+    "Secretary: Thank you for rescuing\n"
     "all of us.\p"
-    "We, from the PRESIDENT down,\n"
+    "We, from the President down,\n"
     "are indebted to you.$"
 }
 
 text SilphCo_11F_Text_GiovanniIntro {
     "Ah, {PLAYER}!\n"
     "So we meet again!\p"
-    "The PRESIDENT and I are discussing\n"
+    "The President and I are discussing\n"
     "a vital business proposition.\p"
     "Keep your nose out of grown-up\n"
     "matters…\p"
@@ -64,10 +64,10 @@ text SilphCo_11F_Text_GiovanniDefeat {
 
 text SilphCo_11F_Text_GiovanniPostBattle {
     "Blast it all!\n"
-    "You ruined our plans for SILPH!\p"
-    "But, TEAM ROCKET will never fall!\p"
+    "You ruined our plans for Silph!\p"
+    "But, Team Rocket will never fall!\p"
     "{PLAYER}! Never forget that all\n"
-    "POKéMON exist for TEAM ROCKET!\p"
+    "Pokémon exist for Team Rocket!\p"
     "I must go, but I shall return!$"
 }
 
@@ -82,12 +82,12 @@ text SilphCo_11F_Text_Grunt2Defeat {
 }
 
 text SilphCo_11F_Text_Grunt2PostBattle {
-    "So, you want to see my BOSS?$"
+    "So, you want to see my Boss?$"
 }
 
 text SilphCo_11F_Text_Grunt1Intro {
     "Halt! Do you have an appointment\n"
-    "with my BOSS?$"
+    "with my Boss?$"
 }
 
 text SilphCo_11F_Text_Grunt1Defeat {
@@ -97,14 +97,14 @@ text SilphCo_11F_Text_Grunt1Defeat {
 
 text SilphCo_11F_Text_Grunt1PostBattle {
     "Watch your step…\n"
-    "My BOSS likes his POKéMON tough!$"
+    "My Boss likes his Pokémon tough!$"
 }
 
 text SilphCo_11F_Text_MonitorHasMonsOnIt {
-    "The monitor has POKéMON on it!$"
+    "The monitor has Pokémon on it!$"
 }
 
 text SilphCo_11F_Text_FloorSign {
-    "SILPH CO. HEAD OFFICE\n"
+    "Silph Co. Head Office\n"
     "11F$"
 }

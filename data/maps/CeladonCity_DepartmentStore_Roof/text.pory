@@ -10,7 +10,7 @@ text CeladonCity_DepartmentStore_Roof_Text_GiveWhichDrink {
 
 text CeladonCity_DepartmentStore_Roof_Text_YayFreshWaterHaveThis {
     "Yay!\p"
-    "FRESH WATER!\p"
+    "Fresh Water!\p"
     "Thank you!\n"
     "You can have this from me!$"
 }
@@ -21,33 +21,33 @@ text Text_ReceivedItemFromLittleGirl {
 }
 
 text CeladonCity_DepartmentStore_Roof_Text_ExplainTM16 {
-    "TM16 contains LIGHT SCREEN.\p"
+    "TM16 contains Light Screen.\p"
     "It's a move that weakens the power\n"
     "of special attacks by your foe.$"
 }
 
 text CeladonCity_DepartmentStore_Roof_Text_YaySodaPopHaveThis {
     "Yay!\p"
-    "SODA POP!\p"
+    "Soda Pop!\p"
     "Thank you!\n"
     "You can have this from me!$"
 }
 
 text CeladonCity_DepartmentStore_Roof_Text_ExplainTM20 {
-    "TM20 contains SAFEGUARD.\p"
+    "TM20 contains Safeguard.\p"
     "It's a move that prevents status\n"
-    "problems among your POKéMON.$"
+    "problems among your Pokémon.$"
 }
 
 text CeladonCity_DepartmentStore_Roof_Text_YayLemonadeHaveThis {
     "Yay!\p"
-    "LEMONADE!\p"
+    "Lemonade!\p"
     "Thank you!\n"
     "You can have this from me!$"
 }
 
 text CeladonCity_DepartmentStore_Roof_Text_ExplainTM33 {
-    "TM33 contains REFLECT.\p"
+    "TM33 contains Reflect.\p"
     "It's a move that weakens the power\n"
     "of physical attacks by your foe.$"
 }
@@ -62,7 +62,7 @@ text CeladonCity_DepartmentStore_Roof_Text_ImNotThirstyAfterAll {
 }
 
 text CeladonCity_DepartmentStore_Roof_Text_MySisterIsImmature {
-    "My sister is a TRAINER, believe it\n"
+    "My sister is a Trainer, believe it\n"
     "or not.\p"
     "But, she's so immature, she drives\n"
     "me nuts!$"
@@ -74,8 +74,8 @@ text CeladonCity_DepartmentStore_Roof_Text_ImThirstyIWantDrink {
 }
 
 text CeladonCity_DepartmentStore_Roof_Text_FloorSign {
-    "ROOFTOP SQUARE:\n"
-    "VENDING MACHINES$"
+    "Rooftop Square:\n"
+    "Vending Machines$"
 }
 
 text CeladonCity_DepartmentStore_Roof_Text_VendingMachineWhatDoesItHave {

@@ -6,7 +6,7 @@ SSAnne_Kitchen_Text_BusyOutOfTheWay::
 
 SSAnne_Kitchen_Text_SawOddBerryInTrash::
 # 7 "data/maps/SSAnne_Kitchen/text.pory"
-	.string "I saw an odd BERRY in the trash.\n"
+	.string "I saw an odd Berry in the trash.\n"
 	.string "I wonder what that was?$"
 
 SSAnne_Kitchen_Text_SoBusyImDizzy::
@@ -22,10 +22,10 @@ SSAnne_Kitchen_Text_PeelSpudsEveryDay::
 
 SSAnne_Kitchen_Text_HearAboutSnorlaxItsAGlutton::
 # 23 "data/maps/SSAnne_Kitchen/text.pory"
-	.string "Did you hear about SNORLAX?\n"
+	.string "Did you hear about Snorlax?\n"
 	.string "It's a glutton.\p"
-	.string "No other POKéMON eats and sleeps\n"
-	.string "the way SNORLAX can and does!$"
+	.string "No other Pokémon eats and sleeps\n"
+	.string "the way Snorlax can and does!$"
 
 SSAnne_Kitchen_Text_OnlyGetToPeelOnions::
 # 30 "data/maps/SSAnne_Kitchen/text.pory"
@@ -36,7 +36,7 @@ SSAnne_Kitchen_Text_OnlyGetToPeelOnions::
 SSAnne_Kitchen_Text_IAmLeChefMainCourseIs::
 # 36 "data/maps/SSAnne_Kitchen/text.pory"
 	.string "Er-hem!\n"
-	.string "Indeed I am le CHEF!\p"
+	.string "Indeed I am le Chef!\p"
 	.string "Le main course is$"
 
 SSAnne_Kitchen_Text_SalmonDuSalad::

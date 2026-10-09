@@ -1,5 +1,5 @@
 text FuchsiaCity_WardensHouse_Text_HifFuffHefifoo {
-    "WARDEN: Hif fuff hefifoo!\p"
+    "Warden: Hif fuff hefifoo!\p"
     "Ha lof ha feef ee hafahi ho.\n"
     "Heff hee fwee!$"
 }
@@ -15,48 +15,48 @@ text FuchsiaCity_WardensHouse_Text_HeOhayHeHaHoo {
 }
 
 text FuchsiaCity_WardensHouse_Text_GaveGoldTeethToWarden {
-    "{PLAYER} gave the GOLD TEETH\n"
-    "to the WARDEN.$"
+    "{PLAYER} gave the Gold Teeth\n"
+    "to the Warden.$"
 }
 
 text FuchsiaCity_WardensHouse_Text_WardenPoppedInHisTeeth {
-    "The WARDEN popped in his teeth!$"
+    "The Warden popped in his teeth!$"
 }
 
 text FuchsiaCity_WardensHouse_Text_ThanksSonGiveYouSomething {
-    "WARDEN: Thanks, son!\n"
+    "Warden: Thanks, son!\n"
     "You're a real lifesaver!\p"
     "No one could understand a word\n"
     "that I said, not a one!\p"
     "I was too ashamed to show my face\n"
-    "around the OFFICE, even.\p"
+    "around the Office, even.\p"
     "Let me give you something for your\n"
     "trouble.$"
 }
 
 text FuchsiaCity_WardensHouse_Text_ThanksLassieGiveYouSomething {
-    "WARDEN: Thank you, lassie!\n"
+    "Warden: Thank you, lassie!\n"
     "You're a real lifesaver!\p"
     "No one could understand a word\n"
     "that I said, not a one!\p"
     "I was too ashamed to show my face\n"
-    "around the OFFICE, even.\p"
+    "around the Office, even.\p"
     "Let me give you something for your\n"
     "trouble.$"
 }
 
 text FuchsiaCity_WardensHouse_Text_ReceivedHM04FromWarden {
     "{PLAYER} received HM04\n"
-    "from the WARDEN.$"
+    "from the Warden.$"
 }
 
 text FuchsiaCity_WardensHouse_Text_ExplainStrength {
-    "WARDEN: Inside HM04 you'll find\n"
-    "STRENGTH.\p"
-    "It lets POKéMON move boulders when\n"
+    "Warden: Inside HM04 you'll find\n"
+    "Strength.\p"
+    "It lets Pokémon move boulders when\n"
     "you're outside of battle.\p"
-    "Oh yes, did you find the SECRET\n"
-    "HOUSE in the SAFARI ZONE?$"
+    "Oh yes, did you find the Secret\n"
+    "House in the Safari Zone?$"
 }
 
 // Unused
@@ -66,11 +66,11 @@ text FuchsiaCity_WardensHouse_Text_YouHaveTooMuchStuff {
 }
 
 text FuchsiaCity_WardensHouse_Text_MonPhotosFossilsOnDisplay {
-    "POKéMON photos and fossils are on\n"
+    "Pokémon photos and fossils are on\n"
     "display.$"
 }
 
 text FuchsiaCity_WardensHouse_Text_OldMonMerchandiseOnDisplay {
-    "Old POKéMON merchandise is on\n"
+    "Old Pokémon merchandise is on\n"
     "display.$"
 }

@@ -1,19 +1,19 @@
 text CeladonCity_DepartmentStore_1F_Text_WelcomeToDeptStore {
     "Hello!\n"
-    "Welcome to CELADON DEPT. STORE.\p"
+    "Welcome to Celadon Dept. Store.\p"
     "The board on the right describes\n"
     "the store layout.$"
 }
 
 text CeladonCity_DepartmentStore_1F_Text_FloorDescriptions {
-    "1F: SERVICE COUNTER\p"
-    "2F: TRAINER'S MARKET\p"
-    "3F: TV GAME SHOP\p"
-    "4F: WISE MAN GIFTS\p"
-    "5F: DRUGSTORE\p"
-    "ROOFTOP SQUARE: VENDING MACHINES$"
+    "1F: Service Counter\p"
+    "2F: Trainer's Market\p"
+    "3F: TV Game Shop\p"
+    "4F: Wise Man Gifts\p"
+    "5F: Drugstore\p"
+    "Rooftop Square: Vending Machines$"
 }
 
 text CeladonCity_DepartmentStore_1F_Text_ServiceCounter {
-    "1F: SERVICE COUNTER$"
+    "1F: Service Counter$"
 }

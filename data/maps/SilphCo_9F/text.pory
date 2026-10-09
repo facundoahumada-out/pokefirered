@@ -12,7 +12,7 @@ text SilphCo_9F_Text_ThankYouSoMuch {
 }
 
 text SilphCo_9F_Text_Grunt1Intro {
-    "Your POKéMON seem to adore you,\n"
+    "Your Pokémon seem to adore you,\n"
     "kid!$"
 }
 
@@ -21,12 +21,12 @@ text SilphCo_9F_Text_Grunt1Defeat {
 }
 
 text SilphCo_9F_Text_Grunt1PostBattle {
-    "If I had started as a TRAINER at\n"
+    "If I had started as a Trainer at\n"
     "your age…$"
 }
 
 text SilphCo_9F_Text_EdIntro {
-    "Your POKéMON have weak points!\n"
+    "Your Pokémon have weak points!\n"
     "I can nail them!$"
 }
 
@@ -40,8 +40,8 @@ text SilphCo_9F_Text_EdPostBattle {
 }
 
 text SilphCo_9F_Text_Grunt2Intro {
-    "I am one of the four ROCKET\n"
-    "BROTHERS!$"
+    "I am one of the four Rocket\n"
+    "Brothers!$"
 }
 
 text SilphCo_9F_Text_Grunt2Defeat {
@@ -54,6 +54,6 @@ text SilphCo_9F_Text_Grunt2PostBattle {
 }
 
 text SilphCo_9F_Text_FloorSign {
-    "SILPH CO. HEAD OFFICE\n"
+    "Silph Co. Head Office\n"
     "9F$"
 }

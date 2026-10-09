@@ -24,7 +24,7 @@ text SSAnne_Deck_Text_EdmondDefeat {
 }
 
 text SSAnne_Deck_Text_EdmondPostBattle {
-    "How many kinds of POKéMON do you\n"
+    "How many kinds of Pokémon do you\n"
     "think there are in this big world?$"
 }
 
@@ -39,5 +39,5 @@ text SSAnne_Deck_Text_TrevorDefeat {
 
 text SSAnne_Deck_Text_TrevorPostBattle {
     "My pa said there are 100 kinds of\n"
-    "POKéMON. I think there are more.$"
+    "Pokémon. I think there are more.$"
 }

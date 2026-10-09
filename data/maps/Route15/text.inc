@@ -1,6 +1,6 @@
 Route15_Text_KindraIntro::
 # 1 "data/maps/Route15/text.pory"
-	.string "I just got some POKéMON in trades.\n"
+	.string "I just got some Pokémon in trades.\n"
 	.string "Can I try them out on you?$"
 
 Route15_Text_KindraDefeat::
@@ -10,8 +10,8 @@ Route15_Text_KindraDefeat::
 Route15_Text_KindraPostBattle::
 # 10 "data/maps/Route15/text.pory"
 	.string "You can't change the nickname of\n"
-	.string "any POKéMON you get in a trade.\p"
-	.string "Only the Original TRAINER can get\n"
+	.string "any Pokémon you get in a trade.\p"
+	.string "Only the Original Trainer can get\n"
 	.string "the nickname changed.$"
 
 Route15_Text_BeckyIntro::
@@ -26,13 +26,13 @@ Route15_Text_BeckyDefeat::
 
 Route15_Text_BeckyPostBattle::
 # 27 "data/maps/Route15/text.pory"
-	.string "I'm afraid of BIKERS. They look so\n"
+	.string "I'm afraid of Bikers. They look so\n"
 	.string "ugly and mean!$"
 
 Route15_Text_EdwinIntro::
 # 32 "data/maps/Route15/text.pory"
 	.string "When I whistle, I can summon bird\n"
-	.string "POKéMON.$"
+	.string "Pokémon.$"
 
 Route15_Text_EdwinDefeat::
 # 37 "data/maps/Route15/text.pory"
@@ -57,13 +57,13 @@ Route15_Text_ChesterPostBattle::
 # 56 "data/maps/Route15/text.pory"
 	.string "This is so obvious, you should know\n"
 	.string "this, but…\p"
-	.string "Moves like EARTHQUAKE and FISSURE\n"
-	.string "have no effect on bird POKéMON.$"
+	.string "Moves like Earthquake and Fissure\n"
+	.string "have no effect on bird Pokémon.$"
 
 Route15_Text_GraceIntro::
 # 63 "data/maps/Route15/text.pory"
 	.string "Oh, you're a little cutie!\n"
-	.string "So like a darling POKéMON!$"
+	.string "So like a darling Pokémon!$"
 
 Route15_Text_GraceDefeat::
 # 68 "data/maps/Route15/text.pory"
@@ -77,17 +77,17 @@ Route15_Text_GracePostBattle::
 
 Route15_Text_OliviaIntro::
 # 78 "data/maps/Route15/text.pory"
-	.string "I raise POKéMON for protection\n"
+	.string "I raise Pokémon for protection\n"
 	.string "because I live alone.$"
 
 Route15_Text_OliviaDefeat::
 # 83 "data/maps/Route15/text.pory"
-	.string "POKéMON isn't about winning or\n"
+	.string "Pokémon isn't about winning or\n"
 	.string "losing for me.$"
 
 Route15_Text_OliviaPostBattle::
 # 88 "data/maps/Route15/text.pory"
-	.string "I love having my POKéMON greet me\n"
+	.string "I love having my Pokémon greet me\n"
 	.string "when I get home.\p"
 	.string "It's so reassuring.$"
 
@@ -104,7 +104,7 @@ Route15_Text_ErnestPostBattle::
 # 103 "data/maps/Route15/text.pory"
 	.string "Life's too short.\n"
 	.string "It's cool to live as an outlaw.\l"
-	.string "TEAM ROCKET RULES!$"
+	.string "Team Rocket Rules!$"
 
 Route15_Text_AlexIntro::
 # 109 "data/maps/Route15/text.pory"
@@ -123,7 +123,7 @@ Route15_Text_AlexPostBattle::
 Route15_Text_CeliaIntro::
 # 123 "data/maps/Route15/text.pory"
 	.string "What's cool and happening?\n"
-	.string "Trading POKéMON!$"
+	.string "Trading Pokémon!$"
 
 Route15_Text_CeliaDefeat::
 # 128 "data/maps/Route15/text.pory"
@@ -131,12 +131,12 @@ Route15_Text_CeliaDefeat::
 
 Route15_Text_CeliaPostBattle::
 # 132 "data/maps/Route15/text.pory"
-	.string "I trade POKéMON with my friends\n"
+	.string "I trade Pokémon with my friends\n"
 	.string "all the time.$"
 
 Route15_Text_YazminIntro::
 # 137 "data/maps/Route15/text.pory"
-	.string "Want to play with my POKéMON?$"
+	.string "Want to play with my Pokémon?$"
 
 Route15_Text_YazminDefeat::
 # 141 "data/maps/Route15/text.pory"
@@ -148,46 +148,46 @@ Route15_Text_YazminPostBattle::
 
 Route15_Text_RouteSign::
 # 149 "data/maps/Route15/text.pory"
-	.string "ROUTE 15\n"
-	.string "West to FUCHSIA CITY$"
+	.string "Route 15\n"
+	.string "West to Fuchsia City$"
 
 Route15_Text_MyaIntro::
 # 154 "data/maps/Route15/text.pory"
-	.string "MYA: You're perfect.\n"
+	.string "Mya: You're perfect.\n"
 	.string "Help me train my little brother?$"
 
 Route15_Text_MyaDefeat::
 # 159 "data/maps/Route15/text.pory"
-	.string "MYA: RON, you have to focus!\n"
+	.string "Mya: Ron, you have to focus!\n"
 	.string "Concentrate on what you're doing!$"
 
 Route15_Text_MyaPostBattle::
 # 164 "data/maps/Route15/text.pory"
-	.string "MYA: Okay, we'll turn it up.\n"
+	.string "Mya: Okay, we'll turn it up.\n"
 	.string "I'll add to our training menu!$"
 
 Route15_Text_MyaNotEnoughMons::
 # 169 "data/maps/Route15/text.pory"
-	.string "MYA: Do you want to challenge us?\n"
-	.string "You'll need two POKéMON, though.$"
+	.string "Mya: Do you want to challenge us?\n"
+	.string "You'll need two Pokémon, though.$"
 
 Route15_Text_RonIntro::
 # 174 "data/maps/Route15/text.pory"
-	.string "RON: My sister gets scary when we\n"
+	.string "Ron: My sister gets scary when we\n"
 	.string "lose.$"
 
 Route15_Text_RonDefeat::
 # 179 "data/maps/Route15/text.pory"
-	.string "RON: Oh, no, no…\n"
+	.string "Ron: Oh, no, no…\n"
 	.string "Sis, I'm sorry!$"
 
 Route15_Text_RonPostBattle::
 # 184 "data/maps/Route15/text.pory"
-	.string "RON: Oh, bleah…\n"
+	.string "Ron: Oh, bleah…\n"
 	.string "I wish I had a nice sister…$"
 
 Route15_Text_RonNotEnoughMons::
 # 189 "data/maps/Route15/text.pory"
-	.string "RON: Did you want to battle with\n"
+	.string "Ron: Did you want to battle with\n"
 	.string "my sister and me?\p"
-	.string "You need two POKéMON, then.$"
+	.string "You need two Pokémon, then.$"

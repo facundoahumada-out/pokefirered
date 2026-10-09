@@ -1,58 +1,58 @@
 text LavenderTown_PokemonCenter_1F_Text_HearMrFujiNotFromAroundHere {
     "I recently moved to this town.\p"
-    "I hear that MR. FUJI's not from\n"
+    "I hear that Mr. Fuji's not from\n"
     "these parts originally, either.$"
 }
 
 text LavenderTown_VolunteerPokemonHouse_Text_WhereDidMrFujiGo {
-    "That's odd, MR. FUJI isn't here.\n"
+    "That's odd, Mr. Fuji isn't here.\n"
     "Where'd he go?$"
 }
 
 text LavenderTown_VolunteerPokemonHouse_Text_MrFujiWasPrayingForCubonesMother {
-    "MR. FUJI had been praying alone\n"
-    "for CUBONE's mother.$"
+    "Mr. Fuji had been praying alone\n"
+    "for Cubone's mother.$"
 }
 
 text LavenderTown_VolunteerPokemonHouse_Text_MrFujiLooksAfterOrphanedMons {
-    "This is really MR. FUJI's house.\p"
+    "This is really Mr. Fuji's house.\p"
     "He's really kind.\p"
     "He looks after abandoned and\n"
-    "orphaned POKéMON.$"
+    "orphaned Pokémon.$"
 }
 
 text LavenderTown_VolunteerPokemonHouse_Text_MonsNiceToHug {
     "It's so warm!\n"
-    "POKéMON are so nice to hug.$"
+    "Pokémon are so nice to hug.$"
 }
 
 text LavenderTown_VolunteerPokemonHouse_Text_Nidorino {
-    "NIDORINO: Gaoo!$"
+    "Nidorino: Gaoo!$"
 }
 
 text LavenderTown_VolunteerPokemonHouse_Text_Psyduck {
-    "PSYDUCK: Gwappa!$"
+    "Psyduck: Gwappa!$"
 }
 
 text LavenderTown_VolunteerPokemonHouse_Text_IdLikeYouToHaveThis {
-    "MR. FUJI: {PLAYER}…\p"
-    "Your POKéDEX quest is one that\n"
+    "Mr. Fuji: {PLAYER}…\p"
+    "Your Pokédex quest is one that\n"
     "requires strong dedication.\p"
-    "Without deep love for POKéMON,\n"
+    "Without deep love for Pokémon,\n"
     "your quest may fail.\p"
     "I'm not sure if this will help you,\n"
     "but I'd like you to have it.$"
 }
 
 text LavenderTown_VolunteerPokemonHouse_Text_ReceivedPokeFluteFromMrFuji {
-    "{PLAYER} received a POKé FLUTE\n"
-    "from MR. FUJI.$"
+    "{PLAYER} received a Poké Flute\n"
+    "from Mr. Fuji.$"
 }
 
 text LavenderTown_VolunteerPokemonHouse_Text_ExplainPokeFlute {
-    "Upon hearing the POKé FLUTE,\n"
-    "sleeping POKéMON will spring awake.\p"
-    "Try using it on POKéMON that are\n"
+    "Upon hearing the Poké Flute,\n"
+    "sleeping Pokémon will spring awake.\p"
+    "Try using it on Pokémon that are\n"
     "sleeping obstacles.$"
 }
 
@@ -61,12 +61,12 @@ text LavenderTown_VolunteerPokemonHouse_Text_MustMakeRoomForThis {
 }
 
 text LavenderTown_VolunteerPokemonHouse_Text_HasPokeFluteHelpedYou {
-    "MR. FUJI: Has my POKé FLUTE\n"
+    "Mr. Fuji: Has my Poké Flute\n"
     "helped you?$"
 }
 
 text LavenderTown_VolunteerPokemonHouse_Text_GrandPrizeDrawingClipped {
-    "POKéMON FAN MAGAZINE\n"
+    "Pokémon Fan Magazine\n"
     "Monthly Grand Prize Drawing!\p"
     "The application form is…\p"
     "Gone! It's been clipped out.\n"
@@ -74,7 +74,7 @@ text LavenderTown_VolunteerPokemonHouse_Text_GrandPrizeDrawingClipped {
 }
 
 text LavenderTown_VolunteerPokemonHouse_Text_PokemonMagazinesLineShelf {
-    "POKéMON magazines line the shelf.\p"
-    "POKéMON INSIDER…\p"
-    "POKéMON FAN…$"
+    "Pokémon magazines line the shelf.\p"
+    "Pokémon Insider…\p"
+    "Pokémon Fan…$"
 }

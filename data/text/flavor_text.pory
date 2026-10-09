@@ -1,6 +1,6 @@
 // Flavor text for interacting with various background objects
 text Text_Bookshelf {
-    "It's crammed full of POKéMON\n"
+    "It's crammed full of Pokémon\n"
     "books.$"
 }
 
@@ -10,12 +10,12 @@ text Text_NothingButPokemonBooks {
 }
 
 text Text_ATownMap {
-    "A TOWN MAP.$"
+    "A Town Map.$"
 }
 
 text Text_PokeMartShelf {
     "Wow!\n"
-    "Tons of POKéMON stuff!$"
+    "Tons of Pokémon stuff!$"
 }
 
 text Text_DishesPlatesNeatlyLinedUp {
@@ -39,24 +39,24 @@ text Text_Snacks {
 
 text Text_PokemartSign {
     "All your item needs fulfilled!\n"
-    "POKéMON MART$"
+    "Pokémon Mart$"
 }
 
 text Text_PokecenterSign {
-    "Heal Your POKéMON!\n"
-    "POKéMON CENTER$"
+    "Heal Your Pokémon!\n"
+    "Pokémon Center$"
 }
 
 text Text_Indigo_UltimateGoal {
-    "INDIGO PLATEAU\p"
-    "The ultimate goal of TRAINERS!\n"
-    "POKéMON LEAGUE HQ$"
+    "Indigo Plateau\p"
+    "The ultimate goal of Trainers!\n"
+    "Pokémon League HQ$"
 }
 
 text Text_Indigo_HighestAuthority {
-    "INDIGO PLATEAU\p"
-    "The highest POKéMON authority!\n"
-    "POKéMON LEAGUE HQ$"
+    "Indigo Plateau\p"
+    "The highest Pokémon authority!\n"
+    "Pokémon League HQ$"
 }
 
 text Text_Food {
@@ -70,7 +70,7 @@ text Text_Blueprints {
 }
 
 text Text_Painting {
-    "It's a pretty picture of a POKéMON.\n"
+    "It's a pretty picture of a Pokémon.\n"
     "It looks like it's feeling good.$"
 }
 
@@ -106,7 +106,7 @@ text Text_TrashBin {
 }
 
 text Text_Cup {
-    "It's a cup with a POKéMON mark\n"
+    "It's a cup with a Pokémon mark\n"
     "on it.$"
 }
 
@@ -146,6 +146,6 @@ text Text_Burglary {
 }
 
 text Text_PlayerFacingTVScreen {
-    "There's a POKéMON on TV!\n"
+    "There's a Pokémon on TV!\n"
     "It looks like it's having fun.$"
 }

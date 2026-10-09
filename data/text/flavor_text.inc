@@ -1,6 +1,6 @@
 Text_Bookshelf::
 # 2 "data/text/flavor_text.pory"
-	.string "It's crammed full of POKéMON\n"
+	.string "It's crammed full of Pokémon\n"
 	.string "books.$"
 
 Text_NothingButPokemonBooks::
@@ -10,12 +10,12 @@ Text_NothingButPokemonBooks::
 
 Text_ATownMap::
 # 12 "data/text/flavor_text.pory"
-	.string "A TOWN MAP.$"
+	.string "A Town Map.$"
 
 Text_PokeMartShelf::
 # 16 "data/text/flavor_text.pory"
 	.string "Wow!\n"
-	.string "Tons of POKéMON stuff!$"
+	.string "Tons of Pokémon stuff!$"
 
 Text_DishesPlatesNeatlyLinedUp::
 # 21 "data/text/flavor_text.pory"
@@ -39,24 +39,24 @@ Text_Snacks::
 Text_PokemartSign::
 # 40 "data/text/flavor_text.pory"
 	.string "All your item needs fulfilled!\n"
-	.string "POKéMON MART$"
+	.string "Pokémon Mart$"
 
 Text_PokecenterSign::
 # 45 "data/text/flavor_text.pory"
-	.string "Heal Your POKéMON!\n"
-	.string "POKéMON CENTER$"
+	.string "Heal Your Pokémon!\n"
+	.string "Pokémon Center$"
 
 Text_Indigo_UltimateGoal::
 # 50 "data/text/flavor_text.pory"
-	.string "INDIGO PLATEAU\p"
-	.string "The ultimate goal of TRAINERS!\n"
-	.string "POKéMON LEAGUE HQ$"
+	.string "Indigo Plateau\p"
+	.string "The ultimate goal of Trainers!\n"
+	.string "Pokémon League HQ$"
 
 Text_Indigo_HighestAuthority::
 # 56 "data/text/flavor_text.pory"
-	.string "INDIGO PLATEAU\p"
-	.string "The highest POKéMON authority!\n"
-	.string "POKéMON LEAGUE HQ$"
+	.string "Indigo Plateau\p"
+	.string "The highest Pokémon authority!\n"
+	.string "Pokémon League HQ$"
 
 Text_Food::
 # 62 "data/text/flavor_text.pory"
@@ -70,7 +70,7 @@ Text_Blueprints::
 
 Text_Painting::
 # 72 "data/text/flavor_text.pory"
-	.string "It's a pretty picture of a POKéMON.\n"
+	.string "It's a pretty picture of a Pokémon.\n"
 	.string "It looks like it's feeling good.$"
 
 Text_PowerPlantMachine::
@@ -106,7 +106,7 @@ Text_TrashBin::
 
 Text_Cup::
 # 108 "data/text/flavor_text.pory"
-	.string "It's a cup with a POKéMON mark\n"
+	.string "It's a cup with a Pokémon mark\n"
 	.string "on it.$"
 
 Text_PolishedWindow::
@@ -146,5 +146,5 @@ Text_Burglary::
 
 Text_PlayerFacingTVScreen::
 # 148 "data/text/flavor_text.pory"
-	.string "There's a POKéMON on TV!\n"
+	.string "There's a Pokémon on TV!\n"
 	.string "It looks like it's having fun.$"

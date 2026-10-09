@@ -1,33 +1,33 @@
 text CeruleanCity_Gym_Text_MistyIntro {
     "Hi, you're a new face!\p"
-    "Only those TRAINERS who have a\n"
-    "policy about POKéMON can turn pro.\p"
+    "Only those Trainers who have a\n"
+    "policy about Pokémon can turn pro.\p"
     "What is your approach when you\n"
-    "catch and train POKéMON?\p"
+    "catch and train Pokémon?\p"
     "My policy is an all-out offensive\n"
-    "with WATER-type POKéMON!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    "with Water-type Pokémon!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 }
 
 text CeruleanCity_Gym_Text_ExplainTM03 {
-    "TM03 teaches WATER PULSE.\p"
-    "Use it on an aquatic POKéMON!$"
+    "TM03 teaches Water Pulse.\p"
+    "Use it on an aquatic Pokémon!$"
 }
 
 text CeruleanCity_Gym_Text_ExplainCascadeBadge {
-    "The CASCADEBADGE makes all\n"
-    "POKéMON up to Lv. 30 obey.\p"
+    "The Cascadebadge makes all\n"
+    "Pokémon up to Lv. 30 obey.\p"
     "That includes even outsiders you\n"
     "got in trades.\p"
-    "There's more. You can now use CUT\n"
+    "There's more. You can now use Cut\n"
     "anytime, even out of battle.\p"
-    "You can CUT down small trees to\n"
+    "You can Cut down small trees to\n"
     "open new pathways.\p"
     "You can also have my favorite TM.$"
 }
 
 text CeruleanCity_Gym_Text_ReceivedTM03FromMisty {
     "{PLAYER} received TM03\n"
-    "from MISTY.$"
+    "from Misty.$"
 }
 
 text CeruleanCity_Gym_Text_BetterMakeRoomForThis {
@@ -38,14 +38,14 @@ text CeruleanCity_Gym_Text_MistyDefeat {
     "Wow!\n"
     "You're too much!\p"
     "All right!\p"
-    "You can have the CASCADEBADGE to\n"
+    "You can have the Cascadebadge to\n"
     "show you beat me.$"
 }
 
 text CeruleanCity_Gym_Text_DianaIntro {
     "What? You?\n"
     "I'm more than good enough for you!\p"
-    "MISTY won't have to be bothered.$"
+    "Misty won't have to be bothered.$"
 }
 
 text CeruleanCity_Gym_Text_DianaDefeat {
@@ -53,7 +53,7 @@ text CeruleanCity_Gym_Text_DianaDefeat {
 }
 
 text CeruleanCity_Gym_Text_DianaPostBattle {
-    "You have to face other TRAINERS\n"
+    "You have to face other Trainers\n"
     "to see how good you really are.$"
 }
 
@@ -68,7 +68,7 @@ text CeruleanCity_Gym_Text_LuisDefeat {
 }
 
 text CeruleanCity_Gym_Text_LuisPostBattle {
-    "MISTY is a TRAINER who's going to\n"
+    "Misty is a Trainer who's going to\n"
     "keep improving.\p"
     "She won't lose to someone like you!$"
 }
@@ -77,31 +77,31 @@ text CeruleanCity_Gym_Text_GymGuyAdvice {
     "Yo!\n"
     "Champ in the making!\p"
     "Let me give you some advice!\p"
-    "The LEADER, MISTY, is a pro who\n"
-    "uses WATER-type POKéMON.\p"
+    "The Leader, Misty, is a pro who\n"
+    "uses Water-type Pokémon.\p"
     "You can drain all their water with\n"
-    "GRASS-type POKéMON.\p"
-    "Or, you might use ELECTRIC-type\n"
-    "POKéMON and zap them!$"
+    "Grass-type Pokémon.\p"
+    "Or, you might use Electric-type\n"
+    "Pokémon and zap them!$"
 }
 
 text CeruleanCity_Gym_Text_WeMakePrettyGoodTeam {
-    "You beat MISTY!\n"
+    "You beat Misty!\n"
     "See, what'd I tell ya?\p"
     "You and me, kid, we make a pretty\n"
     "darn-good team!$"
 }
 
 text CeruleanCity_Gym_Text_GymStatue {
-    "CERULEAN POKéMON GYM\n"
-    "LEADER: MISTY\p"
-    "WINNING TRAINERS:\n"
+    "Cerulean Pokémon Gym\n"
+    "Leader: Misty\p"
+    "Winning Trainers:\n"
     "{RIVAL}$"
 }
 
 text CeruleanCity_Gym_Text_GymStatuePlayerWon {
-    "CERULEAN POKéMON GYM\n"
-    "LEADER: MISTY\p"
-    "WINNING TRAINERS:\n"
+    "Cerulean Pokémon Gym\n"
+    "Leader: Misty\p"
+    "Winning Trainers:\n"
     "{RIVAL}, {PLAYER}$"
 }

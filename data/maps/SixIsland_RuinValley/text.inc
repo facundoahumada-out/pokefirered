@@ -55,7 +55,7 @@ SixIsland_RuinValley_Text_FosterDefeat::
 SixIsland_RuinValley_Text_FosterPostBattle::
 # 55 "data/maps/SixIsland_RuinValley/text.pory"
 	.string "There are several ruins on the\n"
-	.string "SEVII ISLANDS.\p"
+	.string "Sevii Islands.\p"
 	.string "The majority of them date back\n"
 	.string "a long way.$"
 

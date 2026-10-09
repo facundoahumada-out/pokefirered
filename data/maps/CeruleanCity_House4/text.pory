@@ -26,7 +26,7 @@ text CeruleanCity_House4_Text_IncredibleNewsHaveBerries {
     "I haven't seen a news story this\n"
     "incredible in too long a time!\p"
     "Thanks for sharing this fantastic\n"
-    "news. Have a bunch of BERRIES!$"
+    "news. Have a bunch of Berries!$"
 }
 
 text CeruleanCity_House4_Text_WishCouldShareNewsWithOthers {
@@ -52,7 +52,7 @@ text CeruleanCity_House4_Text_MagnificentNewsSpreadHaveBerries {
     "Yes, indeed!\p"
     "Consider this a show of\n"
     "appreciation from me and the news.\p"
-    "I'll give you more BERRIES than\n"
+    "I'll give you more Berries than\n"
     "I usually do.$"
 }
 
@@ -64,6 +64,6 @@ text CeruleanCity_House4_Text_EnjoyingMyselfWithAllSortsOfNews {
 }
 
 text CeruleanCity_House4_Text_YourBerryPouchIsFull {
-    "Hm? Your BERRY POUCH is full.\n"
+    "Hm? Your Berry Pouch is full.\n"
     "My gift remains ungiven, then.$"
 }

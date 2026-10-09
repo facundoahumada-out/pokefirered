@@ -1,22 +1,22 @@
 text RocketHideout_B4F_Text_GiovanniIntro {
     "So! I must say, I am impressed you\n"
     "got here.\p"
-    "TEAM ROCKET captures POKéMON from\n"
+    "Team Rocket captures Pokémon from\n"
     "around the world.\p"
     "They're important tools for keeping\n"
     "our criminal enterprise going.\p"
-    "I am the leader, GIOVANNI!\p"
+    "I am the leader, Giovanni!\p"
     "For your insolence, you will feel a\n"
     "world of pain!$"
 }
 
 text RocketHideout_B4F_Text_GiovanniDefeat {
-    "WHAT!\n"
+    "What!\n"
     "This can't be!$"
 }
 
 text RocketHideout_B4F_Text_GiovanniPostBattle {
-    "I see that you raise POKéMON with\n"
+    "I see that you raise Pokémon with\n"
     "utmost care.\p"
     "A child like you would never\n"
     "understand what I hope to achieve.\p"
@@ -26,7 +26,7 @@ text RocketHideout_B4F_Text_GiovanniPostBattle {
 
 text RocketHideout_B4F_Text_Grunt2Intro {
     "I know you!\n"
-    "You ruined our plans at MT. MOON!$"
+    "You ruined our plans at Mt. Moon!$"
 }
 
 text RocketHideout_B4F_Text_Grunt2Defeat {
@@ -34,8 +34,8 @@ text RocketHideout_B4F_Text_Grunt2Defeat {
 }
 
 text RocketHideout_B4F_Text_Grunt2PostBattle {
-    "Do you have something against TEAM\n"
-    "ROCKET?$"
+    "Do you have something against Team\n"
+    "Rocket?$"
 }
 
 text RocketHideout_B4F_Text_Grunt3Intro {
@@ -48,13 +48,13 @@ text RocketHideout_B4F_Text_Grunt3Defeat {
 }
 
 text RocketHideout_B4F_Text_Grunt3PostBattle {
-    "BOSS!\n"
+    "Boss!\n"
     "I'm sorry I failed you!$"
 }
 
 text RocketHideout_B4F_Text_Grunt1Intro {
     "The elevator doesn't work?\n"
-    "Who has the LIFT KEY?$"
+    "Who has the Lift Key?$"
 }
 
 text RocketHideout_B4F_Text_Grunt1Defeat {
@@ -63,5 +63,5 @@ text RocketHideout_B4F_Text_Grunt1Defeat {
 
 text RocketHideout_B4F_Text_Grunt1PostBattle {
     "Oh, no!\n"
-    "I dropped the LIFT KEY!$"
+    "I dropped the Lift Key!$"
 }

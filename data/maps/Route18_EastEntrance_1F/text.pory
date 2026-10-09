@@ -1,10 +1,10 @@
 text Route18_EastEntrance_1F_Text_NeedBicycleForCyclingRoad {
-    "You need a BICYCLE to go out on\n"
-    "CYCLING ROAD!$"
+    "You need a Bicycle to go out on\n"
+    "Cycling Road!$"
 }
 
 text Route18_EastEntrance_1F_Text_CyclingRoadAllUphillFromHere {
-    "CYCLING ROAD is all uphill from\n"
+    "Cycling Road is all uphill from\n"
     "here.$"
 }
 

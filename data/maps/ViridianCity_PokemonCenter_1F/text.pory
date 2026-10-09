@@ -6,15 +6,15 @@ text ViridianCity_PokemonCenter_1F_Text_FeelFreeToUsePC {
 }
 
 text ViridianCity_PokemonCenter_1F_Text_PokeCenterInEveryTown {
-    "There's a POKéMON CENTER in every\n"
+    "There's a Pokémon Center in every\n"
     "town ahead.\p"
     "They charge no money, so don't\n"
-    "be shy about healing POKéMON.$"
+    "be shy about healing Pokémon.$"
 }
 
 text ViridianCity_PokemonCenter_1F_Text_PokeCentersHealMons {
-    "POKéMON CENTERS heal your tired,\n"
-    "hurt, or fainted POKéMON.\p"
-    "They make all POKéMON completely\n"
+    "Pokémon Centers heal your tired,\n"
+    "hurt, or fainted Pokémon.\p"
+    "They make all Pokémon completely\n"
     "healthy.$"
 }
