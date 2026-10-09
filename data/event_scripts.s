@@ -1366,3 +1366,6 @@ Text_TestMsg::
 
 	.include "data/maps/Route28/scripts.inc"
 	.include "data/maps/Route28/text.inc"
+
+	.include "data/maps/MtSilver_Exterior/scripts.inc"
+	.include "data/maps/MtSilver_Exterior/text.inc"
