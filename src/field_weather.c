@@ -1132,6 +1132,14 @@ void ResetPreservedPalettesInWeather(void)
     sPaletteGammaTypes = sBasePaletteGammaTypes;
 }
 
+// Used by the DNS to skip the same palettes the weather leaves untouched (UI, mon pics...)
+bool8 IsPalettePreservedInWeather(u8 palIdx)
+{
+    const u8 *gammaTypes = sPaletteGammaTypes != NULL ? sPaletteGammaTypes : sBasePaletteGammaTypes;
+
+    return gammaTypes[palIdx] == GAMMA_NONE;
+}
+
 void SlightlyDarkenPalsInWeather(u16 *palbuf, u16 *unused, u32 size)
 {
     switch (gWeatherPtr->currWeather)

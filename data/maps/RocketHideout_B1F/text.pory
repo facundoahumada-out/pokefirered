@@ -1,0 +1,67 @@
+text RocketHideout_B1F_Text_Grunt1Intro {
+    "Who are you?\n"
+    "How did you get here?$"
+}
+
+text RocketHideout_B1F_Text_Grunt1Defeat {
+    "Oww!\n"
+    "Beaten!$"
+}
+
+text RocketHideout_B1F_Text_Grunt1PostBattle {
+    "Blast it… You're dissing TEAM\n"
+    "ROCKET, aren't you?$"
+}
+
+text RocketHideout_B1F_Text_Grunt2Intro {
+    "You broke into TEAM ROCKET's\n"
+    "operation? What nerve!$"
+}
+
+text RocketHideout_B1F_Text_Grunt2Defeat {
+    "Boom!$"
+}
+
+text RocketHideout_B1F_Text_Grunt2PostBattle {
+    "You're not going to get away with\n"
+    "this, brat!$"
+}
+
+text RocketHideout_B1F_Text_Grunt3Intro {
+    "Intruder alert!$"
+}
+
+text RocketHideout_B1F_Text_Grunt3Defeat {
+    "I can't do it!$"
+}
+
+text RocketHideout_B1F_Text_Grunt3PostBattle {
+    "SILPH SCOPE? Humph!\n"
+    "I don't know where it is.$"
+}
+
+text RocketHideout_B1F_Text_Grunt4Intro {
+    "Why did you come here?$"
+}
+
+text RocketHideout_B1F_Text_Grunt4Defeat {
+    "This won't do!$"
+}
+
+text RocketHideout_B1F_Text_Grunt4PostBattle {
+    "Okay, I'll talk…\n"
+    "Take the elevator to see my BOSS.$"
+}
+
+text RocketHideout_B1F_Text_Grunt5Intro {
+    "Are you lost, you little mouse?$"
+}
+
+text RocketHideout_B1F_Text_Grunt5Defeat {
+    "Why…?$"
+}
+
+text RocketHideout_B1F_Text_Grunt5PostBattle {
+    "Uh-oh, that ruckus somehow opened\n"
+    "the door!$"
+}

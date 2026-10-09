@@ -1,0 +1,50 @@
+text Route18_Text_WiltonIntro {
+    "I always check every grassy area\n"
+    "for new POKéMON.$"
+}
+
+text Route18_Text_WiltonDefeat {
+    "Tch!$"
+}
+
+text Route18_Text_WiltonPostBattle {
+    "I wish I had a BIKE!$"
+}
+
+text Route18_Text_RamiroIntro {
+    "Kurukkoo!\n"
+    "How do you like my birdcall?$"
+}
+
+text Route18_Text_RamiroDefeat {
+    "I had to bug you!$"
+}
+
+text Route18_Text_RamiroPostBattle {
+    "I collect sea POKéMON on weekends\n"
+    "because the sea is so close.$"
+}
+
+text Route18_Text_JacobIntro {
+    "This is my turf!\n"
+    "Get out of here!$"
+}
+
+text Route18_Text_JacobDefeat {
+    "Darn!$"
+}
+
+text Route18_Text_JacobPostBattle {
+    "This is my fave area for catching\n"
+    "POKéMON.$"
+}
+
+text Route18_Text_RouteSign {
+    "ROUTE 18\n"
+    "CELADON CITY - FUCHSIA CITY$"
+}
+
+text Route18_Text_CyclingRoadSign {
+    "CYCLING ROAD\n"
+    "No pedestrians permitted!$"
+}

@@ -1,0 +1,74 @@
+text Route22_Text_EarlyRivalIntro {
+    "{RIVAL}: Hey! {PLAYER}!\p"
+    "You're off to the POKéMON LEAGUE?\n"
+    "Forget about it!\p"
+    "You probably don't have any\n"
+    "BADGES, do you?\p"
+    "The guard won't let you through\n"
+    "without them.\p"
+    "By the way, did your POKéMON get\n"
+    "any stronger?$"
+}
+
+text Route22_Text_EarlyRivalDefeat {
+    "Awww!\n"
+    "You just lucked out!$"
+}
+
+text Route22_Text_EarlyRivalPostBattle {
+    "I heard the POKéMON LEAGUE is\n"
+    "crawling with tough TRAINERS.\p"
+    "I have to figure out how to get\n"
+    "past them.\p"
+    "You should quit dawdling and get a\n"
+    "move on!$"
+}
+
+// Translated in RB as "{RIVAL}: What? Why do I have 2 POKéMON? You should catch some more too!"
+text Route22_Text_RivalShouldCatchSomeMons {
+    "{RIVAL}“なんだ？\n"
+    "ポケモン　2ひきも\l"
+    "もってるの　なぜか　だって？\p"
+    "おまえも\n"
+    "つかまえれば　いい　じゃん！$"
+}
+
+text Route22_Text_LateRivalIntro {
+    "{RIVAL}: What? {PLAYER}!\n"
+    "What a surprise to see you here!\p"
+    "So you're going to the POKéMON\n"
+    "LEAGUE?\p"
+    "You collected all the BADGES, too?\n"
+    "That's cool!\p"
+    "Then I'll whip you, {PLAYER}, as a\n"
+    "warm-up for the POKéMON LEAGUE!\p"
+    "Come on!$"
+}
+
+text Route22_Text_LateRivalDefeat {
+    "What!?\p"
+    "I was just careless, you!$"
+}
+
+text Route22_Text_LateRivalPostBattle {
+    "That loosened me up.\n"
+    "I'm ready for the POKéMON LEAGUE!\p"
+    "{PLAYER}, you need more practice.\p"
+    "But hey, you know that!\n"
+    "I'm out of here. Smell ya!$"
+}
+
+// Translated in RB as "{RIVAL}: Hahaha! {PLAYER}! That's your best? You're nowhere near as good as me, pal! Go train some more! You loser!"
+text Route22_Text_LateRivalVictory {
+    "{RIVAL}“ひゃははッ　{PLAYER}ー！\n"
+    "それで　がんばってるのかよ！\l"
+    "おれの　さいのうに　くらべりゃ\l"
+    "{PLAYER}は　まだまだ　だな！\p"
+    "もっと　れんしゅう　こいよ！\n"
+    "あははーッ！$"
+}
+
+text Route22_Text_LeagueGateSign {
+    "POKéMON LEAGUE\n"
+    "Front Gate$"
+}

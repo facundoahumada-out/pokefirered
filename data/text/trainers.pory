@@ -1,0 +1,1245 @@
+text VSSeeker_Text_BatteryNotChargedNeedXSteps {
+    "The battery isn't charged enough.\p"
+    "No. of steps required to fully\n"
+    "charge the battery: {STR_VAR_1}{PAUSE_UNTIL_PRESS}$"
+}
+
+text VSSeeker_Text_NoTrainersWithinRange {
+    "There are no TRAINERS within range\n"
+    "who can battle…\p"
+    "The VS SEEKER was turned off.{PAUSE_UNTIL_PRESS}$"
+}
+
+text VSSeeker_Text_TrainersNotReady {
+    "The other TRAINERS don't appear\n"
+    "to be ready for battle.\p"
+    "Let's wait till later.{PAUSE_UNTIL_PRESS}$"
+}
+
+text Route3_Text_ColtonRematchIntro {
+    "Hey!\n"
+    "I saw you in VIRIDIAN FOREST!$"
+}
+
+text Route3_Text_BenRematchIntro {
+    "Hi! I like shorts!\n"
+    "They're comfy and easy to wear!\p"
+    "You should be wearing shorts, too!$"
+}
+
+text Route3_Text_JaniceRematchIntro {
+    "Excuse me!\n"
+    "You keep looking at me, don't you?$"
+}
+
+text Route3_Text_GregRematchIntro {
+    "You're a TRAINER, aren't you?\n"
+    "Let's get with it right away!$"
+}
+
+text Route3_Text_SallyRematchIntro {
+    "That look you give me…\n"
+    "It intrigues me so!$"
+}
+
+text Route3_Text_CalvinRematchIntro {
+    "Hey! What's wrong with you?\n"
+    "You're still not wearing shorts!$"
+}
+
+text Route3_Text_JamesRematchIntro {
+    "I'll battle you with the POKéMON\n"
+    "I started raising.$"
+}
+
+text Route3_Text_RobinRematchIntro {
+    "Eek!\n"
+    "Did you push me?$"
+}
+
+text Route4_Text_CrissyRematchIntro {
+    "I always catch mushroom POKéMON\n"
+    "on MT. MOON.$"
+}
+
+text Route6_Text_RickyRematchIntro {
+    "Oh! You're that nosy kid who\n"
+    "eavesdropped on us!$"
+}
+
+text Route6_Text_NancyRematchIntro {
+    "Excuse me! Didn't I tell you that\n"
+    "this is a private conversation?\p"
+    "You shouldn't be listening in,\n"
+    "you uncouth person!$"
+}
+
+text Route6_Text_KeigoRematchIntro {
+    "I'm trying to find something good\n"
+    "that's not a BUG POKéMON, but…$"
+}
+
+text Route6_Text_JeffRematchIntro {
+    "Huh?\n"
+    "You want to go with me again?$"
+}
+
+text Route6_Text_IsabelleRematchIntro {
+    "Me?\n"
+    "Well, okay. I'll play this once.$"
+}
+
+text Route6_Text_ElijahRematchIntro {
+    "Hey, long time!\n"
+    "Have you gotten better?$"
+}
+
+text Route8_Text_AidanRematchIntro {
+    "You are good at POKéMON, but how\n"
+    "is your chemistry grade?$"
+}
+
+text Route8_Text_StanRematchIntro {
+    "All right!\n"
+    "Let's play another game!$"
+}
+
+text Route8_Text_GlennRematchIntro {
+    "You need strategy to win at\n"
+    "battling.\p"
+    "Are you following my advice?$"
+}
+
+text Route8_Text_PaigeRematchIntro {
+    "I've collected many NIDORAN.\n"
+    "I don't want them to evolve, but…$"
+}
+
+text Route8_Text_LeslieRematchIntro {
+    "School is fun, but I still think\n"
+    "POKéMON are fun, too.$"
+}
+
+text Route8_Text_AndreaRematchIntro {
+    "MEOWTH and PERSIAN are so cute,\n"
+    "meow, meow, meow!$"
+}
+
+text Route8_Text_MeganRematchIntro {
+    "We may look silly standing here\n"
+    "like this, but I can still battle.$"
+}
+
+text Route8_Text_RichRematchIntro {
+    "I'm a rambling, gaming dude!\n"
+    "I'm on a winning streak!$"
+}
+
+text Route8_Text_JuliaRematchIntro {
+    "What's a cute, round, and fluffy\n"
+    "POKéMON?\p"
+    "You already know, don't you?$"
+}
+
+text Route8_Text_RicardoRematchIntro {
+    "My bike's still acting up, man.$"
+}
+
+text Route8_Text_JarenRematchIntro {
+    "Okay, kid!\n"
+    "Don't expect mercy this time!$"
+}
+
+text Route8_Text_EliRematchIntro {
+    "ELI: Our twin power became even\n"
+    "better!$"
+}
+
+text Route8_Text_AnneRematchIntro {
+    "ANNE: Our twin power powered up!$"
+}
+
+text Route9_Text_AliciaRematchIntro {
+    "We're to battle again?\n"
+    "This time, you're mine!$"
+}
+
+text Route9_Text_ChrisRematchIntro {
+    "I haven't forgotten you were with\n"
+    "those good-looking POKéMON.$"
+}
+
+text Route9_Text_DrewRematchIntro {
+    "I'm taking ROCK TUNNEL to go to\n"
+    "LAVENDER…\p"
+    "But I keep getting stopped by\n"
+    "everyone along the way…$"
+}
+
+text Route9_Text_CaitlinRematchIntro {
+    "Don't you dare patronize me today!\n"
+    "We're playing for keeps!$"
+}
+
+text Route9_Text_JeremyRematchIntro {
+    "Bwahaha!\n"
+    "Great! I was bored again, eh!$"
+}
+
+text Route9_Text_BriceRematchIntro {
+    "Hahaha!\n"
+    "A little toughie, as always!$"
+}
+
+text Route9_Text_BrentRematchIntro {
+    "I got up early every day to train\n"
+    "my POKéMON from cocoons!$"
+}
+
+text Route9_Text_AlanRematchIntro {
+    "Hahahaha!\n"
+    "I'll win this time!$"
+}
+
+text Route9_Text_ConnerRematchIntro {
+    "Go win, my super BUG POKéMON!$"
+}
+
+text Route10_Text_MarkRematchIntro {
+    "Wow, you came here again?\n"
+    "Maybe you're a POKéMANIAC, too?\l"
+    "Want to see my collection?$"
+}
+
+text Route10_Text_ClarkRematchIntro {
+    "Ha-hahah-ah-ha!\n"
+    "I can't stop sneezing!$"
+}
+
+text Route10_Text_HermanRematchIntro {
+    "Hi, kid!\n"
+    "Did I show you my POKéMON?$"
+}
+
+text Route10_Text_HeidiRematchIntro {
+    "I went out to a POKéMON GYM again.\p"
+    "…But I lost as usual.$"
+}
+
+text Route10_Text_TrentRematchIntro {
+    "Ah!\n"
+    "This mountain air is delicious!\l"
+    "It's so good, I can't leave!$"
+}
+
+text Route10_Text_CarolRematchIntro {
+    "My head is starting to spin.\n"
+    "I've been hiking for too long…$"
+}
+
+text Route11_Text_HugoRematchIntro {
+    "Win, lose, or draw!\n"
+    "Now for our rematch!$"
+}
+
+text Route11_Text_JasperRematchIntro {
+    "Competing is the ultimate thrill.\n"
+    "I still can't get enough!$"
+}
+
+text Route11_Text_EddieRematchIntro {
+    "You know, right?\n"
+    "Let's go, but don't cheat!$"
+}
+
+text Route11_Text_BraxtonRematchIntro {
+    "Hi, there!\p"
+    "But be careful!\n"
+    "I'm still laying down some cables!$"
+}
+
+text Route11_Text_DillonRematchIntro {
+    "I became a TRAINER a while ago.\n"
+    "But, I think I can win.$"
+}
+
+text Route11_Text_DirkRematchIntro {
+    "Fwahaha!\n"
+    "I have never lost!\p"
+    "…And if I did, I've forgotten all\n"
+    "about it!$"
+}
+
+text Route11_Text_DarianRematchIntro {
+    "I have never won before…\p"
+    "Perhaps I am destined to remain\n"
+    "that way…$"
+}
+
+text Route11_Text_YasuRematchIntro {
+    "I'm the best in my class.\n"
+    "I train every morning and night!$"
+}
+
+text Route11_Text_BernieRematchIntro {
+    "Keep your eyes out for live wires!$"
+}
+
+text Route11_Text_DaveRematchIntro {
+    "I raised my POKéMON carefully.\n"
+    "They should be ready by now.\l"
+    "This time, they should win, too.$"
+}
+
+text Route12_Text_NedRematchIntro {
+    "Yeah!\n"
+    "I got a bite, here!\l"
+    "Th-this might be the real thing!$"
+}
+
+text Route12_Text_ChipRematchIntro {
+    "You're finally here.\n"
+    "Fishing is a waiting game.$"
+}
+
+text Route12_Text_JustinRematchIntro {
+    "Still can't find a MOON STONE…\n"
+    "Have you found one?$"
+}
+
+text Route12_Text_LucaRematchIntro {
+    "Electricity has always been my\n"
+    "specialty.\p"
+    "I don't know a thing about POKéMON\n"
+    "of the sea, though.$"
+}
+
+text Route12_Text_HankRematchIntro {
+    "The FISHING FOOL vs. POKéMON KID!\n"
+    "Another round, fight!$"
+}
+
+text Route12_Text_ElliotRematchIntro {
+    "I love fishing, don't get me wrong.\n"
+    "But, I wish I had more work…\l"
+    "…It's hard to give up fishing!$"
+}
+
+text Route12_Text_AndrewRematchIntro {
+    "What's catching?\p"
+    "You'll never know unless you beat\n"
+    "me!$"
+}
+
+text Route12_Text_JesRematchIntro {
+    "JES: I'll win here today and\n"
+    "propose to my GIA.$"
+}
+
+text Route12_Text_GiaRematchIntro {
+    "GIA: Hey, JES…\n"
+    "I've been waiting a long time now.\p"
+    "If we win today, I'll marry you!$"
+}
+
+text Route13_Text_SebastianRematchIntro {
+    "My bird POKéMON remember you!$"
+}
+
+text Route13_Text_SusieRematchIntro {
+    "I want to be the best TRAINER \n"
+    "while I'm a kid!$"
+}
+
+text Route13_Text_ValerieRematchIntro {
+    "Wow!\n"
+    "You got more cool BADGES!$"
+}
+
+text Route13_Text_GwenRematchIntro {
+    "My cutely grown POKéMON wish to\n"
+    "become reacquainted with you.$"
+}
+
+text Route13_Text_AlmaRematchIntro {
+    "I cleaned out my savings and\n"
+    "bought more CARBOS.$"
+}
+
+text Route13_Text_PerryRematchIntro {
+    "I'm not going to lose this time.\n"
+    "The wind's blowing my way!$"
+}
+
+text Route13_Text_LolaRematchIntro {
+    "Oh, you're back?\p"
+    "Sure, I'll play again with you,\n"
+    "sweetie.$"
+}
+
+text Route13_Text_SheilaRematchIntro {
+    "Can't you forget that you battled\n"
+    "with me?$"
+}
+
+text Route13_Text_JaredRematchIntro {
+    "What're you starin' at?$"
+}
+
+text Route13_Text_RobertRematchIntro {
+    "I always go with bird POKéMON.\n"
+    "I've dedicated myself to them.$"
+}
+
+text Route14_Text_CarterRematchIntro {
+    "I used TMs to teach good moves\n"
+    "to my POKéMON.$"
+}
+
+text Route14_Text_MitchRematchIntro {
+    "My bird POKéMON should be ready\n"
+    "for battle this time.$"
+}
+
+text Route14_Text_BeckRematchIntro {
+    "Are you using TMs on POKéMON?\n"
+    "Just holding them is useless.$"
+}
+
+text Route14_Text_MarlonRematchIntro {
+    "Have you taught your bird POKéMON\n"
+    "how to FLY?\p"
+    "You'll be able to soar with it into\n"
+    "the sky! Give it a try.$"
+}
+
+text Route14_Text_DonaldRematchIntro {
+    "The legend of the winged mirages…\n"
+    "You've heard it, right?$"
+}
+
+text Route14_Text_BennyRematchIntro {
+    "I'm really not into it, but okay.\n"
+    "Let's go!$"
+}
+
+text Route14_Text_LukasRematchIntro {
+    "Hey!\n"
+    "I remember you!\p"
+    "C'mon, c'mon.\n"
+    "Let's go, let's go, let's go!$"
+}
+
+text Route14_Text_IsaacRematchIntro {
+    "You're here again, huh?\n"
+    "Shut up and battle.$"
+}
+
+text Route14_Text_GeraldRematchIntro {
+    "We've been riding here because of\n"
+    "the wide-open spaces.$"
+}
+
+text Route14_Text_MalikRematchIntro {
+    "POKéMON battle, right?\n"
+    "Cool! Rumble!$"
+}
+
+text Route14_Text_KiriRematchIntro {
+    "KIRI: JAN, I hope we win today.$"
+}
+
+text Route14_Text_JanRematchIntro {
+    "JAN: KIRI, here we go!\n"
+    "Let's win for sure this time!$"
+}
+
+text Route15_Text_KindraRematchIntro {
+    "I'm going to keep battling with the\n"
+    "POKéMON I got in trades.$"
+}
+
+text Route15_Text_BeckyRematchIntro {
+    "You look gentle, so I think I can\n"
+    "beat you.\p"
+    "I'll give it one more go!$"
+}
+
+text Route15_Text_EdwinRematchIntro {
+    "When I whistle, bird POKéMON\n"
+    "gather around.\p"
+    "They're amazingly cute!$"
+}
+
+text Route15_Text_ChesterRematchIntro {
+    "Hmm? My birds are shivering!\n"
+    "Wait, aren't you that TRAINER…$"
+}
+
+text Route15_Text_GraceRematchIntro {
+    "Oh, you're a little cutie!\n"
+    "So like a darling POKéMON!\l"
+    "I remember you now!$"
+}
+
+text Route15_Text_OliviaRematchIntro {
+    "I raise POKéMON for protection\n"
+    "because I live alone.\p"
+    "That hasn't changed.$"
+}
+
+text Route15_Text_ErnestRematchIntro {
+    "Hey, kid! C'mon!\n"
+    "I got these off some loser!$"
+}
+
+text Route15_Text_AlexRematchIntro {
+    "Fork over all your cash when you\n"
+    "lose to me, kid!$"
+}
+
+text Route15_Text_CeliaRematchIntro {
+    "What's cool and happening?\n"
+    "Trading POKéMON, of course.$"
+}
+
+text Route15_Text_YazminRematchIntro {
+    "Want to play with my POKéMON\n"
+    "again?$"
+}
+
+text Route15_Text_MyaRematchIntro {
+    "MYA: Hi, we keep meeting,\n"
+    "don't we?\p"
+    "Help me train my little brother\n"
+    "again?$"
+}
+
+text Route15_Text_RonRematchIntro {
+    "RON: My sister's gotten more\n"
+    "powerful…$"
+}
+
+text Route16_Text_LaoRematchIntro {
+    "What do you want?$"
+}
+
+text Route16_Text_KojiRematchIntro {
+    "Nice BIKE!\n"
+    "Hand it over quick!$"
+}
+
+text Route16_Text_LukeRematchIntro {
+    "Come out and play, little mouse.\n"
+    "I'll treat you right!$"
+}
+
+text Route16_Text_HideoRematchIntro {
+    "Hey, wait a second!\n"
+    "Don't call me and then run away!$"
+}
+
+text Route16_Text_CamronRematchIntro {
+    "I'm feeling hungry and mean!\n"
+    "I really need a punching bag!$"
+}
+
+text Route16_Text_RubenRematchIntro {
+    "Hey, there!\n"
+    "We'll have ourselves a good time!$"
+}
+
+text Route16_Text_JedRematchIntro {
+    "JED: Are you here to see our\n"
+    "love, which knows no bounds?$"
+}
+
+text Route16_Text_LeaRematchIntro {
+    "LEA: Sometimes, the intensity of\n"
+    "our love scares me.$"
+}
+
+text Route17_Text_RaulRematchIntro {
+    "I told you, there's no getting rich\n"
+    "quick in battling kids.$"
+}
+
+text Route17_Text_IsaiahRematchIntro {
+    "I'm mighty proud of my bod, kiddo.\n"
+    "Come on!$"
+}
+
+text Route17_Text_VirgilRematchIntro {
+    "You out for a stroll?$"
+}
+
+text Route17_Text_BillyRematchIntro {
+    "We're BIKERS!\n"
+    "We rule the roads, man!$"
+}
+
+text Route17_Text_NikolasRematchIntro {
+    "VOLTORB's going to seriously\n"
+    "electrify you today!$"
+}
+
+text Route17_Text_ZeekRematchIntro {
+    "I leveled up my POKéMON, but it\n"
+    "absolutely won't evolve. Why?$"
+}
+
+text Route17_Text_JamalRematchIntro {
+    "Gaah! I really need to exercise\n"
+    "and seriously trim some flab!$"
+}
+
+text Route17_Text_CoreyRematchIntro {
+    "Be a rebel!$"
+}
+
+text Route17_Text_JaxonRematchIntro {
+    "Yep, that's a nice BIKE!\n"
+    "How's it handle?$"
+}
+
+text Route17_Text_WilliamRematchIntro {
+    "Get lost, kid!\n"
+    "I'm bushed!$"
+}
+
+text Route18_Text_WiltonRematchIntro {
+    "I've been checking every grassy\n"
+    "area for new POKéMON.\p"
+    "But it's not always easy…$"
+}
+
+text Route18_Text_RamiroRematchIntro {
+    "Koorukukukoo!\n"
+    "Is my birdcall getting better?$"
+}
+
+text Route18_Text_JacobRematchIntro {
+    "I warned you before, this is my\n"
+    "turf!\p"
+    "I don't want you coming around.$"
+}
+
+text Route19_Text_RichardRematchIntro {
+    "I'm almost warmed up to go\n"
+    "out for a swim.$"
+}
+
+text Route19_Text_ReeceRematchIntro {
+    "Wait! Slow down!\n"
+    "What if you have a heart attack?$"
+}
+
+text Route19_Text_MatthewRematchIntro {
+    "I love swimming!\n"
+    "I guess you're the surfing type.$"
+}
+
+text Route19_Text_DouglasRematchIntro {
+    "What's beyond the horizon?\n"
+    "Have you seen?$"
+}
+
+text Route19_Text_DavidRematchIntro {
+    "I tried diving for POKéMON again,\n"
+    "but it was a no-go like before.$"
+}
+
+text Route19_Text_TonyRematchIntro {
+    "I look at the sea to forget all\n"
+    "the bad things that happened.\p"
+    "…Like losing to you the last time!$"
+}
+
+text Route19_Text_AnyaRematchIntro {
+    "You always get to ride your\n"
+    "POKéMON…\p"
+    "It looks so relaxing.\n"
+    "Can I have it if I win?$"
+}
+
+text Route19_Text_AliceRematchIntro {
+    "Swimming's great!\n"
+    "Sunburns aren't!$"
+}
+
+text Route19_Text_AxleRematchIntro {
+    "These waters are treacherous!\n"
+    "You shouldn't come back here!$"
+}
+
+text Route19_Text_ConnieRematchIntro {
+    "I swam here with my friends…\n"
+    "I'm tired…\l"
+    "Must we really battle again?$"
+}
+
+text Route19_Text_LiaRematchIntro {
+    "LIA: You know my brother just\n"
+    "became a TRAINER, right?\p"
+    "I want to make him better, so I\n"
+    "need your help again.$"
+}
+
+text Route19_Text_LucRematchIntro {
+    "LUC: My big sis taught me all\n"
+    "about POKéMON.\p"
+    "I wonder if I'm better?$"
+}
+
+text Route20_Text_BarryRematchIntro {
+    "The water is shallow here.\n"
+    "There are many people swimming.$"
+}
+
+text Route20_Text_ShirleyRematchIntro {
+    "Are you jealous that I'm\n"
+    "vacationing on SEAFOAM?$"
+}
+
+text Route20_Text_TiffanyRematchIntro {
+    "I love floating with the fishes\n"
+    "here among the waves.$"
+}
+
+text Route20_Text_IreneRematchIntro {
+    "Were you on vacation, too?$"
+}
+
+text Route20_Text_DeanRematchIntro {
+    "Check out my physique!\p"
+    "It's even more buff than ever\n"
+    "before!$"
+}
+
+text Route20_Text_DarrinRematchIntro {
+    "Why are you riding a POKéMON?\n"
+    "Haven't you learned to swim yet?$"
+}
+
+text Route20_Text_RogerRematchIntro {
+    "I rode my bird POKéMON here.$"
+}
+
+text Route20_Text_NoraRematchIntro {
+    "My boyfriend gave me big pearls.\n"
+    "And, they've grown bigger!$"
+}
+
+text Route20_Text_MissyRematchIntro {
+    "I swam here from CINNABAR ISLAND.\n"
+    "It wasn't easy, like I said.$"
+}
+
+text Route20_Text_MelissaRematchIntro {
+    "CINNABAR, in the west, has a LAB\n"
+    "for POKéMON.\p"
+    "My daddy works there.$"
+}
+
+text Route21_North_Text_RonaldRematchIntro {
+    "You want to know if the fish are\n"
+    "biting?$"
+}
+
+text Route21_North_Text_WadeRematchIntro {
+    "I got a big haul again!\n"
+    "Wanna go for it once more?$"
+}
+
+text Route21_North_Text_SpencerRematchIntro {
+    "The sea cleanses my body and soul!$"
+}
+
+// Unused trainer from RB that had a rematch intro added
+text Route21_North_Text_CueBallRematchIntro {
+    "きょうも　およぎに\n"
+    "きちまったぜ$"
+}
+
+text Route21_South_Text_JackRematchIntro {
+    "I caught my POKéMON at sea.\n"
+    "And that's where I train them.$"
+}
+
+text Route21_South_Text_JeromeRematchIntro {
+    "Right now, I'm in another triathlon\n"
+    "meet!$"
+}
+
+text Route21_South_Text_RolandRematchIntro {
+    "Ahh!\n"
+    "Feel the sun and the wind!$"
+}
+
+text Route21_South_Text_ClaudeRematchIntro {
+    "Hey, cut it out already.\n"
+    "You always scare away the fish!$"
+}
+
+text Route21_South_Text_NolanRematchIntro {
+    "Keep me company till I get a hit.$"
+}
+
+text Route21_North_Text_LilRematchIntro {
+    "LIL: Huh? A battle again?\n"
+    "IAN, can't you do it alone?$"
+}
+
+text Route21_North_Text_IanRematchIntro {
+    "IAN: My sis is still a slob.\n"
+    "Help me get her into shape!$"
+}
+
+text Route25_Text_JoeyRematchIntro {
+    "I won't lose while I'm here!$"
+}
+
+text Route25_Text_DanRematchIntro {
+    "Dad took me to a great party on\n"
+    "the S.S. ANNE at VERMILION CITY.$"
+}
+
+text Route25_Text_FlintRematchIntro {
+    "I'm a cool guy.\n"
+    "I've got a girlfriend!\p"
+    "I'll show her how cool I am for\n"
+    "sure this time!$"
+}
+
+text Route25_Text_KelseyRematchIntro {
+    "Hi!\n"
+    "My boyfriend is cool!\l"
+    "My conditioning's good today!$"
+}
+
+text Route25_Text_ChadRematchIntro {
+    "I had this feeling…\n"
+    "I knew I had to battle you again!$"
+}
+
+text Route25_Text_HaleyRematchIntro {
+    "My friend has many cute POKéMON.\n"
+    "I'm so jealous!$"
+}
+
+text Route25_Text_FranklinRematchIntro {
+    "I just trained up on MT. MOON,\n"
+    "but I've still got gas in the tank!$"
+}
+
+text Route25_Text_NobRematchIntro {
+    "A POKéMANIAC lives on the cape.\n"
+    "Have you seen his collection?$"
+}
+
+text Route25_Text_WayneRematchIntro {
+    "You're going to see BILL again?\n"
+    "First, we battle!$"
+}
+
+text Route24_Text_ShaneRematchIntro {
+    "I saw your feat from the grass!$"
+}
+
+text Route24_Text_EthanRematchIntro {
+    "Okay!\n"
+    "I'll stomp you!$"
+}
+
+text Route24_Text_ReliRematchIntro {
+    "You always look so busy…\n"
+    "Aren't you getting tired?$"
+}
+
+text Route24_Text_TimmyRematchIntro {
+    "You really must love coming to\n"
+    "NUGGET BRIDGE.$"
+}
+
+text Route24_Text_AliRematchIntro {
+    "The time we battled…\p"
+    "Even though I was the second in\n"
+    "line, I was the best, wasn't I?$"
+}
+
+text Route24_Text_CaleRematchIntro {
+    "People call this the NUGGET\n"
+    "BRIDGE!\p"
+    "You've already beaten us, so you're\n"
+    "not allowed to take the challenge…\p"
+    "…But, you're welcome to battle with\n"
+    "us again.$"
+}
+
+text OneIsland_TreasureBeach_Text_AmaraRematchIntro {
+    "Lying back, rocked by the waves…\n"
+    "I don't notice time slipping by…$"
+}
+
+text OneIsland_KindleRoad_Text_MariaRematchIntro {
+    "The weather's gorgeous!\n"
+    "I'll try not to spoil it.$"
+}
+
+text OneIsland_KindleRoad_Text_AbigailRematchIntro {
+    "My sunburn is starting to hurt…$"
+}
+
+text OneIsland_KindleRoad_Text_FinnRematchIntro {
+    "The fire bird's mountain casts\n"
+    "a huge shadow…$"
+}
+
+text OneIsland_KindleRoad_Text_GarrettRematchIntro {
+    "I have this strong feeling that\n"
+    "I can win this time!$"
+}
+
+text OneIsland_KindleRoad_Text_TommyRematchIntro {
+    "Wait! Wait a second!\n"
+    "I'm sure I've hooked a big one!$"
+}
+
+text OneIsland_KindleRoad_Text_SharonRematchIntro {
+    "You'll help me out with my\n"
+    "training again?$"
+}
+
+text OneIsland_KindleRoad_Text_TanyaRematchIntro {
+    "We haven't missed a single day of\n"
+    "training yet!$"
+}
+
+text OneIsland_KindleRoad_Text_SheaRematchIntro {
+    "Every morning, before breakfast,\n"
+    "I swim around this island…\l"
+    "Three times!$"
+}
+
+text OneIsland_KindleRoad_Text_HughRematchIntro {
+    "Dress appropriately for battle!\n"
+    "Lose that frivolous outfit, I said!$"
+}
+
+text OneIsland_KindleRoad_Text_BryceRematchIntro {
+    "You know, everything tastes great\n"
+    "when you're out in the wild.$"
+}
+
+text OneIsland_KindleRoad_Text_ClaireRematchIntro {
+    "I ate too much again, so will you\n"
+    "battle us for some exercise?$"
+}
+
+text OneIsland_KindleRoad_Text_KiaRematchIntro {
+    "KIA: My big brother and I make\n"
+    "an awesome combination!\p"
+    "We won't lose this time!$"
+}
+
+text OneIsland_KindleRoad_Text_MikRematchIntro {
+    "MIK: Together with KIA, we're\n"
+    "afraid of nothing!\p"
+    "We'll prove it to you this time!$"
+}
+
+text ThreeIsland_BondBridge_Text_NikkiRematchIntro {
+    "Are we to battle again?$"
+}
+
+text ThreeIsland_BondBridge_Text_VioletRematchIntro {
+    "From where have you come, and\n"
+    "where are you bound?$"
+}
+
+text ThreeIsland_BondBridge_Text_AmiraRematchIntro {
+    "I want to swim without my float\n"
+    "ring soon.$"
+}
+
+text ThreeIsland_BondBridge_Text_AlexisRematchIntro {
+    "Yay, yay!\n"
+    "POKéMON!$"
+}
+
+text ThreeIsland_BondBridge_Text_TishaRematchIntro {
+    "Oh, no, didn't I tell you already?\n"
+    "Please, stay away from me!$"
+}
+
+text ThreeIsland_BondBridge_Text_JoyRematchIntro {
+    "JOY: We've gotten stronger!\n"
+    "Lots and lots!$"
+}
+
+text ThreeIsland_BondBridge_Text_MegRematchIntro {
+    "MEG: You can't beat us today!$"
+}
+
+text FiveIsland_WaterLabyrinth_Text_AlizeRematchIntro {
+    "Oh, hello!\p"
+    "Are you raising your POKéMON in a\n"
+    "good environment?$"
+}
+
+text FiveIsland_ResortGorgeous_Text_DaisyRematchIntro {
+    "With these hands, I will create\n"
+    "my victory today.$"
+}
+
+text FiveIsland_ResortGorgeous_Text_CelinaRematchIntro {
+    "Must I repeat myself?\n"
+    "I'm trying to paint.\l"
+    "Please keep out of my sight!$"
+}
+
+text FiveIsland_ResortGorgeous_Text_RaynaRematchIntro {
+    "I haven't made any progress…\n"
+    "I still can't get the right angle…$"
+}
+
+text FiveIsland_ResortGorgeous_Text_JackiRematchIntro {
+    "Oh, you will give me another\n"
+    "opportunity to match wits with you?$"
+}
+
+text FiveIsland_ResortGorgeous_Text_GillianRematchIntro {
+    "They're almost finished making the\n"
+    "pool for my POKéMON.\p"
+    "You must drop in for a visit.$"
+}
+
+text FiveIsland_ResortGorgeous_Text_DestinRematchIntro {
+    "I'm a good runner.\n"
+    "I've gotten even faster!$"
+}
+
+text FiveIsland_ResortGorgeous_Text_TobyRematchIntro {
+    "I say, friend!\n"
+    "Let us enjoy our time together!$"
+}
+
+text FiveIsland_MemorialPillar_Text_MiloRematchIntro {
+    "I'm the eldest of the BIRD\n"
+    "BROTHERS. Remember me?\p"
+    "That's right, I'm the one who loves\n"
+    "birds for their beaks!$"
+}
+
+text FiveIsland_MemorialPillar_Text_ChazRematchIntro {
+    "I'm the middle kid of the BIRD\n"
+    "BROTHERS.\p"
+    "I'm the one that loves wings.\n"
+    "Let's battle again!$"
+}
+
+text FiveIsland_MemorialPillar_Text_HaroldRematchIntro {
+    "I'm the youngest of the BIRD\n"
+    "BROTHERS.\p"
+    "I love birds for their down.\n"
+    "I didn't think I'd see you again!$"
+}
+
+text SixIsland_OutcastIsland_Text_TylorRematchIntro {
+    "I'm still having no luck at all.\n"
+    "A battle'd be a change of pace!$"
+}
+
+text SixIsland_OutcastIsland_Text_MymoRematchIntro {
+    "Gasp… Gasp…\p"
+    "I swam here from SIX ISLAND's port\n"
+    "in one go again.$"
+}
+
+text SixIsland_OutcastIsland_Text_NicoleRematchIntro {
+    "You always come along while I'm\n"
+    "swimming.$"
+}
+
+text SixIsland_OutcastIsland_Text_AvaRematchIntro {
+    "AVA: Let's have another\n"
+    "two-on-two marine battle today!$"
+}
+
+text SixIsland_OutcastIsland_Text_GebRematchIntro {
+    "GEB: My big sister and I are way\n"
+    "tougher than before!$"
+}
+
+text SixIsland_GreenPath_Text_JaclynRematchIntro {
+    "…Huh?\p"
+    "I envision my house, but TELEPORT\n"
+    "always brings me here!$"
+}
+
+text SixIsland_WaterPath_Text_RoseRematchIntro {
+    "Oh, hello.\n"
+    "A pleasant breeze is blowing again.$"
+}
+
+text SixIsland_WaterPath_Text_EdwardRematchIntro {
+    "Hehehe, I'm practicing in secret\n"
+    "again.$"
+}
+
+text SixIsland_WaterPath_Text_SamirRematchIntro {
+    "What, you're sick of seeing\n"
+    "SWIMMERS like me?\p"
+    "Aww, don't be hatin'!\n"
+    "Battle with me again.$"
+}
+
+text SixIsland_WaterPath_Text_DeniseRematchIntro {
+    "Sigh…\n"
+    "My boyfriend's busy again…$"
+}
+
+text SixIsland_WaterPath_Text_EarlRematchIntro {
+    "Come on, tell me, where are the\n"
+    "mountains around these parts?$"
+}
+
+text SixIsland_WaterPath_Text_MiuRematchIntro {
+    "MIU: Hello, POKéMON!\n"
+    "It's time to play again!$"
+}
+
+text SixIsland_WaterPath_Text_MiaRematchIntro {
+    "MIA: Hello, POKéMON!\n"
+    "It's time to battle again!$"
+}
+
+text SixIsland_RuinValley_Text_StanlyRematchIntro {
+    "There appear to be many secrets\n"
+    "still unsolved in this world.$"
+}
+
+text SixIsland_RuinValley_Text_FosterRematchIntro {
+    "Hi, didn't we meet before?\n"
+    "What compelled you to come back?$"
+}
+
+text SixIsland_RuinValley_Text_LarryRematchIntro {
+    "It's been said that there are\n"
+    "mysterious stones on this island.\p"
+    "Have you discovered anything since\n"
+    "we last met?$"
+}
+
+text SixIsland_RuinValley_Text_DarylRematchIntro {
+    "A rematch with you, so high up!$"
+}
+
+text SixIsland_RuinValley_Text_HectorRematchIntro {
+    "I'm pretty familiar with the land\n"
+    "around these parts.$"
+}
+
+text SevenIsland_TrainerTower_Text_DarioRematchIntro {
+    "I sensed your approach.$"
+}
+
+text SevenIsland_TrainerTower_Text_RodetteRematchIntro {
+    "Somewhere on this island, peculiar\n"
+    "POKéMON are sleeping.$"
+}
+
+text SevenIsland_SevaultCanyon_Entrance_Text_MiahRematchIntro {
+    "Kyahaha!\p"
+    "Coming back won't change a thing.\n"
+    "I'll flick you away effortlessly!$"
+}
+
+text SevenIsland_SevaultCanyon_Entrance_Text_MasonRematchIntro {
+    "Howdy! You're a member of my\n"
+    "fan club, isn't that right?$"
+}
+
+text SevenIsland_SevaultCanyon_Entrance_Text_NicolasRematchIntro {
+    "This island is too spread out…\n"
+    "Patrolling the place is a drag…$"
+}
+
+text SevenIsland_SevaultCanyon_Entrance_Text_MadelineRematchIntro {
+    "I don't forgive people who abuse\n"
+    "POKéMON!$"
+}
+
+text SevenIsland_SevaultCanyon_Entrance_Text_EveRematchIntro {
+    "EVE: I'll team up with JON and\n"
+    "battle together again.$"
+}
+
+text SevenIsland_SevaultCanyon_Entrance_Text_JonRematchIntro {
+    "JON: When I'm with EVE, it feels\n"
+    "like we could never lose, not ever.$"
+}
+
+text SevenIsland_SevaultCanyon_Text_CyndyRematchIntro {
+    "Let's have another battle.\n"
+    "My conditioning's in top form!$"
+}
+
+text SevenIsland_SevaultCanyon_Text_EvanRematchIntro {
+    "It doesn't matter if you happen to\n"
+    "have the strongest POKéMON…\p"
+    "It doesn't mean a thing if you don't\n"
+    "know how to use them properly!$"
+}
+
+text SevenIsland_SevaultCanyon_Text_JacksonRematchIntro {
+    "I work to protect the environment.\n"
+    "In turn, nature protects me!$"
+}
+
+text SevenIsland_SevaultCanyon_Text_KatelynRematchIntro {
+    "Every time we meet, you have those\n"
+    "snazzy shoes on.$"
+}
+
+text SevenIsland_SevaultCanyon_Text_LeroyRematchIntro {
+    "You must have gotten tougher.\n"
+    "Let me battle you, please!$"
+}
+
+text SevenIsland_SevaultCanyon_Text_MichelleRematchIntro {
+    "I was given the best possible\n"
+    "education to become this strong.\p"
+    "I won't lose this time.\n"
+    "Absolutely not!$"
+}
+
+text SevenIsland_SevaultCanyon_Text_LexRematchIntro {
+    "LEX: My darling NYA, together\n"
+    "we will win for certain!$"
+}
+
+text SevenIsland_SevaultCanyon_Text_NyaRematchIntro {
+    "NYA: I won't drag down my mentor\n"
+    "LEX! We're going to win!$"
+}
+
+text SevenIsland_TanobyRuins_Text_BrandonRematchIntro {
+    "Have you discovered anything about\n"
+    "this stone chamber?$"
+}
+
+text SevenIsland_TanobyRuins_Text_BenjaminRematchIntro {
+    "A mystic POKéMON is said to sleep\n"
+    "inside here.$"
+}
+
+text SevenIsland_TanobyRuins_Text_EdnaRematchIntro {
+    "My teacher is showing me how to\n"
+    "paint some more.$"
+}
+
+text SevenIsland_TanobyRuins_Text_CliffordRematchIntro {
+    "Today, in addition to our lesson,\n"
+    "we came to see the chamber again.$"
+}

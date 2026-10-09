@@ -1,3 +1,3 @@
 CeladonCity_Condominiums_Roof_Text_IKnowEverything::
-    .string "I KNOW EVERYTHING!$"
-
+# 1 "data/maps/CeladonCity_Condominiums_Roof/text.pory"
+	.string "I KNOW EVERYTHING!$"

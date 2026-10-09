@@ -1,0 +1,44 @@
+text CeladonCity_Condominiums_1F_Text_Meowth {
+    "MEOWTH: Meow!$"
+}
+
+text CeladonCity_Condominiums_1F_Text_TryThisDrinkInstead {
+    "You shouldn't spend all your money\n"
+    "on drinks.\p"
+    "Try this instead.$"
+}
+
+text CeladonCity_Condominiums_1F_Text_NothingBeatsThirstLikeTea {
+    "Nothing beats thirst like some hot\n"
+    "TEA.\p"
+    "It really is the best.$"
+}
+
+text CeladonCity_Condominiums_1F_Text_MyDearMonsKeepMeCompany {
+    "My dear POKéMON keep me company.\n"
+    "MEOWTH even brings money home!$"
+}
+
+text CeladonCity_Condominiums_1F_Text_DaisyComesToBuyTea {
+    "Oh, hello, dearie.\n"
+    "Did you enjoy my TEA?\p"
+    "By the way, dear. Are you, by any\n"
+    "chance, from PALLET TOWN?\p"
+    "A girl from PALLET TOWN, DAISY,\n"
+    "she enjoys TEA every day.\p"
+    "She visits the CELADON DEPT. STORE\n"
+    "to buy some TEA.$"
+}
+
+text CeladonCity_Condominiums_1F_Text_Clefairy {
+    "CLEFAIRY: Pi pippippi!$"
+}
+
+text CeladonCity_Condominiums_1F_Text_Nidoran {
+    "NIDORAN♀: Kya kyaoo!$"
+}
+
+text CeladonCity_Condominiums_1F_Text_ManagersSuite {
+    "CELADON MANSION\n"
+    "Manager's Suite$"
+}

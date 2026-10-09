@@ -1,0 +1,61 @@
+text Route21_North_Text_RonaldIntro {
+    "You want to know if the fish are\n"
+    "biting?$"
+}
+
+text Route21_North_Text_RonaldDefeat {
+    "Dang!$"
+}
+
+text Route21_North_Text_RonaldPostBattle {
+    "I can't catch anything good.\n"
+    "Not one good POKéMON to be had!$"
+}
+
+text Route21_North_Text_WadeIntro {
+    "I got a big haul!\n"
+    "Wanna go for it?$"
+}
+
+text Route21_North_Text_WadeDefeat {
+    "Heheh, MAGIKARP just don't make\n"
+    "the grade, do they?$"
+}
+
+text Route21_North_Text_WadePostBattle {
+    "I seem to only catch MAGIKARP!$"
+}
+
+text Route21_North_Text_SpencerIntro {
+    "The sea cleanses my body and soul!$"
+}
+
+text Route21_North_Text_SpencerDefeat {
+    "Ayah!$"
+}
+
+text Route21_North_Text_SpencerPostBattle {
+    "The sea is great and all, but I\n"
+    "like the mountains, too.$"
+}
+
+// Below is the battle text for the Cue Ball that was on Route 21 in Gen 1.
+// This trainer wasnt used in Gen 3 so their text goes unused/untranslated
+// Interestingly they did add a rematch intro text for this trainer
+// English translations from RB are listed
+// "What's wrong with me swimming?"
+text Route21_North_Text_CueBallIntro {
+    "おれだって　たまには\n"
+    "およぎに　くるぜ！$"
+}
+
+// "Cheap shot!"
+text Route21_North_Text_CueBallDefeat {
+    "ぐわわ！$"
+}
+
+// "I look like what? A studded inner tube? Get lost!"
+text Route21_North_Text_CueBallPostBattle {
+    "うきやすそう　だと？\n"
+    "うるせー　おおきな　おせわだッ！$"
+}

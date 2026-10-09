@@ -1,0 +1,6 @@
+mapscripts FiveIsland_House2_MapScripts {}
+
+script FiveIsland_House2_EventScript_OldMan {
+    msgbox(FiveIsland_House2_Text_MeadowBelongedToFamily, MSGBOX_NPC)
+    end
+}

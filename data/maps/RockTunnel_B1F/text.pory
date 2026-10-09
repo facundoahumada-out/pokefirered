@@ -1,0 +1,118 @@
+text RockTunnel_B1F_Text_SofiaIntro {
+    "Do you know how you can avoid\n"
+    "getting lost in the mountains?\p"
+    "You can bend twigs as trail\n"
+    "markers.$"
+}
+
+text RockTunnel_B1F_Text_SofiaDefeat {
+    "Ohhh!\n"
+    "I did my best!$"
+}
+
+text RockTunnel_B1F_Text_SofiaPostBattle {
+    "I want to go home!$"
+}
+
+text RockTunnel_B1F_Text_DudleyIntro {
+    "Hahaha!\n"
+    "Can you beat my power?$"
+}
+
+text RockTunnel_B1F_Text_DudleyDefeat {
+    "Oops!\n"
+    "Outmuscled!$"
+}
+
+text RockTunnel_B1F_Text_DudleyPostBattle {
+    "I go for power because I hate\n"
+    "thinking.$"
+}
+
+text RockTunnel_B1F_Text_CooperIntro {
+    "You have a POKéDEX?\n"
+    "I want one, too.$"
+}
+
+text RockTunnel_B1F_Text_CooperDefeat {
+    "Shoot!\n"
+    "I am so jealous!$"
+}
+
+text RockTunnel_B1F_Text_CooperPostBattle {
+    "When you finish your POKéDEX,\n"
+    "can I have it?$"
+}
+
+text RockTunnel_B1F_Text_SteveIntro {
+    "Um… Do you know about POKéMON\n"
+    "cosplay?$"
+}
+
+text RockTunnel_B1F_Text_SteveDefeat {
+    "Well, that's that.$"
+}
+
+text RockTunnel_B1F_Text_StevePostBattle {
+    "POKéMON cosplay is dressing up as\n"
+    "POKéMON for fun.\p"
+    "CLEFAIRY is a favorite.$"
+}
+
+text RockTunnel_B1F_Text_AllenIntro {
+    "My POKéMON techniques will leave\n"
+    "you crying!$"
+}
+
+text RockTunnel_B1F_Text_AllenDefeat {
+    "I give!\n"
+    "You're a better technician!$"
+}
+
+text RockTunnel_B1F_Text_AllenPostBattle {
+    "In mountains, you'll often find\n"
+    "ROCK-type POKéMON.$"
+}
+
+text RockTunnel_B1F_Text_MarthaIntro {
+    "I don't often come here, but I will\n"
+    "battle you.$"
+}
+
+text RockTunnel_B1F_Text_MarthaDefeat {
+    "Oh!\n"
+    "I lost!$"
+}
+
+text RockTunnel_B1F_Text_MarthaPostBattle {
+    "I like tiny POKéMON.\n"
+    "Big ones are too scary!$"
+}
+
+text RockTunnel_B1F_Text_EricIntro {
+    "Hit me with your best shot!$"
+}
+
+text RockTunnel_B1F_Text_EricDefeat {
+    "Fired away!$"
+}
+
+text RockTunnel_B1F_Text_EricPostBattle {
+    "I'll raise my POKéMON to beat\n"
+    "yours, kid.$"
+}
+
+text RockTunnel_B1F_Text_WinstonIntro {
+    "I draw illustrations of POKéMON\n"
+    "when I'm home.$"
+}
+
+text RockTunnel_B1F_Text_WinstonDefeat {
+    "Whew…\n"
+    "I'm exhausted…$"
+}
+
+text RockTunnel_B1F_Text_WinstonPostBattle {
+    "I'm an artist, not a fighter.\n"
+    "I'll go home to draw.$"
+}

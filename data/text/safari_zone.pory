@@ -1,0 +1,199 @@
+// The text here is a copy/paste from Hoenn's Safari Zone, and any unused text was left untranslated
+text SafariZone_Text_WouldYouLikeToExit {
+    "Would you like to exit the SAFARI\n"
+    "ZONE right now?$"
+}
+
+text SafariZone_Text_TimesUp {
+    "PA: Ding-dong!\p"
+    "Time's up!\p"
+    "PA: Your SAFARI GAME is over!$"
+}
+
+text SafariZone_Text_OutOfBalls {
+    "PA: Ding-dong!\p"
+    "You are out of SAFARI BALLS!\p"
+    "PA: Your SAFARI GAME is over!$"
+}
+
+text SafariZone_Text_WelcomeToSafariZone {
+    "サファリゾーンへ　ようこそ！\p"
+    "ここでは　ホウエンでは　なかなか\n"
+    "みることの　できない　ポケモンを\p"
+    "しぜんの　すがたの　まま\n"
+    "めに　することが　できます\p"
+    "また　ポケモントレーナーの\n"
+    "ようぼうに　おこたえ　して\p"
+    "ポケモンを\n"
+    "つかまえる　ことも　できます！\p"
+    "サファリゾーンを　たのしんで　いってね！$"
+}
+
+text SafariZone_Text_WelcomeFirstTime {
+    "サファリゾーンへ　ようこそ！\n"
+    "サファリゾーンは　はじめて　ですか？$"
+}
+
+text SafariZone_Text_ComeInAndEnjoy {
+    "サファリゾーンを　たのしんで　いってね！$"
+}
+
+text SafariZone_Text_FirstTimeInfo {
+    "サファリゾーンでは\n"
+    "30この　サファリボールを　つかって\l"
+    "ポケモンを　つかまえる　ことが　できます\p"
+    "サファリボールを　つかいきるか\n"
+    "500ぽ　あるくと\p"
+    "ゲームは　しゅうりょう　です\p"
+    "サファリゾーンを　たのしんで　いってね！$"
+}
+
+text SafariZone_Text_WouldYouLikeToPlay {
+    "サファリゾーンへ　ようこそ！\p"
+    "500えんで　ポケモン　つかまえほうだい！\n"
+    "サファリゲームに　さんか　しますか？$"
+}
+
+text SafariZone_Text_PlayAnotherTime {
+    "そうですか\n"
+    "こんど　ぜひ　さんか　してください！$"
+}
+
+text SafariZone_Text_NotEnoughMoney {
+    "おかねが　たりませんよ！$"
+}
+
+text SafariZone_Text_ThatWillBe500Please {
+    "それでは　500えん　いただきます$"
+}
+
+text SafariZone_Text_HereAreYourSafariBalls {
+    "では　サファリボールを　どうぞ！$"
+}
+
+text SafariZone_Text_Received30SafariBalls {
+    "{PLAYER}は　サファリボールを\n"
+    "30こ　うけとった！$"
+}
+
+text SafariZone_Text_PleaseEnjoyYourself {
+    "じかんに　なりましたら\n"
+    "こちらから　おしらせ　しますので\p"
+    "ぞんぶんに　おたのしみ　ください！\n"
+    "では　いってらっしゃい！$"
+}
+
+text SafariZone_Text_ExcuseMeYourPCBoxIsFull {
+    "Excuse me!\n"
+    "Your PC BOX is full.$"
+}
+
+text SafariZone_Text_YouNeedPokeblockCase {
+    "あ！　おきゃくさん\n"
+    "ポロックケースを　おもちで　ないですね？\p"
+    "サファリゾーンは　ポロックを　つかうと\n"
+    "より　おたのしみ　いただけますので\p"
+    "ぜひ　ポロックケースを\n"
+    "おもちに　なって　おこし　ください！$"
+}
+
+text SafariZone_South_Text_StillHaveTimeExit {
+    "まだ　じかんが　のこっていますが\n"
+    "サファリゾーンを　やめますか？$"
+}
+
+text SafariZone_South_Text_EnjoyTheRestOfYourAdventure {
+    "では　ひきつづき　おたのしみ　ください！$"
+}
+
+text SafariZone_South_Text_ExitEarlyThankYouForPlaying {
+    "わかりました\p"
+    "それでは　のこりの　サファリボールを\n"
+    "おあずかり　します\p"
+    "おつかれさまでした\n"
+    "また　ごりよう　ください$"
+}
+
+text SafariZone_South_Text_GoodLuck {
+    "それでは　いってらっしゃい！\l"
+    "なにか　ありましたら\n"
+    "わたしに　こえを　かけて　くださいね$"
+}
+
+text SafariZone_South_Text_Boy {
+    "しってた？\p"
+    "あの　しかくい　はこに　ポロックを　おくと\n"
+    "ポケモンが　あつまって　くるんだよ！$"
+}
+
+text SafariZone_South_Text_Man {
+    "この　さきに　いきたい　けど\n"
+    "じてんしゃ　もって　くるの　わすれた‥‥\p"
+    "おくに　めずらしい　ポケモンが\n"
+    "いそうな　きが　するのに！$"
+}
+
+text SafariZone_Southwest_Text_Woman {
+    "ポケモンに　ポロックを　なげても\n"
+    "しらんぷり　される　ときが　あるのよ\p"
+    "ポケモンにも　すききらいが　あるのかしら？$"
+}
+
+text SafariZone_Northwest_Text_Man {
+    "ぜぇ‥‥　ぜぇ‥‥\n"
+    "やっと　ここまで　きたけど‥‥\p"
+    "つかれちゃって　ポケモン　つかまえる\n"
+    "げんきも　のこって　ないよ‥‥$"
+}
+
+text SafariZone_North_Text_Fisherman {
+    "ホウエンに　いない　みずポケモンを\n"
+    "さがしに　きたんだけど‥‥\p"
+    "みずうみは　どこにあるのか\n"
+    "きみ　しってるかい？$"
+}
+
+text SafariZone_North_Text_Man {
+    "ここで　めずらしい　ポケモンを\n"
+    "たくさん　つかまえて\l"
+    "ともだちと　こうかん　するんだ！$"
+}
+
+text SafariZone_South_Text_Youngster {
+    "ポロックおきばに　おいた　ポロックが\n"
+    "いつのまにか　なくなっていた‥‥\p"
+    "しらない　うちに\n"
+    "ポケモンが　たべちゃったのかな？$"
+}
+
+text Route121_SafariZoneEntrance_Text_TrainerTip {
+    "サファリゾーンの　おとくな　じょうほう！\p"
+    "であった　ポケモンに\n"
+    "ポロックを　なげると　にげにくく　なります！$"
+}
+
+text SafariZone_Southwest_Text_RestHouseSign {
+    "あるき　つかれたら　ちょっと　ひといき！\n"
+    "‘みんなの　きゅうけいじょ'$"
+}
+
+text SafariZone_RestHouse_Text_Youngster {
+    "おれ　ポロック　もってないけど\n"
+    "ポケモン　たくさん　つかまえたよ\p"
+    "ちかづいて　ボールを　なげる　だけで\n"
+    "けっこう　つかまえられる　もんだよ！$"
+}
+
+text SafariZone_RestHouse_Text_PsychicM {
+    "ポロックを　つかうと　いつもより\n"
+    "ちょっぴり　にげにくく　なるみたい\p"
+    "だから　にげにくい　ポケモンに　つかっても\n"
+    "あんまり　いみが　ないかもね$"
+}
+
+text SafariZone_RestHouse_Text_FatMan {
+    "ポロックおきばに　ポロック　おいて\n"
+    "ポケモンを　つかまえると\p"
+    "おなじ　ような　せいかくの　ポケモンが\n"
+    "あつまる　きが　するなあ$"
+}

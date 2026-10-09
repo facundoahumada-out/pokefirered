@@ -1,0 +1,33 @@
+mapscripts SaffronCity_Mart_MapScripts {}
+
+script SaffronCity_Mart_EventScript_Lass {
+    msgbox(SaffronCity_Mart_Text_ReviveIsCostly, MSGBOX_NPC)
+    end
+}
+
+script SaffronCity_Mart_EventScript_Youngster {
+    msgbox(SaffronCity_Mart_Text_MaxRepelMoreEffectiveThanSuper, MSGBOX_NPC)
+    end
+}
+
+script SaffronCity_Mart_EventScript_Clerk {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lock
+    faceplayer
+    message(Text_MayIHelpYou)
+    waitmessage
+    pokemart(SaffronCity_Mart_Items)
+    msgbox(Text_PleaseComeAgain)
+    release
+    end
+}
+
+mart(global) SaffronCity_Mart_Items {
+    ITEM_GREAT_BALL
+    ITEM_HYPER_POTION
+    ITEM_REVIVE
+    ITEM_FULL_HEAL
+    ITEM_ESCAPE_ROPE
+    ITEM_MAX_REPEL
+    ITEM_NONE
+}

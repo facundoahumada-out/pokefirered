@@ -1,0 +1,25 @@
+text Route16_House_Text_FoundMySecretRetreat {
+    "Oh, dear.\n"
+    "You've found my secret retreat.\p"
+    "Please don't tell anyone I'm here.\n"
+    "I'll make it up to you with this!$"
+}
+
+text Route16_House_Text_ReceivedHM02FromGirl {
+    "{PLAYER} received HM02\n"
+    "from the girl.$"
+}
+
+text Route16_House_Text_ExplainHM02 {
+    "HM02 is FLY.\n"
+    "It's a wonderfully convenient move.\p"
+    "Please, put it to good use.$"
+}
+
+text Route16_House_Text_DontHaveAnyRoomForThis {
+    "You don't have any room for this.$"
+}
+
+text Route16_House_Text_Fearow {
+    "FEAROW: Kyueen!$"
+}

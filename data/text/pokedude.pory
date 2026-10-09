@@ -1,0 +1,150 @@
+text Pokedude_Text_SpeedierBattlerGoesFirst {
+    "POKé DUDE: The speedier of the\n"
+    "battlers gets to attack first.$"
+}
+
+text Pokedude_Text_MyRattataFasterThanPidgey {
+    "It looks like my RATTATA was\n"
+    "faster than the PIDGEY.$"
+}
+
+text Pokedude_Text_BattlersTakeTurnsAttacking {
+    "The battlers take turns attacking\n"
+    "and reducing each other's HP.$"
+}
+
+text Pokedude_Text_MyRattataWonGetsEXP {
+    "My RATTATA reduced the foe's HP\n"
+    "to zero, so it wins!\p"
+    "The POKéMON that took part in the\n"
+    "battle get EXP. Points.\p"
+    "When a POKéMON collects enough\n"
+    "EXP. Points, it levels up.\p"
+    "Leveling up makes your POKéMON\n"
+    "stronger than before.$"
+}
+
+text Pokedude_Text_UhOhRattataPoisoned {
+    "POKé DUDE: Uh-oh…\n"
+    "My RATTATA has been poisoned…\p"
+    "If a POKéMON is poisoned, it loses\n"
+    "HP steadily.$"
+}
+
+text Pokedude_Text_HealStatusRightAway {
+    "If a POKéMON develops a status\n"
+    "problem, heal it right away.$"
+}
+
+text Pokedude_Text_UsingItemTakesTurn {
+    "Using an item on a POKéMON uses\n"
+    "up one turn, though.\p"
+    "Now, it's the opponent's turn!$"
+}
+
+text Pokedude_Text_YayWeManagedToWin {
+    "Yay!\n"
+    "We managed to win!$"
+}
+
+text Pokedude_Text_WaterNotVeryEffectiveAgainstGrass {
+    "POKé DUDE: The move BUBBLE is\n"
+    "a WATER-type attack.\p"
+    "The targeted ODDISH is a\n"
+    "GRASS/POISON-type POKéMON.\p"
+    "The WATER-type attack is absorbed\n"
+    "by the GRASS-type POKéMON…\p"
+    "As a result, the move becomes not\n"
+    "very effective, and inflicts only\l"
+    "half the usual damage.$"
+}
+
+text Pokedude_Text_GrassEffectiveAgainstWater {
+    "Uh-oh, this is not good!\p"
+    "The ABSORB attack you just saw\n"
+    "is a GRASS-type move.\p"
+    "POLIWAG is a WATER-type POKéMON.\p"
+    "So, ABSORB becomes super\n"
+    "effective, doubling the damage.$"
+}
+
+text Pokedude_Text_LetsTryShiftingMons {
+    "It's not going to be easy to win\n"
+    "with this matchup…\p"
+    "Let's try shifting POKéMON!$"
+}
+
+text Pokedude_Text_ShiftingUsesTurn {
+    "Shifting POKéMON in and out uses\n"
+    "up one turn.\p"
+    "Now, it's the opponent's turn.$"
+}
+
+text Pokedude_Text_ButterfreeDoubleResistsGrass {
+    "BUTTERFREE is a BUG/FLYING-type\n"
+    "POKéMON.\p"
+    "Against this POKéMON, a GRASS-\n"
+    "type attack…\p"
+    "…inflicts only half the usual\n"
+    "damage on a BUG-type POKéMON…\p"
+    "…And, it also causes only half the\n"
+    "damage on a FLYING-type POKéMON.\p"
+    "Therefore, BUTTERFREE, being a\n"
+    "BUG/FLYING POKéMON, only takes\l"
+    "one quarter of the usual damage.$"
+}
+
+text Pokedude_Text_ButterfreeGoodAgainstOddish {
+    "ODDISH is a GRASS/POISON-type\n"
+    "POKéMON.\p"
+    "A FLYING- or PSYCHIC-type attack\n"
+    "is super effective against it.\p"
+    "One of those types of attacks will\n"
+    "inflict double the usual damage.\p"
+    "Okay, here we go!$"
+}
+
+text Pokedude_Text_YeahWeWon {
+    "Yeah!\n"
+    "We won!$"
+}
+
+text Pokedude_Text_WeakenMonBeforeCatching {
+    "POKé DUDE: When you're trying to\n"
+    "catch a POKéMON, don't throw any\l"
+    "POKé BALLS right away.\p"
+    "First, you need to weaken it by\n"
+    "reducing its HP.$"
+}
+
+text Pokedude_Text_BestIfTargetStatused {
+    "Okay, that should be good enough.\p"
+    "But, if it's possible, it would be\n"
+    "best if the target has a status\l"
+    "problem.\p"
+    "For instance, it would be easier\n"
+    "to catch if it were asleep or\l"
+    "paralyzed.$"
+}
+
+text Pokedude_Text_CantDoubleUpOnStatus {
+    "This will make the POKéMON a lot\n"
+    "easier to catch!\p"
+    "Oh, yes. If you paralyze a\n"
+    "POKéMON, you can't make it fall\l"
+    "asleep on top of paralysis.\p"
+    "In other words, you can't double\n"
+    "up status problems, okay?$"
+}
+
+text Pokedude_Text_LetMeThrowBall {
+    "Okay!\n"
+    "Let me throw my POKé BALL!$"
+}
+
+text Pokedude_Text_PickBestKindOfBall {
+    "Before you throw a POKé BALL,\n"
+    "consider the condition and the\l"
+    "type of POKéMON, and pick the kind\l"
+    "of BALL that would work best.$"
+}

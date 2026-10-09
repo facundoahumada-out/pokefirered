@@ -1,0 +1,110 @@
+text SilphCo_11F_Text_ThanksForSavingMeDearBoy {
+    "PRESIDENT: Oh, dear boy!\n"
+    "Thank you for saving SILPH.\p"
+    "I will never forget you saved us in\n"
+    "our moment of peril.\p"
+    "I have to thank you in some way.\p"
+    "Because I am rich, I can give you\n"
+    "anything.\p"
+    "Here, maybe this will do.$"
+}
+
+text SilphCo_11F_Text_ThanksForSavingMeDearGirl {
+    "PRESIDENT: Oh, dear girl!\n"
+    "Thank you for saving SILPH.\p"
+    "I will never forget you saved us in\n"
+    "our moment of peril.\p"
+    "I have to thank you in some way.\p"
+    "Because I am rich, I can give you\n"
+    "anything.\p"
+    "Here, maybe this will do.$"
+}
+
+text SilphCo_11F_Text_ObtainedMasterBallFromPresident {
+    "{PLAYER} obtained a MASTER BALL\n"
+    "from the PRESIDENT!$"
+}
+
+text SilphCo_11F_Text_ThatsOurSecretPrototype {
+    "PRESIDENT: You can't buy that\n"
+    "anywhere.\p"
+    "It's our secret prototype MASTER\n"
+    "BALL.\p"
+    "It will catch any POKéMON without\n"
+    "fail!\p"
+    "You should be quiet about using it,\n"
+    "though.$"
+}
+
+text SilphCo_11F_Text_YouHaveNoRoomForThis {
+    "You have no room for this.$"
+}
+
+text SilphCo_11F_Text_ThanksForRescuingUs {
+    "SECRETARY: Thank you for rescuing\n"
+    "all of us.\p"
+    "We, from the PRESIDENT down,\n"
+    "are indebted to you.$"
+}
+
+text SilphCo_11F_Text_GiovanniIntro {
+    "Ah, {PLAYER}!\n"
+    "So we meet again!\p"
+    "The PRESIDENT and I are discussing\n"
+    "a vital business proposition.\p"
+    "Keep your nose out of grown-up\n"
+    "matters…\p"
+    "Or, experience a world of pain!$"
+}
+
+text SilphCo_11F_Text_GiovanniDefeat {
+    "Arrgh!!\n"
+    "I lost again!?$"
+}
+
+text SilphCo_11F_Text_GiovanniPostBattle {
+    "Blast it all!\n"
+    "You ruined our plans for SILPH!\p"
+    "But, TEAM ROCKET will never fall!\p"
+    "{PLAYER}! Never forget that all\n"
+    "POKéMON exist for TEAM ROCKET!\p"
+    "I must go, but I shall return!$"
+}
+
+text SilphCo_11F_Text_Grunt2Intro {
+    "Stop right there!\n"
+    "Don't you move!$"
+}
+
+text SilphCo_11F_Text_Grunt2Defeat {
+    "Don't…\n"
+    "Please!$"
+}
+
+text SilphCo_11F_Text_Grunt2PostBattle {
+    "So, you want to see my BOSS?$"
+}
+
+text SilphCo_11F_Text_Grunt1Intro {
+    "Halt! Do you have an appointment\n"
+    "with my BOSS?$"
+}
+
+text SilphCo_11F_Text_Grunt1Defeat {
+    "Gaah!\n"
+    "Demolished!$"
+}
+
+text SilphCo_11F_Text_Grunt1PostBattle {
+    "Watch your step…\n"
+    "My BOSS likes his POKéMON tough!$"
+}
+
+text SilphCo_11F_Text_MonitorHasMonsOnIt {
+    "The monitor has POKéMON on it!$"
+}
+
+text SilphCo_11F_Text_FloorSign {
+    "SILPH CO. HEAD OFFICE\n"
+    "11F$"
+}

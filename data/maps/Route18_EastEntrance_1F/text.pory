@@ -1,0 +1,13 @@
+text Route18_EastEntrance_1F_Text_NeedBicycleForCyclingRoad {
+    "You need a BICYCLE to go out on\n"
+    "CYCLING ROAD!$"
+}
+
+text Route18_EastEntrance_1F_Text_CyclingRoadAllUphillFromHere {
+    "CYCLING ROAD is all uphill from\n"
+    "here.$"
+}
+
+text Route18_EastEntrance_1F_Text_ExcuseMe {
+    "Excuse me!$"
+}

@@ -1,131 +1,166 @@
 Route17_Text_RaulIntro::
-    .string "There's no getting rich quick in\n"
-    .string "battling kids.$"
+# 1 "data/maps/Route17/text.pory"
+	.string "There's no getting rich quick in\n"
+	.string "battling kids.$"
 
 Route17_Text_RaulDefeat::
-    .string "Burned out!$"
+# 6 "data/maps/Route17/text.pory"
+	.string "Burned out!$"
 
 Route17_Text_RaulPostBattle::
-    .string "You can find good stuff lying\n"
-    .string "around on CYCLING ROAD.\p"
-    .string "There's good money in picking them\n"
-    .string "up and selling them.$"
+# 10 "data/maps/Route17/text.pory"
+	.string "You can find good stuff lying\n"
+	.string "around on CYCLING ROAD.\p"
+	.string "There's good money in picking them\n"
+	.string "up and selling them.$"
 
 Route17_Text_IsaiahIntro::
-    .string "I'm mighty proud of my bod, kiddo.\n"
-    .string "Come on!$"
+# 17 "data/maps/Route17/text.pory"
+	.string "I'm mighty proud of my bod, kiddo.\n"
+	.string "Come on!$"
 
 Route17_Text_IsaiahDefeat::
-    .string "Whoo!$"
+# 22 "data/maps/Route17/text.pory"
+	.string "Whoo!$"
 
 Route17_Text_IsaiahPostBattle::
-    .string "I could belly-bump you outta\n"
-    .string "here!$"
+# 26 "data/maps/Route17/text.pory"
+	.string "I could belly-bump you outta\n"
+	.string "here!$"
 
 Route17_Text_VirgilIntro::
-    .string "You heading to FUCHSIA?$"
+# 31 "data/maps/Route17/text.pory"
+	.string "You heading to FUCHSIA?$"
 
 Route17_Text_VirgilDefeat::
-    .string "Crash and burn!$"
+# 35 "data/maps/Route17/text.pory"
+	.string "Crash and burn!$"
 
 Route17_Text_VirgilPostBattle::
-    .string "I love racing downhill!$"
+# 39 "data/maps/Route17/text.pory"
+	.string "I love racing downhill!$"
 
 Route17_Text_BillyIntro::
-    .string "We're BIKERS!\n"
-    .string "We rule the roads, man!$"
+# 43 "data/maps/Route17/text.pory"
+	.string "We're BIKERS!\n"
+	.string "We rule the roads, man!$"
 
 Route17_Text_BillyDefeat::
-    .string "Smoked!$"
+# 48 "data/maps/Route17/text.pory"
+	.string "Smoked!$"
 
 Route17_Text_BillyPostBattle::
-    .string "Are you looking for adventure?$"
+# 52 "data/maps/Route17/text.pory"
+	.string "Are you looking for adventure?$"
 
 Route17_Text_NikolasIntro::
-    .string "Let VOLTORB electrify you!$"
+# 56 "data/maps/Route17/text.pory"
+	.string "Let VOLTORB electrify you!$"
 
 Route17_Text_NikolasDefeat::
-    .string "Grounded out!$"
+# 60 "data/maps/Route17/text.pory"
+	.string "Grounded out!$"
 
 Route17_Text_NikolasPostBattle::
-    .string "I got my VOLTORB at the abandoned\n"
-    .string "POWER PLANT.$"
+# 64 "data/maps/Route17/text.pory"
+	.string "I got my VOLTORB at the abandoned\n"
+	.string "POWER PLANT.$"
 
 Route17_Text_ZeekIntro::
-    .string "I leveled up my POKéMON, but it\n"
-    .string "won't evolve. Why?$"
+# 69 "data/maps/Route17/text.pory"
+	.string "I leveled up my POKéMON, but it\n"
+	.string "won't evolve. Why?$"
 
 Route17_Text_ZeekDefeat::
-    .string "Why, you!$"
+# 74 "data/maps/Route17/text.pory"
+	.string "Why, you!$"
 
 Route17_Text_ZeekPostBattle::
-    .string "Maybe some POKéMON need element\n"
-    .string "STONES to evolve.$"
+# 78 "data/maps/Route17/text.pory"
+	.string "Maybe some POKéMON need element\n"
+	.string "STONES to evolve.$"
 
 Route17_Text_JamalIntro::
-    .string "I need a little exercise!$"
+# 83 "data/maps/Route17/text.pory"
+	.string "I need a little exercise!$"
 
 Route17_Text_JamalDefeat::
-    .string "Whew!\n"
-    .string "Good workout!$"
+# 87 "data/maps/Route17/text.pory"
+	.string "Whew!\n"
+	.string "Good workout!$"
 
 Route17_Text_JamalPostBattle::
-    .string "I'm sure I lost weight there!$"
+# 92 "data/maps/Route17/text.pory"
+	.string "I'm sure I lost weight there!$"
 
 Route17_Text_CoreyIntro::
-    .string "Be a rebel!$"
+# 96 "data/maps/Route17/text.pory"
+	.string "Be a rebel!$"
 
 Route17_Text_CoreyDefeat::
-    .string "Aaaargh!$"
+# 100 "data/maps/Route17/text.pory"
+	.string "Aaaargh!$"
 
 Route17_Text_CoreyPostBattle::
-    .string "Be ready to fight for your beliefs!$"
+# 104 "data/maps/Route17/text.pory"
+	.string "Be ready to fight for your beliefs!$"
 
 Route17_Text_JaxonIntro::
-    .string "Nice BIKE!\n"
-    .string "How's it handle?$"
+# 108 "data/maps/Route17/text.pory"
+	.string "Nice BIKE!\n"
+	.string "How's it handle?$"
 
 Route17_Text_JaxonDefeat::
-    .string "Shoot!$"
+# 113 "data/maps/Route17/text.pory"
+	.string "Shoot!$"
 
 Route17_Text_JaxonPostBattle::
-    .string "The slope makes it hard to steer.$"
+# 117 "data/maps/Route17/text.pory"
+	.string "The slope makes it hard to steer.$"
 
 Route17_Text_WilliamIntro::
-    .string "Get lost, kid!\n"
-    .string "I'm bushed!$"
+# 121 "data/maps/Route17/text.pory"
+	.string "Get lost, kid!\n"
+	.string "I'm bushed!$"
 
 Route17_Text_WilliamDefeat::
-    .string "Are you satisfied?$"
+# 126 "data/maps/Route17/text.pory"
+	.string "Are you satisfied?$"
 
 Route17_Text_WilliamPostBattle::
-    .string "I need to catch a few z's!$"
+# 130 "data/maps/Route17/text.pory"
+	.string "I need to catch a few z's!$"
 
 Route17_Text_WatchOutForDiscardedItems::
-    .string "It's a notice.\p"
-    .string "Watch out for discarded items.$"
+# 134 "data/maps/Route17/text.pory"
+	.string "It's a notice.\p"
+	.string "Watch out for discarded items.$"
 
 Route17_Text_SameSpeciesGrowDifferentRates::
-    .string "TRAINER TIPS\p"
-    .string "All POKéMON are unique.\p"
-    .string "Even POKéMON of the same species\n"
-    .string "and level grow at different rates.$"
+# 139 "data/maps/Route17/text.pory"
+	.string "TRAINER TIPS\p"
+	.string "All POKéMON are unique.\p"
+	.string "Even POKéMON of the same species\n"
+	.string "and level grow at different rates.$"
 
 Route17_Text_PressBToStayInPlace::
-    .string "TRAINER TIPS\p"
-    .string "Press the B Button to stay in place\n"
-    .string "while on a slope.$"
+# 146 "data/maps/Route17/text.pory"
+	.string "TRAINER TIPS\p"
+	.string "Press the B Button to stay in place\n"
+	.string "while on a slope.$"
 
 Route17_Text_RouteSign::
-    .string "ROUTE 17\n"
-    .string "CELADON CITY - FUCHSIA CITY$"
+# 152 "data/maps/Route17/text.pory"
+	.string "ROUTE 17\n"
+	.string "CELADON CITY - FUCHSIA CITY$"
 
 Route17_Text_DontThrowGameThrowBalls::
-    .string "It's a notice!\p"
-    .string "Don't throw the game, throw POKé\n"
-    .string "BALLS instead!$"
+# 157 "data/maps/Route17/text.pory"
+	.string "It's a notice!\p"
+	.string "Don't throw the game, throw POKé\n"
+	.string "BALLS instead!$"
 
 Route17_Text_CyclingRoadSign::
-    .string "CYCLING ROAD\n"
-    .string "Slope ends here!$"
-
+# 163 "data/maps/Route17/text.pory"
+	.string "CYCLING ROAD\n"
+	.string "Slope ends here!$"

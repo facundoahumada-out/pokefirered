@@ -1,6 +1,8 @@
 #define IS_POKEMON_C
 
 #include "global.h"
+#include "rtc.h"
+#include "dns.h"
 #include "gflib.h"
 #include "random.h"
 #include "text.h"
@@ -36,6 +38,7 @@
 #include "constants/hold_effects.h"
 #include "constants/battle_move_effects.h"
 #include "constants/union_room.h"
+#include "constants/region_map_sections.h"
 
 #define SPECIES_TO_HOENN(name)      [SPECIES_##name - 1] = HOENN_DEX_##name
 #define SPECIES_TO_NATIONAL(name)   [SPECIES_##name - 1] = NATIONAL_DEX_##name
@@ -67,7 +70,6 @@ static union PokemonSubstruct *GetSubstruct(struct BoxPokemon *boxMon, u32 perso
 static u16 GetDeoxysStat(struct Pokemon *mon, s32 statId);
 static bool8 IsShinyOtIdPersonality(u32 otId, u32 personality);
 static u16 ModifyStatByNature(u8 nature, u16 n, u8 statIndex);
-static u8 GetNatureFromPersonality(u32 personality);
 static bool8 PartyMonHasStatus(struct Pokemon *mon, u32 unused, u32 healMask, u8 battleId);
 static bool8 HealStatusConditions(struct Pokemon *mon, u32 unused, u32 healMask, u8 battleId);
 static bool8 IsPokemonStorageFull(void);
@@ -5068,14 +5070,14 @@ u8 GetNature(struct Pokemon *mon, bool32 checkHidden)
         return GetMonData(mon, MON_DATA_HIDDEN_NATURE, NULL);
 }
 
-static u8 GetNatureFromPersonality(u32 personality)
+u8 GetNatureFromPersonality(u32 personality)
 {
     return personality % NUM_NATURES;
 }
 
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
 {
-    int i;
+    int i, j;
     u16 targetSpecies = 0;
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
     u16 heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, NULL);
@@ -5109,20 +5111,15 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                 if (friendship >= 220)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
-            // FR/LG removed the time of day evolutions due to having no RTC.
             case EVO_FRIENDSHIP_DAY:
-                /*
                 RtcCalcLocalTime();
-                if (gLocalTime.hours >= 12 && gLocalTime.hours < 24 && friendship >= 220)
+                if (!IsDnsNightTime() && friendship >= 220)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                */
                 break;
             case EVO_FRIENDSHIP_NIGHT:
-                /*
                 RtcCalcLocalTime();
-                if (gLocalTime.hours >= 0 && gLocalTime.hours < 12 && friendship >= 220)
+                if (IsDnsNightTime() && friendship >= 220)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                */
                 break;
             case EVO_LEVEL:
                 if (gEvolutionTable[species][i].param <= level)
@@ -5158,6 +5155,24 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
             case EVO_BEAUTY:
                 if (gEvolutionTable[species][i].param <= beauty)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_MAPSEC:
+                if (gEvolutionTable[species][i].param == gMapHeader.regionMapSectionId)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_ITEM:
+                if (gEvolutionTable[species][i].param == heldItem)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_MOVE_TYPE:
+                for (j = 0; j < MAX_MON_MOVES; j++)
+                {
+                    if (gBattleMoves[GetMonData(mon, MON_DATA_MOVE1 + j, NULL)].type == gEvolutionTable[species][i].param)
+                    {
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                        break;
+                    }
+                }
                 break;
             }
         }
@@ -6117,6 +6132,37 @@ static bool8 IsShinyOtIdPersonality(u32 otId, u32 personality)
     if (shinyValue < SHINY_ODDS)
         retVal = TRUE;
     return retVal;
+}
+
+// Carrying the Shiny Charm gives SHINY_CHARM_EXTRA_ROLLS extra chances at a shiny;
+// turning it on from the bag makes every wild mon and egg shiny.
+bool32 ShinyCharmForcesShiny(void)
+{
+    u32 i;
+
+    if (!CheckBagHasItem(ITEM_SHINY_CHARM, 1))
+        return FALSE;
+
+    if (FlagGet(FLAG_SHINY_CHARM_ACTIVE))
+        return TRUE;
+
+    for (i = 0; i < SHINY_CHARM_EXTRA_ROLLS; i++)
+    {
+        if (Random() < SHINY_ODDS)
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
+// Makes personality shiny for otId by re-picking only its high half so that
+// GET_SHINY_VALUE lands in [0, SHINY_ODDS). The low half (gender) is kept.
+u32 MakePersonalityShiny(u32 otId, u32 personality)
+{
+    u16 lo = LOHALF(personality);
+    u16 hi = HIHALF(otId) ^ LOHALF(otId) ^ lo ^ (Random() % SHINY_ODDS);
+
+    return (hi << 16) | lo;
 }
 
 u8 *GetTrainerPartnerName(void)

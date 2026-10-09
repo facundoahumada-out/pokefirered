@@ -1,0 +1,44 @@
+text PokemonTower_3F_Text_HopeIntro {
+    "Urrg… Awaa…\n"
+    "Huhu… Graa…$"
+}
+
+text PokemonTower_3F_Text_HopeDefeat {
+    "Hwa!\n"
+    "I'm saved!$"
+}
+
+text PokemonTower_3F_Text_HopePostBattle {
+    "The ghosts can be identified by\n"
+    "the SILPH SCOPE.$"
+}
+
+text PokemonTower_3F_Text_CarlyIntro {
+    "Kekeke…\n"
+    "Kwaaah!$"
+}
+
+text PokemonTower_3F_Text_CarlyDefeat {
+    "Hmm?\n"
+    "What am I doing?$"
+}
+
+text PokemonTower_3F_Text_CarlyPostBattle {
+    "Sorry!\n"
+    "I was possessed!$"
+}
+
+text PokemonTower_3F_Text_PatriciaIntro {
+    "Be gone!\n"
+    "Malevolent spirit!$"
+}
+
+text PokemonTower_3F_Text_PatriciaDefeat {
+    "Whew!\n"
+    "The spirit left!$"
+}
+
+text PokemonTower_3F_Text_PatriciaPostBattle {
+    "The others above…\n"
+    "They must have been possessed.$"
+}

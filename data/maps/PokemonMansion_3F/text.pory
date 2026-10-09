@@ -1,0 +1,44 @@
+text PokemonMansion_Text_PressSecretSwitchJP {
+    "ひみつの　スイッチが　ある！\p"
+    "おして　みますか？$"
+}
+
+text PokemonMansion_Text_LetsTryIt {
+    "おしてみよう！　‥ポチッとな$"
+}
+
+text PokemonMansion_Text_GaveUpOnPressingSwitch {
+    "おすのは　あきらめた$"
+}
+
+text PokemonMansion_1F_Text_SimonIntro {
+    "This place is, like, huge!$"
+}
+
+text PokemonMansion_1F_Text_SimonDefeat {
+    "Ayah!$"
+}
+
+text PokemonMansion_1F_Text_SimonPostBattle {
+    "I wonder where my partner went.$"
+}
+
+text PokemonMansion_1F_Text_BraydonIntro {
+    "My mentor once lived here.$"
+}
+
+text PokemonMansion_1F_Text_BraydonDefeat {
+    "Whew!\n"
+    "Overwhelming!$"
+}
+
+text PokemonMansion_1F_Text_BraydonPostBattle {
+    "So, you're stuck?\n"
+    "Try jumping off over there!$"
+}
+
+text PokemonMansion_1F_Text_MewGaveBirthToMewtwo {
+    "Diary: Feb. 6\n"
+    "MEW gave birth.\p"
+    "We named the newborn MEWTWO.$"
+}

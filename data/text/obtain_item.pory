@@ -1,0 +1,60 @@
+text Text_ObtainedTheX {
+    "Obtained the {STR_VAR_2}!$"
+}
+
+text Text_BagIsFull {
+    "The BAG is full…$"
+}
+
+text Text_PutItemAway {
+    "{PLAYER} put the {STR_VAR_2}\n"
+    "in the {STR_VAR_3}.$"
+}
+
+text Text_FoundOneItem {
+    "{PLAYER} found one {STR_VAR_2}!$"
+}
+
+text Text_TooBadBagFull {
+    "Too bad!\n"
+    "The BAG is full…$"
+}
+
+text Text_FoundXCoins {
+    "{PLAYER} found\n"
+    "{STR_VAR_1} {STR_VAR_2}!$"
+}
+
+text Text_PutCoinsAwayInCoinCase {
+    "{PLAYER} put the COINS away in\n"
+    "the COIN CASE.$"
+}
+
+text Text_CoinCaseIsFull {
+    "Too bad!\n"
+    "The COIN CASE is full…$"
+}
+
+text Text_NothingToPutThemIn {
+    "Too bad!\n"
+    "There's nothing to put them in…$"
+}
+
+text Text_FoundXItems {
+    "{PLAYER} found\n"
+    "{STR_VAR_1} {STR_VAR_2}(s)!$"
+}
+
+text Text_ObtainedTheDecor {
+    "Obtained the {STR_VAR_2}!$"
+}
+
+text Text_NoRoomForAnotherDecor {
+    "Too bad! There's no room left for\n"
+    "another {STR_VAR_2}…$"
+}
+
+text Text_DecorTransferredToPC {
+    "The {STR_VAR_2} was transferred\n"
+    "to the PC.$"
+}

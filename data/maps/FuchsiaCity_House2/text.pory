@@ -1,0 +1,43 @@
+text FuchsiaCity_House2_Text_DoYouLikeToFish {
+    "I'm the FISHING GURU's older\n"
+    "brother.\p"
+    "I simply looove fishing!\n"
+    "I can't bear to go without.\p"
+    "Tell me, do you like to fish?$"
+}
+
+text FuchsiaCity_House2_Text_LikeYourStyleTakeThis {
+    "Grand! I like your style.\n"
+    "I think we can be friends.\p"
+    "Take this and fish, young friend!$"
+}
+
+text FuchsiaCity_House2_Text_ReceivedGoodRod {
+    "{PLAYER} received a GOOD ROD from\n"
+    "the FISHING GURU's brother.$"
+}
+
+text FuchsiaCity_House2_Text_GoodRodCanCatchBetterMons {
+    "Fishing is a way of life!\n"
+    "It is like the finest poetry.\p"
+    "A crummy OLD ROD could only catch\n"
+    "MAGIKARP, yes?\p"
+    "But with a GOOD ROD, you can\n"
+    "catch much better POKéMON.$"
+}
+
+text FuchsiaCity_House2_Text_OhThatsDisappointing {
+    "Oh…\n"
+    "That's so disappointing…$"
+}
+
+text FuchsiaCity_House2_Text_HowAreTheFishBiting {
+    "Hello there, {PLAYER}!\p"
+    "How are the fish biting?$"
+}
+
+text FuchsiaCity_House2_Text_YouHaveNoRoomForGift {
+    "Oh, no!\p"
+    "I had a gift for you, but you have\n"
+    "no room for it!$"
+}

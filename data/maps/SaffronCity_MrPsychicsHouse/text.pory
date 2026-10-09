@@ -1,0 +1,21 @@
+text SaffronCity_MrPsychicsHouse_Text_YouWantedThis {
+    "…Wait! Don't say a word!\p"
+    "You wanted this!$"
+}
+
+text SaffronCity_MrPsychicsHouse_Text_ReceivedTM29FromMrPsychic {
+    "{PLAYER} received TM29\n"
+    "from MR. PSYCHIC.$"
+}
+
+text SaffronCity_MrPsychicsHouse_Text_ExplainTM29 {
+    "You already know, don't you?\n"
+    "TM29 is PSYCHIC.\p"
+    "It's an attack that may also lower\n"
+    "the target's special stats.$"
+}
+
+text SaffronCity_MrPsychicsHouse_Text_YouveNoRoom {
+    "Where do you plan to put this?\n"
+    "You've no room.$"
+}

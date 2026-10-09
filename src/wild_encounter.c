@@ -2,6 +2,7 @@
 #include "random.h"
 #include "wild_encounter.h"
 #include "event_data.h"
+#include "field_specials.h"
 #include "fieldmap.h"
 #include "random.h"
 #include "roamer.h"
@@ -227,17 +228,44 @@ static void GenerateWildMon(u16 species, u8 level, u8 slot)
 {
     u32 personality;
     s8 chamber;
+    bool32 forceShiny = ShinyCharmForcesShiny();
+
     ZeroEnemyPartyMons();
     if (species != SPECIES_UNOWN)
     {
-        CreateMonWithNature(&gEnemyParty[0], species, level, USE_RANDOM_IVS, Random() % NUM_NATURES);
+        u8 nature = Random() % NUM_NATURES;
+
+        if (!forceShiny)
+        {
+            CreateMonWithNature(&gEnemyParty[0], species, level, USE_RANDOM_IVS, nature);
+            return;
+        }
+
+        do
+        {
+            personality = MakePersonalityShiny(GetPlayerTrainerId(), Random32());
+        } while (GetNatureFromPersonality(personality) != nature);
     }
     else
     {
+        u8 letter;
+
         chamber = gSaveBlock1Ptr->location.mapNum - MAP_NUM(MAP_SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER);
-        personality = GenerateUnownPersonalityByLetter(sUnownLetterSlots[chamber][slot]);
-        CreateMon(&gEnemyParty[0], species, level, USE_RANDOM_IVS, TRUE, personality, FALSE, 0);
+        letter = sUnownLetterSlots[chamber][slot];
+
+        if (!forceShiny)
+        {
+            personality = GenerateUnownPersonalityByLetter(letter);
+        }
+        else
+        {
+            do
+            {
+                personality = MakePersonalityShiny(GetPlayerTrainerId(), Random32());
+            } while (GetUnownLetterByPersonalityLoByte(personality) != letter);
+        }
     }
+    CreateMon(&gEnemyParty[0], species, level, USE_RANDOM_IVS, TRUE, personality, OT_ID_PLAYER_ID, 0);
 }
 
 static u32 GenerateUnownPersonalityByLetter(u8 letter)

@@ -1,26 +1,31 @@
-gFameCheckerFlavorText_ProfOak0:: @ 0x81AD106
+gFameCheckerFlavorText_ProfOak0::
+# 1 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}OAK POKéMON RESEARCH LAB$"
 
-gFameCheckerFlavorText_ProfOak1:: @ 0x81AD145
+gFameCheckerFlavorText_ProfOak1::
+# 6 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}To make a complete guide on all\n"
 	.string "the POKéMON in the world…\p"
 	.string "That was my dream!$"
 
-gFameCheckerFlavorText_ProfOak2:: @ 0x81AD1BB
+gFameCheckerFlavorText_ProfOak2::
+# 13 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PROF. OAK may not look like much,\n"
 	.string "but he's the authority on POKéMON.\p"
 	.string "Many POKéMON TRAINERS hold him in\n"
 	.string "high regard.$"
 
-gFameCheckerFlavorText_ProfOak3:: @ 0x81AD258
+gFameCheckerFlavorText_ProfOak3::
+# 21 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PROF. OAK reportedly lives with his\n"
 	.string "grandchildren, DAISY and {RIVAL}.$"
 
-gFameCheckerFlavorText_ProfOak4:: @ 0x81AD2B9
+gFameCheckerFlavorText_ProfOak4::
+# 27 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I hear OAK's taken a lot of\n"
 	.string "interest in you, child.\p"
@@ -29,57 +34,66 @@ gFameCheckerFlavorText_ProfOak4:: @ 0x81AD2B9
 	.string "But that was decades ago.\n"
 	.string "He's a shadow of his former self.$"
 
-gFameCheckerFlavorText_ProfOak5:: @ 0x81AD377
+gFameCheckerFlavorText_ProfOak5::
+# 37 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PROF. OAK is going to have his own\n"
 	.string "radio show soon.\p"
 	.string "The program will be called PROF.\n"
 	.string "OAK'S POKéMON SEMINAR.$"
 
-gFameCheckerFlavorText_Daisy0:: @ 0x81AD40C
+gFameCheckerFlavorText_Daisy0::
+# 45 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}If you show DAISY your POKéMON,\n"
 	.string "she can tell how much it likes you.\p"
 	.string "Occasionally, she will even groom\n"
 	.string "a POKéMON for you.$"
 
-gFameCheckerFlavorText_Daisy1:: @ 0x81AD4AE
+gFameCheckerFlavorText_Daisy1::
+# 53 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}But the person who is most liked by\n"
 	.string "POKéMON is DAISY, I think.$"
 
-gFameCheckerFlavorText_Daisy2:: @ 0x81AD516
+gFameCheckerFlavorText_Daisy2::
+# 59 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}She was gently grooming POKéMON…\n"
 	.string "She was a little angel.\p"
 	.string "That little girl's name…\n"
 	.string "I think it was DAISY.$"
 
-gFameCheckerFlavorText_Daisy3:: @ 0x81AD5A7
+gFameCheckerFlavorText_Daisy3::
+# 67 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PROF. OAK reportedly lives with his\n"
 	.string "grandchildren, DAISY and {RIVAL}.$"
 
-gFameCheckerFlavorText_Daisy4:: @ 0x81AD608
+gFameCheckerFlavorText_Daisy4::
+# 73 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}A girl from PALLET TOWN, DAISY,\n"
 	.string "she enjoys TEA every day.\p"
 	.string "She visits the CELADON DEPT. STORE\n"
 	.string "to buy some TEA.$"
 
-gFameCheckerFlavorText_Daisy5:: @ 0x81AD69F
+gFameCheckerFlavorText_Daisy5::
+# 81 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The Spring POKéMON CONTEST's\n"
 	.string "Grand Champion is DAISY OAK of\l"
 	.string "PALLET TOWN!$"
 
-gFameCheckerFlavorText_Brock0:: @ 0x81AD705
+gFameCheckerFlavorText_Brock0::
+# 88 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PEWTER CITY POKéMON GYM\n"
 	.string "LEADER: BROCK\l"
 	.string "The Rock-Solid POKéMON TRAINER!$"
 
-gFameCheckerFlavorText_Brock1:: @ 0x81AD771
+gFameCheckerFlavorText_Brock1::
+# 95 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My rock-hard willpower is evident\n"
 	.string "in even my POKéMON.\p"
@@ -88,7 +102,8 @@ gFameCheckerFlavorText_Brock1:: @ 0x81AD771
 	.string "That's right - my POKéMON are all\n"
 	.string "the ROCK type!$"
 
-gFameCheckerFlavorText_Brock2:: @ 0x81AD840
+gFameCheckerFlavorText_Brock2::
+# 105 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There aren't many serious POKéMON\n"
 	.string "TRAINERS here.\p"
@@ -97,163 +112,190 @@ gFameCheckerFlavorText_Brock2:: @ 0x81AD840
 	.string "But PEWTER GYM's BROCK isn't like\n"
 	.string "that, not one bit.$"
 
-gFameCheckerFlavorText_Brock3:: @ 0x81AD908
+gFameCheckerFlavorText_Brock3::
+# 115 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BROCK is cool. He's not just tough.\n"
 	.string "People like and respect him.\p"
 	.string "I want to become a GYM LEADER\n"
 	.string "like him.$"
 
-gFameCheckerFlavorText_Brock4:: @ 0x81AD99A
+gFameCheckerFlavorText_Brock4::
+# 123 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hi, I'm excavating for fossils here\n"
 	.string "under MT. MOON.\p"
 	.string "Sometimes, BROCK of PEWTER GYM\n"
 	.string "lends me a hand.$"
 
-gFameCheckerFlavorText_Brock5:: @ 0x81ADA27
+gFameCheckerFlavorText_Brock5::
+# 131 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BROCK rarely laughs, but is said to\n"
 	.string "be unable to stop if he starts.$"
 
-gFameCheckerFlavorText_Misty0:: @ 0x81ADA91
+gFameCheckerFlavorText_Misty0::
+# 137 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}CERULEAN CITY POKéMON GYM\n"
 	.string "LEADER: MISTY\l"
 	.string "The Tomboyish Mermaid!$"
 
-gFameCheckerFlavorText_Misty1:: @ 0x81ADAF6
+gFameCheckerFlavorText_Misty1::
+# 144 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My policy is an all-out offensive\n"
 	.string "with WATER-type POKéMON!$"
 
-gFameCheckerFlavorText_Misty2:: @ 0x81ADB5A
+gFameCheckerFlavorText_Misty2::
+# 150 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MISTY is a TRAINER who's going to\n"
 	.string "keep improving.\p"
 	.string "She won't lose to someone like you!$"
 
-gFameCheckerFlavorText_Misty3:: @ 0x81ADBD9
+gFameCheckerFlavorText_Misty3::
+# 157 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Strong TRAINERS and WATER POKéMON\n"
 	.string "are common sights in these parts.\p"
 	.string "They say that MISTY of the\n"
 	.string "CERULEAN GYM trains here.$"
 
-gFameCheckerFlavorText_Misty4:: @ 0x81ADC72
+gFameCheckerFlavorText_Misty4::
+# 165 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}This cape is a famous date spot.\p"
 	.string "MISTY, the GYM LEADER, has high\n"
 	.string "hopes about this place.$"
 
-gFameCheckerFlavorText_Misty5:: @ 0x81ADCEB
+gFameCheckerFlavorText_Misty5::
+# 172 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MISTY is said to worship LORELEI\n"
 	.string "of the ELITE FOUR.$"
 
-gFameCheckerFlavorText_LtSurge0:: @ 0x81ADD3C
+gFameCheckerFlavorText_LtSurge0::
+# 178 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}VERMILION CITY POKéMON GYM\n"
 	.string "LEADER: LT. SURGE\l"
 	.string "The Lightning American!$"
 
-gFameCheckerFlavorText_LtSurge1:: @ 0x81ADDA7
+gFameCheckerFlavorText_LtSurge1::
+# 185 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I tell you, kid, electric POKéMON\n"
 	.string "saved me during the war!$"
 
-gFameCheckerFlavorText_LtSurge2:: @ 0x81ADE0B
+gFameCheckerFlavorText_LtSurge2::
+# 191 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}When I was in the Army, LT. SURGE\n"
 	.string "was my strict CO.\p"
 	.string "He was a hard taskmaster.$"
 
-gFameCheckerFlavorText_LtSurge3:: @ 0x81ADE82
+gFameCheckerFlavorText_LtSurge3::
+# 198 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}LT. SURGE was always famous for\n"
 	.string "his cautious nature in the Army.$"
 
-gFameCheckerFlavorText_LtSurge4:: @ 0x81ADEEC
+gFameCheckerFlavorText_LtSurge4::
+# 204 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}LT. SURGE installed the traps in\n"
 	.string "the GYM himself.\p"
 	.string "He set up double locks everywhere.$"
 
-gFameCheckerFlavorText_LtSurge5:: @ 0x81ADF6A
+gFameCheckerFlavorText_LtSurge5::
+# 211 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}LT. SURGE is rumored to have been\n"
 	.string "a pilot while home in America.\p"
 	.string "He used the electricity generated\n"
 	.string "by POKéMON to power his plane.$"
 
-gFameCheckerFlavorText_Erika0:: @ 0x81AE009
+gFameCheckerFlavorText_Erika0::
+# 219 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}CELADON CITY POKéMON GYM\n"
 	.string "LEADER: ERIKA\l"
 	.string "The Nature-Loving Princess!$"
 
-gFameCheckerFlavorText_Erika1:: @ 0x81AE072
+gFameCheckerFlavorText_Erika1::
+# 226 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am a student of the art of\n"
 	.string "flower arranging.\p"
 	.string "My POKéMON are solely of the\n"
 	.string "GRASS type.$"
 
-gFameCheckerFlavorText_Erika2:: @ 0x81AE0F3
+gFameCheckerFlavorText_Erika2::
+# 234 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Our LEADER ERIKA might be quiet,\n"
 	.string "but she's famous around here.$"
 
-gFameCheckerFlavorText_Erika3:: @ 0x81AE15B
+gFameCheckerFlavorText_Erika3::
+# 240 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We only use GRASS-type POKéMON at\n"
 	.string "our GYM.\p"
 	.string "Why? We also use them for making\n"
 	.string "flower arrangements!$"
 
-gFameCheckerFlavorText_Erika4:: @ 0x81AE1E5
+gFameCheckerFlavorText_Erika4::
+# 248 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I would never collect POKéMON if\n"
 	.string "they were unattractive.$"
 
-gFameCheckerFlavorText_Erika5:: @ 0x81AE247
+gFameCheckerFlavorText_Erika5::
+# 254 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Rumor has it that if you peek into\n"
 	.string "CELADON GYM, you can often\l"
 	.string "see ERIKA snoozing.$"
 
-gFameCheckerFlavorText_Koga0:: @ 0x81AE2B6
+gFameCheckerFlavorText_Koga0::
+# 261 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}FUCHSIA CITY POKéMON GYM\n"
 	.string "LEADER: KOGA\l"
 	.string "The Poisonous Ninja Master$"
 
-gFameCheckerFlavorText_Koga1:: @ 0x81AE31D
+gFameCheckerFlavorText_Koga1::
+# 268 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Despair to the creeping horror of\n"
 	.string "POISON-type POKéMON!$"
 
-gFameCheckerFlavorText_Koga2:: @ 0x81AE37D
+gFameCheckerFlavorText_Koga2::
+# 274 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Even though I've lost, I will keep\n"
 	.string "training according to the teachings\l"
 	.string "of KOGA, my ninja master.$"
 
-gFameCheckerFlavorText_Koga3:: @ 0x81AE407
+gFameCheckerFlavorText_Koga3::
+# 281 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My father is the GYM LEADER of\n"
 	.string "this town.\p"
 	.string "I'm training to use POISON POKéMON\n"
 	.string "as well as my father.$"
 
-gFameCheckerFlavorText_Koga4:: @ 0x81AE48D
+gFameCheckerFlavorText_Koga4::
+# 289 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}KOGA is said to have a thorough\n"
 	.string "knowledge of medicine.\p"
 	.string "He even concocts medicine to nurse\n"
 	.string "his POKéMON to health.$"
 
-gFameCheckerFlavorText_Koga5:: @ 0x81AE51B
+gFameCheckerFlavorText_Koga5::
+# 297 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The SAFARI ZONE's huge, wouldn't\n"
 	.string "you say?\p"
@@ -262,55 +304,64 @@ gFameCheckerFlavorText_Koga5:: @ 0x81AE51B
 	.string "Thanks to him, we can play here\n"
 	.string "knowing that we're safe.$"
 
-gFameCheckerFlavorText_Sabrina0:: @ 0x81AE5E8
+gFameCheckerFlavorText_Sabrina0::
+# 307 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}SAFFRON CITY POKéMON GYM\n"
 	.string "LEADER: SABRINA\l"
 	.string "The Master of PSYCHIC POKéMON!$"
 
-gFameCheckerFlavorText_Sabrina1:: @ 0x81AE656
+gFameCheckerFlavorText_Sabrina1::
+# 314 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You know about a girl GYM LEADER\n"
 	.string "in SAFFRON CITY?\p"
 	.string "She uses PSYCHIC-type POKéMON,\n"
 	.string "right?$"
 
-gFameCheckerFlavorText_Sabrina2:: @ 0x81AE6D7
+gFameCheckerFlavorText_Sabrina2::
+# 322 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I have had psychic powers since\n"
 	.string "I was a child.\p"
 	.string "It started when a spoon I\n"
 	.string "carelessly tossed, bent.$"
 
-gFameCheckerFlavorText_Sabrina3:: @ 0x81AE762
+gFameCheckerFlavorText_Sabrina3::
+# 330 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I dislike battling, but if you wish,\n"
 	.string "I will show you my powers!$"
 
-gFameCheckerFlavorText_Sabrina4:: @ 0x81AE7CB
+gFameCheckerFlavorText_Sabrina4::
+# 336 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}People say that SABRINA can\n"
 	.string "communicate with her POKéMON\l"
 	.string "during battle without speaking.$"
 
-gFameCheckerFlavorText_Sabrina5:: @ 0x81AE841
+gFameCheckerFlavorText_Sabrina5::
+# 343 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}SABRINA just wiped out the KARATE\n"
 	.string "MASTER next door.$"
 
-gFameCheckerFlavorText_Blaine0:: @ 0x81AE89E
+gFameCheckerFlavorText_Blaine0::
+# 349 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}CINNABAR ISLAND POKéMON GYM\n"
 	.string "LEADER: BLAINE\l"
 	.string "The Hotheaded Quiz Master!$"
 
-gFameCheckerFlavorText_Blaine1:: @ 0x81AE90A
+gFameCheckerFlavorText_Blaine1::
+# 356 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My fiery POKéMON are all rough\n"
 	.string "and ready with intense heat!\p"
 	.string "They incinerate all challengers!$"
 
-gFameCheckerFlavorText_Blaine2:: @ 0x81AE990
+gFameCheckerFlavorText_Blaine2::
+# 363 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Our LEADER, BLAINE, became lost\n"
 	.string "in the mountains but good.\p"
@@ -319,56 +370,65 @@ gFameCheckerFlavorText_Blaine2:: @ 0x81AE990
 	.string "Its light allowed BLAINE to find\n"
 	.string "his way down safely.$"
 
-gFameCheckerFlavorText_Blaine3:: @ 0x81AEA59
+gFameCheckerFlavorText_Blaine3::
+# 373 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}CINNABAR GYM's BLAINE is quite the\n"
 	.string "odd fellow.\p"
 	.string "He's lived on the island since way\n"
 	.string "before the LAB was built.$"
 
-gFameCheckerFlavorText_Blaine4:: @ 0x81AEAEE
+gFameCheckerFlavorText_Blaine4::
+# 381 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}It's a photo of BLAINE and\n"
 	.string "MR. FUJI.\p"
 	.string "They're standing shoulder to\n"
 	.string "shoulder with big grins.$"
 
-gFameCheckerFlavorText_Blaine5:: @ 0x81AEB69
+gFameCheckerFlavorText_Blaine5::
+# 389 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BLAINE is said to remove his dark\n"
 	.string "shades only when he is thinking up\l"
 	.string "new quiz questions.$"
 
-gFameCheckerFlavorText_Lorelei0:: @ 0x81AEBDF
+gFameCheckerFlavorText_Lorelei0::
+# 396 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am LORELEI of the ELITE FOUR.$"
 
-gFameCheckerFlavorText_Lorelei1:: @ 0x81AEC28
+gFameCheckerFlavorText_Lorelei1::
+# 401 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}No one can best me when it comes\n"
 	.string "to icy POKéMON.$"
 
-gFameCheckerFlavorText_Lorelei2:: @ 0x81AEC82
+gFameCheckerFlavorText_Lorelei2::
+# 407 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Where was this person born?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We've had a great and powerful\n"
 	.string "TRAINER grow up on this island.\p"
 	.string "I bet even you'd know her.\n"
 	.string "It's LORELEI of the ELITE FOUR!$"
 
-gFameCheckerFlavorText_Lorelei3:: @ 0x81AED27
+gFameCheckerFlavorText_Lorelei3::
+# 415 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Known for her logical, calculated,\n"
 	.string "and cool battling style, LORELEI\l"
 	.string "has a surprising secret!$"
 
-gFameCheckerFlavorText_Lorelei4:: @ 0x81AEDAA
+gFameCheckerFlavorText_Lorelei4::
+# 422 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Did you know that LORELEI has lots\n"
 	.string "and lots of stuffed dolls?\p"
 	.string "Every time she comes back to\n"
 	.string "FOUR ISLAND, her collection grows!$"
 
-gFameCheckerFlavorText_Lorelei5:: @ 0x81AEE51
+gFameCheckerFlavorText_Lorelei5::
+# 430 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The LAPRAS she has, I imagine it\n"
 	.string "to be the one she met as a child.\p"
@@ -377,29 +437,34 @@ gFameCheckerFlavorText_Lorelei5:: @ 0x81AEE51
 	.string "Perhaps that POKéMON has been with\n"
 	.string "her ever since.$"
 
-gFameCheckerFlavorText_Bruno0:: @ 0x81AEF25
+gFameCheckerFlavorText_Bruno0::
+# 440 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am BRUNO of the ELITE FOUR!$"
 
-gFameCheckerFlavorText_Bruno1:: @ 0x81AEF6C
+gFameCheckerFlavorText_Bruno1::
+# 445 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I've lived and trained with my\n"
 	.string "fighting POKéMON!$"
 
-gFameCheckerFlavorText_Bruno2:: @ 0x81AEFC6
+gFameCheckerFlavorText_Bruno2::
+# 451 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BRUNO apparently joined the ELITE\n"
 	.string "FOUR out of his burning ambition to\l"
 	.string "battle the best TRAINERS.$"
 
-gFameCheckerFlavorText_Bruno3:: @ 0x81AF04C
+gFameCheckerFlavorText_Bruno3::
+# 458 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BRUNO, who's a senior ahead of me,\n"
 	.string "visits the SPA on occasion.\p"
 	.string "He comes to rehab injuries, both\n"
 	.string "his own and his POKéMON's.$"
 
-gFameCheckerFlavorText_Bruno4:: @ 0x81AF0F0
+gFameCheckerFlavorText_Bruno4::
+# 466 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}He's one of the ELITE FOUR.\n"
 	.string "His name is BRUNO.\p"
@@ -407,35 +472,41 @@ gFameCheckerFlavorText_Bruno4:: @ 0x81AF0F0
 	.string "found out that they were all sold\l"
 	.string "out of Rage Candybars.$"
 
-gFameCheckerFlavorText_Bruno5:: @ 0x81AF19A
+gFameCheckerFlavorText_Bruno5::
+# 475 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Even BRUNO…\n"
 	.string "He trained with a fellow by the\l"
 	.string "name of BRAWLY before.$"
 
-gFameCheckerFlavorText_Agatha0:: @ 0x81AF200
+gFameCheckerFlavorText_Agatha0::
+# 482 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am AGATHA of the ELITE FOUR.$"
 
-gFameCheckerFlavorText_Agatha1:: @ 0x81AF248
+gFameCheckerFlavorText_Agatha1::
+# 487 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}AGATHA's GHOST-type POKéMON are\n"
 	.string "horrifically terrifying in toughness.$"
 
-gFameCheckerFlavorText_Agatha2:: @ 0x81AF2B7
+gFameCheckerFlavorText_Agatha2::
+# 493 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That old lady's also got a really\n"
 	.string "short fuse, too.\p"
 	.string "It doesn't take anything to get\n"
 	.string "that scary lady hollering.$"
 
-gFameCheckerFlavorText_Agatha3:: @ 0x81AF34E
+gFameCheckerFlavorText_Agatha3::
+# 501 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}In her youth, AGATHA and PROF.\n"
 	.string "OAK were rivals who vied for\l"
 	.string "supremacy as TRAINERS.$"
 
-gFameCheckerFlavorText_Agatha4:: @ 0x81AF3BE
+gFameCheckerFlavorText_Agatha4::
+# 508 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I hear OAK's taken a lot of\n"
 	.string "interest in you, child.\p"
@@ -444,19 +515,22 @@ gFameCheckerFlavorText_Agatha4:: @ 0x81AF3BE
 	.string "But that was decades ago.\n"
 	.string "He's a shadow of his former self.$"
 
-gFameCheckerFlavorText_Agatha5:: @ 0x81AF47C
+gFameCheckerFlavorText_Agatha5::
+# 518 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Take AGATHA, for example.\p"
 	.string "She set a record for being the\n"
 	.string "oldest-ever ELITE FOUR member.$"
 
-gFameCheckerFlavorText_Lance0:: @ 0x81AF4FD
+gFameCheckerFlavorText_Lance0::
+# 525 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I lead the ELITE FOUR.\p"
 	.string "You can call me LANCE the dragon\n"
 	.string "TRAINER.$"
 
-gFameCheckerFlavorText_Lance1:: @ 0x81AF567
+gFameCheckerFlavorText_Lance1::
+# 532 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You know that dragons are\n"
 	.string "mythical POKéMON.\p"
@@ -465,13 +539,15 @@ gFameCheckerFlavorText_Lance1:: @ 0x81AF567
 	.string "They're virtually indestructible.\n"
 	.string "There's no being clever with them.$"
 
-gFameCheckerFlavorText_Lance2:: @ 0x81AF641
+gFameCheckerFlavorText_Lance2::
+# 542 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}He stands for justice!\n"
 	.string "He's cool, and yet passionate!\l"
 	.string "He's the greatest, LANCE!$"
 
-gFameCheckerFlavorText_Lance3:: @ 0x81AF6BA
+gFameCheckerFlavorText_Lance3::
+# 549 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We have a customer, LANCE, who\n"
 	.string "occasionally comes.\p"
@@ -479,62 +555,72 @@ gFameCheckerFlavorText_Lance3:: @ 0x81AF6BA
 	.string "I wonder… Does he have many\n"
 	.string "identical capes at home?$"
 
-gFameCheckerFlavorText_Lance4:: @ 0x81AF758
+gFameCheckerFlavorText_Lance4::
+# 558 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}LANCE's grandfather is thought to\n"
 	.string "be the elder of a famous clan of\l"
 	.string "dragon masters.$"
 
-gFameCheckerFlavorText_Lance5:: @ 0x81AF7CB
+gFameCheckerFlavorText_Lance5::
+# 565 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}From what I've heard, LANCE has\n"
 	.string "a cousin who's a GYM LEADER\l"
 	.string "somewhere far away.$"
 
-gFameCheckerFlavorText_Bill0:: @ 0x81AF83E
+gFameCheckerFlavorText_Bill0::
+# 572 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}After all, BILL's world-famous as a\n"
 	.string "POKéMANIAC.\p"
 	.string "He invented the POKéMON Storage\n"
 	.string "System on PC, too.$"
 
-gFameCheckerFlavorText_Bill1:: @ 0x81AF8CA
+gFameCheckerFlavorText_Bill1::
+# 580 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BILL has lots of POKéMON!\n"
 	.string "He collects rare ones, too!$"
 
-gFameCheckerFlavorText_Bill2:: @ 0x81AF929
+gFameCheckerFlavorText_Bill2::
+# 586 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}He's my grandson!\p"
 	.string "He always liked collecting things,\n"
 	.string "even as a child!$"
 
-gFameCheckerFlavorText_Bill3:: @ 0x81AF998
+gFameCheckerFlavorText_Bill3::
+# 593 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BILL is a POKéMANIAC, so he loves\n"
 	.string "every kind.\p"
 	.string "Apparently, the first one he caught\n"
 	.string "was an ABRA.$"
 
-gFameCheckerFlavorText_Bill4:: @ 0x81AFA20
+gFameCheckerFlavorText_Bill4::
+# 601 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BILL's hometown is GOLDENROD CITY,\n"
 	.string "where his folks still live.\p"
 	.string "I've heard that it's quite the\n"
 	.string "festive, bustling city.$"
 
-gFameCheckerFlavorText_Bill5:: @ 0x81AFAB9
+gFameCheckerFlavorText_Bill5::
+# 609 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Apparently, BILL simply can't\n"
 	.string "stomach milk at all.$"
 
-gFameCheckerFlavorText_MrFuji0:: @ 0x81AFB0C
+gFameCheckerFlavorText_MrFuji0::
+# 615 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}He's really kind.\p"
 	.string "He looks after abandoned and\n"
 	.string "orphaned POKéMON.$"
 
-gFameCheckerFlavorText_MrFuji1:: @ 0x81AFB76
+gFameCheckerFlavorText_MrFuji1::
+# 622 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}This old guy marched right up to\n"
 	.string "our HIDEOUT.\p"
@@ -543,7 +629,8 @@ gFameCheckerFlavorText_MrFuji1:: @ 0x81AFB76
 	.string "So, we're just talking it over as\n"
 	.string "adults.$"
 
-gFameCheckerFlavorText_MrFuji2:: @ 0x81AFC38
+gFameCheckerFlavorText_MrFuji2::
+# 632 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}POKéMON FAN MAGAZINE\n"
 	.string "Monthly Grand Prize Drawing!\p"
@@ -551,26 +638,30 @@ gFameCheckerFlavorText_MrFuji2:: @ 0x81AFC38
 	.string "Gone! It's been clipped out.\n"
 	.string "Someone must have applied already.$"
 
-gFameCheckerFlavorText_MrFuji3:: @ 0x81AFCE9
+gFameCheckerFlavorText_MrFuji3::
+# 641 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I hear that MR. FUJI's not from\n"
 	.string "these parts originally, either.$"
 
-gFameCheckerFlavorText_MrFuji4:: @ 0x81AFD49
+gFameCheckerFlavorText_MrFuji4::
+# 647 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}It's a photo of BLAINE and\n"
 	.string "MR. FUJI.\p"
 	.string "They're standing shoulder to\n"
 	.string "shoulder with big grins.$"
 
-gFameCheckerFlavorText_MrFuji5:: @ 0x81AFDC4
+gFameCheckerFlavorText_MrFuji5::
+# 655 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Editor: The shy MR. FUJI turned\n"
 	.string "down our interview requests.\p"
 	.string "He is a kindly man who is adored\n"
 	.string "and respected in LAVENDER TOWN.$"
 
-gFameCheckerFlavorText_Giovanni0:: @ 0x81AFE68
+gFameCheckerFlavorText_Giovanni0::
+# 663 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}TEAM ROCKET captures POKéMON from\n"
 	.string "around the world.\p"
@@ -578,43 +669,49 @@ gFameCheckerFlavorText_Giovanni0:: @ 0x81AFE68
 	.string "our criminal enterprise going.\p"
 	.string "I am the leader, GIOVANNI!$"
 
-gFameCheckerFlavorText_Giovanni1:: @ 0x81AFF23
+gFameCheckerFlavorText_Giovanni1::
+# 672 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Those thugs that took over our\n"
 	.string "building…\p"
 	.string "Their BOSS said he was looking for\n"
 	.string "strong POKéMON.$"
 
-gFameCheckerFlavorText_Giovanni2:: @ 0x81AFFA8
+gFameCheckerFlavorText_Giovanni2::
+# 680 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}TEAM ROCKET's BOSS is terribly\n"
 	.string "cruel!\p"
 	.string "To him, POKéMON are just tools to\n"
 	.string "be used.$"
 
-gFameCheckerFlavorText_Giovanni3:: @ 0x81B0022
+gFameCheckerFlavorText_Giovanni3::
+# 688 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Welcome to my hideout!\p"
 	.string "It shall be so until I can restore\n"
 	.string "TEAM ROCKET to its former glory.$"
 
-gFameCheckerFlavorText_Giovanni4:: @ 0x81B00A6
+gFameCheckerFlavorText_Giovanni4::
+# 695 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Blow me away! GIOVANNI was the\n"
 	.string "GYM LEADER of VIRIDIAN?$"
 
-gFameCheckerFlavorText_Giovanni5:: @ 0x81B0106
+gFameCheckerFlavorText_Giovanni5::
+# 701 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You… You're not GIOVANNI's kid,\n"
 	.string "are you?\p"
 	.string "No, that can't be right.\n"
 	.string "GIOVANNI's kid has red hair.$"
 
-
-gFameCheckerPersonName_ProfOak:: @ 0x81B0188
+gFameCheckerPersonName_ProfOak::
+# 709 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}PROF. OAK$"
 
-gFameCheckerPersonQuote_ProfOak:: @ 0x81B0198
+gFameCheckerPersonQuote_ProfOak::
+# 713 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: PROF. OAK\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Why do POKéMON compete and battle\n"
@@ -624,10 +721,12 @@ gFameCheckerPersonQuote_ProfOak:: @ 0x81B0198
 	.string "towards POKéMON.\p"
 	.string "Never forget that.$"
 
-gFameCheckerPersonName_Daisy:: @ 0x81B0251
+gFameCheckerPersonName_Daisy::
+# 724 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}DAISY$"
 
-gFameCheckerPersonQuote_Daisy:: @ 0x81B025D
+gFameCheckerPersonQuote_Daisy::
+# 728 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: DAISY\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}While I was comfortably enjoying\n"
@@ -636,10 +735,12 @@ gFameCheckerPersonQuote_Daisy:: @ 0x81B025D
 	.string "I hope you'll remain a good rival\n"
 	.string "to my little brother.$"
 
-gFameCheckerPersonName_Brock:: @ 0x81B030F
+gFameCheckerPersonName_Brock::
+# 738 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}BROCK$"
 
-gFameCheckerPersonQuote_Brock:: @ 0x81B031B
+gFameCheckerPersonQuote_Brock::
+# 742 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: BROCK\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}In this big world of ours, there\n"
@@ -647,10 +748,12 @@ gFameCheckerPersonQuote_Brock:: @ 0x81B031B
 	.string "Let's both keep training and\n"
 	.string "making ourselves stronger!$"
 
-gFameCheckerPersonName_Misty:: @ 0x81B03B3
+gFameCheckerPersonName_Misty::
+# 751 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}MISTY$"
 
-gFameCheckerPersonQuote_Misty:: @ 0x81B03BF
+gFameCheckerPersonQuote_Misty::
+# 755 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: MISTY\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I'm going to keep training here at\n"
@@ -658,10 +761,12 @@ gFameCheckerPersonQuote_Misty:: @ 0x81B03BF
 	.string "When I get better, I'd love to hit\n"
 	.string "the road and travel.$"
 
-gFameCheckerPersonName_LtSurge:: @ 0x81B0446
+gFameCheckerPersonName_LtSurge::
+# 764 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}LT. SURGE$"
 
-gFameCheckerPersonQuote_LtSurge:: @ 0x81B0456
+gFameCheckerPersonQuote_LtSurge::
+# 768 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: LT. SURGE\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, kid!\n"
@@ -671,10 +776,12 @@ gFameCheckerPersonQuote_LtSurge:: @ 0x81B0456
 	.string "It made me change my mind about\n"
 	.string "you!$"
 
-gFameCheckerPersonName_Erika:: @ 0x81B0504
+gFameCheckerPersonName_Erika::
+# 779 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}ERIKA$"
 
-gFameCheckerPersonQuote_Erika:: @ 0x81B0510
+gFameCheckerPersonQuote_Erika::
+# 783 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: ERIKA\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am so glad that there are strong\n"
@@ -684,10 +791,12 @@ gFameCheckerPersonQuote_Erika:: @ 0x81B0510
 	.string "Please visit me again.\n"
 	.string "Zzz…$"
 
-gFameCheckerPersonName_Koga:: @ 0x81B05C2
+gFameCheckerPersonName_Koga::
+# 794 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}KOGA$"
 
-gFameCheckerPersonQuote_Koga:: @ 0x81B05CD
+gFameCheckerPersonQuote_Koga::
+# 798 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: KOGA\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You and I, we must both set our\n"
@@ -695,10 +804,12 @@ gFameCheckerPersonQuote_Koga:: @ 0x81B05CD
 	.string "meeting our challenges.\p"
 	.string "Now, I must go train my daughter.$"
 
-gFameCheckerPersonName_Sabrina:: @ 0x81B0667
+gFameCheckerPersonName_Sabrina::
+# 807 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}SABRINA$"
 
-gFameCheckerPersonQuote_Sabrina:: @ 0x81B0675
+gFameCheckerPersonQuote_Sabrina::
+# 811 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: SABRINA\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The love you have towards your\n"
@@ -706,10 +817,12 @@ gFameCheckerPersonQuote_Sabrina:: @ 0x81B0675
 	.string "It was a power that was never\n"
 	.string "bested by my psychic power.$"
 
-gFameCheckerPersonName_Blaine:: @ 0x81B06FB
+gFameCheckerPersonName_Blaine::
+# 820 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}BLAINE$"
 
-gFameCheckerPersonQuote_Blaine:: @ 0x81B0708
+gFameCheckerPersonQuote_Blaine::
+# 824 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: BLAINE\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My fire POKéMON!\n"
@@ -717,10 +830,12 @@ gFameCheckerPersonQuote_Blaine:: @ 0x81B0708
 	.string "And now, a quiz. How many kinds of\n"
 	.string "FIRE-type POKéMON are there?$"
 
-gFameCheckerPersonName_Lorelei:: @ 0x81B079F
+gFameCheckerPersonName_Lorelei::
+# 833 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}LORELEI$"
 
-gFameCheckerPersonQuote_Lorelei:: @ 0x81B07AD
+gFameCheckerPersonQuote_Lorelei::
+# 837 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: LORELEI\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I needed to thank you for your\n"
@@ -729,10 +844,12 @@ gFameCheckerPersonQuote_Lorelei:: @ 0x81B07AD
 	.string "battles.\p"
 	.string "You'd better watch out next time!$"
 
-gFameCheckerPersonName_Bruno:: @ 0x81B0845
+gFameCheckerPersonName_Bruno::
+# 847 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}BRUNO$"
 
-gFameCheckerPersonQuote_Bruno:: @ 0x81B0851
+gFameCheckerPersonQuote_Bruno::
+# 851 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: BRUNO\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The super power of your POKéMON\n"
@@ -740,20 +857,24 @@ gFameCheckerPersonQuote_Bruno:: @ 0x81B0851
 	.string "Next time, maybe I should show you\n"
 	.string "how to train yourself.$"
 
-gFameCheckerPersonName_Agatha:: @ 0x81B08EE
+gFameCheckerPersonName_Agatha::
+# 860 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}AGATHA$"
 
-gFameCheckerPersonQuote_Agatha:: @ 0x81B08FB
+gFameCheckerPersonQuote_Agatha::
+# 864 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: AGATHA\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}When you grow older, don't you\n"
 	.string "dare go soft like that coot OAK!\p"
 	.string "Be like me and keep battling on!$"
 
-gFameCheckerPersonName_Lance:: @ 0x81B097F
+gFameCheckerPersonName_Lance::
+# 872 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}LANCE$"
 
-gFameCheckerPersonQuote_Lance:: @ 0x81B098B
+gFameCheckerPersonQuote_Lance::
+# 876 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: LANCE\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I'm considering going back to my\n"
@@ -763,10 +884,12 @@ gFameCheckerPersonQuote_Lance:: @ 0x81B098B
 	.string "I'd like to invite you to my\n"
 	.string "hometown one day.$"
 
-gFameCheckerPersonName_Bill:: @ 0x81B0A45
+gFameCheckerPersonName_Bill::
+# 887 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}BILL$"
 
-gFameCheckerPersonQuote_Bill:: @ 0x81B0A50
+gFameCheckerPersonQuote_Bill::
+# 891 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: BILL\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, there! CELIO had nothing but\n"
@@ -775,10 +898,12 @@ gFameCheckerPersonQuote_Bill:: @ 0x81B0A50
 	.string "When you catch some rare POKéMON,\n"
 	.string "come show me, okay? Promise!$"
 
-gFameCheckerPersonName_MrFuji:: @ 0x81B0AFF
+gFameCheckerPersonName_MrFuji::
+# 901 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}MR. FUJI$"
 
-gFameCheckerPersonQuote_MrFuji:: @ 0x81B0B0E
+gFameCheckerPersonQuote_MrFuji::
+# 905 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: MR. FUJI\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Instead of hoping for the happiness\n"
@@ -786,10 +911,12 @@ gFameCheckerPersonQuote_MrFuji:: @ 0x81B0B0E
 	.string "…Can I get you to wish for the\n"
 	.string "happiness of all POKéMON?$"
 
-gFameCheckerPersonName_Giovanni:: @ 0x81B0BA6
+gFameCheckerPersonName_Giovanni::
+# 914 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}GIOVANNI$"
 
-gFameCheckerPersonQuote_Giovanni:: @ 0x81B0BB5
+gFameCheckerPersonQuote_Giovanni::
+# 918 "data/text/fame_checker.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: GIOVANNI\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There is nothing that I wish to say\n"
@@ -797,583 +924,776 @@ gFameCheckerPersonQuote_Giovanni:: @ 0x81B0BB5
 	.string "I will concentrate solely on\n"
 	.string "bettering myself, and none other.$"
 
-gFameCheckerFlavorTextOriginLocation_ProfOak0:: @ 0x81B0C45
+gFameCheckerFlavorTextOriginLocation_ProfOak0::
+# 927 "data/text/fame_checker.pory"
 	.string "PALLET TOWN$"
 
 gFameCheckerFlavorTextOriginLocation_ProfOak1::
+# 931 "data/text/fame_checker.pory"
 	.string "RESEARCH LAB$"
 
 gFameCheckerFlavorTextOriginLocation_ProfOak2::
+# 935 "data/text/fame_checker.pory"
 	.string "RESEARCH LAB$"
 
 gFameCheckerFlavorTextOriginLocation_ProfOak3::
+# 939 "data/text/fame_checker.pory"
 	.string "VIRIDIAN CITY$"
 
 gFameCheckerFlavorTextOriginLocation_ProfOak4::
+# 943 "data/text/fame_checker.pory"
 	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_ProfOak5::
+# 947 "data/text/fame_checker.pory"
 	.string "RESEARCH LAB$"
 
 gFameCheckerFlavorTextOriginLocation_Daisy0::
+# 951 "data/text/fame_checker.pory"
 	.string "RESEARCH LAB$"
 
 gFameCheckerFlavorTextOriginLocation_Daisy1::
+# 955 "data/text/fame_checker.pory"
 	.string "VERMILION CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Daisy2::
+# 959 "data/text/fame_checker.pory"
 	.string "WATER LABYRINTH$"
 
 gFameCheckerFlavorTextOriginLocation_Daisy3::
+# 963 "data/text/fame_checker.pory"
 	.string "VIRIDIAN CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Daisy4::
+# 967 "data/text/fame_checker.pory"
 	.string "CELADON MANSION$"
 
 gFameCheckerFlavorTextOriginLocation_Daisy5::
+# 971 "data/text/fame_checker.pory"
 	.string "FOUR ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Brock0::
+# 975 "data/text/fame_checker.pory"
 	.string "PEWTER CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Brock1::
+# 979 "data/text/fame_checker.pory"
 	.string "PEWTER GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Brock2::
+# 983 "data/text/fame_checker.pory"
 	.string "PEWTER CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Brock3::
+# 987 "data/text/fame_checker.pory"
 	.string "ROUTE 4$"
 
 gFameCheckerFlavorTextOriginLocation_Brock4::
+# 991 "data/text/fame_checker.pory"
 	.string "MT. MOON$"
 
 gFameCheckerFlavorTextOriginLocation_Brock5::
+# 995 "data/text/fame_checker.pory"
 	.string "PEWTER MUSEUM$"
 
 gFameCheckerFlavorTextOriginLocation_Misty0::
+# 999 "data/text/fame_checker.pory"
 	.string "CERULEAN CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Misty1::
+# 1003 "data/text/fame_checker.pory"
 	.string "CERULEAN GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Misty2::
+# 1007 "data/text/fame_checker.pory"
 	.string "CERULEAN GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Misty3::
+# 1011 "data/text/fame_checker.pory"
 	.string "SEAFOAM ISLANDS$"
 
 gFameCheckerFlavorTextOriginLocation_Misty4::
+# 1015 "data/text/fame_checker.pory"
 	.string "CERULEAN CAPE$"
 
 gFameCheckerFlavorTextOriginLocation_Misty5::
+# 1019 "data/text/fame_checker.pory"
 	.string "CERULEAN CITY$"
 
 gFameCheckerFlavorTextOriginLocation_LtSurge0::
+# 1023 "data/text/fame_checker.pory"
 	.string "VERMILION CITY$"
 
 gFameCheckerFlavorTextOriginLocation_LtSurge1::
+# 1027 "data/text/fame_checker.pory"
 	.string "VERMILION GYM$"
 
 gFameCheckerFlavorTextOriginLocation_LtSurge2::
+# 1031 "data/text/fame_checker.pory"
 	.string "VERMILION GYM$"
 
 gFameCheckerFlavorTextOriginLocation_LtSurge3::
+# 1035 "data/text/fame_checker.pory"
 	.string "VERMILION GYM$"
 
 gFameCheckerFlavorTextOriginLocation_LtSurge4::
+# 1039 "data/text/fame_checker.pory"
 	.string "VERMILION GYM$"
 
 gFameCheckerFlavorTextOriginLocation_LtSurge5::
+# 1043 "data/text/fame_checker.pory"
 	.string "VERMILION CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Erika0::
+# 1047 "data/text/fame_checker.pory"
 	.string "CELADON CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Erika1::
+# 1051 "data/text/fame_checker.pory"
 	.string "CELADON GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Erika2::
+# 1055 "data/text/fame_checker.pory"
 	.string "CELADON GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Erika3::
+# 1059 "data/text/fame_checker.pory"
 	.string "CELADON GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Erika4::
+# 1063 "data/text/fame_checker.pory"
 	.string "CELADON GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Erika5::
+# 1067 "data/text/fame_checker.pory"
 	.string "CELADON MANSION$"
 
 gFameCheckerFlavorTextOriginLocation_Koga0::
+# 1071 "data/text/fame_checker.pory"
 	.string "FUCHSIA CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Koga1::
+# 1075 "data/text/fame_checker.pory"
 	.string "FUCHSIA GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Koga2::
+# 1079 "data/text/fame_checker.pory"
 	.string "FUCHSIA GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Koga3::
+# 1083 "data/text/fame_checker.pory"
 	.string "FUCHSIA CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Koga4::
+# 1087 "data/text/fame_checker.pory"
 	.string "FUCHSIA CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Koga5::
+# 1091 "data/text/fame_checker.pory"
 	.string "SAFARI ZONE$"
 
 gFameCheckerFlavorTextOriginLocation_Sabrina0::
+# 1095 "data/text/fame_checker.pory"
 	.string "SAFFRON CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Sabrina1::
+# 1099 "data/text/fame_checker.pory"
 	.string "THREE ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Sabrina2::
+# 1103 "data/text/fame_checker.pory"
 	.string "SAFFRON GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Sabrina3::
+# 1107 "data/text/fame_checker.pory"
 	.string "SAFFRON GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Sabrina4::
+# 1111 "data/text/fame_checker.pory"
 	.string "SAFFRON CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Sabrina5::
+# 1115 "data/text/fame_checker.pory"
 	.string "SAFFRON GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Blaine0::
+# 1119 "data/text/fame_checker.pory"
 	.string "CINNABAR ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Blaine1::
+# 1123 "data/text/fame_checker.pory"
 	.string "CINNABAR GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Blaine2::
+# 1127 "data/text/fame_checker.pory"
 	.string "CINNABAR GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Blaine3::
+# 1131 "data/text/fame_checker.pory"
 	.string "CINNABAR ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Blaine4::
+# 1135 "data/text/fame_checker.pory"
 	.string "CINNABAR GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Blaine5::
+# 1139 "data/text/fame_checker.pory"
 	.string "RESORT GORGEOUS$"
 
 gFameCheckerFlavorTextOriginLocation_Lorelei0::
+# 1143 "data/text/fame_checker.pory"
 	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Lorelei1::
+# 1147 "data/text/fame_checker.pory"
 	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Lorelei2::
+# 1151 "data/text/fame_checker.pory"
 	.string "FOUR ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Lorelei3::
+# 1155 "data/text/fame_checker.pory"
 	.string "FIVE ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Lorelei4::
+# 1159 "data/text/fame_checker.pory"
 	.string "FOUR ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Lorelei5::
+# 1163 "data/text/fame_checker.pory"
 	.string "FOUR ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Bruno0::
+# 1167 "data/text/fame_checker.pory"
 	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Bruno1::
+# 1171 "data/text/fame_checker.pory"
 	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Bruno2::
+# 1175 "data/text/fame_checker.pory"
 	.string "SAFFRON CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Bruno3::
+# 1179 "data/text/fame_checker.pory"
 	.string "EMBER SPA$"
 
 gFameCheckerFlavorTextOriginLocation_Bruno4::
+# 1183 "data/text/fame_checker.pory"
 	.string "TWO ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Bruno5::
+# 1187 "data/text/fame_checker.pory"
 	.string "SEVAULT CANYON$"
 
 gFameCheckerFlavorTextOriginLocation_Agatha0::
+# 1191 "data/text/fame_checker.pory"
 	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Agatha1::
+# 1195 "data/text/fame_checker.pory"
 	.string "INDIGO PLATEAU$"
 
 gFameCheckerFlavorTextOriginLocation_Agatha2::
+# 1199 "data/text/fame_checker.pory"
 	.string "INDIGO PLATEAU$"
 
 gFameCheckerFlavorTextOriginLocation_Agatha3::
+# 1203 "data/text/fame_checker.pory"
 	.string "SEVEN ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Agatha4::
+# 1207 "data/text/fame_checker.pory"
 	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Agatha5::
+# 1211 "data/text/fame_checker.pory"
 	.string "SIX ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Lance0::
+# 1215 "data/text/fame_checker.pory"
 	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Lance1::
+# 1219 "data/text/fame_checker.pory"
 	.string "POKéMON LEAGUE$"
 
 gFameCheckerFlavorTextOriginLocation_Lance2::
+# 1223 "data/text/fame_checker.pory"
 	.string "SAFFRON CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Lance3::
+# 1227 "data/text/fame_checker.pory"
 	.string "CELADON DEPT.$"
 
 gFameCheckerFlavorTextOriginLocation_Lance4::
+# 1231 "data/text/fame_checker.pory"
 	.string "INDIGO PLATEAU$"
 
 gFameCheckerFlavorTextOriginLocation_Lance5::
+# 1235 "data/text/fame_checker.pory"
 	.string "INDIGO PLATEAU$"
 
 gFameCheckerFlavorTextOriginLocation_Bill0::
+# 1239 "data/text/fame_checker.pory"
 	.string "CERULEAN CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Bill1::
+# 1243 "data/text/fame_checker.pory"
 	.string "CERULEAN CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Bill2::
+# 1247 "data/text/fame_checker.pory"
 	.string "FUCHSIA CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Bill3::
+# 1251 "data/text/fame_checker.pory"
 	.string "ONE ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Bill4::
+# 1255 "data/text/fame_checker.pory"
 	.string "ONE ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Bill5::
+# 1259 "data/text/fame_checker.pory"
 	.string "ONE ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_MrFuji0::
+# 1263 "data/text/fame_checker.pory"
 	.string "LAVENDER TOWN$"
 
 gFameCheckerFlavorTextOriginLocation_MrFuji1::
+# 1267 "data/text/fame_checker.pory"
 	.string "POKéMON TOWER$"
 
 gFameCheckerFlavorTextOriginLocation_MrFuji2::
+# 1271 "data/text/fame_checker.pory"
 	.string "LAVENDER TOWN$"
 
 gFameCheckerFlavorTextOriginLocation_MrFuji3::
+# 1275 "data/text/fame_checker.pory"
 	.string "LAVENDER TOWN$"
 
 gFameCheckerFlavorTextOriginLocation_MrFuji4::
+# 1279 "data/text/fame_checker.pory"
 	.string "CINNABAR GYM$"
 
 gFameCheckerFlavorTextOriginLocation_MrFuji5::
+# 1283 "data/text/fame_checker.pory"
 	.string "CINNABAR ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Giovanni0::
+# 1287 "data/text/fame_checker.pory"
 	.string "ROCKET HIDEOUT$"
 
 gFameCheckerFlavorTextOriginLocation_Giovanni1::
+# 1291 "data/text/fame_checker.pory"
 	.string "SILPH CO.$"
 
 gFameCheckerFlavorTextOriginLocation_Giovanni2::
+# 1295 "data/text/fame_checker.pory"
 	.string "SILPH CO.$"
 
 gFameCheckerFlavorTextOriginLocation_Giovanni3::
+# 1299 "data/text/fame_checker.pory"
 	.string "VIRIDIAN GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Giovanni4::
+# 1303 "data/text/fame_checker.pory"
 	.string "VIRIDIAN GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Giovanni5::
+# 1307 "data/text/fame_checker.pory"
 	.string "ROCKET WAREHOUSE$"
 
 gFameCheckerFlavorTextOriginObjectName_ProfOak0::
+# 1311 "data/text/fame_checker.pory"
 	.string "SIGN$"
 
 gFameCheckerFlavorTextOriginObjectName_ProfOak1::
+# 1315 "data/text/fame_checker.pory"
 	.string "PROF. OAK$"
 
 gFameCheckerFlavorTextOriginObjectName_ProfOak2::
+# 1319 "data/text/fame_checker.pory"
 	.string "AIDE$"
 
 gFameCheckerFlavorTextOriginObjectName_ProfOak3::
+# 1323 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_ProfOak4::
+# 1327 "data/text/fame_checker.pory"
 	.string "AGATHA$"
 
 gFameCheckerFlavorTextOriginObjectName_ProfOak5::
+# 1331 "data/text/fame_checker.pory"
 	.string "AIDE$"
 
 gFameCheckerFlavorTextOriginObjectName_Daisy0::
+# 1335 "data/text/fame_checker.pory"
 	.string "AIDE$"
 
 gFameCheckerFlavorTextOriginObjectName_Daisy1::
+# 1339 "data/text/fame_checker.pory"
 	.string "WOMAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Daisy2::
+# 1343 "data/text/fame_checker.pory"
 	.string "MAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Daisy3::
+# 1347 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_Daisy4::
+# 1351 "data/text/fame_checker.pory"
 	.string "OLD LADY$"
 
 gFameCheckerFlavorTextOriginObjectName_Daisy5::
+# 1355 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_Brock0::
+# 1359 "data/text/fame_checker.pory"
 	.string "SIGN$"
 
 gFameCheckerFlavorTextOriginObjectName_Brock1::
+# 1363 "data/text/fame_checker.pory"
 	.string "BROCK$"
 
 gFameCheckerFlavorTextOriginObjectName_Brock2::
+# 1367 "data/text/fame_checker.pory"
 	.string "YOUNG MAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Brock3::
+# 1371 "data/text/fame_checker.pory"
 	.string "BOY$"
 
 gFameCheckerFlavorTextOriginObjectName_Brock4::
+# 1375 "data/text/fame_checker.pory"
 	.string "MAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Brock5::
+# 1379 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_Misty0::
+# 1383 "data/text/fame_checker.pory"
 	.string "SIGN$"
 
 gFameCheckerFlavorTextOriginObjectName_Misty1::
+# 1387 "data/text/fame_checker.pory"
 	.string "MISTY$"
 
 gFameCheckerFlavorTextOriginObjectName_Misty2::
+# 1391 "data/text/fame_checker.pory"
 	.string "LUIS$"
 
 gFameCheckerFlavorTextOriginObjectName_Misty3::
+# 1395 "data/text/fame_checker.pory"
 	.string "YOUNG MAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Misty4::
+# 1399 "data/text/fame_checker.pory"
 	.string "DAME$"
 
 gFameCheckerFlavorTextOriginObjectName_Misty5::
+# 1403 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_LtSurge0::
+# 1407 "data/text/fame_checker.pory"
 	.string "SIGN$"
 
 gFameCheckerFlavorTextOriginObjectName_LtSurge1::
+# 1411 "data/text/fame_checker.pory"
 	.string "LT. SURGE$"
 
 gFameCheckerFlavorTextOriginObjectName_LtSurge2::
+# 1415 "data/text/fame_checker.pory"
 	.string "TUCKER$"
 
 gFameCheckerFlavorTextOriginObjectName_LtSurge3::
+# 1419 "data/text/fame_checker.pory"
 	.string "TUCKER$"
 
 gFameCheckerFlavorTextOriginObjectName_LtSurge4::
+# 1423 "data/text/fame_checker.pory"
 	.string "DWAYNE$"
 
 gFameCheckerFlavorTextOriginObjectName_LtSurge5::
+# 1427 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_Erika0::
+# 1431 "data/text/fame_checker.pory"
 	.string "SIGN$"
 
 gFameCheckerFlavorTextOriginObjectName_Erika1::
+# 1435 "data/text/fame_checker.pory"
 	.string "ERIKA$"
 
 gFameCheckerFlavorTextOriginObjectName_Erika2::
+# 1439 "data/text/fame_checker.pory"
 	.string "LOLA$"
 
 gFameCheckerFlavorTextOriginObjectName_Erika3::
+# 1443 "data/text/fame_checker.pory"
 	.string "TAMIA$"
 
 gFameCheckerFlavorTextOriginObjectName_Erika4::
+# 1447 "data/text/fame_checker.pory"
 	.string "ERIKA$"
 
 gFameCheckerFlavorTextOriginObjectName_Erika5::
+# 1451 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_Koga0::
+# 1455 "data/text/fame_checker.pory"
 	.string "SIGN$"
 
 gFameCheckerFlavorTextOriginObjectName_Koga1::
+# 1459 "data/text/fame_checker.pory"
 	.string "KOGA$"
 
 gFameCheckerFlavorTextOriginObjectName_Koga2::
+# 1463 "data/text/fame_checker.pory"
 	.string "KIRK$"
 
 gFameCheckerFlavorTextOriginObjectName_Koga3::
+# 1467 "data/text/fame_checker.pory"
 	.string "CHARINE$"
 
 gFameCheckerFlavorTextOriginObjectName_Koga4::
+# 1471 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_Koga5::
+# 1475 "data/text/fame_checker.pory"
 	.string "MAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Sabrina0::
+# 1479 "data/text/fame_checker.pory"
 	.string "SIGN$"
 
 gFameCheckerFlavorTextOriginObjectName_Sabrina1::
+# 1483 "data/text/fame_checker.pory"
 	.string "YOUNG MAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Sabrina2::
+# 1487 "data/text/fame_checker.pory"
 	.string "SABRINA$"
 
 gFameCheckerFlavorTextOriginObjectName_Sabrina3::
+# 1491 "data/text/fame_checker.pory"
 	.string "SABRINA$"
 
 gFameCheckerFlavorTextOriginObjectName_Sabrina4::
+# 1495 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_Sabrina5::
+# 1499 "data/text/fame_checker.pory"
 	.string "TYRON$"
 
 gFameCheckerFlavorTextOriginObjectName_Blaine0::
+# 1503 "data/text/fame_checker.pory"
 	.string "SIGN$"
 
 gFameCheckerFlavorTextOriginObjectName_Blaine1::
+# 1507 "data/text/fame_checker.pory"
 	.string "BLAINE$"
 
 gFameCheckerFlavorTextOriginObjectName_Blaine2::
+# 1511 "data/text/fame_checker.pory"
 	.string "DEREK$"
 
 gFameCheckerFlavorTextOriginObjectName_Blaine3::
+# 1515 "data/text/fame_checker.pory"
 	.string "WOMAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Blaine4::
+# 1519 "data/text/fame_checker.pory"
 	.string "PHOTO$"
 
 gFameCheckerFlavorTextOriginObjectName_Blaine5::
+# 1523 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_Lorelei0::
+# 1527 "data/text/fame_checker.pory"
 	.string "LORELEI$"
 
 gFameCheckerFlavorTextOriginObjectName_Lorelei1::
+# 1531 "data/text/fame_checker.pory"
 	.string "LORELEI$"
 
 gFameCheckerFlavorTextOriginObjectName_Lorelei2::
+# 1535 "data/text/fame_checker.pory"
 	.string "OLD MAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Lorelei3::
+# 1539 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_Lorelei4::
+# 1543 "data/text/fame_checker.pory"
 	.string "LITTLE GIRL$"
 
 gFameCheckerFlavorTextOriginObjectName_Lorelei5::
+# 1547 "data/text/fame_checker.pory"
 	.string "OLD LADY$"
 
 gFameCheckerFlavorTextOriginObjectName_Bruno0::
+# 1551 "data/text/fame_checker.pory"
 	.string "BRUNO$"
 
 gFameCheckerFlavorTextOriginObjectName_Bruno1::
+# 1555 "data/text/fame_checker.pory"
 	.string "BRUNO$"
 
 gFameCheckerFlavorTextOriginObjectName_Bruno2::
+# 1559 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_Bruno3::
+# 1563 "data/text/fame_checker.pory"
 	.string "CRUSHER$"
 
 gFameCheckerFlavorTextOriginObjectName_Bruno4::
+# 1567 "data/text/fame_checker.pory"
 	.string "WOMAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Bruno5::
+# 1571 "data/text/fame_checker.pory"
 	.string "CRUSHER$"
 
 gFameCheckerFlavorTextOriginObjectName_Agatha0::
+# 1575 "data/text/fame_checker.pory"
 	.string "AGATHA$"
 
 gFameCheckerFlavorTextOriginObjectName_Agatha1::
+# 1579 "data/text/fame_checker.pory"
 	.string "CRUSHER$"
 
 gFameCheckerFlavorTextOriginObjectName_Agatha2::
+# 1583 "data/text/fame_checker.pory"
 	.string "CRUSHER$"
 
 gFameCheckerFlavorTextOriginObjectName_Agatha3::
+# 1587 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_Agatha4::
+# 1591 "data/text/fame_checker.pory"
 	.string "AGATHA$"
 
 gFameCheckerFlavorTextOriginObjectName_Agatha5::
+# 1595 "data/text/fame_checker.pory"
 	.string "OLD LADY$"
 
 gFameCheckerFlavorTextOriginObjectName_Lance0::
+# 1599 "data/text/fame_checker.pory"
 	.string "LANCE$"
 
 gFameCheckerFlavorTextOriginObjectName_Lance1::
+# 1603 "data/text/fame_checker.pory"
 	.string "LANCE$"
 
 gFameCheckerFlavorTextOriginObjectName_Lance2::
+# 1607 "data/text/fame_checker.pory"
 	.string "WOMAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Lance3::
+# 1611 "data/text/fame_checker.pory"
 	.string "LITTLE GIRL$"
 
 gFameCheckerFlavorTextOriginObjectName_Lance4::
+# 1615 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_Lance5::
+# 1619 "data/text/fame_checker.pory"
 	.string "YOUNG MAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Bill0::
+# 1623 "data/text/fame_checker.pory"
 	.string "{RIVAL}$"
 
 gFameCheckerFlavorTextOriginObjectName_Bill1::
+# 1627 "data/text/fame_checker.pory"
 	.string "LITTLE BOY$"
 
 gFameCheckerFlavorTextOriginObjectName_Bill2::
+# 1631 "data/text/fame_checker.pory"
 	.string "OLD MAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Bill3::
+# 1635 "data/text/fame_checker.pory"
 	.string "CELIO$"
 
 gFameCheckerFlavorTextOriginObjectName_Bill4::
+# 1639 "data/text/fame_checker.pory"
 	.string "CELIO$"
 
 gFameCheckerFlavorTextOriginObjectName_Bill5::
+# 1643 "data/text/fame_checker.pory"
 	.string "CELIO$"
 
 gFameCheckerFlavorTextOriginObjectName_MrFuji0::
+# 1647 "data/text/fame_checker.pory"
 	.string "LITTLE GIRL$"
 
 gFameCheckerFlavorTextOriginObjectName_MrFuji1::
+# 1651 "data/text/fame_checker.pory"
 	.string "TEAM ROCKET$"
 
 gFameCheckerFlavorTextOriginObjectName_MrFuji2::
+# 1655 "data/text/fame_checker.pory"
 	.string "MAGAZINE$"
 
 gFameCheckerFlavorTextOriginObjectName_MrFuji3::
+# 1659 "data/text/fame_checker.pory"
 	.string "MAN$"
 
 gFameCheckerFlavorTextOriginObjectName_MrFuji4::
+# 1663 "data/text/fame_checker.pory"
 	.string "PHOTO$"
 
 gFameCheckerFlavorTextOriginObjectName_MrFuji5::
+# 1667 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL$"
 
 gFameCheckerFlavorTextOriginObjectName_Giovanni0::
+# 1671 "data/text/fame_checker.pory"
 	.string "GIOVANNI$"
 
 gFameCheckerFlavorTextOriginObjectName_Giovanni1::
+# 1675 "data/text/fame_checker.pory"
 	.string "SCIENTIST$"
 
 gFameCheckerFlavorTextOriginObjectName_Giovanni2::
+# 1679 "data/text/fame_checker.pory"
 	.string "SCIENTIST$"
 
 gFameCheckerFlavorTextOriginObjectName_Giovanni3::
+# 1683 "data/text/fame_checker.pory"
 	.string "GIOVANNI$"
 
 gFameCheckerFlavorTextOriginObjectName_Giovanni4::
+# 1687 "data/text/fame_checker.pory"
 	.string "MAN$"
 
 gFameCheckerFlavorTextOriginObjectName_Giovanni5::
+# 1691 "data/text/fame_checker.pory"
 	.string "GIDEON$"
 
 PokemonJournal_Text_SpecialFeatureBrock::
+# 1695 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL\p"
 	.string "Special Feature: PEWTER GYM\n"
 	.string "LEADER BROCK!\p"
@@ -1381,6 +1701,7 @@ PokemonJournal_Text_SpecialFeatureBrock::
 	.string "be unable to stop if he starts.$"
 
 PokemonJournal_Text_SpecialFeatureMisty::
+# 1703 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL\p"
 	.string "Special Feature: CERULEAN GYM\n"
 	.string "LEADER MISTY!\p"
@@ -1388,6 +1709,7 @@ PokemonJournal_Text_SpecialFeatureMisty::
 	.string "of the ELITE FOUR.$"
 
 PokemonJournal_Text_SpecialFeatureLtSurge::
+# 1711 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL\p"
 	.string "Special Feature: VERMILION GYM\n"
 	.string "LEADER LT. SURGE!\p"
@@ -1397,6 +1719,7 @@ PokemonJournal_Text_SpecialFeatureLtSurge::
 	.string "by POKéMON to power his plane.$"
 
 PokemonJournal_Text_SpecialFeatureErika::
+# 1721 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL\p"
 	.string "Special Feature: CELADON GYM\n"
 	.string "LEADER ERIKA!\p"
@@ -1405,6 +1728,7 @@ PokemonJournal_Text_SpecialFeatureErika::
 	.string "see ERIKA snoozing.$"
 
 PokemonJournal_Text_SpecialFeatureKoga::
+# 1730 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL\p"
 	.string "Special Feature: FUCHSIA GYM\n"
 	.string "LEADER KOGA!\p"
@@ -1414,6 +1738,7 @@ PokemonJournal_Text_SpecialFeatureKoga::
 	.string "his POKéMON to health.$"
 
 PokemonJournal_Text_SpecialFeatureSabrina::
+# 1740 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL\p"
 	.string "Special Feature: SAFFRON GYM\n"
 	.string "LEADER SABRINA!\p"
@@ -1422,6 +1747,7 @@ PokemonJournal_Text_SpecialFeatureSabrina::
 	.string "during battle without speaking.$"
 
 PokemonJournal_Text_SpecialFeatureBlaine::
+# 1749 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL\p"
 	.string "Special Feature: CINNABAR GYM\n"
 	.string "LEADER BLAINE!\p"
@@ -1430,6 +1756,7 @@ PokemonJournal_Text_SpecialFeatureBlaine::
 	.string "new quiz questions.$"
 
 PokemonJournal_Text_SpecialFeatureLorelei::
+# 1758 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL\p"
 	.string "Special Feature:\n"
 	.string "ELITE FOUR's LORELEI!\p"
@@ -1438,6 +1765,7 @@ PokemonJournal_Text_SpecialFeatureLorelei::
 	.string "has a surprising secret!$"
 
 PokemonJournal_Text_SpecialFeatureBruno::
+# 1767 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL\p"
 	.string "Special Feature:\n"
 	.string "ELITE FOUR's BRUNO!\p"
@@ -1446,6 +1774,7 @@ PokemonJournal_Text_SpecialFeatureBruno::
 	.string "battle the best TRAINERS.$"
 
 PokemonJournal_Text_SpecialFeatureAgatha::
+# 1776 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL\p"
 	.string "Special Feature:\n"
 	.string "ELITE FOUR's AGATHA!\p"
@@ -1454,6 +1783,7 @@ PokemonJournal_Text_SpecialFeatureAgatha::
 	.string "supremacy as TRAINERS.$"
 
 PokemonJournal_Text_SpecialFeatureLance::
+# 1785 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL\p"
 	.string "Special Feature:\n"
 	.string "ELITE FOUR's LANCE!\p"
@@ -1462,6 +1792,7 @@ PokemonJournal_Text_SpecialFeatureLance::
 	.string "dragon masters.$"
 
 PokemonJournal_Text_SpecialFeatureProfOak::
+# 1794 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL\p"
 	.string "Special Feature: PROF. OAK,\n"
 	.string "the POKéMON Researcher!\p"
@@ -1469,6 +1800,7 @@ PokemonJournal_Text_SpecialFeatureProfOak::
 	.string "grandchildren DAISY and {RIVAL}.$"
 
 PokemonJournal_Text_SpecialFeatureDaisyOak::
+# 1802 "data/text/fame_checker.pory"
 	.string "This is a POKéMON JOURNAL from\n"
 	.string "years ago…\p"
 	.string "POKéMON JOURNAL\n"
@@ -1478,6 +1810,7 @@ PokemonJournal_Text_SpecialFeatureDaisyOak::
 	.string "PALLET TOWN!$"
 
 PokemonJournal_Text_SpecialFeatureMrFuji::
+# 1812 "data/text/fame_checker.pory"
 	.string "POKéMON JOURNAL\p"
 	.string "Special Feature:\n"
 	.string "MR. FUJI of POKéMON HOUSE!\p"

@@ -1,0 +1,25 @@
+script EventScript_BagIsFull {
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    msgbox(Text_TooBadBagFull)
+    release
+    end
+}
+
+// Unused
+script EventScript_BagIsFullRet {
+    msgbox(Text_TooBadBagFull)
+    return
+}
+
+// Unused
+script EventScript_NoRoomForAnotherDecor {
+    msgbox(Text_NoRoomForAnotherDecor)
+    release
+    end
+}
+
+// Unused
+script EventScript_NoRoomForAnotherDecorRet {
+    msgbox(Text_NoRoomForAnotherDecor)
+    return
+}

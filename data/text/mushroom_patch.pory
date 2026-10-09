@@ -1,0 +1,3 @@
+text Text_FoundMushroom {
+    "You found a {STR_VAR_2}!$"
+}

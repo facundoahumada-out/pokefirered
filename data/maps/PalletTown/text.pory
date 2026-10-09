@@ -1,0 +1,100 @@
+text PalletTown_Text_OakDontGoOut {
+    "OAK: Hey! Wait!\n"
+    "Don't go out!$"
+}
+
+text PalletTown_Text_OakGrassUnsafeNeedMon {
+    "OAK: It's unsafe!\n"
+    "Wild POKéMON live in tall grass!\p"
+    "You need your own POKéMON for\n"
+    "your protection.\p"
+    "I know!\n"
+    "Here, come with me!$"
+}
+
+text PalletTown_Text_RaisingMonsToo {
+    "I'm raising POKéMON, too.\p"
+    "When they get strong, they can\n"
+    "protect me.$"
+}
+
+text PalletTown_Text_CanStoreItemsAndMonsInPC {
+    "Technology is incredible!\p"
+    "You can now store and recall items\n"
+    "and POKéMON as data via PC.$"
+}
+
+text PalletTown_Text_OakPokemonResearchLab {
+    "OAK POKéMON RESEARCH LAB$"
+}
+
+text PalletTown_Text_PlayersHouse {
+    "{PLAYER}'s house$"
+}
+
+text PalletTown_Text_RivalsHouse {
+    "{RIVAL}'s house$"
+}
+
+text PalletTown_Text_TownSign {
+    "PALLET TOWN\n"
+    "Shades of your journey await!$"
+}
+
+text PalletTown_Text_OakLetMeSeePokedex {
+    "OAK: Ah, {PLAYER}!\n"
+    "You're back, are you?\p"
+    "How much have you filled in your\n"
+    "POKéDEX?\p"
+    "May I see it?\p"
+    "Let's see…$"
+}
+
+text PalletTown_Text_CaughtXPuttingInHonestEffort {
+    "You've caught {STR_VAR_2}…\p"
+    "Hm, it looks as if you're putting\n"
+    "in an honest effort.\p"
+    "When you manage to fill it some\n"
+    "more, come show me, please.$"
+}
+
+text PalletTown_Text_CaughtXImpressiveFollowMe {
+    "You've caught… {STR_VAR_2}!?\n"
+    "Now, this is impressive!\p"
+    "There's something I wanted to ask\n"
+    "of you, {PLAYER}.\p"
+    "Come.\n"
+    "Follow me.$"
+}
+
+text PalletTown_Text_OakYouEnjoyingTraveling {
+    "OAK: Ah, {PLAYER}!\n"
+    "You seem to be enjoying traveling.\p"
+    "Knowing you, {PLAYER}, I can easily\n"
+    "imagine you going out to even more\l"
+    "exotic locales.\p"
+    "Good for you, good for you.\n"
+    "Hohoho.$"
+}
+
+text PalletTown_Text_MomDontGoOut {
+    "Mom: Hey! Wait!\n"
+    "Don't go yet!$"
+}
+
+text PalletTown_Text_MomGiveRunningShoes {
+    "Mom: Wow! You and your Pokémon\n"
+    "make a great team!\p"
+    "Now that you have your Pokédex\n"
+    "your adventure is just beginning!\p"
+    "Here, take these Running Shoes\n"
+    "with you. They'll be very useful\n"
+    "on your journey.$"
+}
+
+text PalletTown_Text_MomGiveRunningShoes2 {
+    "Mom: And don't forget to wear them!\n"
+    "They're essential for every Trainer!\p"
+    "Come home every now and then and\n"
+    "show me how you're doing!$"
+}

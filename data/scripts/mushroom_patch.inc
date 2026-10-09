@@ -1,25 +1,49 @@
-@ Shared interaction for every metatile tagged MB_MUSHROOM_PATCH (see
-@ src/daily_respawn.c for the table of actual mushroom spots). Reached from
-@ GetInteractedMetatileScript in src/field_control_avatar.c, so this single
-@ script serves every mushroom patch in the game.
 EventScript_PickMushroomPatch::
+# 6 "data/scripts/mushroom_patch.pory"
 	lockall
-	additem ITEM_TINY_MUSHROOM
+# 7 "data/scripts/mushroom_patch.pory"
+	specialvar VAR_0x8004, GetMushroomPatchItem
+# 8 "data/scripts/mushroom_patch.pory"
+	goto_if_eq VAR_0x8004, ITEM_NONE, EventScript_MushroomPatch_End
+# 9 "data/scripts/mushroom_patch.pory"
+	bufferitemname STR_VAR_2, VAR_0x8004
+# 10 "data/scripts/mushroom_patch.pory"
+	additem VAR_0x8004
+# 11 "data/scripts/mushroom_patch.pory"
 	goto_if_eq VAR_RESULT, FALSE, EventScript_MushroomPatch_BagFull
+# 12 "data/scripts/mushroom_patch.pory"
 	special PickMushroomPatch
-	msgbox Text_FoundMushroom, MSGBOX_DEFAULT
+# 13 "data/scripts/mushroom_patch.pory"
+	playfanfare MUS_LEVEL_UP
+# 14 "data/scripts/mushroom_patch.pory"
+	message Text_FoundMushroom
+# 15 "data/scripts/mushroom_patch.pory"
+	waitfanfare
+# 16 "data/scripts/mushroom_patch.pory"
+	waitmessage
+# 17 "data/scripts/mushroom_patch.pory"
+	waitbuttonpress
+# 18 "data/scripts/mushroom_patch.pory"
 	releaseall
 	end
+
+
+EventScript_MushroomPatch_End::
+# 23 "data/scripts/mushroom_patch.pory"
+	releaseall
+	end
+
 
 EventScript_MushroomPatch_BagFull::
+# 28 "data/scripts/mushroom_patch.pory"
 	msgbox Text_TooBadBagFull, MSGBOX_DEFAULT
+# 29 "data/scripts/mushroom_patch.pory"
 	releaseall
 	end
 
-@ Add `map_script MAP_SCRIPT_ON_RESUME, MushroomPatch_OnResume` to any map's
-@ scripts.inc that contains a mushroom patch (from sMushroomPatches in
-@ src/daily_respawn.c). Runs after the map grid is loaded but before the
-@ fade-in, so a still-cooling-down patch gets hidden again with no visible flicker.
+
 MushroomPatch_OnResume::
+# 38 "data/scripts/mushroom_patch.pory"
 	special RefreshMushroomPatchesOnMap
 	return
+

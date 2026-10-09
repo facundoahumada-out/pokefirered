@@ -1,0 +1,104 @@
+text RockTunnel_1F_Text_LennyIntro {
+    "This tunnel goes a long way, kid!$"
+}
+
+text RockTunnel_1F_Text_LennyDefeat {
+    "Doh!\n"
+    "You win!$"
+}
+
+text RockTunnel_1F_Text_LennyPostBattle {
+    "Watch for ONIX.\n"
+    "They appear only occasionally.\p"
+    "High-level ones can put the\n"
+    "squeeze on you!$"
+}
+
+text RockTunnel_1F_Text_OliverIntro {
+    "Hmm.\n"
+    "Maybe I'm lost in here…$"
+}
+
+text RockTunnel_1F_Text_OliverDefeat {
+    "Ease up!\n"
+    "What am I doing?\l"
+    "Which way is out?$"
+}
+
+text RockTunnel_1F_Text_OliverPostBattle {
+    "That sleeping POKéMON on ROUTE 12\n"
+    "forced me to take this detour.$"
+}
+
+text RockTunnel_1F_Text_LucasIntro {
+    "Outsiders like you need to show me\n"
+    "some respect!$"
+}
+
+text RockTunnel_1F_Text_LucasDefeat {
+    "I give!$"
+}
+
+text RockTunnel_1F_Text_LucasPostBattle {
+    "You're talented enough to hike!$"
+}
+
+text RockTunnel_1F_Text_AshtonIntro {
+    "POKéMON fight!\n"
+    "Ready, go!$"
+}
+
+text RockTunnel_1F_Text_AshtonDefeat {
+    "Game over!$"
+}
+
+text RockTunnel_1F_Text_AshtonPostBattle {
+    "Oh well, I'll get a ZUBAT as I go!$"
+}
+
+text RockTunnel_1F_Text_LeahIntro {
+    "Eek!\p"
+    "Don't try anything funny in the\n"
+    "dark!$"
+}
+
+text RockTunnel_1F_Text_LeahDefeat {
+    "It was too dark…$"
+}
+
+text RockTunnel_1F_Text_LeahPostBattle {
+    "I saw a MACHOP in this tunnel.$"
+}
+
+text RockTunnel_1F_Text_DanaIntro {
+    "I came this far looking for wild\n"
+    "POKéMON.$"
+}
+
+text RockTunnel_1F_Text_DanaDefeat {
+    "I'm out of POKéMON!$"
+}
+
+text RockTunnel_1F_Text_DanaPostBattle {
+    "You looked cute and harmless.\n"
+    "Was I ever wrong!$"
+}
+
+text RockTunnel_1F_Text_ArianaIntro {
+    "You have POKéMON!\n"
+    "Let's start!$"
+}
+
+text RockTunnel_1F_Text_ArianaDefeat {
+    "You play hard!$"
+}
+
+text RockTunnel_1F_Text_ArianaPostBattle {
+    "Whew!\n"
+    "I'm all sweaty now.$"
+}
+
+text RockTunnel_1F_Text_RouteSign {
+    "ROCK TUNNEL\n"
+    "CERULEAN CITY - LAVENDER TOWN$"
+}

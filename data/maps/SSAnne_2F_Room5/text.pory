@@ -1,0 +1,12 @@
+text SSAnne_2F_Room5_Text_HaveYouGoneToSafariZone {
+    "Have you gone to the SAFARI ZONE\n"
+    "in FUCHSIA CITY?\p"
+    "There are many kinds of rare\n"
+    "POKéMON.$"
+}
+
+text SSAnne_2F_Room5_Text_WeThinkSafariZoneIsAwesome {
+    "Me and my daddy think the SAFARI\n"
+    "ZONE is awesome!\l"
+    "I wish we could go there again.$"
+}

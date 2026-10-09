@@ -1,0 +1,1996 @@
+script CableClub_OnTransition {
+    call(CableClub_EventScript_HideOrShowMysteryGiftMan)
+    end
+}
+
+script CableClub_EventScript_HideOrShowMysteryGiftMan {
+    specialvar(VAR_RESULT, ValidateSavedWonderCard)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_HideMysteryGiftMan)
+    clearflag(FLAG_HIDE_MG_DELIVERYMEN)
+    return
+}
+
+script EventScript_HideMysteryGiftMan {
+    setflag(FLAG_HIDE_MG_DELIVERYMEN)
+    return
+}
+
+script CableClub_EventScript_MysteryGiftMan {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    special(QuestLog_CutRecording)
+    trywondercardscript
+    // Unused
+EventScript_MysteryGiftThankYou(global):
+    msgbox(Text_ThankYouForAccessingMysteryGift, MSGBOX_NPC)
+    end
+}
+
+raw `
+
+CableClub_OnWarp::
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_SINGLE_BATTLE, EventScript_CheckTurnAttendant
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_DOUBLE_BATTLE, EventScript_CheckTurnAttendant
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_MULTI_BATTLE, EventScript_CheckTurnAttendant
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_TRADE_CENTER, EventScript_CheckTurnAttendant
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_UNION_ROOM, EventScript_CheckTurnAttendant
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_BERRY_CRUSH, EventScript_CheckTurnAttendant
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_MINIGAME, EventScript_CheckTurnAttendant
+	.2byte 0
+
+EventScript_CheckTurnAttendant::
+	goto_if_eq VAR_0x8007, 0, EventScript_CheckTurnAttendantEnd
+	turnobject VAR_0x8007, DIR_WEST
+EventScript_CheckTurnAttendantEnd:
+	end
+`
+
+script CableClub_OnLoad {
+    goto_if_eq(VAR_CABLE_CLUB_STATE, USING_SINGLE_BATTLE, EventScript_OnLoadFromColosseum)
+    goto_if_eq(VAR_CABLE_CLUB_STATE, USING_DOUBLE_BATTLE, EventScript_OnLoadFromColosseum)
+    goto_if_eq(VAR_CABLE_CLUB_STATE, USING_MULTI_BATTLE, EventScript_OnLoadFromColosseum)
+    goto_if_eq(VAR_CABLE_CLUB_STATE, USING_TRADE_CENTER, EventScript_OnLoadFromTradeCenter)
+    goto_if_eq(VAR_CABLE_CLUB_STATE, USING_UNION_ROOM, EventScript_OnLoadFromUnionRoom)
+    goto_if_eq(VAR_CABLE_CLUB_STATE, USING_BERRY_CRUSH, EventScript_OnLoadFromBerryCrush)
+    goto_if_eq(VAR_CABLE_CLUB_STATE, USING_MINIGAME, EventScript_OnLoadFromGameCorner)
+    end
+}
+
+script EventScript_OnLoadFromColosseum {
+    call(CableClub_EventScript_OpenDirectCornerBarrier)
+    end
+}
+
+script EventScript_OnLoadFromTradeCenter {
+    call(CableClub_EventScript_OpenDirectCornerBarrier)
+    end
+}
+
+script EventScript_OnLoadFromUnionRoom {
+    call(CableClub_EventScript_OpenUnionRoomBarrier)
+    end
+}
+
+script EventScript_OnLoadFromBerryCrush {
+    call(CableClub_EventScript_OpenDirectCornerBarrier)
+    end
+}
+
+script EventScript_OnLoadFromGameCorner {
+    call(CableClub_EventScript_OpenGameCornerBarrier)
+    end
+}
+
+raw `
+
+CableClub_OnFrame::
+	map_script_2 VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1, CableClub_EventScript_Tutorial
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_SINGLE_BATTLE, CableClub_EventScript_ExitLinkRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_DOUBLE_BATTLE, CableClub_EventScript_ExitLinkRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_MULTI_BATTLE, CableClub_EventScript_ExitLinkRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_TRADE_CENTER, CableClub_EventScript_ExitTradeCenter
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_UNION_ROOM, CableClub_EventScript_ExitUnionRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_BERRY_CRUSH, CableClub_EventScript_ExitLinkRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_MINIGAME, CableClub_EventScript_ExitMinigameRoom
+	.2byte 0
+
+CableClub_EventScript_ExitLinkRoom::
+	lockall
+	call CableClub_EventScript_CloseLinkAndExitLinkRoom
+	call CableClub_EventScript_CloseDirectCornerBarrier
+	special DrawWholeMapView
+	playse SE_CLICK
+	erasebox 0, 0, 29, 19
+	releaseall
+	end
+`
+
+script CableClub_EventScript_ExitMinigameRoom {
+    lockall
+    call(CableClub_EventScript_CloseLinkAndExitLinkRoom)
+    call(CableClub_EventScript_CloseGameCornerBarrier)
+    special(DrawWholeMapView)
+    playse(SE_CLICK)
+    erasebox(0, 0, 29, 19)
+    releaseall
+    end
+}
+
+script CableClub_EventScript_CloseLinkAndExitLinkRoom {
+    special(CloseLink)
+    special(HelpSystem_Enable)
+    special(QuestLog_StartRecordingInputsAfterDeferredEvent)
+    setvar(VAR_CABLE_CLUB_STATE, 0)
+    textcolor(NPC_TEXT_COLOR_FEMALE)
+    goto_if_eq(VAR_0x8007, 0, CableClub_EventScript_PlayerExitLinkRoom)
+    applymovement(VAR_0x8007, Movement_AttendantFaceLeft)
+    waitmovement(0)
+    applymovement(LOCALID_PLAYER, Movement_PlayerExitLinkRoom)
+    waitmovement(0)
+    applymovement(VAR_0x8007, Movement_AttendantFaceDown)
+    waitmovement(0)
+    return
+}
+
+script CableClub_EventScript_ExitTradeCenter {
+    lockall
+    call(CableClub_EventScript_PlayerExitTradeCenter)
+    call(CableClub_EventScript_CloseDirectCornerBarrier)
+    special(DrawWholeMapView)
+    playse(SE_CLICK)
+    erasebox(0, 0, 29, 19)
+    releaseall
+    end
+}
+
+script CableClub_EventScript_PlayerExitTradeCenter {
+    special(CloseLink)
+    special(HelpSystem_Enable)
+    special(QuestLog_StartRecordingInputsAfterDeferredEvent)
+    setvar(VAR_CABLE_CLUB_STATE, 0)
+    textcolor(NPC_TEXT_COLOR_FEMALE)
+    goto_if_eq(VAR_0x8007, 0, CableClub_EventScript_PlayerExitLinkRoom)
+    applymovement(LOCALID_PLAYER, Movement_PlayerFaceAttendantRight)
+    waitmovement(0)
+    applymovement(VAR_0x8007, Movement_AttendantFaceLeft)
+    waitmovement(0)
+    call(CableClub_EventScript_TrainerCardDataOverwritten)
+    return
+}
+
+script CableClub_EventScript_ExitUnionRoom {
+    lockall
+    call(CableClub_EventScript_PlayerExitUnionRoom)
+    call(CableClub_EventScript_CloseUnionRoomBarrier)
+    special(DrawWholeMapView)
+    playse(SE_CLICK)
+    erasebox(0, 0, 29, 19)
+    releaseall
+    end
+}
+
+script CableClub_EventScript_PlayerExitUnionRoom {
+    special(HelpSystem_Enable)
+    special(QuestLog_StartRecordingInputsAfterDeferredEvent)
+    setvar(VAR_CABLE_CLUB_STATE, 0)
+    textcolor(NPC_TEXT_COLOR_FEMALE)
+    goto_if_eq(VAR_0x8007, 0, CableClub_EventScript_PlayerExitLinkRoom)
+    applymovement(LOCALID_PLAYER, Movement_PlayerFaceAttendantRight)
+    waitmovement(0)
+    applymovement(VAR_0x8007, Movement_AttendantFaceLeft)
+    waitmovement(0)
+    call(CableClub_EventScript_TrainerCardDataOverwritten)
+    return
+}
+
+script CableClub_EventScript_TrainerCardDataOverwritten {
+    message(CableClub_Text_TrainerCardDataOverwritten)
+    waitmessage
+    playse(SE_PIN)
+    message(CableClub_Text_HopeToSeeYouAgain)
+    waitmessage
+    applymovement(LOCALID_PLAYER, Movement_PlayerExitLinkRoom)
+    waitmovement(0)
+    applymovement(VAR_0x8007, Movement_AttendantFaceDown)
+    waitmovement(0)
+    return
+}
+
+script CableClub_EventScript_PlayerExitLinkRoom {
+    applymovement(LOCALID_PLAYER, Movement_PlayerExitLinkRoom)
+    waitmovement(0)
+    return
+}
+
+script CableClub_EventScript_Tutorial {
+    lockall
+    textcolor(NPC_TEXT_COLOR_FEMALE)
+    applymovement(LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp)
+    waitmovement(0)
+    msgbox(CableClub_Text_FirstTimeRightThisWay)
+    closemessage
+    applymovement(LOCALID_PLAYER, Movement_PlayerApproachCounter)
+    waitmovement(0)
+    delay(30)
+    msgbox(CableClub_Text_ExplainWirelessClubFirstTime)
+    setvar(VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 2)
+    releaseall
+    end
+}
+
+movement Movement_PlayerApproachCounter {
+    walk_up
+    walk_up
+    step_end
+}
+
+script CableClub_EventScript_WelcomeToCableClub {
+    message(CableClub_Text_WelcomeWhichCableClubService)
+    waitmessage
+    delay(15)
+    goto(CableClub_EventScript_SelectCableClubRoom)
+    end
+}
+
+script CableClub_EventScript_UnusedWelcomeToCableClub {
+    msgbox(CableClub_Text_WhichService)
+    goto(CableClub_EventScript_SelectCableClubRoom)
+    end
+}
+
+script CableClub_EventScript_SelectCableClubRoom {
+    setvar(VAR_0x8004, 0)
+    multichoice(0, 0, MULTICHOICE_TRADE_CENTER_COLOSSEUM, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, CableClub_EventScript_TradeCenter)
+    goto_if_eq(VAR_0x8000, 1, CableClub_EventScript_Colosseum)
+    goto_if_eq(VAR_0x8000, 2, CableClub_EventScript_AbortLink)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, CableClub_EventScript_AbortLink)
+    end
+}
+
+script CableClub_EventScript_Colosseum {
+    copyvar(VAR_0x8007, VAR_LAST_TALKED)
+    goto(CableClub_EventScript_SelectBattleMode)
+    end
+}
+
+script CableClub_EventScript_SelectBattleMode {
+    message(CableClub_Text_PlayWhichBattleMode)
+    waitmessage
+    multichoice(0, 0, MULTICHOICE_SINGLE_DOUBLE_MULTI_INFO_EXIT, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, CableClub_EventScript_SingleBattleMode)
+    goto_if_eq(VAR_0x8000, 1, CableClub_EventScript_DoubleBattleMode)
+    goto_if_eq(VAR_0x8000, 2, CableClub_EventScript_MultiBattleMode)
+    goto_if_eq(VAR_0x8000, 3, CableClub_EventScript_BattleModeInfo)
+    goto_if_eq(VAR_0x8000, 4, CableClub_EventScript_AbortLink)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, CableClub_EventScript_AbortLink)
+    end
+}
+
+script CableClub_EventScript_BattleModeInfo {
+    msgbox(CableClub_Text_ExplainBattleModes)
+    goto(CableClub_EventScript_SelectBattleMode)
+    end
+}
+
+script CableClub_EventScript_SingleBattleMode {
+    setvar(VAR_0x8004, USING_SINGLE_BATTLE)
+    goto(CableClub_EventScript_TryEnterColosseum)
+    end
+}
+
+script CableClub_EventScript_DoubleBattleMode {
+    special(HasEnoughMonsForDoubleBattle)
+    goto_if_ne(VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, CableClub_EventScript_NeedTwoMonsForDoubleBattle)
+    setvar(VAR_0x8004, USING_DOUBLE_BATTLE)
+    goto(CableClub_EventScript_TryEnterColosseum)
+    end
+}
+
+script CableClub_EventScript_NeedTwoMonsForDoubleBattle {
+    msgbox(CableClub_Text_NeedTwoMonsForDoubleBattle)
+    goto(CableClub_EventScript_SelectBattleMode)
+    end
+}
+
+script CableClub_EventScript_MultiBattleMode {
+    setvar(VAR_0x8004, USING_MULTI_BATTLE)
+    goto(CableClub_EventScript_TryEnterColosseum)
+    end
+}
+
+script CableClub_EventScript_TryEnterColosseum {
+    call(EventScript_AskSaveGame)
+    goto_if_eq(VAR_RESULT, 0, CableClub_EventScript_AbortLink)
+    message(CableClub_Text_PleaseWaitBCancel)
+    waitmessage
+    special(HelpSystem_Disable)
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    special(TryBattleLinkup)
+    waitstate
+    call(EventScript_RestorePrevTextColor)
+    goto_if_eq(VAR_RESULT, LINKUP_SUCCESS, CableClub_EventScript_EnterColosseum)
+    goto_if_eq(VAR_RESULT, LINKUP_SOMEONE_NOT_READY, CableClub_EventScript_AbortLinkSomeoneNotReady)
+    goto_if_eq(VAR_RESULT, LINKUP_DIFF_SELECTIONS, CableClub_EventScript_AbortLinkDifferentSelections)
+    goto_if_eq(VAR_RESULT, LINKUP_WRONG_NUM_PLAYERS, CableClub_EventScript_AbortLinkIncorrectNumberOfBattlers)
+    goto_if_eq(VAR_RESULT, LINKUP_FAILED, CableClub_EventScript_AbortLink)
+    goto_if_eq(VAR_RESULT, LINKUP_CONNECTION_ERROR, CableClub_EventScript_AbortLinkConnectionError)
+    end
+}
+
+script CableClub_EventScript_EnterColosseum {
+    special(HealPlayerParty)
+    special(SavePlayerParty)
+    special(LoadPlayerBag)
+    copyvar(VAR_CABLE_CLUB_STATE, VAR_0x8004)
+    messageautoscroll(CableClub_Text_PleaseEnter)
+    waitmessage
+    call(CableClub_EventScript_OpenDirectCornerBarrier)
+    special(DrawWholeMapView)
+    playse(SE_CLICK)
+    delay(60)
+    applymovement(VAR_LAST_TALKED, Movement_AttendantFaceLeft)
+    waitmovement(0)
+    closemessage
+    applymovement(LOCALID_PLAYER, Movement_PlayerApproachLinkRoomLeft)
+    waitmovement(0)
+    opendoor(9, 1)
+    waitdooranim
+    applymovement(LOCALID_PLAYER, Movement_PlayerEnterLinkRoom)
+    waitmovement(0)
+    hideobjectat(LOCALID_PLAYER, 0)
+    closedoor(9, 1)
+    waitdooranim
+    release
+    goto_if_eq(VAR_0x8004, USING_MULTI_BATTLE, CableClub_EventScript_WarpTo4PColosseum)
+    special(SetCableClubWarp)
+    warp(MAP_BATTLE_COLOSSEUM_2P, 6, 8)
+    special(DoCableClubWarp)
+    waitstate
+    end
+}
+
+// Unused
+script CableClub_EventScript_PlayerApproachLinkRoomRight {
+    applymovement(LOCALID_PLAYER, Movement_PlayerApproachLinkRoomRight)
+    waitmovement(0)
+    return
+}
+
+script CableClub_EventScript_WarpTo4PColosseum {
+    special(SetCableClubWarp)
+    warp(MAP_BATTLE_COLOSSEUM_4P, 5, 8)
+    special(DoCableClubWarp)
+    waitstate
+    end
+}
+
+script CableClub_EventScript_AbortLinkIncorrectNumberOfBattlers {
+    copyvar(VAR_0x8000, VAR_0x8004)
+    goto_if_eq(VAR_0x8000, USING_SINGLE_BATTLE, CableClub_EventScript_AbortLinkWrongNumberForSingleBattle)
+    goto_if_eq(VAR_0x8000, USING_DOUBLE_BATTLE, CableClub_EventScript_AbortLinkWrongNumberForDoubleBattle)
+    goto_if_eq(VAR_0x8000, USING_MULTI_BATTLE, CableClub_EventScript_AbortLinkNeedFourPlayers)
+    goto(CableClub_EventScript_AbortLinkIncorrectNumberOfParticipants)
+    end
+}
+
+script CableClub_EventScript_AbortLinkNeedFourPlayers {
+    special(CloseLink)
+    msgbox(CableClub_Text_NeedFourPlayers)
+    goto(CableClub_EventScript_ConfirmNumberAndRestart)
+    end
+}
+
+script CableClub_EventScript_AbortLinkWrongNumberForDoubleBattle {
+    special(CloseLink)
+    msgbox(CableClub_Text_CantDoubleBattleWithXPlayers)
+    goto(CableClub_EventScript_ConfirmNumberAndRestart)
+    end
+}
+
+script CableClub_EventScript_AbortLinkWrongNumberForSingleBattle {
+    special(CloseLink)
+    msgbox(CableClub_Text_CantSingleBattleWithXPlayers)
+    goto(CableClub_EventScript_ConfirmNumberAndRestart)
+    end
+}
+
+script CableClub_EventScript_ConfirmNumberAndRestart {
+    special(CloseLink)  // Redundant
+    special(HelpSystem_Enable)
+    msgbox(CableClub_Text_PleaseConfirmNumberAndRestart)
+    release
+    end
+}
+
+script CableClub_EventScript_TradeCenter {
+    copyvar(VAR_0x8007, VAR_LAST_TALKED)
+    call(CableClub_EventScript_CheckPartyTradeRequirements)
+    goto_if_eq(VAR_RESULT, 0, CableClub_EventScript_AbortLink)
+    call(EventScript_AskSaveGame)
+    goto_if_eq(VAR_RESULT, 0, CableClub_EventScript_AbortLink)
+    message(CableClub_Text_PleaseWaitBCancel)
+    waitmessage
+    special(HelpSystem_Disable)
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    special(TryTradeLinkup)
+    waitstate
+    call(EventScript_RestorePrevTextColor)
+    goto_if_eq(VAR_RESULT, LINKUP_SUCCESS, CableClub_EventScript_EnterTradeCenter)
+    goto_if_eq(VAR_RESULT, LINKUP_SOMEONE_NOT_READY, CableClub_EventScript_AbortLinkSomeoneNotReady)
+    goto_if_eq(VAR_RESULT, LINKUP_DIFF_SELECTIONS, CableClub_EventScript_AbortLinkDifferentSelections)
+    goto_if_eq(VAR_RESULT, LINKUP_WRONG_NUM_PLAYERS, CableClub_EventScript_AbortLinkIncorrectNumberOfParticipants)
+    goto_if_eq(VAR_RESULT, LINKUP_FAILED, CableClub_EventScript_AbortLink)
+    goto_if_eq(VAR_RESULT, LINKUP_CONNECTION_ERROR, CableClub_EventScript_AbortLinkConnectionError)
+    goto_if_eq(VAR_RESULT, LINKUP_PLAYER_NOT_READY, CableClub_EventScript_AbortLinkPlayerNotReady)
+    goto_if_eq(VAR_RESULT, LINKUP_PARTNER_NOT_READY, CableClub_EventScript_AbortLinkOtherTrainerNotReady)
+    end
+}
+
+script CableClub_EventScript_EnterTradeCenter {
+    setvar(VAR_0x8004, USING_TRADE_CENTER)
+    copyvar(VAR_CABLE_CLUB_STATE, VAR_0x8004)
+    messageautoscroll(CableClub_Text_PleaseEnter)
+    waitmessage
+    call(CableClub_EventScript_OpenDirectCornerBarrier)
+    special(DrawWholeMapView)
+    playse(SE_CLICK)
+    delay(60)
+    applymovement(VAR_LAST_TALKED, Movement_AttendantFaceLeft)
+    waitmovement(0)
+    closemessage
+    applymovement(LOCALID_PLAYER, Movement_PlayerApproachLinkRoomLeft)
+    waitmovement(0)
+    opendoor(9, 1)
+    waitdooranim
+    applymovement(LOCALID_PLAYER, Movement_PlayerEnterLinkRoom)
+    waitmovement(0)
+    hideobjectat(LOCALID_PLAYER, 0)
+    closedoor(9, 1)
+    waitdooranim
+    release
+    special(SetCableClubWarp)
+    setwarp(MAP_TRADE_CENTER, 5, 8)
+    special(DoCableClubWarp)
+    waitstate
+    end
+}
+
+script CableClub_EventScript_CheckPartyTradeRequirements {
+    specialvar(VAR_RESULT, CalculatePlayerPartyCount)
+    goto_if_lt(VAR_RESULT, 2, CableClub_EventScript_NeedTwoMonsToTrade)
+    specialvar(VAR_RESULT, DoesPartyHaveEnigmaBerry)
+    goto_if_eq(VAR_RESULT, TRUE, CableClub_EventScript_CantTradeEnigmaBerry)
+    setvar(VAR_RESULT, TRUE)
+    return
+}
+
+script CableClub_EventScript_NeedTwoMonsToTrade {
+    msgbox(CableClub_Text_NeedTwoMonsToTrade)
+    setvar(VAR_RESULT, FALSE)
+    return
+}
+
+script CableClub_EventScript_CantTradeEnigmaBerry {
+    msgbox(CableClub_Text_CantTradeEnigmaBerry)
+    setvar(VAR_RESULT, FALSE)
+    return
+}
+
+// Record Corner is nopped in FRLG
+script CableClub_EventScript_RecordCorner {
+    end
+}
+
+script CableClub_EventScript_AbortLinkPlayerNotReady {
+    special(CloseLink)
+    special(HelpSystem_Enable)
+    msgbox(CableClub_Text_NotSetUpForFarAwayRegion)
+    release
+    end
+}
+
+script CableClub_EventScript_AbortLinkOtherTrainerNotReady {
+    special(CloseLink)
+    special(HelpSystem_Enable)
+    msgbox(CableClub_Text_OtherTrainerNotReady)
+    release
+    end
+}
+
+script CableClub_EventScript_AbortLinkConnectionError {
+    special(CloseLink)
+    special(HelpSystem_Enable)
+    msgbox(CableClub_Text_LinkErrorPleaseReset)
+    release
+    end
+}
+
+script CableClub_EventScript_AbortLinkSomeoneNotReady {
+    special(CloseLink)
+    special(HelpSystem_Enable)
+    msgbox(CableClub_Text_SomeoneIsNotReadyToLink)
+    release
+    end
+}
+
+script CableClub_EventScript_AbortLinkDifferentSelections {
+    special(CloseLink)
+    special(HelpSystem_Enable)
+    msgbox(CableClub_Text_PlayersMadeDifferentSelections)
+    release
+    end
+}
+
+script CableClub_EventScript_AbortLink {
+    special(CloseLink)
+    special(HelpSystem_Enable)
+    msgbox(CableClub_Text_PleaseVisitAgain)
+    release
+    end
+}
+
+script CableClub_EventScript_AbortMinigame {
+    special(CloseLink)
+    special(HelpSystem_Enable)
+    msgbox(CableClub_Text_ComeAgain)
+    release
+    end
+}
+
+// Unused
+script CableClub_EventScript_CableClubWarp {
+    special(SetCableClubWarp)
+    special(DoCableClubWarp)
+    waitstate
+    end
+}
+
+script CableClub_EventScript_AbortLinkIncorrectNumberOfParticipants {
+    special(CloseLink)
+    special(HelpSystem_Enable)
+    msgbox(CableClub_Text_IncorrectNumberOfParticipants)
+    release
+    end
+}
+
+script CableClub_EventScript_AbortLinkPlayerHasBadEgg {
+    special(CloseLink)
+    special(HelpSystem_Enable)
+    msgbox(CableClub_Text_YouHaveAMonThatCantBeTaken)
+    release
+    end
+}
+
+script CableClub_EventScript_WirelessClubAdjustements {
+    msgbox(Text_WirelessClubUndergoingAdjustments)
+    release
+    end
+}
+
+script CableClub_EventScript_NotReadyYet {
+    msgbox(Text_AppearsToBeUndergoingAdjustments)
+    releaseall
+    end
+}
+
+movement(global) Movement_AttendantFaceDown {
+    face_down
+    step_end
+}
+
+// Unused
+movement(global) Movement_AttendantFaceRight {
+    face_right
+    step_end
+}
+
+movement(global) Movement_AttendantFaceLeft {
+    face_left
+    step_end
+}
+
+movement(global) Movement_PlayerExitLinkRoom {
+    walk_down
+    walk_down
+    step_end
+}
+
+movement(global) Movement_PlayerApproachLinkRoomRight {
+    walk_right
+    walk_up
+    walk_up
+    step_end
+}
+
+movement(global) Movement_PlayerApproachLinkRoomLeft {
+    walk_left
+    walk_up
+    walk_up
+    step_end
+}
+
+movement(global) Movement_PlayerEnterLinkRoom {
+    walk_up
+    step_end
+}
+
+// Unused
+movement(global) Movement_PlayerFaceAttendantLeft {
+    face_left
+    step_end
+}
+
+movement(global) Movement_PlayerFaceAttendantRight {
+    face_right
+    step_end
+}
+
+movement(global) Movement_PlayerEnterMinigameRoom {
+    walk_left
+    walk_up
+    walk_up
+    walk_up
+    step_end
+}
+
+script CableClub_EventScript_ShowBattleRecords {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lockall
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8004, 0)
+    special(ShowBattleRecords)
+    waitstate
+    releaseall
+    end
+}
+
+script BattleColosseum_2P_EventScript_PlayerSpot0 {
+    setvar(VAR_0x8005, 0)
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    special(EnterColosseumPlayerSpot)
+    waitstate
+    end
+}
+
+script BattleColosseum_2P_EventScript_PlayerSpot1 {
+    setvar(VAR_0x8005, 1)
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    special(EnterColosseumPlayerSpot)
+    waitstate
+    end
+}
+
+script BattleColosseum_4P_EventScript_PlayerSpot0 {
+    fadescreen(FADE_TO_BLACK)
+    special(ChooseHalfPartyForBattle)
+    waitstate
+    goto_if_eq(VAR_RESULT, 0, BattleColosseum_4P_EventScript_CancelSpotTrigger)
+    setvar(VAR_0x8005, 0)
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    special(EnterColosseumPlayerSpot)
+    waitstate
+    end
+}
+
+script BattleColosseum_4P_EventScript_PlayerSpot1 {
+    fadescreen(FADE_TO_BLACK)
+    special(ChooseHalfPartyForBattle)
+    waitstate
+    goto_if_eq(VAR_RESULT, 0, BattleColosseum_4P_EventScript_CancelSpotTrigger)
+    setvar(VAR_0x8005, 1)
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    special(EnterColosseumPlayerSpot)
+    waitstate
+    end
+}
+
+script BattleColosseum_4P_EventScript_PlayerSpot2 {
+    fadescreen(FADE_TO_BLACK)
+    special(ChooseHalfPartyForBattle)
+    waitstate
+    goto_if_eq(VAR_RESULT, 0, BattleColosseum_4P_EventScript_CancelSpotTrigger)
+    setvar(VAR_0x8005, 2)
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    special(EnterColosseumPlayerSpot)
+    waitstate
+    end
+}
+
+script BattleColosseum_4P_EventScript_PlayerSpot3 {
+    fadescreen(FADE_TO_BLACK)
+    special(ChooseHalfPartyForBattle)
+    waitstate
+    goto_if_eq(VAR_RESULT, 0, BattleColosseum_4P_EventScript_CancelSpotTrigger)
+    setvar(VAR_0x8005, 3)
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    special(EnterColosseumPlayerSpot)
+    waitstate
+    end
+}
+
+script BattleColosseum_4P_EventScript_CancelSpotTrigger {
+    end
+}
+
+script TradeCenter_EventScript_Chair0 {
+    setvar(VAR_0x8005, 0)
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    special(EnterTradeSeat)
+    waitstate
+    end
+}
+
+script TradeCenter_EventScript_Chair1 {
+    setvar(VAR_0x8005, 1)
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    special(EnterTradeSeat)
+    waitstate
+    end
+}
+
+// Unused
+script TradeCenter_EventScript_Chair2 {
+    setvar(VAR_0x8005, 2)
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    special(EnterTradeSeat)
+    waitstate
+    end
+}
+
+// Unused
+script TradeCenter_EventScript_Chair3 {
+    setvar(VAR_0x8005, 3)
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    special(EnterTradeSeat)
+    waitstate
+    end
+}
+
+raw `
+
+@ Nop in FRLG
+@ Separate labels to match GetDirectionForEventScript
+RecordCorner_EventScript_Spot0::
+RecordCorner_EventScript_Spot1::
+RecordCorner_EventScript_Spot2::
+RecordCorner_EventScript_Spot3::
+	end
+`
+
+script CableClub_EventScript_ReadTrainerCard {
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    msgbox(Text_LookedAtPlayersTrainerCard)
+    fadescreen(FADE_TO_BLACK)
+    special(Script_ShowLinkTrainerCard)
+    waitstate
+    end
+}
+
+script CableClub_EventScript_ReadTrainerCardColored {
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    msgbox(Text_LookedAtPlayersTrainerCardColored)
+    fadescreen(FADE_TO_BLACK)
+    special(Script_ShowLinkTrainerCard)
+    waitstate
+    end
+}
+
+script CableClub_EventScript_TooBusyToNotice {
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    msgbox(Text_TrainerTooBusyToNotice)
+    closemessage
+    end
+}
+
+script BattleColosseum_2P_EventScript_Attendant {
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    special(Script_FacePlayer)
+    msgbox(Text_TakeSeatStartBattle)
+    special(Script_ClearHeldMovement)
+    closemessage
+    end
+}
+
+script TradeCenter_EventScript_Attendant {
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    special(Script_FacePlayer)
+    msgbox(Text_TakeSeatStartTrade)
+    special(Script_ClearHeldMovement)
+    closemessage
+    end
+}
+
+// Nop in FRLG
+script RecordCorner_EventScript_Attendant {
+    end
+}
+
+script TradeCenter_ConfirmLeaveRoom {
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    msgbox(Text_TerminateLinkIfYouLeaveRoom, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, TradeCenter_TerminateLink)
+    erasebox(0, 0, 29, 19)
+    releaseall
+    end
+}
+
+script TradeCenter_TerminateLink {
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    messageautoscroll(Text_TerminateLinkConfirmation)
+    waitmessage
+    special(ExitLinkRoom)
+    end
+}
+
+script CableClub_EventScript_DoLinkRoomExit {
+    special(CleanupLinkRoomState)
+    special(ReturnFromLinkRoom)
+    waitstate
+    end
+}
+
+script CableClub_EventScript_UnionRoomAttendant {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    special(QuestLog_CutRecording)
+    lock
+    faceplayer
+    goto_if_unset(FLAG_SYS_POKEDEX_GET, CableClub_EventScript_WirelessClubAdjustements)
+    specialvar(VAR_RESULT, IsBadEggInParty)
+    goto_if_eq(VAR_RESULT, TRUE, CableClub_EventScript_AbortLinkPlayerHasBadEgg)
+    copyvar(VAR_0x8007, VAR_LAST_TALKED)
+    specialvar(VAR_RESULT, IsWirelessAdapterConnected)
+    goto_if_eq(VAR_RESULT, FALSE, CableClub_EventScript_UnionRoomAdapterNotConnected)
+    message(CableClub_Text_WelcomeUnionRoomEnter)
+    waitmessage
+    goto(CableClub_EventScript_AskEnterUnionRoom)
+    end
+}
+
+script CableClub_EventScript_AskEnterUnionRoom {
+    multichoice(18, 6, MULTICHOICE_YES_NO_INFO, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, CableClub_EventScript_EnterUnionRoom)
+    goto_if_eq(VAR_0x8000, 1, CableClub_EventScript_AbortLink)
+    goto_if_eq(VAR_0x8000, 2, CableClub_EventScript_UnionRoomInfo)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, CableClub_EventScript_AbortLink)
+    end
+}
+
+script CableClub_EventScript_UnionRoomInfo {
+    message(CableClub_Text_UnionRoomInfo)
+    waitmessage
+    goto(CableClub_EventScript_AskEnterUnionRoom)
+    end
+}
+
+script CableClub_EventScript_EnterUnionRoom {
+    call(CableClub_EventScript_CheckPartyUnionRoomRequirements)
+    goto_if_eq(VAR_RESULT, FALSE, CableClub_EventScript_AbortLink)
+    call(EventScript_AskSaveGame)
+    goto_if_eq(VAR_RESULT, 0, CableClub_EventScript_AbortLink)
+    msgbox(CableClub_Text_EnjoyUnionRoom)
+    closemessage
+    special(HealPlayerParty)
+    setvar(VAR_0x8004, USING_UNION_ROOM)
+    copyvar(VAR_CABLE_CLUB_STATE, VAR_0x8004)
+    special(HelpSystem_Disable)
+    call(CableClub_EventScript_OpenUnionRoomBarrier)
+    special(DrawWholeMapView)
+    playse(SE_CLICK)
+    delay(60)
+    applymovement(VAR_LAST_TALKED, Movement_AttendantFaceLeft)
+    waitmovement(0)
+    applymovement(LOCALID_PLAYER, Movement_PlayerApproachLinkRoomLeft)
+    waitmovement(0)
+    opendoor(5, 1)
+    waitdooranim
+    applymovement(LOCALID_PLAYER, Movement_PlayerEnterLinkRoom)
+    waitmovement(0)
+    hideobjectat(LOCALID_PLAYER, 0)
+    closedoor(5, 1)
+    waitdooranim
+    special(Script_ResetUnionRoomTrade)
+    special(SetCableClubWarp)
+    warpspinenter(MAP_UNION_ROOM, 7, 11)
+    waitstate
+    special(RunUnionRoom)
+    waitstate
+    end
+}
+
+script CableClub_EventScript_CheckPartyUnionRoomRequirements {
+    specialvar(VAR_RESULT, CountPartyNonEggMons)
+    goto_if_lt(VAR_RESULT, 2, CableClub_EventScript_NeedTwoMonsForUnionRoom)
+    specialvar(VAR_RESULT, DoesPartyHaveEnigmaBerry)
+    goto_if_eq(VAR_RESULT, TRUE, CableClub_EventScript_NoEnigmaBerryInUnionRoom)
+    setvar(VAR_RESULT, TRUE)
+    return
+}
+
+script CableClub_EventScript_NeedTwoMonsForUnionRoom {
+    msgbox(CableClub_Text_NeedTwoMonsForUnionRoom)
+    goto(EventScript_SetResultFalse)
+    end
+}
+
+script CableClub_EventScript_NoEnigmaBerryInUnionRoom {
+    msgbox(CableClub_Text_NoEnigmaBerryInUnionRoom)
+    goto(EventScript_SetResultFalse)
+    end
+}
+
+script CableClub_EventScript_UnionRoomAdapterNotConnected {
+    msgbox(CableClub_Text_UnionRoomAdapterNotConnected)
+    release
+    return
+}
+
+script CableClub_EventScript_WirelessClubAttendant {
+    lock
+    faceplayer
+    goto_if_unset(FLAG_SYS_POKEDEX_GET, CableClub_EventScript_WirelessClubAdjustements)
+    msgbox(CableClub_Text_AskAboutLinking, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, CableClub_EventScript_DontAskAboutLinking)
+    msgbox(CableClub_Text_ExplainWirelessClub)
+    release
+    return
+}
+
+script CableClub_EventScript_DontAskAboutLinking {
+    msgbox(CableClub_Text_HopeYouEnjoyWirelessSystem)
+    release
+    return
+}
+
+script CableClub_EventScript_DirectCornerAttendant {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    special(QuestLog_CutRecording)
+    lock
+    faceplayer
+    goto_if_unset(FLAG_SYS_POKEDEX_GET, CableClub_EventScript_WirelessClubAdjustements)
+    specialvar(VAR_RESULT, IsBadEggInParty)
+    goto_if_eq(VAR_RESULT, TRUE, CableClub_EventScript_AbortLinkPlayerHasBadEgg)
+    specialvar(VAR_RESULT, IsWirelessAdapterConnected)
+    goto_if_eq(VAR_RESULT, FALSE, CableClub_EventScript_WelcomeToCableClub)
+    message(CableClub_Text_WelcomeWhichDirectCornerRoom)
+    waitmessage
+    delay(15)
+    goto(CableClub_EventScript_DirectCornerSelectService)
+    end
+}
+
+script CableClub_EventScript_DirectCornerSelectService {
+    goto_if_unset(FLAG_GOT_POWDER_JAR, CableClub_EventScript_DirectCornerNoBerry)
+    multichoice(0, 0, MULTICHOICE_TRADE_COLOSSEUM_CRUSH, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, CableClub_EventScript_WirelessTrade)
+    goto_if_eq(VAR_0x8000, 1, CableClub_EventScript_WirelessBattleSelect)
+    goto_if_eq(VAR_0x8000, 2, CableClub_EventScript_WirelessBerryCrush)
+    goto_if_eq(VAR_0x8000, 3, CableClub_EventScript_AbortLink)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, CableClub_EventScript_AbortLink)
+    end
+}
+
+script CableClub_EventScript_DirectCornerNoBerry {
+    multichoice(0, 0, MULTICHOICE_TRADE_COLOSSEUM_2, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, CableClub_EventScript_WirelessTrade)
+    goto_if_eq(VAR_0x8000, 1, CableClub_EventScript_WirelessBattleSelect)
+    goto_if_eq(VAR_0x8000, 2, CableClub_EventScript_AbortLink)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, CableClub_EventScript_AbortLink)
+    end
+}
+
+script CableClub_EventScript_WirelessTrade {
+    msgbox(CableClub_Text_TradePokemon, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, CableClub_EventScript_AbortLink)
+    call(CableClub_EventScript_CheckPartyTradeRequirements)
+    goto_if_eq(VAR_RESULT, FALSE, CableClub_EventScript_AbortLink)
+    setvar(VAR_0x8004, LINK_GROUP_TRADE)
+    goto(CableClub_EventScript_SaveAndChooseLinkLeader)
+    end
+}
+
+script CableClub_EventScript_WirelessBattleSelect {
+    message(CableClub_Text_PlayWhichBattleMode)
+    waitmessage
+    multichoice(0, 0, MULTICHOICE_SINGLE_DOUBLE_MULTI_INFO_EXIT, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, CableClub_EventScript_WirelessSingleBattle)
+    goto_if_eq(VAR_0x8000, 1, CableClub_EventScript_WirelessDoubleBattle)
+    goto_if_eq(VAR_0x8000, 2, CableClub_EventScript_WirelessMultiBattle)
+    goto_if_eq(VAR_0x8000, 3, CableClub_EventScript_WirelessBattleInfo)
+    goto_if_eq(VAR_0x8000, 4, CableClub_EventScript_AbortLink)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, CableClub_EventScript_AbortLink)
+    end
+}
+
+script CableClub_EventScript_WirelessSingleBattle {
+    setvar(VAR_0x8004, LINK_GROUP_SINGLE_BATTLE)
+    goto(CableClub_EventScript_SaveAndChooseLinkLeader)
+    end
+}
+
+script CableClub_EventScript_WirelessDoubleBattle {
+    special(HasEnoughMonsForDoubleBattle)
+    goto_if_ne(VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, CableClub_EventScript_TwoMonsNeededForWirelessDoubleBattle)
+    setvar(VAR_0x8004, LINK_GROUP_DOUBLE_BATTLE)
+    goto(CableClub_EventScript_SaveAndChooseLinkLeader)
+    end
+}
+
+script CableClub_EventScript_TwoMonsNeededForWirelessDoubleBattle {
+    msgbox(CableClub_Text_NeedTwoMonsForDoubleBattle)
+    goto(CableClub_EventScript_WirelessBattleSelect)
+    end
+}
+
+script CableClub_EventScript_WirelessMultiBattle {
+    setvar(VAR_0x8004, LINK_GROUP_MULTI_BATTLE)
+    goto(CableClub_EventScript_SaveAndChooseLinkLeader)
+    end
+}
+
+script CableClub_EventScript_WirelessBattleInfo {
+    msgbox(CableClub_Text_ExplainBattleModes)
+    goto(CableClub_EventScript_WirelessBattleSelect)
+    end
+}
+
+script CableClub_EventScript_WirelessBerryCrush {
+    msgbox(CableClub_Text_UseBerryCrush, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, CableClub_EventScript_AbortLink)
+    special(HasAtLeastOneBerry)
+    goto_if_eq(VAR_RESULT, FALSE, CableClub_EventScript_NeedBerryForBerryCrush)
+    setvar(VAR_0x8004, LINK_GROUP_BERRY_CRUSH)
+    goto(CableClub_EventScript_SaveAndChooseLinkLeader)
+    end
+}
+
+script CableClub_EventScript_NeedBerryForBerryCrush {
+    msgbox(CableClub_Text_NeedBerryForBerryCrush)
+    goto(CableClub_EventScript_DirectCornerSelectService)
+    end
+}
+
+script CableClub_EventScript_SaveAndChooseLinkLeader {
+    call(EventScript_AskSaveGame)
+    goto_if_eq(VAR_RESULT, 0, CableClub_EventScript_AbortLink)
+    copyvar(VAR_0x8000, VAR_0x8004)
+    goto_if_eq(VAR_0x8000, LINK_GROUP_TRADE, CableClub_EventScript_ChooseLinkLeaderFrom2)
+    goto_if_eq(VAR_0x8000, LINK_GROUP_SINGLE_BATTLE, CableClub_EventScript_ChooseLinkLeaderFrom2)
+    goto_if_eq(VAR_0x8000, LINK_GROUP_DOUBLE_BATTLE, CableClub_EventScript_ChooseLinkLeaderFrom2)
+    goto_if_eq(VAR_0x8000, LINK_GROUP_MULTI_BATTLE, CableClub_EventScript_ChooseLinkLeaderFrom4)
+    goto_if_eq(VAR_0x8000, LINK_GROUP_BERRY_CRUSH, CableClub_EventScript_ChooseLinkLeader)
+    end
+}
+
+script CableClub_EventScript_ChooseLinkLeaderFrom2 {
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    message(CableClub_Text_ChooseGroupLeaderOfTwo)
+    waitmessage
+    call(EventScript_RestorePrevTextColor)
+    multichoice(13, 6, MULTICHOICE_JOIN_OR_LEAD, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, CableClub_EventScript_TryJoinGroup2Players)
+    goto_if_eq(VAR_0x8000, 1, CableClub_EventScript_TryLeadGroup2Players)
+    goto_if_eq(VAR_0x8000, 2, CableClub_EventScript_AbortLink)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, CableClub_EventScript_AbortLink)
+    end
+}
+
+script CableClub_EventScript_TryLeadGroup2Players {
+    call(CableClub_EventScript_TryBecomeLinkLeader)
+    goto_if_eq(VAR_RESULT, LINKUP_SUCCESS, CableClub_EventScript_EnterWirelessLinkRoom)
+    goto_if_eq(VAR_RESULT, LINKUP_FAILED, CableClub_EventScript_ChooseLinkLeaderFrom2)
+    goto_if_eq(VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, CableClub_EventScript_TryLeadGroup2Players)
+    release
+    return
+}
+
+script CableClub_EventScript_TryJoinGroup2Players {
+    call(CableClub_EventScript_TryJoinLinkGroup)
+    goto_if_eq(VAR_RESULT, LINKUP_SUCCESS, CableClub_EventScript_EnterWirelessLinkRoom)
+    goto_if_eq(VAR_RESULT, LINKUP_FAILED, CableClub_EventScript_ChooseLinkLeaderFrom2)
+    goto_if_eq(VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, CableClub_EventScript_TryJoinGroup2Players)
+    release
+    return
+}
+
+script CableClub_EventScript_ChooseLinkLeaderFrom4 {
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    message(CableClub_Text_ChooseGroupLeaderOfFour)
+    waitmessage
+    call(EventScript_RestorePrevTextColor)
+    multichoice(13, 6, MULTICHOICE_JOIN_OR_LEAD, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, CableClub_EventScript_TryJoinGroup4Players)
+    goto_if_eq(VAR_0x8000, 1, CableClub_EventScript_TryLeadGroup4Players)
+    goto_if_eq(VAR_0x8000, 2, CableClub_EventScript_AbortLink)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, CableClub_EventScript_AbortLink)
+    end
+}
+
+script CableClub_EventScript_TryLeadGroup4Players {
+    call(CableClub_EventScript_TryBecomeLinkLeader)
+    goto_if_eq(VAR_RESULT, LINKUP_SUCCESS, CableClub_EventScript_EnterWirelessLinkRoom)
+    goto_if_eq(VAR_RESULT, LINKUP_FAILED, CableClub_EventScript_ChooseLinkLeaderFrom4)
+    goto_if_eq(VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, CableClub_EventScript_TryLeadGroup4Players)
+    release
+    return
+}
+
+script CableClub_EventScript_TryJoinGroup4Players {
+    call(CableClub_EventScript_TryJoinLinkGroup)
+    goto_if_eq(VAR_RESULT, LINKUP_SUCCESS, CableClub_EventScript_EnterWirelessLinkRoom)
+    goto_if_eq(VAR_RESULT, LINKUP_FAILED, CableClub_EventScript_ChooseLinkLeaderFrom4)
+    goto_if_eq(VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, CableClub_EventScript_TryJoinGroup4Players)
+    release
+    return
+}
+
+script CableClub_EventScript_ChooseLinkLeader {
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    message(CableClub_Text_ChooseGroupLeader)
+    waitmessage
+    call(EventScript_RestorePrevTextColor)
+    multichoice(13, 6, MULTICHOICE_JOIN_OR_LEAD, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, CableClub_EventScript_TryJoinGroupXPlayers)
+    goto_if_eq(VAR_0x8000, 1, CableClub_EventScript_TryLeadGroupXPlayers)
+    goto_if_eq(VAR_0x8000, 2, CableClub_EventScript_AbortLink)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, CableClub_EventScript_AbortLink)
+    end
+}
+
+script CableClub_EventScript_TryLeadGroupXPlayers {
+    call(CableClub_EventScript_TryBecomeLinkLeader)
+    goto_if_eq(VAR_RESULT, LINKUP_SUCCESS, CableClub_EventScript_EnterWirelessLinkRoom)
+    goto_if_eq(VAR_RESULT, LINKUP_FAILED, CableClub_EventScript_ChooseLinkLeader)
+    goto_if_eq(VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, CableClub_EventScript_TryLeadGroupXPlayers)
+    release
+    return
+}
+
+script CableClub_EventScript_TryJoinGroupXPlayers {
+    call(CableClub_EventScript_TryJoinLinkGroup)
+    goto_if_eq(VAR_RESULT, LINKUP_SUCCESS, CableClub_EventScript_EnterWirelessLinkRoom)
+    goto_if_eq(VAR_RESULT, LINKUP_FAILED, CableClub_EventScript_ChooseLinkLeader)
+    goto_if_eq(VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, CableClub_EventScript_TryJoinGroupXPlayers)
+    release
+    return
+}
+
+script CableClub_EventScript_TryBecomeLinkLeader {
+    special(HelpSystem_Disable)
+    special(TryBecomeLinkLeader)
+    waitstate
+    return
+}
+
+script CableClub_EventScript_TryJoinLinkGroup {
+    special(HelpSystem_Disable)
+    special(TryJoinLinkGroup)
+    waitstate
+    return
+}
+
+script CableClub_EventScript_EnterWirelessLinkRoom {
+    messageautoscroll(CableClub_Text_DirectYouToYourRoom)
+    waitmessage
+    delay(60)
+    closemessage
+    copyvar(VAR_0x8007, VAR_LAST_TALKED)
+    call(CableClub_EventScript_OpenDirectCornerBarrier)
+    special(DrawWholeMapView)
+    playse(SE_CLICK)
+    delay(60)
+    applymovement(VAR_LAST_TALKED, Movement_AttendantFaceLeft)
+    waitmovement(0)
+    closemessage
+    applymovement(LOCALID_PLAYER, Movement_PlayerApproachLinkRoomLeft)
+    waitmovement(0)
+    opendoor(9, 1)
+    waitdooranim
+    applymovement(LOCALID_PLAYER, Movement_PlayerEnterLinkRoom)
+    waitmovement(0)
+    hideobjectat(LOCALID_PLAYER, 0)
+    closedoor(9, 1)
+    waitdooranim
+    release
+    waitstate
+    end
+}
+
+script CableClub_EventScript_ShowWirelessCommunicationScreen {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lockall
+    goto_if_unset(FLAG_SYS_POKEDEX_GET, CableClub_EventScript_NotReadyYet)
+    specialvar(VAR_RESULT, IsWirelessAdapterConnected)
+    goto_if_eq(VAR_RESULT, FALSE, CableClub_EventScript_AdapterNotConnected)
+    special(HelpSystem_Disable)
+    fadescreen(FADE_TO_BLACK)
+    special(ShowWirelessCommunicationScreen)
+    waitstate
+    msgbox(CableClub_Text_ParticipantsStepUpToCounter)
+    special(HelpSystem_Enable)
+    releaseall
+    end
+}
+
+script CableClub_EventScript_AdapterNotConnected {
+    msgbox(CableClub_Text_AdapterNotConnected)
+    releaseall
+    end
+}
+
+script CableClub_EventScript_OpenUnionRoomBarrier {
+    setmetatile(5, 3, METATILE_PokemonCenter_Floor_ShadeLeft, 0)
+    return
+}
+
+script CableClub_EventScript_CloseUnionRoomBarrier {
+    setmetatile(5, 3, METATILE_PokemonCenter_CounterBarrier, 1)
+    return
+}
+
+script CableClub_EventScript_OpenDirectCornerBarrier {
+    setmetatile(9, 3, METATILE_PokemonCenter_Floor_ShadeLeft, 0)
+    return
+}
+
+script CableClub_EventScript_CloseDirectCornerBarrier {
+    setmetatile(9, 3, METATILE_PokemonCenter_CounterBarrier, 1)
+    return
+}
+
+script CableClub_EventScript_OpenGameCornerBarrier {
+    setmetatile(5, 3, METATILE_GameCorner_CheckeredFloor_ShadeLeft, 0)
+    return
+}
+
+script CableClub_EventScript_CloseGameCornerBarrier {
+    setmetatile(5, 3, METATILE_GameCorner_CounterBarrier, 1)
+    return
+}
+
+script CableClub_OnResume {
+    special(InitUnionRoom)
+    end
+}
+
+script JoyfulGameCorner_EventScript_InfoMan2 {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    special(QuestLog_CutRecording)
+    lock
+    faceplayer
+    message(Text_DescribeWhichGame)
+    waitmessage
+    multichoice(0, 0, MULTICHOICE_POKEJUMP_DODRIO, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, CableClub_EventScript_PokemonJumpInfo)
+    goto_if_eq(VAR_0x8000, 1, CableClub_EventScript_DodrioBerryPickingInfo)
+    goto_if_eq(VAR_0x8000, 2, CableClub_EventScript_MinigameInfoExit)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, CableClub_EventScript_MinigameInfoExit)
+    end
+}
+
+script CableClub_EventScript_PokemonJumpInfo {
+    msgbox(Text_PokemonJumpInfo)
+    release
+    end
+}
+
+script CableClub_EventScript_DodrioBerryPickingInfo {
+    msgbox(Text_DodrioBerryPickingInfo)
+    release
+    end
+}
+
+script CableClub_EventScript_MinigameInfoExit {
+    msgbox(Text_TalkToManToPlay)
+    release
+    end
+}
+
+script JoyfulGameCorner_EventScript_MinigameAttendant {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    special(QuestLog_CutRecording)
+    lock
+    faceplayer
+    message(Text_WelcomeCanYouWait)
+    waitmessage
+    specialvar(VAR_RESULT, IsWirelessAdapterConnected)
+    goto_if_eq(VAR_RESULT, FALSE, CableClub_EventScript_AdapterNotConnectedMinigame)
+    delay(60)
+    special(HelpSystem_Disable)
+    message(Text_PlayWhichGame)
+    waitmessage
+    multichoice(0, 0, MULTICHOICE_POKEJUMP_DODRIO, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, CableClub_EventScript_PlayPokemonJump)
+    goto_if_eq(VAR_0x8000, 1, CableClub_EventScript_PlayDodrioBerryPicking)
+    goto_if_eq(VAR_0x8000, 2, CableClub_EventScript_AbortMinigame)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, CableClub_EventScript_AbortMinigame)
+    end
+}
+
+script CableClub_EventScript_PlayPokemonJump {
+    setvar(VAR_0x8005, 0)
+    special(IsPokemonJumpSpeciesInParty)
+    goto_if_eq(VAR_RESULT, FALSE, CableClub_EventScript_NoEligiblePkmn)
+    msgbox(Text_EnterWhichPokemon)
+    setvar(VAR_0x8005, 0)
+    special(ChooseMonForWirelessMinigame)
+    waitstate
+    goto_if_ge(VAR_0x8004, PARTY_SIZE, CableClub_EventScript_AbortMinigame)
+    call(EventScript_AskSaveGame)
+    goto_if_eq(VAR_RESULT, 0, CableClub_EventScript_AbortMinigame)
+    setvar(VAR_0x8004, LINK_GROUP_POKEMON_JUMP)
+    goto(CableClub_EventScript_ChooseLinkLeaderMinigame)
+    end
+}
+
+script CableClub_EventScript_PlayDodrioBerryPicking {
+    setvar(VAR_0x8005, 1)
+    special(IsDodrioInParty)
+    goto_if_eq(VAR_RESULT, 0, CableClub_EventScript_NoEligiblePkmn)
+    msgbox(Text_EnterWhichPokemon)
+    setvar(VAR_0x8005, 1)
+    special(ChooseMonForWirelessMinigame)
+    waitstate
+    goto_if_ge(VAR_0x8004, PARTY_SIZE, CableClub_EventScript_AbortMinigame)
+    call(EventScript_AskSaveGame)
+    goto_if_eq(VAR_RESULT, 0, CableClub_EventScript_AbortMinigame)
+    setvar(VAR_0x8004, LINK_GROUP_BERRY_PICKING)
+    goto(CableClub_EventScript_ChooseLinkLeaderMinigame)
+    end
+}
+
+script CableClub_EventScript_ChooseLinkLeaderMinigame {
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    message(CableClub_Text_ChooseGroupLeader)
+    waitmessage
+    call(EventScript_RestorePrevTextColor)
+    multichoice(13, 6, MULTICHOICE_JOIN_OR_LEAD, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, CableClub_EventScript_TryJoinMinigameLinkGroup)
+    goto_if_eq(VAR_0x8000, 1, CableClub_EventScript_TryBecomeMinigameLinkLeader)
+    goto_if_eq(VAR_0x8000, 2, CableClub_EventScript_AbortMinigame)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, CableClub_EventScript_AbortMinigame)
+    end
+}
+
+script CableClub_EventScript_TryBecomeMinigameLinkLeader {
+    call(CableClub_EventScript_TryBecomeLinkLeader)
+    goto_if_eq(VAR_RESULT, LINKUP_SUCCESS, CableClub_EventScript_EnterMinigame)
+    goto_if_eq(VAR_RESULT, LINKUP_FAILED, CableClub_EventScript_ChooseLinkLeaderMinigame)
+    goto_if_eq(VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, CableClub_EventScript_TryBecomeMinigameLinkLeader)
+    release
+    return
+}
+
+script CableClub_EventScript_TryJoinMinigameLinkGroup {
+    call(CableClub_EventScript_TryJoinLinkGroup)
+    goto_if_eq(VAR_RESULT, LINKUP_SUCCESS, CableClub_EventScript_EnterMinigame)
+    goto_if_eq(VAR_RESULT, LINKUP_FAILED, CableClub_EventScript_ChooseLinkLeaderMinigame)
+    goto_if_eq(VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, CableClub_EventScript_TryJoinMinigameLinkGroup)
+    release
+    return
+}
+
+script CableClub_EventScript_EnterMinigame {
+    messageautoscroll(Text_AllGoodToGo)
+    waitmessage
+    delay(120)
+    closemessage
+    copyvar(VAR_0x8007, VAR_LAST_TALKED)
+    call(CableClub_EventScript_OpenGameCornerBarrier)
+    special(DrawWholeMapView)
+    playse(SE_CLICK)
+    delay(60)
+    applymovement(VAR_LAST_TALKED, Movement_AttendantFaceLeft)
+    waitmovement(0)
+    closemessage
+    applymovement(LOCALID_PLAYER, Movement_PlayerEnterMinigameRoom)
+    waitmovement(0)
+    hideobjectat(LOCALID_PLAYER, 0)
+    release
+    waitstate
+    end
+}
+
+script CableClub_EventScript_AdapterNotConnectedMinigame {
+    msgbox(Text_AdapterNotConnectedMinigame)
+    release
+    end
+}
+
+script CableClub_EventScript_NoEligiblePkmn {
+    msgbox(EventScript_ExplainPokemonJumpRequirements, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, CableClub_EventScript_AbortMinigame)
+    call_if_eq(VAR_0x8005, 0, CableClub_EventScript_ExplainPokemonJumpRequirements)
+    call_if_eq(VAR_0x8005, 1, CableClub_EventScript_ExplainDodrioBerryPickingRequirements)
+    goto(CableClub_EventScript_AbortMinigame)
+    end
+}
+
+script CableClub_EventScript_ExplainPokemonJumpRequirements {
+    msgbox(Text_ShortJumpingPokemonAllowed)
+    return
+}
+
+script CableClub_EventScript_ExplainDodrioBerryPickingRequirements {
+    msgbox(Text_OnlyDodrioAllowed)
+    return
+}
+
+script TwoIsland_JoyfulGameCorner_EventScript_ShowPokemonJumpRecords {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lockall
+    special(ShowPokemonJumpRecords)
+    waitstate
+    releaseall
+    end
+}
+
+script TwoIsland_JoyfulGameCorner_EventScript_ShowDodrioBerryPickingRecords {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lockall
+    special(ShowDodrioBerryPickingRecords)
+    waitstate
+    releaseall
+    end
+}
+
+text CableClub_Text_WelcomeWhichCableClubService {
+    "Welcome to the POKéMON CABLE\n"
+    "CLUB.\p"
+    "Which of our services do you wish\n"
+    "to use?$"
+}
+
+text CableClub_Text_WhichService {
+    "Which of our services do you wish\n"
+    "to use?$"
+}
+
+text CableClub_Text_TradeMonsUsingLinkCable {
+    "Trade POKéMON with another player\n"
+    "using a GBA Game Link cable.$"
+}
+
+text CableClub_Text_BattleUsingLinkCable {
+    "You may battle another TRAINER\n"
+    "using a GBA Game Link cable.$"
+}
+
+// Unused, translated in Emerald
+text CableClub_Text_CloseThisMenu {
+    "おわります$"
+}
+
+text CableClub_Text_NeedTwoMonsForDoubleBattle {
+    "For a DOUBLE BATTLE, you must\n"
+    "have at least two POKéMON.$"
+}
+
+text CableClub_Text_NeedTwoMonsToTrade {
+    "For trading, you must have at\n"
+    "least two POKéMON with you.$"
+}
+
+text CableClub_Text_CantTradeEnigmaBerry {
+    "A POKéMON holding the {STR_VAR_1}\n"
+    "BERRY can't be traded.$"
+}
+
+text CableClub_Text_PleaseWaitBCancel {
+    "Please wait.\n"
+    "… … B Button: Cancel$"
+}
+
+text CableClub_Text_WhenAllPlayersReadyAConfirmBCancel {
+    "When all players are ready…\n"
+    "A Button: Confirm\l"
+    "B Button: Cancel$"
+}
+
+text CableClub_Text_StartLinkWithXPlayersAConfirmBCancel {
+    "Start link with {STR_VAR_1} players.\n"
+    "A Button: Confirm\l"
+    "B Button: Cancel$"
+}
+
+text CableClub_Text_AwaitingLinkupBCancel {
+    "Awaiting linkup…\n"
+    "… … B Button: Cancel$"
+}
+
+// Unused, translated in Emerald
+text CableClub_Text_OkayToSaveProgress {
+    "はじめる　まえに　レポートを\n"
+    "かきますが　よろしいですか？$"
+}
+
+text CableClub_Text_PleaseEnter {
+    "Please enter.$"
+}
+
+text CableClub_Text_DirectYouToYourRoom {
+    "I'll direct you to your room now.$"
+}
+
+text CableClub_Text_SomeoneIsNotReadyToLink {
+    "Someone is not ready to link.\p"
+    "Please come back after everyone\n"
+    "has made preparations.$"
+}
+
+text CableClub_Text_LinkErrorPleaseReset {
+    "Sorry, we have a link error…\n"
+    "Please reset and try again.$"
+}
+
+text CableClub_Text_PlayersMadeDifferentSelections {
+    "The link partners appear to have\n"
+    "made different selections.$"
+}
+
+text CableClub_Text_PleaseVisitAgain {
+    "Please do visit again.$"
+}
+
+text CableClub_Text_IncorrectNumberOfParticipants {
+    "The number of participants is\n"
+    "incorrect.$"
+}
+
+text CableClub_Text_CantSingleBattleWithXPlayers {
+    "The SINGLE BATTLE Mode can't be\n"
+    "played by {STR_VAR_1} players.$"
+}
+
+text CableClub_Text_CantDoubleBattleWithXPlayers {
+    "The DOUBLE BATTLE Mode can't be\n"
+    "played by {STR_VAR_1} players.$"
+}
+
+text CableClub_Text_NeedFourPlayers {
+    "There must be four players to play\n"
+    "this Battle Mode.$"
+}
+
+text CableClub_Text_PleaseConfirmNumberAndRestart {
+    "Please confirm the number of\n"
+    "players and start again.$"
+}
+
+text Text_TerminateLinkIfYouLeaveRoom {
+    "The link will be terminated if you\n"
+    "leave the room. Is that okay?$"
+}
+
+text Text_TerminateLinkConfirmation {
+    "Terminating link…\n"
+    "You will be escorted out of\l"
+    "the room. Please wait.$"
+}
+
+text Text_TrainerTooBusyToNotice {
+    "This TRAINER is too busy to\n"
+    "notice…$"
+}
+
+text Text_LookedAtPlayersTrainerCard {
+    "Score! Got to look at {STR_VAR_1}'s\n"
+    "TRAINER CARD!$"
+}
+
+text Text_LookedAtPlayersTrainerCardColored {
+    "Score! Got to look at {STR_VAR_1}'s\n"
+    "TRAINER CARD!\p"
+    "It's a {STR_VAR_2} card!$"
+}
+
+text Text_TakeSeatStartBattle {
+    "Please take your seat and start\n"
+    "your battle.$"
+}
+
+text Text_TakeSeatStartTrade {
+    "Please take your seat and start\n"
+    "your trade.$"
+}
+
+// Unused, leftover from RS
+text RecordCorner_Text_ThanksForComing {
+    "ごりよう　ありがとう　ございました$"
+}
+
+text CableClub_Text_TrainerCardDataOverwritten {
+    "The TRAINER CARD data will\n"
+    "be overwritten.$"
+}
+
+text CableClub_Text_HopeToSeeYouAgain {
+    "I hope to see you again!$"
+}
+
+text CableClub_Text_NotSetUpForFarAwayRegion {
+    "I'm awfully sorry.\p"
+    "We're not set up to conduct trades\n"
+    "with TRAINERS far away in another\l"
+    "region yet…$"
+}
+
+text CableClub_Text_OtherTrainerNotReady {
+    "The other TRAINER is not ready.$"
+}
+
+text CableClub_Text_YouHaveAMonThatCantBeTaken {
+    "You have at least one POKéMON\n"
+    "that can't be taken.$"
+}
+
+text CableClub_Text_AdapterNotConnected {
+    "The Wireless Adapter is not\n"
+    "connected properly.$"
+}
+
+text CableClub_Text_ParticipantsStepUpToCounter {
+    "Participants are asked to step up\n"
+    "to the reception counter.$"
+}
+
+// Unused, translated in Emerald
+text CableClub_Text_Hello {
+    "こんにちは！$"
+}
+
+// Unused, translated in Emerald
+text CableClub_Text_PleaseWait {
+    "しょうしょう　おまちください$"
+}
+
+text CableClub_Text_YouMayTradeHere {
+    "You may trade your POKéMON here\n"
+    "with another TRAINER.$"
+}
+
+text CableClub_Text_YouMayBattleHere {
+    "You may battle with your friends\n"
+    "here.$"
+}
+
+text CableClub_Text_CanMakeBerryPowder {
+    "Two to five TRAINERS can make\n"
+    "BERRY POWDER together.$"
+}
+
+// Unused, Record Mix nopped
+text CableClub_Text_CanMixRecords {
+    "ワイヤレス　クラブでの\n"
+    "あそびかたを　せつめいします$"
+}
+
+text CableClub_Text_CancelSelectedItem {
+    "Cancels the selected MENU item.$"
+}
+
+// Unused, translated in Emerald
+text CableClub_Text_WhichBattleMode {
+    "どちらの　しょうぶに　しますか？$"
+}
+
+// Unused, translated in Emerald
+text CableClub_Text_ReturnsToPreviousStep {
+    "ひとつ　まえに　もどります$"
+}
+
+text CableClub_Text_NeedBerryForBerryCrush {
+    "To use the BERRY CRUSH service,\n"
+    "you must have at least one BERRY.$"
+}
+
+text CableClub_Text_NeedTwoMonsForUnionRoom {
+    "To enter the UNION ROOM, you must\n"
+    "have at least two POKéMON.$"
+}
+
+text CableClub_Text_NoEnigmaBerryInUnionRoom {
+    "No POKéMON holding the {STR_VAR_1}\n"
+    "BERRY may enter the UNION ROOM.$"
+}
+
+text CableClub_Text_UnionRoomAdapterNotConnected {
+    "This is the POKéMON WIRELESS CLUB\n"
+    "UNION ROOM.\p"
+    "Unfortunately, your Wireless\n"
+    "Adapter is not connected properly.\p"
+    "Please do come again.$"
+}
+
+// Unused, translated in Emerald
+text CableClub_Text_OhExcuseMe {
+    "あ‥‥\n"
+    "おきゃくさま！$"
+}
+
+text Text_PlayerIsPlayingRightNowGoForIt {
+    "It appears as if {STR_VAR_1} is playing\n"
+    "right now.\l"
+    "Go for it!$"
+}
+
+text Text_DescribeWhichGame {
+    "I can explain game rules to you,\n"
+    "if you'd like.\p"
+    "Which game should I describe?$"
+}
+
+text Text_PokemonJumpInfo {
+    "“POKéMON JUMP”\p"
+    "Make your POKéMON skip the\n"
+    "VINE WHIP rope with the A Button.\p"
+    "Only mini POKéMON around 28 inches\n"
+    "or less may participate.\p"
+    "POKéMON that only swim, burrow, or\n"
+    "fly are not good at jumping.\p"
+    "As a result, those POKéMON may not\n"
+    "participate.\p"
+    "Good things happen if everyone\n"
+    "jumps in time.$"
+}
+
+text Text_DodrioBerryPickingInfo {
+    "“DODRIO BERRY-PICKING”\p"
+    "Command DODRIO's three heads to\n"
+    "catch falling BERRIES.\p"
+    "Press right, up, or left on the\n"
+    "{PLUS} Control Pad to move the heads.\p"
+    "To play this game, you must have\n"
+    "a DODRIO.$"
+}
+
+text Text_TalkToManToPlay {
+    "If you want to play a game,\n"
+    "please tell the man beside me.$"
+}
+
+text Text_WelcomeCanYouWait {
+    "Hi, welcome!\n"
+    "You can play games over the\l"
+    "Wireless Communication System.\p"
+    "Can you wait just a little bit?$"
+}
+
+text CableClub_Text_ComeAgain {
+    "All right, come again!$"
+}
+
+text Text_AdapterNotConnectedMinigame {
+    "The Wireless Adapter isn't\n"
+    "connected.\p"
+    "Come back when it's hooked up!$"
+}
+
+text Text_PlayWhichGame {
+    "All right, which game did you want\n"
+    "to play?$"
+}
+
+text Text_EnterWhichPokemon {
+    "Which POKéMON would you like to\n"
+    "enter?$"
+}
+
+text Text_AllGoodToGo {
+    "Okay, you're all good to go.\n"
+    "Don't let the others beat you!$"
+}
+
+// Unused, translated in Emerald
+text Text_LeavingDoComeAgain {
+    "きょうは　けえるのか？\n"
+    "またこいよ！$"
+}
+
+text EventScript_ExplainPokemonJumpRequirements {
+    "It doesn't look like you have any\n"
+    "POKéMON that you can enter…\p"
+    "Would you like me to explain what\n"
+    "kinds of POKéMON can enter?$"
+}
+
+text Text_ShortJumpingPokemonAllowed {
+    "“POKéMON JUMP” is open to POKéMON\n"
+    "around 28 inches or less.\p"
+    "What you can't enter are those\n"
+    "POKéMON that can't jump.\p"
+    "You know, like POKéMON that only\n"
+    "swim, burrow, or fly.\p"
+    "That's all you need to know.$"
+}
+
+text Text_OnlyDodrioAllowed {
+    "“DODRIO BERRY-PICKING”…\n"
+    "Well, the name says it all.\p"
+    "You have to have a DODRIO to play\n"
+    "this game.$"
+}
+
+// Unused, translated in Emerald
+text Text_RetryFromStartPlease {
+    "もういちど　はじめから\n"
+    "やりなおして　みて　くれ$"
+}
+
+text CableClub_Text_WelcomeWhichDirectCornerRoom {
+    "Welcome to the POKéMON WIRELESS\n"
+    "CLUB DIRECT CORNER.\p"
+    "You may interact directly with\n"
+    "your friends here.\p"
+    "Which room would you like to\n"
+    "enter?$"
+}
+
+text CableClub_Text_TradePokemon {
+    "Would you like to trade POKéMON?$"
+}
+
+text CableClub_Text_PlayWhichBattleMode {
+    "Which Battle Mode would you like\n"
+    "to play?$"
+}
+
+text CableClub_Text_UseBerryCrush {
+    "Would you like to use the\n"
+    "BERRY CRUSH System?$"
+}
+
+text CableClub_Text_ExplainBattleModes {
+    "There are three Battle Modes.\p"
+    "SINGLE BATTLE is for two TRAINERS\n"
+    "with one or more POKéMON each.\p"
+    "Each TRAINER can have one POKéMON\n"
+    "in battle at a time.\p"
+    "DOUBLE BATTLE is for two TRAINERS\n"
+    "with two or more POKéMON each.\p"
+    "Each TRAINER will send out two\n"
+    "POKéMON in battle at a time.\p"
+    "MULTI BATTLE is for four TRAINERS\n"
+    "with one or more POKéMON each.\p"
+    "Each TRAINER can have one POKéMON\n"
+    "in battle at a time.$"
+}
+
+text CableClub_Text_ChooseGroupLeaderOfTwo {
+    "Please decide which of you two\n"
+    "will become the LEADER.\p"
+    "The other player must then choose\n"
+    "“JOIN GROUP.”$"
+}
+
+text CableClub_Text_ChooseGroupLeaderOfFour {
+    "Please decide which of you four\n"
+    "will become the GROUP LEADER.\p"
+    "The other players must then choose\n"
+    "“JOIN GROUP.”$"
+}
+
+text CableClub_Text_ChooseGroupLeader {
+    "Please decide which of you will\n"
+    "become the GROUP LEADER.\p"
+    "The other players must then choose\n"
+    "“JOIN GROUP.”$"
+}
+
+text CableClub_Text_WelcomeUnionRoomEnter {
+    "Welcome to the POKéMON WIRELESS\n"
+    "CLUB UNION ROOM.\p"
+    "You may interact directly with\n"
+    "other TRAINERS here, some of\l"
+    "whom you may not even know.\p"
+    "Would you like to enter the ROOM?$"
+}
+
+text CableClub_Text_UnionRoomInfo {
+    "The TRAINERS in the UNION ROOM\n"
+    "will be those players around you\l"
+    "who have also entered the ROOM.\p"
+    "You may do all sorts of things\n"
+    "here, such as exchanging greetings.\p"
+    "You may enter two POKéMON up to\n"
+    "Lv. 30 for a one-on-one battle.\p"
+    "You may take part in a chat with\n"
+    "two to five people.\p"
+    "Or, you may register a POKéMON for\n"
+    "trade.\p"
+    "Would you like to enter the ROOM?$"
+}
+
+text CableClub_Text_EnjoyUnionRoom {
+    "I hope you enjoy your time in\n"
+    "the UNION ROOM.$"
+}
+
+text CableClub_Text_FirstTimeRightThisWay {
+    "Hello!\n"
+    "My name is TEALA.\p"
+    "This must be your first time\n"
+    "up here.\p"
+    "I'll show you how the Wireless\n"
+    "Communication System works.\p"
+    "First, I need to show you this\n"
+    "floor of our POKéMON CENTER.\p"
+    "Right this way, please.$"
+}
+
+text CableClub_Text_ExplainWirelessClubFirstTime {
+    "On the top floor, there are two\n"
+    "rooms.\p"
+    "First, the room on the left.\n"
+    "It's the UNION ROOM.\p"
+    "You may link up with TRAINERS\n"
+    "around you who have also entered\l"
+    "the UNION ROOM.\p"
+    "With them, you may do things like\n"
+    "chat, battle, and trade.\p"
+    "Second, the room on the right is\n"
+    "the DIRECT CORNER.\p"
+    "You may trade or battle POKéMON\n"
+    "with your friends in this room.\p"
+    "If the Wireless Adapter isn't\n"
+    "connected, you may still link up\l"
+    "using a GBA Game Link cable.\p"
+    "If that is the case, you must go\n"
+    "to the DIRECT CORNER.\p"
+    "I hope you enjoy the Wireless \n"
+    "Communication System.$"
+}
+
+text CableClub_Text_AskAboutLinking {
+    "Hello, {PLAYER}!\p"
+    "It's me, TEALA, the POKéMON\n"
+    "CENTER 2F attendant.\p"
+    "Is there something you needed to\n"
+    "ask me about linking?$"
+}
+
+text CableClub_Text_ExplainWirelessClub {
+    "Let me explain how the POKéMON\n"
+    "WIRELESS CLUB works.\p"
+    "On this, the top floor, there are\n"
+    "two rooms.\p"
+    "First, the room on the left.\n"
+    "It's the UNION ROOM.\p"
+    "You may link up with TRAINERS\n"
+    "around you who have also entered\l"
+    "the UNION ROOM.\p"
+    "With them, you may do things like\n"
+    "chat, battle, and trade.\p"
+    "Second, the room on the right is\n"
+    "the DIRECT CORNER.\p"
+    "You may trade or battle POKéMON\n"
+    "with your friends in this room.\p"
+    "Sometimes, you may not be able to\n"
+    "find your friends in the UNION ROOM\l"
+    "or the DIRECT CORNER.\p"
+    "In that case, please move closer\n"
+    "to your friends.\p"
+    "If the Wireless Adapter isn't\n"
+    "connected, you may still link up\l"
+    "using a GBA Game Link cable.\p"
+    "If that is the case, you must go\n"
+    "to the DIRECT CORNER.\p"
+    "I hope you enjoy the Wireless \n"
+    "Communication System.$"
+}
+
+text CableClub_Text_HopeYouEnjoyWirelessSystem {
+    "I hope you enjoy the Wireless\n"
+    "Communication System.$"
+}

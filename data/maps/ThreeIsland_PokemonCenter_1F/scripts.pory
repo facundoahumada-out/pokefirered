@@ -1,0 +1,32 @@
+mapscripts ThreeIsland_PokemonCenter_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ThreeIsland_PokemonCenter_1F_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script ThreeIsland_PokemonCenter_1F_OnTransition {
+    setrespawn(HEAL_LOCATION_THREE_ISLAND)
+    end
+}
+
+script ThreeIsland_PokemonCenter_1F_EventScript_Nurse {
+    lock
+    faceplayer
+    call(EventScript_PkmnCenterNurse)
+    release
+    end
+}
+
+script ThreeIsland_PokemonCenter_1F_EventScript_Sailor {
+    msgbox(ThreeIsland_PokemonCenter_1F_Text_ImpossibleToSurfBetweenIslands, MSGBOX_NPC)
+    end
+}
+
+script ThreeIsland_PokemonCenter_1F_EventScript_Lass {
+    msgbox(ThreeIsland_PokemonCenter_1F_Text_AlwaysBerriesInBerryForest, MSGBOX_NPC)
+    end
+}
+
+script ThreeIsland_PokemonCenter_1F_EventScript_Rocker {
+    msgbox(ThreeIsland_PokemonCenter_1F_Text_PCNetworkCanLinkWithKanto, MSGBOX_NPC)
+    end
+}

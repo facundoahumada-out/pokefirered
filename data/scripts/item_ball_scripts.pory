@@ -1,0 +1,839 @@
+script Route2_EventScript_ItemEther {
+    finditem(ITEM_ETHER)
+    end
+}
+
+script Route2_EventScript_ItemParalyzeHeal {
+    finditem(ITEM_PARALYZE_HEAL)
+    end
+}
+
+script ViridianForest_EventScript_ItemPokeBall {
+    finditem(ITEM_POKE_BALL)
+    end
+}
+
+script ViridianForest_EventScript_ItemAntidote {
+    finditem(ITEM_ANTIDOTE)
+    end
+}
+
+script ViridianForest_EventScript_ItemPotion {
+    finditem(ITEM_POTION)
+    end
+}
+
+script MtMoon_1F_EventScript_ItemParalyzeHeal {
+    finditem(ITEM_PARALYZE_HEAL)
+    end
+}
+
+script MtMoon_1F_EventScript_ItemTM09 {
+    finditem(ITEM_TM09)
+    end
+}
+
+script MtMoon_1F_EventScript_ItemPotion {
+    finditem(ITEM_POTION)
+    end
+}
+
+script MtMoon_1F_EventScript_ItemRareCandy {
+    finditem(ITEM_RARE_CANDY)
+    end
+}
+
+script MtMoon_1F_EventScript_ItemEscapeRope {
+    finditem(ITEM_ESCAPE_ROPE)
+    end
+}
+
+script MtMoon_1F_EventScript_ItemMoonStone {
+    finditem(ITEM_MOON_STONE)
+    end
+}
+
+script MtMoon_B2F_EventScript_ItemStarPiece {
+    finditem(ITEM_STAR_PIECE)
+    end
+}
+
+script MtMoon_B2F_EventScript_ItemTM46 {
+    finditem(ITEM_TM46)
+    end
+}
+
+script Route4_EventScript_ItemTM05 {
+    finditem(ITEM_TM05)
+    end
+}
+
+script Route24_EventScript_ItemTM45 {
+    finditem(ITEM_TM45)
+    end
+}
+
+script Route25_EventScript_ItemTM43 {
+    finditem(ITEM_TM43)
+    end
+}
+
+script SSAnne_1F_Room2_EventScript_ItemTM31 {
+    finditem(ITEM_TM31)
+    end
+}
+
+script SSAnne_2F_Room2_EventScript_ItemStardust {
+    finditem(ITEM_STARDUST)
+    end
+}
+
+script SSAnne_2F_Room4_EventScript_ItemXAttack {
+    finditem(ITEM_X_ATTACK)
+    end
+}
+
+script SSAnne_B1F_Room2_EventScript_ItemTM44 {
+    finditem(ITEM_TM44)
+    end
+}
+
+script SSAnne_B1F_Room3_EventScript_ItemEther {
+    finditem(ITEM_ETHER)
+    end
+}
+
+script SSAnne_B1F_Room5_EventScript_ItemSuperPotion {
+    finditem(ITEM_SUPER_POTION)
+    end
+}
+
+script SSAnne_Kitchen_EventScript_ItemGreatBall {
+    finditem(ITEM_GREAT_BALL)
+    end
+}
+
+script Route9_EventScript_ItemTM40 {
+    finditem(ITEM_TM40)
+    end
+}
+
+script RocketHideout_B1F_EventScript_ItemEscapeRope {
+    finditem(ITEM_ESCAPE_ROPE)
+    end
+}
+
+script RocketHideout_B1F_EventScript_ItemHyperPotion {
+    finditem(ITEM_HYPER_POTION)
+    end
+}
+
+script RocketHideout_B2F_EventScript_ItemXSpeed {
+    finditem(ITEM_X_SPEED)
+    end
+}
+
+script RocketHideout_B2F_EventScript_ItemMoonStone {
+    finditem(ITEM_MOON_STONE)
+    end
+}
+
+script RocketHideout_B2F_EventScript_ItemTM12 {
+    finditem(ITEM_TM12)
+    end
+}
+
+script RocketHideout_B2F_EventScript_ItemSuperPotion {
+    finditem(ITEM_SUPER_POTION)
+    end
+}
+
+script RocketHideout_B3F_EventScript_ItemRareCandy {
+    finditem(ITEM_RARE_CANDY)
+    end
+}
+
+script RocketHideout_B3F_EventScript_ItemTM21 {
+    finditem(ITEM_TM21)
+    end
+}
+
+script RocketHideout_B4F_EventScript_ItemTM49 {
+    finditem(ITEM_TM49)
+    end
+}
+
+script RocketHideout_B4F_EventScript_ItemMaxEther {
+    finditem(ITEM_MAX_ETHER)
+    end
+}
+
+script RocketHideout_B4F_EventScript_ItemCalcium {
+    finditem(ITEM_CALCIUM)
+    end
+}
+
+script PokemonTower_3F_EventScript_ItemEscapeRope {
+    finditem(ITEM_ESCAPE_ROPE)
+    end
+}
+
+script PokemonTower_4F_EventScript_ItemElixir {
+    finditem(ITEM_ELIXIR)
+    end
+}
+
+script PokemonTower_4F_EventScript_ItemAwakening {
+    finditem(ITEM_AWAKENING)
+    end
+}
+
+script PokemonTower_4F_EventScript_ItemGreatBall {
+    finditem(ITEM_GREAT_BALL)
+    end
+}
+
+script PokemonTower_5F_EventScript_ItemNugget {
+    finditem(ITEM_NUGGET)
+    end
+}
+
+script PokemonTower_6F_EventScript_ItemRareCandy {
+    finditem(ITEM_RARE_CANDY)
+    end
+}
+
+script PokemonTower_6F_EventScript_ItemXAccuracy {
+    finditem(ITEM_X_ACCURACY)
+    end
+}
+
+script Route12_EventScript_ItemTM48 {
+    finditem(ITEM_TM48)
+    end
+}
+
+script Route12_EventScript_ItemIron {
+    finditem(ITEM_IRON)
+    end
+}
+
+script Route15_EventScript_ItemTM18 {
+    finditem(ITEM_TM18)
+    end
+}
+
+script SafariZone_Center_EventScript_ItemNugget {
+    finditem(ITEM_NUGGET)
+    end
+}
+
+script SafariZone_East_EventScript_ItemMaxPotion {
+    finditem(ITEM_MAX_POTION)
+    end
+}
+
+script SafariZone_East_EventScript_ItemFullRestore {
+    finditem(ITEM_FULL_RESTORE)
+    end
+}
+
+script SafariZone_East_EventScript_ItemTM11 {
+    finditem(ITEM_TM11)
+    end
+}
+
+script SafariZone_East_EventScript_ItemLeafStone {
+    finditem(ITEM_LEAF_STONE)
+    end
+}
+
+script SafariZone_North_EventScript_ItemProtein {
+    finditem(ITEM_PROTEIN)
+    end
+}
+
+script SafariZone_North_EventScript_ItemTM47 {
+    finditem(ITEM_TM47)
+    end
+}
+
+script SafariZone_West_EventScript_ItemTM32 {
+    finditem(ITEM_TM32)
+    end
+}
+
+script SafariZone_West_EventScript_ItemGoldTeeth {
+    finditem(ITEM_GOLD_TEETH)
+    end
+}
+
+script SafariZone_West_EventScript_ItemMaxPotion {
+    finditem(ITEM_MAX_POTION)
+    end
+}
+
+script SafariZone_West_EventScript_ItemMaxRevive {
+    finditem(ITEM_MAX_REVIVE)
+    end
+}
+
+script SilphCo_3F_EventScript_ItemHyperPotion {
+    finditem(ITEM_HYPER_POTION)
+    end
+}
+
+script SilphCo_4F_EventScript_ItemMaxRevive {
+    finditem(ITEM_MAX_REVIVE)
+    end
+}
+
+script SilphCo_4F_EventScript_ItemEscapeRope {
+    finditem(ITEM_ESCAPE_ROPE)
+    end
+}
+
+script SilphCo_4F_EventScript_ItemFullHeal {
+    finditem(ITEM_FULL_HEAL)
+    end
+}
+
+script SilphCo_5F_EventScript_ItemProtein {
+    finditem(ITEM_PROTEIN)
+    end
+}
+
+script SilphCo_5F_EventScript_ItemTM01 {
+    finditem(ITEM_TM01)
+    end
+}
+
+script SilphCo_5F_EventScript_ItemCardKey {
+    finditem(ITEM_CARD_KEY)
+    end
+}
+
+script SilphCo_6F_EventScript_ItemHPUp {
+    finditem(ITEM_HP_UP)
+    end
+}
+
+script SilphCo_6F_EventScript_ItemXSpecial {
+    finditem(ITEM_X_SPECIAL)
+    end
+}
+
+script SilphCo_7F_EventScript_ItemCalcium {
+    finditem(ITEM_CALCIUM)
+    end
+}
+
+script SilphCo_7F_EventScript_ItemTM08 {
+    finditem(ITEM_TM08)
+    end
+}
+
+script SilphCo_10F_EventScript_ItemCarbos {
+    finditem(ITEM_CARBOS)
+    end
+}
+
+script SilphCo_10F_EventScript_ItemUltraBall {
+    finditem(ITEM_ULTRA_BALL)
+    end
+}
+
+script SilphCo_10F_EventScript_ItemRareCandy {
+    finditem(ITEM_RARE_CANDY)
+    end
+}
+
+script PowerPlant_EventScript_ItemMaxPotion {
+    finditem(ITEM_MAX_POTION)
+    end
+}
+
+script PowerPlant_EventScript_ItemTM17 {
+    finditem(ITEM_TM17)
+    end
+}
+
+script PowerPlant_EventScript_ItemTM25 {
+    finditem(ITEM_TM25)
+    end
+}
+
+script PowerPlant_EventScript_ItemThunderStone {
+    finditem(ITEM_THUNDER_STONE)
+    end
+}
+
+script PowerPlant_EventScript_ItemElixir {
+    finditem(ITEM_ELIXIR)
+    end
+}
+
+script PokemonMansion_1F_EventScript_ItemCarbos {
+    finditem(ITEM_CARBOS)
+    end
+}
+
+script PokemonMansion_1F_EventScript_ItemEscapeRope {
+    finditem(ITEM_ESCAPE_ROPE)
+    end
+}
+
+script PokemonMansion_2F_EventScript_ItemCalcium {
+    finditem(ITEM_CALCIUM)
+    end
+}
+
+script PokemonMansion_3F_EventScript_ItemMaxPotion {
+    finditem(ITEM_MAX_POTION)
+    end
+}
+
+script PokemonMansion_3F_EventScript_ItemIron {
+    finditem(ITEM_IRON)
+    end
+}
+
+script PokemonMansion_B1F_EventScript_ItemTM14 {
+    finditem(ITEM_TM14)
+    end
+}
+
+script PokemonMansion_B1F_EventScript_ItemFullRestore {
+    finditem(ITEM_FULL_RESTORE)
+    end
+}
+
+script PokemonMansion_B1F_EventScript_ItemTM22 {
+    finditem(ITEM_TM22)
+    end
+}
+
+script PokemonMansion_B1F_EventScript_ItemSecretKey {
+    finditem(ITEM_SECRET_KEY)
+    end
+}
+
+script VictoryRoad_1F_EventScript_ItemRareCandy {
+    finditem(ITEM_RARE_CANDY)
+    end
+}
+
+script VictoryRoad_1F_EventScript_ItemTM02 {
+    finditem(ITEM_TM02)
+    end
+}
+
+script VictoryRoad_2F_EventScript_ItemGuardSpec {
+    finditem(ITEM_GUARD_SPEC)
+    end
+}
+
+script VictoryRoad_2F_EventScript_ItemTM07 {
+    finditem(ITEM_TM07)
+    end
+}
+
+script VictoryRoad_2F_EventScript_ItemFullHeal {
+    finditem(ITEM_FULL_HEAL)
+    end
+}
+
+script VictoryRoad_2F_EventScript_ItemTM37 {
+    finditem(ITEM_TM37)
+    end
+}
+
+script VictoryRoad_3F_EventScript_ItemMaxRevive {
+    finditem(ITEM_MAX_REVIVE)
+    end
+}
+
+script VictoryRoad_3F_EventScript_ItemTM50 {
+    finditem(ITEM_TM50)
+    end
+}
+
+script CeruleanCave_1F_EventScript_ItemMaxElixir {
+    finditem(ITEM_MAX_ELIXIR)
+    end
+}
+
+script CeruleanCave_1F_EventScript_ItemNugget {
+    finditem(ITEM_NUGGET)
+    end
+}
+
+script CeruleanCave_1F_EventScript_ItemFullRestore {
+    finditem(ITEM_FULL_RESTORE)
+    end
+}
+
+script CeruleanCave_2F_EventScript_ItemFullRestore {
+    finditem(ITEM_FULL_RESTORE)
+    end
+}
+
+script CeruleanCave_2F_EventScript_ItemPPUp {
+    finditem(ITEM_PP_UP)
+    end
+}
+
+script CeruleanCave_2F_EventScript_ItemUltraBall {
+    finditem(ITEM_ULTRA_BALL)
+    end
+}
+
+script CeruleanCave_B1F_EventScript_ItemMaxRevive {
+    finditem(ITEM_MAX_REVIVE)
+    end
+}
+
+script CeruleanCave_B1F_EventScript_ItemUltraBall {
+    finditem(ITEM_ULTRA_BALL)
+    end
+}
+
+script FuchsiaCity_WardensHouse_EventScript_ItemRareCandy {
+    finditem(ITEM_RARE_CANDY)
+    end
+}
+
+script TwoIsland_EventScript_ItemRevive {
+    finditem(ITEM_REVIVE)
+    end
+}
+
+script ThreeIsland_EventScript_ItemZinc {
+    finditem(ITEM_ZINC)
+    end
+}
+
+script ViridianForest_EventScript_ItemPotion2 {
+    finditem(ITEM_POTION)
+    end
+}
+
+script MtMoon_B2F_EventScript_ItemRevive {
+    finditem(ITEM_REVIVE)
+    end
+}
+
+script MtMoon_B2F_EventScript_ItemAntidote {
+    finditem(ITEM_ANTIDOTE)
+    end
+}
+
+script Route11_EventScript_ItemXDefend {
+    finditem(ITEM_X_DEFEND)
+    end
+}
+
+script Route9_EventScript_ItemBurnHeal {
+    finditem(ITEM_BURN_HEAL)
+    end
+}
+
+script RockTunnel_1F_EventScript_ItemRepel {
+    finditem(ITEM_REPEL)
+    end
+}
+
+script RockTunnel_1F_EventScript_ItemPearl {
+    finditem(ITEM_PEARL)
+    end
+}
+
+script RockTunnel_1F_EventScript_ItemEscapeRope {
+    finditem(ITEM_ESCAPE_ROPE)
+    end
+}
+
+script RockTunnel_B1F_EventScript_ItemRevive {
+    finditem(ITEM_REVIVE)
+    end
+}
+
+script RockTunnel_B1F_EventScript_ItemMaxEther {
+    finditem(ITEM_MAX_ETHER)
+    end
+}
+
+script SilphCo_8F_EventScript_ItemIron {
+    finditem(ITEM_IRON)
+    end
+}
+
+script SilphCo_11F_EventScript_ItemZinc {
+    finditem(ITEM_ZINC)
+    end
+}
+
+script PokemonMansion_1F_EventScript_ItemProtein {
+    finditem(ITEM_PROTEIN)
+    end
+}
+
+script PokemonMansion_2F_EventScript_ItemZinc {
+    finditem(ITEM_ZINC)
+    end
+}
+
+script PokemonMansion_2F_EventScript_ItemHPUp {
+    finditem(ITEM_HP_UP)
+    end
+}
+
+script ViridianCity_EventScript_ItemPotion {
+    finditem(ITEM_POTION)
+    end
+}
+
+script Route11_EventScript_ItemGreatBall {
+    finditem(ITEM_GREAT_BALL)
+    end
+}
+
+script Route11_EventScript_ItemAwakening {
+    finditem(ITEM_AWAKENING)
+    end
+}
+
+script PokemonTower_5F_EventScript_ItemCleanseTag {
+    finditem(ITEM_CLEANSE_TAG)
+    end
+}
+
+script CeladonCity_EventScript_ItemEther {
+    finditem(ITEM_ETHER)
+    end
+}
+
+script RocketHideout_B3F_EventScript_ItemBlackGlasses {
+    finditem(ITEM_BLACK_GLASSES)
+    end
+}
+
+script SafariZone_North_EventScript_ItemQuickClaw {
+    finditem(ITEM_QUICK_CLAW)
+    end
+}
+
+script SeafoamIslands_1F_EventScript_ItemIceHeal {
+    finditem(ITEM_ICE_HEAL)
+    end
+}
+
+script SeafoamIslands_B1F_EventScript_ItemWaterStone {
+    finditem(ITEM_WATER_STONE)
+    end
+}
+
+script SeafoamIslands_B1F_EventScript_ItemRevive {
+    finditem(ITEM_REVIVE)
+    end
+}
+
+script SeafoamIslands_B2F_EventScript_ItemBigPearl {
+    finditem(ITEM_BIG_PEARL)
+    end
+}
+
+script SeafoamIslands_B4F_EventScript_ItemUltraBall {
+    finditem(ITEM_ULTRA_BALL)
+    end
+}
+
+script FourIsland_EventScript_ItemStarPiece {
+    finditem(ITEM_STAR_PIECE)
+    end
+}
+
+script FourIsland_EventScript_ItemStardust {
+    finditem(ITEM_STARDUST)
+    end
+}
+
+script OneIsland_KindleRoad_EventScript_ItemEther {
+    finditem(ITEM_ETHER)
+    end
+}
+
+script OneIsland_KindleRoad_EventScript_ItemMaxRepel {
+    finditem(ITEM_MAX_REPEL)
+    end
+}
+
+script OneIsland_KindleRoad_EventScript_ItemCarbos {
+    finditem(ITEM_CARBOS)
+    end
+}
+
+script FiveIsland_Meadow_EventScript_ItemMaxPotion {
+    finditem(ITEM_MAX_POTION)
+    end
+}
+
+script FiveIsland_Meadow_EventScript_ItemPPUp {
+    finditem(ITEM_PP_UP)
+    end
+}
+
+script FiveIsland_MemorialPillar_EventScript_ItemMetalCoat {
+    finditem(ITEM_METAL_COAT)
+    end
+}
+
+script SixIsland_OutcastIsland_EventScript_ItemPPUp {
+    finditem(ITEM_PP_UP)
+    end
+}
+
+script SixIsland_WaterPath_EventScript_ItemElixir {
+    finditem(ITEM_ELIXIR)
+    end
+}
+
+script SixIsland_WaterPath_EventScript_ItemDragonScale {
+    finditem(ITEM_DRAGON_SCALE)
+    end
+}
+
+script SixIsland_RuinValley_EventScript_ItemFullRestore {
+    finditem(ITEM_FULL_RESTORE)
+    end
+}
+
+script SixIsland_RuinValley_EventScript_ItemHPUp {
+    finditem(ITEM_HP_UP)
+    end
+}
+
+script SixIsland_RuinValley_EventScript_ItemSunStone {
+    finditem(ITEM_SUN_STONE)
+    end
+}
+
+script SevenIsland_SevaultCanyon_EventScript_ItemKingsRock {
+    finditem(ITEM_KINGS_ROCK)
+    end
+}
+
+script SevenIsland_SevaultCanyon_EventScript_ItemMaxElixir {
+    finditem(ITEM_MAX_ELIXIR)
+    end
+}
+
+script SevenIsland_SevaultCanyon_EventScript_ItemNugget {
+    finditem(ITEM_NUGGET)
+    end
+}
+
+script ThreeIsland_BerryForest_EventScript_ItemMaxEther {
+    finditem(ITEM_MAX_ETHER)
+    end
+}
+
+script ThreeIsland_BerryForest_EventScript_ItemFullHeal {
+    finditem(ITEM_FULL_HEAL)
+    end
+}
+
+script ThreeIsland_BerryForest_EventScript_ItemMaxElixir {
+    finditem(ITEM_MAX_ELIXIR)
+    end
+}
+
+script MtEmber_Exterior_EventScript_ItemUltraBall {
+    finditem(ITEM_ULTRA_BALL)
+    end
+}
+
+script MtEmber_Exterior_EventScript_ItemFireStone {
+    finditem(ITEM_FIRE_STONE)
+    end
+}
+
+script MtEmber_Exterior_EventScript_ItemDireHit {
+    finditem(ITEM_DIRE_HIT)
+    end
+}
+
+script FourIsland_IcefallCave_1F_EventScript_ItemUltraBall {
+    finditem(ITEM_ULTRA_BALL)
+    end
+}
+
+script FourIsland_IcefallCave_1F_EventScript_ItemHM07 {
+    finditem(ITEM_HM07)
+    end
+}
+
+script FourIsland_IcefallCave_B1F_EventScript_ItemFullRestore {
+    finditem(ITEM_FULL_RESTORE)
+    end
+}
+
+script FourIsland_IcefallCave_B1F_EventScript_ItemNeverMeltIce {
+    finditem(ITEM_NEVER_MELT_ICE)
+    end
+}
+
+script FiveIsland_RocketWarehouse_EventScript_ItemBigPearl {
+    finditem(ITEM_BIG_PEARL)
+    end
+}
+
+script FiveIsland_RocketWarehouse_EventScript_ItemTM36 {
+    finditem(ITEM_TM36)
+    end
+}
+
+script FiveIsland_RocketWarehouse_EventScript_ItemPearl {
+    finditem(ITEM_PEARL)
+    end
+}
+
+script FiveIsland_RocketWarehouse_EventScript_ItemUpGrade {
+    finditem(ITEM_UP_GRADE)
+    end
+}
+
+script FiveIsland_LostCave_Room10_EventScript_ItemSilkScarf {
+    finditem(ITEM_SILK_SCARF)
+    end
+}
+
+script FiveIsland_LostCave_Room11_EventScript_ItemLaxIncense {
+    finditem(ITEM_LAX_INCENSE)
+    end
+}
+
+script FiveIsland_LostCave_Room12_EventScript_ItemSeaIncense {
+    finditem(ITEM_SEA_INCENSE)
+    end
+}
+
+script FiveIsland_LostCave_Room13_EventScript_ItemMaxRevive {
+    finditem(ITEM_MAX_REVIVE)
+    end
+}
+
+script FiveIsland_LostCave_Room14_EventScript_ItemRareCandy {
+    finditem(ITEM_RARE_CANDY)
+    end
+}
+
+script SevenIsland_SevaultCanyon_House_EventScript_ItemLuckyPunch {
+    finditem(ITEM_LUCKY_PUNCH)
+    end
+}
+
+script SilphCo_4F_EventScript_ItemTM41 {
+    finditem(ITEM_TM41)
+    end
+}

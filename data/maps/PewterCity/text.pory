@@ -1,0 +1,183 @@
+text Text_DreamEaterTeach {
+    "Yawn!\n"
+    "I must have dozed off in the sun.\p"
+    "I had this weird dream about\n"
+    "a DROWZEE eating my dream.\p"
+    "And…\n"
+    "I learned how to eat dreams…\p"
+    "Oogh, this is too spooky!\p"
+    "Let me teach it to a POKéMON so\n"
+    "I can forget about it!$"
+}
+
+text Text_DreamEaterDeclined {
+    "…Snore…$"
+}
+
+text Text_DreamEaterWhichMon {
+    "Which POKéMON wants to learn\n"
+    "DREAM EATER?$"
+}
+
+text Text_DreamEaterTaught {
+    "…ZZZ…\n"
+    "I…can't eat…anymore…$"
+}
+
+text PewterCity_Text_ClefairyCameFromMoon {
+    "CLEFAIRY came from the moon.\n"
+    "That's what the rumor is.\p"
+    "They appeared after MOON STONES\n"
+    "fell on MT. MOON.$"
+}
+
+text PewterCity_Text_BrockOnlySeriousTrainerHere {
+    "There aren't many serious POKéMON\n"
+    "TRAINERS here.\p"
+    "They're all like BUG CATCHERS,\n"
+    "you know, just hobbyists.\p"
+    "But PEWTER GYM's BROCK isn't like\n"
+    "that, not one bit.$"
+}
+
+text PewterCity_Text_DidYouCheckOutMuseum {
+    "Did you check out the MUSEUM?$"
+}
+
+text PewterCity_Text_WerentThoseFossilsAmazing {
+    "Weren't those fossils from MT. MOON\n"
+    "amazing?$"
+}
+
+text PewterCity_Text_ReallyYouHaveToGo {
+    "Really?\n"
+    "You absolutely have to go!$"
+}
+
+text PewterCity_Text_ThisIsTheMuseum {
+    "This is it, the MUSEUM.\p"
+    "You have to pay to get in, but it's\n"
+    "worth it. See you around!$"
+}
+
+text PewterCity_Text_DoYouKnowWhatImDoing {
+    "Psssst!\n"
+    "Do you know what I'm doing?$"
+}
+
+text PewterCity_Text_ThatsRightItsHardWork {
+    "That's right!\n"
+    "It's hard work!$"
+}
+
+text PewterCity_Text_SprayingRepelToKeepWildMonsOut {
+    "I'm spraying REPEL to keep wild\n"
+    "POKéMON out of my garden!$"
+}
+
+text PewterCity_Text_BrocksLookingForChallengersFollowMe {
+    "You're a TRAINER, right?\p"
+    "BROCK's looking for new\n"
+    "challengers. Follow me!$"
+}
+
+text PewterCity_Text_GoTakeOnBrock {
+    "If you have the right stuff,\n"
+    "go take on BROCK!$"
+}
+
+text PewterCity_Text_TrainerTipsEarningEXP {
+    "TRAINER TIPS\p"
+    "All POKéMON that appear in battle,\n"
+    "however briefly, earn EXP Points.$"
+}
+
+text PewterCity_Text_CallPoliceIfInfoOnThieves {
+    "NOTICE!\p"
+    "Thieves have been stealing POKéMON\n"
+    "fossils from MT. MOON.\p"
+    "Please call the PEWTER POLICE if\n"
+    "you have any information.$"
+}
+
+text PewterCity_Text_MuseumOfScience {
+    "PEWTER MUSEUM OF SCIENCE$"
+}
+
+text PewterCity_Text_GymSign {
+    "PEWTER CITY POKéMON GYM\n"
+    "LEADER: BROCK\l"
+    "The Rock-Solid POKéMON TRAINER!$"
+}
+
+text PewterCity_Text_CitySign {
+    "PEWTER CITY\n"
+    "A Stone Gray City$"
+}
+
+// The below 3 JP texts are unused. Possibly a cut NPC meant to give the player the Berry Pouch
+text PewterCity_Text_DefeatedBrockYouCanHaveTreasure {
+    "あッれー！\n"
+    "その　ジムバッジ‥‥\l"
+    "すげえな　タケシに　かったのかよ！\p"
+    "かんどう　したから\n"
+    "おれの　たからもの　やるよ！$"
+}
+
+text PewterCity_Text_BerriesInsideUseCarefully {
+    "なかには　きのみが　はいってるぜ\p"
+    "やくに　たつ　きのみも\n"
+    "はいって　いるから\l"
+    "だいじに　つかって　くれよ！$"
+}
+
+text PewterCity_Text_MonsWillUseHeldBerriesOnTheirOwn {
+    "ポケモンに　きのみを\n"
+    "もたせて　おけば\l"
+    "たたかっている　ときに\l"
+    "かってに　つかって　くれるんだ\p"
+    "キズぐすり　とか　どくけし　より\n"
+    "てがるで　べんり　だろ？$"
+}
+
+text PewterCity_Text_OhPlayer {
+    "Oh, {PLAYER}{KUN}!$"
+}
+
+text PewterCity_Text_AskedToDeliverThis {
+    "I'm glad I caught up to you.\n"
+    "I'm PROF. OAK's AIDE.\p"
+    "I've been asked to deliver this,\n"
+    "so here you go.$"
+}
+
+text PewterCity_Text_ReceivedRunningShoesFromAide {
+    "{PLAYER} received the\n"
+    "RUNNING SHOES from the AIDE.$"
+}
+
+text PewterCity_Text_SwitchedShoesWithRunningShoes {
+    "{PLAYER} switched shoes with the\n"
+    "RUNNING SHOES.$"
+}
+
+text PewterCity_Text_ExplainRunningShoes {
+    "Press the B Button to run.\n"
+    "But only where there's room to run!$"
+}
+
+text PewterCity_Text_MustBeGoingBackToLab {
+    "Well, I must be going back to\n"
+    "the LAB.\p"
+    "Bye-bye!$"
+}
+
+text PewterCity_Text_RunningShoesLetterFromMom {
+    "There's a letter attached…\p"
+    "Dear {PLAYER},\p"
+    "Here is a pair of RUNNING SHOES\n"
+    "for my beloved challenger.\p"
+    "Remember, I'll always cheer for\n"
+    "you! Don't ever give up!\p"
+    "From Mom$"
+}

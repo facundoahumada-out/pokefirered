@@ -1,0 +1,29 @@
+// Text for this file was split weirdly, and is instead in FourIsland_PokemonCenter_1F/text.inc
+// Theres also an unused JP version of that text in this file instead
+text JPText_BodySlamTeach {
+    "そーれ　ぼよーん！\n"
+    "どっちが　さきに　へたばるか？\l"
+    "のしかかり　しょうぶ　してるんだ\p"
+    "きみは　なかまに　はいったら\n"
+    "つぶれそうだな‥\l"
+    "かわりに　きみの　ポケモンに\l"
+    "のしかかり　おしえて　やろっか？$"
+}
+
+text JPText_BodySlamDeclined {
+    "また　おいで　ぼよーん！$"
+}
+
+text JPText_BodySlamWhichMon {
+    "どの　ポケモンに\n"
+    "おしえたい　かい？$"
+}
+
+text JPText_BodySlamTaught {
+    "ぼよよーん！$"
+}
+
+text FourIsland_House1_Text_YoureAwfullyHeavy {
+    "There! Boing!\n"
+    "You're awfully heavy!$"
+}

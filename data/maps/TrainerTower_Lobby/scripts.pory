@@ -1,0 +1,241 @@
+mapscripts TrainerTower_Lobby_MapScripts {
+    MAP_SCRIPT_ON_RESUME: TrainerTower_Lobby_OnResume
+    MAP_SCRIPT_ON_RETURN_TO_FIELD: TrainerTower_Lobby_OnReturnToField
+    MAP_SCRIPT_ON_TRANSITION: TrainerTower_Lobby_OnTransition
+    MAP_SCRIPT_ON_LOAD: TrainerTower_Lobby_OnLoad
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: TrainerTower_Lobby_EventScript_Enter
+        VAR_TEMP_D, 17: TrainerTower_Lobby_EventScript_ExitElevator
+    ]
+}
+
+script TrainerTower_Lobby_OnResume {
+    setvar(VAR_TEMP_2, 0)
+    ttower_resumetimer
+    ttower_shouldexit
+    goto_if_eq(VAR_RESULT, FALSE, TrainerTower_Lobby_OnResumeEnd)
+    // Never reached, above always FALSE
+    setvar(VAR_TEMP_0, 0)
+    setobjectxy(LOCALID_PLAYER, 9, 7)
+    applymovement(LOCALID_PLAYER, TrainerTower_Lobby_Movement_FaceReceptionist)
+TrainerTower_Lobby_OnResumeEnd(global):
+    end
+}
+
+script TrainerTower_Lobby_OnReturnToField {
+    addobject(LOCALID_TOWER_NURSE)
+    addobject(LOCALID_TOWER_MART_CLERK)
+    addobject(LOCALID_TOWER_RECEPTIONIST)
+    addobject(LOCALID_TOWER_COOLTRAINER_F)
+    addobject(LOCALID_TOWER_BALDING_MAN)
+    end
+}
+
+script TrainerTower_Lobby_OnLoad {
+    call_if_eq(VAR_TEMP_D, 17, TrainerTower_Lobby_OpenCounterBarrier)
+    end
+}
+
+script TrainerTower_Lobby_OpenCounterBarrier {
+    setmetatile(17, 10, METATILE_TrainerTower_Floor_ShadeBottomLeft, 0)
+    return
+}
+
+script TrainerTower_Lobby_OnTransition {
+    setworldmapflag(FLAG_WORLD_MAP_TRAINER_TOWER_LOBBY)
+    getplayerxy(VAR_TEMP_D, VAR_RESULT)
+    end
+}
+
+script TrainerTower_Lobby_EventScript_ExitElevator {
+    lockall
+    applymovement(LOCALID_PLAYER, TrainerTower_Lobby_Movement_ExitElevator)
+    waitmovement(0)
+    setmetatile(17, 10, METATILE_TrainerTower_CounterBarrier, 1)
+    special(DrawWholeMapView)
+    playse(SE_CLICK)
+    waitse
+    setvar(VAR_TEMP_D, 0)
+    releaseall
+    end
+}
+
+movement(global) TrainerTower_Lobby_Movement_ExitElevator {
+    walk_down
+    walk_down
+    step_end
+}
+
+script TrainerTower_Lobby_EventScript_Enter {
+    setvar(VAR_TEMP_0, 1)
+    ttower_getchallengestatus
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, CHALLENGE_STATUS_LOST, TrainerTower_Lobby_EventScript_LostChallenge)
+    goto_if_eq(VAR_0x8000, CHALLENGE_STATUS_UNK, TrainerTower_Lobby_EventScript_ExitChallengeSpeakToReceptionist)
+    goto_if_eq(VAR_0x8000, CHALLENGE_STATUS_NORMAL, TrainerTower_Lobby_EventScript_EnterEnd)
+TrainerTower_Lobby_EventScript_LostChallenge(global):
+    lock
+    faceplayer
+    applymovement(LOCALID_PLAYER, TrainerTower_Lobby_Movement_FaceReceptionist)
+    textcolor(NPC_TEXT_COLOR_FEMALE)
+    msgbox(TrainerTower_Lobby_Text_TooBadComeBackTryAgain)
+    goto(TrainerTower_Lobby_EventScript_ExitChallenge)
+}
+
+// Presumably E-Reader related
+script TrainerTower_Lobby_EventScript_ExitChallengeSpeakToReceptionist {
+    lock
+    faceplayer
+    applymovement(LOCALID_PLAYER, TrainerTower_Lobby_Movement_FaceReceptionist)
+    textcolor(NPC_TEXT_COLOR_FEMALE)
+    msgbox(TrainerTower_Lobby_Text_MoveCounterHereWhenTrainersSwitch)
+TrainerTower_Lobby_EventScript_ExitChallenge(global):
+    closemessage
+    applymovement(LOCALID_PLAYER, TrainerTower_Lobby_Movement_WalkDown)
+    waitmovement(0)
+    setvar(VAR_MAP_SCENE_TRAINER_TOWER, 0)
+    release
+TrainerTower_Lobby_EventScript_EnterEnd(global):
+    end
+}
+
+script TrainerTower_Lobby_EventScript_Nurse {
+    lock
+    faceplayer
+    call(EventScript_PkmnCenterNurse)
+    release
+    end
+}
+
+script TrainerTower_Lobby_EventScript_Receptionist {
+    lock
+    faceplayer
+    ttower_getbeatchallenge
+    goto_if_eq(VAR_RESULT, TRUE, TrainerTower_Lobby_EventScript_ThanksForCompeting)
+    msgbox(TrainerTower_Lobby_Text_GiveItYourBest)
+    goto(TrainerTower_Lobby_EventScript_ReceptionistEnd)
+}
+
+script TrainerTower_Lobby_EventScript_ThanksForCompeting {
+    msgbox(TrainerTower_Lobby_Text_ThanksForCompeting)
+TrainerTower_Lobby_EventScript_ReceptionistEnd(global):
+    release
+    end
+}
+
+script TrainerTower_Lobby_EventScript_MartClerk {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lock
+    faceplayer
+    message(Text_MayIHelpYou)
+    waitmessage
+    pokemart(TrainerTower_Lobby_Mart_Items)
+    msgbox(Text_PleaseComeAgain)
+    release
+    end
+}
+
+mart(global) TrainerTower_Lobby_Mart_Items {
+    ITEM_ULTRA_BALL
+    ITEM_GREAT_BALL
+    ITEM_FULL_RESTORE
+    ITEM_MAX_POTION
+    ITEM_HYPER_POTION
+    ITEM_REVIVE
+    ITEM_FULL_HEAL
+    ITEM_ESCAPE_ROPE
+    ITEM_MAX_REPEL
+    ITEM_NONE
+}
+
+script TrainerTower_Lobby_EventScript_EntryTrigger {
+    lockall
+    applymovement(LOCALID_PLAYER, TrainerTower_Lobby_Movement_FaceReceptionist)
+    textcolor(NPC_TEXT_COLOR_FEMALE)
+    msgbox(TrainerTower_Lobby_Text_WelcomeToTrainerTower)
+    ttower_getnumfloors
+    goto_if_eq(VAR_RESULT, FALSE, TrainerTower_Lobby_EventScript_AllFloorsUsed)
+    msgbox(TrainerTower_Lobby_Text_TrainersUpToFloorNum)
+    goto(TrainerTower_Lobby_EventScript_AskEnterChallenge)
+}
+
+script TrainerTower_Lobby_EventScript_AllFloorsUsed {
+    msgbox(TrainerTower_Lobby_Text_TrainersUpEighthFloor)
+TrainerTower_Lobby_EventScript_AskEnterChallenge(global):
+    message(TrainerTower_Lobby_Text_LikeToChallengeTrainers)
+    waitmessage
+    multichoice(18, 6, MULTICHOICE_YES_NO_INFO, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, TrainerTower_Lobby_EventScript_ChooseChallenge)
+    goto_if_eq(VAR_0x8000, 1, TrainerTower_Lobby_EventScript_DeclineChallenge)
+    goto_if_eq(VAR_0x8000, 2, TrainerTower_Lobby_EventScript_ChallengeInfo)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, TrainerTower_Lobby_EventScript_DeclineChallenge)
+    end
+}
+
+script TrainerTower_Lobby_EventScript_ChallengeInfo {
+    msgbox(TrainerTower_Lobby_Text_ExplainTrainerTower)
+    goto(TrainerTower_Lobby_EventScript_AskEnterChallenge)
+    end
+}
+
+script TrainerTower_Lobby_EventScript_ChooseChallenge {
+    multichoice(13, 3, MULTICHOICE_TRAINER_TOWER_MODE, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, TrainerTower_Lobby_EventScript_BeginChallenge)
+    goto_if_eq(VAR_0x8000, 1, TrainerTower_Lobby_EventScript_BeginChallenge)
+    goto_if_eq(VAR_0x8000, 2, TrainerTower_Lobby_EventScript_BeginChallenge)
+    goto_if_eq(VAR_0x8000, 3, TrainerTower_Lobby_EventScript_BeginChallenge)
+    goto_if_eq(VAR_0x8000, 4, TrainerTower_Lobby_EventScript_DeclineChallenge)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, TrainerTower_Lobby_EventScript_DeclineChallenge)
+    end
+}
+
+script TrainerTower_Lobby_EventScript_BeginChallenge {
+    copyvar(VAR_0x8005, VAR_RESULT)
+    setvar(VAR_MAP_SCENE_TRAINER_TOWER, 1)
+    special(HealPlayerParty)
+    msgbox(TrainerTower_Lobby_Text_StartClockGetSetGo)
+    ttower_startchallenge
+    releaseall
+    end
+}
+
+script TrainerTower_Lobby_EventScript_DeclineChallenge {
+    msgbox(TrainerTower_Lobby_Text_PleaseVisitUsAgain)
+    closemessage
+    applymovement(LOCALID_PLAYER, TrainerTower_Lobby_Movement_WalkDown)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+movement(global) TrainerTower_Lobby_Movement_FaceReceptionist {
+    face_right
+    step_end
+}
+
+movement(global) TrainerTower_Lobby_Movement_WalkDown {
+    walk_down
+    step_end
+}
+
+script TrainerTower_Lobby_EventScript_ShowRecords {
+    lockall
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8004, 1)
+    special(ShowBattleRecords)
+    waitstate
+    releaseall
+    end
+}
+
+script TrainerTower_Lobby_EventScript_CooltrainerF {
+    msgbox(TrainerTower_Lobby_Text_WonderWhatKindsOfTrainers, MSGBOX_NPC)
+    end
+}
+
+script TrainerTower_Lobby_EventScript_BaldingMan {
+    msgbox(TrainerTower_Lobby_Text_StairsTougherThanAnyBattle, MSGBOX_NPC)
+    end
+}

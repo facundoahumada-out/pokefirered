@@ -1,0 +1,46 @@
+text Text_MonSentToBoxInSomeonesPC {
+    "{STR_VAR_2} was transferred to\n"
+    "Someone's PC.\p"
+    "It was placed in \n"
+    "BOX “{STR_VAR_1}.”$"
+}
+
+text Text_MonSentToBoxInBillsPC {
+    "{STR_VAR_2} was transferred to\n"
+    "BILL'S PC.\p"
+    "It was placed in \n"
+    "BOX “{STR_VAR_1}.”$"
+}
+
+text Text_MonSentToBoxSomeonesBoxFull {
+    "BOX “{STR_VAR_3}” on\n"
+    "Someone's PC was full.\p"
+    "{STR_VAR_2} was transferred to\n"
+    "BOX “{STR_VAR_1}.”$"
+}
+
+text Text_MonSentToBoxBillsBoxFull {
+    "BOX “{STR_VAR_3}” on\n"
+    "BILL'S PC was full.\p"
+    "{STR_VAR_2} was transferred to\n"
+    "BOX “{STR_VAR_1}.”$"
+}
+
+text Text_PlayerObtainedTheMon {
+    "{PLAYER} obtained\n"
+    "the {STR_VAR_1}!$"
+}
+
+// Unused. Translated below
+// You cannot carry any more Pokemon, so {STR_VAR_2} was sent to PC Box {STR_VAR_1}!
+text Text_MonSentToBoxInPC {
+    "ポケモンを　もちきれないので\n"
+    "パソコンの　ボックス“{STR_VAR_1}”　に\l"
+    "{STR_VAR_2}を　てんそうした！$"
+}
+
+text Text_NoMoreRoomForPokemon {
+    "There's no more room for POKéMON!\p"
+    "The POKéMON BOXES are full and\n"
+    "can't accept any more!$"
+}

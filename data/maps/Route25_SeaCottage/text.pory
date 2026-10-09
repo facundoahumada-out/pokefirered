@@ -1,0 +1,122 @@
+text Route25_SeaCottage_Text_ImBillHelpMeOutPal {
+    "Hiya! I'm a POKéMON…\n"
+    "…No I'm not!\p"
+    "Call me BILL!\n"
+    "I'm a true-blue POKéMANIAC!\p"
+    "Hey!\n"
+    "What's with that skeptical look?\p"
+    "I'm not joshing you, pal.\p"
+    "I screwed up an experiment and got\n"
+    "combined with a POKéMON!\p"
+    "So, how about it?\n"
+    "Help me out here!$"
+}
+
+text Route25_SeaCottage_Text_ImBillHelpMeOutLady {
+    "Hiya! I'm a POKéMON…\n"
+    "…No I'm not!\p"
+    "Call me BILL!\n"
+    "I'm a true-blue POKéMANIAC!\p"
+    "Hey!\n"
+    "What's with that skeptical look?\p"
+    "I'm not joshing you, lady.\p"
+    "I screwed up an experiment and got\n"
+    "combined with a POKéMON!\p"
+    "So, how about it?\n"
+    "Help me out here!$"
+}
+
+text Route25_SeaCottage_Text_RunCellSeparationOnPC {
+    "Wait till I get inside the\n"
+    "TELEPORTER.\p"
+    "When I do, go to my PC and run\n"
+    "the Cell Separation System.$"
+}
+
+text Route25_SeaCottage_Text_NoPleaseChief {
+    "No!?\n"
+    "Now don't be so cold!\p"
+    "Come on, you gotta help a guy in\n"
+    "deep, deep trouble!\p"
+    "What do you say, chief?\n"
+    "Please?\l"
+    "Okay?\l"
+    "All right!$"
+}
+
+text Route25_SeaCottage_Text_NoPleaseBeautiful {
+    "No!?\n"
+    "Now don't be so cold!\p"
+    "Come on, you gotta help a guy in\n"
+    "deep, deep trouble!\p"
+    "What do you say, beautiful?\n"
+    "Please?\l"
+    "Okay?\l"
+    "All right!$"
+}
+
+text Route25_SeaCottage_Text_ThanksBudTakeThis {
+    "BILL: Yeehah!\n"
+    "Thanks, bud! I owe you one!\p"
+    "So, did you come to see my\n"
+    "POKéMON collection?\p"
+    "You didn't?\n"
+    "That's a bummer.\p"
+    "I've got to thank you…\n"
+    "Oh, here, maybe this'll do.$"
+}
+
+text Route25_SeaCottage_Text_ThanksLadyTakeThis {
+    "BILL: Yeehah!\n"
+    "Thanks, lady! I owe you one!\p"
+    "So, did you come to see my\n"
+    "POKéMON collection?\p"
+    "You didn't?\n"
+    "That's a bummer.\p"
+    "I've got to thank you…\n"
+    "Oh, here, maybe this'll do.$"
+}
+
+text Route25_SeaCottage_Text_ReceivedSSTicketFromBill {
+    "{PLAYER} received an S.S. TICKET\n"
+    "from BILL.$"
+}
+
+text Route25_SeaCottage_Text_YouveGotTooMuchStuff {
+    "You've got too much stuff!$"
+}
+
+text Route25_SeaCottage_Text_SSAnnePartyYouGoInstead {
+    "That cruise ship S.S. ANNE is in\n"
+    "VERMILION CITY.\p"
+    "I hear there are lots of TRAINERS\n"
+    "on board, too.\p"
+    "They invited me to their party, but\n"
+    "I can't stand fancy do's.\p"
+    "Why don't you go instead of me?\n"
+    "Go on and have a good time.$"
+}
+
+text Route25_SeaCottage_Text_CheckOutRareMonsOnPC {
+    "BILL: Feel like checking out some\n"
+    "of my rare POKéMON on my PC?\p"
+    "Go on, check out my PC.$"
+}
+
+text Route25_SeaCottage_Text_TeleporterIsDisplayed {
+    "TELEPORTER is displayed on the PC\n"
+    "monitor.$"
+}
+
+text Route25_SeaCottage_Text_InitiatedTeleportersCellSeparator {
+    "{PLAYER} initiated the TELEPORTER's\n"
+    "Cell Separator.$"
+}
+
+text Route25_SeaCottage_Text_BillsFavoriteMonList {
+    "BILL's favorite POKéMON list!$"
+}
+
+text Route25_SeaCottage_Text_SeeWhichMon {
+    "Which POKéMON do you want to see?$"
+}

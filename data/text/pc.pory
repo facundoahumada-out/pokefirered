@@ -1,0 +1,23 @@
+text Text_BootedUpPC {
+    "{PLAYER} booted up the PC.$"
+}
+
+text Text_AccessWhichPC {
+    "Which PC should be accessed?$"
+}
+
+text Text_AccessedSomeonesPC {
+    "Accessed Someone's PC.$"
+}
+
+text Text_OpenedPkmnStorage {
+    "POKéMON Storage System opened.$"
+}
+
+text Text_AccessedPlayersPC {
+    "Accessed {PLAYER}'s PC.$"
+}
+
+text Text_AccessedBillsPC {
+    "Accessed BILL's PC.$"
+}

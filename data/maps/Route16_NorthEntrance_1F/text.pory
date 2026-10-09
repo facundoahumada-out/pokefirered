@@ -1,0 +1,19 @@
+text Route16_NorthEntrance_1F_Text_NoPedestriansOnCyclingRoad {
+    "No pedestrians are allowed on\n"
+    "CYCLING ROAD!$"
+}
+
+text Route16_NorthEntrance_1F_Text_CyclingRoadIsDownhillCourse {
+    "CYCLING ROAD is a downhill course\n"
+    "by the sea. It's a great ride.$"
+}
+
+text Route16_NorthEntrance_1F_Text_ExcuseMeWaitUp {
+    "Excuse me!\n"
+    "Wait up, please!$"
+}
+
+text Route16_NorthEntrance_1F_Text_HowdYouGetInGoodEffort {
+    "How'd you get in?\n"
+    "Good effort!$"
+}

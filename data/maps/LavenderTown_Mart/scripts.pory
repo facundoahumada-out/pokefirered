@@ -1,0 +1,41 @@
+mapscripts LavenderTown_Mart_MapScripts {}
+
+script LavenderTown_Mart_EventScript_BaldingMan {
+    msgbox(LavenderTown_Mart_Text_SearchingForStatRaiseItems, MSGBOX_NPC)
+    end
+}
+
+script LavenderTown_Mart_EventScript_Rocker {
+    msgbox(LavenderTown_Mart_Text_DidYouBuyRevives, MSGBOX_NPC)
+    end
+}
+
+script LavenderTown_Mart_EventScript_Youngster {
+    msgbox(LavenderTown_Mart_Text_TrainerDuosCanChallengeYou, MSGBOX_NPC)
+    end
+}
+
+script LavenderTown_Mart_EventScript_Clerk {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lock
+    faceplayer
+    message(Text_MayIHelpYou)
+    waitmessage
+    pokemart(LavenderTown_Mart_Items)
+    msgbox(Text_PleaseComeAgain)
+    release
+    end
+}
+
+mart(global) LavenderTown_Mart_Items {
+    ITEM_GREAT_BALL
+    ITEM_SUPER_POTION
+    ITEM_REVIVE
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_BURN_HEAL
+    ITEM_ICE_HEAL
+    ITEM_ESCAPE_ROPE
+    ITEM_SUPER_REPEL
+    ITEM_NONE
+}

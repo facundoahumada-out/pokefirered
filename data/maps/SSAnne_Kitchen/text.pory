@@ -1,0 +1,57 @@
+text SSAnne_Kitchen_Text_BusyOutOfTheWay {
+    "You, mon petit!\n"
+    "We're busy here!\l"
+    "Out of the way!$"
+}
+
+text SSAnne_Kitchen_Text_SawOddBerryInTrash {
+    "I saw an odd BERRY in the trash.\n"
+    "I wonder what that was?$"
+}
+
+text SSAnne_Kitchen_Text_SoBusyImDizzy {
+    "I'm so busy I'm getting dizzy!\n"
+    "You have to give me room here!$"
+}
+
+text SSAnne_Kitchen_Text_PeelSpudsEveryDay {
+    "Hum-de-hum-de-ho…\p"
+    "I peel spuds every day!\n"
+    "Hum-hum…$"
+}
+
+text SSAnne_Kitchen_Text_HearAboutSnorlaxItsAGlutton {
+    "Did you hear about SNORLAX?\n"
+    "It's a glutton.\p"
+    "No other POKéMON eats and sleeps\n"
+    "the way SNORLAX can and does!$"
+}
+
+text SSAnne_Kitchen_Text_OnlyGetToPeelOnions {
+    "Snivel… Sniff…\p"
+    "I only get to peel onions…\n"
+    "Snivel…$"
+}
+
+text SSAnne_Kitchen_Text_IAmLeChefMainCourseIs {
+    "Er-hem!\n"
+    "Indeed I am le CHEF!\p"
+    "Le main course is$"
+}
+
+text SSAnne_Kitchen_Text_SalmonDuSalad {
+    "Salmon du Salad!\p"
+    "Les guests may gripe it's fish\n"
+    "again, however!$"
+}
+
+text SSAnne_Kitchen_Text_EelsAuBarbecue {
+    "Eels au Barbecue!\p"
+    "Les guests will mutiny, I fear.$"
+}
+
+text SSAnne_Kitchen_Text_PrimeBeefsteak {
+    "Prime Beefsteak!\p"
+    "But, have I enough fillets du\n"
+    "beef?$"
+}

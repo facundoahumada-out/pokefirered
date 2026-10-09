@@ -1,0 +1,40 @@
+text PokemonMansion_Text_PressSecretSwitch {
+    "A secret switch!\p"
+    "Press it?$"
+}
+
+text PokemonMansion_Text_WhoWouldnt {
+    "Who wouldn't?$"
+}
+
+text PokemonMansion_Text_NotQuiteYet {
+    "Not quite yet!$"
+}
+
+text PokemonMansion_1F_Text_ArnieIntro {
+    "I can't get out!\n"
+    "This old place is one big puzzle.$"
+}
+
+text PokemonMansion_1F_Text_ArnieDefeat {
+    "Oh, no!\n"
+    "My bag of loot!$"
+}
+
+text PokemonMansion_1F_Text_ArniePostBattle {
+    "The switches here open and close\n"
+    "alternating sets of doors.$"
+}
+
+text PokemonMansion_1F_Text_NewMonDiscoveredInGuyanaJungle {
+    "Diary: July 5\n"
+    "Guyana, South America\p"
+    "A new POKéMON was discovered deep\n"
+    "in the jungle.$"
+}
+
+text PokemonMansion_1F_Text_ChristenedDiscoveredMonMew {
+    "Diary: July 10\n"
+    "We christened the newly discovered\l"
+    "POKéMON, MEW.$"
+}

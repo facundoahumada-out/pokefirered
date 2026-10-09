@@ -1,0 +1,6 @@
+mapscripts UndergroundPath_EastEntrance_MapScripts {}
+
+script UndergroundPath_EastEntrance_EventScript_Woman {
+    msgbox(UndergroundPath_EastEntrance_Text_DoYouGoToCeladonDeptStore, MSGBOX_NPC)
+    end
+}

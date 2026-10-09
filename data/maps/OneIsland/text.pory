@@ -1,0 +1,70 @@
+text OneIsland_Text_BillLetsGoSeeCelio {
+    "BILL: Here we are!\n"
+    "This is ONE ISLAND.\p"
+    "There are several islands around\n"
+    "here, and this is one of them.\p"
+    "My friend CELIO sent the boat to\n"
+    "fetch me here.\p"
+    "He's in charge of the island's PC\n"
+    "network by his lonesome.\p"
+    "…Why am I telling you this now?\n"
+    "Let's just go see CELIO!$"
+}
+
+text Text_WhereDoYouWantToSail {
+    "Ahoy, there!\n"
+    "Where do you want to sail?$"
+}
+
+text OneIsland_Text_LuckyToHaveCelioHere {
+    "Here we are on an island smack in\n"
+    "the middle of nowhere.\p"
+    "We're lucky to have an upstanding\n"
+    "young man like CELIO here.\p"
+    "My granddaughter was in a tizzy\n"
+    "over CELIO's friend.\p"
+    "Something about a famous\n"
+    "POKéMANIAC?\p"
+    "I'm not sure what that means, but\n"
+    "CELIO is quite the man!$"
+}
+
+text OneIsland_Text_HavePCLinkageWithKanto {
+    "My granddaughter was in a tizzy\n"
+    "over a new breakthrough.\p"
+    "She said we now have PC linkage\n"
+    "with people in KANTO.\p"
+    "I'm not sure what that means, but\n"
+    "CELIO is quite the man!$"
+}
+
+text OneIsland_Text_HavePCLinkageWithHoenn {
+    "My granddaughter was in a tizzy\n"
+    "over a new breakthrough.\p"
+    "She said we finally have PC linkage\n"
+    "with people in HOENN.\p"
+    "I'm not sure what that means, but\n"
+    "CELIO is quite the man.\p"
+    "He would make a fine husband for\n"
+    "my granddaughter!$"
+}
+
+text OneIsland_Text_IslandSign {
+    "ONE ISLAND\n"
+    "Friends Gather at Knot Island$"
+}
+
+text OneIsland_Text_PokemonNetCenterSign {
+    "Expanding the POKéMON World!\n"
+    "POKéMON NET CENTER$"
+}
+
+// Unused
+text OneIsland_Text_ReturnToCinnabar {
+    "グレンタウンに　もどりますか？$"
+}
+
+text OneIsland_Text_IsntWarmClimateHereGreat {
+    "Hi, sight-seeing, are you?\n"
+    "Isn't the warm climate here great?$"
+}

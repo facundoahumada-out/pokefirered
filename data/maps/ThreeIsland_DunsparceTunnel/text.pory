@@ -1,0 +1,30 @@
+text ThreeIsland_DunsparceTunnel_Text_ProspectingForGold {
+    "Hey, there!\n"
+    "How's it going?\p"
+    "What am I doing here, you ask?\n"
+    "Why, I'm prospecting for gold!\p"
+    "When I strike it rich, I'm buying\n"
+    "a house in KANTO.$"
+}
+
+text ThreeIsland_DunsparceTunnel_Text_StruckGoldThisIsForYou {
+    "Hey, there! How's it going?\n"
+    "Did you hear? I've struck gold!\p"
+    "You remembered that I was\n"
+    "prospecting, didn't you?\p"
+    "You can't begin to imagine just\n"
+    "how happy I am.\p"
+    "So, I'll show you!\n"
+    "This is for you!$"
+}
+
+text ThreeIsland_DunsparceTunnel_Text_ThatsANugget {
+    "That's a NUGGET!\p"
+    "I can't give you any nuggets of\n"
+    "wisdom, so that'll have to do!$"
+}
+
+text ThreeIsland_DunsparceTunnel_Text_WhoopsBagCrammedFull {
+    "Whoops, your BAG is crammed full!\n"
+    "I'll give this to you later.$"
+}

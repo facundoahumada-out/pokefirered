@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dns.h"
 #include "gflib.h"
 #include "util.h"
 #include "decompress.h"
@@ -103,7 +104,7 @@ void TransferPlttBuffer(void)
     {
         void *src = gPlttBufferFaded;
         void *dest = (void *)PLTT;
-        DmaCopy16(3, src, dest, PLTT_SIZE);
+        DnsTransferPlttBuffer(src, dest);
         sPlttBufferTransferPending = FALSE;
         if (gPaletteFade.mode == HARDWARE_FADE && gPaletteFade.active)
             UpdateBlendRegisters();
@@ -180,7 +181,7 @@ bool8 BeginNormalPaletteFade(u32 selectedPalettes, s8 delay, u8 startY, u8 targe
         UpdatePaletteFade();
         temp = gPaletteFade.bufferTransferDisabled;
         gPaletteFade.bufferTransferDisabled = FALSE;
-        CpuCopy32(gPlttBufferFaded, (void *)PLTT, PLTT_SIZE);
+        DnsTransferPlttBuffer(gPlttBufferFaded, (void *)PLTT);
         sPlttBufferTransferPending = FALSE;
         if (gPaletteFade.mode == HARDWARE_FADE && gPaletteFade.active)
             UpdateBlendRegisters();

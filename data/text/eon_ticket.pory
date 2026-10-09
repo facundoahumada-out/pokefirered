@@ -1,0 +1,52 @@
+// The text here is a copy/paste from Hoenn's Eon Ticket event, all unused and untranslated
+text Text_DadLetterArrivedForYouPlayer {
+    "パパ“{PLAYER}！　よく　きたな！\n"
+    "{PLAYER}あての　てがみが　とどけられたぞ$"
+}
+
+text Text_DadPassForShipNeverSeenBefore {
+    "パパ“わたしも　みたことのない\n"
+    "ふねの　チケット　だな‥‥\l"
+    "ミナモに　いってみると　いいだろう$"
+}
+
+text Text_FerryToSlateportOhThatPass {
+    "カイナいき　れんらくせん‥‥\p"
+    "あら？\n"
+    "その　チケットは‥‥！$"
+}
+
+text Text_YoureOneWhoBroughtOddPass {
+    "ヘンテコな　チケットを\n"
+    "もってきたのは　おまえさんか？\p"
+    "おまえが　いこうと　しているのは\n"
+    "みなみの　はての　ちっぽけな　しま‥‥\p"
+    "そこでは　なにが　おこるのか\n"
+    "だれも　わからねえ‥‥\l"
+    "ううむ　ふなのりの　ちが　さわぐぜ！\p"
+    "さあ　のりな！$"
+}
+
+text Text_NothingHereSailBackToLilycove {
+    "なにもねえ　ちんけな　しま　だな‥‥\n"
+    "ミナモへ　かえるか？$"
+}
+
+text Text_SailHomeWeWill {
+    "よし！　かえると　するか！$"
+}
+
+text Text_AsYouLikeThen {
+    "そうかい\n"
+    "まあ　すきにするが　いいさ$"
+}
+
+text SouthernIsland_Interior_Text_Sign {
+    "すべての　ゆめは　もうひとつの　げんじつ\n"
+    "それを　わすれるべからず‥‥$"
+}
+
+text SouthernIsland_Exterior_Text_Sign {
+    "きおく　かすみし　ものは\n"
+    "こころに　きざみつける　ことを　のぞむ‥‥$"
+}

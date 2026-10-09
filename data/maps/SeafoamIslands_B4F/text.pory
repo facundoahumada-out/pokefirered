@@ -1,0 +1,34 @@
+text Text_RockSlideTeach {
+    "When you're up on a rocky mountain\n"
+    "like this, rockslides are a threat.\p"
+    "Can you imagine?\n"
+    "Boulders tumbling down on you?\p"
+    "That'd be, like, waaaaaaaaaaah!\n"
+    "Total terror!\p"
+    "You don't seem to be scared.\n"
+    "Want to try using ROCK SLIDE?$"
+}
+
+text Text_RockSlideDeclined {
+    "Oh, so you are scared after all.$"
+}
+
+text Text_RockSlideWhichMon {
+    "Which POKéMON should I teach\n"
+    "ROCK SLIDE?$"
+}
+
+text Text_RockSlideTaught {
+    "It might be scary to use it in this\n"
+    "tunnel…$"
+}
+
+text SeafoamIslands_B4F_Text_BouldersMightChangeWaterFlow {
+    "Hint: Boulders might change the\n"
+    "flow of water.$"
+}
+
+text SeafoamIslands_B4F_Text_DangerFastCurrent {
+    "DANGER\n"
+    "Fast current!$"
+}

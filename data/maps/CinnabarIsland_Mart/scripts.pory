@@ -1,0 +1,34 @@
+mapscripts CinnabarIsland_Mart_MapScripts {}
+
+script CinnabarIsland_Mart_EventScript_Woman {
+    msgbox(CinnabarIsland_Mart_Text_DontTheyHaveXAttack, MSGBOX_NPC)
+    end
+}
+
+script CinnabarIsland_Mart_EventScript_Scientist {
+    msgbox(CinnabarIsland_Mart_Text_ExtraItemsNeverHurt, MSGBOX_NPC)
+    end
+}
+
+script CinnabarIsland_Mart_EventScript_Clerk {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lock
+    faceplayer
+    message(Text_MayIHelpYou)
+    waitmessage
+    pokemart(CinnabarIsland_Mart_Items)
+    msgbox(Text_PleaseComeAgain)
+    release
+    end
+}
+
+mart(global) CinnabarIsland_Mart_Items {
+    ITEM_ULTRA_BALL
+    ITEM_GREAT_BALL
+    ITEM_HYPER_POTION
+    ITEM_REVIVE
+    ITEM_FULL_HEAL
+    ITEM_ESCAPE_ROPE
+    ITEM_MAX_REPEL
+    ITEM_NONE
+}

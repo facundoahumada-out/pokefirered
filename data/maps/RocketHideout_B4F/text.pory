@@ -1,0 +1,67 @@
+text RocketHideout_B4F_Text_GiovanniIntro {
+    "So! I must say, I am impressed you\n"
+    "got here.\p"
+    "TEAM ROCKET captures POKéMON from\n"
+    "around the world.\p"
+    "They're important tools for keeping\n"
+    "our criminal enterprise going.\p"
+    "I am the leader, GIOVANNI!\p"
+    "For your insolence, you will feel a\n"
+    "world of pain!$"
+}
+
+text RocketHideout_B4F_Text_GiovanniDefeat {
+    "WHAT!\n"
+    "This can't be!$"
+}
+
+text RocketHideout_B4F_Text_GiovanniPostBattle {
+    "I see that you raise POKéMON with\n"
+    "utmost care.\p"
+    "A child like you would never\n"
+    "understand what I hope to achieve.\p"
+    "I shall step aside this time!\p"
+    "I hope we meet again…$"
+}
+
+text RocketHideout_B4F_Text_Grunt2Intro {
+    "I know you!\n"
+    "You ruined our plans at MT. MOON!$"
+}
+
+text RocketHideout_B4F_Text_Grunt2Defeat {
+    "Burned again!$"
+}
+
+text RocketHideout_B4F_Text_Grunt2PostBattle {
+    "Do you have something against TEAM\n"
+    "ROCKET?$"
+}
+
+text RocketHideout_B4F_Text_Grunt3Intro {
+    "How can you not see the beauty of\n"
+    "our evil?$"
+}
+
+text RocketHideout_B4F_Text_Grunt3Defeat {
+    "Ayaya!$"
+}
+
+text RocketHideout_B4F_Text_Grunt3PostBattle {
+    "BOSS!\n"
+    "I'm sorry I failed you!$"
+}
+
+text RocketHideout_B4F_Text_Grunt1Intro {
+    "The elevator doesn't work?\n"
+    "Who has the LIFT KEY?$"
+}
+
+text RocketHideout_B4F_Text_Grunt1Defeat {
+    "No!$"
+}
+
+text RocketHideout_B4F_Text_Grunt1PostBattle {
+    "Oh, no!\n"
+    "I dropped the LIFT KEY!$"
+}

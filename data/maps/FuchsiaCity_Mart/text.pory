@@ -1,0 +1,11 @@
+text FuchsiaCity_Mart_Text_DontTheyHaveSafariZonePennants {
+    "Don't they have any pennants\n"
+    "promoting the SAFARI ZONE?\p"
+    "How about some paper lanterns?\n"
+    "Aren't there even any calendars?$"
+}
+
+text FuchsiaCity_Mart_Text_DidYouTryXSpeed {
+    "Did you try X SPEED?\n"
+    "It speeds up a POKéMON in battle.$"
+}

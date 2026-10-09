@@ -1,243 +1,312 @@
 gOtherText_NewName::
-    .string "NEW NAME$"
+# 1 "data/text/new_game_intro.pory"
+	.string "NEW NAME$"
 
 gNameChoice_Green::
-    .string "GREEN$"
+# 5 "data/text/new_game_intro.pory"
+	.string "GREEN$"
+
+gNameChoice_Blue::
+# 9 "data/text/new_game_intro.pory"
+	.string "BLUE$"
 
 gNameChoice_Red::
-    .string "RED$"
+# 13 "data/text/new_game_intro.pory"
+	.string "RED$"
 
 gNameChoice_Leaf::
-    .string "LEAF$"
+# 17 "data/text/new_game_intro.pory"
+	.string "LEAF$"
 
 gNameChoice_Fire::
-    .string "FIRE$"
+# 21 "data/text/new_game_intro.pory"
+	.string "FIRE$"
 
 gNameChoice_Gary::
-    .string "GARY$"
+# 25 "data/text/new_game_intro.pory"
+	.string "GARY$"
 
 gNameChoice_Kaz::
-    .string "KAZ$"
+# 29 "data/text/new_game_intro.pory"
+	.string "KAZ$"
 
 gNameChoice_Toru::
-    .string "TORU$"
+# 33 "data/text/new_game_intro.pory"
+	.string "TORU$"
 
 gNameChoice_Ash::
-    .string "ASH$"
+# 37 "data/text/new_game_intro.pory"
+	.string "ASH$"
 
 gNameChoice_Kene::
-    .string "KENE$"
+# 41 "data/text/new_game_intro.pory"
+	.string "KENE$"
 
 gNameChoice_Geki::
-    .string "GEKI$"
+# 45 "data/text/new_game_intro.pory"
+	.string "GEKI$"
 
 gNameChoice_Jak::
-    .string "JAK$"
+# 49 "data/text/new_game_intro.pory"
+	.string "JAK$"
 
 gNameChoice_Janne::
-    .string "JANNE$"
+# 53 "data/text/new_game_intro.pory"
+	.string "JANNE$"
 
 gNameChoice_Jonn::
-    .string "JONN$"
+# 57 "data/text/new_game_intro.pory"
+	.string "JONN$"
 
 gNameChoice_Kamon::
-    .string "KAMON$"
+# 61 "data/text/new_game_intro.pory"
+	.string "KAMON$"
 
 gNameChoice_Karl::
-    .string "KARL$"
+# 65 "data/text/new_game_intro.pory"
+	.string "KARL$"
 
 gNameChoice_Taylor::
-    .string "TAYLOR$"
+# 69 "data/text/new_game_intro.pory"
+	.string "TAYLOR$"
 
 gNameChoice_Oscar::
-    .string "OSCAR$"
+# 73 "data/text/new_game_intro.pory"
+	.string "OSCAR$"
 
 gNameChoice_Hiro::
-    .string "HIRO$"
+# 77 "data/text/new_game_intro.pory"
+	.string "HIRO$"
 
 gNameChoice_Max::
-    .string "MAX$"
+# 81 "data/text/new_game_intro.pory"
+	.string "MAX$"
 
 gNameChoice_Jon::
-    .string "JON$"
+# 85 "data/text/new_game_intro.pory"
+	.string "JON$"
 
 gNameChoice_Ralph::
-    .string "RALPH$"
+# 89 "data/text/new_game_intro.pory"
+	.string "RALPH$"
 
 gNameChoice_Kay::
-    .string "KAY$"
+# 93 "data/text/new_game_intro.pory"
+	.string "KAY$"
 
 gNameChoice_Tosh::
-    .string "TOSH$"
+# 97 "data/text/new_game_intro.pory"
+	.string "TOSH$"
 
 gNameChoice_Roak::
-    .string "ROAK$"
+# 101 "data/text/new_game_intro.pory"
+	.string "ROAK$"
 
 gNameChoice_Omi::
-    .string "OMI$"
+# 105 "data/text/new_game_intro.pory"
+	.string "OMI$"
 
 gNameChoice_Jodi::
-    .string "JODI$"
+# 109 "data/text/new_game_intro.pory"
+	.string "JODI$"
 
 gNameChoice_Amanda::
-    .string "AMANDA$"
+# 113 "data/text/new_game_intro.pory"
+	.string "AMANDA$"
 
 gNameChoice_Hillary::
-    .string "HILLARY$"
+# 117 "data/text/new_game_intro.pory"
+	.string "HILLARY$"
 
 gNameChoice_Makey::
-    .string "MAKEY$"
+# 121 "data/text/new_game_intro.pory"
+	.string "MAKEY$"
 
 gNameChoice_Michi::
-    .string "MICHI$"
+# 125 "data/text/new_game_intro.pory"
+	.string "MICHI$"
 
 gNameChoice_Paula::
-    .string "PAULA$"
+# 129 "data/text/new_game_intro.pory"
+	.string "PAULA$"
 
 gNameChoice_June::
-    .string "JUNE$"
+# 133 "data/text/new_game_intro.pory"
+	.string "JUNE$"
 
 gNameChoice_Cassie::
-    .string "CASSIE$"
+# 137 "data/text/new_game_intro.pory"
+	.string "CASSIE$"
 
 gNameChoice_Rey::
-    .string "REY$"
+# 141 "data/text/new_game_intro.pory"
+	.string "REY$"
 
 gNameChoice_Seda::
-    .string "SEDA$"
+# 145 "data/text/new_game_intro.pory"
+	.string "SEDA$"
 
 gNameChoice_Kiko::
-    .string "KIKO$"
+# 149 "data/text/new_game_intro.pory"
+	.string "KIKO$"
 
 gNameChoice_Mina::
-    .string "MINA$"
+# 153 "data/text/new_game_intro.pory"
+	.string "MINA$"
 
 gNameChoice_Norie::
-    .string "NORIE$"
+# 157 "data/text/new_game_intro.pory"
+	.string "NORIE$"
 
 gNameChoice_Sai::
-    .string "SAI$"
+# 161 "data/text/new_game_intro.pory"
+	.string "SAI$"
 
 gNameChoice_Momo::
-    .string "MOMO$"
+# 165 "data/text/new_game_intro.pory"
+	.string "MOMO$"
 
 gNameChoice_Suzi::
-    .string "SUZI$"
+# 169 "data/text/new_game_intro.pory"
+	.string "SUZI$"
 
 gControlsGuide_Text_Intro::
-    .string "The various buttons will be explained in\n"
-    .string "the order of their importance.$"
+# 173 "data/text/new_game_intro.pory"
+	.string "The various buttons will be explained in\n"
+	.string "the order of their importance.$"
 
 gControlsGuide_Text_DPad::
-    .string "Moves the main character.\n"
-    .string "Also used to choose various data\n"
-    .string "headings.$"
+# 178 "data/text/new_game_intro.pory"
+	.string "Moves the main character.\n"
+	.string "Also used to choose various data\n"
+	.string "headings.$"
 
 gControlsGuide_Text_AButton::
-    .string "Used to confirm a choice, check\n"
-    .string "things, chat, and scroll text.$"
+# 184 "data/text/new_game_intro.pory"
+	.string "Used to confirm a choice, check\n"
+	.string "things, chat, and scroll text.$"
 
 gControlsGuide_Text_BButton::
-    .string "Used to exit, cancel a choice,\n"
-    .string "and cancel a mode.$"
+# 189 "data/text/new_game_intro.pory"
+	.string "Used to exit, cancel a choice,\n"
+	.string "and cancel a mode.$"
 
 gControlsGuide_Text_StartButton::
-    .string "Press this button to open the\n"
-    .string "MENU.$"
+# 194 "data/text/new_game_intro.pory"
+	.string "Press this button to open the\n"
+	.string "MENU.$"
 
 gControlsGuide_Text_SelectButton::
-    .string "Used to shift items and to use\n"
-    .string "a registered item.$"
+# 199 "data/text/new_game_intro.pory"
+	.string "Used to shift items and to use\n"
+	.string "a registered item.$"
 
 gControlsGuide_Text_LRButtons::
-    .string "If you need help playing the\n"
-    .string "game, or on how to do things,\n"
-    .string "press the L or R Button.$"
+# 204 "data/text/new_game_intro.pory"
+	.string "If you need help playing the\n"
+	.string "game, or on how to do things,\n"
+	.string "press the L or R Button.$"
 
 gOakSpeech_Text_AskPlayerGender::
-    .string "Now tell me. Are you a boy?\n"
-    .string "Or are you a girl?$"
+# 210 "data/text/new_game_intro.pory"
+	.string "Now tell me. Are you a boy?\n"
+	.string "Or are you a girl?$"
 
 gPikachuIntro_Text_Page1::
-    .string "In the world which you are about to\n"
-    .string "enter, you will embark on a grand\n"
-    .string "adventure with you as the hero.\n"
-    .string "\n"
-    .string "Speak to people and check things\n"
-    .string "wherever you go, be it towns, roads,\n"
-    .string "or caves. Gather information and\n"
-    .string "hints from every source.$"
+# 215 "data/text/new_game_intro.pory"
+	.string "In the world which you are about to\n"
+	.string "enter, you will embark on a grand\n"
+	.string "adventure with you as the hero.\n"
+	.string "\n"
+	.string "Speak to people and check things\n"
+	.string "wherever you go, be it towns, roads,\n"
+	.string "or caves. Gather information and\n"
+	.string "hints from every source.$"
 
 gPikachuIntro_Text_Page2::
-    .string "New paths will open to you by helping\n"
-    .string "people in need, overcoming challenges,\n"
-    .string "and solving mysteries.\n"
-    .string "\n"
-    .string "At times, you will be challenged by\n"
-    .string "others and attacked by wild creatures.\n"
-    .string "Be brave and keep pushing on.$"
+# 226 "data/text/new_game_intro.pory"
+	.string "New paths will open to you by helping\n"
+	.string "people in need, overcoming challenges,\n"
+	.string "and solving mysteries.\n"
+	.string "\n"
+	.string "At times, you will be challenged by\n"
+	.string "others and attacked by wild creatures.\n"
+	.string "Be brave and keep pushing on.$"
 
 gPikachuIntro_Text_Page3::
-    .string "Through your adventure, we hope\n"
-    .string "that you will interact with all sorts\n"
-    .string "of people and achieve personal growth.\n"
-    .string "That is our biggest objective.\n"
-    .string "\n"
-    .string "Press the A Button, and let your\n"
-    .string "adventure begin!$"
+# 236 "data/text/new_game_intro.pory"
+	.string "Through your adventure, we hope\n"
+	.string "that you will interact with all sorts\n"
+	.string "of people and achieve personal growth.\n"
+	.string "That is our biggest objective.\n"
+	.string "\n"
+	.string "Press the A Button, and let your\n"
+	.string "adventure begin!$"
 
 gOakSpeech_Text_WelcomeToTheWorld::
-    .string "Hello, there!\n"
-    .string "Glad to meet you!\p"
-    .string "Welcome to the world of POKéMON!\p"
-    .string "My name is OAK.\p"
-    .string "People affectionately refer to me\n"
-    .string "as the POKéMON PROFESSOR.\p$"
+# 246 "data/text/new_game_intro.pory"
+	.string "Hello, there!\n"
+	.string "Glad to meet you!\p"
+	.string "Welcome to the world of POKéMON!\p"
+	.string "My name is OAK.\p"
+	.string "People affectionately refer to me\n"
+	.string "as the POKéMON PROFESSOR.\p$"
 
 gOakSpeech_Text_ThisWorld::
-    .string "This world…$"
+# 255 "data/text/new_game_intro.pory"
+	.string "This world…$"
 
 gOakSpeech_Text_IsInhabitedFarAndWide::
-    .string "…is inhabited far and wide by\n"
-    .string "creatures called POKéMON.\p$"
+# 259 "data/text/new_game_intro.pory"
+	.string "…is inhabited far and wide by\n"
+	.string "creatures called POKéMON.\p$"
 
 gOakSpeech_Text_IStudyPokemon::
-    .string "For some people, POKéMON are pets.\n"
-    .string "Others use them for battling.\p"
-    .string "As for myself…\p"
-    .string "I study POKéMON as a profession.\p$"
+# 264 "data/text/new_game_intro.pory"
+	.string "For some people, POKéMON are pets.\n"
+	.string "Others use them for battling.\p"
+	.string "As for myself…\p"
+	.string "I study POKéMON as a profession.\p$"
 
 gOakSpeech_Text_TellMeALittleAboutYourself::
-    .string "But first, tell me a little about\n"
-    .string "yourself.\p$"
+# 271 "data/text/new_game_intro.pory"
+	.string "But first, tell me a little about\n"
+	.string "yourself.\p$"
 
 gOakSpeech_Text_YourNameWhatIsIt::
-    .string "Let's begin with your name.\n"
-    .string "What is it?\p$"
+# 276 "data/text/new_game_intro.pory"
+	.string "Let's begin with your name.\n"
+	.string "What is it?\p$"
 
 gOakSpeech_Text_SoYourNameIsPlayer::
-    .string "Right…\n"
-    .string "So your name is {PLAYER}.$"
+# 281 "data/text/new_game_intro.pory"
+	.string "Right…\n"
+	.string "So your name is {PLAYER}.$"
 
 gOakSpeech_Text_WhatWasHisName::
-    .string "This is my grandson.\p"
-    .string "He's been your rival since you both\n"
-    .string "were babies.\p"
-    .string "…Erm, what was his name now?$"
+# 286 "data/text/new_game_intro.pory"
+	.string "This is my grandson.\p"
+	.string "He's been your rival since you both\n"
+	.string "were babies.\p"
+	.string "…Erm, what was his name now?$"
 
 gOakSpeech_Text_YourRivalsNameWhatWasIt::
-    .string "Your rival's name, what was it now?$"
+# 293 "data/text/new_game_intro.pory"
+	.string "Your rival's name, what was it now?$"
 
 gOakSpeech_Text_ConfirmRivalName::
-    .string "…Er, was it {RIVAL}?$"
+# 297 "data/text/new_game_intro.pory"
+	.string "…Er, was it {RIVAL}?$"
 
 gOakSpeech_Text_RememberRivalsName::
-    .string "That's right! I remember now!\n"
-    .string "His name is {RIVAL}!\p$"
+# 301 "data/text/new_game_intro.pory"
+	.string "That's right! I remember now!\n"
+	.string "His name is {RIVAL}!\p$"
 
 gOakSpeech_Text_LetsGo::
-    .string "{PLAYER}!\p"
-    .string "Your very own POKéMON legend is\n"
-    .string "about to unfold!\p"
-    .string "A world of dreams and adventures\n"
-    .string "with POKéMON awaits! Let's go!$"
+# 306 "data/text/new_game_intro.pory"
+	.string "{PLAYER}!\p"
+	.string "Your very own POKéMON legend is\n"
+	.string "about to unfold!\p"
+	.string "A world of dreams and adventures\n"
+	.string "with POKéMON awaits! Let's go!$"

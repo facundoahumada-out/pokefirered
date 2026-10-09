@@ -1,0 +1,9 @@
+text SSAnne_B1F_Room5_Text_MachokeHasStrengthToMoveRocks {
+    "My buddy MACHOKE is super strong!\p"
+    "He has enough STRENGTH to move\n"
+    "big rocks!$"
+}
+
+text SSAnne_B1F_Room5_Text_Machoke {
+    "MACHOKE: Gwoh! Goggoh!$"
+}

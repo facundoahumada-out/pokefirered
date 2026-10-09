@@ -1,0 +1,41 @@
+mapscripts CeruleanCity_PokemonCenter_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: CeruleanCity_PokemonCenter_1F_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script CeruleanCity_PokemonCenter_1F_OnTransition {
+    setrespawn(HEAL_LOCATION_CERULEAN_CITY)
+    end
+}
+
+script CeruleanCity_PokemonCenter_1F_EventScript_Nurse {
+    lock
+    faceplayer
+    call(EventScript_PkmnCenterNurse)
+    release
+    end
+}
+
+script CeruleanCity_PokemonCenter_1F_EventScript_Gentleman {
+    msgbox(CeruleanCity_PokemonCenter_1F_Text_EveryoneCallsBillPokemaniac, MSGBOX_NPC)
+    end
+}
+
+script CeruleanCity_PokemonCenter_1F_EventScript_Rocker {
+    msgbox(CeruleanCity_PokemonCenter_1F_Text_BillDoesWhateverForRareMons, MSGBOX_NPC)
+    end
+}
+
+script CeruleanCity_PokemonCenter_1F_EventScript_Youngster {
+    lock
+    faceplayer
+    famechecker(FAMECHECKER_BILL, 1)
+    msgbox(CeruleanCity_PokemonCenter_1F_Text_BillCollectsRareMons)
+    release
+    end
+}
+
+script CeruleanCity_PokemonCenter_1F_EventScript_Lass {
+    msgbox(CeruleanCity_PokemonCenter_1F_Text_TryTradingUpstairs, MSGBOX_NPC)
+    end
+}

@@ -1,51 +1,64 @@
 PokemonTower_5F_Text_RestHereInPurifiedSpace::
-    .string "Come, child!\n"
-    .string "I have purified this space.\l"
-    .string "You can rest here.$"
+# 1 "data/maps/PokemonTower_5F/text.pory"
+	.string "Come, child!\n"
+	.string "I have purified this space.\l"
+	.string "You can rest here.$"
 
 PokemonTower_5F_Text_TammyIntro::
-    .string "Give…me…\n"
-    .string "your…all…$"
+# 7 "data/maps/PokemonTower_5F/text.pory"
+	.string "Give…me…\n"
+	.string "your…all…$"
 
 PokemonTower_5F_Text_TammyDefeat::
-    .string "Gasp!$"
+# 12 "data/maps/PokemonTower_5F/text.pory"
+	.string "Gasp!$"
 
 PokemonTower_5F_Text_TammyPostBattle::
-    .string "I was under possession.$"
+# 16 "data/maps/PokemonTower_5F/text.pory"
+	.string "I was under possession.$"
 
 PokemonTower_5F_Text_RuthIntro::
-    .string "You…shall…\n"
-    .string "join…us…$"
+# 20 "data/maps/PokemonTower_5F/text.pory"
+	.string "You…shall…\n"
+	.string "join…us…$"
 
 PokemonTower_5F_Text_RuthDefeat::
-    .string "What a nightmare!$"
+# 25 "data/maps/PokemonTower_5F/text.pory"
+	.string "What a nightmare!$"
 
 PokemonTower_5F_Text_RuthPostBattle::
-    .string "I was possessed.$"
+# 29 "data/maps/PokemonTower_5F/text.pory"
+	.string "I was possessed.$"
 
 PokemonTower_5F_Text_KarinaIntro::
-    .string "Zombies!$"
+# 33 "data/maps/PokemonTower_5F/text.pory"
+	.string "Zombies!$"
 
 PokemonTower_5F_Text_KarinaDefeat::
-    .string "Ha?$"
+# 37 "data/maps/PokemonTower_5F/text.pory"
+	.string "Ha?$"
 
 PokemonTower_5F_Text_KarinaPostBattle::
-    .string "I regained my senses.$"
+# 41 "data/maps/PokemonTower_5F/text.pory"
+	.string "I regained my senses.$"
 
 PokemonTower_5F_Text_JanaeIntro::
-    .string "Urgah…\n"
-    .string "Urff…$"
+# 45 "data/maps/PokemonTower_5F/text.pory"
+	.string "Urgah…\n"
+	.string "Urff…$"
 
 PokemonTower_5F_Text_JanaeDefeat::
-    .string "Whoo!$"
+# 50 "data/maps/PokemonTower_5F/text.pory"
+	.string "Whoo!$"
 
 PokemonTower_5F_Text_JanaePostBattle::
-    .string "I fell to evil spirits despite my\n"
-    .string "training in the mountains…$"
+# 54 "data/maps/PokemonTower_5F/text.pory"
+	.string "I fell to evil spirits despite my\n"
+	.string "training in the mountains…$"
 
 PokemonTower_5F_Text_PurifiedZoneMonsFullyHealed::
-    .string "Entered the purified and protected\n"
-    .string "zone.\p"
-    .string "{PLAYER}'s POKéMON were fully\n"
-    .string "healed.$"
-
+# 59 "data/maps/PokemonTower_5F/text.pory"
+	.string "Entered the purified and protected\n"
+	.string "zone.\p"
+	.string "{PLAYER}'s POKéMON were fully\n"
+	.string "healed.$"

@@ -1,0 +1,13 @@
+text SafariZone_Center_Text_RestHouse {
+    "REST HOUSE$"
+}
+
+text SafariZone_Center_Text_PressStartToCheckTime {
+    "TRAINER TIPS\p"
+    "Press START to check\n"
+    "remaining time.$"
+}
+
+text SafariZone_Center_Text_CenterArea {
+    "CENTER AREA$"
+}

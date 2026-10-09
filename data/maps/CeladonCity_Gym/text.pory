@@ -1,0 +1,181 @@
+text CeladonCity_Gym_Text_ErikaIntro {
+    "Hello…\n"
+    "Lovely weather, isn't it?\l"
+    "It's so pleasant…\p"
+    "…Oh, dear…\n"
+    "I must have dozed off. Welcome.\p"
+    "My name is ERIKA.\n"
+    "I am the LEADER of CELADON GYM.\p"
+    "I am a student of the art of\n"
+    "flower arranging.\p"
+    "My POKéMON are solely of the\n"
+    "GRASS type.\p"
+    "…Oh, I'm sorry, I had no idea that\n"
+    "you wished to challenge me.\p"
+    "Very well, but I shall not lose.{PLAY_BGM MUS_ENCOUNTER_GYM_LEADER}$"
+}
+
+text CeladonCity_Gym_Text_ErikaDefeat {
+    "Oh!\n"
+    "I concede defeat.\l"
+    "You are remarkably strong.\p"
+    "I must confer on you the\n"
+    "RAINBOWBADGE.$"
+}
+
+text CeladonCity_Gym_Text_ErikaPostBattle {
+    "You are cataloging POKéMON?\n"
+    "I must say I'm impressed.\p"
+    "I would never collect POKéMON if\n"
+    "they were unattractive.$"
+}
+
+text CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis {
+    "The RAINBOWBADGE will make\n"
+    "POKéMON up to Lv. 50 obey.\p"
+    "It also allows POKéMON to use\n"
+    "STRENGTH in and out of battle.\p"
+    "Please also take this with you.$"
+}
+
+text CeladonCity_Gym_Text_ReceivedTM19FromErika {
+    "{PLAYER} received TM19\n"
+    "from ERIKA.$"
+}
+
+text CeladonCity_Gym_Text_ExplainTM19 {
+    "TM19 contains GIGA DRAIN.\p"
+    "Half the damage it inflicts is\n"
+    "drained to heal your POKéMON.\p"
+    "Wouldn't you agree that it's a\n"
+    "wonderful move?$"
+}
+
+text CeladonCity_Gym_Text_ShouldMakeRoomForThis {
+    "You should make room for this.$"
+}
+
+text CeladonCity_Gym_Text_KayIntro {
+    "I should tell you about this GYM.\p"
+    "Only real ladies are allowed in\n"
+    "here!$"
+}
+
+text CeladonCity_Gym_Text_KayDefeat {
+    "You're too rough!$"
+}
+
+text CeladonCity_Gym_Text_KayPostBattle {
+    "Bleaah!\n"
+    "I hope ERIKA wipes you out!$"
+}
+
+text CeladonCity_Gym_Text_BridgetIntro {
+    "Oh, welcome.\n"
+    "I was getting bored.$"
+}
+
+text CeladonCity_Gym_Text_BridgetDefeat {
+    "My makeup!$"
+}
+
+text CeladonCity_Gym_Text_BridgetPostBattle {
+    "GRASS-type POKéMON are tough\n"
+    "against the WATER type.\p"
+    "They also have an edge on ROCK-\n"
+    "and GROUND-type POKéMON.$"
+}
+
+text CeladonCity_Gym_Text_TinaIntro {
+    "…Weren't you peeking in here\n"
+    "earlier?$"
+}
+
+text CeladonCity_Gym_Text_TinaDefeat {
+    "You're an eye-opener!$"
+}
+
+text CeladonCity_Gym_Text_TinaPostBattle {
+    "Oh, you were looking at ERIKA…\n"
+    "You weren't looking at me…$"
+}
+
+text CeladonCity_Gym_Text_TamiaIntro {
+    "Look, look!\n"
+    "See my POKéMON!\p"
+    "I like the GRASS type.\n"
+    "I like how they're easy to raise.$"
+}
+
+text CeladonCity_Gym_Text_TamiaDefeat {
+    "No!$"
+}
+
+text CeladonCity_Gym_Text_TamiaPostBattle {
+    "We only use GRASS-type POKéMON at\n"
+    "our GYM.\p"
+    "Why? We also use them for making\n"
+    "flower arrangements!$"
+}
+
+text CeladonCity_Gym_Text_LisaIntro {
+    "Oh, hey!\p"
+    "We don't like BUG- or FIRE-type\n"
+    "POKéMON in here!$"
+}
+
+text CeladonCity_Gym_Text_LisaDefeat {
+    "Oh!\n"
+    "You!$"
+}
+
+text CeladonCity_Gym_Text_LisaPostBattle {
+    "Our LEADER ERIKA might be quiet,\n"
+    "but she's famous around here.$"
+}
+
+text CeladonCity_Gym_Text_LoriIntro {
+    "Pleased to meet you.\n"
+    "My hobby is POKéMON training.$"
+}
+
+text CeladonCity_Gym_Text_LoriDefeat {
+    "Oh!\n"
+    "Splendid!$"
+}
+
+text CeladonCity_Gym_Text_LoriPostBattle {
+    "I have a blind date coming up.\n"
+    "I have to learn to be polite,\l"
+    "especially if I have to battle.$"
+}
+
+text CeladonCity_Gym_Text_MaryIntro {
+    "Welcome to CELADON GYM!\p"
+    "You'd better not underestimate\n"
+    "the nice ladies here.$"
+}
+
+text CeladonCity_Gym_Text_MaryDefeat {
+    "Oh!\n"
+    "Beaten!$"
+}
+
+text CeladonCity_Gym_Text_MaryPostBattle {
+    "I didn't bring my best POKéMON.\n"
+    "Wait until next time!$"
+}
+
+text CeladonCity_Gym_Text_GymStatue {
+    "CELADON POKéMON GYM\n"
+    "LEADER: ERIKA\p"
+    "WINNING TRAINERS:\n"
+    "{RIVAL}$"
+}
+
+text CeladonCity_Gym_Text_GymStatuePlayerWon {
+    "CELADON POKéMON GYM\n"
+    "LEADER: ERIKA\p"
+    "WINNING TRAINERS:\n"
+    "{RIVAL}, {PLAYER}$"
+}

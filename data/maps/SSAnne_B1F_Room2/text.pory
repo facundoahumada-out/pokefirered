@@ -1,0 +1,12 @@
+text SSAnne_B1F_Room2_Text_HueyIntro {
+    "Even us sailors have POKéMON, too!$"
+}
+
+text SSAnne_B1F_Room2_Text_HueyDefeat {
+    "Okay, you're not bad.$"
+}
+
+text SSAnne_B1F_Room2_Text_HueyPostBattle {
+    "We caught all our POKéMON while\n"
+    "we were out at sea.$"
+}

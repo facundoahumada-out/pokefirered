@@ -1,0 +1,15 @@
+text VermilionCity_Mart_Text_TeamRocketAreWickedPeople {
+    "There are wicked people who will\n"
+    "use POKéMON for criminal acts.\p"
+    "TEAM ROCKET traffics in rare\n"
+    "POKéMON, for example.\p"
+    "They also abandon POKéMON that\n"
+    "they consider unpopular or useless.\p"
+    "That's the sort of horrid people\n"
+    "they are, TEAM ROCKET.$"
+}
+
+text VermilionCity_Mart_Text_MonsGoodOrBadDependingOnTrainer {
+    "I think POKéMON can be good or\n"
+    "bad. It depends on the TRAINER.$"
+}

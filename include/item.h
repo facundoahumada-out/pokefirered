@@ -59,6 +59,8 @@ u16 ItemId_GetId(u16 itemId);
 u16 ItemId_GetPrice(u16 itemId);
 u8 ItemId_GetHoldEffect(u16 itemId);
 u8 ItemId_GetHoldEffectParam(u16 itemId);
+void ItemId_GetHoldEffectParam_Script(void);
+void Cycle_Through_Repels(void);
 const u8 *ItemId_GetDescription(u16 itemId);
 bool32 ItemId_CopyDescription(u8 *a, u32 itemId, u32 c);
 u8 ItemId_GetImportance(u16 itemId);

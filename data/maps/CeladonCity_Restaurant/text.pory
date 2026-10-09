@@ -1,0 +1,44 @@
+text CeladonCity_Restaurant_Text_TakingBreakRightNow {
+    "Hi!\p"
+    "Sorry, but we're taking a break\n"
+    "right now.$"
+}
+
+text CeladonCity_Restaurant_Text_OftenGoToDrugstore {
+    "My POKéMON are weak, so I often\n"
+    "have to go to the DRUGSTORE.$"
+}
+
+text CeladonCity_Restaurant_Text_PsstBasementUnderGameCorner {
+    "Psst! There's a basement under the\n"
+    "GAME CORNER, I hear.$"
+}
+
+text CeladonCity_Restaurant_Text_ManLostItAllAtSlots {
+    "Munch…\p"
+    "The man at that table lost it all\n"
+    "at the slots.$"
+}
+
+text CeladonCity_Restaurant_Text_TakeThisImBusted {
+    "Go ahead! Laugh!\n"
+    "I'm flat-out busted!\p"
+    "No more slots for me!\n"
+    "I'm going straight!\p"
+    "Here!\n"
+    "I won't be needing this anymore!$"
+}
+
+text CeladonCity_Restaurant_Text_ReceivedCoinCaseFromMan {
+    "{PLAYER} received a COIN CASE\n"
+    "from the man.$"
+}
+
+text CeladonCity_Restaurant_Text_MakeRoomForThis {
+    "Make room for this!$"
+}
+
+text CeladonCity_Restaurant_Text_ThoughtIdWinItBack {
+    "I always thought I was going to\n"
+    "win it back…$"
+}

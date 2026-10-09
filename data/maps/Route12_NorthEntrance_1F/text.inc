@@ -1,4 +1,4 @@
 Route12_NorthEntrance_1F_Text_LookoutSpotUpstairs::
-    .string "There's a lookout spot upstairs.\n"
-    .string "The view is magnificent.$"
-
+# 1 "data/maps/Route12_NorthEntrance_1F/text.pory"
+	.string "There's a lookout spot upstairs.\n"
+	.string "The view is magnificent.$"

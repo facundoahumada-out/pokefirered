@@ -22,6 +22,15 @@ struct DoorAnimFrame
     u16 tileOffset;
 };
 
+// Lit copies of General's sliding doors (Pokemon Center / Mart), placed at the same
+// metatile id in every town's secondary tileset (see the glass windows block, 0x3E0+)
+#define METATILE_GlassWindows_SlidingSingleDoor 0x3EC
+#define METATILE_GlassWindows_SlidingDoubleDoor 0x3F2
+
+// Door glass is copied right after the 4 tiles of a 1x1 door frame, and drawn with the glass palette
+#define DOOR_GLASS_TILE_START (NUM_TILES_TOTAL - 4)
+#define DOOR_GLASS_PALETTE 7
+
 struct DoorGraphics
 {
     u16 metatileId;
@@ -29,6 +38,7 @@ struct DoorGraphics
     u8 size;
     const u8 *tiles;
     const u8 *paletteNums;
+    const u8 *glassTiles; // Optional: glass of each frame, drawn above the door with the glass palette (1x1 doors only)
 };
 
 static void DrawClosedDoorTiles(const struct DoorGraphics *gfx, int x, int y);
@@ -214,6 +224,19 @@ static const struct DoorAnimFrame sDoorAnimFrames_CloseLarge[] = {
     {}
 };
 
+// Glass of the doors, lit at night by the DNS (see the glass palette in dns.c)
+static const u8 sDoorAnimGlass_SlidingSingle[] = INCBIN_U8("graphics/door_anims/sliding_single_glass.4bpp");
+static const u8 sDoorAnimGlass_SlidingDouble[] = INCBIN_U8("graphics/door_anims/sliding_double_glass.4bpp");
+static const u8 sDoorAnimGlass_Pallet[] = INCBIN_U8("graphics/door_anims/pallet_glass.4bpp");
+static const u8 sDoorAnimGlass_OaksLab[] = INCBIN_U8("graphics/door_anims/oaks_lab_glass.4bpp");
+static const u8 sDoorAnimGlass_Pewter[] = INCBIN_U8("graphics/door_anims/pewter_glass.4bpp");
+static const u8 sDoorAnimGlass_SilphCo[] = INCBIN_U8("graphics/door_anims/silph_co_glass.4bpp");
+static const u8 sDoorAnimGlass_DeptStore[] = INCBIN_U8("graphics/door_anims/dept_store_glass.4bpp");
+static const u8 sDoorAnimGlass_CinnabarLab[] = INCBIN_U8("graphics/door_anims/cinnabar_lab_glass.4bpp");
+static const u8 sDoorAnimGlass_JoyfulGameCorner[] = INCBIN_U8("graphics/door_anims/joyful_game_corner_glass.4bpp");
+static const u8 sDoorAnimGlass_OneIslandPokeCenter[] = INCBIN_U8("graphics/door_anims/one_island_poke_center_glass.4bpp");
+static const u8 sDoorAnimGlass_FourIslandDayCare[] = INCBIN_U8("graphics/door_anims/four_island_day_care_glass.4bpp");
+
 static const u8 sDoorAnimPalettes_General[] = {2, 2, 2, 2, 2, 2, 2, 2};
 static const u8 sDoorAnimPalettes_SlidingSingle[] = {3, 3, 3, 3, 3, 3, 3, 3};
 static const u8 sDoorAnimPalettes_SlidingDouble[] = {3, 3, 3, 3, 3, 3, 3, 3};
@@ -251,12 +274,15 @@ static const struct DoorGraphics sDoorGraphics[] = {
     {METATILE_General_Door,                                DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_General, sDoorAnimPalettes_General},
     {METATILE_General_SlidingSingleDoor,                   DOOR_SOUND_SLIDING, DOOR_SIZE_1x1, sDoorAnimTiles_SlidingSingle, sDoorAnimPalettes_SlidingSingle},
     {METATILE_General_SlidingDoubleDoor,                   DOOR_SOUND_SLIDING, DOOR_SIZE_1x1, sDoorAnimTiles_SlidingDouble, sDoorAnimPalettes_SlidingDouble},
-    {METATILE_PalletTown_Door,                             DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Pallet, sDoorAnimPalettes_Pallet},
-    {METATILE_PalletTown_OaksLabDoor,                      DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_OaksLab, sDoorAnimPalettes_OaksLab},
+    // Copies of General's sliding doors with lit glass, at the same id in every town's secondary tileset
+    {METATILE_GlassWindows_SlidingSingleDoor,              DOOR_SOUND_SLIDING, DOOR_SIZE_1x1, sDoorAnimTiles_SlidingSingle, sDoorAnimPalettes_SlidingSingle, sDoorAnimGlass_SlidingSingle},
+    {METATILE_GlassWindows_SlidingDoubleDoor,              DOOR_SOUND_SLIDING, DOOR_SIZE_1x1, sDoorAnimTiles_SlidingDouble, sDoorAnimPalettes_SlidingDouble, sDoorAnimGlass_SlidingDouble},
+    {METATILE_PalletTown_Door,                             DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Pallet, sDoorAnimPalettes_Pallet, sDoorAnimGlass_Pallet},
+    {METATILE_PalletTown_OaksLabDoor,                      DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_OaksLab, sDoorAnimPalettes_OaksLab, sDoorAnimGlass_OaksLab},
     {METATILE_ViridianCity_Door,                           DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Viridian, sDoorAnimPalettes_Viridian},
-    {METATILE_PewterCity_Door,                             DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Pewter, sDoorAnimPalettes_Pewter},
+    {METATILE_PewterCity_Door,                             DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Pewter, sDoorAnimPalettes_Pewter, sDoorAnimGlass_Pewter},
     {METATILE_SaffronCity_Door,                            DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Saffron, sDoorAnimPalettes_Saffron},
-    {METATILE_SaffronCity_SilphCoDoor,                     DOOR_SOUND_SLIDING, DOOR_SIZE_1x1, sDoorAnimTiles_SilphCo, sDoorAnimPalettes_SilphCo},
+    {METATILE_SaffronCity_SilphCoDoor,                     DOOR_SOUND_SLIDING, DOOR_SIZE_1x1, sDoorAnimTiles_SilphCo, sDoorAnimPalettes_SilphCo, sDoorAnimGlass_SilphCo},
     {METATILE_CeruleanCity_Door,                           DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Cerulean, sDoorAnimPalettes_Cerulean},
     {METATILE_LavenderTown_Door,                           DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Lavender, sDoorAnimPalettes_Lavender},
     {METATILE_VermilionCity_Door,                          DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Vermilion, sDoorAnimPalettes_Vermilion},
@@ -265,15 +291,15 @@ static const struct DoorGraphics sDoorGraphics[] = {
     have the pokeball above the door in view, but on the map the pokeball above the door is too high to be in view.
     The metatile below was subsequently re-used for the warp to enter the SS Anne from the harbor, which has no door. */
     {METATILE_VermilionCity_SSAnneWarp,                    DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_PokemonFanClub, sDoorAnimPalettes_PokemonFanClub},
-    {METATILE_CeladonCity_DeptStoreDoor,                   DOOR_SOUND_SLIDING, DOOR_SIZE_1x1, sDoorAnimTiles_DeptStore, sDoorAnimPalettes_DeptStore},
+    {METATILE_CeladonCity_DeptStoreDoor,                   DOOR_SOUND_SLIDING, DOOR_SIZE_1x1, sDoorAnimTiles_DeptStore, sDoorAnimPalettes_DeptStore, sDoorAnimGlass_DeptStore},
     {METATILE_FuchsiaCity_Door,                            DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Fuchsia, sDoorAnimPalettes_Fuchsia},
     {METATILE_FuchsiaCity_SafariZoneDoor,                  DOOR_SOUND_SLIDING, DOOR_SIZE_1x1, sDoorAnimTiles_SafariZone, sDoorAnimPalettes_SafariZone},
-    {METATILE_CinnabarIsland_LabDoor,                      DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_CinnabarLab, sDoorAnimPalettes_CinnabarLab},
+    {METATILE_CinnabarIsland_LabDoor,                      DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_CinnabarLab, sDoorAnimPalettes_CinnabarLab, sDoorAnimGlass_CinnabarLab},
     {METATILE_SeviiIslands123_Door,                        DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Sevii123, sDoorAnimPalettes_Sevii123},
-    {METATILE_SeviiIslands123_GameCornerDoor,              DOOR_SOUND_SLIDING, DOOR_SIZE_1x1, sDoorAnimTiles_JoyfulGameCorner, sDoorAnimPalettes_JoyfulGameCorner},
-    {METATILE_SeviiIslands123_PokeCenterDoor,              DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_OneIslandPokeCenter, sDoorAnimPalettes_OneIslandPokeCenter},
+    {METATILE_SeviiIslands123_GameCornerDoor,              DOOR_SOUND_SLIDING, DOOR_SIZE_1x1, sDoorAnimTiles_JoyfulGameCorner, sDoorAnimPalettes_JoyfulGameCorner, sDoorAnimGlass_JoyfulGameCorner},
+    {METATILE_SeviiIslands123_PokeCenterDoor,              DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_OneIslandPokeCenter, sDoorAnimPalettes_OneIslandPokeCenter, sDoorAnimGlass_OneIslandPokeCenter},
     {METATILE_SeviiIslands45_Door,                         DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Sevii45, sDoorAnimPalettes_Sevii45},
-    {METATILE_SeviiIslands45_DayCareDoor,                  DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_FourIslandDayCare, sDoorAnimPalettes_FourIslandDayCare},
+    {METATILE_SeviiIslands45_DayCareDoor,                  DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_FourIslandDayCare, sDoorAnimPalettes_FourIslandDayCare, sDoorAnimGlass_FourIslandDayCare},
     {METATILE_SeviiIslands45_RocketWarehouseDoor_Unlocked, DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_RocketWarehouse, sDoorAnimPalettes_RocketWarehouse},
     {METATILE_SeviiIslands67_Door,                         DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Sevii67, sDoorAnimPalettes_Sevii67},
     {METATILE_DepartmentStore_ElevatorDoor,                DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_DeptStoreElevator, sDoorAnimPalettes_DeptStoreElevator},
@@ -294,6 +320,8 @@ static void DrawDoor(const struct DoorGraphics *gfx, const struct DoorAnimFrame 
     else
     {
         CopyDoorTilesToVram(&gfx->tiles[frames->tileOffset]);
+        if (gfx->glassTiles != NULL && gfx->size == DOOR_SIZE_1x1)
+            CpuFastCopy(&gfx->glassTiles[frames->tileOffset], (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_GLASS_TILE_START)), 4 * TILE_SIZE_4BPP);
         DrawCurrentDoorAnimFrame(gfx, x, y, gfx->paletteNums);
     }
 }
@@ -323,8 +351,18 @@ static void CopyDoorTilesToVram(const u8 *tiles)
 static void DrawCurrentDoorAnimFrame(const struct DoorGraphics *gfx, int x, int y, const u8 *paletteNums)
 {
     u16 tiles[8];
+    int i;
+
     if (gfx->size == DOOR_SIZE_1x1)
+    {
         BuildDoorTiles(tiles, DOOR_TILE_START, paletteNums);
+        // The glass goes on the top layer, above the door frame
+        if (gfx->glassTiles != NULL)
+        {
+            for (i = 0; i < 4; i++)
+                tiles[4 + i] = (DOOR_GLASS_PALETTE << 12) | (DOOR_GLASS_TILE_START + i);
+        }
+    }
 
     else
     {

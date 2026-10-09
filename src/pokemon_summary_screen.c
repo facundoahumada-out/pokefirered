@@ -986,8 +986,8 @@ enum
 static const u8 sStatValueTextColors[][3] =
 {
     [STAT_COLOR_NEUTRAL] = {0, 14, 10},
-    [STAT_COLOR_RAISED]  = {0, 7, 10},
-    [STAT_COLOR_LOWERED] = {0, 1, 10},
+    [STAT_COLOR_RAISED]  = {0, 1, 10},
+    [STAT_COLOR_LOWERED] = {0, 7, 10},
 };
 
 // A nature's index encodes its raised/lowered stat as (raisedStat * NUM_NATURE_STATS + loweredStat),

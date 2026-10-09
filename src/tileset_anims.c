@@ -134,6 +134,16 @@ static const u16 *const sTilesetAnims_CeladonGym_Flowers[] = {
     sTilesetAnims_CeladonGym_Flowers_Frame1
 };
 
+static const u16 sTilesetAnims_Cave_Frame0[] = INCBIN_U16("data/tilesets/secondary/cave/anim/cave/0.4bpp");
+static const u16 sTilesetAnims_Cave_Frame1[] = INCBIN_U16("data/tilesets/secondary/cave/anim/cave/1.4bpp");
+static const u16 sTilesetAnims_Cave_Frame2[] = INCBIN_U16("data/tilesets/secondary/cave/anim/cave/2.4bpp");
+
+static const u16 *const sTilesetAnims_Cave[] = {
+    sTilesetAnims_Cave_Frame0,
+    sTilesetAnims_Cave_Frame1,
+    sTilesetAnims_Cave_Frame2
+};
+
 static void ResetTilesetAnimBuffer(void)
 {
     sTilesetDMA3TransferBufferSize = 0;
@@ -329,4 +339,25 @@ void InitTilesetAnim_CeladonGym(void)
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = 256;
     sSecondaryTilesetAnimCallback = TilesetAnim_CeladonGym;
+}
+
+// Animates the 6 tiles from 0x37C to 0x381 (drawn with palette 9)
+static void QueueAnimTiles_Cave(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(sTilesetAnims_Cave);
+
+    AppendTilesetAnimToBuffer(sTilesetAnims_Cave[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x37C)), 6 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_Cave(u16 timer)
+{
+    if (timer % 16 == 0)
+        QueueAnimTiles_Cave(timer / 16);
+}
+
+void InitTilesetAnim_Cave(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 240;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Cave;
 }

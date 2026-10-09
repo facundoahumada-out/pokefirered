@@ -1,0 +1,100 @@
+text CeladonCity_DepartmentStore_Roof_Text_ImThirstyGiveHerDrink {
+    "I'm thirsty!\n"
+    "I want something to drink!\p"
+    "{FONT_NORMAL}Give her a drink?$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_GiveWhichDrink {
+    "Give her which drink?$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_YayFreshWaterHaveThis {
+    "Yay!\p"
+    "FRESH WATER!\p"
+    "Thank you!\n"
+    "You can have this from me!$"
+}
+
+text Text_ReceivedItemFromLittleGirl {
+    "{PLAYER} received a {STR_VAR_2}\n"
+    "from the little girl.$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_ExplainTM16 {
+    "TM16 contains LIGHT SCREEN.\p"
+    "It's a move that weakens the power\n"
+    "of special attacks by your foe.$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_YaySodaPopHaveThis {
+    "Yay!\p"
+    "SODA POP!\p"
+    "Thank you!\n"
+    "You can have this from me!$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_ExplainTM20 {
+    "TM20 contains SAFEGUARD.\p"
+    "It's a move that prevents status\n"
+    "problems among your POKéMON.$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_YayLemonadeHaveThis {
+    "Yay!\p"
+    "LEMONADE!\p"
+    "Thank you!\n"
+    "You can have this from me!$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_ExplainTM33 {
+    "TM33 contains REFLECT.\p"
+    "It's a move that weakens the power\n"
+    "of physical attacks by your foe.$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_DontHaveSpaceForThis {
+    "You don't have space for this!$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_ImNotThirstyAfterAll {
+    "No, thank you!\n"
+    "I'm not thirsty after all!$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_MySisterIsImmature {
+    "My sister is a TRAINER, believe it\n"
+    "or not.\p"
+    "But, she's so immature, she drives\n"
+    "me nuts!$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_ImThirstyIWantDrink {
+    "I'm thirsty!\n"
+    "I want something to drink!$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_FloorSign {
+    "ROOFTOP SQUARE:\n"
+    "VENDING MACHINES$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_VendingMachineWhatDoesItHave {
+    "A vending machine!\n"
+    "What does it have?$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_NotEnoughMoney {
+    "Oops, not enough money!$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_DrinkCanPoppedOut {
+    "A can of {STR_VAR_1} popped out!$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_NoMoreRoomForStuff {
+    "There's no more room for stuff!$"
+}
+
+text CeladonCity_DepartmentStore_Roof_Text_NotThirsty {
+    "Not thirsty!$"
+}

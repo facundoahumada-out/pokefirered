@@ -1,74 +1,90 @@
 SilphCo_2F_Text_ConnorIntro::
-    .string "Help!\n"
-    .string "I'm a SILPH employee.$"
+# 1 "data/maps/SilphCo_2F/text.pory"
+	.string "Help!\n"
+	.string "I'm a SILPH employee.$"
 
 SilphCo_2F_Text_ConnorDefeat::
-    .string "How did you know\n"
-    .string "I was a ROCKET?$"
+# 6 "data/maps/SilphCo_2F/text.pory"
+	.string "How did you know\n"
+	.string "I was a ROCKET?$"
 
 SilphCo_2F_Text_ConnorPostBattle::
-    .string "I work for both SILPH and TEAM\n"
-    .string "ROCKET.$"
+# 11 "data/maps/SilphCo_2F/text.pory"
+	.string "I work for both SILPH and TEAM\n"
+	.string "ROCKET.$"
 
 SilphCo_2F_Text_JerryIntro::
-    .string "It's off-limits here!\n"
-    .string "Go home!$"
+# 16 "data/maps/SilphCo_2F/text.pory"
+	.string "It's off-limits here!\n"
+	.string "Go home!$"
 
 SilphCo_2F_Text_JerryDefeat::
-    .string "You're good.$"
+# 21 "data/maps/SilphCo_2F/text.pory"
+	.string "You're good.$"
 
 SilphCo_2F_Text_JerryPostBattle::
-    .string "Can you solve the maze in here?\n"
-    .string "It's not easy, I tell you!$"
+# 25 "data/maps/SilphCo_2F/text.pory"
+	.string "Can you solve the maze in here?\n"
+	.string "It's not easy, I tell you!$"
 
 SilphCo_2F_Text_Grunt1Intro::
-    .string "No kids are allowed in here!$"
+# 30 "data/maps/SilphCo_2F/text.pory"
+	.string "No kids are allowed in here!$"
 
 SilphCo_2F_Text_Grunt1Defeat::
-    .string "Tough!$"
+# 34 "data/maps/SilphCo_2F/text.pory"
+	.string "Tough!$"
 
 SilphCo_2F_Text_Grunt1PostBattle::
-    .string "Diamond-shaped tiles are teleport\n"
-    .string "blocks.\p"
-    .string "They're transporters for this\n"
-    .string "high-tech building.$"
+# 38 "data/maps/SilphCo_2F/text.pory"
+	.string "Diamond-shaped tiles are teleport\n"
+	.string "blocks.\p"
+	.string "They're transporters for this\n"
+	.string "high-tech building.$"
 
 SilphCo_2F_Text_Grunt2Intro::
-    .string "Hey, kid!\n"
-    .string "What are you wandering here for?$"
+# 45 "data/maps/SilphCo_2F/text.pory"
+	.string "Hey, kid!\n"
+	.string "What are you wandering here for?$"
 
 SilphCo_2F_Text_Grunt2Defeat::
-    .string "I goofed!$"
+# 50 "data/maps/SilphCo_2F/text.pory"
+	.string "I goofed!$"
 
 SilphCo_2F_Text_Grunt2PostBattle::
-    .string "SILPH CO. will be associated with\n"
-    .string "TEAM ROCKET!$"
+# 54 "data/maps/SilphCo_2F/text.pory"
+	.string "SILPH CO. will be associated with\n"
+	.string "TEAM ROCKET!$"
 
 Text_ThunderWaveTeach::
-    .string "Eeek!\n"
-    .string "No! Stop! Help!\p"
-    .string "Oh, you're not with TEAM ROCKET.\n"
-    .string "I'm sorry, I thought…\p"
-    .string "Will you forgive me if I teach\n"
-    .string "you the THUNDER WAVE technique?$"
+# 59 "data/maps/SilphCo_2F/text.pory"
+	.string "Eeek!\n"
+	.string "No! Stop! Help!\p"
+	.string "Oh, you're not with TEAM ROCKET.\n"
+	.string "I'm sorry, I thought…\p"
+	.string "Will you forgive me if I teach\n"
+	.string "you the THUNDER WAVE technique?$"
 
 Text_ThunderWaveDeclined::
-    .string "Oh…\n"
-    .string "But THUNDER WAVE is convenient…$"
+# 68 "data/maps/SilphCo_2F/text.pory"
+	.string "Oh…\n"
+	.string "But THUNDER WAVE is convenient…$"
 
 Text_ThunderWaveWhichMon::
-    .string "Which POKéMON should I teach\n"
-    .string "THUNDER WAVE?$"
+# 73 "data/maps/SilphCo_2F/text.pory"
+	.string "Which POKéMON should I teach\n"
+	.string "THUNDER WAVE?$"
 
 Text_ThunderWaveTaught::
-    .string "THUNDER WAVE causes paralysis in\n"
-    .string "the target POKéMON.\p"
-    .string "A paralyzed POKéMON may be unable\n"
-    .string "to move in battle.\p"
-    .string "It's an ELECTRIC-type move, so it\n"
-    .string "won't work on some POKéMON.$"
+# 78 "data/maps/SilphCo_2F/text.pory"
+	.string "THUNDER WAVE causes paralysis in\n"
+	.string "the target POKéMON.\p"
+	.string "A paralyzed POKéMON may be unable\n"
+	.string "to move in battle.\p"
+	.string "It's an ELECTRIC-type move, so it\n"
+	.string "won't work on some POKéMON.$"
 
 SilphCo_2F_Text_FloorSign::
-    .string "SILPH CO. HEAD OFFICE\n"
-    .string "2F$"
-
+# 87 "data/maps/SilphCo_2F/text.pory"
+	.string "SILPH CO. HEAD OFFICE\n"
+	.string "2F$"

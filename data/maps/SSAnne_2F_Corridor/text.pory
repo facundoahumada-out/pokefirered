@@ -1,0 +1,41 @@
+text SSAnne_2F_Corridor_Text_ThisShipIsLuxuryLiner {
+    "This ship, she is a luxury liner for\n"
+    "TRAINERS of the world!\p"
+    "At every port, we hold parties with\n"
+    "invited TRAINERS.$"
+}
+
+text SSAnne_2F_Corridor_Text_RivalIntro {
+    "{RIVAL}: Bonjour!\n"
+    "{PLAYER}!\p"
+    "Imagine seeing you here!\n"
+    "{PLAYER}, were you really invited?\p"
+    "So how's your POKéDEX coming?\p"
+    "I already caught 40 kinds, pal.\n"
+    "Different kinds are everywhere.\p"
+    "Crawl around in grassy areas, and\n"
+    "look hard for them.$"
+}
+
+text SSAnne_2F_Corridor_Text_RivalDefeat {
+    "Humph!\p"
+    "At least you're raising your\n"
+    "POKéMON!$"
+}
+
+text SSAnne_2F_Corridor_Text_RivalVictory {
+    "{PLAYER}‥！\n"
+    "ふなよい　してるのか！\p"
+    "もっと　からだ\n"
+    "きたえた　ほうが　いいぜ！$"
+}
+
+text SSAnne_2F_Corridor_Text_RivalPostBattle {
+    "{RIVAL}: I heard there was a CUT\n"
+    "master on board.\p"
+    "But he was just a seasick old man!\p"
+    "CUT itself is really useful.\n"
+    "Yup, it'll be handy.\p"
+    "You should go see him, too.\n"
+    "Smell ya!$"
+}

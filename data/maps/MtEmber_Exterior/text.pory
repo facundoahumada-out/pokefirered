@@ -1,0 +1,173 @@
+text Text_ExplosionTeach {
+    "Can you imagine?\n"
+    "If this volcano were to erupt?\p"
+    "The explosion would be the end of\n"
+    "us. How terrifying is that?\p"
+    "While we're terrified, would you\n"
+    "like me to teach EXPLOSION?$"
+}
+
+text Text_ExplosionDeclined {
+    "Yeah, you're right.\n"
+    "It is too terrifying.$"
+}
+
+text Text_ExplosionWhichMon {
+    "You're terribly brave!\p"
+    "Which POKéMON should I teach\n"
+    "EXPLOSION?$"
+}
+
+text Text_ExplosionTaught {
+    "Using EXPLOSION while on this\n"
+    "volcano…\p"
+    "What a terrifying thrill!$"
+}
+
+// Below 4 are unused JP versions of the above texts
+text Text_ExplosionTeachJP {
+    "こ　この　かざんが\n"
+    "もし　だいばくはつ　したら\l"
+    "お　おれら　ひとたまりも\l"
+    "ないなあ　‥ブルブル！\p"
+    "こ　こわい　ついでに\n"
+    "だいばくはつ　でも　おぼえてみる？$"
+}
+
+text Text_ExplosionDeclinedJP {
+    "や　やっぱ　こわいもんな\n"
+    "ブルブル$"
+}
+
+text Text_ExplosionWhichMonJP {
+    "つ　つよきだね！\n"
+    "じゃあ　どの　ポケモンに　する？$"
+}
+
+text Text_ExplosionTaughtJP {
+    "かざんで　だいばくはつを‥\n"
+    "す　すごい　スリル！$"
+}
+
+text MtEmber_Exterior_Text_WellTryDiggingHere {
+    "Over here.\n"
+    "We'll try digging here.\p"
+    "That treasure the ADMINS've been\n"
+    "talking about should be here.$"
+}
+
+text MtEmber_Exterior_Text_YoureInTheWayGetLost {
+    "What the…?\n"
+    "You're in the way. Get lost.$"
+}
+
+text MtEmber_Exterior_Text_PunchedThroughAtLast {
+    "Whew, punched through at last.\n"
+    "Let's go treasure hunting!$"
+}
+
+text MtEmber_Exterior_Text_WhatsPasswordAgain {
+    "Any treasure we find, we haul back\n"
+    "to the WAREHOUSE, understood?\p"
+    "…Oh, and what're the passwords?\n"
+    "At the ROCKET WAREHOUSE, I mean.$"
+}
+
+text MtEmber_Exterior_Text_FirstPasswordGoldeen {
+    "What, you forgot the password?\n"
+    "There're actually two.\p"
+    "The first one's “GOLDEEN need\n"
+    "log.”\p"
+    "And the second one is…$"
+}
+
+text MtEmber_Exterior_Text_SnoopsBeenListeningIn {
+    "Hey!\n"
+    "This snoop's been listening in!$"
+}
+
+text MtEmber_Exterior_Text_Grunt1Intro {
+    "You've been eavesdropping on us,\n"
+    "haven't you?$"
+}
+
+text MtEmber_Exterior_Text_Grunt1Defeat {
+    "Huh, what?$"
+}
+
+text MtEmber_Exterior_Text_Grunt1PostBattle {
+    "Why'd you have to win?$"
+}
+
+text MtEmber_Exterior_Text_Grunt2Intro {
+    "Trying to horn in on our treasure?\n"
+    "Don't bet on it!$"
+}
+
+text MtEmber_Exterior_Text_Grunt2Defeat {
+    "Wait!\n"
+    "But how?$"
+}
+
+text MtEmber_Exterior_Text_Grunt2PostBattle {
+    "Develop amnesia conveniently and\n"
+    "forget everything you heard!$"
+}
+
+text MtEmber_Exterior_Text_WellRegroupDontStepInsideThere {
+    "What a setback…\n"
+    "We'll have to regroup.\p"
+    "You! Don't even think about taking\n"
+    "a step inside here!\p"
+    "If you know what's good for you,\n"
+    "don't even think about this!$"
+}
+
+text MtEmber_Exterior_Text_LoganIntro {
+    "An active volcano is one that's\n"
+    "erupting, or about to.$"
+}
+
+text MtEmber_Exterior_Text_LoganDefeat {
+    "Whew… That was hot!\n"
+    "Sweat's erupting from me!$"
+}
+
+text MtEmber_Exterior_Text_LoganPostBattle {
+    "They say there're over 1,500\n"
+    "active volcanoes in the world.\p"
+    "Just thinking about them makes me\n"
+    "feel all hot and gooey inside!$"
+}
+
+text MtEmber_Exterior_Text_BethIntro {
+    "Do you know how caves form inside\n"
+    "volcanoes?$"
+}
+
+text MtEmber_Exterior_Text_BethDefeat {
+    "Atchah!\n"
+    "You're shockingly good!$"
+}
+
+text MtEmber_Exterior_Text_BethPostBattle {
+    "When lava at the surface of magma\n"
+    "hardens, and the magma inside flows\l"
+    "out, caverns are left behind.$"
+}
+
+text MtEmber_Exterior_Text_JocelynIntro {
+    "I've been in training so I can mend\n"
+    "my broken heart…\p"
+    "It toughened me up physically at\n"
+    "least! Hi-yah!$"
+}
+
+text MtEmber_Exterior_Text_JocelynDefeat {
+    "I think I tried to overdo it…$"
+}
+
+text MtEmber_Exterior_Text_JocelynPostBattle {
+    "The way you battle, it reminds me\n"
+    "of the guy who dumped me…$"
+}

@@ -1,37 +1,44 @@
 CeladonCity_Condominiums_1F_Text_Meowth::
-    .string "MEOWTH: Meow!$"
+# 1 "data/maps/CeladonCity_Condominiums_1F/text.pory"
+	.string "MEOWTH: Meow!$"
 
 CeladonCity_Condominiums_1F_Text_TryThisDrinkInstead::
-    .string "You shouldn't spend all your money\n"
-    .string "on drinks.\p"
-    .string "Try this instead.$"
+# 5 "data/maps/CeladonCity_Condominiums_1F/text.pory"
+	.string "You shouldn't spend all your money\n"
+	.string "on drinks.\p"
+	.string "Try this instead.$"
 
 CeladonCity_Condominiums_1F_Text_NothingBeatsThirstLikeTea::
-    .string "Nothing beats thirst like some hot\n"
-    .string "TEA.\p"
-    .string "It really is the best.$"
+# 11 "data/maps/CeladonCity_Condominiums_1F/text.pory"
+	.string "Nothing beats thirst like some hot\n"
+	.string "TEA.\p"
+	.string "It really is the best.$"
 
 CeladonCity_Condominiums_1F_Text_MyDearMonsKeepMeCompany::
-    .string "My dear POKéMON keep me company.\n"
-    .string "MEOWTH even brings money home!$"
+# 17 "data/maps/CeladonCity_Condominiums_1F/text.pory"
+	.string "My dear POKéMON keep me company.\n"
+	.string "MEOWTH even brings money home!$"
 
 CeladonCity_Condominiums_1F_Text_DaisyComesToBuyTea::
-    .string "Oh, hello, dearie.\n"
-    .string "Did you enjoy my TEA?\p"
-    .string "By the way, dear. Are you, by any\n"
-    .string "chance, from PALLET TOWN?\p"
-    .string "A girl from PALLET TOWN, DAISY,\n"
-    .string "she enjoys TEA every day.\p"
-    .string "She visits the CELADON DEPT. STORE\n"
-    .string "to buy some TEA.$"
+# 22 "data/maps/CeladonCity_Condominiums_1F/text.pory"
+	.string "Oh, hello, dearie.\n"
+	.string "Did you enjoy my TEA?\p"
+	.string "By the way, dear. Are you, by any\n"
+	.string "chance, from PALLET TOWN?\p"
+	.string "A girl from PALLET TOWN, DAISY,\n"
+	.string "she enjoys TEA every day.\p"
+	.string "She visits the CELADON DEPT. STORE\n"
+	.string "to buy some TEA.$"
 
 CeladonCity_Condominiums_1F_Text_Clefairy::
-    .string "CLEFAIRY: Pi pippippi!$"
+# 33 "data/maps/CeladonCity_Condominiums_1F/text.pory"
+	.string "CLEFAIRY: Pi pippippi!$"
 
 CeladonCity_Condominiums_1F_Text_Nidoran::
-    .string "NIDORAN♀: Kya kyaoo!$"
+# 37 "data/maps/CeladonCity_Condominiums_1F/text.pory"
+	.string "NIDORAN♀: Kya kyaoo!$"
 
 CeladonCity_Condominiums_1F_Text_ManagersSuite::
-    .string "CELADON MANSION\n"
-    .string "Manager's Suite$"
-
+# 41 "data/maps/CeladonCity_Condominiums_1F/text.pory"
+	.string "CELADON MANSION\n"
+	.string "Manager's Suite$"

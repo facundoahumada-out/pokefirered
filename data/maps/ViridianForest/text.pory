@@ -1,0 +1,127 @@
+text ViridianForest_Text_FriendsItchingToBattle {
+    "I came here with some friends to\n"
+    "catch us some BUG POKéMON!\p"
+    "They're all itching to get into\n"
+    "some POKéMON battles!$"
+}
+
+text ViridianForest_Text_RickIntro {
+    "Hey! You have POKéMON!\n"
+    "Come on!\l"
+    "Let's battle 'em!$"
+}
+
+text ViridianForest_Text_RickDefeat {
+    "No!\nCATERPIE can't hack it!$"
+}
+
+text ViridianForest_Text_RickPostBattle {
+    "Ssh! You'll scare the bugs away.\n"
+    "Another time, okay?$"
+}
+
+text ViridianForest_Text_DougIntro {
+    "Yo!\n"
+    "You can't jam out if you're a\l"
+    "POKéMON TRAINER!$"
+}
+
+text ViridianForest_Text_DougDefeat {
+    "Huh?\n"
+    "I ran out of POKéMON!$"
+}
+
+text ViridianForest_Text_DougPostBattle {
+    "That totally stinks! I'm going to\n"
+    "catch some stronger ones!$"
+}
+
+text ViridianForest_Text_SammyIntro {
+    "Hey, wait up!\n"
+    "What's the hurry? Why the rush?$"
+}
+
+text ViridianForest_Text_SammyDefeat {
+    "I give!\n"
+    "You're good at this!$"
+}
+
+text ViridianForest_Text_SammyPostBattle {
+    "Sometimes, you can find stuff on\n"
+    "the ground.\p"
+    "I'm looking for the stuff I\n"
+    "dropped. Can you help me?$"
+}
+
+text ViridianForest_Text_AnthonyIntro {
+    "I might be little, but I won't like\n"
+    "it if you go easy on me!$"
+}
+
+text ViridianForest_Text_AnthonyDefeat {
+    "Oh, boo.\n"
+    "Nothing went right.$"
+}
+
+text ViridianForest_Text_AnthonyPostBattle {
+    "I lost some of my allowance…$"
+}
+
+text ViridianForest_Text_CharlieIntro {
+    "Did you know that POKéMON evolve?$"
+}
+
+text ViridianForest_Text_CharlieDefeat {
+    "Oh!\n"
+    "I lost!$"
+}
+
+text ViridianForest_Text_CharliePostBattle {
+    "BUG POKéMON evolve quickly.\n"
+    "They're a lot of fun!$"
+}
+
+text ViridianForest_Text_RanOutOfPokeBalls {
+    "I was throwing POKé BALLS to\n"
+    "catch POKéMON, and I ran out.\p"
+    "That's why you can never have too\n"
+    "many POKé BALLS.$"
+}
+
+text ViridianForest_Text_AvoidGrassyAreasWhenWeak {
+    "TRAINER TIPS\p"
+    "If your POKéMON are weak and you\n"
+    "want to avoid battles, stay away\l"
+    "from grassy areas!$"
+}
+
+text ViridianForest_Text_UseAntidoteForPoison {
+    "For poison, use ANTIDOTE!\n"
+    "Get it at POKéMON MARTS!$"
+}
+
+text ViridianForest_Text_ContactOakViaPCToRatePokedex {
+    "TRAINER TIPS\p"
+    "Contact PROF. OAK via a PC to\n"
+    "get your POKéDEX evaluated!$"
+}
+
+text ViridianForest_Text_CantCatchOwnedMons {
+    "TRAINER TIPS\p"
+    "You can't catch a POKéMON that\n"
+    "belongs to someone else.\p"
+    "Throw POKé BALLS only at wild\n"
+    "POKéMON to catch them!$"
+}
+
+text ViridianForest_Text_WeakenMonsBeforeCapture {
+    "TRAINER TIPS\p"
+    "Weaken POKéMON before attempting\n"
+    "capture!\p"
+    "When healthy, they may escape!$"
+}
+
+text ViridianForest_Text_LeavingViridianForest {
+    "LEAVING VIRIDIAN FOREST\n"
+    "PEWTER CITY AHEAD$"
+}

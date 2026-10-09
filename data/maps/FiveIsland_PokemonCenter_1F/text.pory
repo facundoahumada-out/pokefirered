@@ -1,0 +1,11 @@
+text FiveIsland_PokemonCenter_1F_Text_OnMyWayToPrepareMeal {
+    "I'm on my way to prepare a meal\n"
+    "for a certain high-society person.$"
+}
+
+text FiveIsland_PokemonCenter_1F_Text_YoureOnQuestToCatchEveryMon {
+    "You're on a quest to catch every\n"
+    "single kind of POKéMON?\p"
+    "…How incredible. Please tell me if\n"
+    "you catch a strong one!$"
+}

@@ -1,63 +1,110 @@
 FiveIsland_LostCave_Room10_MapScripts::
+# 2 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	map_script MAP_SCRIPT_ON_RESUME, FiveIsland_LostCave_Room10_OnResume
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, FiveIsland_LostCave_Room10_OnFrame
+# 3 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, FiveIsland_LostCave_Room10_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
-FiveIsland_LostCave_Room10_OnResume::
-	call_if_defeated TRAINER_LADY_SELPHY, FiveIsland_LostCave_Room10_EventScript_StopSelphySceneTrigger
-	end
-
-FiveIsland_LostCave_Room10_EventScript_StopSelphySceneTrigger::
-	setvar VAR_MAP_SCENE_FIVE_ISLAND_LOST_CAVE_ROOM10, 1
-	return
-
-FiveIsland_LostCave_Room10_OnFrame::
+FiveIsland_LostCave_Room10_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
+# 4 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	map_script_2 VAR_MAP_SCENE_FIVE_ISLAND_LOST_CAVE_ROOM10, 0, FiveIsland_LostCave_Room10_EventScript_FindSelphyScene
 	.2byte 0
 
+
+FiveIsland_LostCave_Room10_OnResume::
+# 9 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
+	call_if_defeated TRAINER_LADY_SELPHY, FiveIsland_LostCave_Room10_EventScript_StopSelphySceneTrigger
+	end
+
+
+FiveIsland_LostCave_Room10_EventScript_StopSelphySceneTrigger::
+# 14 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
+	setvar VAR_MAP_SCENE_FIVE_ISLAND_LOST_CAVE_ROOM10, 1
+	return
+
+
 FiveIsland_LostCave_Room10_EventScript_FindSelphyScene::
+# 19 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	lockall
+# 20 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	textcolor NPC_TEXT_COLOR_FEMALE
+# 21 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	applymovement LOCALID_LOST_CAVE_SELPHY, FiveIsland_LostCave_Room10_Movement_SelphyWander
+# 22 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	waitmovement 0
+# 23 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	delay 100
+# 24 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	applymovement LOCALID_LOST_CAVE_SELPHY, FiveIsland_LostCave_Room10_Movement_SelphyApproach
+# 25 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	waitmovement 0
+# 26 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	msgbox FiveIsland_LostCave_Room10_Text_SelphyIntro
+# 27 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	goto_if_questlog FiveIsland_LostCave_Room10_EventScript_SelphyQuestLog
+# 28 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	trainerbattle_no_intro TRAINER_LADY_SELPHY, FiveIsland_LostCave_Room10_Text_SelphyDefeat
+# 29 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	msgbox FiveIsland_LostCave_Room10_Text_MayIAskYouToTakeMeHome
+# 30 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	closemessage
+# 31 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	call FiveIsland_LostCave_Room10_EventScript_SetSelphyFound
+# 32 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	warp MAP_FIVE_ISLAND_RESORT_GORGEOUS, 39, 10
+# 33 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	waitstate
+# 34 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	releaseall
 	end
 
+
 FiveIsland_LostCave_Room10_EventScript_SetSelphyFound::
+# 39 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	setflag FLAG_HIDE_LOST_CAVE_SELPHY
+# 40 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	clearflag FLAG_HIDE_RESORT_GORGEOUS_SELPHY
+# 41 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	setvar VAR_MAP_SCENE_FIVE_ISLAND_LOST_CAVE_ROOM10, 1
+# 42 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	setvar VAR_MAP_SCENE_FIVE_ISLAND_RESORT_GORGEOUS, 1
 	return
 
+
 FiveIsland_LostCave_Room10_EventScript_SelphyQuestLog::
+# 47 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	settrainerflag TRAINER_LADY_SELPHY
+# 48 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	call FiveIsland_LostCave_Room10_EventScript_SetSelphyFound
+# 49 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	releaseall
 	end
 
+
+# 53 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 FiveIsland_LostCave_Room10_Movement_SelphyWander::
+# 54 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	walk_left
+# 55 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	delay_16
+# 56 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	walk_right
+# 57 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	delay_16
+# 58 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	walk_in_place_faster_up
+# 59 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	delay_16
+# 60 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	walk_in_place_faster_down
+# 61 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	step_end
 
+# 64 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 FiveIsland_LostCave_Room10_Movement_SelphyApproach::
+# 65 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	walk_down
+# 66 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	walk_down
+# 67 "data/maps/FiveIsland_LostCave_Room10/scripts.pory"
 	step_end

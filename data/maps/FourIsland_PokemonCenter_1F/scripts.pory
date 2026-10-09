@@ -1,0 +1,32 @@
+mapscripts FourIsland_PokemonCenter_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: FourIsland_PokemonCenter_1F_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script FourIsland_PokemonCenter_1F_OnTransition {
+    setrespawn(HEAL_LOCATION_FOUR_ISLAND)
+    end
+}
+
+script FourIsland_PokemonCenter_1F_EventScript_Nurse {
+    lock
+    faceplayer
+    call(EventScript_PkmnCenterNurse)
+    release
+    end
+}
+
+script FourIsland_PokemonCenter_1F_EventScript_Man {
+    msgbox(FourIsland_PokemonCenter_1F_Text_RareIceMonsInCave, MSGBOX_NPC)
+    end
+}
+
+script FourIsland_PokemonCenter_1F_EventScript_Woman {
+    msgbox(FourIsland_PokemonCenter_1F_Text_DayCarePeopleFoundEggBefore, MSGBOX_NPC)
+    end
+}
+
+script FourIsland_PokemonCenter_1F_EventScript_Gentleman {
+    msgbox(FourIsland_PokemonCenter_1F_Text_NewPokemonJournalHasntArrived, MSGBOX_NPC)
+    end
+}

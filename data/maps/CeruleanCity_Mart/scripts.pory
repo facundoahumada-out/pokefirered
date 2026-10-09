@@ -1,0 +1,36 @@
+mapscripts CeruleanCity_Mart_MapScripts {}
+
+script CeruleanCity_Mart_EventScript_Youngster {
+    msgbox(CeruleanCity_Mart_Text_RepelWorksOnWeakMons, MSGBOX_NPC)
+    end
+}
+
+script CeruleanCity_Mart_EventScript_Woman {
+    msgbox(CeruleanCity_Mart_Text_DoYouKnowAboutRareCandy, MSGBOX_NPC)
+    end
+}
+
+script CeruleanCity_Mart_EventScript_Clerk {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lock
+    faceplayer
+    message(Text_MayIHelpYou)
+    waitmessage
+    pokemart(CeruleanCity_Mart_Items)
+    msgbox(Text_PleaseComeAgain)
+    release
+    end
+}
+
+mart(global) CeruleanCity_Mart_Items {
+    ITEM_POKE_BALL
+    ITEM_SUPER_POTION
+    ITEM_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_BURN_HEAL
+    ITEM_ESCAPE_ROPE
+    ITEM_REPEL
+    ITEM_NONE
+}

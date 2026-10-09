@@ -1,0 +1,56 @@
+text SilphCo_4F_Text_CantYouSeeImHiding {
+    "Sssh!\n"
+    "Can't you see I'm hiding?$"
+}
+
+text SilphCo_4F_Text_TeamRocketIsGone {
+    "Huh?\n"
+    "TEAM ROCKET is gone?$"
+}
+
+text SilphCo_4F_Text_Grunt1Intro {
+    "TEAM ROCKET has taken control\n"
+    "of SILPH CO.!$"
+}
+
+text SilphCo_4F_Text_Grunt1Defeat {
+    "Arrgh!$"
+}
+
+text SilphCo_4F_Text_Grunt1PostBattle {
+    "Fwahahaha!\n"
+    "My BOSS has been after this place!$"
+}
+
+text SilphCo_4F_Text_RodneyIntro {
+    "My POKéMON is my loyal servant.$"
+}
+
+text SilphCo_4F_Text_RodneyDefeat {
+    "Darn!\n"
+    "You weak POKéMON!$"
+}
+
+text SilphCo_4F_Text_RodneyPostBattle {
+    "The doors are electronically\n"
+    "locked.\p"
+    "It takes a CARD KEY to open the\n"
+    "doors here.$"
+}
+
+text SilphCo_4F_Text_Grunt2Intro {
+    "Intruder spotted!$"
+}
+
+text SilphCo_4F_Text_Grunt2Defeat {
+    "Who are you?$"
+}
+
+text SilphCo_4F_Text_Grunt2PostBattle {
+    "I better tell the BOSS on 11F!$"
+}
+
+text SilphCo_4F_Text_FloorSign {
+    "SILPH CO. HEAD OFFICE\n"
+    "4F$"
+}

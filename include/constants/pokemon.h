@@ -185,6 +185,7 @@
 
 // Shiny odds
 #define SHINY_ODDS 8 // Actual probability is SHINY_ODDS/65536
+#define SHINY_CHARM_EXTRA_ROLLS 2 // Extra shiny rolls while carrying the Shiny Charm (turned off)
 
 #define MAX_LEVEL 100
 
@@ -282,8 +283,11 @@
 #define EVO_LEVEL_NINJASK    13 // Pokémon reaches the specified level (special value for Ninjask)
 #define EVO_LEVEL_SHEDINJA   14 // Pokémon reaches the specified level (special value for Shedinja)
 #define EVO_BEAUTY           15 // Pokémon levels up with beauty ≥ specified value
+#define EVO_MAPSEC           16 // Pokémon levels up in the specified map section
+#define EVO_MOVE_TYPE        17 // Pokémon levels up knowing a move of the specified type
+#define EVO_LEVEL_ITEM       18 // Pokémon levels up holding the specified item (item is consumed)
 
-#define EVOS_PER_MON 5
+#define EVOS_PER_MON 10
 
 #define EVO_MODE_NORMAL     0
 #define EVO_MODE_TRADE      1

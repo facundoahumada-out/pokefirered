@@ -1,0 +1,11 @@
+mapscripts Route25_MapScripts {}
+
+script Route25_EventScript_SeaCottageSign {
+    msgbox(Route25_Text_SeaCottageSign, MSGBOX_SIGN)
+    end
+}
+
+script Route25_EventScript_Man {
+    msgbox(Route25_Text_AreYouHereAlone, MSGBOX_NPC)
+    end
+}

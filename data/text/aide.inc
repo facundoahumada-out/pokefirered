@@ -1,4 +1,5 @@
 Aide_Text_HaventCaughtEnoughMonsForItem::
+# 1 "data/text/aide.pory"
 	.string "Let's see…\n"
 	.string "Uh-oh! You have caught only\l"
 	.string "{STR_VAR_3} kinds of POKéMON!\p"
@@ -6,10 +7,12 @@ Aide_Text_HaventCaughtEnoughMonsForItem::
 	.string "if you want the {STR_VAR_2}.$"
 
 Aide_Text_GetEnoughMonsComeBackForItem::
+# 9 "data/text/aide.pory"
 	.string "…Oh. I see.\p"
 	.string "When you get {STR_VAR_1} kinds of POKéMON,\n"
 	.string "come back for the {STR_VAR_2}.$"
 
 Aide_Text_DontHaveAnyRoomForItem::
+# 15 "data/text/aide.pory"
 	.string "Oh! I see you don't have any\n"
 	.string "room for the {STR_VAR_2}.$"

@@ -600,6 +600,32 @@ void TrySetObtainedItemQuestLogEvent(u16 itemId)
     }
 }
 
+void ItemId_GetHoldEffectParam_Script(void)
+{
+    VarSet(VAR_RESULT, ItemId_GetHoldEffectParam(VarGet(VAR_0x8004)));
+}
+
+// Once the last repel of the chosen type has been depleted, find the
+// weakest repel left in the bag and set it as VAR_REPEL_LAST_USED.
+void Cycle_Through_Repels(void)
+{
+    static const u16 sRepelCycle[] = {ITEM_REPEL, ITEM_SUPER_REPEL, ITEM_MAX_REPEL};
+    u8 i;
+
+    if (gSpecialVar_Result)
+        return;
+
+    for (i = 0; i < NELEMS(sRepelCycle); i++)
+    {
+        if (CheckBagHasItem(sRepelCycle[i], 1))
+        {
+            VarSet(VAR_REPEL_LAST_USED, sRepelCycle[i]);
+            gSpecialVar_Result = TRUE;
+            return;
+        }
+    }
+}
+
 u16 SanitizeItemId(u16 itemId)
 {
     if (itemId >= ITEMS_COUNT)

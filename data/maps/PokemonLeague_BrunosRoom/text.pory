@@ -1,0 +1,37 @@
+text PokemonLeague_BrunosRoom_Text_Intro {
+    "I am BRUNO of the ELITE FOUR!\p"
+    "Through rigorous training, people\n"
+    "and POKéMON can become stronger\l"
+    "without limit.\p"
+    "I've lived and trained with my\n"
+    "fighting POKéMON!\l"
+    "And that will never change!\p"
+    "{PLAYER}!\p"
+    "We will grind you down with our\n"
+    "superior power!\p"
+    "Hoo hah!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+}
+
+text PokemonLeague_BrunosRoom_Text_RematchIntro {
+    "I am BRUNO of the ELITE FOUR!\p"
+    "Through rigorous training, people\n"
+    "and POKéMON can become stronger\l"
+    "without limit.\p"
+    "I've lived and trained with my\n"
+    "fighting POKéMON!\l"
+    "And that will never change!\p"
+    "{PLAYER}!\p"
+    "We will grind you down with our\n"
+    "superior power!\p"
+    "Hoo hah!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+}
+
+text PokemonLeague_BrunosRoom_Text_Defeat {
+    "Why?\n"
+    "How could I lose?$"
+}
+
+text PokemonLeague_BrunosRoom_Text_PostBattle {
+    "My job is done.\n"
+    "Go face your next challenge.$"
+}

@@ -1,0 +1,69 @@
+text CeruleanCity_House4_Text_NothingEntertaining {
+    "Sigh…\n"
+    "Too much time, too little to do…\p"
+    "Is nothing entertaining happening\n"
+    "anywhere?$"
+}
+
+text CeruleanCity_House4_Text_NewNewsInformativeHaveThis {
+    "Ah!\n"
+    "A new news report!\p"
+    "Hmm…\p"
+    "I see!\n"
+    "That was quite informative!\p"
+    "I applaud you for taking interest\n"
+    "in the news at your young age.\p"
+    "As my thanks for sharing the news\n"
+    "with me, I want you to have this.$"
+}
+
+text CeruleanCity_House4_Text_IncredibleNewsHaveBerries {
+    "Oh, oh!\n"
+    "Th-this news report!\p"
+    "Hmm…\p"
+    "Amazing!\n"
+    "What an incredible piece of news!\p"
+    "I haven't seen a news story this\n"
+    "incredible in too long a time!\p"
+    "Thanks for sharing this fantastic\n"
+    "news. Have a bunch of BERRIES!$"
+}
+
+text CeruleanCity_House4_Text_WishCouldShareNewsWithOthers {
+    "It seems such a shame to not share\n"
+    "this news with other folks…\p"
+    "I wish I could tell someone…\n"
+    "Let others know the news…$"
+}
+
+text CeruleanCity_House4_Text_ThanksForSpreadingNewsTakeThis {
+    "Ah, you've spread the news for me?\p"
+    "Good news becomes worthwhile when\n"
+    "all sorts of people share it.\p"
+    "As my thanks for your spreading\n"
+    "the news, take this!$"
+}
+
+text CeruleanCity_House4_Text_MagnificentNewsSpreadHaveBerries {
+    "You've spread the news some more?\n"
+    "Magnificent!\p"
+    "That piece of news must be\n"
+    "delighted to be passed around so.\p"
+    "Yes, indeed!\p"
+    "Consider this a show of\n"
+    "appreciation from me and the news.\p"
+    "I'll give you more BERRIES than\n"
+    "I usually do.$"
+}
+
+text CeruleanCity_House4_Text_EnjoyingMyselfWithAllSortsOfNews {
+    "I'm quite enjoying myself with all\n"
+    "sorts of news.\p"
+    "Yes, I am satisfied!\n"
+    "I won't be bored for a while.$"
+}
+
+text CeruleanCity_House4_Text_YourBerryPouchIsFull {
+    "Hm? Your BERRY POUCH is full.\n"
+    "My gift remains ungiven, then.$"
+}

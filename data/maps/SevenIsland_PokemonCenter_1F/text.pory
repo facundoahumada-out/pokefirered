@@ -1,0 +1,21 @@
+text SevenIsland_PokemonCenter_1F_Text_EventsDependingOnConnections {
+    "On this island, different events\n"
+    "occur depending on connections.\p"
+    "What are those connections?\p"
+    "They are for you to discover on\n"
+    "your own.$"
+}
+
+text SevenIsland_PokemonCenter_1F_Text_DidYouRideSeagallopHere {
+    "Did you ride a SEAGALLOP ferry\n"
+    "to get here?\p"
+    "There are at least ten of those\n"
+    "high-speed ships.\p"
+    "I don't know where they all go,\n"
+    "though.$"
+}
+
+text SevenIsland_PokemonCenter_1F_Text_CheckOutTrainerTower {
+    "If you're confident, you should\n"
+    "check out TRAINER TOWER.$"
+}

@@ -1,0 +1,23 @@
+mapscripts SevenIsland_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: SevenIsland_OnTransition
+}
+
+script SevenIsland_OnTransition {
+    setworldmapflag(FLAG_WORLD_MAP_SEVEN_ISLAND)
+    end
+}
+
+script SevenIsland_EventScript_IslandSign {
+    msgbox(SevenIsland_Text_IslandSign, MSGBOX_SIGN)
+    end
+}
+
+script SevenIsland_EventScript_OldWoman {
+    msgbox(SevenIsland_Text_IslandsMadeInSevenDays, MSGBOX_NPC)
+    end
+}
+
+script SevenIsland_EventScript_Scientist {
+    msgbox(SevenIsland_Text_IslandVirtuallyUntouched, MSGBOX_NPC)
+    end
+}

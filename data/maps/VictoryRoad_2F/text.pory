@@ -1,0 +1,73 @@
+text VictoryRoad_2F_Text_DawsonIntro {
+    "If you can get through here,\n"
+    "you can go meet the ELITE FOUR.$"
+}
+
+text VictoryRoad_2F_Text_DawsonDefeat {
+    "No!\n"
+    "Unbelievable!$"
+}
+
+text VictoryRoad_2F_Text_DawsonPostBattle {
+    "I can beat you when it comes to\n"
+    "knowledge about POKéMON!$"
+}
+
+text VictoryRoad_2F_Text_DaisukeIntro {
+    "This here is VICTORY ROAD.\n"
+    "It's the final test for TRAINERS!$"
+}
+
+text VictoryRoad_2F_Text_DaisukeDefeat {
+    "Atcho!$"
+}
+
+text VictoryRoad_2F_Text_DaisukePostBattle {
+    "If you get stuck, try moving some\n"
+    "boulders around.$"
+}
+
+text VictoryRoad_2F_Text_NelsonIntro {
+    "Ah, so you wish to challenge the\n"
+    "ELITE FOUR?$"
+}
+
+text VictoryRoad_2F_Text_NelsonDefeat {
+    "You got me!$"
+}
+
+text VictoryRoad_2F_Text_NelsonPostBattle {
+    "{RIVAL} also came through here.$"
+}
+
+text VictoryRoad_2F_Text_VincentIntro {
+    "Come on!\n"
+    "I'll whip you!$"
+}
+
+text VictoryRoad_2F_Text_VincentDefeat {
+    "I got whipped!$"
+}
+
+text VictoryRoad_2F_Text_VincentPostBattle {
+    "You earned the right to be on\n"
+    "VICTORY ROAD…$"
+}
+
+text VictoryRoad_2F_Text_GregoryIntro {
+    "Is VICTORY ROAD too tough?$"
+}
+
+text VictoryRoad_2F_Text_GregoryDefeat {
+    "Well done!$"
+}
+
+text VictoryRoad_2F_Text_GregoryPostBattle {
+    "Many TRAINERS give up their\n"
+    "challenge here and go home.$"
+}
+
+// Unused, old text for Moltres
+text VictoryRoad_2F_Text_Gyaoo {
+    "ギヤーオ！$"
+}

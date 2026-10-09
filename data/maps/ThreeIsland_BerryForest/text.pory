@@ -1,0 +1,49 @@
+text ThreeIsland_BerryForest_Text_HelpScaryPokemon {
+    "LOSTELLE: Whimper… Sniff…\n"
+    "Oh! Please, help!\p"
+    "A scary POKéMON appeared there\n"
+    "a little while ago.\p"
+    "It kept scaring.\n"
+    "It made LOSTELLE scared.\p"
+    "I'm too scared to move!\n"
+    "But I want to go home…$"
+}
+
+text ThreeIsland_BerryForest_Text_HereItComesAgain {
+    "Oh! Here it comes again!\n"
+    "No! Go away! It's scaring me!\p"
+    "Waaaaaaah!\n"
+    "I want my daddy!$"
+}
+
+text ThreeIsland_BerryForest_Text_ThankYouHaveThis {
+    "Ohh! That was so scary!\n"
+    "Thank you!\p"
+    "LOSTELLE came to pick some\n"
+    "BERRIES.\p"
+    "You can have this!$"
+}
+
+text ThreeIsland_BerryForest_Text_LetsGoHome {
+    "What's your name?\p"
+    "LOSTELLE's scared, so can I go\n"
+    "with you to my daddy's house?\p"
+    "Okay!\n"
+    "Let's go home!$"
+}
+
+text ThreeIsland_BerryForest_Text_BerryPouchIsFull {
+    "Your BERRY POUCH is full.\n"
+    "I guess you don't want this.$"
+}
+
+text ThreeIsland_BerryForest_Text_WelcomeToBerryForest {
+    "Welcome to the BERRY FOREST\p"
+    "Be friendly and share BERRIES with\n"
+    "others and POKéMON.$"
+}
+
+text ThreeIsland_BerryForest_Text_BewareWildBerryLovingMons {
+    "Beware of wild, BERRY-loving\n"
+    "POKéMON!$"
+}

@@ -1,0 +1,90 @@
+text SilphCo_2F_Text_ConnorIntro {
+    "Help!\n"
+    "I'm a SILPH employee.$"
+}
+
+text SilphCo_2F_Text_ConnorDefeat {
+    "How did you know\n"
+    "I was a ROCKET?$"
+}
+
+text SilphCo_2F_Text_ConnorPostBattle {
+    "I work for both SILPH and TEAM\n"
+    "ROCKET.$"
+}
+
+text SilphCo_2F_Text_JerryIntro {
+    "It's off-limits here!\n"
+    "Go home!$"
+}
+
+text SilphCo_2F_Text_JerryDefeat {
+    "You're good.$"
+}
+
+text SilphCo_2F_Text_JerryPostBattle {
+    "Can you solve the maze in here?\n"
+    "It's not easy, I tell you!$"
+}
+
+text SilphCo_2F_Text_Grunt1Intro {
+    "No kids are allowed in here!$"
+}
+
+text SilphCo_2F_Text_Grunt1Defeat {
+    "Tough!$"
+}
+
+text SilphCo_2F_Text_Grunt1PostBattle {
+    "Diamond-shaped tiles are teleport\n"
+    "blocks.\p"
+    "They're transporters for this\n"
+    "high-tech building.$"
+}
+
+text SilphCo_2F_Text_Grunt2Intro {
+    "Hey, kid!\n"
+    "What are you wandering here for?$"
+}
+
+text SilphCo_2F_Text_Grunt2Defeat {
+    "I goofed!$"
+}
+
+text SilphCo_2F_Text_Grunt2PostBattle {
+    "SILPH CO. will be associated with\n"
+    "TEAM ROCKET!$"
+}
+
+text Text_ThunderWaveTeach {
+    "Eeek!\n"
+    "No! Stop! Help!\p"
+    "Oh, you're not with TEAM ROCKET.\n"
+    "I'm sorry, I thought…\p"
+    "Will you forgive me if I teach\n"
+    "you the THUNDER WAVE technique?$"
+}
+
+text Text_ThunderWaveDeclined {
+    "Oh…\n"
+    "But THUNDER WAVE is convenient…$"
+}
+
+text Text_ThunderWaveWhichMon {
+    "Which POKéMON should I teach\n"
+    "THUNDER WAVE?$"
+}
+
+text Text_ThunderWaveTaught {
+    "THUNDER WAVE causes paralysis in\n"
+    "the target POKéMON.\p"
+    "A paralyzed POKéMON may be unable\n"
+    "to move in battle.\p"
+    "It's an ELECTRIC-type move, so it\n"
+    "won't work on some POKéMON.$"
+}
+
+text SilphCo_2F_Text_FloorSign {
+    "SILPH CO. HEAD OFFICE\n"
+    "2F$"
+}

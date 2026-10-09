@@ -1,0 +1,34 @@
+text PokemonMansion_B1F_Text_LewisIntro {
+    "Uh-oh…\n"
+    "Where am I now?$"
+}
+
+text PokemonMansion_B1F_Text_LewisDefeat {
+    "Awooh!$"
+}
+
+text PokemonMansion_B1F_Text_LewisPostBattle {
+    "You can find stuff lying around.\n"
+    "The residents must've left them.$"
+}
+
+text PokemonMansion_B1F_Text_IvanIntro {
+    "This place is ideal for a lab.\n"
+    "Look at all this space.$"
+}
+
+text PokemonMansion_B1F_Text_IvanDefeat {
+    "What was that for?$"
+}
+
+text PokemonMansion_B1F_Text_IvanPostBattle {
+    "I like it here.\n"
+    "It's conducive to my studies.$"
+}
+
+text PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful {
+    "Diary: Sept. 1\n"
+    "MEWTWO is far too powerful.\p"
+    "We have failed to curb its vicious\n"
+    "tendencies…$"
+}

@@ -469,7 +469,9 @@
 #define ITEM_SERIOUS_MINT 394
 #define ITEM_TIMID_MINT   395
 
-#define ITEMS_COUNT 396
+#define ITEM_SHINY_CHARM 396
+
+#define ITEMS_COUNT 397
 
 #define ITEM_TO_BERRY(itemId)(((itemId - FIRST_BERRY_INDEX) + 1))
 #define MAIL_NONE 0xFF

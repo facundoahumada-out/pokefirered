@@ -1,0 +1,33 @@
+script Test_EventScript_NPC {
+    msgbox(Test_Text_WelcomeToWorldOfPokemon, MSGBOX_NPC)
+    end
+}
+
+script EventScript_TestSignpostMsg {
+    msgbox(Test_Text_ThisIsASignpost, MSGBOX_SIGN)
+    end
+}
+
+script Test_EventScript_CoordEvent {
+    msgbox(Test_Text_ThisIsACoordEvent, MSGBOX_SIGN)
+    end
+}
+
+text Test_Text_WelcomeToWorldOfPokemon {
+    "テストよう　メッセージです！\n"
+    "ポケモンの　せかいへ　ようこそ！$"
+}
+
+text Test_Text_ThisIsASignpost {
+    "テストよう　メッセージです！\n"
+    "かんばん　です$"
+}
+
+text Test_Text_ThisIsACoordEvent {
+    "テストよう　メッセージです！\n"
+    "ざひょう　チェックの　イベントです$"
+}
+
+text Test_Text_Empty {
+    "$"
+}

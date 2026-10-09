@@ -1,0 +1,8 @@
+text SSAnne_2F_Room6_Text_CaptainIsAwfullySick {
+    "The CAPTAIN said he's awfully sick.\n"
+    "He was all pale.$"
+}
+
+text SSAnne_2F_Room6_Text_ManyPeopleGetSeasick {
+    "I hear many people get seasick.$"
+}

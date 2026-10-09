@@ -1,0 +1,29 @@
+text Route6_NorthEntrance_Text_ThirstyOnGuardDuty {
+    "I'm on guard duty.\n"
+    "Gee, I'm thirsty, though!\p"
+    "Oh, wait there, the road's closed.$"
+}
+
+text Route6_NorthEntrance_Text_ThatTeaLooksTasty {
+    "Oh, that TEA…\n"
+    "It looks awfully tasty…$"
+}
+
+text Route6_NorthEntrance_Text_ThanksIllShareTeaWithGuards {
+    "Huh? I can have this drink?\n"
+    "Gee, thanks!\l"
+    "… …\l"
+    "Glug, glug…\l"
+    "… …\l"
+    "Gulp…\l"
+    "If you want to go to SAFFRON\l"
+    "CITY…\l"
+    "… …\l"
+    "You can go on through.\p"
+    "I'll share this TEA with the other\n"
+    "guards!$"
+}
+
+text Route6_NorthEntrance_Text_HiHowsItGoing {
+    "Hi, how's it going?$"
+}

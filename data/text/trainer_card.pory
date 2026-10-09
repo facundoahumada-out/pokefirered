@@ -1,0 +1,197 @@
+text CeladonCity_GameCorner_Text_TryPokemonPrinter {
+    "It's a POKéMON PRINTER!\p"
+    "It can put a print of your POKéMON\n"
+    "on the back of your TRAINER CARD.\p"
+    "It costs only ¥50.\n"
+    "Would you like to try it?$"
+}
+
+text CeladonCity_GameCorner_Text_DontHaveEnoughMoney {
+    "You don't have enough money.$"
+}
+
+text CeladonCity_GameCorner_Text_ChoosePrintType {
+    "Please choose the print type.$"
+}
+
+text CeladonCity_GameCorner_Text_BigSmileForPhoto {
+    "A big smile for the photo, please!\n"
+    "Three… Two… One…\p"
+    "Flash!$"
+}
+
+text CeladonCity_GameCorner_Text_PrintIsReadyCheckTrainerCard {
+    "Your POKéMON print is ready!\n"
+    "Check your TRAINER CARD.$"
+}
+
+text FourIsland_House2_Text_WishICouldShowOffStickers {
+    "Giggle…\n"
+    "I collected a ton of STICKERS.\l"
+    "I wish I could show them off…$"
+}
+
+text FourIsland_House2_Text_GiveYouStickerIfYouBrag {
+    "Oh, excellent!\n"
+    "You've come to the right place!\p"
+    "Look, look! See? See?\n"
+    "These are my STICKERS!\l"
+    "Look how many I got!\p"
+    "I bet you want some.\n"
+    "I bet you do!\p"
+    "I'll give a STICKER if you can tell\n"
+    "me something awesome about\l"
+    "yourself.\p"
+    "What will you brag about?$"
+}
+
+text FourIsland_House2_Text_BragAboutSomethingForMe {
+    "Brag about something for me.\n"
+    "I'll give you a STICKER.$"
+}
+
+text FourIsland_House2_Text_BragAboutWhatToday {
+    "Oh, hi!\n"
+    "Here comes the braggart.\p"
+    "What are you going to brag about\n"
+    "today?$"
+}
+
+text FourIsland_House2_Text_WowHoFLowest {
+    "Oh, wow, you made it into the\n"
+    "HALL OF FAME.\p"
+    "That's pretty good, yup!\n"
+    "I'll give you one of these.$"
+}
+
+text FourIsland_House2_Text_WowHoFLow {
+    "Oh, wow, you've entered the\n"
+    "HALL OF FAME often!\p"
+    "That's impressive, yup!\n"
+    "I'll give you one of these.$"
+}
+
+text FourIsland_House2_Text_WowHoFHigh {
+    "Whoa! You've made it into the\n"
+    "HALL OF FAME that often?\l"
+    "That's seriously incredible, yup!\p"
+    "You own the POKéMON LEAGUE!\n"
+    "I'll give you one of these.$"
+}
+
+text FourIsland_House2_Text_WowHoFHighest {
+    "No way! You've gone into the\n"
+    "HALL OF FAME that many times?\p"
+    "You're beyond incredible, yup!\n"
+    "That's it, I have to give you this.$"
+}
+
+text FourIsland_House2_Text_HoFStickerApplied {
+    "The HALL OF FAME STICKER was\n"
+    "applied to the TRAINER CARD.$"
+}
+
+text FourIsland_House2_Text_ComeBackWithBetterStoryHoF {
+    "Hmm…\p"
+    "Come back with a better story next\n"
+    "time, okay?$"
+}
+
+text FourIsland_House2_Text_LivingLegendHoF {
+    "Oh, no, no can do.\p"
+    "You're practically a living legend.\n"
+    "I have no SITCKERS left to give.$"
+}
+
+text FourIsland_House2_Text_WowEggsLowest {
+    "Oh, wow, there are POKéMON EGGS?\n"
+    "I didn't know that!\p"
+    "That's pretty good, yup!\n"
+    "I'll give you one of these.$"
+}
+
+text FourIsland_House2_Text_WowEggsLow {
+    "You've hatched that many EGGS?\n"
+    "You really must like them!\p"
+    "That's impressive, yup!\n"
+    "I'll give you one of these.$"
+}
+
+text FourIsland_House2_Text_WowEggsHigh {
+    "Whoa! You've hatched a whole\n"
+    "bunch of EGGS!\p"
+    "You're an EGG-hatching machine!\n"
+    "I'll give you one of these.$"
+}
+
+text FourIsland_House2_Text_WowEggsHighest {
+    "Wh… You hatched that many EGGS?\p"
+    "What's behind your love of EGGS?\n"
+    "It's beyond incredible, yup!\p"
+    "You're too awesome, I tell you.\n"
+    "That's it, I have to give you this.$"
+}
+
+text FourIsland_House2_Text_EggStickerApplied {
+    "The EGG STICKER was applied\n"
+    "to the TRAINER CARD.$"
+}
+
+text FourIsland_House2_Text_ComeBackWithBetterStoryEggs {
+    "Hmm…\p"
+    "Come back with a better story next\n"
+    "time, okay?$"
+}
+
+text FourIsland_House2_Text_LivingLegendEggs {
+    "Oh, no, no can do.\p"
+    "You're practically a living legend.\n"
+    "I have no SITCKERS left to give.$"
+}
+
+text FourIsland_House2_Text_WowLinkWinsLowest {
+    "Oh, wow, you've had success\n"
+    "link battling?\p"
+    "You're pretty strong, yup!\n"
+    "I'll give you one of these.$"
+}
+
+text FourIsland_House2_Text_WowLinkWinsLow {
+    "You've beaten your friends a lot\n"
+    "link battling, huh?\p"
+    "You're impressively strong, yup!\n"
+    "I'll give you one of these.$"
+}
+
+text FourIsland_House2_Text_WowLinkWinsHigh {
+    "Whoa! You've beaten your friends\n"
+    "a frightful number of times.\p"
+    "Have you lost friends over this?\n"
+    "I'll give you one of these.$"
+}
+
+text FourIsland_House2_Text_WowLinkWinsHighest {
+    "Wh… Wickedly whoa!\n"
+    "You've won mind-blowingly often!\p"
+    "It just knocks me out thinking\n"
+    "about how tough you are.\p"
+    "You're the stuff of nightmares!\n"
+    "That's it, I have to give you this.$"
+}
+
+text FourIsland_House2_Text_VictoryStickerApplied {
+    "The VICTORY STICKER was applied\n"
+    "to the TRAINER CARD.$"
+}
+
+text FourIsland_House2_Text_ComeBackWithBetterStoryLinkWins {
+    "Hmm…\p"
+    "Come back with a better story next\n"
+    "time, okay?$"
+}
+
+text FourIsland_House2_Text_LivingLegendLinkWins {
+    "Oh, no, no can do.\p"
+    "You're practically a living legend.\n"
+    "I have no SITCKERS left to give.$"
+}

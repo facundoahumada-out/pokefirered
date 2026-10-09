@@ -1,0 +1,21 @@
+text CeladonCity_Hotel_Text_ThisHotelIsForPeople {
+    "POKéMON?\n"
+    "No, this is a hotel for people.\p"
+    "We're full up, unfortunately.$"
+}
+
+text CeladonCity_Hotel_Text_OnVacationWithBrotherAndBoyfriend {
+    "I'm on vacation with my brother and\n"
+    "boyfriend.\p"
+    "CELADON is such a pretty city!$"
+}
+
+text CeladonCity_Hotel_Text_WhyDidSheBringBrother {
+    "Why?\n"
+    "Why did she bring her brother?$"
+}
+
+text CeladonCity_Hotel_Text_SisBroughtMeOnVacation {
+    "Yippee! I'm on vacation!\n"
+    "My sis brought me along! Awesome!$"
+}

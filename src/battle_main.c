@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dns.h"
 #include "gflib.h"
 #include "battle.h"
 #include "battle_anim.h"
@@ -1459,6 +1460,7 @@ static void CB2_HandleStartMultiBattle(void)
 
 void BattleMainCB2(void)
 {
+    DnsUpdate();
     AnimateSprites();
     BuildOamBuffer();
     RunTextPrinters();

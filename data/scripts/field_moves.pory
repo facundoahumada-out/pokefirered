@@ -1,0 +1,365 @@
+script EventScript_CutTree {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lockall
+    goto_if_unset(FLAG_BADGE02_GET, EventScript_CantCutTree)
+    checkpartymove(MOVE_CUT)
+    goto_if_eq(VAR_RESULT, PARTY_SIZE, EventScript_CantCutTree)
+    setfieldeffectargument(0, VAR_RESULT)
+    bufferpartymonnick(STR_VAR_1, VAR_RESULT)
+    buffermovename(STR_VAR_2, MOVE_CUT)
+    msgbox(Text_CutTreeDown, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, EventScript_DontCutTree)
+    msgbox(Text_MonUsedMove)
+    closemessage
+    dofieldeffect(FLDEFF_USE_CUT_ON_TREE)
+    waitstate
+    goto(EventScript_CutTreeDown)
+    end
+}
+
+script EventScript_FldEffCut {
+    lockall
+    dofieldeffect(FLDEFF_USE_CUT_ON_TREE)
+    waitstate
+    goto(EventScript_CutTreeDown)
+    end
+}
+
+script EventScript_CutTreeDown {
+    applymovement(VAR_LAST_TALKED, Movement_CutTreeDown)
+    waitmovement(0)
+    removeobject(VAR_LAST_TALKED)
+    releaseall
+    end
+}
+
+movement(global) Movement_CutTreeDown {
+    cut_tree
+    step_end
+}
+
+script EventScript_CantCutTree {
+    msgbox(Text_TreeCanBeCutDown, MSGBOX_SIGN)
+    releaseall
+    end
+}
+
+script EventScript_DontCutTree {
+    closemessage
+    releaseall
+    end
+}
+
+text Text_CutTreeDown {
+    "This tree looks like it can be CUT\n"
+    "down!\p"
+    "Would you like to CUT it?$"
+}
+
+text Text_MonUsedMove {
+    "{STR_VAR_1} used {STR_VAR_2}!$"
+}
+
+text Text_TreeCanBeCutDown {
+    "This tree looks like it can be CUT\n"
+    "down!$"
+}
+
+script EventScript_RockSmash {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lockall
+    goto_if_unset(FLAG_BADGE06_GET, EventScript_CantSmashRock)
+    checkpartymove(MOVE_ROCK_SMASH)
+    goto_if_eq(VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock)
+    setfieldeffectargument(0, VAR_RESULT)
+    bufferpartymonnick(STR_VAR_1, VAR_RESULT)
+    buffermovename(STR_VAR_2, MOVE_ROCK_SMASH)
+    msgbox(Text_UseRockSmash, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, EventScript_DontSmashRock)
+    msgbox(Text_MonUsedMove)
+    closemessage
+    dofieldeffect(FLDEFF_USE_ROCK_SMASH)
+    waitstate
+    goto(EventScript_UseRockSmash)
+    end
+}
+
+script EventScript_FldEffRockSmash {
+    lockall
+    dofieldeffect(FLDEFF_USE_ROCK_SMASH)
+    waitstate
+    goto(EventScript_UseRockSmash)
+    end
+}
+
+script EventScript_UseRockSmash {
+    applymovement(VAR_LAST_TALKED, Movement_BreakRock)
+    waitmovement(0)
+    removeobject(VAR_LAST_TALKED)
+    special(RockSmashWildEncounter)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_RockSmashNoEncounter)
+    waitstate
+    releaseall
+    end
+}
+
+script EventScript_RockSmashNoEncounter {
+    releaseall
+    end
+}
+
+movement(global) Movement_BreakRock {
+    rock_smash_break
+    step_end
+}
+
+script EventScript_CantSmashRock {
+    msgbox(Text_MonMaySmashRock, MSGBOX_SIGN)
+    end
+}
+
+script EventScript_DontSmashRock {
+    closemessage
+    releaseall
+    end
+}
+
+text Text_UseRockSmash {
+    "This rock appears to be breakable.\n"
+    "Would you like to use ROCK SMASH?$"
+}
+
+text Text_MonMaySmashRock {
+    "It's a rugged rock, but a POKéMON\n"
+    "may be able to smash it.$"
+}
+
+script EventScript_StrengthBoulder {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lockall
+    goto_if_unset(FLAG_BADGE04_GET, EventScript_CantMoveBoulder)
+    goto_if_set(FLAG_SYS_USE_STRENGTH, EventScript_AlreadyUsedStrength)
+    checkpartymove(MOVE_STRENGTH)
+    goto_if_eq(VAR_RESULT, PARTY_SIZE, EventScript_CantMoveBoulder)
+    setfieldeffectargument(0, VAR_RESULT)
+    msgbox(Text_UseStrength, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, EventScript_DontUseStrength)
+    closemessage
+    dofieldeffect(FLDEFF_USE_STRENGTH)
+    waitstate
+    goto(EventScript_UseStrength)
+    end
+}
+
+script EventScript_FldEffStrength {
+    lockall
+    dofieldeffect(FLDEFF_USE_STRENGTH)
+    waitstate
+    goto(EventScript_UseStrength)
+    end
+}
+
+script EventScript_UseStrength {
+    setflag(FLAG_SYS_USE_STRENGTH)
+    msgbox(Text_MonUsedStrengthCanMoveBoulders, MSGBOX_SIGN)
+    end
+}
+
+script EventScript_CantMoveBoulder {
+    msgbox(Text_MonMayPushBoulder, MSGBOX_SIGN)
+    end
+}
+
+script EventScript_AlreadyUsedStrength {
+    msgbox(Text_StrengthMadeMovingBouldersPossible, MSGBOX_SIGN)
+    end
+}
+
+script EventScript_DontUseStrength {
+    closemessage
+    releaseall
+    end
+}
+
+text Text_UseStrength {
+    "It's a big boulder, but a POKéMON\n"
+    "may be able to push it aside.\p"
+    "Would you like to use STRENGTH?$"
+}
+
+text Text_MonUsedStrengthCanMoveBoulders {
+    "{STR_VAR_1} used STRENGTH!\p"
+    "{STR_VAR_1}'s STRENGTH made it\n"
+    "possible to move boulders around!$"
+}
+
+text Text_MonMayPushBoulder {
+    "It's a big boulder, but a POKéMON\n"
+    "may be able to push it aside.$"
+}
+
+text Text_StrengthMadeMovingBouldersPossible {
+    "STRENGTH made it possible to move\n"
+    "boulders around.$"
+}
+
+script EventScript_Waterfall {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lockall
+    checkpartymove(MOVE_WATERFALL)
+    goto_if_eq(VAR_RESULT, PARTY_SIZE, EventScript_WaterCrashingDown)
+    bufferpartymonnick(STR_VAR_1, VAR_RESULT)
+    setfieldeffectargument(0, VAR_RESULT)
+    msgbox(Text_UseWaterfall, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, EventScript_EndWaterfall)
+    msgbox(Text_MonUsedWaterfall)
+    dofieldeffect(FLDEFF_USE_WATERFALL)
+    goto(EventScript_EndWaterfall)
+}
+
+script EventScript_CantUseWaterfall {
+    lockall
+EventScript_WaterCrashingDown:
+    msgbox(Text_WallOfWaterCrashingDown)
+EventScript_EndWaterfall:
+    releaseall
+    end
+}
+
+text Text_WallOfWaterCrashingDown {
+    "A wall of water is crashing down\n"
+    "with a mighty roar.$"
+}
+
+text Text_UseWaterfall {
+    "It's a large waterfall.\n"
+    "Would you like to use WATERFALL?$"
+}
+
+text Text_MonUsedWaterfall {
+    "{STR_VAR_1} used WATERFALL.$"
+}
+
+// Unused leftover from R/S
+script EventScript_DeepWater {
+    lockall
+    checkpartymove(MOVE_DIVE)
+    goto_if_eq(VAR_RESULT, PARTY_SIZE, EventScript_MayGoUnderwater)
+    bufferpartymonnick(STR_VAR_1, VAR_RESULT)
+    setfieldeffectargument(0, VAR_RESULT)
+    setfieldeffectargument(1, 1)
+    msgbox(Text_SeaIsDeepUseDive, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, EventScript_EndDive)
+    msgbox(Text_MonUsedDive)
+    dofieldeffect(FLDEFF_USE_DIVE)
+    goto(EventScript_EndDive)
+}
+
+script EventScript_CantDive {
+    lockall
+EventScript_MayGoUnderwater:
+    msgbox(Text_MonMayGoUnderwater)
+EventScript_EndDive:
+    releaseall
+    end
+}
+
+script EventScript_TrySurface {
+    lockall
+    checkpartymove(MOVE_DIVE)
+    goto_if_eq(VAR_RESULT, PARTY_SIZE, EventScript_CantSurface)
+    bufferpartymonnick(STR_VAR_1, VAR_RESULT)
+    setfieldeffectargument(0, VAR_RESULT)
+    setfieldeffectargument(1, 1)
+    msgbox(Text_LightFilteringUseDive, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, EventScript_EndSurface)
+    msgbox(Text_MonUsedDive)
+    dofieldeffect(FLDEFF_USE_DIVE)
+    goto(EventScript_EndSurface)
+}
+
+script EventScript_CantSurface {
+    lockall
+    msgbox(Text_MonMaySurface)
+    goto(EventScript_EndSurface)
+}
+
+script EventScript_ObstacleCantSurface {
+    lockall
+    msgbox(Text_DiveCantBeUsedHere)
+EventScript_EndSurface:
+    releaseall
+    end
+}
+
+text Text_MonMayGoUnderwater {
+    "The sea is deep here. A POKéMON\n"
+    "may be able to go underwater.$"
+}
+
+text Text_SeaIsDeepUseDive {
+    "The sea is deep here.\n"
+    "Would you like to use DIVE?$"
+}
+
+text Text_MonUsedDive {
+    "{STR_VAR_1} used DIVE.$"
+}
+
+text Text_MonMaySurface {
+    "Light is filtering down from above.\n"
+    "A POKéMON may be able to surface.$"
+}
+
+text Text_LightFilteringUseDive {
+    "Light is filtering down from above.\n"
+    "Would you like to use DIVE?$"
+}
+
+text Text_DiveCantBeUsedHere {
+    "There is an obstacle above.\n"
+    "DIVE can't be used here.$"
+}
+
+script EventScript_FailSweetScent {
+    msgbox(Text_LooksLikeNothingHere, MSGBOX_SIGN)
+    end
+}
+
+text Text_LooksLikeNothingHere {
+    "Looks like there's nothing here…$"
+}
+
+script EventScript_UseRockClimb {
+    lockall
+    specialvar(VAR_RESULT, GetRockClimbUsableMonPartyIndex)
+    goto_if_eq(VAR_RESULT, PARTY_SIZE, EventScript_CantRockClimb)
+    bufferpartymonnick(STR_VAR_1, VAR_RESULT)
+    setfieldeffectargument(0, VAR_RESULT)
+    msgbox(Text_WantToRockClimb, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, EventScript_EndRockClimb)
+    msgbox(Text_MonUsedRockClimb)
+    dofieldeffect(FLDEFF_USE_ROCK_CLIMB)
+    goto(EventScript_EndRockClimb)
+}
+
+script EventScript_CantRockClimb {
+    msgbox(Text_CantRockClimb)
+EventScript_EndRockClimb:
+    releaseall
+    end
+}
+
+text Text_WantToRockClimb {
+    "The cliff is steep.\n"
+    "Would you like to use ROCK CLIMB?$"
+}
+
+text Text_MonUsedRockClimb {
+    "{STR_VAR_1} used ROCK CLIMB!$"
+}
+
+text Text_CantRockClimb {
+    "The cliff is steep.\n"
+    "A POKéMON may be able to climb it.$"
+}

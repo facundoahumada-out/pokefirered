@@ -1,0 +1,46 @@
+text Route15_WestEntrance_2F_Text_GiveItemIfCaughtEnough {
+    "Hi! Remember me?\n"
+    "I'm one of PROF. OAK's AIDES.\p"
+    "If your POKéDEX has complete data\n"
+    "on {STR_VAR_1} species, I'm supposed to\l"
+    "give you a reward.\p"
+    "PROF. OAK entrusted me with the\n"
+    "{STR_VAR_2} for you.\p"
+    "So, {PLAYER}, let me ask you.\p"
+    "Have you gathered data on at least\n"
+    "{STR_VAR_1} kinds of POKéMON?$"
+}
+
+text Route15_WestEntrance_2F_Text_GreatHereYouGo {
+    "Great! You have caught or owned\n"
+    "{STR_VAR_3} kinds of POKéMON!\p"
+    "Congratulations!\n"
+    "Here you go!$"
+}
+
+text Route15_WestEntrance_2F_Text_ReceivedItemFromAide {
+    "{PLAYER} received the {STR_VAR_2}\n"
+    "from the AIDE.$"
+}
+
+text Route15_WestEntrance_2F_Text_ExplainExpShare {
+    "EXP. SHARE is an item to be held\n"
+    "by a POKéMON.\p"
+    "The POKéMON will receive a share\n"
+    "of the EXP. Points without having\l"
+    "to battle.$"
+}
+
+text Route15_WestEntrance_2F_Text_LargeShiningBird {
+    "Let's see what the binoculars have\n"
+    "to show…\p"
+    "A large, shining bird is flying\n"
+    "toward the sea.$"
+}
+
+text Route15_WestEntrance_2F_Text_SmallIslandOnHorizon {
+    "Let's see what the binoculars have\n"
+    "to show…\p"
+    "It looks like a small island on\n"
+    "the horizon!$"
+}

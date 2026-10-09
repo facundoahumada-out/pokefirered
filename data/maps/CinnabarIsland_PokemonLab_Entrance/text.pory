@@ -1,0 +1,33 @@
+text CinnabarIsland_Gym_Text_PhotoOfBlaineAndFuji {
+    "It's a photo of BLAINE and\n"
+    "MR. FUJI.\p"
+    "They're standing shoulder to\n"
+    "shoulder with big grins.$"
+}
+
+text CinnabarIsland_PokemonLab_Entrance_Text_StudyMonsExtensively {
+    "We study POKéMON extensively\n"
+    "every day.\p"
+    "People often bring us rare POKéMON\n"
+    "for examination.$"
+}
+
+text CinnabarIsland_PokemonLab_Entrance_Text_PhotoOfLabFounderDrFuji {
+    "A photo of the LAB's founder…\n"
+    "DR. FUJI?!$"
+}
+
+text CinnabarIsland_PokemonLab_Entrance_Text_MeetingRoomSign {
+    "POKéMON LAB\n"
+    "Meeting Room$"
+}
+
+text CinnabarIsland_PokemonLab_Entrance_Text_RAndDRoomSign {
+    "POKéMON LAB\n"
+    "R & D Room$"
+}
+
+text CinnabarIsland_PokemonLab_Entrance_Text_TestingRoomSign {
+    "POKéMON LAB\n"
+    "Testing Room$"
+}

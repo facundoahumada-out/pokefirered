@@ -1,0 +1,142 @@
+text Route16_Text_LaoIntro {
+    "What do you want?$"
+}
+
+text Route16_Text_LaoDefeat {
+    "Don't you dare laugh!$"
+}
+
+text Route16_Text_LaoPostBattle {
+    "We like just hanging here.\n"
+    "What's it to you?$"
+}
+
+text Route16_Text_KojiIntro {
+    "Nice BIKE!\n"
+    "Hand it over!$"
+}
+
+text Route16_Text_KojiDefeat {
+    "Knockout!$"
+}
+
+text Route16_Text_KojiPostBattle {
+    "Forget it, who needs your BIKE!$"
+}
+
+text Route16_Text_LukeIntro {
+    "Come out and play, little mouse!$"
+}
+
+text Route16_Text_LukeDefeat {
+    "You little rat!$"
+}
+
+text Route16_Text_LukePostBattle {
+    "I hate losing!\n"
+    "Get out of my face!$"
+}
+
+text Route16_Text_HideoIntro {
+    "Hey, you just bumped me!$"
+}
+
+text Route16_Text_HideoDefeat {
+    "Kaboom!$"
+}
+
+text Route16_Text_HideoPostBattle {
+    "We'll always be hanging around here\n"
+    "even if you don't like it.\p"
+    "You can detour to VERMILION from\n"
+    "FUCHSIA going along the coast.$"
+}
+
+text Route16_Text_CamronIntro {
+    "I'm feeling hungry and mean!\n"
+    "I need a punching bag!$"
+}
+
+text Route16_Text_CamronDefeat {
+    "Bad, bad, bad!$"
+}
+
+text Route16_Text_CamronPostBattle {
+    "If I'm going to have POKéMON, they\n"
+    "may as well be ferocious.\p"
+    "I'd use them to leave my enemies\n"
+    "in tatters.$"
+}
+
+text Route16_Text_RubenIntro {
+    "Hey, there!\n"
+    "Let's have ourselves a good time!$"
+}
+
+text Route16_Text_RubenDefeat {
+    "Don't make me mad!$"
+}
+
+text Route16_Text_RubenPostBattle {
+    "I get my kicks by harassing people\n"
+    "with my stinking POKéMON.\p"
+    "They're great for startling people.\n"
+    "And, they bite, too.$"
+}
+
+text Route16_Text_MonSprawledOutInSlumber {
+    "A POKéMON is sprawled out in\n"
+    "a deep and comfortable slumber.$"
+}
+
+text Route16_Text_CyclingRoadSign {
+    "Enjoy the slope!\n"
+    "CYCLING ROAD$"
+}
+
+text Route16_Text_RouteSign {
+    "ROUTE 16\n"
+    "CELADON CITY - FUCHSIA CITY$"
+}
+
+text Route16_Text_JedIntro {
+    "JED: Our love knows no bounds.\n"
+    "We're in love and we show it!$"
+}
+
+text Route16_Text_JedDefeat {
+    "JED: Oh, no!\n"
+    "My love has seen me as a loser!$"
+}
+
+text Route16_Text_JedPostBattle {
+    "JED: Listen, LEA.\n"
+    "You need to focus less on me.$"
+}
+
+text Route16_Text_JedNotEnoughMons {
+    "JED: You have just one POKéMON?\n"
+    "Is there no love in your heart?$"
+}
+
+text Route16_Text_LeaIntro {
+    "LEA: Sometimes, the intensity of\n"
+    "our love scares me.$"
+}
+
+text Route16_Text_LeaDefeat {
+    "LEA: Ohh! But JED looks cool\n"
+    "even in a loss!$"
+}
+
+text Route16_Text_LeaPostBattle {
+    "LEA: Ehehe, I'm sorry.\n"
+    "JED is so cool.$"
+}
+
+text Route16_Text_LeaNotEnoughMons {
+    "LEA: Oh, you don't have two\n"
+    "POKéMON with you?\p"
+    "Doesn't it feel lonely for you or\n"
+    "your POKéMON?$"
+}

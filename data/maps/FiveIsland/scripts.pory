@@ -1,0 +1,23 @@
+mapscripts FiveIsland_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: FiveIsland_OnTransition
+}
+
+script FiveIsland_OnTransition {
+    setworldmapflag(FLAG_WORLD_MAP_FIVE_ISLAND)
+    end
+}
+
+script FiveIsland_EventScript_IslandSign {
+    msgbox(FiveIsland_Text_IslandSign, MSGBOX_SIGN)
+    end
+}
+
+script FiveIsland_EventScript_BugCatcher {
+    msgbox(FiveIsland_Text_WeirdBuildingInMeadow, MSGBOX_NPC)
+    end
+}
+
+script FiveIsland_EventScript_Fisher {
+    msgbox(FiveIsland_Text_BeenGettingBusierAroundHere, MSGBOX_NPC)
+    end
+}

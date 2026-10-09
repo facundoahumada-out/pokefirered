@@ -547,6 +547,25 @@ static void CB2_TradeEvolutionSceneUpdate(void)
     RunTasks();
 }
 
+// Removes the held item if it is what triggered an EVO_LEVEL_ITEM evolution
+static void ConsumeEvolutionHeldItem(u16 preEvoSpecies, u16 postEvoSpecies, struct Pokemon* mon)
+{
+    s32 i;
+    u16 heldItem = GetMonData(mon, MON_DATA_HELD_ITEM);
+
+    for (i = 0; i < EVOS_PER_MON; i++)
+    {
+        if (gEvolutionTable[preEvoSpecies][i].method == EVO_LEVEL_ITEM
+         && gEvolutionTable[preEvoSpecies][i].param == heldItem
+         && gEvolutionTable[preEvoSpecies][i].targetSpecies == postEvoSpecies)
+        {
+            heldItem = ITEM_NONE;
+            SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
+            break;
+        }
+    }
+}
+
 static void CreateShedinja(u16 preEvoSpecies, struct Pokemon* mon)
 {
     u32 data = 0;
@@ -776,6 +795,7 @@ static void Task_EvolutionScene(u8 taskId)
             BattlePutTextOnWindow(gStringVar4, B_WIN_MSG);
             PlayBGM(MUS_EVOLVED);
             gTasks[taskId].tState++;
+            ConsumeEvolutionHeldItem(gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies, mon);
             SetMonData(mon, MON_DATA_SPECIES, (void *)(&gTasks[taskId].tPostEvoSpecies));
             CalculateMonStats(mon);
             EvolutionRenameMon(mon, gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies);

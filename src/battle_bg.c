@@ -27,6 +27,7 @@ struct BattleBackground
 
 static void CB2_unused(void);
 static u8 GetBattleTerrainOverride(void);
+static u8 GetMapBattleSceneForTerrain(void);
 
 static const u8 sUnused[] = {1, 2};
 
@@ -436,6 +437,10 @@ static const u32 sBattleTerrainPalette_Plain[] = INCBIN_U32("graphics/battle_ter
 static const u32 sBattleTerrainTiles_Indoor[] = INCBIN_U32("graphics/battle_terrain/indoor/terrain.4bpp.lz");
 static const u32 sBattleTerrainTilemap_Indoor[] = INCBIN_U32("graphics/battle_terrain/indoor/terrain.bin.lz");
 
+static const u32 sBattleTerrainPalette_Icefall[] = INCBIN_U32("graphics/battle_terrain/icefall/terrain.gbapal.lz");
+static const u32 sBattleTerrainTiles_Icefall[] = INCBIN_U32("graphics/battle_terrain/icefall/terrain.4bpp.lz");
+static const u32 sBattleTerrainTilemap_Icefall[] = INCBIN_U32("graphics/battle_terrain/icefall/terrain.bin.lz");
+
 static const struct BattleBackground sBattleTerrainTable[] = {
     [BATTLE_TERRAIN_GRASS] =
     {
@@ -596,6 +601,15 @@ static const struct BattleBackground sBattleTerrainTable[] = {
         .entryTileset = sBattleTerrainAnimTiles_Building,
         .entryTilemap = sBattleTerrainAnimTilemap_Building,
         .palette = sBattleTerrainPalette_Champion
+    },
+    // Uses the cave entry animation, which is drawn with the 3rd palette (a copy of the cave one)
+    [BATTLE_TERRAIN_ICEFALL] =
+    {
+        .tileset = sBattleTerrainTiles_Icefall,
+        .tilemap = sBattleTerrainTilemap_Icefall,
+        .entryTileset = sBattleTerrainAnimTiles_Cave,
+        .entryTilemap = sBattleTerrainAnimTilemap_Cave,
+        .palette = sBattleTerrainPalette_Icefall
     }
 };
 
@@ -610,7 +624,8 @@ static const struct {
     {MAP_BATTLE_SCENE_BRUNO,    BATTLE_TERRAIN_BRUNO},
     {MAP_BATTLE_SCENE_AGATHA,   BATTLE_TERRAIN_AGATHA},
     {MAP_BATTLE_SCENE_LANCE,    BATTLE_TERRAIN_LANCE},
-    {MAP_BATTLE_SCENE_LINK,     BATTLE_TERRAIN_LINK}
+    {MAP_BATTLE_SCENE_LINK,     BATTLE_TERRAIN_LINK},
+    {MAP_BATTLE_SCENE_ICEFALL,  BATTLE_TERRAIN_ICEFALL}
 };
 
 // Unused
@@ -1034,15 +1049,33 @@ void DrawBattleEntryBackground(void)
             }
         }
 
-        if (GetCurrentMapBattleScene() == MAP_BATTLE_SCENE_NORMAL)
+        if (GetMapBattleSceneForTerrain() == MAP_BATTLE_SCENE_NORMAL)
         {
             LoadBattleTerrainEntryGfx(gBattleTerrain);
+        }
+        else if (GetMapBattleSceneForTerrain() == MAP_BATTLE_SCENE_ICEFALL)
+        {
+            LoadBattleTerrainEntryGfx(BATTLE_TERRAIN_ICEFALL);
         }
         else
         {
             LoadBattleTerrainEntryGfx(BATTLE_TERRAIN_BUILDING);
         }
     }
+}
+
+// The icefall battle scene keeps the regular water backgrounds while surfing
+static u8 GetMapBattleSceneForTerrain(void)
+{
+    u8 battleScene = GetCurrentMapBattleScene();
+
+    if (battleScene == MAP_BATTLE_SCENE_ICEFALL
+     && (gBattleTerrain == BATTLE_TERRAIN_POND
+      || gBattleTerrain == BATTLE_TERRAIN_WATER
+      || gBattleTerrain == BATTLE_TERRAIN_UNDERWATER))
+        return MAP_BATTLE_SCENE_NORMAL;
+
+    return battleScene;
 }
 
 static u8 GetBattleTerrainOverride(void)
@@ -1064,7 +1097,7 @@ static u8 GetBattleTerrainOverride(void)
         else if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_CHAMPION)
             return BATTLE_TERRAIN_CHAMPION;
     }
-    battleScene = GetCurrentMapBattleScene();
+    battleScene = GetMapBattleSceneForTerrain();
     if (battleScene == MAP_BATTLE_SCENE_NORMAL)
     {
         return gBattleTerrain;

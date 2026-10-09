@@ -1,18 +1,21 @@
 OneIsland_TreasureBeach_Text_AmaraIntro::
-    .string "Lying back, rocked by the waves…\n"
-    .string "It's exquisite.$"
+# 1 "data/maps/OneIsland_TreasureBeach/text.pory"
+	.string "Lying back, rocked by the waves…\n"
+	.string "It's exquisite.$"
 
 OneIsland_TreasureBeach_Text_AmaraDefeat::
-    .string "I lost…\n"
-    .string "It feels awful.$"
+# 6 "data/maps/OneIsland_TreasureBeach/text.pory"
+	.string "I lost…\n"
+	.string "It feels awful.$"
 
 OneIsland_TreasureBeach_Text_AmaraPostBattle::
-    .string "The sea is pleasantly warm in these\n"
-    .string "parts.$"
+# 11 "data/maps/OneIsland_TreasureBeach/text.pory"
+	.string "The sea is pleasantly warm in these\n"
+	.string "parts.$"
 
 OneIsland_TreasureBeach_Text_GoodThingsWashUpOnBeach::
-    .string "Good things get washed up by the\n"
-    .string "ocean current onto this beach.\p"
-    .string "That's why I often come here for\n"
-    .string "some beachcombing.$"
-
+# 16 "data/maps/OneIsland_TreasureBeach/text.pory"
+	.string "Good things get washed up by the\n"
+	.string "ocean current onto this beach.\p"
+	.string "That's why I often come here for\n"
+	.string "some beachcombing.$"

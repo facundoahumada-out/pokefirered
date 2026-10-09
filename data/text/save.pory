@@ -1,0 +1,32 @@
+text gText_WouldYouLikeToSaveTheGame {
+    "Would you like to save the game?$"
+}
+
+text gText_AlreadySaveFile_WouldLikeToOverwrite {
+    "There is already a saved file.\n"
+    "Is it okay to overwrite it?$"
+}
+
+text gText_SavingDontTurnOffThePower {
+    "SAVING…\n"
+    "DON'T TURN OFF THE POWER.$"
+}
+
+text gText_PlayerSavedTheGame {
+    "{PLAYER} saved the game.$"
+}
+
+text gText_SaveFailed2 {
+    "セーブに　しっぱい　しました‥$"
+}
+
+text gText_DifferentGameFile {
+    "WARNING!\p"
+    "There is a different game file that\n"
+    "is already saved.\p"
+    "If you save now, the other file's\n"
+    "adventure, including items and\l"
+    "POKéMON, will be entirely lost.\p"
+    "Are you sure you want to save now\n"
+    "and overwrite the other save file?$"
+}

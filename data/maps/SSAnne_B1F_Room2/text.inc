@@ -1,10 +1,12 @@
 SSAnne_B1F_Room2_Text_HueyIntro::
-    .string "Even us sailors have POKéMON, too!$"
+# 1 "data/maps/SSAnne_B1F_Room2/text.pory"
+	.string "Even us sailors have POKéMON, too!$"
 
 SSAnne_B1F_Room2_Text_HueyDefeat::
-    .string "Okay, you're not bad.$"
+# 5 "data/maps/SSAnne_B1F_Room2/text.pory"
+	.string "Okay, you're not bad.$"
 
 SSAnne_B1F_Room2_Text_HueyPostBattle::
-    .string "We caught all our POKéMON while\n"
-    .string "we were out at sea.$"
-
+# 9 "data/maps/SSAnne_B1F_Room2/text.pory"
+	.string "We caught all our POKéMON while\n"
+	.string "we were out at sea.$"

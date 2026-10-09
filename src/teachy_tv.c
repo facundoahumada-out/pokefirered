@@ -100,6 +100,7 @@ static void TeachyTvPushBackNewMapPalIndexArrayEntry(const struct MapLayout *mSt
 static void TeachyTvComputeMapTilesFromTilesetAndMetaTiles(const u16 *metaTilesArray, u8 *blockBuf, u8 *tileset);
 static void TeachyTvComputeSingleMapTileBlockFromTilesetAndMetaTiles(u8 *blockBuf, u8 *tileset, u8 metaTile);
 static u16 TeachyTvComputePalIndexArrayEntryByMetaTile(u8 *palIndexArrayBuf, u16 metaTile);
+static u16 TeachyTvGetLowestNonEmptyMetatileTile(const u16 *metaTilesArray, u8 pos);
 static void TeachyTvLoadMapPalette(const struct MapLayout * mStruct, const u8 *palIndexArray);
 
 static const struct BgTemplate sBgTemplates[] = 
@@ -1260,9 +1261,9 @@ static void TeachyTvLoadBg3Map(u16 *buffer)
     {
         memset(mapTilesRowBuffer, 0, 0x80);
         if (blockIndicesBuffer[i] < NUM_METATILES_IN_PRIMARY)
-            TeachyTvComputeMapTilesFromTilesetAndMetaTiles((const void *)layout->primaryTileset->metatiles + blockIndicesBuffer[i] * 16, mapTilesRowBuffer, tilesetsBuffer);
+            TeachyTvComputeMapTilesFromTilesetAndMetaTiles(layout->primaryTileset->metatiles + blockIndicesBuffer[i] * NUM_TILES_PER_METATILE, mapTilesRowBuffer, tilesetsBuffer);
         else
-            TeachyTvComputeMapTilesFromTilesetAndMetaTiles((const void *)layout->secondaryTileset->metatiles + (blockIndicesBuffer[i] - NUM_METATILES_IN_PRIMARY) * 16, mapTilesRowBuffer, tilesetsBuffer);
+            TeachyTvComputeMapTilesFromTilesetAndMetaTiles(layout->secondaryTileset->metatiles + (blockIndicesBuffer[i] - NUM_METATILES_IN_PRIMARY) * NUM_TILES_PER_METATILE, mapTilesRowBuffer, tilesetsBuffer);
         CpuFastCopy(mapTilesRowBuffer, bgTilesBuffer + i * 0x40, 0x80);
     }
 
@@ -1291,26 +1292,41 @@ static void TeachyTvPushBackNewMapPalIndexArrayEntry(const struct MapLayout *mSt
 {
     const u16 * metaTileEntryAddr;
     if (mapEntry < NUM_METATILES_IN_PRIMARY)
-        metaTileEntryAddr = &mStruct->primaryTileset->metatiles[8 * mapEntry];
+        metaTileEntryAddr = &mStruct->primaryTileset->metatiles[NUM_TILES_PER_METATILE * mapEntry];
     else
-        metaTileEntryAddr = &mStruct->secondaryTileset->metatiles[8 * (mapEntry - NUM_METATILES_IN_PRIMARY)];
-    buf1[0] = (TeachyTvComputePalIndexArrayEntryByMetaTile(palIndexArray, metaTileEntryAddr[0]) << 12) + 4 * offset;
-    buf1[1] = (TeachyTvComputePalIndexArrayEntryByMetaTile(palIndexArray, metaTileEntryAddr[1]) << 12) + 4 * offset + 1;
-    buf1[32] = (TeachyTvComputePalIndexArrayEntryByMetaTile(palIndexArray, metaTileEntryAddr[2]) << 12) + 4 * offset + 2;
-    buf1[33] = (TeachyTvComputePalIndexArrayEntryByMetaTile(palIndexArray, metaTileEntryAddr[3]) << 12) + 4 * offset + 3;
+        metaTileEntryAddr = &mStruct->secondaryTileset->metatiles[NUM_TILES_PER_METATILE * (mapEntry - NUM_METATILES_IN_PRIMARY)];
+    buf1[0] = (TeachyTvComputePalIndexArrayEntryByMetaTile(palIndexArray, TeachyTvGetLowestNonEmptyMetatileTile(metaTileEntryAddr, 0)) << 12) + 4 * offset;
+    buf1[1] = (TeachyTvComputePalIndexArrayEntryByMetaTile(palIndexArray, TeachyTvGetLowestNonEmptyMetatileTile(metaTileEntryAddr, 1)) << 12) + 4 * offset + 1;
+    buf1[32] = (TeachyTvComputePalIndexArrayEntryByMetaTile(palIndexArray, TeachyTvGetLowestNonEmptyMetatileTile(metaTileEntryAddr, 2)) << 12) + 4 * offset + 2;
+    buf1[33] = (TeachyTvComputePalIndexArrayEntryByMetaTile(palIndexArray, TeachyTvGetLowestNonEmptyMetatileTile(metaTileEntryAddr, 3)) << 12) + 4 * offset + 3;
+}
+
+// With triple layer metatiles the bottom layer may be empty, so take the palette from the lowest layer that has a tile.
+static u16 TeachyTvGetLowestNonEmptyMetatileTile(const u16 *metaTilesArray, u8 pos)
+{
+    u8 layer;
+
+    for (layer = 0; layer < NUM_TILES_PER_METATILE / 4; layer++)
+    {
+        if (metaTilesArray[layer * 4 + pos] & 0x3FF)
+            return metaTilesArray[layer * 4 + pos];
+    }
+    return metaTilesArray[pos];
 }
 
 static void TeachyTvComputeMapTilesFromTilesetAndMetaTiles(const u16 *metaTilesArray, u8 *blockBuf, u8 *tileset)
 {
-    TeachyTvComputeSingleMapTileBlockFromTilesetAndMetaTiles(blockBuf, &tileset[0x20 * (*metaTilesArray & 0x3FF)], (*metaTilesArray >> 10) & 3);
-    TeachyTvComputeSingleMapTileBlockFromTilesetAndMetaTiles(blockBuf, &tileset[0x20 * (metaTilesArray[4] & 0x3FF)], (metaTilesArray[4] >> 10) & 3);
-    TeachyTvComputeSingleMapTileBlockFromTilesetAndMetaTiles(blockBuf + 0x20, &tileset[0x20 * (metaTilesArray[1] & 0x3FF)], (metaTilesArray[1] >> 10) & 3);
-    TeachyTvComputeSingleMapTileBlockFromTilesetAndMetaTiles(blockBuf + 0x20, &tileset[0x20 * (metaTilesArray[5] & 0x3FF)], (metaTilesArray[5] >> 10) & 3);
-    TeachyTvComputeSingleMapTileBlockFromTilesetAndMetaTiles(blockBuf + 0x40, &tileset[0x20 * (metaTilesArray[2] & 0x3FF)], (metaTilesArray[2] >> 10) & 3);
-    TeachyTvComputeSingleMapTileBlockFromTilesetAndMetaTiles(blockBuf + 0x40, &tileset[0x20 * (metaTilesArray[6] & 0x3FF)], (metaTilesArray[6] >> 10) & 3);
-    blockBuf += 0x60;
-    TeachyTvComputeSingleMapTileBlockFromTilesetAndMetaTiles(blockBuf, &tileset[0x20 * (metaTilesArray[3] & 0x3FF)], (metaTilesArray[3] >> 10) & 3);
-    TeachyTvComputeSingleMapTileBlockFromTilesetAndMetaTiles(blockBuf, &tileset[0x20 * (metaTilesArray[7] & 0x3FF)], (metaTilesArray[7] >> 10) & 3);
+    u8 pos, layer;
+
+    // Flatten all metatile layers (bottom to top) into a single 2x2 tile block
+    for (pos = 0; pos < 4; pos++)
+    {
+        for (layer = 0; layer < NUM_TILES_PER_METATILE / 4; layer++)
+        {
+            u16 tile = metaTilesArray[layer * 4 + pos];
+            TeachyTvComputeSingleMapTileBlockFromTilesetAndMetaTiles(blockBuf + 0x20 * pos, &tileset[0x20 * (tile & 0x3FF)], (tile >> 10) & 3);
+        }
+    }
 }
 
 static void TeachyTvComputeSingleMapTileBlockFromTilesetAndMetaTiles(u8 *blockBuf, u8 *tileset, u8 metaTile)

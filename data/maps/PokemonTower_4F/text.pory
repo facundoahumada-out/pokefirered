@@ -1,0 +1,41 @@
+text PokemonTower_4F_Text_PaulaIntro {
+    "Ghost! No!\n"
+    "Kwaaah!$"
+}
+
+text PokemonTower_4F_Text_PaulaDefeat {
+    "Where is the ghost?$"
+}
+
+text PokemonTower_4F_Text_PaulaPostBattle {
+    "I must have been dreaming…$"
+}
+
+text PokemonTower_4F_Text_LaurelIntro {
+    "Be cursed with me!\n"
+    "Kwaaah!$"
+}
+
+text PokemonTower_4F_Text_LaurelDefeat {
+    "What!$"
+}
+
+text PokemonTower_4F_Text_LaurelPostBattle {
+    "We can't determine the identity of\n"
+    "the ghosts…$"
+}
+
+text PokemonTower_4F_Text_JodyIntro {
+    "Huhuhu…\n"
+    "Beat me not!$"
+}
+
+text PokemonTower_4F_Text_JodyDefeat {
+    "Huh?\n"
+    "Who? What?$"
+}
+
+text PokemonTower_4F_Text_JodyPostBattle {
+    "May the departed POKéMON rest in\n"
+    "peace…$"
+}

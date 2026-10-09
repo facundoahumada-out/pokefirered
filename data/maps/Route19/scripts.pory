@@ -1,0 +1,6 @@
+mapscripts Route19_MapScripts {}
+
+script Route19_EventScript_RouteSign {
+    msgbox(Route19_Text_RouteSign, MSGBOX_SIGN)
+    end
+}

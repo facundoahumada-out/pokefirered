@@ -1,0 +1,44 @@
+text PalletTown_PlayersHouse_1F_Text_AllBoysLeaveOakLookingForYou {
+    "MOM: …Right.\n"
+    "All boys leave home someday.\l"
+    "It said so on TV.\p"
+    "Oh, yes. PROF. OAK, next door, was\n"
+    "looking for you.$"
+}
+
+text PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou {
+    "MOM: …Right.\n"
+    "All girls dream of traveling.\l"
+    "It said so on TV.\p"
+    "Oh, yes. PROF. OAK, next door, was\n"
+    "looking for you.$"
+}
+
+text PalletTown_PlayersHouse_1F_Text_YouShouldTakeQuickRest {
+    "MOM: {PLAYER}!\n"
+    "You should take a quick rest.$"
+}
+
+text PalletTown_PlayersHouse_1F_Text_LookingGreatTakeCare {
+    "MOM: Oh, good! You and your\n"
+    "POKéMON are looking great.\l"
+    "Take care now!$"
+}
+
+text PalletTown_PlayersHouse_1F_Text_MovieOnTVFourBoysOnRailroad {
+    "There's a movie on TV.\n"
+    "Four boys are walking on railroad\l"
+    "tracks.\p"
+    "…I better go, too.$"
+}
+
+text PalletTown_PlayersHouse_1F_Text_MovieOnTVGirlOnBrickRoad {
+    "There's a movie on TV.\n"
+    "A girl with her hair in pigtails is\l"
+    "walking up a brick road.\p"
+    "…I better go, too.$"
+}
+
+text PalletTown_PlayersHouse_1F_Text_OopsWrongSide {
+    "Oops, wrong side…$"
+}

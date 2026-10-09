@@ -1,0 +1,12 @@
+// Unused
+text Text_ItemfinderResponding {
+    "おッ！　ダウジングマシンが\n"
+    "はんのう　してるぞ！\p"
+    "ましたに　どうぐが　うまってる！\n"
+    "‥‥‥$"
+}
+
+text Text_DugUpItemFromGround {
+    "{PLAYER} dug up one {STR_VAR_2}\n"
+    "from deep in the ground.$"
+}

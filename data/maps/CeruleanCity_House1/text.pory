@@ -1,0 +1,82 @@
+text CeruleanCity_House1_Text_BadgesHaveAmazingSecrets {
+    "Only skilled TRAINERS can collect\n"
+    "POKéMON BADGES.\p"
+    "I see you have at least one.\p"
+    "Those BADGES have amazing secrets,\n"
+    "did you know?$"
+}
+
+text CeruleanCity_House1_Text_DescribeWhichBadge {
+    "Now then…\p"
+    "Which of the eight BADGES should\n"
+    "I describe?$"
+}
+
+text CeruleanCity_House1_Text_ComeVisitAnytime {
+    "Come visit me anytime you wish.$"
+}
+
+text CeruleanCity_House1_Text_AttackStatFlash {
+    "The ATTACK stat of all your\n"
+    "POKéMON increases a little bit.\p"
+    "It also lets you use the move\n"
+    "FLASH outside of battle.$"
+}
+
+text CeruleanCity_House1_Text_ObeyLv30Cut {
+    "POKéMON up to Lv. 30 will obey\n"
+    "you.\p"
+    "That includes even outsiders you\n"
+    "obtain in trades.\p"
+    "POKéMON of higher levels will\n"
+    "be unruly in battle, however.\p"
+    "It also lets you use the move\n"
+    "CUT outside of battle.$"
+}
+
+text CeruleanCity_House1_Text_SpeedStatFly {
+    "The SPEED stat of all your\n"
+    "POKéMON increases a little bit.\p"
+    "It also lets you use the move\n"
+    "FLY outside of battle.$"
+}
+
+text CeruleanCity_House1_Text_ObeyLv50Strength {
+    "POKéMON up to Lv. 50 will obey\n"
+    "you.\p"
+    "That includes even outsiders you\n"
+    "obtain in trades.\p"
+    "POKéMON of higher levels will\n"
+    "be unruly in battle, however.\p"
+    "It also lets you use the move\n"
+    "STRENGTH outside of battle.$"
+}
+
+text CeruleanCity_House1_Text_DefenseStatSurf {
+    "The DEFENSE stat of all your\n"
+    "POKéMON increases a little bit.\p"
+    "It also lets you use the move\n"
+    "SURF outside of battle.$"
+}
+
+text CeruleanCity_House1_Text_ObeyLv70RockSmash {
+    "POKéMON up to Lv. 70 will obey\n"
+    "you.\p"
+    "That includes even outsiders you\n"
+    "obtain in trades.\p"
+    "POKéMON of higher levels will\n"
+    "be unruly in battle, however.\p"
+    "It also lets you use the move\n"
+    "ROCK SMASH outside of battle.$"
+}
+
+text CeruleanCity_House1_Text_SpStatsWaterfall {
+    "The SP. ATK and SP. DEF stats of\n"
+    "all your POKéMON rise a little bit.\p"
+    "It also lets you use the move\n"
+    "WATERFALL outside of battle.$"
+}
+
+text CeruleanCity_House1_Text_AllMonsWillObeyYou {
+    "All POKéMON will obey you!$"
+}

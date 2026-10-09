@@ -1,0 +1,266 @@
+// The text here is a copy/paste from Hoenn's various berry NPCs, all unused and untranslated
+text PetalburgCity_Gym_Text_GiveEnigmaBerry {
+    "パパ“やあ　{PLAYER}！\p"
+    "めずらしい　きのみを　てに　いれたから\n"
+    "プレゼント　するよ！$"
+}
+
+text Route104_Text_PlantBerriesInSoilTakeThis {
+    "ふかふかの　つちに　はえている　きのみは\n"
+    "じゆうに　とっても　よいのじゃが‥\p"
+    "1つだけ　きのみを　おなじ　ばしょに　うめる\n"
+    "それが　れいぎと　いうものじゃ\p"
+    "ほれ　これを　わけてやろう$"
+}
+
+text Route104_Text_TrainersOftenMakeMonHoldBerries {
+    "あんた　みたところ　トレーナーじゃろ？\p"
+    "トレーナーは　よく　きのみを　ポケモンに\n"
+    "もたせとるわい\p"
+    "ふやすも　つかうも　あんた　しだいじゃ$"
+}
+
+text Route111_Text_WateredPlantsEveryDayTakeBerry {
+    "いつも　みずを　あげてたら\n"
+    "たくさん　はなが　さいたんだ\p"
+    "そしたら　きのみも　たくさん　できた！\p"
+    "はい！\n"
+    "これ　あげる$"
+}
+
+text Route111_Text_TryToMakeRedPokeblock {
+    "がんばって　あかいポロック　つくるんだ！\n"
+    "{STR_VAR_1}も　がんばってね！$"
+}
+
+text Route111_Text_WhatColorBerriesToLookForToday {
+    "きょうは　なにいろの　きのみを\n"
+    "さがそっかなー$"
+}
+
+text Route114_Text_GatheringBerriesForContest {
+    "ポケモンコンテストの　ゆうしょうを　めざして\n"
+    "きのみを　あつめているんだ\p"
+    "よかったら　きみにも　わけて　あげるよ！$"
+}
+
+text Route114_Text_GoodLuckToYouToo {
+    "きみも　がんばれ！$"
+}
+
+text Route114_Text_WhatBerriesShouldIPlantToday {
+    "きょうは　どの　きのみを　うめるか‥\n"
+    "そして　なにいろの　ポロックを　つくるか‥\p"
+    "なやむのも　また　たのしいよ$"
+}
+
+text Route120_Text_PokeblocksExpressionOfLove {
+    "ケースを　ふると　でてくる　ポロック‥\p"
+    "そして　それを　キャッチして\n"
+    "たべてくれる　ポケモン‥\p"
+    "これって　あい　だよね？$"
+}
+
+text Route120_Text_YouUnderstandTakeThis {
+    "うん　うん！\n"
+    "やっぱ　わかるひとには　わかるよね\p"
+    "これ　あげる$"
+}
+
+text Route120_Text_OwnImpressionsImportantTakeThis {
+    "そっか‥‥\n"
+    "でも　ちがうと　かんじることも　たいせつだね\p"
+    "これ　あげる$"
+}
+
+text Route120_Text_BerryIsRareRaiseItWithCare {
+    "その　きのみは　めずらしいもの　らしいから\n"
+    "たいせつに　そだててね！$"
+}
+
+text Route120_Text_IllGetMoreBerriesFromBerryMaster {
+    "また　きのみめいじんに　もらって　こようっと$"
+}
+
+text LilycoveCity_Text_BerrySuitsYou {
+    "やっぱり\p"
+    "わたしに　スーツが　にあうように\n"
+    "うみには　しおかぜが　にあうな\l"
+    "そして　きみには　きのみが　にあいそうだ‥‥\p"
+    "なんでだろうね？$"
+}
+
+text LilycoveCity_Text_BecauseYoureTrainer {
+    "やっぱり　それは‥‥‥‥\p"
+    "きみが　トレーナーだからだ！$"
+}
+
+text LilycoveCity_Text_PokeblocksSuitPokemon {
+    "やっぱり\p"
+    "わたしに　シンプルさが　にあうように\n"
+    "ポケモンには　ポロックが　にあうな$"
+}
+
+text Route123_BerryMastersHouse_Text_YoureDeservingOfBerry {
+    "わしは　きのみめいじんと　よばれておる\p"
+    "わしは　せかいじゅうを　うつくしい　はなで\n"
+    "うめつくそうと　きのみを　そだてて\l"
+    "そして　くばり　まくって　おるのじゃ\p"
+    "きみにも　きのみを　わけて　あげよう！$"
+}
+
+text Route123_BerryMastersHouse_Text_WhyBeStingyTakeAnother {
+    "ほれ　えんりょ　せずに　もう　ひとつ！$"
+}
+
+text Route123_BerryMastersHouse_Text_VisitPrettyPetalFlowerShop {
+    "カナズミの　ちかくにある　サン·トウカという\n"
+    "フラワーショップも　よろしくの\p"
+    "せかいに　はなを　さかせましょう！$"
+}
+
+text Route123_BerryMastersHouse_Text_DoneForToday {
+    "きょうは　もう　おしまいじゃ\n"
+    "また　おいで\p"
+    "せかいに　はなを　さかせましょう！$"
+}
+
+text Route123_BerryMastersHouse_Text_HeardAGoodSayingLately {
+    "じいさんの　きのみの　そだてかたは\n"
+    "そりゃあ　せかいいちじゃ\p"
+    "わしも　はなが　たかいわい\p"
+    "ところで　あんた\n"
+    "いい　ことばを　きいたことが　ないかい？$"
+}
+
+text Route123_BerryMastersHouse_Text_InspirationalTakeThis {
+    "おお！　とても　よい　ことばじゃ！\n"
+    "かんどう　したわい\p"
+    "ほれ　これを　もっていきなされ$"
+}
+
+text Route123_BerryMastersHouse_Text_GoodSayingTakeThis {
+    "おお！　なかなか　よい　ことばじゃ\n"
+    "あんたも　たいしたもんじゃ\p"
+    "ほれ　これを　もっていきなされ$"
+}
+
+text Route123_BerryMastersHouse_Text_JoyNeverGoesOutOfMyLife {
+    "まごたち　4にんも　じいさんを　しのぐ\n"
+    "おおものに　なるじゃろうて\p"
+    "じんせい　たのしいことが　つきんのう！$"
+}
+
+text Route123_BerryMastersHouse_Text_Ah {
+    "ほう‥‥$"
+}
+
+text Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop {
+    "こんにちは！\p"
+    "はなを　せかいに　ひろめる\n"
+    "フラワーショップ　サン·トウカです！$"
+}
+
+text Route104_PrettyPetalFlowerShop_Text_LearnAboutBerries {
+    "{PLAYER}{KUN}　きのみの　こと　しりたい？$"
+}
+
+text Route104_PrettyPetalFlowerShop_Text_IntroLearnAboutBerries {
+    "あなたの　なまえは‥‥\p"
+    "{PLAYER}{KUN}ね！\n"
+    "とっても　いい　なまえだね！\l"
+    "{PLAYER}{KUN}　きのみのこと　しりたい？$"
+}
+
+text Route104_PrettyPetalFlowerShop_Text_BerriesExplanation {
+    "きのみはね　くろい　ふかふかの　つちの\n"
+    "ところで　たまに　とれるの\l"
+    "でね‥‥\p"
+    "とったら　その1つを　また　うめるの！\p"
+    "そうすると　その　きのみ　から\n"
+    "めがでて　みきが　できて　はながさいて\l"
+    "また　きのみ　が　できるの\p"
+    "そうやって　はなを　ふやして\n"
+    "せかいじゅうを　はなに　するのが\l"
+    "わたしの　ゆめ　なんだ！\p"
+    "だから　{PLAYER}{KUN}も　きのみを　うめて\n"
+    "せかいに　はなを　ふやしてね！$"
+}
+
+text Route104_PrettyPetalFlowerShop_Text_FlowersBringHappiness {
+    "おはなって　とっても　しあわせな　きぶんに\n"
+    "してくれるよね$"
+}
+
+text Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis {
+    "こんにちは！\p"
+    "おはなは　せわを　すれば　するほど\n"
+    "たくさん　きれいに　さいて　くれるの\p"
+    "あなたも　せわを　したく　なった　でしょ？\n"
+    "これ　あげるわ$"
+}
+
+text Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation {
+    "きのみが　そだつ　たびに\n"
+    "じょうろで　みずを　あげてね！\p"
+    "あとね\p"
+    "きのみは　ずっと　ずっと　ほうっておくと\n"
+    "じめんに　おちてしまうの\l"
+    "でもね　そこから　また　めがでて　くるの！\p"
+    "すごいよね！\n"
+    "いきものの　ちからを　かんじるよね$"
+}
+
+text Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers {
+    "おねーちゃんたちを　みならって\n"
+    "がんばって　おはなを　そだててるの\p"
+    "はい！　これあげる！$"
+}
+
+text Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries {
+    "きのみは　うめて　おおきく　したり\n"
+    "ポケモンに　もたせたり　できるの\p"
+    "でも　さいきん　きのみを　いくつか　まぜると\n"
+    "ポケモンの　おかしになる　きかいが\l"
+    "ある　らしいんだ\p"
+    "あたしも　おかし　ほしー$"
+}
+
+text SootopolisCity_Text_NameIsKiriHaveOneOfThese {
+    "{STR_VAR_1}　なまえ　なんていうの？\p"
+    "‥‥‥　‥‥‥　‥‥‥\n"
+    "へー　いいねー\p"
+    "わたしは　キリ　っていう　なまえなの\p"
+    "パパと　ママが　すくすくと　そだって\n"
+    "こころの　あたたかい　おんなのこに　なって\l"
+    "ほしいっていう　ねがいを　こめたんだって！\p"
+    "{STR_VAR_1}にも　これ　あげる$"
+}
+
+text SootopolisCity_Text_GiveYouThisBerryToo {
+    "あと　{STR_VAR_1}には　キリの　だいすきな\n"
+    "この　きのみも　あげちゃう！$"
+}
+
+text SootopolisCity_Text_WhatKindOfWishInYourName {
+    "{STR_VAR_1}の　なまえには\n"
+    "どんな　ねがいが　こめられてるの？$"
+}
+
+text SootopolisCity_Text_LikeSeasonBornIn {
+    "はる　なつ　あき　ふゆ\n"
+    "はるに　うまれると　はるが　すきで\l"
+    "なつに　うまれると　なつが　すきなのかな？$"
+}
+
+text SootopolisCity_Text_ThenILoveAutumn {
+    "じゃあ　キリは　あきに　うまれたから\n"
+    "あきが　だいすき！\p"
+    "{STR_VAR_1}は　いつが　すき？$"
+}
+
+text SootopolisCity_Text_OhDoesntMatter {
+    "そっか‥\n"
+    "かんけいないのか‥\p"
+    "しりたいことって　たくさんあるなー$"
+}

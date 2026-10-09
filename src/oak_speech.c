@@ -647,7 +647,7 @@ static const u8 *const sFemaleNameChoices[] =
 static const u8 *const sRivalNameChoices[] =
 {
 #if defined(FIRERED)
-    gNameChoice_Green,
+    gNameChoice_Blue,
     gNameChoice_Gary,
     gNameChoice_Kaz,
     gNameChoice_Toru
@@ -2142,10 +2142,7 @@ static void GetDefaultName(u8 hasPlayerBeenNamed, u8 rivalNameChoice)
     u8 i;
     if (hasPlayerBeenNamed == FALSE)
     {
-        if (gSaveBlock2Ptr->playerGender == MALE)
-            src = sMaleNameChoices[Random() % ARRAY_COUNT(sMaleNameChoices)];
-        else
-            src = sFemaleNameChoices[Random() % ARRAY_COUNT(sFemaleNameChoices)];
+        src = gNameChoice_Red;
         dest = gSaveBlock2Ptr->playerName;
     }
     else

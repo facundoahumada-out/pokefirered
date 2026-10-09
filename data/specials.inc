@@ -453,6 +453,7 @@ gSpecials::
 	def_special LoopWingFlapSound
 	def_special CreateEnemyEventMon
 	def_special GetRockClimbUsableMonPartyIndex
+	def_special GetMushroomPatchItem
 	def_special PickMushroomPatch
 	def_special RefreshMushroomPatchesOnMap
 gSpecialsEnd::

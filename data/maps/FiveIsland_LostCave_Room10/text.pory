@@ -1,0 +1,18 @@
+text FiveIsland_LostCave_Room10_Text_SelphyIntro {
+    "W-what do you intend to do with\n"
+    "me?$"
+}
+
+text FiveIsland_LostCave_Room10_Text_SelphyDefeat {
+    "Oh… I was afraid that you meant to\n"
+    "harm me.$"
+}
+
+text FiveIsland_LostCave_Room10_Text_MayIAskYouToTakeMeHome {
+    "I am so glad that you happened\n"
+    "here.\p"
+    "I grew rather bored of walking,\n"
+    "and I am feeling fatigued.\p"
+    "May I ask you to take me home\n"
+    "from here?$"
+}

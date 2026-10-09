@@ -1,0 +1,108 @@
+text SevenIsland_House_Room1_Text_OnlyEnjoymentWatchingBattles {
+    "I may not look like much now,\n"
+    "but when I was younger…\p"
+    "I flew everywhere, challenging\n"
+    "TRAINERS wherever I found them.\p"
+    "Now, my only source of enjoyment\n"
+    "is reminiscing about the past while\l"
+    "watching battles.$"
+}
+
+text SevenIsland_House_Room1_Text_SlightBreezeAroundBox {
+    "There is a slight breeze blowing\n"
+    "around the box.$"
+}
+
+text SevenIsland_House_Room1_Text_ChallengeVisitingTrainer {
+    "Ah!\n"
+    "Welcome, my friend!\p"
+    "Let me tell you something. There's\n"
+    "a hidden room in the basement.\p"
+    "A TRAINER named {STR_VAR_1} is\n"
+    "waiting there now.\p"
+    "Tell me, you did come to challenge\n"
+    "{STR_VAR_1}, am I right?$"
+}
+
+text SevenIsland_House_Room1_Text_OhYouWontBattle {
+    "Oh…\n"
+    "You won't battle…\p"
+    "I see, I see.\n"
+    "… …\p"
+    "Well, perhaps if you change your\n"
+    "mind, do come back.$"
+}
+
+text SevenIsland_House_Room1_Text_LimitThreeMonsPerSide {
+    "Ah!\n"
+    "You will battle for me?\p"
+    "It was worth my time moving the\n"
+    "box aside, then.\p"
+    "… …\n"
+    "But there is one slight problem.\p"
+    "This hidden room is not built very\n"
+    "sturdy.\p"
+    "Can I get you to limit it to\n"
+    "battles of three POKéMON per side?$"
+}
+
+text SevenIsland_House_Room1_Text_SaveProgressBeforeBattle {
+    "Fine! Before your battle, would\n"
+    "you like to save your game?$"
+}
+
+text SevenIsland_House_Room1_Text_DontHoldAnythingBack {
+    "All right.\n"
+    "Don't hold anything back!$"
+}
+
+// Unused
+text SevenIsland_House_Room1_Text_StrVar1_1 {
+    "{STR_VAR_1}$"
+}
+
+text SevenIsland_House_Room2_Text_MatchEndedUpDraw {
+    "The match ended up a draw.$"
+}
+
+text SevenIsland_House_Room1_Text_DrawWasIt {
+    "A draw, was it?\p"
+    "However, let me say that it was\n"
+    "a worthy spectacle.\p"
+    "I'd say it was a wonderful battle\n"
+    "with a real sense of depth!$"
+}
+
+// Unused
+text SevenIsland_House_Room1_Text_StrVar1_2 {
+    "{STR_VAR_1}$"
+}
+
+text SevenIsland_House_Room1_Text_AstoundingBattle {
+    "Bravo!\p"
+    "Bravo, indeed!\n"
+    "What an astounding battle!\p"
+    "It was so astounding, why, it keeps\n"
+    "filling my eyes with tears!\p"
+    "The thrust and parry of expertly\n"
+    "used techniques!\p"
+    "The clash of power upon power!\p"
+    "Yes!\n"
+    "It was sheer magnificence!$"
+}
+
+// Unused
+text SevenIsland_House_Room1_Text_StrVar1_3 {
+    "{STR_VAR_1}$"
+}
+
+text SevenIsland_House_Room1_Text_FeelYourDisappointment {
+    "Too bad!\n"
+    "I feel your disappointment.\p"
+    "However, that disappointment is\n"
+    "what will make you better.\p"
+    "Use it, learn from it, and make it\n"
+    "motivate you to seek greatness.\p"
+    "Forget not this disappointment\n"
+    "and redouble your training!$"
+}

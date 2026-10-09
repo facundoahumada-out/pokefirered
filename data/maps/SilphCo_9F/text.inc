@@ -1,47 +1,59 @@
 SilphCo_9F_Text_YouShouldTakeQuickNap::
-    .string "You look tired.\n"
-    .string "You should take a quick nap.$"
+# 1 "data/maps/SilphCo_9F/text.pory"
+	.string "You look tired.\n"
+	.string "You should take a quick nap.$"
 
 SilphCo_9F_Text_DontGiveUp::
-    .string "Don't give up!$"
+# 6 "data/maps/SilphCo_9F/text.pory"
+	.string "Don't give up!$"
 
 SilphCo_9F_Text_ThankYouSoMuch::
-    .string "Thank you so much.$"
+# 10 "data/maps/SilphCo_9F/text.pory"
+	.string "Thank you so much.$"
 
 SilphCo_9F_Text_Grunt1Intro::
-    .string "Your POKéMON seem to adore you,\n"
-    .string "kid!$"
+# 14 "data/maps/SilphCo_9F/text.pory"
+	.string "Your POKéMON seem to adore you,\n"
+	.string "kid!$"
 
 SilphCo_9F_Text_Grunt1Defeat::
-    .string "Ghaaah!$"
+# 19 "data/maps/SilphCo_9F/text.pory"
+	.string "Ghaaah!$"
 
 SilphCo_9F_Text_Grunt1PostBattle::
-    .string "If I had started as a TRAINER at\n"
-    .string "your age…$"
+# 23 "data/maps/SilphCo_9F/text.pory"
+	.string "If I had started as a TRAINER at\n"
+	.string "your age…$"
 
 SilphCo_9F_Text_EdIntro::
-    .string "Your POKéMON have weak points!\n"
-    .string "I can nail them!$"
+# 28 "data/maps/SilphCo_9F/text.pory"
+	.string "Your POKéMON have weak points!\n"
+	.string "I can nail them!$"
 
 SilphCo_9F_Text_EdDefeat::
-    .string "You hammered me!$"
+# 33 "data/maps/SilphCo_9F/text.pory"
+	.string "You hammered me!$"
 
 SilphCo_9F_Text_EdPostBattle::
-    .string "Exploiting weak spots does work.\n"
-    .string "Think about type advantages.$"
+# 37 "data/maps/SilphCo_9F/text.pory"
+	.string "Exploiting weak spots does work.\n"
+	.string "Think about type advantages.$"
 
 SilphCo_9F_Text_Grunt2Intro::
-    .string "I am one of the four ROCKET\n"
-    .string "BROTHERS!$"
+# 42 "data/maps/SilphCo_9F/text.pory"
+	.string "I am one of the four ROCKET\n"
+	.string "BROTHERS!$"
 
 SilphCo_9F_Text_Grunt2Defeat::
-    .string "Warg!\n"
-    .string "Brothers, I lost!$"
+# 47 "data/maps/SilphCo_9F/text.pory"
+	.string "Warg!\n"
+	.string "Brothers, I lost!$"
 
 SilphCo_9F_Text_Grunt2PostBattle::
-    .string "My brothers will avenge me!$"
+# 52 "data/maps/SilphCo_9F/text.pory"
+	.string "My brothers will avenge me!$"
 
 SilphCo_9F_Text_FloorSign::
-    .string "SILPH CO. HEAD OFFICE\n"
-    .string "9F$"
-
+# 56 "data/maps/SilphCo_9F/text.pory"
+	.string "SILPH CO. HEAD OFFICE\n"
+	.string "9F$"

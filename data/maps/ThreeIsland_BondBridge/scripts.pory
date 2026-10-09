@@ -1,0 +1,11 @@
+mapscripts ThreeIsland_BondBridge_MapScripts {}
+
+script ThreeIsland_BondBridge_EventScript_BerryForestSign {
+    msgbox(ThreeIsland_BondBridge_Text_BerryForestAhead, MSGBOX_SIGN)
+    end
+}
+
+script ThreeIsland_BondBridge_EventScript_BondBridgeSign {
+    msgbox(ThreeIsland_BondBridge_Text_BondBridgeSign, MSGBOX_SIGN)
+    end
+}

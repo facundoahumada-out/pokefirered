@@ -1,0 +1,145 @@
+text ViridianCity_Text_CanCarryMonsAnywhere {
+    "Those POKé BALLS at your waist!\n"
+    "You have POKéMON, don't you?\p"
+    "It's great that you can carry and\n"
+    "use POKéMON anytime, anywhere.$"
+}
+
+text ViridianCity_Text_GymClosedWonderWhoLeaderIs {
+    "This POKéMON GYM is always closed.\p"
+    "I wonder who the LEADER is?$"
+}
+
+text ViridianCity_Text_ViridiansGymLeaderReturned {
+    "VIRIDIAN GYM's LEADER returned!$"
+}
+
+text ViridianCity_Text_WantToKnowAboutCaterpillarMons {
+    "You want to know about the two\n"
+    "kinds of caterpillar POKéMON?$"
+}
+
+text ViridianCity_Text_OhOkayThen {
+    "Oh, okay then!$"
+}
+
+text ViridianCity_Text_ExplainCaterpieWeedle {
+    "CATERPIE has no poison,\n"
+    "but WEEDLE does.\p"
+    "Watch that your POKéMON aren't\n"
+    "stabbed by WEEDLE's POISON STING.$"
+}
+
+text ViridianCity_Text_GrandpaHasntHadCoffeeYet {
+    "Oh, Grandpa!\n"
+    "Don't be so mean!\p"
+    "I'm so sorry.\n"
+    "He hasn't had his coffee yet.$"
+}
+
+text ViridianCity_Text_GoShoppingInPewterOccasionally {
+    "I go shopping in PEWTER CITY\n"
+    "occasionally.\p"
+    "I have to take the winding trail in\n"
+    "VIRIDIAN FOREST when I go.$"
+}
+
+text ViridianCity_Text_ThisIsPrivateProperty {
+    "I absolutely forbid you from\n"
+    "going through here!\p"
+    "This is private property!$"
+}
+
+text ViridianCity_Text_ShowYouHowToCatchMons {
+    "Well, now, I've had my coffee, and\n"
+    "that's what I need to get going!\p"
+    "Hm?\n"
+    "What is that red box you have?\p"
+    "Ah, so you're working on your\n"
+    "POKéDEX.\p"
+    "Then let me give you a word of\n"
+    "advice.\p"
+    "Whenever you catch a POKéMON,\n"
+    "the POKéDEX automatically updates\l"
+    "its data.\p"
+    "…You don't know how to catch\n"
+    "a POKéMON?\p"
+    "I suppose I had better show you\n"
+    "then!$"
+}
+
+text ViridianCity_Text_ThatWasEducationalTakeThis {
+    "There! Now tell me, that was\n"
+    "educational, was it not?\p"
+    "And here, take this, too.$"
+}
+
+text ViridianCity_Text_WatchThatToLearnBasics {
+    "If there's something you don't\n"
+    "understand, watch that.\p"
+    "It will teach you about the basics\n"
+    "of being a POKéMON TRAINER.$"
+}
+
+text ViridianCity_Text_WeakenMonsFirstToCatch {
+    "Well, now, I've had my coffee, and\n"
+    "that's what I need to get going!\p"
+    "But I made it too strong.\n"
+    "It gave me a headache…\p"
+    "Incidentally, are you filling your\n"
+    "POKéDEX?\p"
+    "At first, focus on weakening the\n"
+    "POKéMON before trying to catch it.$"
+}
+
+text ViridianCity_Text_HowsTeachyTVHelping {
+    "Well, now, I've had my coffee, and\n"
+    "that's what I need to get going!\p"
+    "But I made it too strong.\n"
+    "It gave me a headache…\p"
+    "Incidentally, is my old TEACHY TV\n"
+    "helping you?$"
+}
+
+text ViridianCity_Text_MyGrandsonOnTheShow {
+    "Wahaha!\n"
+    "It's my grandson on the show!\p"
+    "Since he's the one doing the\n"
+    "teaching, you're bound to learn.$"
+}
+
+text ViridianCity_Text_TooBusyForTeachyTV {
+    "Hm… You're too busy to not even\n"
+    "have the time for TEACHY TV…\p"
+    "Time is money, and neither should\n"
+    "be ill spent…$"
+}
+
+text ViridianCity_Text_CitySign {
+    "VIRIDIAN CITY \n"
+    "The Eternally Green Paradise$"
+}
+
+text ViridianCity_Text_CatchMonsForEasierBattles {
+    "TRAINER TIPS\p"
+    "Catch POKéMON and expand your\n"
+    "collection.\p"
+    "The more you have, the easier it\n"
+    "is to battle.$"
+}
+
+text ViridianCity_Text_MovesLimitedByPP {
+    "TRAINER TIPS\p"
+    "The battle moves of POKéMON are\n"
+    "limited by their POWER POINTS, PP.\p"
+    "To replenish PP, rest your tired\n"
+    "POKéMON at a POKéMON CENTER.$"
+}
+
+text ViridianCity_Text_GymSign {
+    "VIRIDIAN CITY POKéMON GYM$"
+}
+
+text ViridianCity_Text_GymDoorsAreLocked {
+    "VIRIDIAN GYM's doors are locked…$"
+}

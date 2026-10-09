@@ -1,0 +1,60 @@
+text CeladonCity_Condominiums_RoofRoom_Text_TheresNothingIDontKnow {
+    "There is nothing that I don't know,\n"
+    "like I wrote on the blackboard.\p"
+    "I know about the world of POKéMON\n"
+    "in your GAME BOY ADVANCE!\p"
+    "Get together with your friends and\n"
+    "enjoy trading POKéMON!$"
+}
+
+text CeladonCity_Condominiums_RoofRoom_Text_ObtainedAnEevee {
+    "{PLAYER} obtained an EEVEE!$"
+}
+
+text CeladonCity_Condominiums_RoofRoom_Text_BoxIsFull {
+    "ポケモンが　いっぱいだ\n"
+    "ボックスを　かえて　きなさい$"
+}
+
+text CeladonCity_Condominiums_RoofRoom_Text_WirelessAdapterLecture {
+    "POKéMON Lecture\p"
+    "Playing with the Wireless Adapter$"
+}
+
+text CeladonCity_Condominiums_RoofRoom_Text_ReadWhichHeading {
+    "Which heading do you want to read?$"
+}
+
+text CeladonCity_Condominiums_RoofRoom_Text_ExplainWirelessClub {
+    "The POKéMON WIRELESS CLUB is\n"
+    "upstairs at any POKéMON CENTER.\p"
+    "Visit one to link up with friend(s)\n"
+    "using your Wireless Adapter.$"
+}
+
+text CeladonCity_Condominiums_RoofRoom_Text_ExplainDirectCorner {
+    "To link only with a friend, go to\n"
+    "the DIRECT CORNER.\p"
+    "It is the right counter at the\n"
+    "POKéMON WIRELESS CLUB.\p"
+    "Go into the TRADE CORNER or the\n"
+    "COLOSSEUM with your friend.$"
+}
+
+text CeladonCity_Condominiums_RoofRoom_Text_ExplainUnionRoom {
+    "To link and communicate with\n"
+    "anyone, go to the UNION ROOM.\p"
+    "It is the left counter at the\n"
+    "POKéMON WIRELESS CLUB.\p"
+    "Go to the UNION ROOM and enjoy\n"
+    "meeting other TRAINERS.$"
+}
+
+text CeladonCity_Condominiums_RoofRoom_Text_PamphletOnTMs {
+    "It's a pamphlet on TMs.\p"
+    "… …\p"
+    "There are fifty TMs in all.\p"
+    "There are also seven HMs that\n"
+    "can be used repeatedly.\p"
+    "SILPH CO.$"
+}

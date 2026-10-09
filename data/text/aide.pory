@@ -1,0 +1,18 @@
+text Aide_Text_HaventCaughtEnoughMonsForItem {
+    "Let's see…\n"
+    "Uh-oh! You have caught only\l"
+    "{STR_VAR_3} kinds of POKéMON!\p"
+    "You need {STR_VAR_1} kinds\n"
+    "if you want the {STR_VAR_2}.$"
+}
+
+text Aide_Text_GetEnoughMonsComeBackForItem {
+    "…Oh. I see.\p"
+    "When you get {STR_VAR_1} kinds of POKéMON,\n"
+    "come back for the {STR_VAR_2}.$"
+}
+
+text Aide_Text_DontHaveAnyRoomForItem {
+    "Oh! I see you don't have any\n"
+    "room for the {STR_VAR_2}.$"
+}

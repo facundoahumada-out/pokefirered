@@ -1,0 +1,68 @@
+text CeruleanCity_BikeShop_Text_WelcomeToBikeShop {
+    "Hi!\n"
+    "Welcome to our BIKE SHOP.\p"
+    "Have we got just the BIKE for\n"
+    "you!$"
+}
+
+text CeruleanCity_BikeShop_Text_SorryYouCantAffordIt {
+    "Sorry!\n"
+    "You can't afford it!$"
+}
+
+text CeruleanCity_BikeShop_Text_OhBikeVoucherHereYouGo {
+    "Oh, that's…\p"
+    "A BIKE VOUCHER!\p"
+    "Okay!\n"
+    "Here you go!$"
+}
+
+text CeruleanCity_BikeShop_Text_ExchangedVoucherForBicycle {
+    "{PLAYER} exchanged the\n"
+    "BIKE VOUCHER for a BICYCLE.$"
+}
+
+text CeruleanCity_BikeShop_Text_ThankYouComeAgain {
+    "Thank you!\n"
+    "Come back again sometime!$"
+}
+
+text CeruleanCity_BikeShop_Text_HowDoYouLikeNewBicycle {
+    "How do you like your new BICYCLE?\n"
+    "Do you like how it rides?\p"
+    "You can take it out on CYCLING\n"
+    "ROAD and even into caves!$"
+}
+
+text CeruleanCity_BikeShop_Text_MakeRoomForBicycle {
+    "You better make room for your\n"
+    "BICYCLE!$"
+}
+
+text CeruleanCity_BikeShop_Text_CityBikeGoodEnoughForMe {
+    "A plain city bike is good enough\n"
+    "for me.\p"
+    "After all, you can't put a shopping\n"
+    "basket on a mountain bike.$"
+}
+
+text CeruleanCity_BikeShop_Text_BikesCoolButExpensive {
+    "These bikes are cool, but they're\n"
+    "way expensive!$"
+}
+
+text CeruleanCity_BikeShop_Text_WowYourBikeIsCool {
+    "Wow.\n"
+    "Your BIKE is really cool!$"
+}
+
+// Unused
+text CeruleanCity_BikeShop_Text_GermanFoldableBicyleFinallyOnMarket {
+    "ついに　はつばい！\p"
+    "ドイツ　せい　さいこうきゅう\n"
+    "おりたたみ　じてんしゃ！$"
+}
+
+text CeruleanCity_BikeShop_Text_ShinyNewBicycle {
+    "A shiny new BICYCLE!$"
+}

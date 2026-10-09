@@ -1,0 +1,104 @@
+text MtMoon_B2F_Text_MiguelIntro {
+    "Hey, stop!\p"
+    "I found these fossils!\n"
+    "They're both mine!$"
+}
+
+text MtMoon_B2F_Text_MiguelDefeat {
+    "Okay!\n"
+    "I'll share!$"
+}
+
+text MtMoon_B2F_Text_WellEachTakeAFossil {
+    "We'll each take a fossil!\n"
+    "No being greedy!$"
+}
+
+text MtMoon_B2F_Text_ThenThisFossilIsMine {
+    "All right.\n"
+    "Then this fossil is mine!$"
+}
+
+text MtMoon_B2F_Text_LabOnCinnabarRegeneratesFossils {
+    "Far away, on CINNABAR ISLAND,\n"
+    "there's a POKéMON LAB.\p"
+    "They do research on regenerating\n"
+    "fossils.$"
+}
+
+text MtMoon_B2F_Text_Grunt1Intro {
+    "We, TEAM ROCKET, shall find the\n"
+    "fossils!\p"
+    "Reviving POKéMON from them will\n"
+    "earn us huge riches!$"
+}
+
+text MtMoon_B2F_Text_Grunt1Defeat {
+    "Urgh!\n"
+    "Now I'm mad!$"
+}
+
+text MtMoon_B2F_Text_Grunt1PostBattle {
+    "You made me mad!\n"
+    "TEAM ROCKET will blacklist you!$"
+}
+
+text MtMoon_B2F_Text_Grunt2Intro {
+    "We, TEAM ROCKET, are POKéMON\n"
+    "gangsters!\l"
+    "We strike fear with our strength!$"
+}
+
+text MtMoon_B2F_Text_Grunt2Defeat {
+    "I blew it!$"
+}
+
+text MtMoon_B2F_Text_Grunt2PostBattle {
+    "Darn it all!\n"
+    "My associates won't stand for this!$"
+}
+
+text MtMoon_B2F_Text_Grunt3Intro {
+    "We're pulling a big job here!\n"
+    "Get lost, kid!$"
+}
+
+text MtMoon_B2F_Text_Grunt3Defeat {
+    "So, you are good…$"
+}
+
+text MtMoon_B2F_Text_Grunt3PostBattle {
+    "If you find a fossil, give it to me\n"
+    "and scram!$"
+}
+
+text MtMoon_B2F_Text_Grunt4Intro {
+    "Little kids shouldn't be messing\n"
+    "around with grown-ups!\p"
+    "It could be bad news!$"
+}
+
+text MtMoon_B2F_Text_Grunt4Defeat {
+    "I'm steamed!$"
+}
+
+text MtMoon_B2F_Text_Grunt4PostBattle {
+    "POKéMON lived here long before\n"
+    "people came.$"
+}
+
+text MtMoon_B2F_Text_YouWantDomeFossil {
+    "Do you want the DOME FOSSIL?$"
+}
+
+text MtMoon_B2F_Text_YouWantHelixFossil {
+    "Do you want the HELIX FOSSIL?$"
+}
+
+text MtMoon_B2F_Text_ObtainedHelixFossil {
+    "Obtained the HELIX FOSSIL!$"
+}
+
+text MtMoon_B2F_Text_ObtainedDomeFossil {
+    "Obtained the DOME FOSSIL!$"
+}

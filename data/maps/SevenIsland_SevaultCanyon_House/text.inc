@@ -1,22 +1,28 @@
 SevenIsland_SevaultCanyon_House_Text_ChanseyDanceJoinIn::
-    .string "Dance, dance!\n"
-    .string "CHANSEY Dance!\p"
-    .string "You join in, too!\n"
-    .string "Dance, dance!$"
+# 1 "data/maps/SevenIsland_SevaultCanyon_House/text.pory"
+	.string "Dance, dance!\n"
+	.string "CHANSEY Dance!\p"
+	.string "You join in, too!\n"
+	.string "Dance, dance!$"
 
 SevenIsland_SevaultCanyon_House_Text_WouldYouLikeToDance::
-    .string "Would you like to dance?$"
+# 8 "data/maps/SevenIsland_SevaultCanyon_House/text.pory"
+	.string "Would you like to dance?$"
 
 SevenIsland_SevaultCanyon_House_Text_ComeOnDance::
-    .string "Come on, dance!$"
+# 12 "data/maps/SevenIsland_SevaultCanyon_House/text.pory"
+	.string "Come on, dance!$"
 
 SevenIsland_SevaultCanyon_House_Text_DancedChanseyDance::
-    .string "{PLAYER} danced the CHANSEY Dance!$"
+# 16 "data/maps/SevenIsland_SevaultCanyon_House/text.pory"
+	.string "{PLAYER} danced the CHANSEY Dance!$"
 
 SevenIsland_SevaultCanyon_House_Text_YoureAllChipperNow::
-    .string "Ahahahaha!\p"
-    .string "There, you're all chipper now!\n"
-    .string "Lucky!$"
+# 20 "data/maps/SevenIsland_SevaultCanyon_House/text.pory"
+	.string "Ahahahaha!\p"
+	.string "There, you're all chipper now!\n"
+	.string "Lucky!$"
 
 SevenIsland_SevaultCanyon_House_Text_Chansey::
-    .string "CHANSEY: Chansi! Chansi!$"
+# 26 "data/maps/SevenIsland_SevaultCanyon_House/text.pory"
+	.string "CHANSEY: Chansi! Chansi!$"

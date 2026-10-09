@@ -1,28 +1,34 @@
 PokemonMansion_B1F_Text_LewisIntro::
-    .string "Uh-oh…\n"
-    .string "Where am I now?$"
+# 1 "data/maps/PokemonMansion_B1F/text.pory"
+	.string "Uh-oh…\n"
+	.string "Where am I now?$"
 
 PokemonMansion_B1F_Text_LewisDefeat::
-    .string "Awooh!$"
+# 6 "data/maps/PokemonMansion_B1F/text.pory"
+	.string "Awooh!$"
 
 PokemonMansion_B1F_Text_LewisPostBattle::
-    .string "You can find stuff lying around.\n"
-    .string "The residents must've left them.$"
+# 10 "data/maps/PokemonMansion_B1F/text.pory"
+	.string "You can find stuff lying around.\n"
+	.string "The residents must've left them.$"
 
 PokemonMansion_B1F_Text_IvanIntro::
-    .string "This place is ideal for a lab.\n"
-    .string "Look at all this space.$"
+# 15 "data/maps/PokemonMansion_B1F/text.pory"
+	.string "This place is ideal for a lab.\n"
+	.string "Look at all this space.$"
 
 PokemonMansion_B1F_Text_IvanDefeat::
-    .string "What was that for?$"
+# 20 "data/maps/PokemonMansion_B1F/text.pory"
+	.string "What was that for?$"
 
 PokemonMansion_B1F_Text_IvanPostBattle::
-    .string "I like it here.\n"
-    .string "It's conducive to my studies.$"
+# 24 "data/maps/PokemonMansion_B1F/text.pory"
+	.string "I like it here.\n"
+	.string "It's conducive to my studies.$"
 
 PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful::
-    .string "Diary: Sept. 1\n"
-    .string "MEWTWO is far too powerful.\p"
-    .string "We have failed to curb its vicious\n"
-    .string "tendencies…$"
-
+# 29 "data/maps/PokemonMansion_B1F/text.pory"
+	.string "Diary: Sept. 1\n"
+	.string "MEWTWO is far too powerful.\p"
+	.string "We have failed to curb its vicious\n"
+	.string "tendencies…$"

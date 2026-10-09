@@ -1,0 +1,29 @@
+text PokemonMansion_1F_Text_TedIntro {
+    "Who are you?\n"
+    "There shouldn't be anyone here.$"
+}
+
+text PokemonMansion_1F_Text_TedDefeat {
+    "Ouch!$"
+}
+
+text PokemonMansion_1F_Text_TedPostBattle {
+    "A key? I don't know what you're\n"
+    "talking about.$"
+}
+
+text PokemonMansion_1F_Text_JohnsonIntro {
+    "W-w-waah! You startled me!\n"
+    "I thought you were a ghost.$"
+}
+
+text PokemonMansion_1F_Text_JohnsonDefeat {
+    "Tch!\n"
+    "I can't get any wins.$"
+}
+
+text PokemonMansion_1F_Text_JohnsonPostBattle {
+    "I was exploring here by myself,\n"
+    "but I feel spooked.\p"
+    "I ought to go soon.$"
+}

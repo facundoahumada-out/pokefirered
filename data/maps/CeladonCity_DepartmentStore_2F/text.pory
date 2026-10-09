@@ -1,0 +1,23 @@
+text CeladonCity_DepartmentStore_2F_Text_SuperRepelMorePowerfulRepel {
+    "SUPER REPEL keeps weak POKéMON at\n"
+    "bay…\p"
+    "Hmm, it's a more powerful REPEL.$"
+}
+
+text CeladonCity_DepartmentStore_2F_Text_BuyReviveForLongOutings {
+    "For long outings, you should buy\n"
+    "REVIVE.$"
+}
+
+text CeladonCity_DepartmentStore_2F_Text_FloorSign {
+    "Top-Grade Items for TRAINERS!\p"
+    "2F: TRAINER'S MARKET$"
+}
+
+text CeladonCity_DepartmentStore_2F_Text_LanceComesToBuyCapes {
+    "We have a customer, LANCE, who\n"
+    "occasionally comes.\p"
+    "He always buys capes.\p"
+    "I wonder… Does he have many\n"
+    "identical capes at home?$"
+}

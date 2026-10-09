@@ -12,7 +12,7 @@
 #define MAX_MAP_DATA_SIZE 0x2800
 #define VIRTUAL_MAP_SIZE (MAX_MAP_DATA_SIZE)
 
-#define NUM_TILES_PER_METATILE 8
+#define NUM_TILES_PER_METATILE 12
 
 // Map coordinates are offset by 7 when using the map
 // buffer because it needs to load sufficient border

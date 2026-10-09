@@ -1,0 +1,64 @@
+text PokemonTower_5F_Text_RestHereInPurifiedSpace {
+    "Come, child!\n"
+    "I have purified this space.\l"
+    "You can rest here.$"
+}
+
+text PokemonTower_5F_Text_TammyIntro {
+    "Give…me…\n"
+    "your…all…$"
+}
+
+text PokemonTower_5F_Text_TammyDefeat {
+    "Gasp!$"
+}
+
+text PokemonTower_5F_Text_TammyPostBattle {
+    "I was under possession.$"
+}
+
+text PokemonTower_5F_Text_RuthIntro {
+    "You…shall…\n"
+    "join…us…$"
+}
+
+text PokemonTower_5F_Text_RuthDefeat {
+    "What a nightmare!$"
+}
+
+text PokemonTower_5F_Text_RuthPostBattle {
+    "I was possessed.$"
+}
+
+text PokemonTower_5F_Text_KarinaIntro {
+    "Zombies!$"
+}
+
+text PokemonTower_5F_Text_KarinaDefeat {
+    "Ha?$"
+}
+
+text PokemonTower_5F_Text_KarinaPostBattle {
+    "I regained my senses.$"
+}
+
+text PokemonTower_5F_Text_JanaeIntro {
+    "Urgah…\n"
+    "Urff…$"
+}
+
+text PokemonTower_5F_Text_JanaeDefeat {
+    "Whoo!$"
+}
+
+text PokemonTower_5F_Text_JanaePostBattle {
+    "I fell to evil spirits despite my\n"
+    "training in the mountains…$"
+}
+
+text PokemonTower_5F_Text_PurifiedZoneMonsFullyHealed {
+    "Entered the purified and protected\n"
+    "zone.\p"
+    "{PLAYER}'s POKéMON were fully\n"
+    "healed.$"
+}

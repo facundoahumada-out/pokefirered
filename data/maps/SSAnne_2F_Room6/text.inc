@@ -1,7 +1,8 @@
 SSAnne_2F_Room6_Text_CaptainIsAwfullySick::
-    .string "The CAPTAIN said he's awfully sick.\n"
-    .string "He was all pale.$"
+# 1 "data/maps/SSAnne_2F_Room6/text.pory"
+	.string "The CAPTAIN said he's awfully sick.\n"
+	.string "He was all pale.$"
 
 SSAnne_2F_Room6_Text_ManyPeopleGetSeasick::
-    .string "I hear many people get seasick.$"
-
+# 6 "data/maps/SSAnne_2F_Room6/text.pory"
+	.string "I hear many people get seasick.$"

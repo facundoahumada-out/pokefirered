@@ -1,0 +1,11 @@
+mapscripts OneIsland_KindleRoad_MapScripts {}
+
+script OneIsland_KindleRoad_EventScript_RouteSign {
+    msgbox(OneIsland_KindleRoad_Text_RouteSign, MSGBOX_SIGN)
+    end
+}
+
+script OneIsland_KindleRoad_EventScript_EmberSpaSign {
+    msgbox(OneIsland_KindleRoad_Text_EmberSpaSign, MSGBOX_SIGN)
+    end
+}

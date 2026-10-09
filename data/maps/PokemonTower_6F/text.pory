@@ -1,0 +1,54 @@
+text PokemonTower_6F_Text_AngelicaIntro {
+    "Give…me…\n"
+    "blood…$"
+}
+
+text PokemonTower_6F_Text_AngelicaDefeat {
+    "Groan!$"
+}
+
+text PokemonTower_6F_Text_AngelicaPostBattle {
+    "I feel anemic and weak…$"
+}
+
+text PokemonTower_6F_Text_EmiliaIntro {
+    "Urff…\n"
+    "Kwaah!$"
+}
+
+text PokemonTower_6F_Text_EmiliaDefeat {
+    "Something fell out!$"
+}
+
+text PokemonTower_6F_Text_EmiliaPostBattle {
+    "My hair didn't fall out!\n"
+    "It was a malevolent spirit!$"
+}
+
+text PokemonTower_6F_Text_JenniferIntro {
+    "Ke…ke…ke…\n"
+    "ke…ke…ke!$"
+}
+
+text PokemonTower_6F_Text_JenniferDefeat {
+    "Keee!$"
+}
+
+text PokemonTower_6F_Text_JenniferPostBattle {
+    "What's going on here?$"
+}
+
+text PokemonTower_6F_Text_BeGoneIntruders {
+    "Be gone…\n"
+    "Intruders…$"
+}
+
+text PokemonTower_6F_Text_GhostWasCubonesMother {
+    "The ghost was the restless spirit\n"
+    "of CUBONE's mother!$"
+}
+
+text PokemonTower_6F_Text_MothersSpiritWasCalmed {
+    "The mother's spirit was calmed.\p"
+    "It departed to the afterlife…$"
+}

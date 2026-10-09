@@ -1,0 +1,23 @@
+text VermilionCity_House3_Text_PidgeyFlyLetterToSaffron {
+    "I'm getting my PIDGEY to fly a\n"
+    "letter to SAFFRON in the north.$"
+}
+
+text VermilionCity_House3_Text_Pidgey {
+    "PIDGEY: Kurukkoo!$"
+}
+
+text VermilionCity_House3_Text_DearPippiLetter {
+    "Dear PIPPI,\n"
+    "I hope to see you soon.\p"
+    "I heard SAFFRON has problems with\n"
+    "TEAM ROCKET.\p"
+    "VERMILION appears to be safe.$"
+}
+
+text VermilionCity_House3_Text_SendMyPidgeyToUnionRoom {
+    "I want to exchange MAIL with all\n"
+    "sorts of people.\p"
+    "I send my PIDGEY to a UNION ROOM\n"
+    "to exchange MAIL for me.$"
+}

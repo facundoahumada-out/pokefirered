@@ -1,33 +1,41 @@
 PokemonTower_4F_Text_PaulaIntro::
-    .string "Ghost! No!\n"
-    .string "Kwaaah!$"
+# 1 "data/maps/PokemonTower_4F/text.pory"
+	.string "Ghost! No!\n"
+	.string "Kwaaah!$"
 
 PokemonTower_4F_Text_PaulaDefeat::
-    .string "Where is the ghost?$"
+# 6 "data/maps/PokemonTower_4F/text.pory"
+	.string "Where is the ghost?$"
 
 PokemonTower_4F_Text_PaulaPostBattle::
-    .string "I must have been dreaming…$"
+# 10 "data/maps/PokemonTower_4F/text.pory"
+	.string "I must have been dreaming…$"
 
 PokemonTower_4F_Text_LaurelIntro::
-    .string "Be cursed with me!\n"
-    .string "Kwaaah!$"
+# 14 "data/maps/PokemonTower_4F/text.pory"
+	.string "Be cursed with me!\n"
+	.string "Kwaaah!$"
 
 PokemonTower_4F_Text_LaurelDefeat::
-    .string "What!$"
+# 19 "data/maps/PokemonTower_4F/text.pory"
+	.string "What!$"
 
 PokemonTower_4F_Text_LaurelPostBattle::
-    .string "We can't determine the identity of\n"
-    .string "the ghosts…$"
+# 23 "data/maps/PokemonTower_4F/text.pory"
+	.string "We can't determine the identity of\n"
+	.string "the ghosts…$"
 
 PokemonTower_4F_Text_JodyIntro::
-    .string "Huhuhu…\n"
-    .string "Beat me not!$"
+# 28 "data/maps/PokemonTower_4F/text.pory"
+	.string "Huhuhu…\n"
+	.string "Beat me not!$"
 
 PokemonTower_4F_Text_JodyDefeat::
-    .string "Huh?\n"
-    .string "Who? What?$"
+# 33 "data/maps/PokemonTower_4F/text.pory"
+	.string "Huh?\n"
+	.string "Who? What?$"
 
 PokemonTower_4F_Text_JodyPostBattle::
-    .string "May the departed POKéMON rest in\n"
-    .string "peace…$"
-
+# 38 "data/maps/PokemonTower_4F/text.pory"
+	.string "May the departed POKéMON rest in\n"
+	.string "peace…$"

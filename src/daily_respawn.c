@@ -48,18 +48,36 @@ static s32 GetMushroomPatchId(u8 mapGroup, u8 mapNum, s32 x, s32 y)
     return -1;
 }
 
+static s32 GetMushroomPatchIdInFrontOfPlayer(s16 *x, s16 *y)
+{
+    GetXYCoordsOneStepInFrontOfPlayer(x, y);
+    return GetMushroomPatchId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, *x, *y);
+}
+
+// Returns the item of the patch in front of the player, or ITEM_NONE if it isn't in sMushroomPatches.
+u16 GetMushroomPatchItem(void)
+{
+    s16 x, y;
+    s32 id = GetMushroomPatchIdInFrontOfPlayer(&x, &y);
+
+    if (id < 0)
+        return ITEM_NONE;
+
+    return sMushroomPatches[id].item;
+}
+
 void PickMushroomPatch(void)
 {
     s16 x, y;
-    s32 id;
-
-    GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
-    id = GetMushroomPatchId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, x, y);
+    s32 id = GetMushroomPatchIdInFrontOfPlayer(&x, &y);
+    u32 now;
 
     if (id < 0)
         return;
 
-    gSaveBlock1Ptr->mushroomPatchCollectedAt[id] = RtcGetMinuteCount();
+    // 0 means "not collected", so never store it as a timestamp.
+    now = RtcGetMinuteCount();
+    gSaveBlock1Ptr->mushroomPatchCollectedAt[id] = (now == 0) ? 1 : now;
     MapGridSetMetatileIdAt(x, y, sMushroomPatches[id].emptyMetatileId);
     CurrentMapDrawMetatileAt(x, y);
 }
@@ -72,7 +90,7 @@ void RefreshMushroomPatchesOnMap(void)
 
     for (i = 0; i < MUSHROOM_PATCH_COUNT; i++)
     {
-        u32 collectedAt;
+        u32 collectedAt, now;
 
         if (sMushroomPatches[i].mapGroup != mapGroup || sMushroomPatches[i].mapNum != mapNum)
             continue;
@@ -82,7 +100,14 @@ void RefreshMushroomPatchesOnMap(void)
         if (collectedAt == 0)
             continue;
 
-        if (RtcGetMinuteCount() - collectedAt >= MUSHROOM_RESPAWN_MINUTES)
+        now = RtcGetMinuteCount();
+
+        // Clock was set back before the pick: restart the cooldown instead of
+        // letting the unsigned subtraction wrap around and respawn the patch.
+        if (now < collectedAt)
+            gSaveBlock1Ptr->mushroomPatchCollectedAt[i] = collectedAt = (now == 0) ? 1 : now;
+
+        if (now - collectedAt >= MUSHROOM_RESPAWN_MINUTES)
             gSaveBlock1Ptr->mushroomPatchCollectedAt[i] = 0;
         else
         {

@@ -1,0 +1,35 @@
+text Text_MayIHelpYou {
+    "Hi, there!\n"
+    "May I help you?$"
+}
+
+text Text_FillOutQuestionnaire {
+    "There is a questionnaire.\n"
+    "Would you like to fill it out?$"
+}
+
+text Text_QuestionnaireThankYou {
+    "Thank you for taking the time to\n"
+    "fill out our questionnaire.\p"
+    "Your feedback will be used for\n"
+    "future reference.$"
+}
+
+text Text_YouKnowThoseWords {
+    "Oh, hello!\n"
+    "You know those words?\p"
+    "That means you must know about\n"
+    "the MYSTERY GIFT.\p"
+    "From now on, you should be\n"
+    "receiving MYSTERY GIFTS!$"
+}
+
+text Text_YouCanAccessMysteryGift {
+    "Once you save your game, you can\n"
+    "access the MYSTERY GIFT.$"
+}
+
+text Text_ThankYouForAccessingMysteryGift {
+    "Thank you for accessing the\n"
+    "MYSTERY GIFT System.$"
+}

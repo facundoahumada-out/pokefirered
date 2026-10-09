@@ -1,0 +1,30 @@
+text CeruleanCity_PokemonCenter_1F_Text_BillDoesWhateverForRareMons {
+    "That BILL!\p"
+    "I heard that he'll do whatever it\n"
+    "takes to get rare POKéMON.\p"
+    "He's not above doing all sorts\n"
+    "of things, I've heard.$"
+}
+
+text CeruleanCity_PokemonCenter_1F_Text_EveryoneCallsBillPokemaniac {
+    "Have you heard about BILL?\p"
+    "Everyone calls him a POKéMANIAC!\p"
+    "I think people are just jealous of\n"
+    "BILL, though.\p"
+    "Who wouldn't want to boast about\n"
+    "their POKéMON?$"
+}
+
+text CeruleanCity_PokemonCenter_1F_Text_BillCollectsRareMons {
+    "BILL has lots of POKéMON!\n"
+    "He collects rare ones, too!$"
+}
+
+text CeruleanCity_PokemonCenter_1F_Text_TryTradingUpstairs {
+    "Why don't you go upstairs and try\n"
+    "trading POKéMON with your friends?\p"
+    "You could get a lot more variety\n"
+    "by trading.\p"
+    "The POKéMON you get in trades grow\n"
+    "quickly, too.$"
+}

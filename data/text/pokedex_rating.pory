@@ -1,0 +1,148 @@
+text PokedexRating_Text_HowIsPokedexComingAlong {
+    "OAK: Good to see you!\n"
+    "How is your POKéDEX coming along?\p"
+    "Here, let me take a look.$"
+}
+
+text PokedexRating_Text_SeenXOwnedY {
+    "The amount of progress you've made\n"
+    "on your POKéDEX is:\p"
+    "{STR_VAR_1} POKéMON seen and\n"
+    "{STR_VAR_2} POKéMON owned.\p"
+    "{FONT_NORMAL}PROF. OAK's rating:$"
+}
+
+text PokedexRating_Text_LessThan10 {
+    "You still have lots to do.\p"
+    "Go into every patch of grass you\n"
+    "see and look for POKéMON!$"
+}
+
+text PokedexRating_Text_LessThan20 {
+    "It looks as if you're getting on\n"
+    "the right track!\p"
+    "I've given one of my AIDES a FLASH\n"
+    "HM. Make sure you go get it!$"
+}
+
+text PokedexRating_Text_LessThan30 {
+    "Your POKéDEX could use a bit more\n"
+    "volume still!\p"
+    "Try to catch other species of\n"
+    "POKéMON!$"
+}
+
+text PokedexRating_Text_LessThan40 {
+    "Good, it's apparent that you're\n"
+    "trying hard!\p"
+    "I've given one of my AIDES an\n"
+    "ITEMFINDER. Be sure to collect it!$"
+}
+
+text PokedexRating_Text_LessThan50 {
+    "Your POKéDEX is coming along quite\n"
+    "well!\p"
+    "I've given one of my AIDES an\n"
+    "AMULET COIN. Be sure to get it!$"
+}
+
+text PokedexRating_Text_LessThan60 {
+    "Ah, you've finally topped 50\n"
+    "species!\p"
+    "I've given one of my AIDES an EXP.\n"
+    "SHARE. Be sure to go get it!$"
+}
+
+text PokedexRating_Text_LessThan70 {
+    "Hoho! This is turning into quite the\n"
+    "respectable POKéDEX!$"
+}
+
+text PokedexRating_Text_LessThan80 {
+    "Very good!\p"
+    "I think you'll collect even more\n"
+    "POKéMON by going fishing!$"
+}
+
+text PokedexRating_Text_LessThan90 {
+    "Wonderful! Let me guess… You\n"
+    "like to collect things, don't you?$"
+}
+
+text PokedexRating_Text_LessThan100 {
+    "I'm impressed!\n"
+    "It must have been difficult to do!$"
+}
+
+text PokedexRating_Text_LessThan110 {
+    "You've finally hit 100 species!\n"
+    "I can't believe how good you are!$"
+}
+
+text PokedexRating_Text_LessThan120 {
+    "You even have the evolved forms\n"
+    "of POKéMON! Super!$"
+}
+
+text PokedexRating_Text_LessThan130 {
+    "Excellent! Trade with friends to\n"
+    "get some more!$"
+}
+
+text PokedexRating_Text_LessThan140 {
+    "Outstanding!\n"
+    "You've become a real pro at this!$"
+}
+
+text PokedexRating_Text_LessThan150 {
+    "I have nothing left to say!\n"
+    "You're the POKéMON PROFESSOR now!$"
+}
+
+text PokedexRating_Text_Complete {
+    "Your POKéDEX is entirely complete!\n"
+    "Congratulations!!$"
+}
+
+text PokedexRating_Text_NationalDexSeenXOwnedY {
+    "And your NATIONAL POKéDEX is:\p"
+    "{STR_VAR_1} POKéMON seen and\n"
+    "{STR_VAR_2} POKéMON owned.$"
+}
+
+text PokedexRating_Text_LookForwardToFilledNationalDex {
+    "I'll be looking forward to seeing\n"
+    "you fill the NATIONAL POKéDEX!$"
+}
+
+text PokedexRating_Text_YouveCompletedDex {
+    "Finally…\p"
+    "You've finally completed the\n"
+    "POKéDEX!\p"
+    "It's magnificent!\n"
+    "Truly, this is a fantastic feat!$"
+}
+
+text PokedexRating_Text_Wroooaaarrr {
+    "Wroooooooaaaaaarrrr!$"
+}
+
+text PokedexRating_Text_HaHa {
+    "はあ はあ‥$"
+}
+
+text PokedexRating_Text_ThankYouMadeDreamReality {
+    "Thank you, {PLAYER}!\n"
+    "Sincerely, thank you!\l"
+    "You've made my dream a reality!$"
+}
+
+text PokedexRating_Text_LoveSeeingYourPokedex {
+    "OAK: Ah, welcome!\p"
+    "Tell me, how is your POKéDEX\n"
+    "coming along?\p"
+    "Wahaha!\p"
+    "Actually, I know how it is, but I\n"
+    "love seeing it anyway!\p"
+    "Let's see…$"
+}

@@ -1,0 +1,10 @@
+text ThreeIsland_House1_Text_YoureAlwaysSoCool {
+    "LOSTELLE: Hi, {PLAYER}!\n"
+    "You're always so cool!\p"
+    "I'll make lunch for you, too, one\n"
+    "day, {PLAYER}.$"
+}
+
+text ThreeIsland_House1_Text_RareRocksGemsDisplayed {
+    "Rare rocks and gems are displayed.$"
+}

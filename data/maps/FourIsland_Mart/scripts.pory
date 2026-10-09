@@ -1,0 +1,30 @@
+mapscripts FourIsland_Mart_MapScripts {}
+
+script FourIsland_Mart_EventScript_Clerk {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lock
+    faceplayer
+    message(Text_MayIHelpYou)
+    waitmessage
+    pokemart(FourIsland_Mart_Items)
+    msgbox(Text_PleaseComeAgain)
+    release
+    end
+}
+
+mart(global) FourIsland_Mart_Items {
+    ITEM_ULTRA_BALL
+    ITEM_FULL_RESTORE
+    ITEM_MAX_POTION
+    ITEM_REVIVE
+    ITEM_ICE_HEAL
+    ITEM_FULL_HEAL
+    ITEM_ESCAPE_ROPE
+    ITEM_MAX_REPEL
+    ITEM_NONE
+}
+
+script FourIsland_Mart_EventScript_Camper {
+    msgbox(FourIsland_Mart_Text_IcefallCaveIsFrigid, MSGBOX_NPC)
+    end
+}

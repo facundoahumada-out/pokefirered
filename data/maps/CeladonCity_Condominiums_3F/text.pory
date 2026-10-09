@@ -1,0 +1,50 @@
+text CeladonCity_Condominiums_3F_Text_ImTheProgrammer {
+    "Me?\n"
+    "I'm the programmer!$"
+}
+
+text CeladonCity_Condominiums_3F_Text_ImTheGraphicArtist {
+    "I'm the graphic artist!\n"
+    "I drew you!$"
+}
+
+text CeladonCity_Condominiums_3F_Text_IWroteTheStory {
+    "I wrote the story!\n"
+    "Isn't ERIKA cute?\p"
+    "I like MISTY a lot, too!\n"
+    "Oh, and SABRINA, I like her!$"
+}
+
+text CeladonCity_Condominiums_3F_Text_ImGameDesignerShowMeFinishedPokedex {
+    "Is that right?\p"
+    "I'm the game designer!\p"
+    "Filling up your POKéDEX is tough,\n"
+    "but don't quit!\p"
+    "When you finish, come tell me!$"
+}
+
+text CeladonCity_Condominiums_3F_Text_CompletedPokedexCongratulations {
+    "Wow! Excellent!\n"
+    "You completed your POKéDEX!\l"
+    "Congratulations!\l"
+    "…$"
+}
+
+text CeladonCity_Condominiums_3F_Text_ItsTheGameProgram {
+    "It's the game program! Messing with\n"
+    "it could bug out the game!$"
+}
+
+text CeladonCity_Condominiums_3F_Text_SomeonesPlayingGame {
+    "Someone's playing a game instead of\n"
+    "working!$"
+}
+
+text CeladonCity_Condominiums_3F_Text_ItsScriptBetterNotLookAtEnding {
+    "It's the script!\n"
+    "Better not look at the ending!$"
+}
+
+text CeladonCity_Condominiums_3F_Text_GameFreakDevelopmentRoom {
+    "GAME FREAK Development Room$"
+}

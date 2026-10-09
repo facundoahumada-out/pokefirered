@@ -1,0 +1,164 @@
+text VermilionCity_Gym_Text_LtSurgeIntro {
+    "Hey, kid! What do you think you're\n"
+    "doing here?\p"
+    "You won't live long in combat!\n"
+    "Not with your puny power!\p"
+    "I tell you, kid, electric POKéMON\n"
+    "saved me during the war!\p"
+    "They zapped my enemies into\n"
+    "paralysis!\p"
+    "The same as I'll do to you!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+}
+
+text VermilionCity_Gym_Text_LtSurgePostBattle {
+    "A little word of advice, kid!\p"
+    "Electricity is sure powerful!\p"
+    "But, it's useless against GROUND-\n"
+    "type POKéMON!$"
+}
+
+text VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis {
+    "The THUNDERBADGE cranks up your\n"
+    "POKéMON's SPEED!\p"
+    "It also lets your POKéMON FLY\n"
+    "lightning-quick anytime, kid!\p"
+    "You're special, kid!\n"
+    "Take this!$"
+}
+
+text VermilionCity_Gym_Text_ReceivedTM34FromLtSurge {
+    "{PLAYER} received TM34\n"
+    "from LT. SURGE.$"
+}
+
+text VermilionCity_Gym_Text_ExplainTM34 {
+    "TM34 contains SHOCK WAVE!\p"
+    "Teach it to an ELECTRIC POKéMON!$"
+}
+
+text VermilionCity_Gym_Text_MakeRoomInYourBag {
+    "Yo, kid, make room in your BAG!$"
+}
+
+text VermilionCity_Gym_Text_LtSurgeDefeat {
+    "Now that's a shocker!\p"
+    "You're the real deal, kid!\p"
+    "Fine, then, take the THUNDERBADGE!$"
+}
+
+text VermilionCity_Gym_Text_TuckerIntro {
+    "When I was in the Army, LT. SURGE\n"
+    "was my strict CO.\p"
+    "He was a hard taskmaster.$"
+}
+
+text VermilionCity_Gym_Text_TuckerDefeat {
+    "Stop!\n"
+    "You're very good!$"
+}
+
+text VermilionCity_Gym_Text_TuckerPostBattle {
+    "It's not easy opening that door.\p"
+    "LT. SURGE was always famous for\n"
+    "his cautious nature in the Army.$"
+}
+
+text VermilionCity_Gym_Text_BailyIntro {
+    "I'm a lightweight, but I'm good\n"
+    "with electricity!\p"
+    "That's why I joined this GYM.$"
+}
+
+text VermilionCity_Gym_Text_BailyDefeat {
+    "Fried!$"
+}
+
+text VermilionCity_Gym_Text_BailyPostBattle {
+    "Okay, I'll talk!\p"
+    "LT. SURGE said he hid door\n"
+    "switches inside something.$"
+}
+
+text VermilionCity_Gym_Text_DwayneIntro {
+    "This is no place for kids!\n"
+    "Not even if you're good!$"
+}
+
+text VermilionCity_Gym_Text_DwayneDefeat {
+    "Wow!\n"
+    "Surprised me!$"
+}
+
+text VermilionCity_Gym_Text_DwaynePostBattle {
+    "LT. SURGE installed the traps in\n"
+    "the GYM himself.\p"
+    "He set up double locks everywhere.\n"
+    "Let me give you a hint.\p"
+    "When you open the first lock, the\n"
+    "second lock is right next to it.$"
+}
+
+text VermilionCity_Gym_Text_GymGuyAdvice {
+    "Yo!\n"
+    "Champ in the making!\p"
+    "LT. SURGE has a nickname.\p"
+    "People refer to him as the\n"
+    "Lightning American!\p"
+    "He's an expert on electric\n"
+    "POKéMON.\p"
+    "BIRD/WATER-type POKéMON match\n"
+    "poorly against the ELECTRIC type.\p"
+    "Beware of paralysis, too.\p"
+    "LT. SURGE is very cautious.\p"
+    "He's locked himself in, so it won't\n"
+    "be easy getting to him.$"
+}
+
+text VermilionCity_Gym_Text_GymGuyPostVictory {
+    "Whew!\n"
+    "That match was electric!$"
+}
+
+text VermilionCity_Gym_Text_GymStatue {
+    "VERMILION POKéMON GYM\n"
+    "LEADER: LT. SURGE\p"
+    "WINNING TRAINERS:\n"
+    "{RIVAL}$"
+}
+
+text VermilionCity_Gym_Text_GymStatuePlayerWon {
+    "VERMILION POKéMON GYM\n"
+    "LEADER: LT. SURGE\p"
+    "WINNING TRAINERS:\n"
+    "{RIVAL}, {PLAYER}$"
+}
+
+text VermilionCity_Gym_Text_NopeOnlyTrashHere {
+    "Nope!\n"
+    "There's only trash here.$"
+}
+
+text VermilionCity_Gym_Text_SwitchUnderTrashFirstLockOpened {
+    "Hey! There's a switch under the\n"
+    "trash! Turn it on!\p"
+    "The first electric lock opened!$"
+}
+
+text VermilionCity_Gym_Text_AnotherSwitchInTrash {
+    "ガサゴソ‥！\n"
+    "おっと！　ゴミばこの　そこに\l"
+    "また　スイッチが　あった！\l"
+    "おして　みよう！　‥　ポチッとな$"
+}
+
+text VermilionCity_Gym_Text_SecondLockOpened {
+    "The second electric lock opened!\n"
+    "The motorized door opened!$"
+}
+
+text VermilionCity_Gym_Text_OnlyTrashLocksWereReset {
+    "Nope!\n"
+    "There's only trash here.\p"
+    "Hey!\n"
+    "The electric locks were reset!$"
+}

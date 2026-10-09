@@ -1,0 +1,16 @@
+text SixIsland_Text_IslandSign {
+    "SIX ISLAND\n"
+    "Fortune Island of Aged Wisdom$"
+}
+
+text SixIsland_Text_ThatWayToWaterPathRuinValley {
+    "Keep going this way and you'll get\n"
+    "to the WATER PATH.\p"
+    "Stay on that and you'll get to\n"
+    "the RUIN VALLEY.$"
+}
+
+text SixIsland_Text_SkyAtNightIsFantastic {
+    "When you're this far away from the\n"
+    "city, the sky at night is fantastic.$"
+}

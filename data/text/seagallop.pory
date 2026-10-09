@@ -1,0 +1,9 @@
+text Text_WhereDoYouWantToGo {
+    "おつかれさん！\n"
+    "どこに　いきたいんだ？$"
+}
+
+text Text_AllAboardSeagallopNum {
+    "All right!\n"
+    "All aboard SEAGALLOP HI-SPEED {STR_VAR_1}!$"
+}

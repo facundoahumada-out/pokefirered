@@ -1,0 +1,82 @@
+text FourIsland_IcefallCave_Back_Text_LoreleiKeepHandsOffMons {
+    "LORELEI: Keep your filthy hands\n"
+    "off the POKéMON in the cave!\p"
+    "Do as I say, or you'll have me to\n"
+    "answer to!$"
+}
+
+text FourIsland_IcefallCave_Back_Text_ShutItLadyLeaveUsBe {
+    "Aww, shut it, lady, and leave\n"
+    "us be.\p"
+    "Don't let your glasses get all\n"
+    "steamed up!$"
+}
+
+text FourIsland_IcefallCave_Back_Text_LoreleiPlayerHelpMeKickPoachersOut {
+    "LORELEI: {PLAYER}?!\n"
+    "What are you doing here?\p"
+    "No, we can catch up later.\n"
+    "Right now, I need your help.\p"
+    "Help me kick these poachers out\n"
+    "before they do anything else.\p"
+    "They've been catching POKéMON\n"
+    "here, then selling them off!\p"
+    "Are you ready?\n"
+    "You take that one, please!$"
+}
+
+text FourIsland_IcefallCave_Back_Text_GruntIntro {
+    "W-what?!\p"
+    "Who says we can't do what we want\n"
+    "with the POKéMON we catch?$"
+}
+
+text FourIsland_IcefallCave_Back_Text_GruntDefeat {
+    "We didn't plan on this!$"
+}
+
+text FourIsland_IcefallCave_Back_Text_LoreleiWhereHaveYouTakenMons {
+    "LORELEI: Humph.\n"
+    "So despicably weak.\p"
+    "You!\n"
+    "Tell me!\p"
+    "Where have you taken the captured\n"
+    "POKéMON?\p"
+    "I'm smashing your ring once and\n"
+    "for all!$"
+}
+
+text FourIsland_IcefallCave_Back_Text_NotTellingYouThat {
+    "N-no way!\n"
+    "I'm not telling you that!$"
+}
+
+text FourIsland_IcefallCave_Back_Text_LoreleiWellDeepFreezeYou {
+    "LORELEI: If you won't confess,\n"
+    "we'll deep-freeze you.\p"
+    "My LAPRAS is furious for what\n"
+    "you've done to its friends.\p"
+    "Go, LAPRAS!\n"
+    "ICE BEAM…$"
+}
+
+text FourIsland_IcefallCave_Back_Text_OkayRocketWareHouseFiveIsland {
+    "Wawaah! Okay!\n"
+    "I'll talk!\p"
+    "The POKéMON are in the ROCKET\n"
+    "WAREHOUSE on FIVE ISLAND.\p"
+    "There! I said it!\n"
+    "We'll be going now!\p"
+    "…But I doubt you'll ever make it\n"
+    "into the ROCKET WAREHOUSE!\p"
+    "Heheheheh!$"
+}
+
+text FourIsland_IcefallCave_Back_Text_ThankYouThisIsAwful {
+    "{PLAYER}, thank you.\n"
+    "But this is awful…\p"
+    "I was born and raised here on\n"
+    "these islands.\p"
+    "I had no idea that those horrible\n"
+    "criminals were loose here…$"
+}

@@ -1,0 +1,59 @@
+text PokemonTower_7F_Text_Grunt1Intro {
+    "What do you want?\n"
+    "Why are you here?$"
+}
+
+text PokemonTower_7F_Text_Grunt1Defeat {
+    "I give up!$"
+}
+
+text PokemonTower_7F_Text_Grunt1PostBattle {
+    "I'm not going to forget this!$"
+}
+
+text PokemonTower_7F_Text_Grunt2Intro {
+    "This old guy marched right up to\n"
+    "our HIDEOUT.\p"
+    "Then, he starts ranting about how\n"
+    "TEAM ROCKET's abusing POKéMON.\p"
+    "So, we're just talking it over as\n"
+    "adults.$"
+}
+
+text PokemonTower_7F_Text_Grunt2Defeat {
+    "Please!\n"
+    "No more!$"
+}
+
+text PokemonTower_7F_Text_Grunt2PostBattle {
+    "POKéMON are only good for making\n"
+    "money. Why not use them?\p"
+    "You stay out of our business!$"
+}
+
+text PokemonTower_7F_Text_Grunt3Intro {
+    "You're not saving anyone, kid!$"
+}
+
+text PokemonTower_7F_Text_Grunt3Defeat {
+    "Don't fight us ROCKETS!$"
+}
+
+text PokemonTower_7F_Text_Grunt3PostBattle {
+    "You're not getting away with this!$"
+}
+
+text PokemonTower_7F_Text_MrFujiThankYouFollowMe {
+    "MR. FUJI: Heh?\n"
+    "You came to save me?\p"
+    "Thank you. But, I came here of my\n"
+    "own free will.\p"
+    "I came to calm the spirit of\n"
+    "CUBONE's mother.\p"
+    "I think MAROWAK's spirit has\n"
+    "finally left us.\p"
+    "I must thank you for your kind\n"
+    "concern.\p"
+    "Follow me to my home, POKéMON\n"
+    "HOUSE, at the foot of this tower.$"
+}

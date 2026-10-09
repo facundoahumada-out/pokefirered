@@ -1,0 +1,19 @@
+text SSAnne_1F_Room6_Text_TakeAShortRest {
+    "You look tired. Would you like to\n"
+    "take a short rest?$"
+}
+
+text SSAnne_1F_Room6_Text_GladEveryoneIsRefreshed {
+    "I'm glad to see that everyone is\n"
+    "looking refreshed and chipper.$"
+}
+
+text SSAnne_1F_Room6_Text_SorryYouLookLikeMyBrother {
+    "Oh, I'm sorry for fussing over you.\n"
+    "You look like my little brother…$"
+}
+
+text SSAnne_1F_Room6_Text_SorryYouLookLikeMySister {
+    "Oh, I'm sorry for fussing over you.\n"
+    "You look like my little sister…$"
+}

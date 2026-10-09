@@ -1,23 +1,28 @@
 SSAnne_B1F_Room4_Text_LeonardIntro::
-    .string "You know what they say about\n"
-    .string "sailors and battling!$"
+# 1 "data/maps/SSAnne_B1F_Room4/text.pory"
+	.string "You know what they say about\n"
+	.string "sailors and battling!$"
 
 SSAnne_B1F_Room4_Text_LeonardDefeat::
-    .string "Right!\n"
-    .string "Good battle, mate!$"
+# 6 "data/maps/SSAnne_B1F_Room4/text.pory"
+	.string "Right!\n"
+	.string "Good battle, mate!$"
 
 SSAnne_B1F_Room4_Text_LeonardPostBattle::
-    .string "Hahaha!\n"
-    .string "Want to be a sailor, mate?$"
+# 11 "data/maps/SSAnne_B1F_Room4/text.pory"
+	.string "Hahaha!\n"
+	.string "Want to be a sailor, mate?$"
 
 SSAnne_B1F_Room4_Text_DuncanIntro::
-    .string "Come on, then!\n"
-    .string "My sailor's pride is at stake!$"
+# 16 "data/maps/SSAnne_B1F_Room4/text.pory"
+	.string "Come on, then!\n"
+	.string "My sailor's pride is at stake!$"
 
 SSAnne_B1F_Room4_Text_DuncanDefeat::
-    .string "Your spirit sank me!$"
+# 21 "data/maps/SSAnne_B1F_Room4/text.pory"
+	.string "Your spirit sank me!$"
 
 SSAnne_B1F_Room4_Text_DuncanPostBattle::
-    .string "Did you see the FISHING GURU in\n"
-    .string "VERMILION CITY?$"
-
+# 25 "data/maps/SSAnne_B1F_Room4/text.pory"
+	.string "Did you see the FISHING GURU in\n"
+	.string "VERMILION CITY?$"

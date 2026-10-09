@@ -1,0 +1,28 @@
+text SSAnne_B1F_Room4_Text_LeonardIntro {
+    "You know what they say about\n"
+    "sailors and battling!$"
+}
+
+text SSAnne_B1F_Room4_Text_LeonardDefeat {
+    "Right!\n"
+    "Good battle, mate!$"
+}
+
+text SSAnne_B1F_Room4_Text_LeonardPostBattle {
+    "Hahaha!\n"
+    "Want to be a sailor, mate?$"
+}
+
+text SSAnne_B1F_Room4_Text_DuncanIntro {
+    "Come on, then!\n"
+    "My sailor's pride is at stake!$"
+}
+
+text SSAnne_B1F_Room4_Text_DuncanDefeat {
+    "Your spirit sank me!$"
+}
+
+text SSAnne_B1F_Room4_Text_DuncanPostBattle {
+    "Did you see the FISHING GURU in\n"
+    "VERMILION CITY?$"
+}

@@ -1,0 +1,139 @@
+// All Trainer Tower text (Lobby and Roof) is interleaved here
+text TrainerTower_Lobby_Text_WelcomeToTrainerTower {
+    "Hello!\p"
+    "Welcome to TRAINER TOWER where\n"
+    "TRAINERS gather from all over!$"
+}
+
+text TrainerTower_Lobby_Text_TrainersUpToFloorNum {
+    "TRAINERS from all over the world\n"
+    "gather here to battle.\p"
+    "Let me see…\p"
+    "Right now, there are TRAINERS only\n"
+    "up to Floor {STR_VAR_1}.$"
+}
+
+text TrainerTower_Lobby_Text_TrainersUpEighthFloor {
+    "TRAINERS are awaiting your\n"
+    "challenge up to the eighth floor.$"
+}
+
+text TrainerTower_Lobby_Text_LikeToChallengeTrainers {
+    "Would you like to challenge the\n"
+    "waiting TRAINERS?$"
+}
+
+text TrainerTower_Lobby_Text_StartClockGetSetGo {
+    "Okay, I'll get the clock started,\n"
+    "so give it everything you have.\p"
+    "On your marks…\p"
+    "Get set…\p"
+    "Go!$"
+}
+
+text TrainerTower_Lobby_Text_PleaseVisitUsAgain {
+    "Please do visit us again!$"
+}
+
+text TrainerTower_Lobby_Text_TooBadComeBackTryAgain {
+    "That was too bad.\p"
+    "I think you put in a tremendous\n"
+    "effort in your battling.\p"
+    "Please come back and try again!$"
+}
+
+text TrainerTower_Lobby_Text_GiveItYourBest {
+    "I hope you give it your best.$"
+}
+
+text TrainerTower_Lobby_Text_MoveCounterHereWhenTrainersSwitch {
+    "When the TRAINERS switch places,\n"
+    "the movement can be hectic.\p"
+    "To avoid the stampede, we moved\n"
+    "the reception counter here.\p"
+    "I'm sorry for the inconvenience.$"
+}
+
+text TrainerTower_Roof_Text_ImOwnerBattledPerfectly {
+    "Hello…\p"
+    "I am the owner of this TOWER…\p"
+    "How the sky soars above this\n"
+    "rooftop…\p"
+    "The caress of the winds up here…\p"
+    "It's all so perfect…\p"
+    "The way you battled…\n"
+    "It, too, was perfection…$"
+}
+
+text TrainerTower_Roof_Text_ThisIsForYou {
+    "This is for you…$"
+}
+
+text TrainerTower_Roof_Text_DoneItInRecordTime {
+    "Oh!\n"
+    "Stupendous!\p"
+    "It's marvelous how you've come up\n"
+    "here so quickly.\p"
+    "The fact is, you've done it in\n"
+    "record time…\p"
+    "I'll have your record posted at\n"
+    "the reception counter.$"
+}
+
+text TrainerTower_Roof_Text_TookSweetTimeGettingHere {
+    "You seem to have taken your sweet\n"
+    "time getting here…$"
+}
+
+text TrainerTower_Roof_Text_IdLikeToSeeBetterTime {
+    "What I would like to see is a\n"
+    "better time out of you…\p"
+    "I'm counting on you.\p"
+    "Until then, farewell…$"
+}
+
+text TrainerTower_Text_XMinYZSec {
+    "{STR_VAR_1} min. {STR_VAR_2}.{STR_VAR_3} sec.$"
+}
+
+text TrainerTower_Lobby_Text_HereAreTheResults {
+    "せいせきひょうです$"
+}
+
+text TrainerTower_Lobby_Text_NeedTwoMonsForDouble {
+    "This is a two-on-two battle.\p"
+    "You may not battle unless you have\n"
+    "at least two POKéMON.$"
+}
+
+text TrainerTower_Lobby_Text_ExplainTrainerTower {
+    "Here at TRAINER TOWER, there is an\n"
+    "event called TIME ATTACK.\p"
+    "You will be timed on how quickly\n"
+    "you can get from the reception\l"
+    "counter to the OWNER on the roof.\p"
+    "The best times will be recorded on\n"
+    "the Time Board.\p"
+    "Try competing with friends to see\n"
+    "who can beat it the fastest.\p"
+    "You will not earn any EXP. Points\n"
+    "or money by beating TRAINERS here.$"
+}
+
+text TrainerTower_Lobby_Text_ThanksForCompeting {
+    "Thank you for competing!$"
+}
+
+text TrainerTower_Lobby_Text_WonderWhatKindsOfTrainers {
+    "I'm here to see how good I am.\p"
+    "I wonder what kinds of TRAINERS\n"
+    "are waiting for me?\p"
+    "It's nerve-racking!$"
+}
+
+text TrainerTower_Lobby_Text_StairsTougherThanAnyBattle {
+    "Gasp, gasp…\n"
+    "Gasp…\p"
+    "Never mind battling! These stairs…\n"
+    "They're tougher than any battle…$"
+}

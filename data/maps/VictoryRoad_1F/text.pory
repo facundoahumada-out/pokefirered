@@ -1,0 +1,27 @@
+text VictoryRoad_1F_Text_NaomiIntro {
+    "I wonder if you are good enough\n"
+    "for me?$"
+}
+
+text VictoryRoad_1F_Text_NaomiDefeat {
+    "I lost out…$"
+}
+
+text VictoryRoad_1F_Text_NaomiPostBattle {
+    "I never wanted to lose to anybody,\n"
+    "especially to a younger kid…$"
+}
+
+text VictoryRoad_1F_Text_RolandoIntro {
+    "I can see you're good.\n"
+    "Let me see exactly how good!$"
+}
+
+text VictoryRoad_1F_Text_RolandoDefeat {
+    "I had a chance…$"
+}
+
+text VictoryRoad_1F_Text_RolandoPostBattle {
+    "Tch!\n"
+    "I concede, you are better than I!$"
+}

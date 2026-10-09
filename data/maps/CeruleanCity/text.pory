@@ -1,0 +1,214 @@
+text CeruleanCity_Text_RivalIntro {
+    "{RIVAL}: Yo! {PLAYER}!\p"
+    "You're still struggling along back\n"
+    "here?\p"
+    "I'm doing great! I caught a bunch\n"
+    "of strong and smart POKéMON!\p"
+    "Here, let me see what you caught,\n"
+    "{PLAYER}!$"
+}
+
+text CeruleanCity_Text_RivalDefeat {
+    "Hey!\n"
+    "Take it easy!\l"
+    "You won already!$"
+}
+
+text CeruleanCity_Text_RivalPostBattle {
+    "{RIVAL}: Hey, guess what?\p"
+    "I went to BILL's and got him to\n"
+    "show me his rare POKéMON.\p"
+    "That added a lot of pages to my\n"
+    "POKéDEX!\p"
+    "After all, BILL's world famous as a\n"
+    "POKéMANIAC.\p"
+    "He invented the POKéMON Storage\n"
+    "System on PC, too.\p"
+    "Since you're using his system,\n"
+    "you should go thank him.\p"
+    "Well, I better get rolling!\n"
+    "Smell ya later!$"
+}
+
+text CeruleanCity_Text_OhRightLittlePresentAsFavor {
+    "Oh, yeah, right.\p"
+    "I feel sorry for you. No, really.\n"
+    "You're always plodding behind me.\p"
+    "So here, I'll give you a little\n"
+    "present as a favor.$"
+}
+
+text CeruleanCity_Text_ExplainFameCheckerSmellYa {
+    "A chatty gossip like you…\n"
+    "That thing's perfect.\p"
+    "I don't need it because I don't\n"
+    "give a hoot about others.\p"
+    "All right, this time I really am\n"
+    "gone. Smell ya!$"
+}
+
+// RB translation: "Heh! You're no match for my genius!"
+text CeruleanCity_Text_RivalVictory {
+    "なんたって！\n"
+    "おれは　てんさい　だからよ！$"
+}
+
+text CeruleanCity_Text_GruntIntro {
+    "Hey! Stay out!\n"
+    "It's not your yard!\p"
+    "…Huh?\n"
+    "Me?\p"
+    "I'm an innocent bystander!\n"
+    "Don't you believe me?{PLAY_BGM}{MUS_ENCOUNTER_ROCKET}$"
+}
+
+text CeruleanCity_Text_GruntDefeat {
+    "GRUNT: Stop! I give up!\n"
+    "I'll leave quietly!$"
+}
+
+text CeruleanCity_Text_OkayIllReturnStolenTM {
+    "…Okay.\n"
+    "I'll return the TM I stole.$"
+}
+
+text CeruleanCity_Text_RecoveredTM28FromGrunt {
+    "{PLAYER} recovered TM28 from\n"
+    "the TEAM ROCKET GRUNT.$"
+}
+
+text CeruleanCity_Text_BetterGetMovingBye {
+    "I better get moving!\n"
+    "Bye!$"
+}
+
+text CeruleanCity_Text_MakeRoomForThisCantRun {
+    "Make room for this!\n"
+    "I can't run until I give it to you!$"
+}
+
+text CeruleanCity_Text_TrainerLifeIsToughIsntIt {
+    "You're a TRAINER, too?\p"
+    "Collecting, battling…\n"
+    "It's a tough life, isn't it?$"
+}
+
+text CeruleanCity_Text_YouCanCutDownSmallTrees {
+    "Did you know that you can CUT down\n"
+    "small trees?\p"
+    "Even that small tree in front of\n"
+    "the shop can be CUT down.\p"
+    "I think there's a way around it,\n"
+    "though.$"
+}
+
+text CeruleanCity_Text_IfSlowbroWasntThereCouldCutTree {
+    "If that SLOWBRO wasn't there, you\n"
+    "could CUT down the small tree.\p"
+    "That way, you could get to the\n"
+    "other side.\p"
+    "I think there's a way around it,\n"
+    "though.$"
+}
+
+text CeruleanCity_Text_PokemonEncyclopediaAmusing {
+    "You're making an encyclopedia on\n"
+    "POKéMON? That sounds amusing.$"
+}
+
+text CeruleanCity_Text_PeopleHereWereRobbed {
+    "The people here were robbed.\p"
+    "It's obvious that TEAM ROCKET is\n"
+    "behind this most heinous crime!\p"
+    "Even our POLICE FORCE has\n"
+    "trouble with the ROCKETS!$"
+}
+
+text CeruleanCity_Text_SlowbroUseSonicboom {
+    "Okay! SLOWBRO!\n"
+    "Use SONICBOOM!$"
+}
+
+text CeruleanCity_Text_SlowbroPayAttention {
+    "Come on, SLOWBRO, pay attention!$"
+}
+
+text CeruleanCity_Text_SlowbroPunch {
+    "SLOWBRO, punch!$"
+}
+
+text CeruleanCity_Text_NoYouBlewItAgain {
+    "No!\n"
+    "You blew it again!$"
+}
+
+text CeruleanCity_Text_SlowbroWithdraw {
+    "SLOWBRO, WITHDRAW!$"
+}
+
+text CeruleanCity_Text_HardToControlMonsObedience {
+    "No! That's wrong!\n"
+    "It's so hard to control POKéMON!\p"
+    "Your POKéMON's obedience depends\n"
+    "on your abilities as a TRAINER.$"
+}
+
+text CeruleanCity_Text_SlowbroTookSnooze {
+    "SLOWBRO took a snooze…$"
+}
+
+text CeruleanCity_Text_SlowbroLoafingAround {
+    "SLOWBRO is loafing around…$"
+}
+
+text CeruleanCity_Text_SlowbroTurnedAway {
+    "SLOWBRO turned away…$"
+}
+
+text CeruleanCity_Text_SlowbroIgnoredOrders {
+    "SLOWBRO ignored orders…$"
+}
+
+text CeruleanCity_Text_WantBrightRedBicycle {
+    "I want a bright red bicycle.\p"
+    "I'll keep it at home, so it won't\n"
+    "get dirty.$"
+}
+
+text CeruleanCity_Text_ThisIsCeruleanCave {
+    "This is CERULEAN CAVE.\p"
+    "Horribly strong POKéMON live inside\n"
+    "there.\p"
+    "It takes a very special TRAINER to\n"
+    "be allowed inside there.\p"
+    "You'd have to be strong enough to\n"
+    "become the POKéMON LEAGUE\l"
+    "CHAMPION for starters.\p"
+    "And, you would have to have\n"
+    "made a great achievement.$"
+}
+
+text CeruleanCity_Text_CitySign {
+    "CERULEAN CITY\n"
+    "A Mysterious, Blue Aura Surrounds\l"
+    "It$"
+}
+
+text CeruleanCity_Text_TrainerTipsHeldItems {
+    "TRAINER TIPS\p"
+    "A POKéMON can be made to hold\n"
+    "an item.\p"
+    "Some items can even be used by\n"
+    "the holding POKéMON in battle.$"
+}
+
+text CeruleanCity_Text_BikeShopSign {
+    "Grass and caves handled easily!\n"
+    "BIKE SHOP$"
+}
+
+text CeruleanCity_Text_GymSign {
+    "CERULEAN CITY POKéMON GYM\n"
+    "LEADER: MISTY\l"
+    "The Tomboyish Mermaid!$"
+}

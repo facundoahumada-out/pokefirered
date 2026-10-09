@@ -1,0 +1,31 @@
+text ViridianCity_Mart_Text_YouCameFromPallet {
+    "Hey!\n"
+    "You came from PALLET TOWN?$"
+}
+
+text ViridianCity_Mart_Text_TakeThisToProfOak {
+    "You know PROF. OAK, right?\p"
+    "His order came in.\n"
+    "Can I get you to take it to him?$"
+}
+
+text ViridianCity_Mart_Text_ReceivedOaksParcelFromClerk {
+    "{PLAYER} received OAK'S PARCEL\n"
+    "from the POKéMON MART clerk.$"
+}
+
+text ViridianCity_Mart_Text_SayHiToOakForMe {
+    "Okay, thanks! Please say hi to\n"
+    "PROF. OAK for me, too.$"
+}
+
+text ViridianCity_Mart_Text_ShopDoesGoodBusinessInAntidotes {
+    "This shop does good business in\n"
+    "ANTIDOTES, I've heard.$"
+}
+
+text ViridianCity_Mart_Text_GotToBuySomePotions {
+    "I've got to buy some POTIONS.\p"
+    "You never know when your POKéMON\n"
+    "will need quick healing.$"
+}

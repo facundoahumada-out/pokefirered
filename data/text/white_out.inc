@@ -1,8 +1,10 @@
 Text_FirstShouldRestoreMonsHealth::
+# 1 "data/text/white_out.pory"
 	.string "First, you should restore your\n"
 	.string "POKéMON to full health.$"
 
 Text_MonsHealedShouldBuyPotions::
+# 6 "data/text/white_out.pory"
 	.string "Your POKéMON have been healed\n"
 	.string "to perfect health.\p"
 	.string "If your POKéMON's energy, HP,\n"
@@ -13,11 +15,13 @@ Text_MonsHealedShouldBuyPotions::
 	.string "We hope you excel!$"
 
 Text_MonsHealed::
+# 17 "data/text/white_out.pory"
 	.string "Your POKéMON have been healed\n"
 	.string "to perfect health.\p"
 	.string "We hope you excel!$"
 
 Text_HadQuiteAnExperienceTakeRest::
+# 23 "data/text/white_out.pory"
 	.string "MOM: {PLAYER}!\n"
 	.string "Welcome home.\p"
 	.string "It sounds like you had quite\n"
@@ -26,6 +30,7 @@ Text_HadQuiteAnExperienceTakeRest::
 	.string "rest.$"
 
 Text_MomExplainHPGetPotions::
+# 32 "data/text/white_out.pory"
 	.string "MOM: Oh, good! You and your\n"
 	.string "POKéMON are looking great.\p"
 	.string "I just heard from PROF. OAK.\p"
@@ -41,6 +46,7 @@ Text_MomExplainHPGetPotions::
 	.string "Take care!$"
 
 Text_WhitedOutLostMoney::
+# 48 "data/text/white_out.pory"
 	.string "{PLAYER} is out of usable\n"
 	.string "POKéMON!\p"
 	.string "{PLAYER} panicked and lost ¥{STR_VAR_1}…\p"
@@ -48,6 +54,7 @@ Text_WhitedOutLostMoney::
 	.string "{PLAYER} whited out!$"
 
 Text_WhitedOut::
+# 56 "data/text/white_out.pory"
 	.string "{PLAYER} is out of usable\n"
 	.string "POKéMON!\p"
 	.string "{PLAYER} whited out!$"

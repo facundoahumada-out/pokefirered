@@ -1,0 +1,205 @@
+const GAVE_PROFILE = VAR_TEMP_1
+
+script MysteryEventClub_EventScript_Woman {
+    lock
+    faceplayer
+    goto_if_eq(GAVE_PROFILE, TRUE, EventScript_AlreadyGaveProfile)
+    goto_if_set(FLAG_SYS_SET_TRAINER_CARD_PROFILE, EventScript_GivenProfileBefore)
+    msgbox(Text_IdLoveToHearYourProfile)
+    goto(EventScript_AskForProfile)
+    end
+}
+
+script(local) EventScript_AlreadyGaveProfile {
+    msgbox(Text_TellMoreNextTime)
+    release
+    end
+}
+
+script(local) EventScript_AskForProfile {
+    message(Text_TellMeWhatsYourProfile)
+    waitmessage
+    multichoice(18, 6, MULTICHOICE_YES_NO_INFO_2, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, EventScript_AcceptGiveProfile)
+    goto_if_eq(VAR_0x8000, 1, EventScript_DeclineGiveProfile)
+    goto_if_eq(VAR_0x8000, 2, EventScript_ProfileInfo)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, EventScript_DeclineGiveProfile)
+    end
+}
+
+script(local) EventScript_ProfileInfo {
+    msgbox(Text_ExplainProfile)
+    goto(EventScript_AskForProfile)
+    end
+}
+
+script(local) EventScript_AcceptGiveProfile {
+    msgbox(Text_WhatsYourProfile)
+    closemessage
+    goto(EventScript_GiveProfile)
+    end
+}
+
+script(local) EventScript_CancelGiveProfile {
+    msgbox(Text_DecidedNotTo)
+    release
+    end
+}
+
+script(local) EventScript_GaveProfile {
+    setvar(GAVE_PROFILE, TRUE)
+    setvar(VAR_0x8004, 0)
+    special(ShowEasyChatMessage)
+    waitmessage
+    delay(80)
+    msgbox(Text_ProfileSaysSomethingAboutYou)
+    release
+    end
+}
+
+script(local) EventScript_DeclineGiveProfile {
+    msgbox(Text_DontBeLikeThat)
+    release
+    end
+}
+
+script(local) EventScript_GivenProfileBefore {
+    msgbox(Text_HiWeMeetAgain)
+    goto(EventScript_AskForNewProfile)
+    end
+}
+
+script(local) EventScript_AskForNewProfile {
+    message(Text_ChangeYourProfile)
+    waitmessage
+    multichoice(18, 6, MULTICHOICE_YES_NO_INFO_2, FALSE)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, EventScript_AcceptGiveNewProfile)
+    goto_if_eq(VAR_0x8000, 1, EventScript_DeclineGiveNewProfile)
+    goto_if_eq(VAR_0x8000, 2, EventScript_ProfileInfo2)
+    goto_if_eq(VAR_0x8000, SCR_MENU_CANCEL, EventScript_DeclineGiveNewProfile)
+    end
+}
+
+script(local) EventScript_ProfileInfo2 {
+    msgbox(Text_ExplainProfile)
+    goto(EventScript_AskForNewProfile)
+    end
+}
+
+script(local) EventScript_AcceptGiveNewProfile {
+    msgbox(Text_WhatAreYouLikeNow)
+    closemessage
+    goto(EventScript_GiveProfile)
+    end
+}
+
+script(local) EventScript_DeclineGiveNewProfile {
+    msgbox(Text_LikeProfileWayItIs)
+    release
+    end
+}
+
+script(local) EventScript_GaveSpecialProfile {
+    setvar(GAVE_PROFILE, TRUE)
+    setvar(VAR_0x8004, 0)
+    special(ShowEasyChatMessage)
+    waitmessage
+    delay(80)
+    msgbox(Text_HeardThatBefore)
+    release
+    end
+}
+
+script(local) EventScript_GiveProfile {
+    setvar(VAR_0x8004, EASY_CHAT_TYPE_PROFILE)
+    call(Common_ShowEasyChatScreen)
+    lock
+    faceplayer
+    goto_if_eq(VAR_0x8004, 0, EventScript_GaveSpecialProfile)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_CancelGiveProfile)
+    goto_if_eq(VAR_RESULT, TRUE, EventScript_GaveProfile)
+    end
+}
+
+text(local) Text_IdLoveToHearYourProfile {
+    "Hi, glad to meet you!\p"
+    "…That's unfriendly of you.\n"
+    "How about saying hi back?\p"
+    "So, come on, tell me about\n"
+    "yourself.\p"
+    "I'd love to hear your profile!$"
+}
+
+text(local) Text_TellMeWhatsYourProfile {
+    "Tell me something good about\n"
+    "yourself. What's your profile?$"
+}
+
+text(local) Text_ExplainProfile {
+    "A profile is written using four\n"
+    "words or phrases.\p"
+    "There're plenty of words to choose\n"
+    "from for your profile.\p"
+    "The words and phrases are placed\n"
+    "in several convenient groups.\p"
+    "First, choose a group, then choose\n"
+    "a word or phrase.\p"
+    "…It's easier than it sounds.\n"
+    "Why don't you try it?$"
+}
+
+text(local) Text_WhatsYourProfile {
+    "What's your profile?$"
+}
+
+text(local) Text_DontBeLikeThat {
+    "Aww… Don't be like that.\n"
+    "You can tell me your profile.$"
+}
+
+text(local) Text_DecidedNotTo {
+    "Oh, you've decided not to?\n"
+    "You're fickle, aren't you?$"
+}
+
+text(local) Text_HiWeMeetAgain {
+    "Hi!\n"
+    "We meet again!$"
+}
+
+text(local) Text_ChangeYourProfile {
+    "Would you like to change your\n"
+    "profile?$"
+}
+
+text(local) Text_WhatAreYouLikeNow {
+    "What are you like now?\n"
+    "I'd really like to know.$"
+}
+
+text(local) Text_LikeProfileWayItIs {
+    "Okay, you like your profile the\n"
+    "way it is.\p"
+    "I think so, too.$"
+}
+
+text(local) Text_ProfileSaysSomethingAboutYou {
+    "Hmhm…\p"
+    "Your profile really says something\n"
+    "about who you are.\p"
+    "Now that I know you better, it \n"
+    "makes us better friends than ever!$"
+}
+
+text(local) Text_HeardThatBefore {
+    "Oh, I've heard that before…\p"
+    "My cousin, who lives far away,\n"
+    "always used to say that, I think.$"
+}
+
+text(local) Text_TellMoreNextTime {
+    "Please tell me more about\n"
+    "yourself next time!$"
+}

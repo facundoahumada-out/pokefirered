@@ -1,0 +1,35 @@
+mapscripts PewterCity_Mart_MapScripts {}
+
+script PewterCity_Mart_EventScript_Youngster {
+    msgbox(PewterCity_Mart_Text_BoughtWeirdFishFromShadyGuy, MSGBOX_NPC)
+    end
+}
+
+script PewterCity_Mart_EventScript_Boy {
+    msgbox(PewterCity_Mart_Text_GoodThingsIfRaiseMonsDiligently, MSGBOX_NPC)
+    end
+}
+
+script PewterCity_Mart_EventScript_Clerk {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lock
+    faceplayer
+    message(Text_MayIHelpYou)
+    waitmessage
+    pokemart(PewterCity_Mart_Items)
+    msgbox(Text_PleaseComeAgain)
+    release
+    end
+}
+
+mart(global) PewterCity_Mart_Items {
+    ITEM_POKE_BALL
+    ITEM_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+    ITEM_BURN_HEAL
+    ITEM_ESCAPE_ROPE
+    ITEM_REPEL
+    ITEM_NONE
+}

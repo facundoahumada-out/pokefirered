@@ -1,0 +1,14 @@
+text SafariZone_East_Text_HowManyDidYouCatch {
+    "How many did you catch?\n"
+    "I'm bushed from the effort!$"
+}
+
+text SafariZone_East_Text_CaughtChanseyAllWorthwhile {
+    "I caught a CHANSEY!\p"
+    "That makes this all worthwhile.$"
+}
+
+text SafariZone_East_Text_TiredFromAllTheFun {
+    "Whew!\n"
+    "I'm tired from all the fun!$"
+}

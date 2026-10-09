@@ -28,6 +28,9 @@ static s32 MapPosToBgTilemapOffset(struct FieldCameraOffset *a, s32 x, s32 y);
 static void DrawWholeMapViewInternal(int x, int y, const struct MapLayout *mapLayout);
 static void DrawMetatileAt(const struct MapLayout *mapLayout, u16, int, int);
 static void DrawMetatile(s32 a, const u16 *b, u16 c);
+
+// Special layer type used for door animations, whose tile data only has 2 layers
+#define DOOR_METATILE_LAYER_TYPE 0xFF
 static void CameraPanningCB_PanAhead(void);
 
 // IWRAM bss vars
@@ -217,7 +220,7 @@ void DrawDoorMetatileAt(int x, int y, const u16 *tiles)
 
     if (offset >= 0)
     {
-        DrawMetatile(1, tiles, offset);
+        DrawMetatile(DOOR_METATILE_LAYER_TYPE, tiles, offset);
        // sFieldCameraOffset.copyBGToVRAM = TRUE;
     }
 }
@@ -236,33 +239,14 @@ static void DrawMetatileAt(const struct MapLayout *mapLayout, u16 offset, int x,
         metatiles = mapLayout->secondaryTileset->metatiles;
         metatileId -= NUM_METATILES_IN_PRIMARY;
     }
-    DrawMetatile(MapGridGetMetatileLayerTypeAt(x, y), metatiles + metatileId * NUM_TILES_PER_METATILE, offset);
+    DrawMetatile(METATILE_LAYER_TYPE_NORMAL, metatiles + metatileId * NUM_TILES_PER_METATILE, offset);
 }
 
 static void DrawMetatile(s32 metatileLayerType, const u16 *tiles, u16 offset)
 {
-    switch (metatileLayerType)
+    if (metatileLayerType == DOOR_METATILE_LAYER_TYPE)
     {
-    case METATILE_LAYER_TYPE_SPLIT:
-        // Draw metatile's bottom layer to the bottom background layer.
-        gBGTilemapBuffers3[offset] = tiles[0];
-        gBGTilemapBuffers3[offset + 1] = tiles[1];
-        gBGTilemapBuffers3[offset + 0x20] = tiles[2];
-        gBGTilemapBuffers3[offset + 0x21] = tiles[3];
-
-        // Draw transparent tiles to the middle background layer.
-        gBGTilemapBuffers1[offset] = 0;
-        gBGTilemapBuffers1[offset + 1] = 0;
-        gBGTilemapBuffers1[offset + 0x20] = 0;
-        gBGTilemapBuffers1[offset + 0x21] = 0;
-
-        // Draw metatile's top layer to the top background layer.
-        gBGTilemapBuffers2[offset] = tiles[4];
-        gBGTilemapBuffers2[offset + 1] = tiles[5];
-        gBGTilemapBuffers2[offset + 0x20] = tiles[6];
-        gBGTilemapBuffers2[offset + 0x21] = tiles[7];
-        break;
-    case METATILE_LAYER_TYPE_COVERED:
+        // Door animation tiles only have 2 layers (8 tiles), so use the vanilla covered behavior.
         // Draw metatile's bottom layer to the bottom background layer.
         gBGTilemapBuffers3[offset] = tiles[0];
         gBGTilemapBuffers3[offset + 1] = tiles[1];
@@ -280,26 +264,26 @@ static void DrawMetatile(s32 metatileLayerType, const u16 *tiles, u16 offset)
         gBGTilemapBuffers2[offset + 1] = 0;
         gBGTilemapBuffers2[offset + 0x20] = 0;
         gBGTilemapBuffers2[offset + 0x21] = 0;
-        break;
-    case METATILE_LAYER_TYPE_NORMAL:
-        // Draw garbage to the bottom background layer.
-        gBGTilemapBuffers3[offset] = 0x3014;
-        gBGTilemapBuffers3[offset + 1] = 0x3014;
-        gBGTilemapBuffers3[offset + 0x20] = 0x3014;
-        gBGTilemapBuffers3[offset + 0x21] = 0x3014;
+    }
+    else
+    {
+        // Draw metatile's bottom layer to the bottom background layer (BG3).
+        gBGTilemapBuffers3[offset] = tiles[0];
+        gBGTilemapBuffers3[offset + 1] = tiles[1];
+        gBGTilemapBuffers3[offset + 0x20] = tiles[2];
+        gBGTilemapBuffers3[offset + 0x21] = tiles[3];
 
-        // Draw metatile's bottom layer to the middle background layer.
-        gBGTilemapBuffers1[offset] = tiles[0];
-        gBGTilemapBuffers1[offset + 1] = tiles[1];
-        gBGTilemapBuffers1[offset + 0x20] = tiles[2];
-        gBGTilemapBuffers1[offset + 0x21] = tiles[3];
+        // Draw metatile's middle layer to the middle background layer (BG2).
+        gBGTilemapBuffers1[offset] = tiles[4];
+        gBGTilemapBuffers1[offset + 1] = tiles[5];
+        gBGTilemapBuffers1[offset + 0x20] = tiles[6];
+        gBGTilemapBuffers1[offset + 0x21] = tiles[7];
 
-        // Draw metatile's top layer to the top background layer, which covers object event sprites.
-        gBGTilemapBuffers2[offset] = tiles[4];
-        gBGTilemapBuffers2[offset + 1] = tiles[5];
-        gBGTilemapBuffers2[offset + 0x20] = tiles[6];
-        gBGTilemapBuffers2[offset + 0x21] = tiles[7];
-        break;
+        // Draw metatile's top layer to the top background layer (BG1), which covers object event sprites.
+        gBGTilemapBuffers2[offset] = tiles[8];
+        gBGTilemapBuffers2[offset + 1] = tiles[9];
+        gBGTilemapBuffers2[offset + 0x20] = tiles[10];
+        gBGTilemapBuffers2[offset + 0x21] = tiles[11];
     }
     ScheduleBgCopyTilemapToVram(1);
     ScheduleBgCopyTilemapToVram(2);

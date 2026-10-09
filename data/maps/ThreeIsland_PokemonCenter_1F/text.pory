@@ -1,0 +1,21 @@
+text ThreeIsland_PokemonCenter_1F_Text_PCNetworkCanLinkWithKanto {
+    "Hey, did you hear the news?\p"
+    "The PC network here can now link\n"
+    "with PCs in KANTO.\p"
+    "I don't know how that came about,\n"
+    "but it's fantastic!$"
+}
+
+text ThreeIsland_PokemonCenter_1F_Text_ImpossibleToSurfBetweenIslands {
+    "It's impossible to SURF between the\n"
+    "islands around these parts.\p"
+    "The tides are too fast and\n"
+    "treacherous.$"
+}
+
+text ThreeIsland_PokemonCenter_1F_Text_AlwaysBerriesInBerryForest {
+    "Let's crush BERRIES!\n"
+    "…That'd be wasting BERRIES?\p"
+    "You can always find some BERRIES\n"
+    "on the ground in BERRY FOREST.$"
+}

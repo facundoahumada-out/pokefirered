@@ -1,0 +1,160 @@
+text FiveIsland_RocketWarehouse_Text_ManyMonsLockedInPen {
+    "There are many POKéMON locked\n"
+    "away in the pen…$"
+}
+
+text FiveIsland_RocketWarehouse_Text_PenUnlockedMonsFled {
+    "The pen door is unlocked.\n"
+    "The POKéMON appear to have fled.$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Grunt2Intro {
+    "Did you come here knowing it's\n"
+    "TEAM ROCKET's WAREHOUSE?$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Grunt2Defeat {
+    "What do you think you're doing?!$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Grunt2PostBattle {
+    "TEAM ROCKET broke up?\n"
+    "What planet are you from?$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Grunt1Intro {
+    "Oh, now your POKéMON look strong.\n"
+    "You're willing to sell them?\p"
+    "Oh?\n"
+    "You wanted to battle?$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Grunt1Defeat {
+    "Oh, but…\n"
+    "Too much!$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Grunt1PostBattle {
+    "We can give you a great price.\n"
+    "Sell us your POKéMON!$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Grunt3Intro {
+    "I got word about you from the\n"
+    "others.\p"
+    "But there's no way a kid like you'd\n"
+    "know our BOSS GIOVANNI!$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Grunt3Defeat {
+    "Don't…you…dare…laugh…$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Grunt3PostBattle {
+    "Don't mess in the doings of adults,\n"
+    "you jumped-up pip-squeak!$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Admin1Intro {
+    "I don't know or care if what I'm\n"
+    "doing is right or wrong…\p"
+    "I just put my faith in GIOVANNI\n"
+    "and do as I am told.$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Admin1Defeat {
+    "I…\n"
+    "I'm shattered…$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Admin1PostBattle {
+    "You're doing things according to\n"
+    "your beliefs and morals.\p"
+    "I understand now…$"
+}
+
+text FiveIsland_RocketWarehouse_Text_MadeItSoYouCanComeBackThrough {
+    "I've made it so you can come back\n"
+    "in through there.\p"
+    "Why don't you go get rested and\n"
+    "refreshed for what lies ahead?\p"
+    "The ADMIN after me outranks me\n"
+    "thoroughly as a TRAINER.\p"
+    "You'd better steel yourself for one\n"
+    "harsh challenge.$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Admin2Intro {
+    "That's quite enough of you \n"
+    "playing the hero, kid.\p"
+    "Spreading lies about how TEAM\n"
+    "ROCKET has disbanded…\p"
+    "It's such an obvious attempt to\n"
+    "cause confusion in our ranks.\p"
+    "Fortunately, we're not so ignorant\n"
+    "to fall for the lies of a child!\p"
+    "And now, I'll show you how scary\n"
+    "an angry adult can be!$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Admin2Defeat {
+    "Urgh…\n"
+    "You were too strong…\p"
+    "…\n"
+    "Th-that's GIOVANNI's BADGE!\p"
+    "So it's true?\n"
+    "TEAM ROCKET really has disbanded?$"
+}
+
+text FiveIsland_RocketWarehouse_Text_Admin2PostBattle {
+    "We will abandon this WAREHOUSE…\p"
+    "But don't think this is over.\n"
+    "I won't let this be the end.\p"
+    "I will find GIOVANNI.\n"
+    "And I will resurrect TEAM ROCKET!\l"
+    "I will…\p"
+    "Until then, farewell!$"
+}
+
+text FiveIsland_RocketWarehouse_Text_ReportWithGraphsAndText {
+    "A report with graphs and text is on\n"
+    "the PC monitor.\p"
+    "“The Influence of Magnetic Waves\n"
+    "on POKéMON Evolution”…\p"
+    "… … … … … …\p"
+    "It's too difficult to understand…$"
+}
+
+text FiveIsland_RocketWarehouse_Text_GideonIntro {
+    "I almost managed to sell the\n"
+    "SAPPHIRE for huge money…\p"
+    "Then, you just had to come along\n"
+    "and blow the whole deal apart!\p"
+    "Fufu… Fufufufu…\n"
+    "There's no forgiveness for you!$"
+}
+
+text FiveIsland_RocketWarehouse_Text_GideonDefeat {
+    "Gah! Darn!\n"
+    "Darn! Darn!$"
+}
+
+text FiveIsland_RocketWarehouse_Text_GideonPostBattle {
+    "If I can't sell it, it's worthless!\n"
+    "Go ahead, take it!$"
+}
+
+text FiveIsland_RocketWarehouse_Text_GetLostLeaveMeBe {
+    "What do you want now?\n"
+    "Go on, get lost, leave me be.$"
+}
+
+text FiveIsland_RocketWarehouse_Text_GiovannisKidHasRedHair {
+    "What, you again?\p"
+    "You… You're not GIOVANNI's kid,\n"
+    "are you?\p"
+    "No, that can't be right!\n"
+    "GIOVANNI's kid has red hair.\p"
+    "You don't have any reasons for\n"
+    "bugging me. Leave me alone!$"
+}

@@ -1,21 +1,27 @@
 gText_WouldYouLikeToSaveTheGame::
+# 1 "data/text/save.pory"
 	.string "Would you like to save the game?$"
 
 gText_AlreadySaveFile_WouldLikeToOverwrite::
+# 5 "data/text/save.pory"
 	.string "There is already a saved file.\n"
 	.string "Is it okay to overwrite it?$"
 
 gText_SavingDontTurnOffThePower::
+# 10 "data/text/save.pory"
 	.string "SAVING…\n"
 	.string "DON'T TURN OFF THE POWER.$"
 
 gText_PlayerSavedTheGame::
+# 15 "data/text/save.pory"
 	.string "{PLAYER} saved the game.$"
 
 gText_SaveFailed2::
+# 19 "data/text/save.pory"
 	.string "セーブに　しっぱい　しました‥$"
 
 gText_DifferentGameFile::
+# 23 "data/text/save.pory"
 	.string "WARNING!\p"
 	.string "There is a different game file that\n"
 	.string "is already saved.\p"

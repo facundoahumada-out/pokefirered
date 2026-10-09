@@ -1,0 +1,42 @@
+text SilphCo_3F_Text_WhatAmIToDo {
+    "I work for SILPH CO.\n"
+    "What am I to do?$"
+}
+
+text SilphCo_3F_Text_YouAndYourMonsSavedUs {
+    "{PLAYER}!\n"
+    "You and your POKéMON saved us!$"
+}
+
+text SilphCo_3F_Text_GruntIntro {
+    "Quit messing with us, kid!$"
+}
+
+text SilphCo_3F_Text_GruntDefeat {
+    "I give up!$"
+}
+
+text SilphCo_3F_Text_GruntPostBattle {
+    "A hint? You can open doors with\n"
+    "a CARD KEY!$"
+}
+
+text SilphCo_3F_Text_JoseIntro {
+    "I support TEAM ROCKET more than\n"
+    "I support SILPH CO.!$"
+}
+
+text SilphCo_3F_Text_JoseDefeat {
+    "You really got me!$"
+}
+
+text SilphCo_3F_Text_JosePostBattle {
+    "Humph…\p"
+    "TEAM ROCKET said that if I helped\n"
+    "them, they'd let me study POKéMON.$"
+}
+
+text SilphCo_3F_Text_FloorSign {
+    "SILPH CO. HEAD OFFICE\n"
+    "3F$"
+}

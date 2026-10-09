@@ -6,6 +6,7 @@
 #include "mail_data.h"
 #include "pokemon_storage_system.h"
 #include "event_data.h"
+#include "field_specials.h"
 #include "random.h"
 #include "constants/moves.h"
 #include "menu.h"
@@ -1092,7 +1093,10 @@ void CreateEgg(struct Pokemon *mon, u16 species, bool8 setHotSpringsLocation)
     u8 metLocation;
     u8 isEgg;
 
-    CreateMon(mon, species, EGG_HATCH_LEVEL, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+    if (ShinyCharmForcesShiny())
+        CreateMon(mon, species, EGG_HATCH_LEVEL, USE_RANDOM_IVS, TRUE, MakePersonalityShiny(GetPlayerTrainerId(), Random32()), OT_ID_PLAYER_ID, 0);
+    else
+        CreateMon(mon, species, EGG_HATCH_LEVEL, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
     metLevel = 0;
     ball = ITEM_POKE_BALL;
     language = LANGUAGE_JAPANESE;
@@ -1119,6 +1123,8 @@ static void SetInitialEggData(struct Pokemon *mon, u16 species, struct DayCare *
     u8 language;
 
     personality = daycare->offspringPersonality | (Random() << 16);
+    if (ShinyCharmForcesShiny())
+        personality = MakePersonalityShiny(GetPlayerTrainerId(), personality);
     CreateMon(mon, species, EGG_HATCH_LEVEL, USE_RANDOM_IVS, TRUE, personality, OT_ID_PLAYER_ID, 0);
     metLevel = 0;
     ball = ITEM_POKE_BALL;

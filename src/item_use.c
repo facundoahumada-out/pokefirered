@@ -356,6 +356,28 @@ void FieldUseFunc_PowderJar(u8 taskId)
         DisplayItemMessageOnField(taskId, FONT_NORMAL, gStringVar4, Task_ItemUse_CloseMessageBoxAndReturnToField);
 }
 
+void FieldUseFunc_ShinyCharm(u8 taskId)
+{
+    const u8 *str;
+
+    if (FlagGet(FLAG_SHINY_CHARM_ACTIVE))
+    {
+        FlagClear(FLAG_SHINY_CHARM_ACTIVE);
+        str = gText_ShinyCharmTurnedOff;
+    }
+    else
+    {
+        FlagSet(FLAG_SHINY_CHARM_ACTIVE);
+        str = gText_ShinyCharmTurnedOn;
+    }
+
+    StringExpandPlaceholders(gStringVar4, str);
+    if (gTasks[taskId].data[3] == 0)
+        DisplayItemMessageInBag(taskId, FONT_NORMAL, gStringVar4, Task_ReturnToBagFromContextMenu);
+    else
+        DisplayItemMessageOnField(taskId, FONT_NORMAL, gStringVar4, Task_ItemUse_CloseMessageBoxAndReturnToField);
+}
+
 void FieldUseFunc_PokeFlute(u8 taskId)
 {
     bool8 wokeSomeoneUp = FALSE;
@@ -565,6 +587,7 @@ static void Task_UseRepel(u8 taskId)
     {
         ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, NULL, gSpecialVar_ItemId, 0xFFFF);
         VarSet(VAR_REPEL_STEP_COUNT, ItemId_GetHoldEffectParam(gSpecialVar_ItemId));
+        VarSet(VAR_REPEL_LAST_USED, gSpecialVar_ItemId);
         RemoveUsedItem();
         DisplayItemMessageInBag(taskId, FONT_NORMAL, gStringVar4, Task_ReturnToBagFromContextMenu);
     }

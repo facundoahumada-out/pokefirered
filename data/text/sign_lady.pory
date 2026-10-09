@@ -1,0 +1,36 @@
+// For the NPC in Pallet Town that talks about the Trainer Tips sign
+text PalletTown_Text_HmmIsThatRight {
+    "Hmm…\n"
+    "Is that right…$"
+}
+
+text PalletTown_Text_OhLookLook {
+    "Oh!\n"
+    "Look, look!$"
+}
+
+text PalletTown_Text_ReadItReadIt {
+    "Read it, read it!$"
+}
+
+// Used by sign
+text PalletTown_Text_PressStartToOpenMenu {
+    "TRAINER TIPS\p"
+    "Press START to open the MENU!$"
+}
+
+text PalletTown_Text_SignsAreUsefulArentThey {
+    "Signs are useful, aren't they?$"
+}
+
+text PalletTown_Text_LookCopiedTrainerTipsSign {
+    "Look, look!\p"
+    "I copied what it said on one of\n"
+    "those TRAINER TIPS signs!$"
+}
+
+// Used by NPC
+text PalletTown_Text_PressStartToOpenMenuCopy {
+    "TRAINER TIPS!\p"
+    "Press START to open the MENU!$"
+}

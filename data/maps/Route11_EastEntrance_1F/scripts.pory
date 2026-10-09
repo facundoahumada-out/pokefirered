@@ -1,0 +1,11 @@
+mapscripts Route11_EastEntrance_1F_MapScripts {}
+
+script Route11_EastEntrance_1F_EventScript_TopGuard {
+    msgbox(Route11_EastEntrance_1F_Text_ManInLavenderRatesNames, MSGBOX_NPC)
+    end
+}
+
+script Route11_EastEntrance_1F_EventScript_BottomGuard {
+    msgbox(Route11_EastEntrance_1F_Text_RockTunnelToReachLavender, MSGBOX_NPC)
+    end
+}

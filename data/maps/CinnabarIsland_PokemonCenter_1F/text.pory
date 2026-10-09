@@ -1,0 +1,43 @@
+text CinnabarIsland_PokemonCenter_1F_Text_CinnabarGymLocked {
+    "I came to visit the CINNABAR GYM,\n"
+    "but the door is locked tight.\p"
+    "There should be a key for it\n"
+    "somewhere.\p"
+    "Could it be in that burned-out\n"
+    "mansion?\p"
+    "The GYM LEADER's friend used to\n"
+    "live there, they say.$"
+}
+
+text CinnabarIsland_PokemonCenter_1F_Text_VisitUnionRoom {
+    "Do you have lots of friends?\p"
+    "Linking up with the usual friends\n"
+    "is fun, of course.\p"
+    "But how about visiting the\n"
+    "UNION ROOM every so often?\p"
+    "Who knows, you may end up making\n"
+    "new friends.\p"
+    "I think it would be worth your time\n"
+    "to check the UNION ROOM.$"
+}
+
+text CinnabarIsland_PokemonCenter_1F_Text_EvolutionCanWaitForNewMoves {
+    "POKéMON can still learn techniques\n"
+    "after canceling evolution.\p"
+    "Evolution can wait until new moves\n"
+    "have been learned.$"
+}
+
+text CinnabarIsland_PokemonCenter_1F_Text_ReadyToSailToOneIsland {
+    "BILL: Hey, you kept me waiting!\n"
+    "Ready to set sail to ONE ISLAND?$"
+}
+
+text CinnabarIsland_PokemonCenter_1F_Text_OhNotDoneYet {
+    "Oh, you're still not done yet?$"
+}
+
+text CinnabarIsland_PokemonCenter_1F_Text_LetsGo {
+    "Well, that's it.\n"
+    "Let's go!$"
+}

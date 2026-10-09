@@ -1,0 +1,20 @@
+mapscripts Route4_MapScripts {}
+
+script Route4_EventScript_Unused {
+    end
+}
+
+script Route4_EventScript_Woman {
+    msgbox(Route4_Text_TrippedOverGeodude, MSGBOX_NPC)
+    end
+}
+
+script Route4_EventScript_MtMoonSign {
+    msgbox(Route4_Text_MtMoonEntrance, MSGBOX_SIGN)
+    end
+}
+
+script Route4_EventScript_RouteSign {
+    msgbox(Route4_Text_RouteSign, MSGBOX_SIGN)
+    end
+}

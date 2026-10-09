@@ -1,120 +1,152 @@
 Route20_Text_BarryIntro::
-    .string "The water is shallow here.\n"
-    .string "There are many people swimming.$"
+# 1 "data/maps/Route20/text.pory"
+	.string "The water is shallow here.\n"
+	.string "There are many people swimming.$"
 
 Route20_Text_BarryDefeat::
-    .string "Splash!$"
+# 6 "data/maps/Route20/text.pory"
+	.string "Splash!$"
 
 Route20_Text_BarryPostBattle::
-    .string "I wish I could ride my POKéMON.\n"
-    .string "I bet you're not tired.$"
+# 10 "data/maps/Route20/text.pory"
+	.string "I wish I could ride my POKéMON.\n"
+	.string "I bet you're not tired.$"
 
 Route20_Text_ShirleyIntro::
-    .string "SEAFOAM is a quiet getaway.\n"
-    .string "I'm vacationing here.$"
+# 15 "data/maps/Route20/text.pory"
+	.string "SEAFOAM is a quiet getaway.\n"
+	.string "I'm vacationing here.$"
 
 Route20_Text_ShirleyDefeat::
-    .string "Quit it!$"
+# 20 "data/maps/Route20/text.pory"
+	.string "Quit it!$"
 
 Route20_Text_ShirleyPostBattle::
-    .string "There's a huge cavern underneath\n"
-    .string "this island.$"
+# 24 "data/maps/Route20/text.pory"
+	.string "There's a huge cavern underneath\n"
+	.string "this island.$"
 
 Route20_Text_TiffanyIntro::
-    .string "I love floating with the fishes\n"
-    .string "here among the waves.$"
+# 29 "data/maps/Route20/text.pory"
+	.string "I love floating with the fishes\n"
+	.string "here among the waves.$"
 
 Route20_Text_TiffanyDefeat::
-    .string "Yowch!$"
+# 34 "data/maps/Route20/text.pory"
+	.string "Yowch!$"
 
 Route20_Text_TiffanyPostBattle::
-    .string "Want to float with me?$"
+# 38 "data/maps/Route20/text.pory"
+	.string "Want to float with me?$"
 
 Route20_Text_IreneIntro::
-    .string "Are you on vacation, too?$"
+# 42 "data/maps/Route20/text.pory"
+	.string "Are you on vacation, too?$"
 
 Route20_Text_IreneDefeat::
-    .string "No mercy at all!$"
+# 46 "data/maps/Route20/text.pory"
+	.string "No mercy at all!$"
 
 Route20_Text_IrenePostBattle::
-    .string "SEAFOAM used to be a single island\n"
-    .string "in the distant past.$"
+# 50 "data/maps/Route20/text.pory"
+	.string "SEAFOAM used to be a single island\n"
+	.string "in the distant past.$"
 
 Route20_Text_DeanIntro::
-    .string "Check out my buff physique!$"
+# 55 "data/maps/Route20/text.pory"
+	.string "Check out my buff physique!$"
 
 Route20_Text_DeanDefeat::
-    .string "Wimpy!$"
+# 59 "data/maps/Route20/text.pory"
+	.string "Wimpy!$"
 
 Route20_Text_DeanPostBattle::
-    .string "I should've been buffing up my\n"
-    .string "POKéMON, not me!$"
+# 63 "data/maps/Route20/text.pory"
+	.string "I should've been buffing up my\n"
+	.string "POKéMON, not me!$"
 
 Route20_Text_DarrinIntro::
-    .string "Why are you riding a POKéMON?\n"
-    .string "Can't you swim?$"
+# 68 "data/maps/Route20/text.pory"
+	.string "Why are you riding a POKéMON?\n"
+	.string "Can't you swim?$"
 
 Route20_Text_DarrinDefeat::
-    .string "Ouch!\n"
-    .string "Torpedoed!$"
+# 73 "data/maps/Route20/text.pory"
+	.string "Ouch!\n"
+	.string "Torpedoed!$"
 
 Route20_Text_DarrinPostBattle::
-    .string "Riding a POKéMON sure looks fun!$"
+# 78 "data/maps/Route20/text.pory"
+	.string "Riding a POKéMON sure looks fun!$"
 
 Route20_Text_RogerIntro::
-    .string "I rode my bird POKéMON here.$"
+# 82 "data/maps/Route20/text.pory"
+	.string "I rode my bird POKéMON here.$"
 
 Route20_Text_RogerDefeat::
-    .string "Oh, no!\n"
-    .string "Now what am I to do?$"
+# 86 "data/maps/Route20/text.pory"
+	.string "Oh, no!\n"
+	.string "Now what am I to do?$"
 
 Route20_Text_RogerPostBattle::
-    .string "My birds are exhausted.\n"
-    .string "They can't FLY me back!$"
+# 91 "data/maps/Route20/text.pory"
+	.string "My birds are exhausted.\n"
+	.string "They can't FLY me back!$"
 
 Route20_Text_NoraIntro::
-    .string "My boyfriend gave me big pearls.$"
+# 96 "data/maps/Route20/text.pory"
+	.string "My boyfriend gave me big pearls.$"
 
 Route20_Text_NoraDefeat::
-    .string "Oh, no!\n"
-    .string "My pearls were in them!$"
+# 100 "data/maps/Route20/text.pory"
+	.string "Oh, no!\n"
+	.string "My pearls were in them!$"
 
 Route20_Text_NoraPostBattle::
-    .string "Will my pearls grow bigger inside\n"
-    .string "CLOYSTER?$"
+# 105 "data/maps/Route20/text.pory"
+	.string "Will my pearls grow bigger inside\n"
+	.string "CLOYSTER?$"
 
 Route20_Text_MissyIntro::
-    .string "I swam here from CINNABAR ISLAND.\n"
-    .string "It wasn't easy, I tell you.$"
+# 110 "data/maps/Route20/text.pory"
+	.string "I swam here from CINNABAR ISLAND.\n"
+	.string "It wasn't easy, I tell you.$"
 
 Route20_Text_MissyDefeat::
-    .string "I'm so disappointed!$"
+# 115 "data/maps/Route20/text.pory"
+	.string "I'm so disappointed!$"
 
 Route20_Text_MissyPostBattle::
-    .string "POKéMON have taken over an\n"
-    .string "abandoned mansion on CINNABAR.\p"
-    .string "They call it the POKéMON MANSION\n"
-    .string "now.$"
+# 119 "data/maps/Route20/text.pory"
+	.string "POKéMON have taken over an\n"
+	.string "abandoned mansion on CINNABAR.\p"
+	.string "They call it the POKéMON MANSION\n"
+	.string "now.$"
 
 Route20_Text_MelissaIntro::
-    .string "CINNABAR, in the west, has a LAB\n"
-    .string "for POKéMON.\p"
-    .string "My daddy works there.$"
+# 126 "data/maps/Route20/text.pory"
+	.string "CINNABAR, in the west, has a LAB\n"
+	.string "for POKéMON.\p"
+	.string "My daddy works there.$"
 
 Route20_Text_MelissaDefeat::
-    .string "Wait!\n"
-    .string "You're supposed to wait!$"
+# 132 "data/maps/Route20/text.pory"
+	.string "Wait!\n"
+	.string "You're supposed to wait!$"
 
 Route20_Text_MelissaPostBattle::
-    .string "CINNABAR is a volcanic island.\p"
-    .string "I heard it rose out of the sea\n"
-    .string "when a volcano erupted.$"
+# 137 "data/maps/Route20/text.pory"
+	.string "CINNABAR is a volcanic island.\p"
+	.string "I heard it rose out of the sea\n"
+	.string "when a volcano erupted.$"
 
 Route20_Text_SeafoamIslands::
-    .string "SEAFOAM ISLANDS$"
+# 143 "data/maps/Route20/text.pory"
+	.string "SEAFOAM ISLANDS$"
 
 Route20_Text_MistyTrainsHere::
-    .string "Strong TRAINERS and WATER POKéMON\n"
-    .string "are common sights in these parts.\p"
-    .string "They say that MISTY of the\n"
-    .string "CERULEAN GYM trains here.$"
+# 147 "data/maps/Route20/text.pory"
+	.string "Strong TRAINERS and WATER POKéMON\n"
+	.string "are common sights in these parts.\p"
+	.string "They say that MISTY of the\n"
+	.string "CERULEAN GYM trains here.$"

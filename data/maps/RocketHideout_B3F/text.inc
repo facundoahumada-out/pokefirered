@@ -1,26 +1,31 @@
 RocketHideout_B3F_Text_Grunt1Intro::
-    .string "Stop meddling in TEAM ROCKET's\n"
-    .string "affairs or else!$"
+# 1 "data/maps/RocketHideout_B3F/text.pory"
+	.string "Stop meddling in TEAM ROCKET's\n"
+	.string "affairs or else!$"
 
 RocketHideout_B3F_Text_Grunt1Defeat::
-    .string "Oof!\n"
-    .string "Taken down!$"
+# 6 "data/maps/RocketHideout_B3F/text.pory"
+	.string "Oof!\n"
+	.string "Taken down!$"
 
 RocketHideout_B3F_Text_Grunt1PostBattle::
-    .string "SILPH SCOPE?\n"
-    .string "Oh, that machine the BOSS stole.\p"
-    .string "It's here somewhere.$"
+# 11 "data/maps/RocketHideout_B3F/text.pory"
+	.string "SILPH SCOPE?\n"
+	.string "Oh, that machine the BOSS stole.\p"
+	.string "It's here somewhere.$"
 
 RocketHideout_B3F_Text_Grunt2Intro::
-    .string "We got word from upstairs that you\n"
-    .string "were coming!$"
+# 17 "data/maps/RocketHideout_B3F/text.pory"
+	.string "We got word from upstairs that you\n"
+	.string "were coming!$"
 
 RocketHideout_B3F_Text_Grunt2Defeat::
-    .string "What?\n"
-    .string "I lost? No!$"
+# 22 "data/maps/RocketHideout_B3F/text.pory"
+	.string "What?\n"
+	.string "I lost? No!$"
 
 RocketHideout_B3F_Text_Grunt2PostBattle::
-    .string "Go ahead and go!\p"
-    .string "But you can't run the elevator\n"
-    .string "without the LIFT KEY.$"
-
+# 27 "data/maps/RocketHideout_B3F/text.pory"
+	.string "Go ahead and go!\p"
+	.string "But you can't run the elevator\n"
+	.string "without the LIFT KEY.$"

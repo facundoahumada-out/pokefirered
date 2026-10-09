@@ -420,6 +420,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_SASSY_MINT]     = {gItemIcon_Mint, gItemIconPalette_PinkMint},
     [ITEM_SERIOUS_MINT]   = {gItemIcon_Mint, gItemIconPalette_YellowMint},
     [ITEM_TIMID_MINT]     = {gItemIcon_Mint, gItemIconPalette_GreenMint},
+    [ITEM_SHINY_CHARM]    = {gItemIcon_ShinyCharm, gItemIconPalette_ShinyCharm},
     // Return to field arrow
     [ITEMS_COUNT]         = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

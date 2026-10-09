@@ -1,0 +1,46 @@
+// The text here is a copy/paste from Hoenn's competitive brothers, the NPCs in Sootopolis who request to see big Barboach/Shroomish (Seedot/Lotad in Emerald). It's all unused and untranslated
+text SootopolisCity_Text_PleaseShowMeBigMon {
+    "わしは　おおきな　{STR_VAR_1}に\n"
+    "とても　きょうみが　ある！\p"
+    "ん？　きみ　{STR_VAR_1}　もってるの？\n"
+    "ちょ　ちょ　ちょっと···\l"
+    "おじさんに　みせて　おくれ！$"
+}
+
+text SootopolisCity_Text_GrandMonThanksForShowingMe {
+    "おお！　こいつは　でかい！\n"
+    "とても　すばらしい　{STR_VAR_1}だ！\p"
+    "みせて　くれて　ありがとう\n"
+    "おれいに　これを　もって　いきなさい$"
+}
+
+text SootopolisCity_Text_ReceivedOneItem {
+    "{PLAYER}は\n"
+    "{STR_VAR_2}を　もらった！$"
+}
+
+text SootopolisCity_Text_HuhBagIsCrammedFull {
+    "ありゃ？\n"
+    "きみ　もちもの　いっぱいだね$"
+}
+
+text SootopolisCity_Text_IveSeenBiggerMonThanThisOne {
+    "ううむ　わしは　これより　おおきい\n"
+    "{STR_VAR_1}を　みたこと　あるな···$"
+}
+
+text SootopolisCity_Text_QuiteSomethingButNotMon {
+    "おお　こいつは　なかなか···って\n"
+    "これ　{STR_VAR_1}じゃ　ないよ！$"
+}
+
+text SootopolisCity_Text_TooBadDontHaveBigMon {
+    "おおきい　{STR_VAR_1}　もってないの？\l"
+    "それは　ざんねん···\n"
+    "こんど　おおきい　{STR_VAR_1}　みせてね$"
+}
+
+text SootopolisCity_Text_BiggestMonPlayersXCmColossus {
+    "しじょう　さいだいの　{STR_VAR_1}！\n"
+    "{STR_VAR_2}の　{STR_VAR_3}cmのやつ！$"
+}

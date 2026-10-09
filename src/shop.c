@@ -117,7 +117,7 @@ static void BuyQuantityAddScrollIndicatorArrows(void);
 static void BuyMenuRemoveScrollIndicatorArrows(void);
 static void BuyMenuDrawMapView(void);
 static void BuyMenuDrawMapBg(void);
-static void BuyMenuDrawMapMetatile(s16 x, s16 y, const u16 *src, u8 metatileLayerType);
+static void BuyMenuDrawMapMetatile(s16 x, s16 y, const u16 *src);
 static void BuyMenuDrawMapMetatileLayer(u16 *dest, s16 offset1, s16 offset2, const u16 *src);
 static void BuyMenuCollectObjectEventData(void);
 static void BuyMenuDrawObjectEvents(void);
@@ -596,6 +596,12 @@ static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, s
     }
 }
 
+// TMs are infinite, so there's no point in buying one that's already in the TM Case
+static bool8 IsOwnedInfiniteTM(u16 itemId)
+{
+    return itemId >= ITEM_TM01 && itemId < ITEM_HM01 && CheckBagHasItem(itemId, 1);
+}
+
 static void BuyMenuPrintPriceInList(u8 windowId, u32 item, u8 y)
 {
     s32 x;
@@ -603,6 +609,11 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 item, u8 y)
 
     if (item != INDEX_CANCEL)
     {
+        if (IsOwnedInfiniteTM(item))
+        {
+            BuyMenuPrint(windowId, FONT_SMALL, gText_ShopOwned, 0x69, y, 0, 0, TEXT_SKIP_DRAW, 1);
+            return;
+        }
         ConvertIntToDecimalStringN(gStringVar1, ItemId_GetPrice(item), 0, 4);
         x = 4 - StringLength(gStringVar1);
         loc = gStringVar4;
@@ -725,7 +736,6 @@ static void BuyMenuDrawMapBg(void)
     s16 i, j, x, y;
     const struct MapLayout *mapLayout;
     u16 metatile;
-    u8 metatileLayerType;
 
     mapLayout = gMapHeader.mapLayout;
     GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
@@ -737,35 +747,68 @@ static void BuyMenuDrawMapBg(void)
         for (i = 0; i < 5; i++)
         {
             metatile = MapGridGetMetatileIdAt(x + i, y + j);
-            metatileLayerType = MapGridGetMetatileLayerTypeAt(x + i, y + j);
 
             if (metatile < NUM_METATILES_IN_PRIMARY)
-                BuyMenuDrawMapMetatile(i, j, mapLayout->primaryTileset->metatiles + metatile * NUM_TILES_PER_METATILE, metatileLayerType);
+                BuyMenuDrawMapMetatile(i, j, mapLayout->primaryTileset->metatiles + metatile * NUM_TILES_PER_METATILE);
             else
-                BuyMenuDrawMapMetatile(i, j, mapLayout->secondaryTileset->metatiles + ((metatile - NUM_METATILES_IN_PRIMARY) * NUM_TILES_PER_METATILE), metatileLayerType);
+                BuyMenuDrawMapMetatile(i, j, mapLayout->secondaryTileset->metatiles + ((metatile - NUM_METATILES_IN_PRIMARY) * NUM_TILES_PER_METATILE));
         }
     }
 }
 
-static void BuyMenuDrawMapMetatile(s16 x, s16 y, const u16 *src, u8 metatileLayerType)
+static bool8 IsMetatileLayerEmpty(const u16 *src)
+{
+    u32 i;
+
+    for (i = 0; i < 4; i++)
+    {
+        if ((src[i] & 0x3FF) != 0)
+            return FALSE;
+    }
+    return TRUE;
+}
+
+// The buy menu frame is drawn on BG1, which is also the map's top layer.
+static bool8 BuyMenuCheckForOverlapWithMenuBg(u16 offset)
+{
+    const u16 *menuBg = *gShopTilemapBuffer1;
+
+    return menuBg[offset] != 0
+        || menuBg[offset + 1] != 0
+        || menuBg[offset + 32] != 0
+        || menuBg[offset + 33] != 0;
+}
+
+static void BuyMenuDrawMapMetatile(s16 x, s16 y, const u16 *src)
 {
     u16 offset1 = x * 2;
     u16 offset2 = y * 64 + 64;
 
-    switch (metatileLayerType)
+    // BG3 (gShopTilemapBuffer3) = bottom, BG2 (gShopTilemapBuffer4) = middle, BG1 (gShopTilemapBuffer2) = top
+    if (!BuyMenuCheckForOverlapWithMenuBg(offset1 + offset2))
     {
-    case METATILE_LAYER_TYPE_NORMAL:
-        BuyMenuDrawMapMetatileLayer(*gShopTilemapBuffer4, offset1, offset2, src);
-        BuyMenuDrawMapMetatileLayer(*gShopTilemapBuffer2, offset1, offset2, src + 4);
-        break;
-    case METATILE_LAYER_TYPE_COVERED:
         BuyMenuDrawMapMetatileLayer(*gShopTilemapBuffer3, offset1, offset2, src);
         BuyMenuDrawMapMetatileLayer(*gShopTilemapBuffer4, offset1, offset2, src + 4);
-        break;
-    case METATILE_LAYER_TYPE_SPLIT:
-        BuyMenuDrawMapMetatileLayer(*gShopTilemapBuffer3, offset1, offset2, src);
-        BuyMenuDrawMapMetatileLayer(*gShopTilemapBuffer2, offset1, offset2, src + 4);
-        break;
+        BuyMenuDrawMapMetatileLayer(*gShopTilemapBuffer2, offset1, offset2, src + 8);
+    }
+    else
+    {
+        // The menu frame occupies BG1 here, so squeeze the metatile into BG2 and BG3 if one of its layers is empty.
+        if (IsMetatileLayerEmpty(src))
+        {
+            BuyMenuDrawMapMetatileLayer(*gShopTilemapBuffer3, offset1, offset2, src + 4);
+            BuyMenuDrawMapMetatileLayer(*gShopTilemapBuffer4, offset1, offset2, src + 8);
+        }
+        else if (IsMetatileLayerEmpty(src + 4))
+        {
+            BuyMenuDrawMapMetatileLayer(*gShopTilemapBuffer3, offset1, offset2, src);
+            BuyMenuDrawMapMetatileLayer(*gShopTilemapBuffer4, offset1, offset2, src + 8);
+        }
+        else
+        {
+            BuyMenuDrawMapMetatileLayer(*gShopTilemapBuffer3, offset1, offset2, src);
+            BuyMenuDrawMapMetatileLayer(*gShopTilemapBuffer4, offset1, offset2, src + 4);
+        }
     }
 }
 
@@ -892,7 +935,11 @@ static void Task_BuyMenu(u8 taskId)
             BuyMenuPrintCursor(tListTaskId, 2);
             RecolorItemDescriptionBox(1);
             sShopData.itemPrice = ItemId_GetPrice(itemId);
-            if (!IsEnoughMoney(&gSaveBlock1Ptr->money, sShopData.itemPrice))
+            if (IsOwnedInfiniteTM(itemId))
+            {
+                BuyMenuDisplayMessage(taskId, gText_YouAlreadyHaveThatTM, BuyMenuReturnToItemList);
+            }
+            else if (!IsEnoughMoney(&gSaveBlock1Ptr->money, sShopData.itemPrice))
             {
                 BuyMenuDisplayMessage(taskId, gText_YouDontHaveMoney, BuyMenuReturnToItemList);
             }
@@ -921,6 +968,8 @@ static void Task_BuyHowManyDialogueInit(u8 taskId)
     BuyMenuPrintItemQuantityAndPrice(taskId);
     ScheduleBgCopyTilemapToVram(0);
     maxQuantity = GetMoney(&gSaveBlock1Ptr->money) / ItemId_GetPrice(tItemId);
+    if (ItemId_GetPocket(tItemId) == POCKET_TM_CASE)
+        maxQuantity = 1;
     if (maxQuantity > 99)
         sShopData.maxQuantity = 99;
     else
@@ -1015,6 +1064,8 @@ static void BuyMenuReturnToItemList(u8 taskId)
     s16 *data = gTasks[taskId].data;
 
     ClearDialogWindowAndFrameToTransparent(2, FALSE);
+    if (sShopData.martType == MART_TYPE_TMHM)
+        RedrawListMenu(tListTaskId); // A TM that was just bought now shows as owned
     BuyMenuPrintCursor(tListTaskId, 1);
     RecolorItemDescriptionBox(0);
     PutWindowTilemap(4);

@@ -1,0 +1,60 @@
+text Text_FirstShouldRestoreMonsHealth {
+    "First, you should restore your\n"
+    "POKéMON to full health.$"
+}
+
+text Text_MonsHealedShouldBuyPotions {
+    "Your POKéMON have been healed\n"
+    "to perfect health.\p"
+    "If your POKéMON's energy, HP,\n"
+    "is down, please come see us.\p"
+    "If you're planning to go far in the\n"
+    "field, you should buy some POTIONS\l"
+    "at the POKéMON MART.\p"
+    "We hope you excel!$"
+}
+
+text Text_MonsHealed {
+    "Your POKéMON have been healed\n"
+    "to perfect health.\p"
+    "We hope you excel!$"
+}
+
+text Text_HadQuiteAnExperienceTakeRest {
+    "MOM: {PLAYER}!\n"
+    "Welcome home.\p"
+    "It sounds like you had quite\n"
+    "an experience.\p"
+    "Maybe you should take a quick\n"
+    "rest.$"
+}
+
+text Text_MomExplainHPGetPotions {
+    "MOM: Oh, good! You and your\n"
+    "POKéMON are looking great.\p"
+    "I just heard from PROF. OAK.\p"
+    "He said that POKéMON's energy is\n"
+    "measured in HP.\p"
+    "If your POKéMON lose their HP,\n"
+    "you can restore them at any\l"
+    "POKéMON CENTER.\p"
+    "If you're going to travel far away,\n"
+    "the smart TRAINER stocks up on\l"
+    "POTIONS at the POKéMON MART.\p"
+    "Make me proud, honey!\p"
+    "Take care!$"
+}
+
+text Text_WhitedOutLostMoney {
+    "{PLAYER} is out of usable\n"
+    "POKéMON!\p"
+    "{PLAYER} panicked and lost ¥{STR_VAR_1}…\p"
+    "… … … …\p"
+    "{PLAYER} whited out!$"
+}
+
+text Text_WhitedOut {
+    "{PLAYER} is out of usable\n"
+    "POKéMON!\p"
+    "{PLAYER} whited out!$"
+}

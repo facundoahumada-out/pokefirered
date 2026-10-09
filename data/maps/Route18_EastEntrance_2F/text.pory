@@ -1,0 +1,11 @@
+text Route18_EastEntrance_2F_Text_PalletTownInWest {
+    "Let's see what the binoculars have\n"
+    "to show…\p"
+    "PALLET TOWN is in the west.$"
+}
+
+text Route18_EastEntrance_2F_Text_PeopleSwimming {
+    "Let's see what the binoculars have\n"
+    "to show…\p"
+    "There are people swimming.$"
+}

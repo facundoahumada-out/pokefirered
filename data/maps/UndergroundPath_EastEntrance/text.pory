@@ -1,0 +1,5 @@
+text UndergroundPath_EastEntrance_Text_DoYouGoToCeladonDeptStore {
+    "The DEPARTMENT STORE in CELADON\n"
+    "has a great selection.\p"
+    "Do you go there very often?$"
+}

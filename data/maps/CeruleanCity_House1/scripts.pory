@@ -1,0 +1,97 @@
+mapscripts CeruleanCity_House1_MapScripts {}
+
+script CeruleanCity_House1_EventScript_BadgeGuy {
+    lock
+    faceplayer
+    msgbox(CeruleanCity_House1_Text_BadgesHaveAmazingSecrets)
+    message(CeruleanCity_House1_Text_DescribeWhichBadge)
+    waitmessage
+    setvar(VAR_0x8004, LISTMENU_BADGES)
+    special(ListMenu)
+    waitstate
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, CeruleanCity_House1_EventScript_DescribeBoulderBadge)
+    goto_if_eq(VAR_0x8000, 1, CeruleanCity_House1_EventScript_DescribeCascadeBadge)
+    goto_if_eq(VAR_0x8000, 2, CeruleanCity_House1_EventScript_DescribeThunderBadge)
+    goto_if_eq(VAR_0x8000, 3, CeruleanCity_House1_EventScript_DescribeRainbowBadge)
+    goto_if_eq(VAR_0x8000, 4, CeruleanCity_House1_EventScript_DescribeSoulBadge)
+    goto_if_eq(VAR_0x8000, 5, CeruleanCity_House1_EventScript_DescribeMarshBadge)
+    goto_if_eq(VAR_0x8000, 6, CeruleanCity_House1_EventScript_DescribeVolcanoBadge)
+    goto_if_eq(VAR_0x8000, 7, CeruleanCity_House1_EventScript_DescribeEarthBadge)
+    goto_if_eq(VAR_0x8000, 8, CeruleanCity_House1_EventScript_StopDescribingBadges)
+    goto_if_eq(VAR_0x8000, 127, CeruleanCity_House1_EventScript_StopDescribingBadges)
+    end
+}
+
+script CeruleanCity_House1_EventScript_DescribeAnotherBadge {
+    message(CeruleanCity_House1_Text_DescribeWhichBadge)
+    waitmessage
+    special(ReturnToListMenu)
+    waitstate
+    copyvar(VAR_0x8000, VAR_RESULT)
+    goto_if_eq(VAR_0x8000, 0, CeruleanCity_House1_EventScript_DescribeBoulderBadge)
+    goto_if_eq(VAR_0x8000, 1, CeruleanCity_House1_EventScript_DescribeCascadeBadge)
+    goto_if_eq(VAR_0x8000, 2, CeruleanCity_House1_EventScript_DescribeThunderBadge)
+    goto_if_eq(VAR_0x8000, 3, CeruleanCity_House1_EventScript_DescribeRainbowBadge)
+    goto_if_eq(VAR_0x8000, 4, CeruleanCity_House1_EventScript_DescribeSoulBadge)
+    goto_if_eq(VAR_0x8000, 5, CeruleanCity_House1_EventScript_DescribeMarshBadge)
+    goto_if_eq(VAR_0x8000, 6, CeruleanCity_House1_EventScript_DescribeVolcanoBadge)
+    goto_if_eq(VAR_0x8000, 7, CeruleanCity_House1_EventScript_DescribeEarthBadge)
+    goto_if_eq(VAR_0x8000, 8, CeruleanCity_House1_EventScript_StopDescribingBadges)
+    goto_if_eq(VAR_0x8000, 127, CeruleanCity_House1_EventScript_StopDescribingBadges)
+    end
+}
+
+script CeruleanCity_House1_EventScript_DescribeBoulderBadge {
+    msgbox(CeruleanCity_House1_Text_AttackStatFlash)
+    goto(CeruleanCity_House1_EventScript_DescribeAnotherBadge)
+    end
+}
+
+script CeruleanCity_House1_EventScript_DescribeCascadeBadge {
+    msgbox(CeruleanCity_House1_Text_ObeyLv30Cut)
+    goto(CeruleanCity_House1_EventScript_DescribeAnotherBadge)
+    end
+}
+
+script CeruleanCity_House1_EventScript_DescribeThunderBadge {
+    msgbox(CeruleanCity_House1_Text_SpeedStatFly)
+    goto(CeruleanCity_House1_EventScript_DescribeAnotherBadge)
+    end
+}
+
+script CeruleanCity_House1_EventScript_DescribeRainbowBadge {
+    msgbox(CeruleanCity_House1_Text_ObeyLv50Strength)
+    goto(CeruleanCity_House1_EventScript_DescribeAnotherBadge)
+    end
+}
+
+script CeruleanCity_House1_EventScript_DescribeSoulBadge {
+    msgbox(CeruleanCity_House1_Text_DefenseStatSurf)
+    goto(CeruleanCity_House1_EventScript_DescribeAnotherBadge)
+    end
+}
+
+script CeruleanCity_House1_EventScript_DescribeMarshBadge {
+    msgbox(CeruleanCity_House1_Text_ObeyLv70RockSmash)
+    goto(CeruleanCity_House1_EventScript_DescribeAnotherBadge)
+    end
+}
+
+script CeruleanCity_House1_EventScript_DescribeVolcanoBadge {
+    msgbox(CeruleanCity_House1_Text_SpStatsWaterfall)
+    goto(CeruleanCity_House1_EventScript_DescribeAnotherBadge)
+    end
+}
+
+script CeruleanCity_House1_EventScript_DescribeEarthBadge {
+    msgbox(CeruleanCity_House1_Text_AllMonsWillObeyYou)
+    goto(CeruleanCity_House1_EventScript_DescribeAnotherBadge)
+    end
+}
+
+script CeruleanCity_House1_EventScript_StopDescribingBadges {
+    msgbox(CeruleanCity_House1_Text_ComeVisitAnytime)
+    release
+    end
+}

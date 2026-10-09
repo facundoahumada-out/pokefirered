@@ -1,3 +1,3 @@
 CeladonCity_Condominiums_2F_Text_GameFreakMeetingRoom::
-    .string "GAME FREAK Meeting Room$"
-
+# 1 "data/maps/CeladonCity_Condominiums_2F/text.pory"
+	.string "GAME FREAK Meeting Room$"

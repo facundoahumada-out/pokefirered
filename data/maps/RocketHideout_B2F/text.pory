@@ -1,0 +1,14 @@
+text RocketHideout_B2F_Text_GruntIntro {
+    "BOSS said you can see ghosts with\n"
+    "the SILPH SCOPE.$"
+}
+
+text RocketHideout_B2F_Text_GruntDefeat {
+    "I surrender!$"
+}
+
+text RocketHideout_B2F_Text_GruntPostBattle {
+    "The TEAM ROCKET HQ has four\n"
+    "underground floors.\p"
+    "Think you can reach the BOSS?$"
+}

@@ -1,0 +1,6 @@
+text Route2_House_Text_FaintedMonsCanUseFieldMoves {
+    "A fainted POKéMON just has no\n"
+    "energy left to battle.\p"
+    "It can still use moves like CUT\n"
+    "outside of battle.$"
+}

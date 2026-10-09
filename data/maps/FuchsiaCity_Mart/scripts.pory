@@ -1,0 +1,33 @@
+mapscripts FuchsiaCity_Mart_MapScripts {}
+
+script FuchsiaCity_Mart_EventScript_CooltrainerF {
+    msgbox(FuchsiaCity_Mart_Text_DidYouTryXSpeed, MSGBOX_NPC)
+    end
+}
+
+script FuchsiaCity_Mart_EventScript_Gentleman {
+    msgbox(FuchsiaCity_Mart_Text_DontTheyHaveSafariZonePennants, MSGBOX_NPC)
+    end
+}
+
+script FuchsiaCity_Mart_EventScript_Clerk {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lock
+    faceplayer
+    message(Text_MayIHelpYou)
+    waitmessage
+    pokemart(FuchsiaCity_Mart_Items)
+    msgbox(Text_PleaseComeAgain)
+    release
+    end
+}
+
+mart(global) FuchsiaCity_Mart_Items {
+    ITEM_ULTRA_BALL
+    ITEM_GREAT_BALL
+    ITEM_SUPER_POTION
+    ITEM_REVIVE
+    ITEM_FULL_HEAL
+    ITEM_MAX_REPEL
+    ITEM_NONE
+}

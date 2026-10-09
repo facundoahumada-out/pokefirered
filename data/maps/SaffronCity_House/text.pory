@@ -1,0 +1,23 @@
+text SaffronCity_House_Text_DontLookAtMyLetter {
+    "…Thank you for writing.\n"
+    "I hope to see you soon!\p"
+    "…Hey!\n"
+    "Don't look at my letter!$"
+}
+
+text SaffronCity_House_Text_Pidgey {
+    "PIDGEY: Kurukkoo!$"
+}
+
+text SaffronCity_House_Text_GettingCopycatPokeDoll {
+    "The COPYCAT is cute!\n"
+    "I'm getting her a POKé DOLL.$"
+}
+
+text SaffronCity_House_Text_ExplainPPUp {
+    "I was given a PP UP as a gift.\p"
+    "It's used to increase the PP of\n"
+    "a POKéMON's move.\p"
+    "I should use it on a powerful move\n"
+    "with only a few PP.$"
+}

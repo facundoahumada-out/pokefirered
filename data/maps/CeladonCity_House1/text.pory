@@ -1,0 +1,24 @@
+text CeladonCity_House1_Text_SlotsReelInTheDough {
+    "Hehehe!\p"
+    "The slots just reel in the dough,\n"
+    "big-time!$"
+}
+
+text CeladonCity_House1_Text_ShippedMonsAsSlotPrizes {
+    "CHIEF!\p"
+    "We just shipped two thousand\n"
+    "more POKéMON as slot prizes\l"
+    "again today!$"
+}
+
+text CeladonCity_House1_Text_DontTouchGameCornerPoster {
+    "Don't touch the poster at the GAME\n"
+    "CORNER!\p"
+    "There's no secret switch behind it!$"
+}
+
+// Text for the replaced altars in the rocket chiefs house / celadon mansion
+// In English RB, this is westernized as "It's a sculpture of DIGLETT.", and is removed altogether in FRLG
+text Text_ItsABuddhistAltar {
+    "ぶつだん　だ‥$"
+}

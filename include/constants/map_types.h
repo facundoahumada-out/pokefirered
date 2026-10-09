@@ -21,5 +21,6 @@
 #define MAP_BATTLE_SCENE_AGATHA   6
 #define MAP_BATTLE_SCENE_LANCE    7
 #define MAP_BATTLE_SCENE_LINK     8
+#define MAP_BATTLE_SCENE_ICEFALL  9 // Icefall Cave, Seafoam Islands
 
 #endif  // GUARD_CONSTANTS_MAP_TYPES_H

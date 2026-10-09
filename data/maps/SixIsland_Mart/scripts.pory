@@ -1,0 +1,30 @@
+mapscripts SixIsland_Mart_MapScripts {}
+
+script SixIsland_Mart_EventScript_Clerk {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lock
+    faceplayer
+    message(Text_MayIHelpYou)
+    waitmessage
+    pokemart(SixIsland_Mart_Items)
+    msgbox(Text_PleaseComeAgain)
+    release
+    end
+}
+
+mart(global) SixIsland_Mart_Items {
+    ITEM_ULTRA_BALL
+    ITEM_FULL_RESTORE
+    ITEM_MAX_POTION
+    ITEM_REVIVE
+    ITEM_FULL_HEAL
+    ITEM_ESCAPE_ROPE
+    ITEM_MAX_REPEL
+    ITEM_DREAM_MAIL
+    ITEM_NONE
+}
+
+script SixIsland_Mart_EventScript_Picnicker {
+    msgbox(SixIsland_Mart_Text_ShouldBuyMailAndWriteLetter, MSGBOX_NPC)
+    end
+}

@@ -1,0 +1,56 @@
+text TwoIsland_House_Text_TeachMonMoveForMushroom {
+    "I'm the POKéMON MOVE MANIAC.\p"
+    "I know every single move that\n"
+    "POKéMON learn growing up.\p"
+    "I'm also a mushroom maniac.\p"
+    "Bring me two TINYMUSHROOMS,\n"
+    "or one BIG MUSHROOM.\p"
+    "If you do that for me, I'll teach\n"
+    "a move to one POKéMON.$"
+}
+
+text TwoIsland_House_Text_WantMeToTeachMove {
+    "Sniff, sniff…\n"
+    "Hm! You smell of MUSHROOMS!\p"
+    "Do you want me to teach a move\n"
+    "to a POKéMON of yours?$"
+}
+
+text TwoIsland_House_Text_TutorWhichMon {
+    "Which POKéMON needs tutoring?$"
+}
+
+text TwoIsland_House_Text_TeachWhichMove {
+    "Which move should I teach?$"
+}
+
+text TwoIsland_House_Text_NoMoveICanTeachThatMon {
+    "Sorry…\p"
+    "It doesn't appear as if I have a\n"
+    "move I can teach that POKéMON.$"
+}
+
+text TwoIsland_House_Text_IllNeedMushroomOrTwo {
+    "Then, I'll need a MUSHROOM or two.\n"
+    "What are you going to give me?$"
+}
+
+text TwoIsland_House_Text_HandedOverTwoTinyMushrooms {
+    "{PLAYER} handed over two\n"
+    "TINYMUSHROOMS in exchange.$"
+}
+
+text TwoIsland_House_Text_HandedOverOneBigMushroom {
+    "{PLAYER} handed over one\n"
+    "BIG MUSHROOM in exchange.$"
+}
+
+text TwoIsland_House_Text_NeedMushroomOrTwoToLearnMove {
+    "If your POKéMON need to learn a\n"
+    "move, I need a MUSHROOM or two.$"
+}
+
+text TwoIsland_House_Text_CantTeachAnEgg {
+    "Hunh? There isn't a single move\n"
+    "that I can teach an EGG.$"
+}

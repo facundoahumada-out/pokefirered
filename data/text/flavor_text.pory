@@ -1,0 +1,151 @@
+// Flavor text for interacting with various background objects
+text Text_Bookshelf {
+    "It's crammed full of POKéMON\n"
+    "books.$"
+}
+
+text Text_NothingButPokemonBooks {
+    "ほんだなに　ならんでいるのは\n"
+    "ポケモンの　ほん　ばかりだ$"
+}
+
+text Text_ATownMap {
+    "A TOWN MAP.$"
+}
+
+text Text_PokeMartShelf {
+    "Wow!\n"
+    "Tons of POKéMON stuff!$"
+}
+
+text Text_DishesPlatesNeatlyLinedUp {
+    "Dishes and plates are neatly\n"
+    "lined up.$"
+}
+
+text Text_Kitchen {
+    "It smells delicious!\n"
+    "Somebody's been cooking here.$"
+}
+
+text Text_Dresser {
+    "It's a nicely made dresser.\n"
+    "It will hold a lot of stuff.$"
+}
+
+text Text_Snacks {
+    "There's a pile of snacks here.$"
+}
+
+text Text_PokemartSign {
+    "All your item needs fulfilled!\n"
+    "POKéMON MART$"
+}
+
+text Text_PokecenterSign {
+    "Heal Your POKéMON!\n"
+    "POKéMON CENTER$"
+}
+
+text Text_Indigo_UltimateGoal {
+    "INDIGO PLATEAU\p"
+    "The ultimate goal of TRAINERS!\n"
+    "POKéMON LEAGUE HQ$"
+}
+
+text Text_Indigo_HighestAuthority {
+    "INDIGO PLATEAU\p"
+    "The highest POKéMON authority!\n"
+    "POKéMON LEAGUE HQ$"
+}
+
+text Text_Food {
+    "It should be packed with all kinds\n"
+    "of delicious things to eat.$"
+}
+
+text Text_Blueprints {
+    "It's a blueprint of some sort.\n"
+    "It's filled with diagrams and text.$"
+}
+
+text Text_Painting {
+    "It's a pretty picture of a POKéMON.\n"
+    "It looks like it's feeling good.$"
+}
+
+text Text_PowerPlantMachine {
+    "What could this machine be?\n"
+    "Better not mess around with it!$"
+}
+
+text Text_Telephone {
+    "It's a telephone.\n"
+    "Better not use it.$"
+}
+
+text Text_Computer {
+    "It's all complicated words and\n"
+    "numbers that make no sense…$"
+}
+
+text Text_AdvertisingPoster {
+    "It's an advertising poster about\n"
+    "all kinds of products.$"
+}
+
+text Text_TastyFood {
+    "Oh, that smells tasty!\n"
+    "It might get the stomach growling!$"
+}
+
+text Text_TrashBin {
+    "Inside this…\n"
+    "……\p"
+    "There's nothing here!$"
+}
+
+text Text_Cup {
+    "It's a cup with a POKéMON mark\n"
+    "on it.$"
+}
+
+text Text_PolishedWindow {
+    "The window is very well polished.$"
+}
+
+text Text_BeautifulSkyWindow {
+    "Outside the window…\p"
+    "The sky looks fantastically\n"
+    "beautiful.$"
+}
+
+text Text_BlinkingLights {
+    "Lights in different colors are\n"
+    "flashing on and off.$"
+}
+
+text Text_NeatlyLinedUpTools {
+    "All sorts of tools are lined up\n"
+    "neatly.$"
+}
+
+text Text_ImpressiveMachine {
+    "It's a machine of some sort.\n"
+    "It sure is impressive.$"
+}
+
+text Text_VideoGame {
+    "It's the latest video game!\n"
+    "It sure looks fun!$"
+}
+
+text Text_Burglary {
+    "There are obvious signs of burglary\n"
+    "here…$"
+}
+
+text Text_PlayerFacingTVScreen {
+    "There's a POKéMON on TV!\n"
+    "It looks like it's having fun.$"
+}

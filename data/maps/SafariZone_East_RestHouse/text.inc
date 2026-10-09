@@ -1,12 +1,14 @@
 SafariZone_East_Text_HowManyDidYouCatch::
-    .string "How many did you catch?\n"
-    .string "I'm bushed from the effort!$"
+# 1 "data/maps/SafariZone_East_RestHouse/text.pory"
+	.string "How many did you catch?\n"
+	.string "I'm bushed from the effort!$"
 
 SafariZone_East_Text_CaughtChanseyAllWorthwhile::
-    .string "I caught a CHANSEY!\p"
-    .string "That makes this all worthwhile.$"
+# 6 "data/maps/SafariZone_East_RestHouse/text.pory"
+	.string "I caught a CHANSEY!\p"
+	.string "That makes this all worthwhile.$"
 
 SafariZone_East_Text_TiredFromAllTheFun::
-    .string "Whew!\n"
-    .string "I'm tired from all the fun!$"
-
+# 11 "data/maps/SafariZone_East_RestHouse/text.pory"
+	.string "Whew!\n"
+	.string "I'm tired from all the fun!$"

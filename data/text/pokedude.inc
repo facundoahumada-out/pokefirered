@@ -1,16 +1,20 @@
 Pokedude_Text_SpeedierBattlerGoesFirst::
+# 1 "data/text/pokedude.pory"
 	.string "POKé DUDE: The speedier of the\n"
 	.string "battlers gets to attack first.$"
 
 Pokedude_Text_MyRattataFasterThanPidgey::
+# 6 "data/text/pokedude.pory"
 	.string "It looks like my RATTATA was\n"
 	.string "faster than the PIDGEY.$"
 
 Pokedude_Text_BattlersTakeTurnsAttacking::
+# 11 "data/text/pokedude.pory"
 	.string "The battlers take turns attacking\n"
 	.string "and reducing each other's HP.$"
 
 Pokedude_Text_MyRattataWonGetsEXP::
+# 16 "data/text/pokedude.pory"
 	.string "My RATTATA reduced the foe's HP\n"
 	.string "to zero, so it wins!\p"
 	.string "The POKéMON that took part in the\n"
@@ -21,25 +25,30 @@ Pokedude_Text_MyRattataWonGetsEXP::
 	.string "stronger than before.$"
 
 Pokedude_Text_UhOhRattataPoisoned::
+# 27 "data/text/pokedude.pory"
 	.string "POKé DUDE: Uh-oh…\n"
 	.string "My RATTATA has been poisoned…\p"
 	.string "If a POKéMON is poisoned, it loses\n"
 	.string "HP steadily.$"
 
 Pokedude_Text_HealStatusRightAway::
+# 34 "data/text/pokedude.pory"
 	.string "If a POKéMON develops a status\n"
 	.string "problem, heal it right away.$"
 
 Pokedude_Text_UsingItemTakesTurn::
+# 39 "data/text/pokedude.pory"
 	.string "Using an item on a POKéMON uses\n"
 	.string "up one turn, though.\p"
 	.string "Now, it's the opponent's turn!$"
 
 Pokedude_Text_YayWeManagedToWin::
+# 45 "data/text/pokedude.pory"
 	.string "Yay!\n"
 	.string "We managed to win!$"
 
 Pokedude_Text_WaterNotVeryEffectiveAgainstGrass::
+# 50 "data/text/pokedude.pory"
 	.string "POKé DUDE: The move BUBBLE is\n"
 	.string "a WATER-type attack.\p"
 	.string "The targeted ODDISH is a\n"
@@ -51,6 +60,7 @@ Pokedude_Text_WaterNotVeryEffectiveAgainstGrass::
 	.string "half the usual damage.$"
 
 Pokedude_Text_GrassEffectiveAgainstWater::
+# 62 "data/text/pokedude.pory"
 	.string "Uh-oh, this is not good!\p"
 	.string "The ABSORB attack you just saw\n"
 	.string "is a GRASS-type move.\p"
@@ -59,16 +69,19 @@ Pokedude_Text_GrassEffectiveAgainstWater::
 	.string "effective, doubling the damage.$"
 
 Pokedude_Text_LetsTryShiftingMons::
+# 71 "data/text/pokedude.pory"
 	.string "It's not going to be easy to win\n"
 	.string "with this matchup…\p"
 	.string "Let's try shifting POKéMON!$"
 
 Pokedude_Text_ShiftingUsesTurn::
+# 77 "data/text/pokedude.pory"
 	.string "Shifting POKéMON in and out uses\n"
 	.string "up one turn.\p"
 	.string "Now, it's the opponent's turn.$"
 
 Pokedude_Text_ButterfreeDoubleResistsGrass::
+# 83 "data/text/pokedude.pory"
 	.string "BUTTERFREE is a BUG/FLYING-type\n"
 	.string "POKéMON.\p"
 	.string "Against this POKéMON, a GRASS-\n"
@@ -82,6 +95,7 @@ Pokedude_Text_ButterfreeDoubleResistsGrass::
 	.string "one quarter of the usual damage.$"
 
 Pokedude_Text_ButterfreeGoodAgainstOddish::
+# 97 "data/text/pokedude.pory"
 	.string "ODDISH is a GRASS/POISON-type\n"
 	.string "POKéMON.\p"
 	.string "A FLYING- or PSYCHIC-type attack\n"
@@ -91,10 +105,12 @@ Pokedude_Text_ButterfreeGoodAgainstOddish::
 	.string "Okay, here we go!$"
 
 Pokedude_Text_YeahWeWon::
+# 107 "data/text/pokedude.pory"
 	.string "Yeah!\n"
 	.string "We won!$"
 
 Pokedude_Text_WeakenMonBeforeCatching::
+# 112 "data/text/pokedude.pory"
 	.string "POKé DUDE: When you're trying to\n"
 	.string "catch a POKéMON, don't throw any\l"
 	.string "POKé BALLS right away.\p"
@@ -102,6 +118,7 @@ Pokedude_Text_WeakenMonBeforeCatching::
 	.string "reducing its HP.$"
 
 Pokedude_Text_BestIfTargetStatused::
+# 120 "data/text/pokedude.pory"
 	.string "Okay, that should be good enough.\p"
 	.string "But, if it's possible, it would be\n"
 	.string "best if the target has a status\l"
@@ -111,6 +128,7 @@ Pokedude_Text_BestIfTargetStatused::
 	.string "paralyzed.$"
 
 Pokedude_Text_CantDoubleUpOnStatus::
+# 130 "data/text/pokedude.pory"
 	.string "This will make the POKéMON a lot\n"
 	.string "easier to catch!\p"
 	.string "Oh, yes. If you paralyze a\n"
@@ -120,10 +138,12 @@ Pokedude_Text_CantDoubleUpOnStatus::
 	.string "up status problems, okay?$"
 
 Pokedude_Text_LetMeThrowBall::
+# 140 "data/text/pokedude.pory"
 	.string "Okay!\n"
 	.string "Let me throw my POKé BALL!$"
 
 Pokedude_Text_PickBestKindOfBall::
+# 145 "data/text/pokedude.pory"
 	.string "Before you throw a POKé BALL,\n"
 	.string "consider the condition and the\l"
 	.string "type of POKéMON, and pick the kind\l"

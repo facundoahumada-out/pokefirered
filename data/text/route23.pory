@@ -1,0 +1,33 @@
+text Text_OnlySkilledTrainersAllowedThrough {
+    "Only truly skilled TRAINERS are\n"
+    "allowed through.\p"
+    "You don't have the {STR_VAR_1}\n"
+    "yet!$"
+}
+
+text Text_CantLetYouPass {
+    "Rules are rules.\n"
+    "I can't let you pass.$"
+}
+
+text Text_OhThatsBadgeGoRightAhead {
+    "Oh! That is the {STR_VAR_1}!\n"
+    "Go right ahead.$"
+}
+
+text Text_OnlyPassWithBadgeDontHaveYet {
+    "You can pass here only if you have\n"
+    "the {STR_VAR_1}.\p"
+    "You don't have the {STR_VAR_1}\n"
+    "yet.\p"
+    "You have to have it to get to\n"
+    "the POKéMON LEAGUE.$"
+}
+
+text Text_OnlyPassWithBadgeOhGoAhead {
+    "You can pass here only if you have\n"
+    "the {STR_VAR_1}.\p"
+    "Oh! That is the {STR_VAR_1}!{PAUSE_MUSIC}{PLAY_BGM}{MUS_LEVEL_UP}{PAUSE 0x60}{RESUME_MUSIC}\p"
+    "Okay, then.\n"
+    "Please, go right ahead.$"
+}

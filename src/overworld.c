@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dns.h"
 #include "gflib.h"
 #include "bg_regs.h"
 #include "cable_club.h"
@@ -1459,6 +1460,7 @@ void CB1_Overworld(void)
 
 static void OverworldBasic(void)
 {
+    DnsUpdate();
     ScriptContext_RunScript();
     RunTasks();
     AnimateSprites();

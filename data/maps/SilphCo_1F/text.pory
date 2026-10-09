@@ -1,0 +1,16 @@
+text SilphCo_1F_Text_WelcomePresidentInBoardroom {
+    "Welcome.\p"
+    "The PRESIDENT is in the boardroom\n"
+    "on 11F.$"
+}
+
+// Tentative translation. Unknown origin
+text SilphCo_1F_Text_DestroyedWontBeFixedForWhile {
+    "めちゃめちゃに　こわされてる\n"
+    "とうぶん　なおりそうに　ない‥$"
+}
+
+text SilphCo_1F_Text_FloorSign {
+    "SILPH CO. HEAD OFFICE\n"
+    "1F$"
+}

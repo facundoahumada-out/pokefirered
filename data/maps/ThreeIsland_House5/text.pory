@@ -1,0 +1,13 @@
+text ThreeIsland_House5_Text_ImNotLostelle {
+    "Me?\n"
+    "I'm not LOSTELLE.\p"
+    "She's probably gone to the\n"
+    "BERRY FOREST, I think.\p"
+    "She picks BERRIES there for making\n"
+    "lunch.$"
+}
+
+text ThreeIsland_House5_Text_IllGoPlayWithLostelle {
+    "I think I'll go play with LOSTELLE\n"
+    "today.$"
+}
