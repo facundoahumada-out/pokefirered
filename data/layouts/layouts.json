@@ -4384,7 +4384,7 @@
     {
       "id": "LAYOUT_ROUTE28",
       "name": "Route28_Layout",
-      "width": 63,
+      "width": 62,
       "height": 30,
       "border_width": 2,
       "border_height": 2,
@@ -4396,8 +4396,8 @@
     {
       "id": "LAYOUT_MT_SILVER_EXTERIOR",
       "name": "MtSilver_Exterior_Layout",
-      "width": 24,
-      "height": 20,
+      "width": 30,
+      "height": 30,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
