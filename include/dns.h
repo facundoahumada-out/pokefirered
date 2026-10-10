@@ -27,6 +27,7 @@ struct DnsLightColour
 
 void DnsUpdate(void);
 void DnsTransferPlttBuffer(const void *src, void *dest);
+void DnsLoadMapLights(const struct MapLayout *mapLayout);
 u8 GetDnsTimeLapse(u8 hour);
 u8 GetCurrentDnsTimeLapse(void);
 bool8 IsDnsNightTime(void);

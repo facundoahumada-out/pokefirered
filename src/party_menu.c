@@ -5344,7 +5344,7 @@ void ItemUseCB_EvolutionStone(u8 taskId, TaskFunc func)
 #define tNewNature  data[3]
 
 static const u8 sText_AskChangeNature[] = _("Would you like to change {STR_VAR_1}'s\nnature to {STR_VAR_2}?");
-static const u8 sText_NatureChanged[] = _("{STR_VAR_1}'s nature became\n{STR_VAR_2}!");
+static const u8 sText_NatureChanged[] = _("{STR_VAR_1}'s nature became\n{STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
 
 static void Task_Mints(u8 taskId)
 {

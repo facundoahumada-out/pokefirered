@@ -3,10 +3,12 @@
 #include "berry.h"
 #include "daycare.h"
 #include "event_data.h"
+#include "field_specials.h"
 #include "load_save.h"
 #include "overworld.h"
 #include "party_menu.h"
 #include "pokedex.h"
+#include "random.h"
 #include "script_pokemon_util.h"
 #include "constants/items.h"
 #include "constants/pokemon.h"
@@ -52,7 +54,11 @@ u8 ScriptGiveMon(u16 species, u8 level, u16 item, u32 unused1, u32 unused2, u8 u
     u8 heldItem[2];
     struct Pokemon *mon = AllocZeroed(sizeof(struct Pokemon));
 
-    CreateMon(mon, species, level, 32, 0, 0, OT_ID_PLAYER_ID, 0);
+    // Gift mons (starters, Celadon's Eevee, fossils...) are affected by the Shiny Charm too.
+    if (ShinyCharmForcesShiny())
+        CreateMon(mon, species, level, 32, TRUE, MakePersonalityShiny(GetPlayerTrainerId(), Random32()), OT_ID_PLAYER_ID, 0);
+    else
+        CreateMon(mon, species, level, 32, 0, 0, OT_ID_PLAYER_ID, 0);
     heldItem[0] = item;
     heldItem[1] = item >> 8;
     SetMonData(mon, MON_DATA_HELD_ITEM, heldItem);

@@ -3,9 +3,12 @@
 #include "dns.h"
 #include "field_weather.h"
 #include "fieldmap.h"
+#include "overworld.h"
 #include "palette.h"
 #include "rtc.h"
+#include "constants/field_weather.h"
 #include "constants/map_types.h"
+#include "constants/quest_log.h"
 #include "constants/rgb.h"
 
 /* **************************************************** *
@@ -231,7 +234,9 @@ enum
 
 static EWRAM_DATA MainCallback sDnsCallback = NULL;
 static EWRAM_DATA u8 sDnsMode = DNS_MODE_OFF;
-static EWRAM_DATA bool8 sLightsActive = FALSE;
+// The lights are written straight into the palette buffers, so palette fades darken them
+// along with the rest of the screen instead of having them pop in and out.
+static EWRAM_DATA bool8 sLightsInBuffers = FALSE;
 static EWRAM_DATA const u16 *sGlassPalette = NULL;
 static EWRAM_DATA u16 sGlassLightColours[16] = {0};
 static EWRAM_DATA u8 sRtcRefreshTimer = 0;
@@ -242,7 +247,7 @@ static EWRAM_DATA u16 sFilterLutR[32] = {0};
 static EWRAM_DATA u16 sFilterLutG[32] = {0};
 static EWRAM_DATA u16 sFilterLutB[32] = {0};
 
-static void UpdateGlassPalette(void);
+static void SetLightsInBuffers(const struct MapLayout *mapLayout, bool8 lightsOn);
 
 static bool8 IsRtcWorking(void)
 {
@@ -335,6 +340,27 @@ static void BuildFilterLuts(u16 filter)
     sFilterLutsReady = TRUE;
 }
 
+static bool8 ShouldLightsBeOn(void)
+{
+    return gGlobalFieldTintMode == QL_TINT_NONE && IsDnsLightTime();
+}
+
+// Turns the lights on or off when the clock crosses LIGHTS_START_HOUR/LIGHTS_END_HOUR
+// while standing in the map. Waits for any fade to end so the change doesn't pop mid-fade.
+static void UpdateLightsForTime(void)
+{
+    bool8 lightsOn;
+
+    if (gPaletteFade.active
+     || gWeatherPtr->palProcessingState == WEATHER_PAL_STATE_SCREEN_FADING_IN
+     || gWeatherPtr->palProcessingState == WEATHER_PAL_STATE_SCREEN_FADING_OUT)
+        return;
+
+    lightsOn = ShouldLightsBeOn();
+    if (lightsOn != sLightsInBuffers)
+        SetLightsInBuffers(gMapHeader.mapLayout, lightsOn);
+}
+
 // Called once per frame from the overworld and battle main callbacks.
 void DnsUpdate(void)
 {
@@ -358,11 +384,11 @@ void DnsUpdate(void)
     if (filter != sCurrentFilter || !sFilterLutsReady)
         BuildFilterLuts(filter);
 
-    sLightsActive = !gMain.inBattle && IsDnsLightTime();
-    if (sLightsActive)
-        UpdateGlassPalette();
+    if (!gMain.inBattle)
+        UpdateLightsForTime();
 
-    if (filter == 0 && !sLightsActive)
+    // The lights are already in the palette buffers, so they don't need the filter to show up.
+    if (filter == 0)
         sDnsMode = DNS_MODE_OFF;
     else if (gMain.inBattle)
         sDnsMode = DNS_MODE_BATTLE;
@@ -378,9 +404,8 @@ static bool8 IsPaletteAffectedByDns(u32 palNum)
 }
 
 // Finds the glass palette of the current map, and computes the light used for each of its colours.
-static void UpdateGlassPalette(void)
+static void UpdateGlassPalette(const struct MapLayout *mapLayout)
 {
-    const struct MapLayout *mapLayout = gMapHeader.mapLayout;
     const u16 *glass, *source;
     u32 i, brightness;
 
@@ -421,40 +446,92 @@ static void UpdateGlassPalette(void)
     sGlassPalette = glass;
 }
 
-static void ApplyDnsLights(u16 *dest)
+static void WriteLightColour(u32 offset, u16 colour)
 {
-    const struct MapLayout *mapLayout = gMapHeader.mapLayout;
+    gPlttBufferUnfaded[offset] = colour;
+    gPlttBufferFaded[offset] = colour;
+}
+
+// Writes the light colours (or the original ones, when turning the lights off) into the palette buffers.
+static void SetLightsInBuffers(const struct MapLayout *mapLayout, bool8 lightsOn)
+{
     const struct DnsLightColour *light;
     u32 i;
 
+    sLightsInBuffers = FALSE;
+    if (mapLayout == NULL)
+        return;
+
+    UpdateGlassPalette(mapLayout);
     if (sGlassPalette != NULL)
     {
         for (i = 1; i < 16; i++)
         {
             if (sGlassLightColours[i] != 0)
-                dest[GLASS_PALETTE * 16 + i] = sGlassLightColours[i];
+                WriteLightColour(BG_PLTT_ID(GLASS_PALETTE) + i, lightsOn ? sGlassLightColours[i] : sGlassPalette[i]);
         }
     }
 
     for (light = sDnsLightColours; light->tileset != NULL; light++)
     {
         if (light->tileset == mapLayout->primaryTileset || light->tileset == mapLayout->secondaryTileset)
-            dest[light->paletteNum * 16 + light->colourNum] = light->lightColour;
+            WriteLightColour(BG_PLTT_ID(light->paletteNum) + light->colourNum,
+                             lightsOn ? light->lightColour : light->tileset->palettes[light->paletteNum][light->colourNum]);
+    }
+    sLightsInBuffers = lightsOn;
+}
+
+// Called right after the map's tileset palettes are loaded into the palette buffers.
+void DnsLoadMapLights(const struct MapLayout *mapLayout)
+{
+    sLightsInBuffers = FALSE;
+    if (!IsRtcWorking() || IsMapDnsException())
+        return;
+
+    RtcCalcLocalTime();
+    if (ShouldLightsBeOn())
+        SetLightsInBuffers(mapLayout, TRUE);
+}
+
+// The lights must keep their colour at night, so the filter is undone for them.
+static void SkipDnsFilterForLights(const u16 *src, u16 *dest)
+{
+    const struct MapLayout *mapLayout = gMapHeader.mapLayout;
+    const struct DnsLightColour *light;
+    u32 i, offset;
+
+    if (sGlassPalette != NULL)
+    {
+        for (i = 1; i < 16; i++)
+        {
+            if (sGlassLightColours[i] != 0)
+                dest[BG_PLTT_ID(GLASS_PALETTE) + i] = src[BG_PLTT_ID(GLASS_PALETTE) + i];
+        }
+    }
+
+    for (light = sDnsLightColours; light->tileset != NULL; light++)
+    {
+        if (light->tileset == mapLayout->primaryTileset || light->tileset == mapLayout->secondaryTileset)
+        {
+            offset = BG_PLTT_ID(light->paletteNum) + light->colourNum;
+            dest[offset] = src[offset];
+        }
     }
 }
 
 static void DnsFilterPalettes(const u16 *src, u16 *dest)
 {
+    const u16 *palSrc = src;
     u32 palNum, i, colour;
     u16 *palDest = dest;
 
-    for (palNum = 0; palNum < 32; palNum++, src += 16, palDest += 16)
+    for (palNum = 0; palNum < 32; palNum++, palSrc += 16, palDest += 16)
     {
         if (IsPaletteAffectedByDns(palNum))
         {
             for (i = 0; i < 16; i++)
             {
-                colour = src[i];
+                colour = palSrc[i];
                 palDest[i] = sFilterLutR[colour & 0x1F]
                            | sFilterLutG[(colour >> 5) & 0x1F]
                            | sFilterLutB[(colour >> 10) & 0x1F];
@@ -463,13 +540,12 @@ static void DnsFilterPalettes(const u16 *src, u16 *dest)
         else
         {
             for (i = 0; i < 16; i++)
-                palDest[i] = src[i];
+                palDest[i] = palSrc[i];
         }
     }
 
-    // Lights are skipped during fades so they fade out along with the rest of the screen.
-    if (sLightsActive && !gPaletteFade.active)
-        ApplyDnsLights(dest);
+    if (sLightsInBuffers && sDnsMode == DNS_MODE_OVERWORLD)
+        SkipDnsFilterForLights(src, dest);
 }
 
 // Replaces the plain palette buffer -> palette RAM copy.

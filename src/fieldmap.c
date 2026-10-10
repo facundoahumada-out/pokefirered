@@ -5,6 +5,7 @@
 #include "new_menu_helpers.h"
 #include "quest_log.h"
 #include "fieldmap.h"
+#include "dns.h"
 
 struct ConnectionFlags
 {
@@ -930,6 +931,7 @@ static void LoadPrimaryTilesetPalette(const struct MapLayout *mapLayout)
 void LoadSecondaryTilesetPalette(const struct MapLayout *mapLayout)
 {
     LoadTilesetPalette(mapLayout->secondaryTileset, BG_PLTT_ID(NUM_PALS_IN_PRIMARY), (NUM_PALS_TOTAL - NUM_PALS_IN_PRIMARY) * PLTT_SIZE_4BPP);
+    DnsLoadMapLights(mapLayout);
 }
 
 void CopyMapTilesetsToVram(struct MapLayout const *mapLayout)
