@@ -1,0 +1,8 @@
+mapscripts MtSilver_Exterior_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: MtSilver_Exterior_OnTransition
+}
+
+script MtSilver_Exterior_OnTransition {
+    setworldmapflag(FLAG_WORLD_MAP_MT_SILVER_EXTERIOR)
+    end
+}
