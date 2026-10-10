@@ -184,8 +184,7 @@
       "id": "MAPSEC_RUSTURF_TUNNEL"
     },
     {
-      "id": "MAPSEC_ABANDONED_SHIP",
-      "name": "Route 28"
+      "id": "MAPSEC_ABANDONED_SHIP"
     },
     {
       "id": "MAPSEC_NEW_MAUVILLE"
@@ -1126,6 +1125,22 @@
       "name": "Ember Spa",
       "x": 0,
       "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_28",
+      "name": "Route 28",
+      "x": 1,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_MT_SILVER",
+      "name": "Mt. Silver",
+      "x": 0,
+      "y": 8,
       "width": 1,
       "height": 1
     },
