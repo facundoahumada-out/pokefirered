@@ -1458,6 +1458,12 @@ static void CB2_HandleStartMultiBattle(void)
     }
 }
 
+// Main callbacks in which the battle scene is on screen (used by the DNS)
+bool8 IsBattleMainCallback(MainCallback cb)
+{
+    return cb == BattleMainCB2 || cb == CB2_HandleStartBattle || cb == CB2_HandleStartMultiBattle;
+}
+
 void BattleMainCB2(void)
 {
     DnsUpdate();

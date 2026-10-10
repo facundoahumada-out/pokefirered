@@ -1489,6 +1489,12 @@ static void CB2_Overworld(void)
         SetFieldVBlankCallback();
 }
 
+// Main callbacks in which the overworld is on screen (used by the DNS)
+bool8 IsOverworldMainCallback(MainCallback cb)
+{
+    return cb == CB2_Overworld || cb == CB2_OverworldBasic;
+}
+
 void SetMainCallback1(MainCallback cb)
 {
     gMain.callback1 = cb;

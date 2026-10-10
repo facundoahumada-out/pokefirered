@@ -1,10 +1,12 @@
 #include "global.h"
 #include "main.h"
+#include "battle_main.h"
 #include "dns.h"
 #include "field_weather.h"
 #include "fieldmap.h"
 #include "overworld.h"
 #include "palette.h"
+#include "quest_log.h"
 #include "rtc.h"
 #include "constants/field_weather.h"
 #include "constants/map_types.h"
@@ -232,8 +234,9 @@ enum
     DNS_MODE_BATTLE,
 };
 
-static EWRAM_DATA MainCallback sDnsCallback = NULL;
-static EWRAM_DATA u8 sDnsMode = DNS_MODE_OFF;
+// Whether the current map and time are tinted at all. Which palettes get tinted is decided
+// on every transfer from the main callback on screen (see GetDnsMode).
+static EWRAM_DATA bool8 sDnsActive = FALSE;
 // The lights are written straight into the palette buffers, so palette fades darken them
 // along with the rest of the screen instead of having them pop in and out.
 static EWRAM_DATA bool8 sLightsInBuffers = FALSE;
@@ -340,9 +343,12 @@ static void BuildFilterLuts(u16 filter)
     sFilterLutsReady = TRUE;
 }
 
+// The lights are also on in the last scene of the Quest Log (the place where the game was saved),
+// so they are already lit while its grayscale fades back into colour instead of popping in after it.
 static bool8 ShouldLightsBeOn(void)
 {
-    return gGlobalFieldTintMode == QL_TINT_NONE && IsDnsLightTime();
+    return (gGlobalFieldTintMode == QL_TINT_NONE || gGlobalFieldTintMode == QL_TINT_BACKUP_GRAYSCALE)
+        && IsDnsLightTime();
 }
 
 // Turns the lights on or off when the clock crosses LIGHTS_START_HOUR/LIGHTS_END_HOUR
@@ -351,7 +357,8 @@ static void UpdateLightsForTime(void)
 {
     bool8 lightsOn;
 
-    if (gPaletteFade.active
+    if (gGlobalFieldTintMode != QL_TINT_NONE
+     || gPaletteFade.active
      || gWeatherPtr->palProcessingState == WEATHER_PAL_STATE_SCREEN_FADING_IN
      || gWeatherPtr->palProcessingState == WEATHER_PAL_STATE_SCREEN_FADING_OUT)
         return;
@@ -366,10 +373,9 @@ void DnsUpdate(void)
 {
     u16 filter;
 
-    sDnsCallback = gMain.callback2;
     if (!IsRtcWorking() || IsMapDnsException())
     {
-        sDnsMode = DNS_MODE_OFF;
+        sDnsActive = FALSE;
         return;
     }
 
@@ -388,17 +394,25 @@ void DnsUpdate(void)
         UpdateLightsForTime();
 
     // The lights are already in the palette buffers, so they don't need the filter to show up.
-    if (filter == 0)
-        sDnsMode = DNS_MODE_OFF;
-    else if (gMain.inBattle)
-        sDnsMode = DNS_MODE_BATTLE;
-    else
-        sDnsMode = DNS_MODE_OVERWORLD;
+    sDnsActive = (filter != 0);
 }
 
-static bool8 IsPaletteAffectedByDns(u32 palNum)
+// Only the overworld and the battle scene are tinted, menus opened from them (bag, party...) are not.
+// The screen is checked on every transfer instead of being remembered from the last DnsUpdate,
+// otherwise the frame in which the main callback changes (e.g. the battle transition switching to
+// CB2_OverworldBasic, or the battle intro) would be copied without the filter and flash.
+static u8 GetDnsMode(void)
 {
-    if (sDnsMode == DNS_MODE_BATTLE)
+    if (!sDnsActive)
+        return DNS_MODE_OFF;
+    if (gMain.inBattle)
+        return IsBattleMainCallback(gMain.callback2) ? DNS_MODE_BATTLE : DNS_MODE_OFF;
+    return IsOverworldMainCallback(gMain.callback2) ? DNS_MODE_OVERWORLD : DNS_MODE_OFF;
+}
+
+static bool8 IsPaletteAffectedByDns(u8 mode, u32 palNum)
+{
+    if (mode == DNS_MODE_BATTLE)
         return sBattleDnsPalettes[palNum];
     return !IsPalettePreservedInWeather(palNum);
 }
@@ -449,7 +463,14 @@ static void UpdateGlassPalette(const struct MapLayout *mapLayout)
 static void WriteLightColour(u32 offset, u16 colour)
 {
     gPlttBufferUnfaded[offset] = colour;
-    gPlttBufferFaded[offset] = colour;
+    // Last scene of the Quest Log: the lit colour goes to the backup that is restored when it ends,
+    // and the buffers get it in grayscale like the rest of the map.
+    if (gGlobalFieldTintMode == QL_TINT_BACKUP_GRAYSCALE)
+    {
+        QuestLog_BackUpPalette(offset, 1);
+        TintPalette_GrayScale(&gPlttBufferUnfaded[offset], 1);
+    }
+    gPlttBufferFaded[offset] = gPlttBufferUnfaded[offset];
 }
 
 // Writes the light colours (or the original ones, when turning the lights off) into the palette buffers.
@@ -519,7 +540,7 @@ static void SkipDnsFilterForLights(const u16 *src, u16 *dest)
     }
 }
 
-static void DnsFilterPalettes(const u16 *src, u16 *dest)
+static void DnsFilterPalettes(u8 mode, const u16 *src, u16 *dest)
 {
     const u16 *palSrc = src;
     u32 palNum, i, colour;
@@ -527,7 +548,7 @@ static void DnsFilterPalettes(const u16 *src, u16 *dest)
 
     for (palNum = 0; palNum < 32; palNum++, palSrc += 16, palDest += 16)
     {
-        if (IsPaletteAffectedByDns(palNum))
+        if (IsPaletteAffectedByDns(mode, palNum))
         {
             for (i = 0; i < 16; i++)
             {
@@ -544,19 +565,21 @@ static void DnsFilterPalettes(const u16 *src, u16 *dest)
         }
     }
 
-    if (sLightsInBuffers && sDnsMode == DNS_MODE_OVERWORLD)
+    if (sLightsInBuffers && mode == DNS_MODE_OVERWORLD)
         SkipDnsFilterForLights(src, dest);
 }
 
 // Replaces the plain palette buffer -> palette RAM copy.
 void DnsTransferPlttBuffer(const void *src, void *dest)
 {
-    if (sDnsMode == DNS_MODE_OFF || gMain.callback2 != sDnsCallback)
+    u8 mode = GetDnsMode();
+
+    if (mode == DNS_MODE_OFF)
     {
         DmaCopy16(3, src, dest, PLTT_SIZE);
     }
     else
     {
-        DnsFilterPalettes(src, dest);
+        DnsFilterPalettes(mode, src, dest);
     }
 }
