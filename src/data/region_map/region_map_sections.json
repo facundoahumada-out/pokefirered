@@ -1145,6 +1145,22 @@
       "height": 1
     },
     {
+      "id": "MAPSEC_SILVER_PEAK",
+      "name": "Silver Peak",
+      "x": 0,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_MT_SILVER_EXTERIOR",
+      "name": "Mt. Silver Exterior",
+      "x": 0,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
       "id": "MAPSEC_SPECIAL_AREA",
       "name": "Celadon Dept.",
       "x": 0,

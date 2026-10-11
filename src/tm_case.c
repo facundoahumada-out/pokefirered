@@ -239,7 +239,7 @@ static const u8 sTextColors[][3] = {
     [COLOR_LIGHT] = {0, 1, 2},
     [COLOR_DARK] = {0, 2, 3},
     [COLOR_CURSOR_SELECTED] = {0, 3, 6},
-    [COLOR_MOVE_INFO] = {0, 14, 10},
+    [COLOR_MOVE_INFO] = {0, 14, 15},
 };
 
 static const struct WindowTemplate sWindowTemplates[] = {

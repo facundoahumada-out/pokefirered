@@ -936,6 +936,8 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_EMBER_SPA           - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_28            - KANTO_MAPSEC_START] = {MAP(MAP_ROUTE28),                               HEAL_LOCATION_NONE},
     [MAPSEC_MT_SILVER           - KANTO_MAPSEC_START] = {MAP(MAP_MT_SILVER_EXTERIOR),                    HEAL_LOCATION_MT_SILVER},
+    [MAPSEC_SILVER_PEAK         - KANTO_MAPSEC_START] = {MAP(MAP_MT_SILVER_EXTERIOR),                    HEAL_LOCATION_NONE},
+    [MAPSEC_MT_SILVER_EXTERIOR  - KANTO_MAPSEC_START] = {MAP(MAP_MT_SILVER_EXTERIOR),                    HEAL_LOCATION_NONE},
 };
 
 static void RegionMap_DarkenPalette(u16 *pal, u16 size, u16 tint)
@@ -3074,7 +3076,9 @@ static u8 GetDungeonMapsecType(u8 mapsec)
         return FlagGet(FLAG_WORLD_MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_BIRTH_ISLAND:
         return FlagGet(FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
-    case MAPSEC_MT_SILVER:
+    case MAPSEC_MT_SILVER_EXTERIOR:
+        return FlagGet(FLAG_WORLD_MAP_MT_SILVER_EXTERIOR) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
+    case MAPSEC_SILVER_PEAK:
         return FlagGet(FLAG_WORLD_MAP_MT_SILVER_SUMMIT) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     default:
         return MAPSECTYPE_ROUTE;
@@ -3552,7 +3556,7 @@ static void CreateDungeonIconSprite(u8 whichMap, u8 numIcons, u16 x, u16 y, u8 t
     mapsec = GetSelectedMapSection(whichMap, LAYER_MAP, y, x);
 
     // If mapsec has a town, push dungeon icon to bottom right corner
-    if ((GetMapsecType(mapsec) == MAPSECTYPE_VISITED || GetMapsecType(mapsec) == MAPSECTYPE_NOT_VISITED) && mapsec != MAPSEC_ROUTE_10_POKECENTER)
+    if ((GetMapsecType(mapsec) == MAPSECTYPE_VISITED || GetMapsecType(mapsec) == MAPSECTYPE_NOT_VISITED) && mapsec != MAPSEC_ROUTE_10_POKECENTER && mapsec != MAPSEC_MT_SILVER)
         offset = 2;
 
     spriteId = CreateSprite(&template, 8 * x + 36 + offset, 8 * y + 36 + offset, 3);

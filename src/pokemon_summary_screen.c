@@ -963,18 +963,18 @@ static const struct WindowTemplate sWindowTemplates_Dummy[] =
 
 static const u8 sLevelNickTextColors[][3] =
 {
-    {0, 14, 10},
+    {0, 14, 15},
     {0, 1, 2},
     {0, 9, 8},
     {0, 5, 4},
     {0, 2, 3},
-    {0, 11, 10},
+    {0, 11, 15},
 };
 
 // Colors for the Atk/Def/Sp.Atk/Sp.Def/Speed values on the Skills page,
 // tinted by whether the mon's nature raises or lowers that stat.
 // Indices 1 and 7 belong to gMenuInfoElements2_Pal (loaded at BG_PLTT_ID(6),
-// the same palette POKESUM_WIN_RIGHT_PANE uses), where they're the Fire (red)
+// the same palette POKESUM_WIN_RIGHT_PANE uses), where they're the Fighting (red)
 // and Water (blue) type colors.
 enum
 {
@@ -985,9 +985,9 @@ enum
 
 static const u8 sStatValueTextColors[][3] =
 {
-    [STAT_COLOR_NEUTRAL] = {0, 14, 10},
-    [STAT_COLOR_RAISED]  = {0, 1, 10},
-    [STAT_COLOR_LOWERED] = {0, 7, 10},
+    [STAT_COLOR_NEUTRAL] = {0, 14, 15},
+    [STAT_COLOR_RAISED]  = {0, 1, 15},
+    [STAT_COLOR_LOWERED] = {0, 7, 15},
 };
 
 // A nature's index encodes its raised/lowered stat as (raisedStat * NUM_NATURE_STATS + loweredStat),
