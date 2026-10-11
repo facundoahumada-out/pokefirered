@@ -239,8 +239,12 @@ static const u8 sTextColors[][3] = {
     [COLOR_LIGHT] = {0, 1, 2},
     [COLOR_DARK] = {0, 2, 3},
     [COLOR_CURSOR_SELECTED] = {0, 3, 6},
-    [COLOR_MOVE_INFO] = {0, 14, 15},
+    [COLOR_MOVE_INFO] = {0, 14, 0}, // The shadow is sMoveInfoShadowColor
 };
+
+// WIN_MOVE_INFO draws the move's type icon next to its text, so its palette is loaded with
+// LoadTypesPalWithTextShadow, which picks the text shadow colour depending on the type icon.
+static EWRAM_DATA u8 sMoveInfoShadowColor = 0;
 
 static const struct WindowTemplate sWindowTemplates[] = {
     [WIN_LIST] = {
@@ -1500,7 +1504,12 @@ static void InitWindowTemplatesAndPals(void)
 
 static void TMCase_Print(u8 windowId, u8 fontId, const u8 * str, u8 x, u8 y, u8 letterSpacing, u8 lineSpacing, u8 speed, u8 colorIdx)
 {
-    AddTextPrinterParameterized4(windowId, fontId, x, y, letterSpacing, lineSpacing, sTextColors[colorIdx], speed, str);
+    u8 colors[3];
+
+    colors[0] = sTextColors[colorIdx][0];
+    colors[1] = sTextColors[colorIdx][1];
+    colors[2] = colorIdx == COLOR_MOVE_INFO ? sMoveInfoShadowColor : sTextColors[colorIdx][2];
+    AddTextPrinterParameterized4(windowId, fontId, x, y, letterSpacing, lineSpacing, colors, speed, str);
 }
 
 static void TMCase_SetWindowBorder1(u8 windowId)
@@ -1541,6 +1550,8 @@ static void PrintMoveInfo(u16 itemId)
     const u8 * str;
 
     FillWindowPixelRect(WIN_MOVE_INFO, 0, 0, 0, 40, 48);
+    sMoveInfoShadowColor = LoadTypesPalWithTextShadow(BG_PLTT_ID(12),
+        itemId == ITEM_NONE ? 0 : GetMenuInfoIconColorMask(gBattleMoves[ItemIdToBattleMoveId(itemId)].type + 1));
     if (itemId == ITEM_NONE)
     {
         for (i = 0; i < 4; i++)

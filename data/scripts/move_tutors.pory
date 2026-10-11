@@ -1,16 +1,22 @@
 script VictoryRoad_2F_EventScript_DoubleEdgeTutor {
     lock
     faceplayer
-    goto_if_set(FLAG_TUTOR_DOUBLE_EDGE, EventScript_DoubleEdgeTaught)
+    goto_if_set(FLAG_TUTOR_DOUBLE_EDGE, EventScript_DoubleEdgePaidLesson)
     msgbox(Text_DoubleEdgeTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_DoubleEdgeDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_DoubleEdgeDeclined)
     msgbox(Text_DoubleEdgeWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_DOUBLE_EDGE)
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_DoubleEdgeDeclined)
     setflag(FLAG_TUTOR_DOUBLE_EDGE)
+    goto(EventScript_DoubleEdgeTaught)
+    end
+}
+
+script EventScript_DoubleEdgePaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_DOUBLE_EDGE)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_DoubleEdgeDeclined)
     goto(EventScript_DoubleEdgeTaught)
     end
 }
@@ -30,16 +36,22 @@ script EventScript_DoubleEdgeTaught {
 script EventScript_ThunderWaveTutor {
     lock
     faceplayer
-    goto_if_set(FLAG_TUTOR_THUNDER_WAVE, EventScript_ThunderWaveTaught)
+    goto_if_set(FLAG_TUTOR_THUNDER_WAVE, EventScript_ThunderWavePaidLesson)
     msgbox(Text_ThunderWaveTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_ThunderWaveDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_ThunderWaveDeclined)
     msgbox(Text_ThunderWaveWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_THUNDER_WAVE)
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_ThunderWaveDeclined)
     setflag(FLAG_TUTOR_THUNDER_WAVE)
+    goto(EventScript_ThunderWaveTaught)
+    end
+}
+
+script EventScript_ThunderWavePaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_THUNDER_WAVE)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_ThunderWaveDeclined)
     goto(EventScript_ThunderWaveTaught)
     end
 }
@@ -59,16 +71,22 @@ script EventScript_ThunderWaveTaught {
 script RockTunnel_B1F_EventScript_RockSlideTutor {
     lock
     faceplayer
-    goto_if_set(FLAG_TUTOR_ROCK_SLIDE, EventScript_RockSlideTaught)
+    goto_if_set(FLAG_TUTOR_ROCK_SLIDE, EventScript_RockSlidePaidLesson)
     msgbox(Text_RockSlideTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_RockSlideDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_RockSlideDeclined)
     msgbox(Text_RockSlideWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_ROCK_SLIDE)
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_RockSlideDeclined)
     setflag(FLAG_TUTOR_ROCK_SLIDE)
+    goto(EventScript_RockSlideTaught)
+    end
+}
+
+script EventScript_RockSlidePaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_ROCK_SLIDE)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_RockSlideDeclined)
     goto(EventScript_RockSlideTaught)
     end
 }
@@ -88,16 +106,22 @@ script EventScript_RockSlideTaught {
 script MtEmber_Exterior_EventScript_ExplosionTutor {
     lock
     faceplayer
-    goto_if_set(FLAG_TUTOR_EXPLOSION, EventScript_ExplosionTaught)
+    goto_if_set(FLAG_TUTOR_EXPLOSION, EventScript_ExplosionPaidLesson)
     msgbox(Text_ExplosionTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_ExplosionDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_ExplosionDeclined)
     msgbox(Text_ExplosionWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_EXPLOSION)
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_ExplosionDeclined)
     setflag(FLAG_TUTOR_EXPLOSION)
+    goto(EventScript_ExplosionTaught)
+    end
+}
+
+script EventScript_ExplosionPaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_EXPLOSION)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_ExplosionDeclined)
     goto(EventScript_ExplosionTaught)
     end
 }
@@ -117,16 +141,22 @@ script EventScript_ExplosionTaught {
 script Route4_EventScript_MegaPunchTutor {
     lock
     faceplayer
-    goto_if_set(FLAG_TUTOR_MEGA_PUNCH, EventScript_MegaPunchTaught)
+    goto_if_set(FLAG_TUTOR_MEGA_PUNCH, EventScript_MegaPunchPaidLesson)
     msgbox(Text_MegaPunchTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_MegaPunchDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_MegaPunchDeclined)
     msgbox(Text_MegaPunchWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_MEGA_PUNCH)
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_MegaPunchDeclined)
     setflag(FLAG_TUTOR_MEGA_PUNCH)
+    goto(EventScript_MegaPunchTaught)
+    end
+}
+
+script EventScript_MegaPunchPaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_MEGA_PUNCH)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_MegaPunchDeclined)
     goto(EventScript_MegaPunchTaught)
     end
 }
@@ -146,16 +176,22 @@ script EventScript_MegaPunchTaught {
 script Route4_EventScript_MegaKickTutor {
     lock
     faceplayer
-    goto_if_set(FLAG_TUTOR_MEGA_KICK, EventScript_MegaKickTaught)
+    goto_if_set(FLAG_TUTOR_MEGA_KICK, EventScript_MegaKickPaidLesson)
     msgbox(Text_MegaKickTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_MegaKickDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_MegaKickDeclined)
     msgbox(Text_MegaKickWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_MEGA_KICK)
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_MegaKickDeclined)
     setflag(FLAG_TUTOR_MEGA_KICK)
+    goto(EventScript_MegaKickTaught)
+    end
+}
+
+script EventScript_MegaKickPaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_MEGA_KICK)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_MegaKickDeclined)
     goto(EventScript_MegaKickTaught)
     end
 }
@@ -175,16 +211,22 @@ script EventScript_MegaKickTaught {
 script EventScript_DreamEaterTutor {
     lock
     faceplayer
-    goto_if_set(FLAG_TUTOR_DREAM_EATER, EventScript_DreamEaterTaught)
+    goto_if_set(FLAG_TUTOR_DREAM_EATER, EventScript_DreamEaterPaidLesson)
     msgbox(Text_DreamEaterTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_DreamEaterDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_DreamEaterDeclined)
     msgbox(Text_DreamEaterWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_DREAM_EATER)
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_DreamEaterDeclined)
     setflag(FLAG_TUTOR_DREAM_EATER)
+    goto(EventScript_DreamEaterTaught)
+    end
+}
+
+script EventScript_DreamEaterPaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_DREAM_EATER)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_DreamEaterDeclined)
     goto(EventScript_DreamEaterTaught)
     end
 }
@@ -204,16 +246,22 @@ script EventScript_DreamEaterTaught {
 script EventScript_SoftboiledTutor {
     lock
     faceplayer
-    goto_if_set(FLAG_TUTOR_SOFT_BOILED, EventScript_SoftboiledTaught)
+    goto_if_set(FLAG_TUTOR_SOFT_BOILED, EventScript_SoftboiledPaidLesson)
     msgbox(Text_SoftboiledTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_SoftboiledDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_SoftboiledDeclined)
     msgbox(Text_SoftboiledWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_SOFT_BOILED)
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_SoftboiledDeclined)
     setflag(FLAG_TUTOR_SOFT_BOILED)
+    goto(EventScript_SoftboiledTaught)
+    end
+}
+
+script EventScript_SoftboiledPaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_SOFT_BOILED)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_SoftboiledDeclined)
     goto(EventScript_SoftboiledTaught)
     end
 }
@@ -233,16 +281,22 @@ script EventScript_SoftboiledTaught {
 script FuchsiaCity_EventScript_SubstituteTutor {
     lock
     faceplayer
-    goto_if_set(FLAG_TUTOR_SUBSTITUTE, EventScript_SubstituteTaught)
+    goto_if_set(FLAG_TUTOR_SUBSTITUTE, EventScript_SubstitutePaidLesson)
     msgbox(Text_SubstituteTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_SubstituteDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_SubstituteDeclined)
     msgbox(Text_SubstituteWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_SUBSTITUTE)
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_SubstituteDeclined)
     setflag(FLAG_TUTOR_SUBSTITUTE)
+    goto(EventScript_SubstituteTaught)
+    end
+}
+
+script EventScript_SubstitutePaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_SUBSTITUTE)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_SubstituteDeclined)
     goto(EventScript_SubstituteTaught)
     end
 }
@@ -262,16 +316,22 @@ script EventScript_SubstituteTaught {
 script SevenIsland_EventScript_SwordsDanceTutor {
     lock
     faceplayer
-    goto_if_set(FLAG_TUTOR_SWORDS_DANCE, EventScript_SwordsDanceTaught)
+    goto_if_set(FLAG_TUTOR_SWORDS_DANCE, EventScript_SwordsDancePaidLesson)
     msgbox(Text_SwordsDanceTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_SwordsDanceDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_SwordsDanceDeclined)
     msgbox(Text_SwordsDanceWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_SWORDS_DANCE)
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_SwordsDanceDeclined)
     setflag(FLAG_TUTOR_SWORDS_DANCE)
+    goto(EventScript_SwordsDanceTaught)
+    end
+}
+
+script EventScript_SwordsDancePaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_SWORDS_DANCE)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_SwordsDanceDeclined)
     goto(EventScript_SwordsDanceTaught)
     end
 }
@@ -291,16 +351,22 @@ script EventScript_SwordsDanceTaught {
 script PewterCity_Museum_1F_EventScript_SeismicTossTutor {
     lock
     faceplayer
-    goto_if_set(FLAG_TUTOR_SEISMIC_TOSS, EventScript_SeismicTossTaught)
+    goto_if_set(FLAG_TUTOR_SEISMIC_TOSS, EventScript_SeismicTossPaidLesson)
     msgbox(Text_SeismicTossTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_SeismicTossDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_SeismicTossDeclined)
     msgbox(Text_SeismicTossWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_SEISMIC_TOSS)
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_SeismicTossDeclined)
     setflag(FLAG_TUTOR_SEISMIC_TOSS)
+    goto(EventScript_SeismicTossTaught)
+    end
+}
+
+script EventScript_SeismicTossPaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_SEISMIC_TOSS)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_SeismicTossDeclined)
     goto(EventScript_SeismicTossTaught)
     end
 }
@@ -320,16 +386,22 @@ script EventScript_SeismicTossTaught {
 script EventScript_CounterTutor {
     lock
     faceplayer
-    goto_if_set(FLAG_TUTOR_COUNTER, EventScript_CounterTaught)
+    goto_if_set(FLAG_TUTOR_COUNTER, EventScript_CounterPaidLesson)
     msgbox(Text_CounterTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_CounterDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_CounterDeclined)
     msgbox(Text_CounterWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_COUNTER)
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_CounterDeclined)
     setflag(FLAG_TUTOR_COUNTER)
+    goto(EventScript_CounterTaught)
+    end
+}
+
+script EventScript_CounterPaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_COUNTER)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_CounterDeclined)
     goto(EventScript_CounterTaught)
     end
 }
@@ -349,16 +421,22 @@ script EventScript_CounterTaught {
 script EventScript_MetronomeTutor {
     lock
     faceplayer
-    goto_if_set(FLAG_TUTOR_METRONOME, EventScript_MetronomeTaught)
+    goto_if_set(FLAG_TUTOR_METRONOME, EventScript_MetronomePaidLesson)
     msgbox(Text_MetronomeTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_MetronomeDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_MetronomeDeclined)
     msgbox(Text_MetronomeWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_METRONOME)
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_MetronomeDeclined)
     setflag(FLAG_TUTOR_METRONOME)
+    goto(EventScript_MetronomeTaught)
+    end
+}
+
+script EventScript_MetronomePaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_METRONOME)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_MetronomeDeclined)
     goto(EventScript_MetronomeTaught)
     end
 }
@@ -376,10 +454,8 @@ script EventScript_MetronomeTaught {
 }
 
 script EventScript_MimicTutor {
-    goto_if_set(FLAG_TUTOR_MIMIC, EventScript_MimicTaught)
+    goto_if_set(FLAG_TUTOR_MIMIC, EventScript_MimicPaidLesson)
     msgbox(Text_MimicTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_MimicDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_MimicDeclined)
     msgbox(Text_MimicWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_MIMIC)
@@ -389,6 +465,14 @@ script EventScript_MimicTutor {
     goto_if_eq(VAR_RESULT, 0, EventScript_MimicDeclined)
     removeitem(ITEM_POKE_DOLL)
     setflag(FLAG_TUTOR_MIMIC)
+    goto(EventScript_MimicTaught)
+    end
+}
+
+script EventScript_MimicPaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_MIMIC)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_MimicDeclined)
     goto(EventScript_MimicTaught)
     end
 }
@@ -420,16 +504,22 @@ script EventScript_MimicTaughtFemale {
 script FourIsland_House1_EventScript_BodySlamTutor {
     lock
     faceplayer
-    goto_if_set(FLAG_TUTOR_BODY_SLAM, EventScript_BodySlamTaught)
+    goto_if_set(FLAG_TUTOR_BODY_SLAM, EventScript_BodySlamPaidLesson)
     msgbox(Text_BodySlamTeach, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, NO, EventScript_BodySlamDeclined)
-    call(EventScript_CanOnlyBeLearnedOnce)
     goto_if_eq(VAR_RESULT, NO, EventScript_BodySlamDeclined)
     msgbox(Text_BodySlamWhichMon)
     setvar(VAR_0x8005, MOVETUTOR_BODY_SLAM)
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_BodySlamDeclined)
     setflag(FLAG_TUTOR_BODY_SLAM)
+    goto(EventScript_BodySlamTaught)
+    end
+}
+
+script EventScript_BodySlamPaidLesson {
+    setvar(VAR_0x8005, MOVETUTOR_BODY_SLAM)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_BodySlamDeclined)
     goto(EventScript_BodySlamTaught)
     end
 }
@@ -587,4 +677,63 @@ movement Movement_JumpInPlaceLeft {
 movement Movement_JumpInPlaceRight {
     jump_in_place_right
     step_end
+}
+
+// Lessons after the first one, which is free, cost money (the price depends on the move, see sTutorMovePrices).
+// Input: VAR_0x8005 = MOVETUTOR_* of the tutor. Output: VAR_RESULT = TRUE if a Pokémon learned the move.
+script EventScript_PaidMoveTutorLesson {
+    special(BufferMoveTutorPrice)
+    showmoneybox(0, 0)
+    msgbox(Text_MoveTutorTeachAgainForMoney, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, EventScript_PaidMoveTutorLessonDeclined)
+    specialvar(VAR_RESULT, CanPayMoveTutorPrice)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_PaidMoveTutorLessonNotEnoughMoney)
+    msgbox(Text_MoveTutorWhichMon)
+    closemessage
+    hidemoneybox
+    call(EventScript_ChooseMoveTutorMon)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_PaidMoveTutorLessonNotTaught)
+    special(PayMoveTutorPrice)
+    special(BufferMoveTutorPrice)
+    showmoneybox(0, 0)
+    playse(SE_SHOP)
+    msgbox(Text_MoveTutorPaid)
+    waitse
+    hidemoneybox
+    setvar(VAR_RESULT, TRUE)
+    return
+}
+
+script EventScript_PaidMoveTutorLessonNotEnoughMoney {
+    msgbox(Text_MoveTutorNotEnoughMoney)
+    goto(EventScript_PaidMoveTutorLessonDeclined)
+}
+
+script EventScript_PaidMoveTutorLessonDeclined {
+    hidemoneybox
+    goto(EventScript_PaidMoveTutorLessonNotTaught)
+}
+
+script EventScript_PaidMoveTutorLessonNotTaught {
+    setvar(VAR_RESULT, FALSE)
+    return
+}
+
+text Text_MoveTutorTeachAgainForMoney {
+    "I can teach {STR_VAR_1} to another\n"
+    "Pokémon for ¥{STR_VAR_2}.\p"
+    "Would you like that?$"
+}
+
+text Text_MoveTutorWhichMon {
+    "Which Pokémon should learn\n"
+    "{STR_VAR_1}?$"
+}
+
+text Text_MoveTutorNotEnoughMoney {
+    "Oh, you don't have enough money.$"
+}
+
+text Text_MoveTutorPaid {
+    "{PLAYER} handed over ¥{STR_VAR_2}.$"
 }

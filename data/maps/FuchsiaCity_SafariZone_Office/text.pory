@@ -26,3 +26,30 @@ text FuchsiaCity_SafariZone_Office_Text_PrizeInSafariZone {
     "If you can make it, you'll win a\n"
     "very convenient prize.$"
 }
+
+text FuchsiaCity_SafariZone_Office_Text_ElementalPunchesIntro {
+    "I can make your Pokémon's fists\n"
+    "blaze with fire, crackle with\l"
+    "lightning, or freeze like ice.\p"
+    "If you're interested, I can teach\n"
+    "one of the elemental punches\l"
+    "whenever you want.$"
+}
+
+text FuchsiaCity_SafariZone_Office_Text_ShouldITeachMove {
+    "Should I teach a move to one of\n"
+    "your Pokémon?$"
+}
+
+text FuchsiaCity_SafariZone_Office_Text_WhichMoveShouldITeach {
+    "Which move should I teach?$"
+}
+
+text FuchsiaCity_SafariZone_Office_Text_ElementalPunchesDeclined {
+    "Come back if you change your mind.$"
+}
+
+text FuchsiaCity_SafariZone_Office_Text_ElementalPunchesTaught {
+    "Come back anytime, trainer!\n"
+    "My fists will always be ready.$"
+}

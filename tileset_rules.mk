@@ -10,10 +10,10 @@ $(TILESETGFXDIR)/secondary/pallet_town/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 76 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/lavender_town/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 256 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 306 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/cinnabar_island/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 128 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 194 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/pokemon_center/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 376 -Wnum_tiles
@@ -61,7 +61,7 @@ $(TILESETGFXDIR)/secondary/viridian_city/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 112 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/vermilion_city/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 140 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 210 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/indigo_plateau/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 247 -Wnum_tiles
@@ -103,19 +103,19 @@ $(TILESETGFXDIR)/secondary/navel_rock/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 282 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/sevii_islands_67/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 374 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 376 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/hall_of_fame/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 208 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/pewter_city/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 280 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 282 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/celadon_city/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 244 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 322 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/saffron_city/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 262 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 338 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/dummy_1/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 2 -Wnum_tiles
@@ -157,10 +157,10 @@ $(TILESETGFXDIR)/secondary/trainer_tower/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 343 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/cerulean_city/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 158 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 211 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/fuchsia_city/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 192 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 242 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/mart/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 36 -Wnum_tiles
@@ -196,7 +196,7 @@ $(TILESETGFXDIR)/secondary/mt_ember/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 288 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/sevii_islands_123/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 374 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 376 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/island_harbor/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 165 -Wnum_tiles

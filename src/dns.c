@@ -8,6 +8,9 @@
 #include "palette.h"
 #include "quest_log.h"
 #include "rtc.h"
+#include "script.h"
+#include "constants/map_groups.h"
+#include "constants/weather.h"
 #include "constants/field_weather.h"
 #include "constants/map_types.h"
 #include "constants/quest_log.h"
@@ -49,6 +52,25 @@ static const u8 sDnsMapExceptions[] =
     MAP_TYPE_SECRET_BASE,
 };
 
+/* Maps whose weather changes at night (night hours are the ones of IsDnsNightTime).
+ * The night weather is only used between rows minY and maxY (both included, editor coords),
+ * so it can be limited to a part of the map. */
+struct DnsNightWeather
+{
+    u16 mapId;
+    u8 nightWeather;
+    s16 minY;
+    s16 maxY;
+};
+
+#define DNS_WHOLE_MAP 0, 0x7FFF
+
+static const struct DnsNightWeather sDnsNightWeathers[] =
+{
+    {MAP_LAVENDER_TOWN, WEATHER_FOG_HORIZONTAL, DNS_WHOLE_MAP},
+    {MAP_ROUTE10,       WEATHER_FOG_HORIZONTAL, 50, 0x7FFF}, // South part, from Rock Tunnel to Lavender Town
+};
+
 /* Palettes affected by the DNS during battles (only the battle terrain, BG 2-4).
  * In the overworld, the DNS affects the same palettes as the weather
  * (see sBasePaletteGammaTypes in field_weather.c), so the UI is never tinted. */
@@ -71,11 +93,14 @@ static const bool8 sBattleDnsPalettes[32] =
  * Colours 1-4 are always the glass colours of General's palette 3 (colours 10-13),
  * which is also how the DNS recognizes a tileset that has a glass palette.
  * Each glass colour is lit with a darker or brighter light depending on how bright
- * it is during the day, so the gradient of the glass is kept. */
+ * it is during the day, so the gradient of the glass is kept.
+ * Colours 12-15 are never lit: they are for the frames of windows whose glass and frame
+ * must be in the same tile (e.g. buildings drawn on the top layer, like the Bike Shop). */
 #define GLASS_PALETTE             7
 #define GLASS_SOURCE_PALETTE      3
 #define GLASS_SOURCE_FIRST_COLOUR 10
 #define GLASS_SOURCE_NUM_COLOURS  4
+#define GLASS_UNLIT_FIRST_COLOUR  12
 
 extern const struct Tileset gTileset_General;
 
@@ -269,6 +294,56 @@ static bool8 IsMapDnsException(void)
     return FALSE;
 }
 
+static const struct DnsNightWeather *GetCurrentMapNightWeather(void)
+{
+    u32 i;
+    u16 mapId = (gSaveBlock1Ptr->location.mapGroup << 8) | gSaveBlock1Ptr->location.mapNum;
+
+    s16 y = gSaveBlock1Ptr->pos.y;
+
+    for (i = 0; i < ARRAY_COUNT(sDnsNightWeathers); i++)
+    {
+        if (sDnsNightWeathers[i].mapId == mapId && y >= sDnsNightWeathers[i].minY && y <= sDnsNightWeathers[i].maxY)
+            return &sDnsNightWeathers[i];
+    }
+    return NULL;
+}
+
+// Weather of the current map for the current time, given the weather of its map header.
+u8 GetDnsMapWeather(u8 headerWeather)
+{
+    const struct DnsNightWeather *nightWeather = GetCurrentMapNightWeather();
+
+    if (nightWeather == NULL || !IsRtcWorking())
+        return headerWeather;
+
+    RtcCalcLocalTime();
+    return IsDnsNightTime() ? nightWeather->nightWeather : headerWeather;
+}
+
+// Switches between the day and night weather when the time changes while the player is in the map.
+// The weather is only changed if it is still the map's day or night weather, so a weather set
+// by a script is kept.
+static void UpdateNightWeather(void)
+{
+    const struct DnsNightWeather *nightWeather = GetCurrentMapNightWeather();
+    u8 weather;
+
+    if (nightWeather == NULL
+     || ArePlayerFieldControlsLocked()
+     || gPaletteFade.active
+     || gWeatherPtr->palProcessingState != WEATHER_PAL_STATE_IDLE)
+        return;
+
+    weather = IsDnsNightTime() ? nightWeather->nightWeather : gMapHeader.weather;
+    if (GetSav1Weather() != weather
+     && (GetSav1Weather() == gMapHeader.weather || GetSav1Weather() == nightWeather->nightWeather))
+    {
+        SetSavedWeather(weather);
+        DoCurrentWeather();
+    }
+}
+
 u8 GetDnsTimeLapse(u8 hour)
 {
     if (hour < MIDNIGHT_END_HOUR)
@@ -383,6 +458,8 @@ void DnsUpdate(void)
     {
         RtcCalcLocalTime();
         sRtcRefreshTimer = RTC_REFRESH_FRAMES;
+        if (!gMain.inBattle)
+            UpdateNightWeather();
     }
     sRtcRefreshTimer--;
 
@@ -448,7 +525,7 @@ static void UpdateGlassPalette(const struct MapLayout *mapLayout)
     for (i = 1; i < 16; i++)
     {
         brightness = (glass[i] & 0x1F) + ((glass[i] >> 5) & 0x1F) + ((glass[i] >> 10) & 0x1F);
-        if (glass[i] == 0)
+        if (glass[i] == 0 || i >= GLASS_UNLIT_FIRST_COLOUR)
             sGlassLightColours[i] = 0;
         else if (brightness < 54)
             sGlassLightColours[i] = LIGHT_WINDOW_DARK;

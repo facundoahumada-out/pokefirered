@@ -456,4 +456,7 @@ gSpecials::
 	def_special GetMushroomPatchItem
 	def_special PickMushroomPatch
 	def_special RefreshMushroomPatchesOnMap
+	def_special BufferMoveTutorPrice
+	def_special CanPayMoveTutorPrice
+	def_special PayMoveTutorPrice
 gSpecialsEnd::

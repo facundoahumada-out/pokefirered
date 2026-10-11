@@ -39,41 +39,43 @@ SaffronCity_CopycatsHouse_2F_EventScript_Copycat::
 	lock
 # 25 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
 	faceplayer
-# 26 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
-	checkitem ITEM_POKE_DOLL
 # 27 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
-	goto_if_eq VAR_RESULT, TRUE, EventScript_MimicTutor
+	goto_if_set FLAG_TUTOR_MIMIC, EventScript_MimicTutor
 # 28 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
-	checkplayergender
+	checkitem ITEM_POKE_DOLL
 # 29 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
-	call_if_eq VAR_RESULT, MALE, SaffronCity_CopycatsHouse_2F_EventScript_MimicPlayerMale
+	goto_if_eq VAR_RESULT, TRUE, EventScript_MimicTutor
 # 30 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
-	call_if_eq VAR_RESULT, FEMALE, SaffronCity_CopycatsHouse_2F_EventScript_MimicPlayerFemale
+	checkplayergender
 # 31 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
+	call_if_eq VAR_RESULT, MALE, SaffronCity_CopycatsHouse_2F_EventScript_MimicPlayerMale
+# 32 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
+	call_if_eq VAR_RESULT, FEMALE, SaffronCity_CopycatsHouse_2F_EventScript_MimicPlayerFemale
+# 33 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
 	release
 	end
 
 
 SaffronCity_CopycatsHouse_2F_EventScript_MimicPlayerMale::
-# 36 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
+# 38 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
 	msgbox SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyMale
 	return
 
 
 SaffronCity_CopycatsHouse_2F_EventScript_MimicPlayerFemale::
-# 41 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
+# 43 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
 	msgbox SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyFemale
 	return
 
 
 SaffronCity_CopycatsHouse_2F_EventScript_Computer::
-# 46 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
+# 48 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
 	msgbox SaffronCity_CopycatsHouse_2F_Text_MySecrets, MSGBOX_SIGN
 	end
 
 
 SaffronCity_CopycatsHouse_2F_EventScript_Game::
-# 51 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
+# 53 "data/maps/SaffronCity_CopycatsHouse_2F/scripts.pory"
 	msgbox SaffronCity_CopycatsHouse_2F_Text_MarioWearingABucket, MSGBOX_SIGN
 	end
 

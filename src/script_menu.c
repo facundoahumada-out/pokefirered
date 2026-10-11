@@ -5,7 +5,9 @@
 #include "script_menu.h"
 #include "quest_log.h"
 #include "new_menu_helpers.h"
+#include "data.h"
 #include "event_data.h"
+#include "constants/moves.h"
 #include "script.h"
 #include "strings.h"
 #include "field_effect.h"
@@ -498,6 +500,13 @@ static const struct MenuAction sMultichoiceList_TrainerTowerMode[] = {
     { gOtherText_Exit }
 };
 
+static const struct MenuAction sMultichoiceList_ElementalPunches[] = {
+    { gMoveNames[MOVE_FIRE_PUNCH] },
+    { gMoveNames[MOVE_THUNDER_PUNCH] },
+    { gMoveNames[MOVE_ICE_PUNCH] },
+    { gOtherText_Exit }
+};
+
 static const struct MenuAction sMultichoiceList_Exit[] = {
     { gOtherText_Exit }
 };
@@ -568,6 +577,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_62]                                         = MULTICHOICE(sMultichoiceList_62),
     [MULTICHOICE_JOIN_OR_LEAD]                               = MULTICHOICE(sMultichoiceList_JoinOrLead),
     [MULTICHOICE_TRAINER_TOWER_MODE]                         = MULTICHOICE(sMultichoiceList_TrainerTowerMode),
+    [MULTICHOICE_ELEMENTAL_PUNCHES]                          = MULTICHOICE(sMultichoiceList_ElementalPunches),
 };
 
 // From Cool to Berries goes unused

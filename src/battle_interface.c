@@ -2313,6 +2313,8 @@ void UpdateMoveSelectionCategoryIcon(u8 split)
         sMoveSelectionCategoryIconActive = TRUE;
     }
     StartSpriteAnim(&gSprites[sMoveSelectionCategoryIconSpriteId], split);
+    // El ícono de Estado se dibuja 1px más abajo para que quede alineado con los otros.
+    gSprites[sMoveSelectionCategoryIconSpriteId].y2 = (split == SPLIT_STATUS) ? 1 : 0;
     gSprites[sMoveSelectionCategoryIconSpriteId].invisible = FALSE;
 }
 

@@ -19,3 +19,58 @@ script FuchsiaCity_SafariZone_Office_EventScript_Worker4 {
     msgbox(FuchsiaCity_SafariZone_Office_Text_PrizeInSafariZone, MSGBOX_NPC)
     end
 }
+
+// Teaches Fire Punch, Thunderpunch or Ice Punch. The first lesson is free (whichever punch it is),
+// the next ones are paid (see EventScript_PaidMoveTutorLesson).
+script FuchsiaCity_SafariZone_Office_EventScript_ElementalPunchesTutor {
+    lock
+    faceplayer
+    msgbox(FuchsiaCity_SafariZone_Office_Text_ElementalPunchesIntro)
+    goto_if_set(FLAG_TUTOR_ELEMENTAL_PUNCHES, FuchsiaCity_SafariZone_Office_EventScript_ElementalPunchesPaidLesson)
+    msgbox(FuchsiaCity_SafariZone_Office_Text_ShouldITeachMove, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, FuchsiaCity_SafariZone_Office_EventScript_ElementalPunchesDeclined)
+    call(FuchsiaCity_SafariZone_Office_EventScript_ChooseElementalPunch)
+    goto_if_eq(VAR_RESULT, FALSE, FuchsiaCity_SafariZone_Office_EventScript_ElementalPunchesDeclined)
+    call(EventScript_ChooseMoveTutorMon)
+    goto_if_eq(VAR_RESULT, FALSE, FuchsiaCity_SafariZone_Office_EventScript_ElementalPunchesDeclined)
+    setflag(FLAG_TUTOR_ELEMENTAL_PUNCHES)
+    goto(FuchsiaCity_SafariZone_Office_EventScript_ElementalPunchesTaught)
+    end
+}
+
+script FuchsiaCity_SafariZone_Office_EventScript_ElementalPunchesPaidLesson {
+    call(FuchsiaCity_SafariZone_Office_EventScript_ChooseElementalPunch)
+    goto_if_eq(VAR_RESULT, FALSE, FuchsiaCity_SafariZone_Office_EventScript_ElementalPunchesDeclined)
+    call(EventScript_PaidMoveTutorLesson)
+    goto_if_eq(VAR_RESULT, FALSE, FuchsiaCity_SafariZone_Office_EventScript_ElementalPunchesDeclined)
+    goto(FuchsiaCity_SafariZone_Office_EventScript_ElementalPunchesTaught)
+    end
+}
+
+// Output: VAR_RESULT = TRUE and VAR_0x8005 = MOVETUTOR_* of the chosen punch, or VAR_RESULT = FALSE.
+script FuchsiaCity_SafariZone_Office_EventScript_ChooseElementalPunch {
+    message(FuchsiaCity_SafariZone_Office_Text_WhichMoveShouldITeach)
+    waitmessage
+    multichoice(0, 0, MULTICHOICE_ELEMENTAL_PUNCHES, FALSE)
+    // The options are in the same order as MOVETUTOR_FIRE_PUNCH, MOVETUTOR_THUNDER_PUNCH and MOVETUTOR_ICE_PUNCH
+    if (var(VAR_RESULT) >= 3) {
+        setvar(VAR_RESULT, FALSE)
+        return
+    }
+    copyvar(VAR_0x8005, VAR_RESULT)
+    addvar(VAR_0x8005, MOVETUTOR_FIRE_PUNCH)
+    setvar(VAR_RESULT, TRUE)
+    return
+}
+
+script FuchsiaCity_SafariZone_Office_EventScript_ElementalPunchesDeclined {
+    msgbox(FuchsiaCity_SafariZone_Office_Text_ElementalPunchesDeclined)
+    release
+    end
+}
+
+script FuchsiaCity_SafariZone_Office_EventScript_ElementalPunchesTaught {
+    msgbox(FuchsiaCity_SafariZone_Office_Text_ElementalPunchesTaught)
+    release
+    end
+}

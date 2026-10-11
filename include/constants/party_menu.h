@@ -25,11 +25,14 @@
 #define TUTOR_MOVE_EXPLOSION       12
 #define TUTOR_MOVE_ROCK_SLIDE      13
 #define TUTOR_MOVE_SUBSTITUTE      14
-#define TUTOR_MOVE_COUNT           15 // regular tutor move count
+#define TUTOR_MOVE_FIRE_PUNCH      15
+#define TUTOR_MOVE_THUNDER_PUNCH   16
+#define TUTOR_MOVE_ICE_PUNCH       17
+#define TUTOR_MOVE_COUNT           18 // regular tutor move count
 
-#define TUTOR_MOVE_FRENZY_PLANT    15
-#define TUTOR_MOVE_BLAST_BURN      16
-#define TUTOR_MOVE_HYDRO_CANNON    17
+#define TUTOR_MOVE_FRENZY_PLANT    18
+#define TUTOR_MOVE_BLAST_BURN      19
+#define TUTOR_MOVE_HYDRO_CANNON    20
 
 #define FIELD_MOVE_FLASH        0
 #define FIELD_MOVE_CUT          1

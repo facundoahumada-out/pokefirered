@@ -26,3 +26,30 @@ FuchsiaCity_SafariZone_Office_Text_PrizeInSafariZone::
 	.string "of the Safari Zone.\p"
 	.string "If you can make it, you'll win a\n"
 	.string "very convenient prize.$"
+
+FuchsiaCity_SafariZone_Office_Text_ElementalPunchesIntro::
+# 30 "data/maps/FuchsiaCity_SafariZone_Office/text.pory"
+	.string "I can make your Pokémon's fists\n"
+	.string "blaze with fire, crackle with\l"
+	.string "lightning, or freeze like ice.\p"
+	.string "If you're interested, I can teach\n"
+	.string "one of the elemental punches\l"
+	.string "whenever you want.$"
+
+FuchsiaCity_SafariZone_Office_Text_ShouldITeachMove::
+# 39 "data/maps/FuchsiaCity_SafariZone_Office/text.pory"
+	.string "Should I teach a move to one of\n"
+	.string "your Pokémon?$"
+
+FuchsiaCity_SafariZone_Office_Text_WhichMoveShouldITeach::
+# 44 "data/maps/FuchsiaCity_SafariZone_Office/text.pory"
+	.string "Which move should I teach?$"
+
+FuchsiaCity_SafariZone_Office_Text_ElementalPunchesDeclined::
+# 48 "data/maps/FuchsiaCity_SafariZone_Office/text.pory"
+	.string "Come back if you change your mind.$"
+
+FuchsiaCity_SafariZone_Office_Text_ElementalPunchesTaught::
+# 52 "data/maps/FuchsiaCity_SafariZone_Office/text.pory"
+	.string "Come back anytime, trainer!\n"
+	.string "My fists will always be ready.$"

@@ -8,6 +8,7 @@
 #include "battle_tower.h"
 #include "berry_pouch.h"
 #include "data.h"
+#include "money.h"
 #include "decompress.h"
 #include "easy_chat.h"
 #include "event_data.h"
@@ -5938,6 +5939,53 @@ void ChooseMonForMoveTutor(void)
                       CB2_ReturnToFieldContinueScriptPlayMapMusic);
         gPartyMenu.slotId = gSpecialVar_0x8007;
     }
+}
+
+// The first lesson of each move tutor is free, the next ones cost money (see EventScript_PaidMoveTutorLesson).
+static const u16 sTutorMovePrices[TUTOR_MOVE_COUNT] =
+{
+    [TUTOR_MOVE_MEGA_PUNCH]    = 3000,
+    [TUTOR_MOVE_SWORDS_DANCE]  = 2000,
+    [TUTOR_MOVE_MEGA_KICK]     = 3000,
+    [TUTOR_MOVE_BODY_SLAM]     = 3000,
+    [TUTOR_MOVE_DOUBLE_EDGE]   = 5000,
+    [TUTOR_MOVE_COUNTER]       = 2000,
+    [TUTOR_MOVE_SEISMIC_TOSS]  = 2000,
+    [TUTOR_MOVE_MIMIC]         = 2000,
+    [TUTOR_MOVE_METRONOME]     = 2000,
+    [TUTOR_MOVE_SOFT_BOILED]   = 2000,
+    [TUTOR_MOVE_DREAM_EATER]   = 3000,
+    [TUTOR_MOVE_THUNDER_WAVE]  = 2000,
+    [TUTOR_MOVE_EXPLOSION]     = 4000,
+    [TUTOR_MOVE_ROCK_SLIDE]    = 3000,
+    [TUTOR_MOVE_SUBSTITUTE]    = 2000,
+    [TUTOR_MOVE_FIRE_PUNCH]    = 3000,
+    [TUTOR_MOVE_THUNDER_PUNCH] = 3000,
+    [TUTOR_MOVE_ICE_PUNCH]     = 3000,
+};
+
+static u32 GetMoveTutorPrice(void)
+{
+    if (gSpecialVar_0x8005 >= TUTOR_MOVE_COUNT)
+        return 0;
+    return sTutorMovePrices[gSpecialVar_0x8005];
+}
+
+// gSpecialVar_0x8005: tutor move. Buffers the move's name in gStringVar1 and the lesson's price in gStringVar2.
+void BufferMoveTutorPrice(void)
+{
+    StringCopy(gStringVar1, gMoveNames[GetTutorMove(gSpecialVar_0x8005)]);
+    ConvertIntToDecimalStringN(gStringVar2, GetMoveTutorPrice(), STR_CONV_MODE_LEFT_ALIGN, 5);
+}
+
+bool8 CanPayMoveTutorPrice(void)
+{
+    return IsEnoughMoney(&gSaveBlock1Ptr->money, GetMoveTutorPrice());
+}
+
+void PayMoveTutorPrice(void)
+{
+    RemoveMoney(&gSaveBlock1Ptr->money, GetMoveTutorPrice());
 }
 
 void ChooseMonForWirelessMinigame(void)

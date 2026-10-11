@@ -758,3 +758,51 @@ void BlitMenuInfoIcon(u8 windowId, u8 iconId, u16 x, u16 y)
 {
     BlitBitmapRectToWindow(windowId, &gMenuInfoElements_Gfx[sMenuInfoIcons[iconId].offset * TILE_SIZE_4BPP], 0, 0, 128, 128, x, y, sMenuInfoIcons[iconId].width, sMenuInfoIcons[iconId].height);
 }
+
+// Returns a bit mask of the palette colours used by a menu info icon (bit n set = colour n is used).
+u16 GetMenuInfoIconColorMask(u8 iconId)
+{
+    u32 x, y;
+    u16 mask = 0;
+    const u8 *tile;
+
+    for (y = 0; y < sMenuInfoIcons[iconId].height; y++)
+    {
+        for (x = 0; x < sMenuInfoIcons[iconId].width; x++)
+        {
+            // The icons are stored in a sheet 16 tiles wide.
+            tile = &gMenuInfoElements_Gfx[(sMenuInfoIcons[iconId].offset + (y / 8) * 16 + x / 8) * TILE_SIZE_4BPP];
+            mask |= 1 << ((tile[(y % 8) * 4 + (x % 8) / 2] >> ((x % 2) * 4)) & 0xF);
+        }
+    }
+    return mask;
+}
+
+// Colours of gMenuInfoElements2_Pal that can be replaced by the text shadow, in order of preference
+// (not 1 and 7, which the summary screen uses to tint the stats raised/lowered by the nature).
+static const u8 sTypesPalTextShadowCandidates[] = {10, 13, 12, 11, 9, 8, 6, 5, 4, 3, 2};
+
+// Loads the type icons palette (gMenuInfoElements2_Pal) for a window that draws text next to type icons.
+// All its colours are used by the type icons, so one of the colours not used by the icons shown
+// (usedColors, see GetMenuInfoIconColorMask) is replaced by the light text shadow colour.
+// Returns the index of that colour, to be used as the text shadow.
+u8 LoadTypesPalWithTextShadow(u16 palOffset, u16 usedColors)
+{
+    u16 palette[16];
+    u8 shadowColor = sTypesPalTextShadowCandidates[0];
+    u32 i;
+
+    for (i = 0; i < ARRAY_COUNT(sTypesPalTextShadowCandidates); i++)
+    {
+        if (!(usedColors & (1 << sTypesPalTextShadowCandidates[i])))
+        {
+            shadowColor = sTypesPalTextShadowCandidates[i];
+            break;
+        }
+    }
+
+    CpuCopy16(gMenuInfoElements2_Pal, palette, sizeof(palette));
+    palette[shadowColor] = RGB(27, 27, 24);
+    LoadPalette(palette, palOffset, PLTT_SIZE_4BPP);
+    return shadowColor;
+}
