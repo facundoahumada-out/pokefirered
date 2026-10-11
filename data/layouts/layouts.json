@@ -4397,7 +4397,7 @@
       "id": "LAYOUT_MT_SILVER_EXTERIOR",
       "name": "MtSilver_Exterior_Layout",
       "width": 34,
-      "height": 32,
+      "height": 34,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
