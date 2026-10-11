@@ -3,7 +3,7 @@
   "name": "MtSilver_Exterior",
   "layout": "LAYOUT_MT_SILVER_EXTERIOR",
   "music": "MUS_VICTORY_ROAD",
-  "region_map_section": "MAPSEC_MT_SILVER",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE28",
-      "offset": 2,
+      "offset": 3,
       "direction": "right"
     }
   ],

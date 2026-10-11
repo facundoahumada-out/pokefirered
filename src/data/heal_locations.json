@@ -159,14 +159,6 @@
       "y": 12,
       "respawn_map": "MAP_SIX_ISLAND_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_SIX_ISLAND_NURSE"
-    },
-    {
-      "id": "HEAL_LOCATION_MT_SILVER",
-      "map": "MAP_MT_SILVER_EXTERIOR",
-      "x": 26,
-      "y": 19,
-      "respawn_map": "MAP_VIRIDIAN_CITY_POKEMON_CENTER_1F",
-      "respawn_npc": "LOCALID_VIRIDIAN_NURSE"
     }
   ]
 }
