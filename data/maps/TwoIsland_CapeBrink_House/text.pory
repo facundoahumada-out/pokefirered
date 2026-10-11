@@ -60,3 +60,10 @@ text Text_FeelRejuvenated {
     "In fact, I feel rejuvenated,\n"
     "as if I were younger again!$"
 }
+
+text Text_UltimateMoveTeachAgainForMoney {
+    "I have already passed on my\n"
+    "{STR_VAR_1} once.\p"
+    "To teach it again, I'll need\n"
+    "¥{STR_VAR_2}. Will you pay?$"
+}

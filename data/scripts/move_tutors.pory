@@ -541,8 +541,6 @@ script TwoIsland_CapeBrink_House_EventScript_StarterTutor {
     special(QuestLog_CutRecording)
     lock
     faceplayer
-    goto_if_set(FLAG_LEARNED_ALL_MOVES_AT_CAPE_BRINK, CapeBrinkTutor_EventScript_TaughtAllMoves)
-    goto_if_set(FLAG_TEMP_2, CapeBrinkTutor_EventScript_MoveJustTaught)
     bufferleadmonspeciesname(STR_VAR_1)
     msgbox(Text_UltimateMoveThatMon)
     specialvar(VAR_RESULT, CapeBrinkGetMoveToTeachLeadPokemon)
@@ -554,12 +552,49 @@ script TwoIsland_CapeBrink_House_EventScript_StarterTutor {
     call_if_eq(VAR_FACING, DIR_WEST, CapeBrinkTutor_EventScript_JumpInPlaceRight)
     msgbox(Text_AllowMeToTeachMonUltimateMove, MSGBOX_YESNO)
     goto_if_eq(VAR_RESULT, NO, CapeBrinkTutor_EventScript_DeclineMove)
-    call(EventScript_CanOnlyBeLearnedOnce)
-    goto_if_eq(VAR_RESULT, NO, CapeBrinkTutor_EventScript_DeclineMove)
+    specialvar(VAR_RESULT, IsCapeBrinkMoveAlreadyTaught)
+    goto_if_eq(VAR_RESULT, TRUE, CapeBrinkTutor_EventScript_PaidLesson)
     msgbox(Text_LetMeConferUltimateMove)
     closemessage
     fadescreen(FADE_TO_BLACK)
     goto(CapeBrinkTutor_EventScript_ChooseMon)
+}
+
+// The first lesson of each ultimate move is free, the next ones cost money (see GetMoveTutorPrice).
+script CapeBrinkTutor_EventScript_PaidLesson {
+    special(BufferMoveTutorPrice)
+    showmoneybox(0, 0)
+    msgbox(Text_UltimateMoveTeachAgainForMoney, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, CapeBrinkTutor_EventScript_PaidLessonDeclined)
+    specialvar(VAR_RESULT, CanPayMoveTutorPrice)
+    goto_if_eq(VAR_RESULT, FALSE, CapeBrinkTutor_EventScript_PaidLessonNotEnoughMoney)
+    hidemoneybox
+    closemessage
+    fadescreen(FADE_TO_BLACK)
+    call(EventScript_ChooseMoveTutorMon)
+    goto_if_eq(VAR_RESULT, FALSE, CapeBrinkTutor_EventScript_DeclineMove)
+    special(PayMoveTutorPrice)
+    special(BufferMoveTutorPrice)
+    showmoneybox(0, 0)
+    playse(SE_SHOP)
+    msgbox(Text_MoveTutorPaid)
+    waitse
+    hidemoneybox
+    msgbox(Text_MakeBestUseOfMove)
+    release
+    end
+}
+
+script CapeBrinkTutor_EventScript_PaidLessonNotEnoughMoney {
+    msgbox(Text_MoveTutorNotEnoughMoney)
+    hidemoneybox
+    release
+    end
+}
+
+script CapeBrinkTutor_EventScript_PaidLessonDeclined {
+    hidemoneybox
+    goto(CapeBrinkTutor_EventScript_DeclineMove)
 }
 
 // Unused
@@ -569,24 +604,11 @@ script CapeBrinkTutor_EventScript_FadeTaughtMove {
     end
 }
 
-script CapeBrinkTutor_EventScript_MoveJustTaught {
-    msgbox(Text_MakeBestUseOfMove)
-    release
-    end
-}
-
-script CapeBrinkTutor_EventScript_TaughtAllMoves {
-    msgbox(Text_FeelRejuvenated)
-    release
-    end
-}
-
 script CapeBrinkTutor_EventScript_TaughtMove {
     copyvar(VAR_0x8005, VAR_0x8009)
     specialvar(VAR_RESULT, HasLearnedAllMovesFromCapeBrinkTutor)
     goto_if_eq(VAR_RESULT, TRUE, CapeBrinkTutor_EventScript_LearnedAllMoves)
     msgbox(Text_TaughtMove)
-    setflag(FLAG_TEMP_2)
     release
     end
 }

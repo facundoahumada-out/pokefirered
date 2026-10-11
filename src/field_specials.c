@@ -2211,11 +2211,52 @@ void StopPokemonLeagueLightingEffectTask(void)
     }
 }
 
-static const u8 sCapeBrinkCompatibleSpecies[] = {
-    SPECIES_VENUSAUR,
-    SPECIES_CHARIZARD,
-    SPECIES_BLASTOISE
+static const struct {
+    u16 species;
+    u8 tutorMove;
+} sCapeBrinkCompatibleSpecies[] = {
+    { SPECIES_VENUSAUR,   MOVETUTOR_FRENZY_PLANT },
+    { SPECIES_MEGANIUM,   MOVETUTOR_FRENZY_PLANT },
+    { SPECIES_SCEPTILE,   MOVETUTOR_FRENZY_PLANT },
+    { SPECIES_CHARIZARD,  MOVETUTOR_BLAST_BURN },
+    { SPECIES_TYPHLOSION, MOVETUTOR_BLAST_BURN },
+    { SPECIES_BLAZIKEN,   MOVETUTOR_BLAST_BURN },
+    { SPECIES_BLASTOISE,  MOVETUTOR_HYDRO_CANNON },
+    { SPECIES_FERALIGATR, MOVETUTOR_HYDRO_CANNON },
+    { SPECIES_SWAMPERT,   MOVETUTOR_HYDRO_CANNON },
 };
+
+static u16 GetCapeBrinkMove(u8 tutorMove)
+{
+    if (tutorMove == MOVETUTOR_FRENZY_PLANT)
+        return MOVE_FRENZY_PLANT;
+    else if (tutorMove == MOVETUTOR_BLAST_BURN)
+        return MOVE_BLAST_BURN;
+    else
+        return MOVE_HYDRO_CANNON;
+}
+
+static u16 GetCapeBrinkMoveFlag(u8 tutorMove)
+{
+    if (tutorMove == MOVETUTOR_FRENZY_PLANT)
+        return FLAG_TUTOR_FRENZY_PLANT;
+    else if (tutorMove == MOVETUTOR_BLAST_BURN)
+        return FLAG_TUTOR_BLAST_BURN;
+    else
+        return FLAG_TUTOR_HYDRO_CANNON;
+}
+
+bool8 CanLearnCapeBrinkMove(u16 species, u8 tutorMove)
+{
+    u8 i;
+    for (i = 0; i < NELEMS(sCapeBrinkCompatibleSpecies); i++)
+    {
+        if (sCapeBrinkCompatibleSpecies[i].species == species
+         && sCapeBrinkCompatibleSpecies[i].tutorMove == tutorMove)
+            return TRUE;
+    }
+    return FALSE;
+}
 
 bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
 {
@@ -2224,42 +2265,20 @@ bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
     //   8006 = Num moves known by lead mon
     //   8007 = Index of lead mon
     //   to specialvar = whether a move can be taught in the first place
-    u8 tutorMonId = 0;
     u8 numMovesKnown = 0;
     u8 leadMonSlot = GetLeadMonIndex();
+    u16 species = GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_SPECIES_OR_EGG, NULL);
     u8 i;
     gSpecialVar_0x8007 = leadMonSlot;
     for (i = 0; i < NELEMS(sCapeBrinkCompatibleSpecies); i++)
     {
-        if (GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_SPECIES_OR_EGG, NULL) == sCapeBrinkCompatibleSpecies[i])
-        {
-            tutorMonId = i;
+        if (species == sCapeBrinkCompatibleSpecies[i].species)
             break;
-        }
     }
     if (i == NELEMS(sCapeBrinkCompatibleSpecies) || GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_FRIENDSHIP) != 255)
         return FALSE;
-    if (tutorMonId == 0)
-    {
-        StringCopy(gStringVar2, gMoveNames[MOVE_FRENZY_PLANT]);
-        gSpecialVar_0x8005 = MOVETUTOR_FRENZY_PLANT;
-        if (FlagGet(FLAG_TUTOR_FRENZY_PLANT) == TRUE)
-            return FALSE;
-    }
-    else if (tutorMonId == 1)
-    {
-        StringCopy(gStringVar2, gMoveNames[MOVE_BLAST_BURN]);
-        gSpecialVar_0x8005 = MOVETUTOR_BLAST_BURN;
-        if (FlagGet(FLAG_TUTOR_BLAST_BURN) == TRUE)
-            return FALSE;
-    }
-    else
-    {
-        StringCopy(gStringVar2, gMoveNames[MOVE_HYDRO_CANNON]);
-        gSpecialVar_0x8005 = MOVETUTOR_HYDRO_CANNON;
-        if (FlagGet(FLAG_TUTOR_HYDRO_CANNON) == TRUE)
-            return FALSE;
-    }
+    gSpecialVar_0x8005 = sCapeBrinkCompatibleSpecies[i].tutorMove;
+    StringCopy(gStringVar2, gMoveNames[GetCapeBrinkMove(gSpecialVar_0x8005)]);
     if (GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_MOVE1) != MOVE_NONE)
         numMovesKnown++;
     if (GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_MOVE2) != MOVE_NONE)
@@ -2272,16 +2291,18 @@ bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
     return TRUE;
 }
 
+// 8005 is set by CapeBrinkGetMoveToTeachLeadPokemon.
+// The first lesson of each ultimate move is free, the next ones cost money (see GetMoveTutorPrice).
+bool8 IsCapeBrinkMoveAlreadyTaught(void)
+{
+    return FlagGet(GetCapeBrinkMoveFlag(gSpecialVar_0x8005));
+}
+
 bool8 HasLearnedAllMovesFromCapeBrinkTutor(void)
 {
     // 8005 is set by CapeBrinkGetMoveToTeachLeadPokemon
     u8 r4 = 0;
-    if (gSpecialVar_0x8005 == MOVETUTOR_FRENZY_PLANT)
-        FlagSet(FLAG_TUTOR_FRENZY_PLANT);
-    else if (gSpecialVar_0x8005 == MOVETUTOR_BLAST_BURN)
-        FlagSet(FLAG_TUTOR_BLAST_BURN);
-    else
-        FlagSet(FLAG_TUTOR_HYDRO_CANNON);
+    FlagSet(GetCapeBrinkMoveFlag(gSpecialVar_0x8005));
     if (FlagGet(FLAG_TUTOR_FRENZY_PLANT) == TRUE)
         r4++;
     if (FlagGet(FLAG_TUTOR_BLAST_BURN) == TRUE)

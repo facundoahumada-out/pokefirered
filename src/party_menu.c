@@ -14,6 +14,7 @@
 #include "event_data.h"
 #include "evolution_scene.h"
 #include "field_effect.h"
+#include "field_specials.h"
 #include "field_player_avatar.h"
 #include "field_fadetransition.h"
 #include "field_weather.h"
@@ -1912,20 +1913,9 @@ static bool8 CanLearnTutorMove(u16 species, u8 tutor)
     switch (tutor)
     {
     case TUTOR_MOVE_FRENZY_PLANT:
-        if (species == SPECIES_VENUSAUR)
-            return TRUE;
-        else
-            return FALSE;
     case TUTOR_MOVE_BLAST_BURN:
-        if (species == SPECIES_CHARIZARD)
-            return TRUE;
-        else
-            return FALSE;
     case TUTOR_MOVE_HYDRO_CANNON:
-        if (species == SPECIES_BLASTOISE)
-            return TRUE;
-        else
-            return FALSE;
+        return CanLearnCapeBrinkMove(species, tutor);
     default:
         if (sTutorLearnsets[species] & (1 << tutor))
             return TRUE;
@@ -5964,8 +5954,14 @@ static const u16 sTutorMovePrices[TUTOR_MOVE_COUNT] =
     [TUTOR_MOVE_ICE_PUNCH]     = 3000,
 };
 
+#define CAPE_BRINK_TUTOR_PRICE 10000
+
 static u32 GetMoveTutorPrice(void)
 {
+    if (gSpecialVar_0x8005 == TUTOR_MOVE_FRENZY_PLANT
+     || gSpecialVar_0x8005 == TUTOR_MOVE_BLAST_BURN
+     || gSpecialVar_0x8005 == TUTOR_MOVE_HYDRO_CANNON)
+        return CAPE_BRINK_TUTOR_PRICE;
     if (gSpecialVar_0x8005 >= TUTOR_MOVE_COUNT)
         return 0;
     return sTutorMovePrices[gSpecialVar_0x8005];

@@ -60,3 +60,10 @@ Text_FeelRejuvenated::
 	.string "you, I felt so much relief.\p"
 	.string "In fact, I feel rejuvenated,\n"
 	.string "as if I were younger again!$"
+
+Text_UltimateMoveTeachAgainForMoney::
+# 64 "data/maps/TwoIsland_CapeBrink_House/text.pory"
+	.string "I have already passed on my\n"
+	.string "{STR_VAR_1} once.\p"
+	.string "To teach it again, I'll need\n"
+	.string "¥{STR_VAR_2}. Will you pay?$"

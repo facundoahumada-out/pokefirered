@@ -836,289 +836,329 @@ TwoIsland_CapeBrink_House_EventScript_StarterTutor::
 # 543 "data/scripts/move_tutors.pory"
 	faceplayer
 # 544 "data/scripts/move_tutors.pory"
-	goto_if_set FLAG_LEARNED_ALL_MOVES_AT_CAPE_BRINK, CapeBrinkTutor_EventScript_TaughtAllMoves
-# 545 "data/scripts/move_tutors.pory"
-	goto_if_set FLAG_TEMP_2, CapeBrinkTutor_EventScript_MoveJustTaught
-# 546 "data/scripts/move_tutors.pory"
 	bufferleadmonspeciesname STR_VAR_1
-# 547 "data/scripts/move_tutors.pory"
+# 545 "data/scripts/move_tutors.pory"
 	msgbox Text_UltimateMoveThatMon
-# 548 "data/scripts/move_tutors.pory"
+# 546 "data/scripts/move_tutors.pory"
 	specialvar VAR_RESULT, CapeBrinkGetMoveToTeachLeadPokemon
-# 549 "data/scripts/move_tutors.pory"
+# 547 "data/scripts/move_tutors.pory"
 	goto_if_eq VAR_RESULT, FALSE, CapeBrinkTutor_EventScript_NoLeadStarter
-# 550 "data/scripts/move_tutors.pory"
+# 548 "data/scripts/move_tutors.pory"
 	copyvar VAR_0x8009, VAR_0x8005
-# 551 "data/scripts/move_tutors.pory"
+# 549 "data/scripts/move_tutors.pory"
 	call_if_eq VAR_FACING, DIR_NORTH, CapeBrinkTutor_EventScript_JumpInPlaceDown
-# 552 "data/scripts/move_tutors.pory"
+# 550 "data/scripts/move_tutors.pory"
 	call_if_eq VAR_FACING, DIR_SOUTH, CapeBrinkTutor_EventScript_JumpInPlaceUp
-# 553 "data/scripts/move_tutors.pory"
+# 551 "data/scripts/move_tutors.pory"
 	call_if_eq VAR_FACING, DIR_EAST, CapeBrinkTutor_EventScript_JumpInPlaceLeft
-# 554 "data/scripts/move_tutors.pory"
+# 552 "data/scripts/move_tutors.pory"
 	call_if_eq VAR_FACING, DIR_WEST, CapeBrinkTutor_EventScript_JumpInPlaceRight
-# 555 "data/scripts/move_tutors.pory"
+# 553 "data/scripts/move_tutors.pory"
 	msgbox Text_AllowMeToTeachMonUltimateMove, MSGBOX_YESNO
+# 554 "data/scripts/move_tutors.pory"
+	goto_if_eq VAR_RESULT, NO, CapeBrinkTutor_EventScript_DeclineMove
+# 555 "data/scripts/move_tutors.pory"
+	specialvar VAR_RESULT, IsCapeBrinkMoveAlreadyTaught
 # 556 "data/scripts/move_tutors.pory"
-	goto_if_eq VAR_RESULT, NO, CapeBrinkTutor_EventScript_DeclineMove
+	goto_if_eq VAR_RESULT, TRUE, CapeBrinkTutor_EventScript_PaidLesson
 # 557 "data/scripts/move_tutors.pory"
-	call EventScript_CanOnlyBeLearnedOnce
-# 558 "data/scripts/move_tutors.pory"
-	goto_if_eq VAR_RESULT, NO, CapeBrinkTutor_EventScript_DeclineMove
-# 559 "data/scripts/move_tutors.pory"
 	msgbox Text_LetMeConferUltimateMove
-# 560 "data/scripts/move_tutors.pory"
+# 558 "data/scripts/move_tutors.pory"
 	closemessage
-# 561 "data/scripts/move_tutors.pory"
+# 559 "data/scripts/move_tutors.pory"
 	fadescreen FADE_TO_BLACK
-# 562 "data/scripts/move_tutors.pory"
+# 560 "data/scripts/move_tutors.pory"
 	goto CapeBrinkTutor_EventScript_ChooseMon
 	return
 
 
-CapeBrinkTutor_EventScript_FadeTaughtMove::
+CapeBrinkTutor_EventScript_PaidLesson::
+# 565 "data/scripts/move_tutors.pory"
+	special BufferMoveTutorPrice
+# 566 "data/scripts/move_tutors.pory"
+	showmoneybox 0, 0
 # 567 "data/scripts/move_tutors.pory"
-	fadescreen FADE_FROM_BLACK
+	msgbox Text_UltimateMoveTeachAgainForMoney, MSGBOX_YESNO
 # 568 "data/scripts/move_tutors.pory"
+	goto_if_eq VAR_RESULT, NO, CapeBrinkTutor_EventScript_PaidLessonDeclined
+# 569 "data/scripts/move_tutors.pory"
+	specialvar VAR_RESULT, CanPayMoveTutorPrice
+# 570 "data/scripts/move_tutors.pory"
+	goto_if_eq VAR_RESULT, FALSE, CapeBrinkTutor_EventScript_PaidLessonNotEnoughMoney
+# 571 "data/scripts/move_tutors.pory"
+	hidemoneybox
+# 572 "data/scripts/move_tutors.pory"
+	closemessage
+# 573 "data/scripts/move_tutors.pory"
+	fadescreen FADE_TO_BLACK
+# 574 "data/scripts/move_tutors.pory"
+	call EventScript_ChooseMoveTutorMon
+# 575 "data/scripts/move_tutors.pory"
+	goto_if_eq VAR_RESULT, FALSE, CapeBrinkTutor_EventScript_DeclineMove
+# 576 "data/scripts/move_tutors.pory"
+	special PayMoveTutorPrice
+# 577 "data/scripts/move_tutors.pory"
+	special BufferMoveTutorPrice
+# 578 "data/scripts/move_tutors.pory"
+	showmoneybox 0, 0
+# 579 "data/scripts/move_tutors.pory"
+	playse SE_SHOP
+# 580 "data/scripts/move_tutors.pory"
+	msgbox Text_MoveTutorPaid
+# 581 "data/scripts/move_tutors.pory"
+	waitse
+# 582 "data/scripts/move_tutors.pory"
+	hidemoneybox
+# 583 "data/scripts/move_tutors.pory"
+	msgbox Text_MakeBestUseOfMove
+# 584 "data/scripts/move_tutors.pory"
+	release
+	end
+
+
+CapeBrinkTutor_EventScript_PaidLessonNotEnoughMoney::
+# 589 "data/scripts/move_tutors.pory"
+	msgbox Text_MoveTutorNotEnoughMoney
+# 590 "data/scripts/move_tutors.pory"
+	hidemoneybox
+# 591 "data/scripts/move_tutors.pory"
+	release
+	end
+
+
+CapeBrinkTutor_EventScript_PaidLessonDeclined::
+# 596 "data/scripts/move_tutors.pory"
+	hidemoneybox
+# 597 "data/scripts/move_tutors.pory"
+	goto CapeBrinkTutor_EventScript_DeclineMove
+	return
+
+
+CapeBrinkTutor_EventScript_FadeTaughtMove::
+# 602 "data/scripts/move_tutors.pory"
+	fadescreen FADE_FROM_BLACK
+# 603 "data/scripts/move_tutors.pory"
 	goto CapeBrinkTutor_EventScript_TaughtMove
 	end
 
 
-CapeBrinkTutor_EventScript_MoveJustTaught::
-# 573 "data/scripts/move_tutors.pory"
-	msgbox Text_MakeBestUseOfMove
-# 574 "data/scripts/move_tutors.pory"
-	release
-	end
-
-
-CapeBrinkTutor_EventScript_TaughtAllMoves::
-# 579 "data/scripts/move_tutors.pory"
-	msgbox Text_FeelRejuvenated
-# 580 "data/scripts/move_tutors.pory"
-	release
-	end
-
-
 CapeBrinkTutor_EventScript_TaughtMove::
-# 585 "data/scripts/move_tutors.pory"
+# 608 "data/scripts/move_tutors.pory"
 	copyvar VAR_0x8005, VAR_0x8009
-# 586 "data/scripts/move_tutors.pory"
+# 609 "data/scripts/move_tutors.pory"
 	specialvar VAR_RESULT, HasLearnedAllMovesFromCapeBrinkTutor
-# 587 "data/scripts/move_tutors.pory"
+# 610 "data/scripts/move_tutors.pory"
 	goto_if_eq VAR_RESULT, TRUE, CapeBrinkTutor_EventScript_LearnedAllMoves
-# 588 "data/scripts/move_tutors.pory"
+# 611 "data/scripts/move_tutors.pory"
 	msgbox Text_TaughtMove
-# 589 "data/scripts/move_tutors.pory"
-	setflag FLAG_TEMP_2
-# 590 "data/scripts/move_tutors.pory"
+# 612 "data/scripts/move_tutors.pory"
 	release
 	end
 
 
 CapeBrinkTutor_EventScript_LearnedAllMoves::
-# 595 "data/scripts/move_tutors.pory"
+# 617 "data/scripts/move_tutors.pory"
 	msgbox Text_PassedOnEverythingIKnow
-# 596 "data/scripts/move_tutors.pory"
+# 618 "data/scripts/move_tutors.pory"
 	setflag FLAG_LEARNED_ALL_MOVES_AT_CAPE_BRINK
-# 597 "data/scripts/move_tutors.pory"
+# 619 "data/scripts/move_tutors.pory"
 	release
 	end
 
 
 CapeBrinkTutor_EventScript_ChooseMon::
-# 602 "data/scripts/move_tutors.pory"
+# 624 "data/scripts/move_tutors.pory"
 	call EventScript_ChooseMoveTutorMon
-# 603 "data/scripts/move_tutors.pory"
+# 625 "data/scripts/move_tutors.pory"
 	goto_if_eq VAR_RESULT, FALSE, CapeBrinkTutor_EventScript_DeclineMove
-# 604 "data/scripts/move_tutors.pory"
+# 626 "data/scripts/move_tutors.pory"
 	goto CapeBrinkTutor_EventScript_TaughtMove
 	end
 
 
 CapeBrinkTutor_EventScript_JumpInPlaceDown::
-# 609 "data/scripts/move_tutors.pory"
+# 631 "data/scripts/move_tutors.pory"
 	applymovement LOCALID_CAPE_BRINK_TUTOR, Movement_JumpInPlaceDown
-# 610 "data/scripts/move_tutors.pory"
+# 632 "data/scripts/move_tutors.pory"
 	waitmovement 0
 	return
 
 
 CapeBrinkTutor_EventScript_JumpInPlaceUp::
-# 615 "data/scripts/move_tutors.pory"
+# 637 "data/scripts/move_tutors.pory"
 	applymovement LOCALID_CAPE_BRINK_TUTOR, Movement_JumpInPlaceUp
-# 616 "data/scripts/move_tutors.pory"
+# 638 "data/scripts/move_tutors.pory"
 	waitmovement 0
 	return
 
 
 CapeBrinkTutor_EventScript_JumpInPlaceLeft::
-# 621 "data/scripts/move_tutors.pory"
+# 643 "data/scripts/move_tutors.pory"
 	applymovement LOCALID_CAPE_BRINK_TUTOR, Movement_JumpInPlaceLeft
-# 622 "data/scripts/move_tutors.pory"
+# 644 "data/scripts/move_tutors.pory"
 	waitmovement 0
 	return
 
 
 CapeBrinkTutor_EventScript_JumpInPlaceRight::
-# 627 "data/scripts/move_tutors.pory"
+# 649 "data/scripts/move_tutors.pory"
 	applymovement LOCALID_CAPE_BRINK_TUTOR, Movement_JumpInPlaceRight
-# 628 "data/scripts/move_tutors.pory"
+# 650 "data/scripts/move_tutors.pory"
 	waitmovement 0
 	return
 
 
 CapeBrinkTutor_EventScript_DeclineMove::
-# 633 "data/scripts/move_tutors.pory"
+# 655 "data/scripts/move_tutors.pory"
 	msgbox Text_YouRejectIt
-# 634 "data/scripts/move_tutors.pory"
+# 656 "data/scripts/move_tutors.pory"
 	release
 	end
 
 
 CapeBrinkTutor_EventScript_NoLeadStarter::
-# 639 "data/scripts/move_tutors.pory"
+# 661 "data/scripts/move_tutors.pory"
 	msgbox Text_JustMistaken
-# 640 "data/scripts/move_tutors.pory"
+# 662 "data/scripts/move_tutors.pory"
 	release
 	end
 
 
 EventScript_ChooseMoveTutorMon::
-# 645 "data/scripts/move_tutors.pory"
+# 667 "data/scripts/move_tutors.pory"
 	special ChooseMonForMoveTutor
-# 646 "data/scripts/move_tutors.pory"
+# 668 "data/scripts/move_tutors.pory"
 	waitstate
-# 647 "data/scripts/move_tutors.pory"
+# 669 "data/scripts/move_tutors.pory"
 	lock
-# 648 "data/scripts/move_tutors.pory"
+# 670 "data/scripts/move_tutors.pory"
 	faceplayer
 	return
 
 
 EventScript_CanOnlyBeLearnedOnce::
-# 653 "data/scripts/move_tutors.pory"
+# 675 "data/scripts/move_tutors.pory"
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-# 654 "data/scripts/move_tutors.pory"
+# 676 "data/scripts/move_tutors.pory"
 	special DisableMsgBoxWalkaway
-# 655 "data/scripts/move_tutors.pory"
+# 677 "data/scripts/move_tutors.pory"
 	signmsg
-# 656 "data/scripts/move_tutors.pory"
+# 678 "data/scripts/move_tutors.pory"
 	msgbox Text_MoveCanOnlyBeLearnedOnce, MSGBOX_YESNO
-# 657 "data/scripts/move_tutors.pory"
+# 679 "data/scripts/move_tutors.pory"
 	normalmsg
-# 658 "data/scripts/move_tutors.pory"
+# 680 "data/scripts/move_tutors.pory"
 	call EventScript_RestorePrevTextColor
 	return
 
 
-# 662 "data/scripts/move_tutors.pory"
+# 684 "data/scripts/move_tutors.pory"
 Movement_JumpInPlaceDown:
-# 663 "data/scripts/move_tutors.pory"
+# 685 "data/scripts/move_tutors.pory"
 	jump_in_place_down
-# 664 "data/scripts/move_tutors.pory"
+# 686 "data/scripts/move_tutors.pory"
 	step_end
 
-# 667 "data/scripts/move_tutors.pory"
+# 689 "data/scripts/move_tutors.pory"
 Movement_JumpInPlaceUp:
-# 668 "data/scripts/move_tutors.pory"
+# 690 "data/scripts/move_tutors.pory"
 	jump_in_place_up
-# 669 "data/scripts/move_tutors.pory"
+# 691 "data/scripts/move_tutors.pory"
 	step_end
 
-# 672 "data/scripts/move_tutors.pory"
+# 694 "data/scripts/move_tutors.pory"
 Movement_JumpInPlaceLeft:
-# 673 "data/scripts/move_tutors.pory"
+# 695 "data/scripts/move_tutors.pory"
 	jump_in_place_left
-# 674 "data/scripts/move_tutors.pory"
+# 696 "data/scripts/move_tutors.pory"
 	step_end
 
-# 677 "data/scripts/move_tutors.pory"
+# 699 "data/scripts/move_tutors.pory"
 Movement_JumpInPlaceRight:
-# 678 "data/scripts/move_tutors.pory"
+# 700 "data/scripts/move_tutors.pory"
 	jump_in_place_right
-# 679 "data/scripts/move_tutors.pory"
+# 701 "data/scripts/move_tutors.pory"
 	step_end
 
 EventScript_PaidMoveTutorLesson::
-# 685 "data/scripts/move_tutors.pory"
+# 707 "data/scripts/move_tutors.pory"
 	special BufferMoveTutorPrice
-# 686 "data/scripts/move_tutors.pory"
+# 708 "data/scripts/move_tutors.pory"
 	showmoneybox 0, 0
-# 687 "data/scripts/move_tutors.pory"
+# 709 "data/scripts/move_tutors.pory"
 	msgbox Text_MoveTutorTeachAgainForMoney, MSGBOX_YESNO
-# 688 "data/scripts/move_tutors.pory"
+# 710 "data/scripts/move_tutors.pory"
 	goto_if_eq VAR_RESULT, NO, EventScript_PaidMoveTutorLessonDeclined
-# 689 "data/scripts/move_tutors.pory"
+# 711 "data/scripts/move_tutors.pory"
 	specialvar VAR_RESULT, CanPayMoveTutorPrice
-# 690 "data/scripts/move_tutors.pory"
+# 712 "data/scripts/move_tutors.pory"
 	goto_if_eq VAR_RESULT, FALSE, EventScript_PaidMoveTutorLessonNotEnoughMoney
-# 691 "data/scripts/move_tutors.pory"
+# 713 "data/scripts/move_tutors.pory"
 	msgbox Text_MoveTutorWhichMon
-# 692 "data/scripts/move_tutors.pory"
+# 714 "data/scripts/move_tutors.pory"
 	closemessage
-# 693 "data/scripts/move_tutors.pory"
+# 715 "data/scripts/move_tutors.pory"
 	hidemoneybox
-# 694 "data/scripts/move_tutors.pory"
+# 716 "data/scripts/move_tutors.pory"
 	call EventScript_ChooseMoveTutorMon
-# 695 "data/scripts/move_tutors.pory"
+# 717 "data/scripts/move_tutors.pory"
 	goto_if_eq VAR_RESULT, FALSE, EventScript_PaidMoveTutorLessonNotTaught
-# 696 "data/scripts/move_tutors.pory"
+# 718 "data/scripts/move_tutors.pory"
 	special PayMoveTutorPrice
-# 697 "data/scripts/move_tutors.pory"
+# 719 "data/scripts/move_tutors.pory"
 	special BufferMoveTutorPrice
-# 698 "data/scripts/move_tutors.pory"
+# 720 "data/scripts/move_tutors.pory"
 	showmoneybox 0, 0
-# 699 "data/scripts/move_tutors.pory"
+# 721 "data/scripts/move_tutors.pory"
 	playse SE_SHOP
-# 700 "data/scripts/move_tutors.pory"
+# 722 "data/scripts/move_tutors.pory"
 	msgbox Text_MoveTutorPaid
-# 701 "data/scripts/move_tutors.pory"
+# 723 "data/scripts/move_tutors.pory"
 	waitse
-# 702 "data/scripts/move_tutors.pory"
+# 724 "data/scripts/move_tutors.pory"
 	hidemoneybox
-# 703 "data/scripts/move_tutors.pory"
+# 725 "data/scripts/move_tutors.pory"
 	setvar VAR_RESULT, TRUE
 	return
 
 
 EventScript_PaidMoveTutorLessonNotEnoughMoney::
-# 708 "data/scripts/move_tutors.pory"
+# 730 "data/scripts/move_tutors.pory"
 	msgbox Text_MoveTutorNotEnoughMoney
-# 709 "data/scripts/move_tutors.pory"
+# 731 "data/scripts/move_tutors.pory"
 	goto EventScript_PaidMoveTutorLessonDeclined
 	return
 
 
 EventScript_PaidMoveTutorLessonDeclined::
-# 713 "data/scripts/move_tutors.pory"
+# 735 "data/scripts/move_tutors.pory"
 	hidemoneybox
-# 714 "data/scripts/move_tutors.pory"
+# 736 "data/scripts/move_tutors.pory"
 	goto EventScript_PaidMoveTutorLessonNotTaught
 	return
 
 
 EventScript_PaidMoveTutorLessonNotTaught::
-# 718 "data/scripts/move_tutors.pory"
+# 740 "data/scripts/move_tutors.pory"
 	setvar VAR_RESULT, FALSE
 	return
 
 
 Text_MoveTutorTeachAgainForMoney::
-# 722 "data/scripts/move_tutors.pory"
+# 744 "data/scripts/move_tutors.pory"
 	.string "I can teach {STR_VAR_1} to another\n"
 	.string "Pokémon for ¥{STR_VAR_2}.\p"
 	.string "Would you like that?$"
 
 Text_MoveTutorWhichMon::
-# 728 "data/scripts/move_tutors.pory"
+# 750 "data/scripts/move_tutors.pory"
 	.string "Which Pokémon should learn\n"
 	.string "{STR_VAR_1}?$"
 
 Text_MoveTutorNotEnoughMoney::
-# 733 "data/scripts/move_tutors.pory"
+# 755 "data/scripts/move_tutors.pory"
 	.string "Oh, you don't have enough money.$"
 
 Text_MoveTutorPaid::
-# 737 "data/scripts/move_tutors.pory"
+# 759 "data/scripts/move_tutors.pory"
 	.string "{PLAYER} handed over ¥{STR_VAR_2}.$"

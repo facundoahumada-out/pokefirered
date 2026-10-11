@@ -27,5 +27,6 @@ void ResetFieldTasksArgs(void);
 bool8 UsedPokemonCenterWarp(void);
 void QuestLog_CheckDepartingIndoorsMap(void);
 void QuestLog_TryRecordDepartedLocation(void);
+bool8 CanLearnCapeBrinkMove(u16 species, u8 tutorMove);
 
 #endif // GUARD_FIELD_SPECIALS_H

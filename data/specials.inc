@@ -429,6 +429,7 @@ gSpecials::
 	def_special ShowBerryCrushRankings
 	def_special CapeBrinkGetMoveToTeachLeadPokemon
 	def_special HasLearnedAllMovesFromCapeBrinkTutor
+	def_special IsCapeBrinkMoveAlreadyTaught
 	def_special DoCredits
 	def_special ShowDodrioBerryPickingRecords
 	def_special DrawSeagallopDestinationMenu
