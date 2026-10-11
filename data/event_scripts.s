@@ -885,6 +885,11 @@ gText_PkmnFainted3::
 	.string "{STR_VAR_1} fainted…\p"
 	.string "$"
 
+gText_PkmnSurvivedPoison::
+	.string "{STR_VAR_1} survived the poisoning.\n"
+	.string "The poison faded away!\p"
+	.string "$"
+
 Text_WelcomeWantToHealPkmn::
 	.string "Welcome to our Pokémon Center!\p"
 	.string "Would you like me to heal your\n"

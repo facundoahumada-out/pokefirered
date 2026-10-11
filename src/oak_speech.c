@@ -619,7 +619,7 @@ static const u8 *const sMaleNameChoices[] =
 static const u8 *const sFemaleNameChoices[] =
 {
 #if defined(FIRERED)
-    gNameChoice_Red,
+    gNameChoice_Green, // nombre por defecto de la prota (si se deja el campo vacío)
     gNameChoice_Fire,
 #elif defined(LEAFGREEN)
     gNameChoice_Green,

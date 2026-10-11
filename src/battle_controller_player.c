@@ -574,6 +574,7 @@ void HandleInputChooseMove(void)
                 gMultiUsePlayerCursor = gMoveSelectionCursor[gActiveBattler] + 1;
             MoveSelectionCreateCursorAt(gMultiUsePlayerCursor, 27);
             BattlePutTextOnWindow(gText_BattleSwitchWhich, B_WIN_SWITCH_PROMPT);
+            HideMoveSelectionCategoryIcon(); // tapa el texto "Switch which?", vuelve a aparecer en MoveSelectionDisplayMoveType
             gBattlerControllerFuncs[gActiveBattler] = HandleMoveSwitching;
         }
     }

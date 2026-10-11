@@ -89,6 +89,7 @@ void UpdateNickInHealthbox(u8 spriteId, struct Pokemon *mon);
 void TryAddPokeballIconToHealthbox(u8 spriteId, u8);
 s32 MoveBattleBar(u8 battler, u8 healthboxSpriteId, u8 whichBar, u8 arg3);
 void UpdateMoveSelectionCategoryIcon(u8 split);
+void HideMoveSelectionCategoryIcon(void);
 void DestroyMoveSelectionCategoryIcon(void);
 
 #endif // GUARD_BATTLE_INTERFACE_H

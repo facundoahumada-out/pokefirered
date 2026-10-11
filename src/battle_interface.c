@@ -2316,6 +2316,12 @@ void UpdateMoveSelectionCategoryIcon(u8 split)
     gSprites[sMoveSelectionCategoryIconSpriteId].invisible = FALSE;
 }
 
+void HideMoveSelectionCategoryIcon(void)
+{
+    if (sMoveSelectionCategoryIconActive)
+        gSprites[sMoveSelectionCategoryIconSpriteId].invisible = TRUE;
+}
+
 void DestroyMoveSelectionCategoryIcon(void)
 {
     if (sMoveSelectionCategoryIconActive)
