@@ -82,9 +82,32 @@ static const bool8 sBattleDnsPalettes[32] =
 };
 
 /* Warm window light, from the darkest glass colour to the brightest one. */
+#define LIGHT_WINDOW_DEEP   RGB2(23, 15, 5)
 #define LIGHT_WINDOW_DARK   RGB2(27, 21, 9)
 #define LIGHT_WINDOW_MID    RGB2(30, 25, 12)
 #define LIGHT_WINDOW_BRIGHT RGB2(31, 28, 16)
+#define LIGHT_WINDOW_SHINE  RGB2(31, 30, 21)
+#define LIGHT_WINDOW_WHITE  RGB2(31, 31, 27)
+
+/* Gradient used to light the glass: each glass colour gets a light interpolated
+ * between these points depending on its brightness during the day (R + G + B, 0-93).
+ * The middle points are the brightness of General's glass colours, so they keep exactly
+ * the DARK, MID, BRIGHT and SHINE lights and any colour in between gets its own shade. */
+struct GlassLightPoint
+{
+    u8 brightness;
+    u16 light;
+};
+
+static const struct GlassLightPoint sGlassLightGradient[] =
+{
+    {30, LIGHT_WINDOW_DEEP},
+    {49, LIGHT_WINDOW_DARK},
+    {59, LIGHT_WINDOW_MID},
+    {67, LIGHT_WINDOW_BRIGHT},
+    {76, LIGHT_WINDOW_SHINE},
+    {91, LIGHT_WINDOW_WHITE},
+};
 
 /* Glass palette.
  * The glass of every window is drawn on its own layer with palette 7 of the town's
@@ -93,7 +116,7 @@ static const bool8 sBattleDnsPalettes[32] =
  * Colours 1-4 are always the glass colours of General's palette 3 (colours 10-13),
  * which is also how the DNS recognizes a tileset that has a glass palette.
  * Each glass colour is lit with a darker or brighter light depending on how bright
- * it is during the day, so the gradient of the glass is kept.
+ * it is during the day (see sGlassLightGradient), so the gradient of the glass is kept.
  * Colours 12-15 are never lit: they are for the frames of windows whose glass and frame
  * must be in the same tile (e.g. buildings drawn on the top layer, like the Bike Shop). */
 #define GLASS_PALETTE             7
@@ -110,8 +133,11 @@ extern const struct Tileset gTileset_General;
  *     extern const struct Tileset gTileset_PalletTown;
  *     { &gTileset_PalletTown, 9, 8, LIGHT_WINDOW_BRIGHT },
  */
+extern const struct Tileset gTileset_CeladonCity;
+
 static const struct DnsLightColour sDnsLightColours[] =
 {
+    { &gTileset_CeladonCity, 10, 9, LIGHT_WINDOW_SHINE }, // White side of the Department Store windows
     {NULL}, // Terminator
 };
 
@@ -495,6 +521,35 @@ static bool8 IsPaletteAffectedByDns(u8 mode, u32 palNum)
 }
 
 // Finds the glass palette of the current map, and computes the light used for each of its colours.
+static u16 GetGlassLight(u32 brightness)
+{
+    u32 i, c, from, to, pos, len;
+    u16 light = 0;
+    const struct GlassLightPoint *lo, *hi;
+
+    if (brightness <= sGlassLightGradient[0].brightness)
+        return sGlassLightGradient[0].light;
+    for (i = 1; i < ARRAY_COUNT(sGlassLightGradient); i++)
+    {
+        if (brightness <= sGlassLightGradient[i].brightness)
+            break;
+    }
+    if (i == ARRAY_COUNT(sGlassLightGradient))
+        return sGlassLightGradient[i - 1].light;
+
+    lo = &sGlassLightGradient[i - 1];
+    hi = &sGlassLightGradient[i];
+    pos = brightness - lo->brightness;
+    len = hi->brightness - lo->brightness;
+    for (c = 0; c < 15; c += 5)
+    {
+        from = (lo->light >> c) & 0x1F;
+        to = (hi->light >> c) & 0x1F;
+        light |= ((from * (len - pos) + to * pos + len / 2) / len) << c;
+    }
+    return light;
+}
+
 static void UpdateGlassPalette(const struct MapLayout *mapLayout)
 {
     const u16 *glass, *source;
@@ -527,12 +582,8 @@ static void UpdateGlassPalette(const struct MapLayout *mapLayout)
         brightness = (glass[i] & 0x1F) + ((glass[i] >> 5) & 0x1F) + ((glass[i] >> 10) & 0x1F);
         if (glass[i] == 0 || i >= GLASS_UNLIT_FIRST_COLOUR)
             sGlassLightColours[i] = 0;
-        else if (brightness < 54)
-            sGlassLightColours[i] = LIGHT_WINDOW_DARK;
-        else if (brightness < 66)
-            sGlassLightColours[i] = LIGHT_WINDOW_MID;
         else
-            sGlassLightColours[i] = LIGHT_WINDOW_BRIGHT;
+            sGlassLightColours[i] = GetGlassLight(brightness);
     }
     sGlassPalette = glass;
 }

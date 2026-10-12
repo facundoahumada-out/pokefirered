@@ -562,8 +562,8 @@ script TwoIsland_CapeBrink_House_EventScript_StarterTutor {
 
 // The first lesson of each ultimate move is free, the next ones cost money (see GetMoveTutorPrice).
 script CapeBrinkTutor_EventScript_PaidLesson {
+    showmoneybox(0, 0) // Before buffering: the money box overwrites STR_VAR_1
     special(BufferMoveTutorPrice)
-    showmoneybox(0, 0)
     msgbox(Text_UltimateMoveTeachAgainForMoney, MSGBOX_YESNO)
     goto_if_eq(VAR_RESULT, NO, CapeBrinkTutor_EventScript_PaidLessonDeclined)
     specialvar(VAR_RESULT, CanPayMoveTutorPrice)
@@ -574,8 +574,8 @@ script CapeBrinkTutor_EventScript_PaidLesson {
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, CapeBrinkTutor_EventScript_DeclineMove)
     special(PayMoveTutorPrice)
+    showmoneybox(0, 0) // Before buffering: the money box overwrites STR_VAR_1
     special(BufferMoveTutorPrice)
-    showmoneybox(0, 0)
     playse(SE_SHOP)
     msgbox(Text_MoveTutorPaid)
     waitse
@@ -704,8 +704,8 @@ movement Movement_JumpInPlaceRight {
 // Lessons after the first one, which is free, cost money (the price depends on the move, see sTutorMovePrices).
 // Input: VAR_0x8005 = MOVETUTOR_* of the tutor. Output: VAR_RESULT = TRUE if a Pokémon learned the move.
 script EventScript_PaidMoveTutorLesson {
+    showmoneybox(0, 0) // Before buffering: the money box overwrites STR_VAR_1
     special(BufferMoveTutorPrice)
-    showmoneybox(0, 0)
     msgbox(Text_MoveTutorTeachAgainForMoney, MSGBOX_YESNO)
     goto_if_eq(VAR_RESULT, NO, EventScript_PaidMoveTutorLessonDeclined)
     specialvar(VAR_RESULT, CanPayMoveTutorPrice)
@@ -716,8 +716,8 @@ script EventScript_PaidMoveTutorLesson {
     call(EventScript_ChooseMoveTutorMon)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_PaidMoveTutorLessonNotTaught)
     special(PayMoveTutorPrice)
+    showmoneybox(0, 0) // Before buffering: the money box overwrites STR_VAR_1
     special(BufferMoveTutorPrice)
-    showmoneybox(0, 0)
     playse(SE_SHOP)
     msgbox(Text_MoveTutorPaid)
     waitse

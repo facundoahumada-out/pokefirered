@@ -144,6 +144,16 @@ static const u16 *const sTilesetAnims_Cave[] = {
     sTilesetAnims_Cave_Frame2
 };
 
+static const u16 sTilesetAnims_RockTunnel_Water_Frame0[] = INCBIN_U16("data/tilesets/secondary/rock_tunnel/anim/water/0.4bpp");
+static const u16 sTilesetAnims_RockTunnel_Water_Frame1[] = INCBIN_U16("data/tilesets/secondary/rock_tunnel/anim/water/1.4bpp");
+static const u16 sTilesetAnims_RockTunnel_Water_Frame2[] = INCBIN_U16("data/tilesets/secondary/rock_tunnel/anim/water/2.4bpp");
+
+static const u16 *const sTilesetAnims_RockTunnel_Water[] = {
+    sTilesetAnims_RockTunnel_Water_Frame0,
+    sTilesetAnims_RockTunnel_Water_Frame1,
+    sTilesetAnims_RockTunnel_Water_Frame2
+};
+
 static void ResetTilesetAnimBuffer(void)
 {
     sTilesetDMA3TransferBufferSize = 0;
@@ -360,4 +370,25 @@ void InitTilesetAnim_Cave(void)
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = 240;
     sSecondaryTilesetAnimCallback = TilesetAnim_Cave;
+}
+
+// Animates the 6 tiles from 0x37A to 0x37F (drawn with palette 9)
+static void QueueAnimTiles_RockTunnel_Water(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(sTilesetAnims_RockTunnel_Water);
+
+    AppendTilesetAnimToBuffer(sTilesetAnims_RockTunnel_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x37A)), 6 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_RockTunnel(u16 timer)
+{
+    if (timer % 16 == 0)
+        QueueAnimTiles_RockTunnel_Water(timer / 16);
+}
+
+void InitTilesetAnim_RockTunnel(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 240;
+    sSecondaryTilesetAnimCallback = TilesetAnim_RockTunnel;
 }

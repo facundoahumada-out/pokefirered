@@ -402,7 +402,7 @@ const struct Tileset gTileset_RockTunnel =
     .palettes = gTilesetPalettes_RockTunnel,
     .metatiles = gMetatiles_RockTunnel,
     .metatileAttributes = gMetatileAttributes_RockTunnel,
-    .callback = NULL,
+    .callback = InitTilesetAnim_RockTunnel,
 };
 
 const struct Tileset gTileset_DiglettsCave =

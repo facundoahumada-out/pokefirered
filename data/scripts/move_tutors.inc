@@ -874,9 +874,9 @@ TwoIsland_CapeBrink_House_EventScript_StarterTutor::
 
 CapeBrinkTutor_EventScript_PaidLesson::
 # 565 "data/scripts/move_tutors.pory"
-	special BufferMoveTutorPrice
-# 566 "data/scripts/move_tutors.pory"
 	showmoneybox 0, 0
+# 566 "data/scripts/move_tutors.pory"
+	special BufferMoveTutorPrice
 # 567 "data/scripts/move_tutors.pory"
 	msgbox Text_UltimateMoveTeachAgainForMoney, MSGBOX_YESNO
 # 568 "data/scripts/move_tutors.pory"
@@ -898,9 +898,9 @@ CapeBrinkTutor_EventScript_PaidLesson::
 # 576 "data/scripts/move_tutors.pory"
 	special PayMoveTutorPrice
 # 577 "data/scripts/move_tutors.pory"
-	special BufferMoveTutorPrice
-# 578 "data/scripts/move_tutors.pory"
 	showmoneybox 0, 0
+# 578 "data/scripts/move_tutors.pory"
+	special BufferMoveTutorPrice
 # 579 "data/scripts/move_tutors.pory"
 	playse SE_SHOP
 # 580 "data/scripts/move_tutors.pory"
@@ -1082,9 +1082,9 @@ Movement_JumpInPlaceRight:
 
 EventScript_PaidMoveTutorLesson::
 # 707 "data/scripts/move_tutors.pory"
-	special BufferMoveTutorPrice
-# 708 "data/scripts/move_tutors.pory"
 	showmoneybox 0, 0
+# 708 "data/scripts/move_tutors.pory"
+	special BufferMoveTutorPrice
 # 709 "data/scripts/move_tutors.pory"
 	msgbox Text_MoveTutorTeachAgainForMoney, MSGBOX_YESNO
 # 710 "data/scripts/move_tutors.pory"
@@ -1106,9 +1106,9 @@ EventScript_PaidMoveTutorLesson::
 # 718 "data/scripts/move_tutors.pory"
 	special PayMoveTutorPrice
 # 719 "data/scripts/move_tutors.pory"
-	special BufferMoveTutorPrice
-# 720 "data/scripts/move_tutors.pory"
 	showmoneybox 0, 0
+# 720 "data/scripts/move_tutors.pory"
+	special BufferMoveTutorPrice
 # 721 "data/scripts/move_tutors.pory"
 	playse SE_SHOP
 # 722 "data/scripts/move_tutors.pory"
