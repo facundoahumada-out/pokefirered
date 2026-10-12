@@ -29,6 +29,8 @@ static const struct MushroomPatch sMushroomPatches[] =
 
 #define MUSHROOM_PATCH_COUNT ARRAY_COUNT(sMushroomPatches)
 
+STATIC_ASSERT(MUSHROOM_PATCH_COUNT <= ARRAY_COUNT(((struct SaveBlock1 *)0)->mushroomPatchCollectedAt), TooManyMushroomPatches);
+
 static s32 GetMushroomPatchId(u8 mapGroup, u8 mapNum, s32 x, s32 y)
 {
     s32 i;

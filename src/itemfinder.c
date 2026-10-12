@@ -5,6 +5,7 @@
 #include "strings.h"
 #include "event_scripts.h"
 #include "event_object_lock.h"
+#include "event_object_movement.h"
 #include "script.h"
 #include "event_data.h"
 #include "field_player_avatar.h"
@@ -535,7 +536,7 @@ static void DestroyArrowAndStarTiles(void)
 static void CreateArrowSprite(u8 animNum, u8 direction)
 {
     u8 spriteId = CreateSprite(&sSpriteTemplate_ArrowAndStar, 120, 76, 0);
-    gSprites[spriteId].oam.paletteNum = 0;
+    gSprites[spriteId].oam.paletteNum = LoadPlayerObjectEventPalette();
     StartSpriteAnim(&gSprites[spriteId], animNum);
     gSprites[spriteId].spAnimNum = animNum;
     gSprites[spriteId].spData0 = 0;
@@ -615,7 +616,7 @@ static void SpriteCallback_DestroyArrow(struct Sprite *sprite)
 static u8 CreateStarSprite(void)
 {
     u8 spriteId = CreateSprite(&sSpriteTemplate_ArrowAndStar, 120, 76, 0);
-    gSprites[spriteId].oam.paletteNum = 0;
+    gSprites[spriteId].oam.paletteNum = LoadPlayerObjectEventPalette();
     gSprites[spriteId].callback = SpriteCallback_Star;
     StartSpriteAnim(&gSprites[spriteId], 4);
     gSprites[spriteId].spAnimNum = 0;

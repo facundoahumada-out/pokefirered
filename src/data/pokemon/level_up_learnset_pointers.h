@@ -439,4 +439,6 @@ const u16 *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_HAPPINY] = sHappinyLevelUpLearnset,
     [SPECIES_MUNCHLAX] = sMunchlaxLevelUpLearnset,
     [SPECIES_MANTYKE] = sMantykeLevelUpLearnset,
+    [SPECIES_TOGEKISS] = sTogekissLevelUpLearnset,
+    [SPECIES_DUCFETCHD] = sDucfetchdLevelUpLearnset,
 };

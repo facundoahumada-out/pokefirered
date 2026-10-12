@@ -4677,6 +4677,18 @@ const struct PokedexEntry gPokedexEntries[] =
     [NATIONAL_DEX_HAPPINY] = { .categoryName = _("Playhouse"), .height = 6, .weight = 244, .description = gDummyPokedexText, .unusedDescription = gDummyPokedexTextUnused, .pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0, },
     [NATIONAL_DEX_MUNCHLAX] = { .categoryName = _("Big Eater"), .height = 6, .weight = 1050, .description = gDummyPokedexText, .unusedDescription = gDummyPokedexTextUnused, .pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0, },
     [NATIONAL_DEX_MANTYKE] = { .categoryName = _("Kite"), .height = 10, .weight = 650, .description = gDummyPokedexText, .unusedDescription = gDummyPokedexTextUnused, .pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0, },
+    [NATIONAL_DEX_TOGEKISS] =
+    {
+        .categoryName = _("Jubilee"),
+        .height = 15,
+        .weight = 380,
+        .description = gTogekissPokedexText,
+        .unusedDescription = gTogekissPokedexTextUnused,
+        .pokemonScale = 268,
+        .pokemonOffset = 2,
+        .trainerScale = 271,
+        .trainerOffset = 0,
+    },
     [NATIONAL_DEX_WEAVILE] = { .categoryName = _("Sharp Claw"), .height = 11, .weight = 340, .description = gDummyPokedexText, .unusedDescription = gDummyPokedexTextUnused, .pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0, },
     [NATIONAL_DEX_MAGNEZONE] = { .categoryName = _("Magnet Area"), .height = 12, .weight = 1800, .description = gDummyPokedexText, .unusedDescription = gDummyPokedexTextUnused, .pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0, },
     [NATIONAL_DEX_LICKILICKY] = { .categoryName = _("Licking"), .height = 17, .weight = 1400, .description = gDummyPokedexText, .unusedDescription = gDummyPokedexTextUnused, .pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0, },
@@ -4695,6 +4707,18 @@ const struct PokedexEntry gPokedexEntries[] =
     [NATIONAL_DEX_ANNIHILAPE] = { .categoryName = _("Fury"), .height = 12, .weight = 560, .description = gDummyPokedexText, .unusedDescription = gDummyPokedexTextUnused, .pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0, },
     [NATIONAL_DEX_FARIGIRAF] = { .categoryName = _("Long Neck"), .height = 17, .weight = 1600, .description = gDummyPokedexText, .unusedDescription = gDummyPokedexTextUnused, .pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0, },
     [NATIONAL_DEX_DUDUNSPARCE] = { .categoryName = _("Land Snake"), .height = 12, .weight = 392, .description = gDummyPokedexText, .unusedDescription = gDummyPokedexTextUnused, .pokemonScale = 256, .pokemonOffset = 0, .trainerScale = 256, .trainerOffset = 0, },
+    [NATIONAL_DEX_DUCFETCHD] =
+    {
+        .categoryName = _("Duke Duck"),
+        .height = 10,
+        .weight = 300,
+        .description = gDucfetchdPokedexText,
+        .unusedDescription = gDucfetchdPokedexTextUnused,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
 
     [NATIONAL_DEX_ABSOL] =
     {

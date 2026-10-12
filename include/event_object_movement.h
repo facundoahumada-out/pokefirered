@@ -1,11 +1,9 @@
 #ifndef GUARD_EVENT_OBJECT_MOVEMENT_H
 #define GUARD_EVENT_OBJECT_MOVEMENT_H
 
-// Palette slots for overworld NPCs.
-// The same standard set of palettes for overworld objects are normally always loaded at the same
-// time while walking around the overworld. The only exceptions are the palettes for the player and
-// the "special" NPC, which can be swapped out. This also means that e.g. two "special" NPCs
-// with competing palettes cannot be properly loaded at the same time.
+// Overworld object palettes are loaded dynamically: each one is loaded into any free sprite
+// palette slot (by its tag) when an object that uses it appears, and freed when no sprite uses it.
+// These fixed slots are only used by the Fame Checker, which still lays out the vanilla palettes.
 enum {
     PALSLOT_PLAYER,
     PALSLOT_PLAYER_REFLECTION,
@@ -20,8 +18,42 @@ enum {
     PALSLOT_NPC_SPECIAL,
     PALSLOT_NPC_SPECIAL_REFLECTION,
     OBJ_PALSLOT_COUNT
-    // the remaining sprite palette slots (12-15) are used by field effects, the interface, etc.
 };
+
+#define OBJ_EVENT_PAL_TAG_PLAYER_RED                  0x1100
+#define OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION       0x1101
+#define OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION           0x1102
+#define OBJ_EVENT_PAL_TAG_NPC_BLUE                    0x1103
+#define OBJ_EVENT_PAL_TAG_NPC_PINK                    0x1104
+#define OBJ_EVENT_PAL_TAG_NPC_GREEN                   0x1105
+#define OBJ_EVENT_PAL_TAG_NPC_WHITE                   0x1106
+#define OBJ_EVENT_PAL_TAG_NPC_BLUE_REFLECTION         0x1107
+#define OBJ_EVENT_PAL_TAG_NPC_PINK_REFLECTION         0x1108
+#define OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION        0x1109
+#define OBJ_EVENT_PAL_TAG_NPC_WHITE_REFLECTION        0x110A
+#define OBJ_EVENT_PAL_TAG_RS_QUINTY_PLUMP             0x110B
+#define OBJ_EVENT_PAL_TAG_RS_QUINTY_PLUMP_REFLECTION  0x110C
+#define OBJ_EVENT_PAL_TAG_RS_TRUCK                    0x110D
+#define OBJ_EVENT_PAL_TAG_RS_MACHOKE                  0x110E
+#define OBJ_EVENT_PAL_TAG_RS_POOCHYENA                0x110F
+#define OBJ_EVENT_PAL_TAG_PLAYER_GREEN                0x1110
+#define OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION     0x1111
+#define OBJ_EVENT_PAL_TAG_RS_MOVING_BOX               0x1112
+#define OBJ_EVENT_PAL_TAG_METEORITE                   0x1113
+#define OBJ_EVENT_PAL_TAG_SEAGALLOP                   0x1114
+#define OBJ_EVENT_PAL_TAG_SS_ANNE                     0x1115
+#define OBJ_EVENT_PAL_TAG_RS_PLAYER_UNDERWATER        0x1116
+#define OBJ_EVENT_PAL_TAG_RS_KYOGRE                   0x1117
+#define OBJ_EVENT_PAL_TAG_RS_KYOGRE_REFLECTION        0x1118
+#define OBJ_EVENT_PAL_TAG_RS_GROUDON                  0x1119
+#define OBJ_EVENT_PAL_TAG_RS_GROUDON_REFLECTION       0x111A
+#define OBJ_EVENT_PAL_TAG_RS_SUBMARINE_SHADOW         0x111B
+#define OBJ_EVENT_PAL_TAG_MT_ITEM                     0x111C
+#define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
+
+// Reflection palettes are loaded as copies tagged with the tag of the palette they reflect plus this offset,
+// so their tags never collide with the object palettes and they keep the normal weather gamma.
+#define OBJ_EVENT_PAL_TAG_REFLECTION_OFFSET           0x1000
 
 enum SpinnerRunnerFollowPatterns
 {
@@ -83,8 +115,6 @@ u8 GetObjectEventIdByXY(s16, s16);
 void SetObjectEventDirection(struct ObjectEvent *, u8);
 void RemoveObjectEventByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup);
 u16 GetBoulderRevealFlagByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup);
-void LoadPlayerObjectReflectionPalette(u16, u8);
-void LoadSpecialObjectReflectionPalette(u16, u8);
 void TryMoveObjectEventToMapCoords(u8, u8, u8, s16, s16);
 void PatchObjectPalette(u16, u8);
 void SpawnObjectEventsOnReturnToField(s16 x, s16 y);
@@ -107,6 +137,12 @@ void ObjectEventForceSetHeldMovement(struct ObjectEvent *, u8);
 const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u8);
 void SetObjectInvisibility(u8 localId, u8 mapNum, u8 mapGroup, u8 state);
 void FreeAndReserveObjectSpritePalettes(void);
+u8 LoadObjectEventPalette(u16 paletteTag);
+u8 LoadPlayerObjectEventPalette(void);
+u8 LoadObjectEventReflectionPalette(u16 paletteTag, bool8 onHighBridge, u16 bridgePaletteTag);
+void FreeObjectEventPaletteIfUnused(u8 paletteNum);
+bool8 IsObjectEventPaletteNum(u8 paletteNum);
+bool8 IsObjectEventReflectionPaletteNum(u8 paletteNum);
 void SetObjectPositionByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup, s16 x, s16 y);
 void ResetObjectSubpriority(u8 localId, u8 mapNum, u8 mapGroup);
 void SetObjectSubpriority(u8 localId, u8 mapNum, u8 mapGroup, u8 subpriority);
@@ -174,7 +210,6 @@ u8 GetJumpSpecialMovementAction(u32 direction);
 void EnableObjectGroundEffectsByXY(s16 x, s16 y);
 void MoveObjectEventToMapCoords(struct ObjectEvent *objectEvent, s16 x, s16 y);
 u8 CreateCopySpriteAt(struct Sprite *sprite, s16 x, s16 y, u8 subpriority);
-u16 GetObjectPaletteTag(u8 paletteIndex);
 void SetSpritePosToMapCoords(s16 x, s16 y, s16 *x2, s16 *y2);
 void UpdateObjectEventSpriteInvisibility(struct Sprite *sprite, bool8 invisible);
 u8 ElevationToPriority(u8 elevation);
@@ -209,7 +244,6 @@ extern const struct SpriteTemplate * const gFieldEffectObjectTemplatePointers[];
 extern const struct OamData gObjectEventBaseOam_32x32;
 extern const u16 gFieldEffectObjectPic_CutGrass[];
 extern const u16 gFieldEffectPal_CutGrass[];
-extern const u8 gReflectionEffectPaletteMap[];
 u8 GetLedgeJumpDirection(s16 x, s16 y, u8 direction);
 u8 GetGlideMovementAction(u32 direction);
 u8 GetRideWaterCurrentMovementAction(u32 direction);

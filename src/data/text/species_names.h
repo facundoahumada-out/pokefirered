@@ -438,4 +438,6 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_HAPPINY] = _("Happiny"),
     [SPECIES_MUNCHLAX] = _("Munchlax"),
     [SPECIES_MANTYKE] = _("Mantyke"),
+    [SPECIES_TOGEKISS] = _("Togekiss"),
+    [SPECIES_DUCFETCHD] = _("Ducfetch'd"),
 };

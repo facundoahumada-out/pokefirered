@@ -488,6 +488,18 @@ script PalletTown_EventScript_FatMan {
     additem(ITEM_SERIOUS_MINT)
     additem(ITEM_TIMID_MINT)
     additem(ITEM_SHINY_CHARM)
+    givemon(SPECIES_AMBIPOM, 25)
+    givemon(SPECIES_FARFETCHD, 32)
+    additem(ITEM_RARE_CANDY, 2)
+    additem(ITEM_SHINY_STONE)
+    additem(ITEM_DUSK_STONE)
+    additem(ITEM_OVAL_STONE)
+    additem(ITEM_RAZOR_CLAW)
+    additem(ITEM_RAZOR_FANG)
+    additem(ITEM_PROTECTOR)
+    additem(ITEM_ELECTIRIZER)
+    additem(ITEM_MAGMARIZER)
+    additem(ITEM_DUBIOUS_DISC)
     release
     end
 }

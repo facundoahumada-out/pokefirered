@@ -387,7 +387,6 @@ static bool8 PrintWhiteOutRecoveryMessage(u8 taskId, const u8 *text, u8 x, u8 y)
 static void Task_RushInjuredPokemonToCenter(u8 taskId)
 {
     u8 windowId;
-    const struct HealLocation *loc;
 
     switch (gTasks[taskId].tState)
     {
@@ -399,13 +398,9 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
         PutWindowTilemap(windowId);
         CopyWindowToVram(windowId, COPYWIN_FULL);
 
-        // Scene changes if last heal location was the player's house
-        loc = GetHealLocation(HEAL_LOCATION_PALLET_TOWN);
-        if (gSaveBlock1Ptr->lastHealLocation.mapGroup == loc->mapGroup
-         && gSaveBlock1Ptr->lastHealLocation.mapNum == loc->mapNum
-         && gSaveBlock1Ptr->lastHealLocation.warpId == WARP_ID_NONE
-         && gSaveBlock1Ptr->lastHealLocation.x == loc->x
-         && gSaveBlock1Ptr->lastHealLocation.y == loc->y)
+        // Scene changes if the player respawned in their house
+        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_PALLET_TOWN_PLAYERS_HOUSE_1F)
+         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_PALLET_TOWN_PLAYERS_HOUSE_1F))
             gTasks[taskId].tState = 4;
         else
             gTasks[taskId].tState = 1;

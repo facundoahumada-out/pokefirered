@@ -131,7 +131,8 @@ extern u8 gStringVar4[];
 
 #define ROUND_BITS_TO_BYTES(numBits) DIV_ROUND_UP(numBits, 8)
 
-#define DEX_FLAGS_NO ROUND_BITS_TO_BYTES(NUM_SPECIES)
+// Fixed so the save layout doesn't move when species are added; must cover NATIONAL_DEX_COUNT
+#define DEX_FLAGS_NO 55
 #define NUM_FLAG_BYTES ROUND_BITS_TO_BYTES(FLAGS_COUNT)
 #define NUM_ADDITIONAL_PHRASE_BYTES ROUND_BITS_TO_BYTES(NUM_ADDITIONAL_PHRASES)
 
@@ -806,8 +807,8 @@ struct SaveBlock1
     /*0x30D0*/ struct Roamer roamer;
     /*0x30EC*/ struct EnigmaBerry enigmaBerry;
     /*0x3120*/ struct MysteryGiftSave mysteryGift;
-    /*0x348C*/ u32 mushroomPatchCollectedAt[16]; // RtcGetMinuteCount() snapshot when picked, 0 = available; indexed 1:1 with sMushroomPatches[]
-    /*0x34CC*/ u8 unused_34CC[336]; // was part of unused_348C[400]
+    /*0x348C*/ u32 mushroomPatchCollectedAt[50]; // RtcGetMinuteCount() snapshot when picked, 0 = available; indexed 1:1 with sMushroomPatches[]
+    /*0x3554*/ u8 unused_3554[200]; // was part of unused_348C[400]
     /*0x361C*/ struct RamScript ramScript;
     /*0x3A08*/ struct RecordMixingGift recordMixingGift; // unused
     /*0x3A18*/ u8 seen2[DEX_FLAGS_NO];

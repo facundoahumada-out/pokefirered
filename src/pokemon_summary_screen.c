@@ -3890,15 +3890,9 @@ static void UpdateCurrentMonBufferFromPartyOrBox(struct Pokemon * mon)
     }
 }
 
+// HMs can be forgotten too, so any move can be replaced.
 static u8 PokeSum_CanForgetSelectedMove(void)
 {
-    u16 move;
-
-    move = GetMonMoveBySlotId(&sMonSummaryScreen->currentMon, sMoveSelectionCursorPos);
-
-    if (IsMoveHm(move) == TRUE && sMonSummaryScreen->mode != PSS_MODE_FORGET_MOVE)
-        return FALSE;
-
     return TRUE;
 }
 

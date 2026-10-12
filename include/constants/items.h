@@ -100,8 +100,8 @@
 #define ITEM_THUNDER_STONE 96
 #define ITEM_WATER_STONE 97
 #define ITEM_LEAF_STONE 98
-#define ITEM_063 99
-#define ITEM_064 100
+#define ITEM_SHINY_STONE 99
+#define ITEM_DUSK_STONE 100
 #define ITEM_065 101
 #define ITEM_066 102
 #define ITEM_TINY_MUSHROOM 103
@@ -471,7 +471,16 @@
 
 #define ITEM_SHINY_CHARM 396
 
-#define ITEMS_COUNT 397
+// Held items that make Pokémon evolve on level up
+#define ITEM_OVAL_STONE 397
+#define ITEM_RAZOR_CLAW 398
+#define ITEM_RAZOR_FANG 399
+#define ITEM_PROTECTOR 400
+#define ITEM_ELECTIRIZER 401
+#define ITEM_MAGMARIZER 402
+#define ITEM_DUBIOUS_DISC 403
+
+#define ITEMS_COUNT 404
 
 #define ITEM_TO_BERRY(itemId)(((itemId - FIRST_BERRY_INDEX) + 1))
 #define MAIL_NONE 0xFF

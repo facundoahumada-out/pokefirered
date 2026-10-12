@@ -111,8 +111,8 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_WATER_STONE]    = {gItemIcon_WaterStone, gItemIconPalette_WaterStone},
     [ITEM_LEAF_STONE]     = {gItemIcon_LeafStone, gItemIconPalette_LeafStone},
     // ????????
-    [ITEM_063]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_064]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_SHINY_STONE]    = {gItemIcon_ShinyStone, gItemIconPalette_ShinyStone},
+    [ITEM_DUSK_STONE]     = {gItemIcon_DuskStone, gItemIconPalette_DuskStone},
     [ITEM_065]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_066]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // Valuables
@@ -421,6 +421,13 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_SERIOUS_MINT]   = {gItemIcon_Mint, gItemIconPalette_YellowMint},
     [ITEM_TIMID_MINT]     = {gItemIcon_Mint, gItemIconPalette_GreenMint},
     [ITEM_SHINY_CHARM]    = {gItemIcon_ShinyCharm, gItemIconPalette_ShinyCharm},
+    [ITEM_OVAL_STONE]     = {gItemIcon_OvalStone, gItemIconPalette_OvalStone},
+    [ITEM_RAZOR_CLAW]     = {gItemIcon_RazorClaw, gItemIconPalette_RazorClaw},
+    [ITEM_RAZOR_FANG]     = {gItemIcon_RazorFang, gItemIconPalette_RazorFang},
+    [ITEM_PROTECTOR]      = {gItemIcon_Protector, gItemIconPalette_Protector},
+    [ITEM_ELECTIRIZER]    = {gItemIcon_Electirizer, gItemIconPalette_Electirizer},
+    [ITEM_MAGMARIZER]     = {gItemIcon_Magmarizer, gItemIconPalette_Magmarizer},
+    [ITEM_DUBIOUS_DISC]   = {gItemIcon_DubiousDisc, gItemIconPalette_DubiousDisc},
     // Return to field arrow
     [ITEMS_COUNT]         = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

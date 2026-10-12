@@ -1266,12 +1266,16 @@ static bool8 RestoreScreenAfterPlayback(u8 taskId)
 
 static void QL_SlightlyDarkenSomePals(void)
 {
+    u32 i;
     u16 *buffer = Alloc(PLTT_SIZE);
     CpuCopy16(sPalettesBackup, buffer, PLTT_SIZE);
     SlightlyDarkenPalsInWeather(sPalettesBackup, sPalettesBackup, 13 * 16);
-    SlightlyDarkenPalsInWeather(&sPalettesBackup[OBJ_PLTT_ID(1)], &sPalettesBackup[OBJ_PLTT_ID(1)], 1 * 16);
-    SlightlyDarkenPalsInWeather(&sPalettesBackup[OBJ_PLTT_ID(6)], &sPalettesBackup[OBJ_PLTT_ID(6)], 4 * 16);
-    SlightlyDarkenPalsInWeather(&sPalettesBackup[OBJ_PLTT_ID(11)], &sPalettesBackup[OBJ_PLTT_ID(11)], 5 * 16);
+    // Object event palettes are skipped, they used to be in the fixed slots 0, 2-5 and 10.
+    for (i = 0; i < 16; i++)
+    {
+        if (!IsObjectEventPaletteNum(i))
+            SlightlyDarkenPalsInWeather(&sPalettesBackup[OBJ_PLTT_ID(i)], &sPalettesBackup[OBJ_PLTT_ID(i)], 16);
+    }
     CpuCopy16(sPalettesBackup, gPlttBufferUnfaded, PLTT_SIZE);
     CpuCopy16(buffer, sPalettesBackup, PLTT_SIZE);
     Free(buffer);

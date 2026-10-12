@@ -11635,4 +11635,32 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_WATER_VEIL},
         .safariZoneFleeRate = 0, .bodyColor = BODY_COLOR_BLUE, .noFlip = FALSE,
     },
+    [SPECIES_TOGEKISS] =
+    {
+        .baseHP = 85, .baseAttack = 50, .baseDefense = 95, .baseSpeed = 80, .baseSpAttack = 120, .baseSpDefense = 115,
+        .types = {TYPE_FAIRY, TYPE_FLYING},
+        .catchRate = 30, .expYield = 220,
+        .evYield_SpAttack = 2, .evYield_SpDefense = 1,
+        .itemCommon = ITEM_NONE, .itemRare = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(12.5),
+        .eggCycles = 10, .friendship = 70,
+        .growthRate = GROWTH_FAST,
+        .eggGroups = {EGG_GROUP_FLYING, EGG_GROUP_FAIRY},
+        .abilities = {ABILITY_HUSTLE, ABILITY_SERENE_GRACE},
+        .safariZoneFleeRate = 0, .bodyColor = BODY_COLOR_WHITE, .noFlip = TRUE,
+    },
+    [SPECIES_DUCFETCHD] =
+    {
+        .baseHP = 72, .baseAttack = 105, .baseDefense = 70, .baseSpeed = 95, .baseSpAttack = 50, .baseSpDefense = 68,
+        .types = {TYPE_GRASS, TYPE_FLYING},
+        .catchRate = 45, .expYield = 172,
+        .evYield_Attack = 2,
+        .itemCommon = ITEM_NONE, .itemRare = ITEM_STICK,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20, .friendship = 70,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = {EGG_GROUP_FLYING, EGG_GROUP_FIELD},
+        .abilities = {ABILITY_INNER_FOCUS, ABILITY_SUPER_LUCK},
+        .safariZoneFleeRate = 0, .bodyColor = BODY_COLOR_PURPLE, .noFlip = TRUE,
+    },
 };

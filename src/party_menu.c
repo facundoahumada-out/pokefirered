@@ -4741,20 +4741,6 @@ u16 ItemIdToBattleMoveId(u16 item)
     return sTMHMMoves[tmNumber];
 }
 
-bool8 IsMoveHm(u16 move)
-{
-    u8 i;
-
-    for (i = 0; i < NUM_HIDDEN_MACHINES; ++i)
-    {
-        if (sTMHMMoves[i + NUM_TECHNICAL_MACHINES] == MOVE_DIVE) // no dive
-            continue;
-        if (sTMHMMoves[i + NUM_TECHNICAL_MACHINES] == move)
-            return TRUE;
-    }
-    return FALSE;
-}
-
 bool8 MonKnowsMove(struct Pokemon *mon, u16 move)
 {
     u8 i;
@@ -5431,13 +5417,10 @@ static void CB2_UseEvolutionStone(void)
     RemoveBagItem(gSpecialVar_ItemId, 1);
 }
 
+// Evolutions no longer require the National Pokedex; the species just stays hidden in the Pokedex until then
 static bool8 MonCanEvolve(void)
 {
-    if (!IsNationalPokedexEnabled()
-     && GetEvolutionTargetSpecies(&gPlayerParty[gPartyMenu.slotId], EVO_MODE_ITEM_USE, gSpecialVar_ItemId) > KANTO_DEX_COUNT)
-        return FALSE;
-    else
-        return TRUE;
+    return TRUE;
 }
 
 u8 GetItemEffectType(u16 item)

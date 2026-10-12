@@ -286,6 +286,9 @@
 #define EVO_MAPSEC           16 // Pokémon levels up in the specified map section
 #define EVO_MOVE_TYPE        17 // Pokémon levels up knowing a move of the specified type
 #define EVO_LEVEL_ITEM       18 // Pokémon levels up holding the specified item (item is consumed)
+#define EVO_MOVE             19 // Pokémon levels up knowing the specified move
+#define EVO_LEVEL_ITEM_DAY   20 // Pokémon levels up during the day holding the specified item (item is consumed)
+#define EVO_LEVEL_ITEM_NIGHT 21 // Pokémon levels up at night holding the specified item (item is consumed)
 
 #define EVOS_PER_MON 10
 

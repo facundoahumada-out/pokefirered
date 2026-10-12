@@ -1,6 +1,7 @@
 #include "global.h"
 #include "gflib.h"
 #include "blend_palette.h"
+#include "event_object_movement.h"
 #include "field_effect.h"
 #include "field_weather.h"
 #include "field_weather_util.h"
@@ -108,18 +109,18 @@ static const u8 sBasePaletteGammaTypes[32] = {
     GAMMA_NONE,
     GAMMA_NONE,
     GAMMA_NONE,
-    // sprite palettes
-    GAMMA_ALT,
-    GAMMA_NORMAL,
-    GAMMA_ALT,
-    GAMMA_ALT,
-    GAMMA_ALT,
-    GAMMA_ALT,
+    // sprite palettes (object event palettes use GAMMA_ALT, see GetPaletteGammaType)
     GAMMA_NORMAL,
     GAMMA_NORMAL,
     GAMMA_NORMAL,
     GAMMA_NORMAL,
-    GAMMA_ALT,
+    GAMMA_NORMAL,
+    GAMMA_NORMAL,
+    GAMMA_NORMAL,
+    GAMMA_NORMAL,
+    GAMMA_NORMAL,
+    GAMMA_NORMAL,
+    GAMMA_NORMAL,
     GAMMA_NORMAL,
     GAMMA_NORMAL,
     GAMMA_NORMAL,
@@ -439,6 +440,16 @@ static bool8 FadeInScreen_FogHorizontal(void)
 static void DoNothing(void)
 { }
 
+// Object event palettes are loaded in any sprite slot, so their gamma type depends on the palette loaded there.
+static u8 GetPaletteGammaType(u16 palIndex)
+{
+    if (sPaletteGammaTypes[palIndex] == GAMMA_NONE)
+        return GAMMA_NONE;
+    if (palIndex >= 16 && IsObjectEventPaletteNum(palIndex - 16))
+        return GAMMA_ALT;
+    return sPaletteGammaTypes[palIndex];
+}
+
 static void ApplyGammaShift(u8 startPalIndex, u8 numPalettes, s8 gammaIndex)
 {
     u16 curPalIndex;
@@ -466,7 +477,7 @@ static void ApplyGammaShift(u8 startPalIndex, u8 numPalettes, s8 gammaIndex)
             {
                 u8 r, g, b;
 
-                if (sPaletteGammaTypes[curPalIndex] == GAMMA_ALT || curPalIndex - 16 == gWeatherPtr->altGammaSpritePalIndex)
+                if (GetPaletteGammaType(curPalIndex) == GAMMA_ALT || curPalIndex - 16 == gWeatherPtr->altGammaSpritePalIndex)
                     gammaTable = gWeatherPtr->altGammaShifts[gammaIndex];
                 else
                     gammaTable = gWeatherPtr->gammaShifts[gammaIndex];
@@ -524,7 +535,7 @@ static void ApplyGammaShiftWithBlend(u8 startPalIndex, u8 numPalettes, s8 gammaI
         {
             u8 *gammaTable;
 
-            if (sPaletteGammaTypes[curPalIndex] == GAMMA_NORMAL)
+            if (GetPaletteGammaType(curPalIndex) == GAMMA_NORMAL)
                 gammaTable = gWeatherPtr->gammaShifts[gammaIndex];
             else
                 gammaTable = gWeatherPtr->altGammaShifts[gammaIndex];
@@ -834,13 +845,15 @@ void UpdateSpritePaletteWithWeather(u8 spritePaletteIndex)
 {
     u16 paletteIndex = 16 + spritePaletteIndex;
     u16 i;
+    // Vanilla loaded the object event palettes in fixed slots before the fog started, so it never lightened them.
+    bool8 lightenInFog = !IsObjectEventPaletteNum(spritePaletteIndex) && !IsObjectEventReflectionPaletteNum(spritePaletteIndex);
 
     switch (gWeatherPtr->palProcessingState)
     {
     case WEATHER_PAL_STATE_SCREEN_FADING_IN:
         if (gWeatherPtr->fadeInActive != 0)
         {
-            if (gWeatherPtr->currWeather == WEATHER_FOG_HORIZONTAL)
+            if (gWeatherPtr->currWeather == WEATHER_FOG_HORIZONTAL && lightenInFog)
                 MarkFogSpritePalToLighten(paletteIndex);
             paletteIndex = PLTT_ID(paletteIndex);
             for (i = 0; i < 16; i++)
@@ -859,7 +872,7 @@ void UpdateSpritePaletteWithWeather(u8 spritePaletteIndex)
         {
             ApplyGammaShift(paletteIndex, 1, gWeatherPtr->gammaIndex);
         }
-        else
+        else if (lightenInFog)
         {
             paletteIndex = PLTT_ID(paletteIndex);
             BlendPalette(paletteIndex, 16, 12, RGB(28, 31, 28));

@@ -2709,3 +2709,17 @@ const u8 gDeoxysPokedexText[] = _(
     "cellular structure.");
 
 const u8 gDeoxysPokedexTextUnused[] = _("");
+
+const u8 gTogekissPokedexText[] = _(
+    "As everyone knows, it visits peaceful\n"
+    "regions, bringing them gifts of kindness\n"
+    "and sweet blessings.");
+
+const u8 gTogekissPokedexTextUnused[] = _("");
+
+const u8 gDucfetchdPokedexText[] = _(
+    "A Farfetch'd that mastered its stalk as\n"
+    "a whip. It rules over flocks with grace.\n"
+    "It lashes foes faster than eyes can see.");
+
+const u8 gDucfetchdPokedexTextUnused[] = _("");

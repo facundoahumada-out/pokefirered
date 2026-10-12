@@ -276,6 +276,14 @@ static const u8 sItemEffect_MoonStone[6] = {
     [4] = ITEM4_EVO_STONE,
 };
 
+static const u8 sItemEffect_ShinyStone[6] = {
+    [4] = ITEM4_EVO_STONE,
+};
+
+static const u8 sItemEffect_DuskStone[6] = {
+    [4] = ITEM4_EVO_STONE,
+};
+
 static const u8 sItemEffect_FireStone[6] = {
     [4] = ITEM4_EVO_STONE,
 };
@@ -395,6 +403,8 @@ const u8 *const gItemEffectTable[] =
     [ITEM_THUNDER_STONE - ITEM_POTION] = sItemEffect_ThunderStone,
     [ITEM_WATER_STONE - ITEM_POTION]   = sItemEffect_WaterStone,
     [ITEM_LEAF_STONE - ITEM_POTION]    = sItemEffect_LeafStone,
+    [ITEM_SHINY_STONE - ITEM_POTION]   = sItemEffect_ShinyStone,
+    [ITEM_DUSK_STONE - ITEM_POTION]    = sItemEffect_DuskStone,
     [ITEM_TINY_MUSHROOM - ITEM_POTION] = sItemEffect_TinyMushroom,
     [ITEM_CHERI_BERRY - ITEM_POTION]   = sItemEffect_CheriBerry,
     [ITEM_CHESTO_BERRY - ITEM_POTION]  = sItemEffect_ChestoBerry,

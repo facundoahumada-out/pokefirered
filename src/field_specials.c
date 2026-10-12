@@ -2424,11 +2424,21 @@ static void Task_DoDeoxysTriangleInteraction(u8 taskId)
     }
 }
 
+// Recolors the Meteorite palette used by the rock, loading it first if the rock hasn't been spawned yet.
+static void LoadDeoxysRockPalette(u8 num)
+{
+    u8 paletteNum = LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_METEORITE);
+
+    if (paletteNum == 0xFF)
+        return;
+    LoadPalette(sDeoxysObjectPals[num], OBJ_PLTT_ID(paletteNum), PLTT_SIZEOF(4));
+    ApplyGlobalFieldPaletteTint(paletteNum);
+}
+
 static void MoveDeoxysObject(u8 num)
 {
     u8 mapObjId;
-    LoadPalette(sDeoxysObjectPals[num], OBJ_PLTT_ID(10), PLTT_SIZEOF(4));
-    ApplyGlobalFieldPaletteTint(10);
+    LoadDeoxysRockPalette(num);
     TryGetObjectEventIdByLocalIdAndMap(LOCALID_BIRTH_ISLAND_EXTERIOR_ROCK, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, &mapObjId);
     if (num == 0)
         PlaySE(SE_M_CONFUSE_RAY);
@@ -2472,9 +2482,7 @@ void IncrementBirthIslandRockStepCount(void)
 
 void SetDeoxysTrianglePalette(void)
 {
-    u8 num = VarGet(VAR_DEOXYS_INTERACTION_NUM);
-    LoadPalette(sDeoxysObjectPals[num], OBJ_PLTT_ID(10), PLTT_SIZEOF(4));
-    ApplyGlobalFieldPaletteTint(10);
+    LoadDeoxysRockPalette(VarGet(VAR_DEOXYS_INTERACTION_NUM));
 }
 
 bool8 IsBadEggInParty(void)

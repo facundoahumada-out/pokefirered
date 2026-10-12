@@ -3229,4 +3229,6 @@ static const u32 sTutorLearnsets[NUM_SPECIES] =
                        | TUTOR(MOVE_ICE_PUNCH),
 
     [SPECIES_MANTYKE] = 0,
+    [SPECIES_TOGEKISS] = 0,
+    [SPECIES_DUCFETCHD] = 0,
 };

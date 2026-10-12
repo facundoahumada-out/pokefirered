@@ -2117,10 +2117,8 @@ static void ResumeMap(bool32 inLink)
     ResetAllPicSprites();
     ResetCameraUpdateInfo();
     InstallCameraPanAheadCallback();
-    if (!inLink)
-        InitObjectEventPalettes(0);
-    else
-        InitObjectEventPalettes(1);
+    // Object event palettes are loaded on demand when their objects are spawned.
+    FreeAllSpritePalettes();
 
     FieldEffectActiveListClear();
     StartWeather();

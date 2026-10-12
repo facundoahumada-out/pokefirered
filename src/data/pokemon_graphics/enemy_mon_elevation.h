@@ -89,4 +89,6 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_HAPPINY] = 0,
     [SPECIES_MUNCHLAX] = 0,
     [SPECIES_MANTYKE] = 4,
+    [SPECIES_TOGEKISS] = 14,
+    [SPECIES_DUCFETCHD] = 0,
 };

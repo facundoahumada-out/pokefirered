@@ -2151,7 +2151,6 @@ static void Mugshots_CreateTrainerPics(struct Task *task)
     struct Sprite *opponentSprite, *playerSprite;
     s16 mugshotId;
 
-    gReservedSpritePaletteCount = 10;
     mugshotId = task->tMugshotId;
     task->tOpponentSpriteId = CreateTrainerSprite(sMugshotsTrainerPicIDsTable[mugshotId],
                                                   sMugshotsOpponentCoords[mugshotId][0] - 32,
@@ -2161,7 +2160,6 @@ static void Mugshots_CreateTrainerPics(struct Task *task)
                                                 DISPLAY_WIDTH + 32,
                                                 106,
                                                 0, gDecompressionBuffer);
-    gReservedSpritePaletteCount = 12;
 
     opponentSprite = &gSprites[task->tOpponentSpriteId];
     playerSprite = &gSprites[task->tPlayerSpriteId];

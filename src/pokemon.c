@@ -958,6 +958,8 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(HAPPINY),
     SPECIES_TO_NATIONAL(MUNCHLAX),
     SPECIES_TO_NATIONAL(MANTYKE),
+    SPECIES_TO_NATIONAL(TOGEKISS),
+    SPECIES_TO_NATIONAL(DUCFETCHD),
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -1656,14 +1658,6 @@ static const s8 sFriendshipEventDeltas[][3] =
     [FRIENDSHIP_EVENT_FAINT_SMALL]          = {-1, -1, -1 },
     [FRIENDSHIP_EVENT_FAINT_OUTSIDE_BATTLE] = {-5, -5, -10 },
     [FRIENDSHIP_EVENT_FAINT_LARGE]          = {-5, -5, -10 },
-};
-
-#define HM_MOVES_END 0xFFFF
-
-static const u16 sHMMoves[] = 
-{
-    MOVE_CUT, MOVE_FLY, MOVE_SURF, MOVE_STRENGTH, MOVE_FLASH,
-    MOVE_ROCK_SMASH, MOVE_WATERFALL, MOVE_DIVE, HM_MOVES_END
 };
 
 #if defined(FIRERED)
@@ -5164,10 +5158,30 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                 if (gEvolutionTable[species][i].param == heldItem)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_LEVEL_ITEM_DAY:
+                RtcCalcLocalTime();
+                if (!IsDnsNightTime() && gEvolutionTable[species][i].param == heldItem)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_ITEM_NIGHT:
+                RtcCalcLocalTime();
+                if (IsDnsNightTime() && gEvolutionTable[species][i].param == heldItem)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
             case EVO_MOVE_TYPE:
                 for (j = 0; j < MAX_MON_MOVES; j++)
                 {
                     if (gBattleMoves[GetMonData(mon, MON_DATA_MOVE1 + j, NULL)].type == gEvolutionTable[species][i].param)
+                    {
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                        break;
+                    }
+                }
+                break;
+            case EVO_MOVE:
+                for (j = 0; j < MAX_MON_MOVES; j++)
+                {
+                    if (GetMonData(mon, MON_DATA_MOVE1 + j, NULL) == gEvolutionTable[species][i].param)
                     {
                         targetSpecies = gEvolutionTable[species][i].targetSpecies;
                         break;
@@ -5188,15 +5202,9 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
             case EVO_TRADE_ITEM:
                 if (gEvolutionTable[species][i].param == heldItem)
                 {
+                    heldItem = ITEM_NONE;
+                    SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                    
-                    // Prevent cross-generational evolutions like Scizor and Steelix until the National Pokedex is obtained
-                    if (IsNationalPokedexEnabled() || targetSpecies <= KANTO_SPECIES_END)
-                    {
-                        heldItem = ITEM_NONE;
-                        SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
-                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                    }
                 }
                 break;
             }
@@ -5998,17 +6006,6 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
         return &gMonShinyPaletteTable[species];
     else
         return &gMonPaletteTable[species];
-}
-
-bool32 IsHMMove2(u16 move)
-{
-    int i = 0;
-    while (sHMMoves[i] != HM_MOVES_END)
-    {
-        if (sHMMoves[i++] == move)
-            return TRUE;
-    }
-    return FALSE;
 }
 
 bool8 IsMonSpriteNotFlipped(u16 species)

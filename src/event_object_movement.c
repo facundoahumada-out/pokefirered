@@ -7,6 +7,7 @@
 #include "field_effect.h"
 #include "field_effect_helpers.h"
 #include "field_player_avatar.h"
+#include "field_weather.h"
 #include "fieldmap.h"
 #include "metatile_behavior.h"
 #include "overworld.h"
@@ -71,12 +72,12 @@ static void UpdateObjectEventVisibility(struct ObjectEvent *, struct Sprite *);
 static void MakeObjectTemplateFromObjectEventTemplate(const struct ObjectEventTemplate *, struct SpriteTemplate *, const struct SubspriteTable **);
 static void GetObjectEventMovingCameraOffset(s16 *, s16 *);
 static const struct ObjectEventTemplate *GetObjectEventTemplateByLocalIdAndMap(u8, u8, u8);
-static void LoadObjectEventPalette(u16);
 static void RemoveObjectEventIfOutsideView(struct ObjectEvent *);
 static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y);
 static void SetPlayerAvatarObjectEventIdAndObjectId(u8, u8);
 static void ResetObjectEventFldEffData(struct ObjectEvent *);
 static u8 TryLoadObjectPalette(const struct SpritePalette *spritePalette);
+static u8 LoadSpritePaletteInField(const struct SpritePalette *spritePalette);
 static u8 FindObjectEventPaletteIndexByTag(u16);
 static bool8 ObjectEventDoesElevationMatch(struct ObjectEvent *, u8);
 static bool8 IsElevationMismatchAt(u8 elevation, s16 x, s16 y);
@@ -191,24 +192,6 @@ static u8 setup##_callback(struct ObjectEvent *objectEvent, struct Sprite *sprit
 {                                                                                                \
     return 0;                                                                                    \
 }
-
-EWRAM_DATA u8 sCurrentReflectionType = 0;
-EWRAM_DATA u16 sCurrentSpecialObjectPaletteTag = 0;
-
-const u8 gReflectionEffectPaletteMap[16] = {
-    [PALSLOT_PLAYER]                 = PALSLOT_PLAYER_REFLECTION,
-    [PALSLOT_PLAYER_REFLECTION]      = PALSLOT_PLAYER_REFLECTION,
-    [PALSLOT_NPC_1]                  = PALSLOT_NPC_1_REFLECTION,
-    [PALSLOT_NPC_2]                  = PALSLOT_NPC_2_REFLECTION,
-    [PALSLOT_NPC_3]                  = PALSLOT_NPC_3_REFLECTION,
-    [PALSLOT_NPC_4]                  = PALSLOT_NPC_4_REFLECTION,
-    [PALSLOT_NPC_1_REFLECTION]       = PALSLOT_NPC_1_REFLECTION,
-    [PALSLOT_NPC_2_REFLECTION]       = PALSLOT_NPC_2_REFLECTION,
-    [PALSLOT_NPC_3_REFLECTION]       = PALSLOT_NPC_3_REFLECTION,
-    [PALSLOT_NPC_4_REFLECTION]       = PALSLOT_NPC_4_REFLECTION,
-    [PALSLOT_NPC_SPECIAL]            = PALSLOT_NPC_SPECIAL_REFLECTION,
-    [PALSLOT_NPC_SPECIAL_REFLECTION] = PALSLOT_NPC_SPECIAL_REFLECTION
-};
 
 static const struct SpriteTemplate gCameraSpriteTemplate = {
     .tileTag = 0, 
@@ -441,37 +424,6 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
     [MOVEMENT_TYPE_WANDER_AROUND_SLOWER] = DIR_SOUTH,
 };
 
-#define OBJ_EVENT_PAL_TAG_PLAYER_RED                  0x1100
-#define OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION       0x1101
-#define OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION           0x1102
-#define OBJ_EVENT_PAL_TAG_NPC_BLUE                    0x1103
-#define OBJ_EVENT_PAL_TAG_NPC_PINK                    0x1104
-#define OBJ_EVENT_PAL_TAG_NPC_GREEN                   0x1105
-#define OBJ_EVENT_PAL_TAG_NPC_WHITE                   0x1106
-#define OBJ_EVENT_PAL_TAG_NPC_BLUE_REFLECTION         0x1107
-#define OBJ_EVENT_PAL_TAG_NPC_PINK_REFLECTION         0x1108
-#define OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION        0x1109
-#define OBJ_EVENT_PAL_TAG_NPC_WHITE_REFLECTION        0x110A
-#define OBJ_EVENT_PAL_TAG_RS_QUINTY_PLUMP             0x110B
-#define OBJ_EVENT_PAL_TAG_RS_QUINTY_PLUMP_REFLECTION  0x110C
-#define OBJ_EVENT_PAL_TAG_RS_TRUCK                    0x110D
-#define OBJ_EVENT_PAL_TAG_RS_MACHOKE                  0x110E
-#define OBJ_EVENT_PAL_TAG_RS_POOCHYENA                0x110F
-#define OBJ_EVENT_PAL_TAG_PLAYER_GREEN                0x1110
-#define OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION     0x1111
-#define OBJ_EVENT_PAL_TAG_RS_MOVING_BOX               0x1112
-#define OBJ_EVENT_PAL_TAG_METEORITE                   0x1113
-#define OBJ_EVENT_PAL_TAG_SEAGALLOP                   0x1114
-#define OBJ_EVENT_PAL_TAG_SS_ANNE                     0x1115
-#define OBJ_EVENT_PAL_TAG_RS_PLAYER_UNDERWATER        0x1116
-#define OBJ_EVENT_PAL_TAG_RS_KYOGRE                   0x1117
-#define OBJ_EVENT_PAL_TAG_RS_KYOGRE_REFLECTION        0x1118
-#define OBJ_EVENT_PAL_TAG_RS_GROUDON                  0x1119
-#define OBJ_EVENT_PAL_TAG_RS_GROUDON_REFLECTION       0x111A
-#define OBJ_EVENT_PAL_TAG_RS_SUBMARINE_SHADOW         0x111B
-#define OBJ_EVENT_PAL_TAG_MT_ITEM                     0x111C
-#define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
-
 #include "data/object_events/object_event_graphics_info_pointers.h"
 #include "data/field_effects/field_effect_object_template_pointers.h"
 #include "data/object_events/object_event_pic_tables.h"
@@ -500,123 +452,24 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_SSAnne,                  OBJ_EVENT_PAL_TAG_SS_ANNE},
     {gObjectEventPal_Seagallop,               OBJ_EVENT_PAL_TAG_SEAGALLOP},
     {gObjectEventPal_MtItem,                  OBJ_EVENT_PAL_TAG_MT_ITEM},
-    {},
+    {NULL,                                    OBJ_EVENT_PAL_TAG_NONE},
 };
 
-static const u16 sPlayerReflectionPaletteTags[] = {
-    OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION,
-    OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION,
-    OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION,
-    OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION,
+// Hand-made reflection palettes. Palettes not listed here get a reflection generated by brightening them.
+static const u16 sObjectEventReflectionPaletteTags[][2] = {
+    {OBJ_EVENT_PAL_TAG_PLAYER_RED,      OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION},
+    {OBJ_EVENT_PAL_TAG_PLAYER_GREEN,    OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION},
+    {OBJ_EVENT_PAL_TAG_NPC_BLUE,        OBJ_EVENT_PAL_TAG_NPC_BLUE_REFLECTION},
+    {OBJ_EVENT_PAL_TAG_NPC_PINK,        OBJ_EVENT_PAL_TAG_NPC_PINK_REFLECTION},
+    {OBJ_EVENT_PAL_TAG_NPC_GREEN,       OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION},
+    {OBJ_EVENT_PAL_TAG_NPC_WHITE,       OBJ_EVENT_PAL_TAG_NPC_WHITE_REFLECTION},
+    {OBJ_EVENT_PAL_TAG_RS_QUINTY_PLUMP, OBJ_EVENT_PAL_TAG_RS_QUINTY_PLUMP_REFLECTION},
+    {OBJ_EVENT_PAL_TAG_METEORITE,       OBJ_EVENT_PAL_TAG_METEORITE},
+    {OBJ_EVENT_PAL_TAG_SEAGALLOP,       OBJ_EVENT_PAL_TAG_SEAGALLOP},
+    {OBJ_EVENT_PAL_TAG_SS_ANNE,         OBJ_EVENT_PAL_TAG_SS_ANNE},
 };
 
-static const u16 sUnusedPlayerReflectionPaletteTags[] = {
-    OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION,
-    OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION,
-    OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION,
-    OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION,
-};
-
-static const u16 sPlayerUnderwaterReflectionPaletteTags[] = {
-    OBJ_EVENT_PAL_TAG_RS_PLAYER_UNDERWATER,
-    OBJ_EVENT_PAL_TAG_RS_PLAYER_UNDERWATER,
-    OBJ_EVENT_PAL_TAG_RS_PLAYER_UNDERWATER,
-    OBJ_EVENT_PAL_TAG_RS_PLAYER_UNDERWATER,
-};
-
-static const struct PairedPalettes gPlayerReflectionPaletteSets[] = {
-    {OBJ_EVENT_PAL_TAG_PLAYER_RED,           sPlayerReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_PLAYER_GREEN,         sPlayerReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_RS_PLAYER_UNDERWATER, sPlayerUnderwaterReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_NONE, NULL},
-};
-
-static const u16 sRSQuintyPlumpReflectionPaletteTags[] = {
-    OBJ_EVENT_PAL_TAG_RS_QUINTY_PLUMP_REFLECTION,
-    OBJ_EVENT_PAL_TAG_RS_QUINTY_PLUMP_REFLECTION,
-    OBJ_EVENT_PAL_TAG_RS_QUINTY_PLUMP_REFLECTION,
-    OBJ_EVENT_PAL_TAG_RS_QUINTY_PLUMP_REFLECTION,
-};
-
-static const u16 sRSTruckReflectionPaletteTags[] = {
-    OBJ_EVENT_PAL_TAG_RS_TRUCK,
-    OBJ_EVENT_PAL_TAG_RS_TRUCK,
-    OBJ_EVENT_PAL_TAG_RS_TRUCK,
-    OBJ_EVENT_PAL_TAG_RS_TRUCK,
-};
-
-static const u16 sRSMachokeReflectionPaletteTags[] = {
-    OBJ_EVENT_PAL_TAG_RS_MACHOKE,
-    OBJ_EVENT_PAL_TAG_RS_MACHOKE,
-    OBJ_EVENT_PAL_TAG_RS_MACHOKE,
-    OBJ_EVENT_PAL_TAG_RS_MACHOKE,
-};
-
-static const u16 sRSMovingBoxReflectionPaletteTags[] = {
-    OBJ_EVENT_PAL_TAG_RS_MOVING_BOX,
-    OBJ_EVENT_PAL_TAG_RS_MOVING_BOX,
-    OBJ_EVENT_PAL_TAG_RS_MOVING_BOX,
-    OBJ_EVENT_PAL_TAG_RS_MOVING_BOX,
-};
-
-static const u16 sMeteoriteReflectionPaletteTags[] = {
-    OBJ_EVENT_PAL_TAG_METEORITE,
-    OBJ_EVENT_PAL_TAG_METEORITE,
-    OBJ_EVENT_PAL_TAG_METEORITE,
-    OBJ_EVENT_PAL_TAG_METEORITE,
-};
-
-static const u16 sSeagallopReflectionPaletteTags[] = {
-    OBJ_EVENT_PAL_TAG_SEAGALLOP,
-    OBJ_EVENT_PAL_TAG_SEAGALLOP,
-    OBJ_EVENT_PAL_TAG_SEAGALLOP,
-    OBJ_EVENT_PAL_TAG_SEAGALLOP,
-};
-
-static const u16 sRSSubmarineShadowReflectionPaletteTags[] = {
-    OBJ_EVENT_PAL_TAG_RS_SUBMARINE_SHADOW,
-    OBJ_EVENT_PAL_TAG_RS_SUBMARINE_SHADOW,
-    OBJ_EVENT_PAL_TAG_RS_SUBMARINE_SHADOW,
-    OBJ_EVENT_PAL_TAG_RS_SUBMARINE_SHADOW,
-};
-
-static const u16 sRSKyogreReflectionPaletteTags[] = {
-    OBJ_EVENT_PAL_TAG_RS_KYOGRE_REFLECTION,
-    OBJ_EVENT_PAL_TAG_RS_KYOGRE_REFLECTION,
-    OBJ_EVENT_PAL_TAG_RS_KYOGRE_REFLECTION,
-    OBJ_EVENT_PAL_TAG_RS_KYOGRE_REFLECTION,
-};
-
-static const u16 sRSGroudonReflectionPaletteTags[] = {
-    OBJ_EVENT_PAL_TAG_RS_GROUDON_REFLECTION,
-    OBJ_EVENT_PAL_TAG_RS_GROUDON_REFLECTION,
-    OBJ_EVENT_PAL_TAG_RS_GROUDON_REFLECTION,
-    OBJ_EVENT_PAL_TAG_RS_GROUDON_REFLECTION,
-};
-
-static const u16 sGreenNPCReflectionPaletteTags[] = {
-    OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION,
-    OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION,
-    OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION,
-    OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION,
-};
-
-static const struct PairedPalettes gSpecialObjectReflectionPaletteSets[] = {
-    {OBJ_EVENT_PAL_TAG_PLAYER_RED,          sPlayerReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_PLAYER_GREEN,        sPlayerReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_RS_QUINTY_PLUMP,     sRSQuintyPlumpReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_RS_TRUCK,            sRSTruckReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_RS_MACHOKE,          sRSMachokeReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_RS_MOVING_BOX,       sRSMovingBoxReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_METEORITE,           sMeteoriteReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_SEAGALLOP,           sSeagallopReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_RS_KYOGRE,           sRSKyogreReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_RS_GROUDON,          sRSGroudonReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_NPC_GREEN,           sGreenNPCReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_RS_SUBMARINE_SHADOW, sRSSubmarineShadowReflectionPaletteTags},
-    {OBJ_EVENT_PAL_TAG_NONE, NULL},
-};
-
+// Vanilla palette layout, only used by the Fame Checker.
 static const u16 sObjectPaletteTags0[] = {
     OBJ_EVENT_PAL_TAG_PLAYER_RED,
     OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION,
@@ -628,52 +481,6 @@ static const u16 sObjectPaletteTags0[] = {
     OBJ_EVENT_PAL_TAG_NPC_PINK_REFLECTION,
     OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION,
     OBJ_EVENT_PAL_TAG_NPC_WHITE_REFLECTION,
-};
-
-static const u16 sObjectPaletteTags1[] = {
-    OBJ_EVENT_PAL_TAG_PLAYER_RED,
-    OBJ_EVENT_PAL_TAG_PLAYER_GREEN,
-    OBJ_EVENT_PAL_TAG_NPC_BLUE,
-    OBJ_EVENT_PAL_TAG_NPC_PINK,
-    OBJ_EVENT_PAL_TAG_NPC_GREEN,
-    OBJ_EVENT_PAL_TAG_NPC_WHITE,
-    OBJ_EVENT_PAL_TAG_NPC_BLUE_REFLECTION,
-    OBJ_EVENT_PAL_TAG_NPC_PINK_REFLECTION,
-    OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION,
-    OBJ_EVENT_PAL_TAG_NPC_WHITE_REFLECTION,
-};
-
-static const u16 sObjectPaletteTags2[] = {
-    OBJ_EVENT_PAL_TAG_PLAYER_RED,
-    OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION,
-    OBJ_EVENT_PAL_TAG_NPC_BLUE,
-    OBJ_EVENT_PAL_TAG_NPC_PINK,
-    OBJ_EVENT_PAL_TAG_NPC_GREEN,
-    OBJ_EVENT_PAL_TAG_NPC_WHITE,
-    OBJ_EVENT_PAL_TAG_NPC_BLUE_REFLECTION,
-    OBJ_EVENT_PAL_TAG_NPC_PINK_REFLECTION,
-    OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION,
-    OBJ_EVENT_PAL_TAG_NPC_WHITE_REFLECTION,
-};
-
-static const u16 sObjectPaletteTags3[] = {
-    OBJ_EVENT_PAL_TAG_PLAYER_RED,
-    OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION,
-    OBJ_EVENT_PAL_TAG_NPC_BLUE,
-    OBJ_EVENT_PAL_TAG_NPC_PINK,
-    OBJ_EVENT_PAL_TAG_NPC_GREEN,
-    OBJ_EVENT_PAL_TAG_NPC_WHITE,
-    OBJ_EVENT_PAL_TAG_NPC_BLUE_REFLECTION,
-    OBJ_EVENT_PAL_TAG_NPC_PINK_REFLECTION,
-    OBJ_EVENT_PAL_TAG_NPC_GREEN_REFLECTION,
-    OBJ_EVENT_PAL_TAG_NPC_WHITE_REFLECTION,
-};
-
-static const u16 *const gObjectPaletteTagSets[] = {
-    sObjectPaletteTags0,
-    sObjectPaletteTags1,
-    sObjectPaletteTags2,
-    sObjectPaletteTags3,
 };
 
 //#include "data/object_events/berry_tree_graphics_tables.h"
@@ -1553,9 +1360,11 @@ void RemoveObjectEventByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup)
 static void RemoveObjectEventInternal(struct ObjectEvent *objectEvent)
 {
     struct SpriteFrameImage image;
+    u8 paletteNum = gSprites[objectEvent->spriteId].oam.paletteNum;
     image.size = GetObjectEventGraphicsInfo(objectEvent->graphicsId)->size;
     gSprites[objectEvent->spriteId].images = &image;
     DestroySprite(&gSprites[objectEvent->spriteId]);
+    FreeObjectEventPaletteIfUnused(paletteNum);
 }
 
 void Unref_RemoveAllObjectEventsExceptPlayer(void)
@@ -1583,16 +1392,11 @@ static u8 TrySetupObjectEventSprite(const struct ObjectEventTemplate *objectEven
 
     objectEvent = &gObjectEvents[objectEventId];
     graphicsInfo = GetObjectEventGraphicsInfo(objectEvent->graphicsId);
-    if (graphicsInfo->paletteSlot == PALSLOT_PLAYER)
-        LoadPlayerObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-    else if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
-        LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-
+    LoadObjectEventPalette(spriteTemplate->paletteTag);
 
     if (objectEvent->movementType == MOVEMENT_TYPE_INVISIBLE)
         objectEvent->invisible = TRUE;
 
-    *(u16 *)&spriteTemplate->paletteTag = TAG_NONE;
     spriteId = CreateSprite(spriteTemplate, 0, 0, 0);
     if (spriteId == MAX_SPRITES)
     {
@@ -1606,7 +1410,6 @@ static u8 TrySetupObjectEventSprite(const struct ObjectEventTemplate *objectEven
     sprite->centerToCornerVecY = -(graphicsInfo->height >> 1);
     sprite->x += 8;
     sprite->y += 16 + sprite->centerToCornerVecY;
-    sprite->oam.paletteNum = graphicsInfo->paletteSlot;
     sprite->coordOffsetEnabled = TRUE;
     sprite->data[0] = objectEventId;
     objectEvent->spriteId = spriteId;
@@ -1724,8 +1527,13 @@ u8 CreateObjectGraphicsSprite(u16 graphicsId, SpriteCallback callback, s16 x, s1
     u8 spriteId;
 
     CopyObjectGraphicsInfoToSpriteTemplate(graphicsId, callback, &spriteTemplate, &subspriteTables);
+    // Also used outside the field (shop, naming screen...), so the palette doesn't get the weather.
     if (spriteTemplate.paletteTag != TAG_NONE)
-        LoadObjectEventPalette(spriteTemplate.paletteTag);
+    {
+        u8 i = FindObjectEventPaletteIndexByTag(spriteTemplate.paletteTag);
+        if (i != 0xFF)
+            TryLoadObjectPalette(&sObjectEventSpritePalettes[i]);
+    }
 
     spriteId = CreateSprite(&spriteTemplate, x, y, subpriority);
     if (spriteId != MAX_SPRITES && subspriteTables != NULL)
@@ -1749,7 +1557,7 @@ u8 CreateVirtualObject(u8 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevatio
 
     graphicsInfo = GetObjectEventGraphicsInfo(graphicsId);
     CopyObjectGraphicsInfoToSpriteTemplate(graphicsId, SpriteCB_VirtualObject, &spriteTemplate, &subspriteTables);
-    *(u16 *)&spriteTemplate.paletteTag = TAG_NONE;
+    LoadObjectEventPalette(spriteTemplate.paletteTag);
     x += MAP_OFFSET;
     y += MAP_OFFSET;
     SetSpritePosToOffsetMapCoords(&x, &y, 8, 16);
@@ -1760,12 +1568,9 @@ u8 CreateVirtualObject(u8 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevatio
         sprite->centerToCornerVecX = -(graphicsInfo->width >> 1);
         sprite->centerToCornerVecY = -(graphicsInfo->height >> 1);
         sprite->y += sprite->centerToCornerVecY;
-        sprite->oam.paletteNum = graphicsInfo->paletteSlot;
         sprite->coordOffsetEnabled = TRUE;
         sprite->sVirtualObjId = virtualObjId;
         sprite->sVirtualObjElev = elevation;
-        if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
-            LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
 
         if (subspriteTables != NULL)
         {
@@ -1800,7 +1605,7 @@ u8 CreateFameCheckerObject(u8 graphicsId, u8 localId, s16 x, s16 y)
         sprite->oam.paletteNum = graphicsInfo->paletteSlot;
         sprite->data[0] = localId;
         if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
-            LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+            PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
 
         if (subspriteTables != NULL)
         {
@@ -1916,14 +1721,7 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
     CopyObjectGraphicsInfoToSpriteTemplate_WithMovementType(objectEvent->graphicsId, objectEvent->movementType, &spriteTemplate, &subspriteTables);
     spriteTemplate.images = &spriteFrameImage;
 
-    *(u16 *)&spriteTemplate.paletteTag = TAG_NONE;
-    if (graphicsInfo->paletteSlot == PALSLOT_PLAYER)
-        LoadPlayerObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-
-    if (graphicsInfo->paletteSlot >= PALSLOT_NPC_SPECIAL)
-        LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-
-    *(u16 *)&spriteTemplate.paletteTag = TAG_NONE;
+    LoadObjectEventPalette(spriteTemplate.paletteTag);
     spriteId = CreateSprite(&spriteTemplate, 0, 0, 0);
     if (spriteId != MAX_SPRITES)
     {
@@ -1942,7 +1740,6 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
         if (subspriteTables != NULL)
             SetSubspriteTables(sprite, subspriteTables);
 
-        sprite->oam.paletteNum = graphicsInfo->paletteSlot;
         sprite->coordOffsetEnabled = TRUE;
         sprite->data[0] = objectEventId;
         objectEvent->spriteId = spriteId;
@@ -1981,15 +1778,15 @@ void ObjectEventSetGraphicsId(struct ObjectEvent *objectEvent, u8 graphicsId)
     struct Sprite *sprite;
     u8 var;
     u8 var3;
+    u8 paletteNum, oldPaletteNum;
 
     graphicsInfo = GetObjectEventGraphicsInfo(graphicsId);
     sprite = &gSprites[objectEvent->spriteId];
-    if (graphicsInfo->paletteSlot == PALSLOT_PLAYER)
-        PatchObjectPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
+    oldPaletteNum = sprite->oam.paletteNum;
+    paletteNum = LoadObjectEventPalette(graphicsInfo->paletteTag);
+    if (paletteNum == 0xFF)
+        paletteNum = oldPaletteNum;
 
-    if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
-        LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
-    
     var = sprite->images->size / TILE_SIZE_4BPP;
     if (!sprite->usingSheet)
     {
@@ -2000,7 +1797,9 @@ void ObjectEventSetGraphicsId(struct ObjectEvent *objectEvent, u8 graphicsId)
     sprite->images = graphicsInfo->images;
     sprite->anims = graphicsInfo->anims;
     sprite->subspriteTables = graphicsInfo->subspriteTables;
-    sprite->oam.paletteNum = graphicsInfo->paletteSlot;
+    sprite->oam.paletteNum = paletteNum;
+    if (paletteNum != oldPaletteNum)
+        FreeObjectEventPaletteIfUnused(oldPaletteNum);
     if (!sprite->usingSheet)
     {
         s32 var2;
@@ -2156,18 +1955,125 @@ void FreeAndReserveObjectSpritePalettes(void)
     gReservedSpritePaletteCount = OBJ_PALSLOT_COUNT;
 }
 
-static void LoadObjectEventPalette(u16 paletteTag)
+// Loads an object event palette into any free slot, if it isn't loaded already, and returns its slot.
+// Meant for the field: the palette gets the field tint and the current weather.
+u8 LoadObjectEventPalette(u16 paletteTag)
 {
-    u16 i = FindObjectEventPaletteIndexByTag(paletteTag);
+    u8 i = FindObjectEventPaletteIndexByTag(paletteTag);
 
-#ifdef BUGFIX
-    if (sObjectEventSpritePalettes[i].tag != OBJ_EVENT_PAL_TAG_NONE)
-#else
-    if (i != OBJ_EVENT_PAL_TAG_NONE) // always true
-#endif
+    if (i == 0xFF)
+        return 0xFF;
+    return LoadSpritePaletteInField(&sObjectEventSpritePalettes[i]);
+}
+
+u8 LoadPlayerObjectEventPalette(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_PLAYER_RED);
+    else
+        return LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_PLAYER_GREEN);
+}
+
+static u8 LoadSpritePaletteInField(const struct SpritePalette *spritePalette)
+{
+    u8 paletteNum = IndexOfSpritePaletteTag(spritePalette->tag);
+
+    if (paletteNum != 0xFF)
+        return paletteNum;
+
+    paletteNum = LoadSpritePalette(spritePalette);
+    if (paletteNum != 0xFF)
     {
-        TryLoadObjectPalette(&sObjectEventSpritePalettes[i]);
+        ApplyGlobalFieldPaletteTint(paletteNum);
+        UpdateSpritePaletteWithWeather(paletteNum);
     }
+    return paletteNum;
+}
+
+// Loads the reflection of an object event palette. Reflections on high bridges use a single solid color palette.
+u8 LoadObjectEventReflectionPalette(u16 paletteTag, bool8 onHighBridge, u16 bridgePaletteTag)
+{
+    u32 i;
+    u16 sourceTag = OBJ_EVENT_PAL_TAG_NONE;
+    u16 buffer[16];
+    struct SpritePalette reflectionPalette;
+
+    if (onHighBridge)
+        paletteTag = bridgePaletteTag;
+    reflectionPalette.tag = paletteTag + OBJ_EVENT_PAL_TAG_REFLECTION_OFFSET;
+    i = IndexOfSpritePaletteTag(reflectionPalette.tag);
+    if (i != 0xFF)
+        return i;
+
+    if (onHighBridge)
+    {
+        sourceTag = bridgePaletteTag;
+    }
+    else
+    {
+        for (i = 0; i < ARRAY_COUNT(sObjectEventReflectionPaletteTags); i++)
+        {
+            if (sObjectEventReflectionPaletteTags[i][0] == paletteTag)
+            {
+                sourceTag = sObjectEventReflectionPaletteTags[i][1];
+                break;
+            }
+        }
+    }
+
+    i = FindObjectEventPaletteIndexByTag(sourceTag);
+    if (i != 0xFF)
+    {
+        reflectionPalette.data = sObjectEventSpritePalettes[i].data;
+    }
+    else
+    {
+        // No hand-made reflection, so brighten the palette and give it a blue tint, like the water.
+        const u16 *colors;
+
+        i = FindObjectEventPaletteIndexByTag(paletteTag);
+        if (i == 0xFF)
+            return 0xFF;
+        colors = sObjectEventSpritePalettes[i].data;
+        for (i = 0; i < 16; i++)
+        {
+            u16 color = colors[i];
+            u32 r = GET_R(color) + 8;
+            u32 g = GET_G(color) + 8;
+            u32 b = GET_B(color) + 16;
+            buffer[i] = RGB(min(r, 31), min(g, 31), min(b, 31));
+        }
+        reflectionPalette.data = buffer;
+    }
+    return LoadSpritePaletteInField(&reflectionPalette);
+}
+
+// Frees an object event palette, or the reflection of one, when no sprite uses it anymore.
+void FreeObjectEventPaletteIfUnused(u8 paletteNum)
+{
+    u32 i;
+
+    if (paletteNum >= 16 || (!IsObjectEventPaletteNum(paletteNum) && !IsObjectEventReflectionPaletteNum(paletteNum)))
+        return;
+    for (i = 0; i < MAX_SPRITES; i++)
+    {
+        if (gSprites[i].inUse && gSprites[i].oam.paletteNum == paletteNum)
+            return;
+    }
+    FreeSpritePaletteByTag(GetSpritePaletteTagByPaletteNum(paletteNum));
+}
+
+// Object event palettes (not their reflections) use the alternate weather gamma, like in vanilla.
+bool8 IsObjectEventPaletteNum(u8 paletteNum)
+{
+    u16 tag = GetSpritePaletteTagByPaletteNum(paletteNum);
+    return tag >= OBJ_EVENT_PAL_TAG_PLAYER_RED && tag < OBJ_EVENT_PAL_TAG_NONE;
+}
+
+bool8 IsObjectEventReflectionPaletteNum(u8 paletteNum)
+{
+    u16 tag = GetSpritePaletteTagByPaletteNum(paletteNum) - OBJ_EVENT_PAL_TAG_REFLECTION_OFFSET;
+    return tag >= OBJ_EVENT_PAL_TAG_PLAYER_RED && tag < OBJ_EVENT_PAL_TAG_NONE;
 }
 
 // Unused
@@ -2221,43 +2127,6 @@ static u8 FindObjectEventPaletteIndexByTag(u16 tag)
         }
     }
     return 0xFF;
-}
-
-void LoadPlayerObjectReflectionPalette(u16 tag, u8 slot)
-{
-    u8 i;
-
-    PatchObjectPalette(tag, slot);
-    for (i = 0; gPlayerReflectionPaletteSets[i].tag != OBJ_EVENT_PAL_TAG_NONE; i++)
-    {
-        if (gPlayerReflectionPaletteSets[i].tag == tag)
-        {
-            PatchObjectPalette(gPlayerReflectionPaletteSets[i].data[sCurrentReflectionType], gReflectionEffectPaletteMap[slot]);
-            return;
-        }
-    }
-}
-
-void LoadSpecialObjectReflectionPalette(u16 tag, u8 slot)
-{
-    u8 i;
-
-    sCurrentSpecialObjectPaletteTag = tag;
-    PatchObjectPalette(tag, slot);
-    for (i = 0; gSpecialObjectReflectionPaletteSets[i].tag != OBJ_EVENT_PAL_TAG_NONE; i++)
-    {
-        if (gSpecialObjectReflectionPaletteSets[i].tag == tag)
-        {
-            PatchObjectPalette(gSpecialObjectReflectionPaletteSets[i].data[sCurrentReflectionType], gReflectionEffectPaletteMap[slot]);
-            return;
-        }
-    }
-}
-
-// Unused
-static u8 GetReflectionEffectPaletteSlot(u8 slot)
-{
-    return gReflectionEffectPaletteMap[slot];
 }
 
 // Unused
@@ -2680,38 +2549,11 @@ void TryOverrideObjectEventTemplateCoords(u8 localId, u8 mapNum, u8 mapGroup)
         OverrideTemplateCoordsForObjectEvent(&gObjectEvents[objectEventId]);
 }
 
+// Lays out the vanilla palettes in fixed slots. Only used by the Fame Checker, the overworld loads them dynamically.
 void InitObjectEventPalettes(u8 palSlot)
 {
     FreeAndReserveObjectSpritePalettes();
-    sCurrentSpecialObjectPaletteTag = OBJ_EVENT_PAL_TAG_NONE;
-    sCurrentReflectionType = palSlot;
-    if (palSlot == 1)
-    {
-        PatchObjectPaletteRange(gObjectPaletteTagSets[sCurrentReflectionType], 0, 6);
-        gReservedSpritePaletteCount = 8;
-    }
-    else
-    {
-        PatchObjectPaletteRange(gObjectPaletteTagSets[sCurrentReflectionType], 0, 10);
-    }
-}
-
-u16 GetObjectPaletteTag(u8 palSlot)
-{
-    u8 i;
-
-    if (palSlot < 10)
-    {
-        return gObjectPaletteTagSets[sCurrentReflectionType][palSlot];
-    }
-    for (i = 0; gSpecialObjectReflectionPaletteSets[i].tag != OBJ_EVENT_PAL_TAG_NONE; i++)
-    {
-        if (gSpecialObjectReflectionPaletteSets[i].tag == sCurrentSpecialObjectPaletteTag)
-        {
-            return gSpecialObjectReflectionPaletteSets[i].data[sCurrentReflectionType];
-        }
-    }
-    return OBJ_EVENT_PAL_TAG_NONE;
+    PatchObjectPaletteRange(sObjectPaletteTags0, PALSLOT_PLAYER, PALSLOT_NPC_SPECIAL);
 }
 
 movement_type_empty_callback(MovementType_None)
@@ -9554,7 +9396,7 @@ void SetVirtualObjectGraphics(u8 virtualObjId, u8 direction)
         u16 baseBlock = sprite->oam.tileNum;
         sprite->oam = *info->oam;
         sprite->oam.tileNum = baseBlock;
-        sprite->oam.paletteNum = info->paletteSlot;
+        sprite->oam.paletteNum = LoadObjectEventPalette(info->paletteTag);
         sprite->images = info->images;
         if (info->subspriteTables == NULL)
         {
