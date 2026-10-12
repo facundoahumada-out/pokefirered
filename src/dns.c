@@ -52,23 +52,36 @@ static const u8 sDnsMapExceptions[] =
     MAP_TYPE_SECRET_BASE,
 };
 
+/* Maps that are affected by the DNS even though their map type is in sDnsMapExceptions
+ * (e.g. outdoor maps that are MAP_TYPE_INDOOR for gameplay reasons). */
+static const u16 sDnsForcedMaps[] =
+{
+    MAP_SSANNE_EXTERIOR,
+    MAP_SSANNE_DECK,
+};
+
 /* Maps whose weather changes at night (night hours are the ones of IsDnsNightTime).
- * The night weather is only used between rows minY and maxY (both included, editor coords),
- * so it can be limited to a part of the map. */
+ * The night weather is only used inside the area between minX-maxX and minY-maxY (both included,
+ * editor coords), so it can be limited to a part of the map. Outside that area (or during the day)
+ * the map keeps the weather of its header, which is restored when the player walks out of the area. */
 struct DnsNightWeather
 {
     u16 mapId;
     u8 nightWeather;
+    s16 minX;
+    s16 maxX;
     s16 minY;
     s16 maxY;
 };
 
-#define DNS_WHOLE_MAP 0, 0x7FFF
+#define DNS_WHOLE_RANGE 0, 0x7FFF
+#define DNS_WHOLE_MAP   DNS_WHOLE_RANGE, DNS_WHOLE_RANGE
 
 static const struct DnsNightWeather sDnsNightWeathers[] =
 {
     {MAP_LAVENDER_TOWN, WEATHER_FOG_HORIZONTAL, DNS_WHOLE_MAP},
-    {MAP_ROUTE10,       WEATHER_FOG_HORIZONTAL, 50, 0x7FFF}, // South part, from Rock Tunnel to Lavender Town
+    {MAP_ROUTE10,       WEATHER_FOG_HORIZONTAL, DNS_WHOLE_RANGE, 50, 0x7FFF}, // South part, from Rock Tunnel to Lavender Town
+    {MAP_ROUTE8,        WEATHER_FOG_HORIZONTAL, 58, 0x7FFF, DNS_WHOLE_RANGE}, // East part, next to Lavender Town
 };
 
 /* Palettes affected by the DNS during battles (only the battle terrain, BG 2-4).
@@ -134,10 +147,16 @@ extern const struct Tileset gTileset_General;
  *     { &gTileset_PalletTown, 9, 8, LIGHT_WINDOW_BRIGHT },
  */
 extern const struct Tileset gTileset_CeladonCity;
+extern const struct Tileset gTileset_SSAnne;
 
 static const struct DnsLightColour sDnsLightColours[] =
 {
     { &gTileset_CeladonCity, 10, 9, LIGHT_WINDOW_SHINE }, // White side of the Department Store windows
+    // S.S. Anne deck: the glass of the portholes and the cabin windows uses colours 12-15 of palette 10
+    { &gTileset_SSAnne, 10, 12, LIGHT_WINDOW_DARK },
+    { &gTileset_SSAnne, 10, 13, LIGHT_WINDOW_MID },
+    { &gTileset_SSAnne, 10, 14, LIGHT_WINDOW_BRIGHT },
+    { &gTileset_SSAnne, 10, 15, LIGHT_WINDOW_SHINE },
     {NULL}, // Terminator
 };
 
@@ -311,7 +330,13 @@ static bool8 IsRtcWorking(void)
 static bool8 IsMapDnsException(void)
 {
     u32 i;
+    u16 mapId = (gSaveBlock1Ptr->location.mapGroup << 8) | gSaveBlock1Ptr->location.mapNum;
 
+    for (i = 0; i < ARRAY_COUNT(sDnsForcedMaps); i++)
+    {
+        if (sDnsForcedMaps[i] == mapId)
+            return FALSE;
+    }
     for (i = 0; i < ARRAY_COUNT(sDnsMapExceptions); i++)
     {
         if (gMapHeader.mapType == sDnsMapExceptions[i])
@@ -320,39 +345,61 @@ static bool8 IsMapDnsException(void)
     return FALSE;
 }
 
-static const struct DnsNightWeather *GetCurrentMapNightWeather(void)
+// Night weather entry of the current map, or NULL if the map's weather never changes at night.
+// inArea is set to whether the player is inside the area in which that night weather is used.
+static const struct DnsNightWeather *GetCurrentMapNightWeather(bool8 *inArea)
 {
     u32 i;
     u16 mapId = (gSaveBlock1Ptr->location.mapGroup << 8) | gSaveBlock1Ptr->location.mapNum;
-
+    s16 x = gSaveBlock1Ptr->pos.x;
     s16 y = gSaveBlock1Ptr->pos.y;
+    const struct DnsNightWeather *mapEntry = NULL;
 
+    // When crossing a map connection, the new map is loaded while the player is still one step
+    // outside of it, so the position is clamped to the first row/column the player is walking into.
+    // Otherwise the night weather would start fading out right after entering from another map.
+    if (gMapHeader.mapLayout != NULL)
+    {
+        x = max(0, min(x, gMapHeader.mapLayout->width - 1));
+        y = max(0, min(y, gMapHeader.mapLayout->height - 1));
+    }
+
+    *inArea = FALSE;
     for (i = 0; i < ARRAY_COUNT(sDnsNightWeathers); i++)
     {
-        if (sDnsNightWeathers[i].mapId == mapId && y >= sDnsNightWeathers[i].minY && y <= sDnsNightWeathers[i].maxY)
-            return &sDnsNightWeathers[i];
+        if (sDnsNightWeathers[i].mapId != mapId)
+            continue;
+        mapEntry = &sDnsNightWeathers[i];
+        if (x >= mapEntry->minX && x <= mapEntry->maxX && y >= mapEntry->minY && y <= mapEntry->maxY)
+        {
+            *inArea = TRUE;
+            return mapEntry;
+        }
     }
-    return NULL;
+    return mapEntry;
 }
 
 // Weather of the current map for the current time, given the weather of its map header.
 u8 GetDnsMapWeather(u8 headerWeather)
 {
-    const struct DnsNightWeather *nightWeather = GetCurrentMapNightWeather();
+    bool8 inArea;
+    const struct DnsNightWeather *nightWeather = GetCurrentMapNightWeather(&inArea);
 
-    if (nightWeather == NULL || !IsRtcWorking())
+    if (nightWeather == NULL || !inArea || !IsRtcWorking())
         return headerWeather;
 
     RtcCalcLocalTime();
     return IsDnsNightTime() ? nightWeather->nightWeather : headerWeather;
 }
 
-// Switches between the day and night weather when the time changes while the player is in the map.
+// Switches between the day and night weather when the time changes while the player is in the map,
+// or when the player walks in or out of the area of the night weather.
 // The weather is only changed if it is still the map's day or night weather, so a weather set
 // by a script is kept.
 static void UpdateNightWeather(void)
 {
-    const struct DnsNightWeather *nightWeather = GetCurrentMapNightWeather();
+    bool8 inArea;
+    const struct DnsNightWeather *nightWeather = GetCurrentMapNightWeather(&inArea);
     u8 weather;
 
     if (nightWeather == NULL
@@ -361,7 +408,7 @@ static void UpdateNightWeather(void)
      || gWeatherPtr->palProcessingState != WEATHER_PAL_STATE_IDLE)
         return;
 
-    weather = IsDnsNightTime() ? nightWeather->nightWeather : gMapHeader.weather;
+    weather = (inArea && IsDnsNightTime()) ? nightWeather->nightWeather : gMapHeader.weather;
     if (GetSav1Weather() != weather
      && (GetSav1Weather() == gMapHeader.weather || GetSav1Weather() == nightWeather->nightWeather))
     {
