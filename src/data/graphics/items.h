@@ -202,6 +202,8 @@ const u32 gItemIcon_Magmarizer[] = INCBIN_U32("graphics/items/icons/magmarizer.4
 const u32 gItemIconPalette_Magmarizer[] = INCBIN_U32("graphics/items/icon_palettes/magmarizer.gbapal.lz");
 const u32 gItemIcon_DubiousDisc[] = INCBIN_U32("graphics/items/icons/dubious_disc.4bpp.lz");
 const u32 gItemIconPalette_DubiousDisc[] = INCBIN_U32("graphics/items/icon_palettes/dubious_disc.gbapal.lz");
+const u32 gItemIcon_Eviolite[] = INCBIN_U32("graphics/items/icons/eviolite.4bpp.lz");
+const u32 gItemIconPalette_Eviolite[] = INCBIN_U32("graphics/items/icon_palettes/eviolite.gbapal.lz");
 
 const u32 gItemIcon_MoonStone[] = INCBIN_U32("graphics/items/icons/moon_stone.4bpp.lz");
 const u32 gItemIconPalette_MoonStone[] = INCBIN_U32("graphics/items/icon_palettes/moon_stone.gbapal.lz");

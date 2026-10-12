@@ -428,6 +428,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_ELECTIRIZER]    = {gItemIcon_Electirizer, gItemIconPalette_Electirizer},
     [ITEM_MAGMARIZER]     = {gItemIcon_Magmarizer, gItemIconPalette_Magmarizer},
     [ITEM_DUBIOUS_DISC]   = {gItemIcon_DubiousDisc, gItemIconPalette_DubiousDisc},
+    [ITEM_EVIOLITE]       = {gItemIcon_Eviolite, gItemIconPalette_Eviolite},
     // Return to field arrow
     [ITEMS_COUNT]         = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

@@ -480,7 +480,9 @@
 #define ITEM_MAGMARIZER 402
 #define ITEM_DUBIOUS_DISC 403
 
-#define ITEMS_COUNT 404
+#define ITEM_EVIOLITE 404
+
+#define ITEMS_COUNT 405
 
 #define ITEM_TO_BERRY(itemId)(((itemId - FIRST_BERRY_INDEX) + 1))
 #define MAIL_NONE 0xFF

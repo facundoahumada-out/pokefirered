@@ -3122,6 +3122,8 @@ extern const u32 gItemIcon_Magmarizer[];
 extern const u32 gItemIconPalette_Magmarizer[];
 extern const u32 gItemIcon_DubiousDisc[];
 extern const u32 gItemIconPalette_DubiousDisc[];
+extern const u32 gItemIcon_Eviolite[];
+extern const u32 gItemIconPalette_Eviolite[];
 extern const u32 gItemIcon_MoonStone[];
 extern const u32 gItemIconPalette_MoonStone[];
 extern const u32 gItemIcon_FireStone[];

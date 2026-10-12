@@ -2501,6 +2501,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         spAttack *= 2;
     if (defenderHoldEffect == HOLD_EFFECT_METAL_POWDER && defender->species == SPECIES_DITTO)
         defense *= 2;
+    if (defenderHoldEffect == HOLD_EFFECT_EVIOLITE && gEvolutionTable[defender->species][0].method != 0)
+    {
+        defense = (defense * (defenderHoldEffectParam + 100)) / 100;
+        spDefense = (spDefense * (defenderHoldEffectParam + 100)) / 100;
+    }
     if (attackerHoldEffect == HOLD_EFFECT_THICK_CLUB && (attacker->species == SPECIES_CUBONE || attacker->species == SPECIES_MAROWAK))
         attack *= 2;
     if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))

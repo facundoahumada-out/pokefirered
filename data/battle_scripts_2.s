@@ -75,6 +75,11 @@ BattleScript_SuccessBallThrow::
 	incrementgamestat GAME_STAT_POKEMON_CAPTURES
 BattleScript_SafariNoIncGameStat::
 	printstring STRINGID_GOTCHAPKMNCAUGHT
+	jumpifbattletype BATTLE_TYPE_OLD_MAN_TUTORIAL | BATTLE_TYPE_POKEDUDE, BattleScript_CaughtPokemonSkipExp
+	setbyte sGIVEEXP_STATE, 0
+	getexp BS_TARGET
+	sethword gBattle_BG2_X, 0
+BattleScript_CaughtPokemonSkipExp::
 	trysetcaughtmondexflags BattleScript_CaughtPokemonSkipNewDex
 	printstring STRINGID_PKMNDATAADDEDTODEX
 	waitstate
