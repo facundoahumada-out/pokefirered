@@ -8,11 +8,8 @@
 
 enum
 {
-    TIME_MIDNIGHT,
-    TIME_DAWN,
     TIME_DAY,
-    TIME_SUNSET,
-    TIME_NIGHTFALL,
+    TIME_AFTERNOON,
     TIME_NIGHT,
 };
 

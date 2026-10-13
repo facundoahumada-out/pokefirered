@@ -84,17 +84,26 @@ PalletTown_Text_MomDontGoOut::
 
 PalletTown_Text_MomGiveRunningShoes::
 # 85 "data/maps/PalletTown/text.pory"
-	.string "Mom: Wow! You and your Pokémon\n"
-	.string "make a great team!\p"
-	.string "Now that you have your Pokédex\n"
+	.string "Mom: Wow, sweetheart! You and\n"
+	.string "your Pokémon make a great team!\p"
+	.string "Now that you have your Pokédex,\n"
 	.string "your adventure is just beginning!\p"
 	.string "Here, take these Running Shoes\n"
-	.string "with you. They'll be very useful\n"
+	.string "with you. They'll be very useful\l"
 	.string "on your journey.$"
 
-PalletTown_Text_MomGiveRunningShoes2::
+PalletTown_Text_ReceivedRunningShoesFromMom::
 # 95 "data/maps/PalletTown/text.pory"
-	.string "Mom: And don't forget to wear them!\n"
-	.string "They're essential for every Trainer!\p"
-	.string "Come home every now and then and\n"
-	.string "show me how you're doing!$"
+	.string "{PLAYER} received a pair of\n"
+	.string "Running Shoes from Mom!$"
+
+PalletTown_Text_MomGiveRunningShoes2::
+# 100 "data/maps/PalletTown/text.pory"
+	.string "Mom: To use them, simply press B\n"
+	.string "while moving to get where\l"
+	.string "you want.\p"
+	.string "And don't forget to wear them!\n"
+	.string "They're essential for every\l"
+	.string "Trainer!\p"
+	.string "Come home from time to time\n"
+	.string "and show me how you're doing!$"

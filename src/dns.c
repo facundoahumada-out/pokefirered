@@ -28,17 +28,17 @@
  /*********    Day and Night Configuration     **********/
 /*******************************************************/
 
-/* End hours for each of the timelapses */
-#define MIDNIGHT_END_HOUR   7       // 00 - 07
-#define DAWN_END_HOUR       8       // 07 - 08
-#define DAY_END_HOUR        19      // 08 - 19
-#define SUNSET_END_HOUR     20      // 19 - 20
-#define NIGHTFALL_END_HOUR  21      // 20 - 21
-                                    // 21 - 00 is TIME_NIGHT
+/* Start hours for each of the timelapses */
+#define DAY_START_HOUR          7   // 07 - 17 is TIME_DAY
+#define AFTERNOON_START_HOUR    17  // 17 - 20 is TIME_AFTERNOON
+#define NIGHT_START_HOUR        20  // 20 - 07 is TIME_NIGHT
+
+/* When a timelapse starts, the colours change gradually from the previous one during these minutes. */
+#define TRANSITION_MINUTES      30
 
 /* Hours in which the lights (e.g. house windows) are on. */
-#define LIGHTS_START_HOUR   SUNSET_END_HOUR
-#define LIGHTS_END_HOUR     MIDNIGHT_END_HOUR
+#define LIGHTS_START_HOUR   NIGHT_START_HOUR
+#define LIGHTS_END_HOUR     DAY_START_HOUR
 
 /* How often (in frames) the RTC is read to refresh the time. */
 #define RTC_REFRESH_FRAMES  60
@@ -58,6 +58,8 @@ static const u16 sDnsForcedMaps[] =
 {
     MAP_SSANNE_EXTERIOR,
     MAP_SSANNE_DECK,
+    MAP_CELADON_CITY_DEPARTMENT_STORE_ROOF,
+    MAP_CELADON_CITY_CONDOMINIUMS_ROOF,
 };
 
 /* Maps whose weather changes at night (night hours are the ones of IsDnsNightTime).
@@ -101,6 +103,9 @@ static const bool8 sBattleDnsPalettes[32] =
 #define LIGHT_WINDOW_BRIGHT RGB2(31, 28, 16)
 #define LIGHT_WINDOW_SHINE  RGB2(31, 30, 21)
 #define LIGHT_WINDOW_WHITE  RGB2(31, 31, 27)
+
+/* Colour of the sky seen from the rooftops at night. */
+#define NIGHT_SKY           RGB2(2, 3, 9)
 
 /* Gradient used to light the glass: each glass colour gets a light interpolated
  * between these points depending on its brightness during the day (R + G + B, 0-93).
@@ -148,6 +153,9 @@ extern const struct Tileset gTileset_General;
  */
 extern const struct Tileset gTileset_CeladonCity;
 extern const struct Tileset gTileset_SSAnne;
+extern const struct Tileset gTileset_PalletTown;
+extern const struct Tileset gTileset_DepartmentStore;
+extern const struct Tileset gTileset_Condominiums;
 
 static const struct DnsLightColour sDnsLightColours[] =
 {
@@ -157,141 +165,56 @@ static const struct DnsLightColour sDnsLightColours[] =
     { &gTileset_SSAnne, 10, 13, LIGHT_WINDOW_MID },
     { &gTileset_SSAnne, 10, 14, LIGHT_WINDOW_BRIGHT },
     { &gTileset_SSAnne, 10, 15, LIGHT_WINDOW_SHINE },
+    // Pallet Town street lamp: colours 8-10 of the glass palette, lit with the same shades as
+    // the window glass colours 1-3 (instead of the ones their brightness would give them)
+    { &gTileset_PalletTown, GLASS_PALETTE, 8, LIGHT_WINDOW_SHINE },
+    { &gTileset_PalletTown, GLASS_PALETTE, 9, LIGHT_WINDOW_BRIGHT },
+    { &gTileset_PalletTown, GLASS_PALETTE, 10, LIGHT_WINDOW_MID },
+    // Celadon Department Store roof: glass of the windows of the facade (colours 13-15 and the white reflection 11 of palette 9)
+    { &gTileset_DepartmentStore, 9, 13, LIGHT_WINDOW_MID },
+    { &gTileset_DepartmentStore, 9, 14, LIGHT_WINDOW_BRIGHT },
+    { &gTileset_DepartmentStore, 9, 15, LIGHT_WINDOW_SHINE },
+    { &gTileset_DepartmentStore, 9, 11, LIGHT_WINDOW_WHITE },
+    // Celadon Department Store roof: the sky around the building is colour 9 of Building's palette 0.
+    // It's keyed on the secondary tileset so it doesn't affect other maps that use Building.
+    { &gTileset_DepartmentStore, 0, 9, NIGHT_SKY },
+    // Celadon Condominiums roof: glass of the windows of the facade (colours 11-12 of palette 2)
+    { &gTileset_Condominiums, 2, 12, LIGHT_WINDOW_MID },
+    { &gTileset_Condominiums, 2, 11, LIGHT_WINDOW_SHINE },
+    // Celadon Condominiums roof: the sky uses colour 9 of palette 10 (only used by the sky tiles, so the
+    // planters, which use the same blue of Building's palette 0, aren't darkened)
+    { &gTileset_Condominiums, 10, 9, NIGHT_SKY },
     {NULL}, // Terminator
 };
 
   /*******************************************************/
  /*************    DNS Colour Filters     ***************/
 /*******************************************************/
-/* Filters are 15-bit RGB colours. Each channel of the  *
- * original colour is reduced proportionally:           *
- *     out = colour * (32 - filter) / 32                *
- * so a filter of 0 leaves the colour untouched and     *
- * higher values darken that channel more.              */
+/* Each channel (R, G, B) of a colour is changed as:    *
+ *     out = in * mul / 256 + add                       *
+ * using 8-bit colour values (0-255), then clamped.     *
+ * {256, 0} leaves the channel untouched.               */
 
-/* 00:00 - 01:00 cycles every 8 minutes, 01:00 - 07:00 uses the last one. */
-static const u16 sMidnightFilters[] =
+struct DnsChannelTint
 {
-    RGB2(14, 14, 6),
-    RGB2(14, 14, 7),
-    RGB2(14, 14, 8),
-    RGB2(15, 15, 8),
-    RGB2(15, 15, 9),
-    RGB2(15, 15, 9),
-    RGB2(16, 16, 9),
-    RGB2(16, 16, 10),
+    s16 mul;
+    s16 add;
 };
 
-/* 07:00 - 08:00, cycles every 2 minutes. */
-static const u16 sDawnFilters[] =
+struct DnsTint
 {
-    RGB2(15, 15, 10),
-    RGB2(15, 15, 10),
-    RGB2(14, 14, 10),
-    RGB2(13, 13, 10),
-    RGB2(12, 12, 10),
-    RGB2(11, 11, 10),
-    RGB2(10, 10, 10),
-    RGB2(9, 9, 10),
-    RGB2(8, 8, 10),
-    RGB2(8, 8, 11),
-    RGB2(7, 7, 11),
-    RGB2(6, 6, 11),
-    RGB2(5, 5, 11),
-    RGB2(4, 4, 11),
-    RGB2(3, 3, 11),
-    RGB2(2, 2, 11),
-    RGB2(1, 1, 11),
-    RGB2(0, 0, 11),
-    RGB2(0, 0, 10),
-    RGB2(0, 0, 9),
-    RGB2(0, 0, 8),
-    RGB2(0, 0, 7),
-    RGB2(0, 0, 6),
-    RGB2(0, 0, 5),
-    RGB2(0, 0, 4),
-    RGB2(0, 0, 3),
-    RGB2(0, 0, 2),
-    RGB2(0, 0, 1),
-    RGB2(0, 0, 0),
-    RGB2(0, 0, 0),
+    struct DnsChannelTint r, g, b;
 };
 
-/* 08:00 - 19:00 */
-static const u16 sDayFilter = RGB2(0, 0, 0);
-
-/* 19:00 - 20:00, cycles every 2 minutes. */
-static const u16 sSunsetFilters[] =
+static const struct DnsTint sDnsTints[] =
 {
-    RGB2(0, 0, 1),
-    RGB2(0, 1, 1),
-    RGB2(0, 1, 2),
-    RGB2(0, 1, 3),
-    RGB2(0, 2, 3),
-    RGB2(0, 2, 4),
-    RGB2(0, 2, 5),
-    RGB2(0, 3, 5),
-    RGB2(0, 3, 6),
-    RGB2(0, 3, 7),
-    RGB2(0, 4, 7),
-    RGB2(0, 4, 8),
-    RGB2(0, 4, 9),
-    RGB2(0, 5, 9),
-    RGB2(0, 5, 10),
-    RGB2(0, 5, 11),
-    RGB2(0, 6, 11),
-    RGB2(0, 6, 12),
-    RGB2(0, 6, 13),
-    RGB2(0, 7, 13),
-    RGB2(0, 7, 14),
-    RGB2(0, 7, 14),
-    RGB2(0, 8, 14),
-    RGB2(0, 9, 14),
-    RGB2(0, 10, 14),
-    RGB2(0, 11, 14),
-    RGB2(0, 12, 14),
-    RGB2(0, 13, 14),
-    RGB2(0, 14, 14),
-    RGB2(0, 14, 14),
+    // Day: no filter
+    [TIME_DAY] =       { .r = {256, 0},   .g = {256, 0},   .b = {256, 0} },
+    // Afternoon: warm orange light, more red and less green and blue
+    [TIME_AFTERNOON] = { .r = {244, 30},  .g = {244, -30}, .b = {228, -48} },
+    // Night: dark blue, the colour is darkened proportionally (less red and green than blue)
+    [TIME_NIGHT] =     { .r = {144, 0},   .g = {144, 0},   .b = {208, 0} },
 };
-
-/* 20:00 - 21:00, cycles every 2 minutes. */
-static const u16 sNightfallFilters[] =
-{
-    RGB2(0, 14, 14),
-    RGB2(0, 14, 14),
-    RGB2(0, 14, 13),
-    RGB2(0, 14, 12),
-    RGB2(0, 14, 11),
-    RGB2(0, 14, 10),
-    RGB2(1, 14, 10),
-    RGB2(1, 14, 9),
-    RGB2(0, 14, 8),
-    RGB2(1, 14, 7),
-    RGB2(1, 14, 6),
-    RGB2(2, 14, 6),
-    RGB2(2, 14, 5),
-    RGB2(2, 14, 4),
-    RGB2(2, 14, 3),
-    RGB2(2, 14, 2),
-    RGB2(2, 14, 2),
-    RGB2(3, 14, 3),
-    RGB2(4, 14, 4),
-    RGB2(5, 14, 5),
-    RGB2(6, 14, 6),
-    RGB2(7, 14, 6),
-    RGB2(8, 14, 6),
-    RGB2(9, 14, 6),
-    RGB2(10, 14, 6),
-    RGB2(11, 14, 6),
-    RGB2(12, 14, 6),
-    RGB2(13, 14, 6),
-    RGB2(14, 14, 6),
-    RGB2(14, 14, 6),
-};
-
-/* 21:00 - 00:00 */
-static const u16 sNightFilter = RGB2(14, 14, 6);
 
 /***********************************************
  * --------- DNS CONFIGURATION END ----------- *
@@ -313,6 +236,7 @@ static EWRAM_DATA bool8 sLightsInBuffers = FALSE;
 static EWRAM_DATA const u16 *sGlassPalette = NULL;
 static EWRAM_DATA u16 sGlassLightColours[16] = {0};
 static EWRAM_DATA u8 sRtcRefreshTimer = 0;
+// Timelapse and transition step of the current filter (see GetDnsFilter)
 static EWRAM_DATA u16 sCurrentFilter = 0;
 static EWRAM_DATA bool8 sFilterLutsReady = FALSE;
 // Per-channel lookup tables for the current filter, already shifted into place
@@ -419,16 +343,12 @@ static void UpdateNightWeather(void)
 
 u8 GetDnsTimeLapse(u8 hour)
 {
-    if (hour < MIDNIGHT_END_HOUR)
-        return TIME_MIDNIGHT;
-    else if (hour < DAWN_END_HOUR)
-        return TIME_DAWN;
-    else if (hour < DAY_END_HOUR)
+    if (hour < DAY_START_HOUR)
+        return TIME_NIGHT;
+    else if (hour < AFTERNOON_START_HOUR)
         return TIME_DAY;
-    else if (hour < SUNSET_END_HOUR)
-        return TIME_SUNSET;
-    else if (hour < NIGHTFALL_END_HOUR)
-        return TIME_NIGHTFALL;
+    else if (hour < NIGHT_START_HOUR)
+        return TIME_AFTERNOON;
     else
         return TIME_NIGHT;
 }
@@ -441,7 +361,7 @@ u8 GetCurrentDnsTimeLapse(void)
 // Night for gameplay purposes (e.g. Umbreon), matching the hours in which the map looks dark.
 bool8 IsDnsNightTime(void)
 {
-    return gLocalTime.hours >= SUNSET_END_HOUR || gLocalTime.hours < MIDNIGHT_END_HOUR;
+    return GetDnsTimeLapse(gLocalTime.hours) == TIME_NIGHT;
 }
 
 bool8 IsDnsLightTime(void)
@@ -449,43 +369,64 @@ bool8 IsDnsLightTime(void)
     return gLocalTime.hours >= LIGHTS_START_HOUR || gLocalTime.hours < LIGHTS_END_HOUR;
 }
 
+// The filter is identified by its timelapse (high byte) and how far into the transition from the
+// previous timelapse it is (low byte, 0 to TRANSITION_MINUTES).
+#define FILTER_ID(timeLapse, step)  (((timeLapse) << 8) | (step))
+#define DAY_FILTER                  FILTER_ID(TIME_DAY, TRANSITION_MINUTES)
+
 static u16 GetDnsFilter(void)
 {
     u8 hour = gLocalTime.hours;
-    u8 minutes = gLocalTime.minutes;
+    u8 timeLapse = GetDnsTimeLapse(hour);
+    u32 minutesIn;
 
-    switch (GetDnsTimeLapse(hour))
+    switch (timeLapse)
     {
-    case TIME_MIDNIGHT:
-        if (hour < 1)
-            return sMidnightFilters[minutes >> 3];
-        return sMidnightFilters[ARRAY_COUNT(sMidnightFilters) - 1];
-    case TIME_DAWN:
-        return sDawnFilters[minutes >> 1];
     case TIME_DAY:
-        return sDayFilter;
-    case TIME_SUNSET:
-        return sSunsetFilters[minutes >> 1];
-    case TIME_NIGHTFALL:
-        return sNightfallFilters[minutes >> 1];
+        minutesIn = (hour - DAY_START_HOUR) * 60;
+        break;
+    case TIME_AFTERNOON:
+        minutesIn = (hour - AFTERNOON_START_HOUR) * 60;
+        break;
     case TIME_NIGHT:
     default:
-        return sNightFilter;
+        minutesIn = ((hour + 24 - NIGHT_START_HOUR) % 24) * 60;
+        break;
     }
+    minutesIn += gLocalTime.minutes;
+    return FILTER_ID(timeLapse, min(minutesIn, TRANSITION_MINUTES));
+}
+
+static s32 BlendTintValue(s32 from, s32 to, u32 step)
+{
+    return (from * (TRANSITION_MINUTES - (s32)step) + to * (s32)step) / TRANSITION_MINUTES;
+}
+
+static u32 ApplyChannelTint(const struct DnsChannelTint *from, const struct DnsChannelTint *to, u32 step, u32 value)
+{
+    s32 colour = value << 3; // 5-bit to 8-bit
+
+    colour = ((colour * BlendTintValue(from->mul, to->mul, step)) >> 8) + BlendTintValue(from->add, to->add, step);
+    if (colour < 0)
+        colour = 0;
+    else if (colour > 255)
+        colour = 255;
+    return colour >> 3;
 }
 
 static void BuildFilterLuts(u16 filter)
 {
     u32 i;
-    u32 r = 32 - (filter & 0x1F);
-    u32 g = 32 - ((filter >> 5) & 0x1F);
-    u32 b = 32 - ((filter >> 10) & 0x1F);
+    u32 timeLapse = filter >> 8;
+    u32 step = filter & 0xFF;
+    const struct DnsTint *to = &sDnsTints[timeLapse];
+    const struct DnsTint *from = &sDnsTints[timeLapse == TIME_DAY ? TIME_NIGHT : timeLapse - 1];
 
     for (i = 0; i < 32; i++)
     {
-        sFilterLutR[i] = (i * r) >> 5;
-        sFilterLutG[i] = ((i * g) >> 5) << 5;
-        sFilterLutB[i] = ((i * b) >> 5) << 10;
+        sFilterLutR[i] = ApplyChannelTint(&from->r, &to->r, step, i);
+        sFilterLutG[i] = ApplyChannelTint(&from->g, &to->g, step, i) << 5;
+        sFilterLutB[i] = ApplyChannelTint(&from->b, &to->b, step, i) << 10;
     }
     sCurrentFilter = filter;
     sFilterLutsReady = TRUE;
@@ -544,7 +485,7 @@ void DnsUpdate(void)
         UpdateLightsForTime();
 
     // The lights are already in the palette buffers, so they don't need the filter to show up.
-    sDnsActive = (filter != 0);
+    sDnsActive = (filter != DAY_FILTER);
 }
 
 // Only the overworld and the battle scene are tinted, menus opened from them (bag, party...) are not.
@@ -652,6 +593,7 @@ static void WriteLightColour(u32 offset, u16 colour)
 static void SetLightsInBuffers(const struct MapLayout *mapLayout, bool8 lightsOn)
 {
     const struct DnsLightColour *light;
+    const struct Tileset *paletteTileset;
     u32 i;
 
     sLightsInBuffers = FALSE;
@@ -671,8 +613,13 @@ static void SetLightsInBuffers(const struct MapLayout *mapLayout, bool8 lightsOn
     for (light = sDnsLightColours; light->tileset != NULL; light++)
     {
         if (light->tileset == mapLayout->primaryTileset || light->tileset == mapLayout->secondaryTileset)
+        {
+            // The entry's tileset may not be the one that owns the palette (e.g. a primary palette colour
+            // only lit in the maps of a secondary tileset), so the original colour is taken from the owner.
+            paletteTileset = light->paletteNum < NUM_PALS_IN_PRIMARY ? mapLayout->primaryTileset : mapLayout->secondaryTileset;
             WriteLightColour(BG_PLTT_ID(light->paletteNum) + light->colourNum,
-                             lightsOn ? light->lightColour : light->tileset->palettes[light->paletteNum][light->colourNum]);
+                             lightsOn ? light->lightColour : paletteTileset->palettes[light->paletteNum][light->colourNum]);
+        }
     }
     sLightsInBuffers = lightsOn;
 }

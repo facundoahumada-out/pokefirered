@@ -141,43 +141,33 @@ text PewterCity_Text_MonsWillUseHeldBerriesOnTheirOwn {
 }
 
 text PewterCity_Text_OhPlayer {
-    "Oh, {PLAYER}{KUN}!$"
+    "Hi, {PLAYER}!$"
 }
 
 text PewterCity_Text_AskedToDeliverThis {
-    "I'm glad I caught up to you.\n"
-    "I'm Prof. Oak's Aide.\p"
-    "I've been asked to deliver this,\n"
-    "so here you go.$"
-}
-
-text PewterCity_Text_ReceivedRunningShoesFromAide {
-    "{PLAYER} received the\n"
-    "Running Shoes from the Aide.$"
-}
-
-text PewterCity_Text_SwitchedShoesWithRunningShoes {
-    "{PLAYER} switched shoes with the\n"
-    "Running Shoes.$"
-}
-
-text PewterCity_Text_ExplainRunningShoes {
-    "Press the B Button to run.\n"
-    "But only where there's room to run!$"
+    "Congratulations on earning your\n"
+    "first Badge!\p"
+    "I'm one of Prof. Oak's aides.\p"
+    "I was asked to give you\n"
+    "something. Here you go.$"
 }
 
 text PewterCity_Text_MustBeGoingBackToLab {
-    "Well, I must be going back to\n"
+    "Well, I have to get back to\n"
     "the Lab.\p"
-    "Bye-bye!$"
+    "See you later!$"
 }
 
-text PewterCity_Text_RunningShoesLetterFromMom {
-    "There's a letter attached…\p"
-    "Dear {PLAYER},\p"
-    "Here is a pair of Running Shoes\n"
-    "for my beloved challenger.\p"
-    "Remember, I'll always cheer for\n"
-    "you! Don't ever give up!\p"
-    "From Mom$"
+text PewterCity_Text_LuckyEggLetterFromMom {
+    "It comes with a little note\n"
+    "from your Mom…\p"
+    "{PLAYER}, sweetheart:\p"
+    "Here's a Lucky Egg, brave\n"
+    "little one.\p"
+    "It'll help you raise the new\n"
+    "friends you'll catch along\l"
+    "the way.\p"
+    "Good luck, and take good care\n"
+    "of them!\p"
+    "Mom$"
 }

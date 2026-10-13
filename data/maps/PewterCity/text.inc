@@ -141,42 +141,32 @@ PewterCity_Text_MonsWillUseHeldBerriesOnTheirOwn::
 
 PewterCity_Text_OhPlayer::
 # 143 "data/maps/PewterCity/text.pory"
-	.string "Oh, {PLAYER}{KUN}!$"
+	.string "Hi, {PLAYER}!$"
 
 PewterCity_Text_AskedToDeliverThis::
 # 147 "data/maps/PewterCity/text.pory"
-	.string "I'm glad I caught up to you.\n"
-	.string "I'm Prof. Oak's Aide.\p"
-	.string "I've been asked to deliver this,\n"
-	.string "so here you go.$"
-
-PewterCity_Text_ReceivedRunningShoesFromAide::
-# 154 "data/maps/PewterCity/text.pory"
-	.string "{PLAYER} received the\n"
-	.string "Running Shoes from the Aide.$"
-
-PewterCity_Text_SwitchedShoesWithRunningShoes::
-# 159 "data/maps/PewterCity/text.pory"
-	.string "{PLAYER} switched shoes with the\n"
-	.string "Running Shoes.$"
-
-PewterCity_Text_ExplainRunningShoes::
-# 164 "data/maps/PewterCity/text.pory"
-	.string "Press the B Button to run.\n"
-	.string "But only where there's room to run!$"
+	.string "Congratulations on earning your\n"
+	.string "first Badge!\p"
+	.string "I'm one of Prof. Oak's aides.\p"
+	.string "I was asked to give you\n"
+	.string "something. Here you go.$"
 
 PewterCity_Text_MustBeGoingBackToLab::
-# 169 "data/maps/PewterCity/text.pory"
-	.string "Well, I must be going back to\n"
+# 155 "data/maps/PewterCity/text.pory"
+	.string "Well, I have to get back to\n"
 	.string "the Lab.\p"
-	.string "Bye-bye!$"
+	.string "See you later!$"
 
-PewterCity_Text_RunningShoesLetterFromMom::
-# 175 "data/maps/PewterCity/text.pory"
-	.string "There's a letter attached…\p"
-	.string "Dear {PLAYER},\p"
-	.string "Here is a pair of Running Shoes\n"
-	.string "for my beloved challenger.\p"
-	.string "Remember, I'll always cheer for\n"
-	.string "you! Don't ever give up!\p"
-	.string "From Mom$"
+PewterCity_Text_LuckyEggLetterFromMom::
+# 161 "data/maps/PewterCity/text.pory"
+	.string "It comes with a little note\n"
+	.string "from your Mom…\p"
+	.string "{PLAYER}, sweetheart:\p"
+	.string "Here's a Lucky Egg, brave\n"
+	.string "little one.\p"
+	.string "It'll help you raise the new\n"
+	.string "friends you'll catch along\l"
+	.string "the way.\p"
+	.string "Good luck, and take good care\n"
+	.string "of them!\p"
+	.string "Mom$"

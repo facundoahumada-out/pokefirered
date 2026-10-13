@@ -13,7 +13,14 @@ script PalletTown_OnTransition {
     call_if_set(FLAG_PALLET_LADY_NOT_BLOCKING_SIGN, PalletTown_EventScript_TryReadySignLady)
     call_if_eq(VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 0, PalletTown_EventScript_SetSignLadyPos)
     call_if_eq(VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1, PalletTown_EventScript_SetSignLadyDone)
+    setflag(FLAG_HIDE_MOM)
+    call_if_eq(VAR_MOM_SHOES, 1, PalletTown_EventScript_ShowMomAtExit)
     end
+}
+
+script PalletTown_EventScript_ShowMomAtExit {
+    clearflag(FLAG_HIDE_MOM)
+    return
 }
 
 script PalletTown_EventScript_TryReadySignLady {
@@ -466,6 +473,8 @@ script PalletTown_EventScript_FatMan {
     msgbox(PalletTown_Text_CanStoreItemsAndMonsInPC, MSGBOX_NPC)
     additem(ITEM_HM09_ROCK_CLIMB)
     setvar(VAR_MOM_SHOES, 1)
+    clearflag(FLAG_HIDE_MOM)
+    addobject(LOCALID_PALLET_MOM)
     additem(ITEM_ADAMANT_MINT)
     additem(ITEM_BOLD_MINT)
     additem(ITEM_BRAVE_MINT)
@@ -500,6 +509,11 @@ script PalletTown_EventScript_FatMan {
     additem(ITEM_ELECTIRIZER)
     additem(ITEM_MAGMARIZER)
     additem(ITEM_DUBIOUS_DISC)
+    additem(ITEM_BICYCLE)
+    setflag(FLAG_GOT_BICYCLE)
+    special(ForcePlayerOntoBike)
+    warp(MAP_ROUTE17, 2, 19)
+    waitstate
     release
     end
 }
@@ -570,122 +584,131 @@ script PalletTown_EventScript_SignLadyStartShowSign {
     end
 }
 
-script PalletTown_EventScript_TriggerMomGiveRunningShoes_left {
-    lockall
-    setvar(VAR_TEMP_4, 0)
-    call(PalletTown_EventScript_VarMomGiveRunningShoes)
-    releaseall
-    end
-}
-
-script PalletTown_EventScript_TriggerMomGiveRunningShoes_right {
-    lockall
-    setvar(VAR_TEMP_4, 1)
-    call(PalletTown_EventScript_VarMomGiveRunningShoes)
-    releaseall
-    end
-}
-
-script PalletTown_EventScript_VarMomGiveRunningShoes {
-    lockall
-    goto_if_eq(VAR_MOM_SHOES, 1, PalletTown_EventScript_TriggerMomGiveRunningShoes)
-    releaseall
-    end
-}
-
 script PalletTown_EventScript_TriggerMomGiveRunningShoes {
     lockall
-    // playse SE_RS_DOOR
-    opendoor(6, 7)
-    waitdooranim
-    addobject(LOCALID_PALLET_MOM)
-    closedoor(6, 7)
-    waitdooranim
-    playse(SE_PIN)
-    waitse
+    setvar(VAR_TEMP_4, 0)
     textcolor(NPC_TEXT_COLOR_FEMALE)
-    message(PalletTown_Text_MomDontGoOut)
-    applymovement(LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown)
+    applymovement(LOCALID_PALLET_MOM, Common_Movement_WalkInPlaceFasterLeft)
+    applymovement(LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight)
     waitmovement(0)
+    waitse
     playse(SE_PIN)
-    applymovement(LOCALID_PLAYER, Common_Movement_ExclamationMark)
+    applymovement(LOCALID_PALLET_MOM, Common_Movement_ExclamationMark)
     waitmovement(0)
-    delay(30)
-    goto_if_eq(VAR_TEMP_4, 0, PalletTown_EventScript_MomGiveRunningShoesMoveLeft)
-    goto_if_eq(VAR_TEMP_4, 1, PalletTown_EventScript_MomGiveRunningShoesMoveRight)
+    applymovement(LOCALID_PALLET_MOM, Common_Movement_Delay48)
+    waitmovement(0)
+    msgbox(PalletTown_Text_MomDontGoOut)
+    closemessage
+    call(PalletTown_EventScript_MomGiveRunningShoes)
     releaseall
     end
 }
 
-script PalletTown_EventScript_TriggerMomGiveRunningShoes2 {
-    lockall
-    message(PalletTown_Text_MomGiveRunningShoes)
-    waitmessage
+script PalletTown_EventScript_Mom {
+    lock
+    faceplayer
+    // Si le hablas desde abajo (13,3) estás en su camino; usa la ruta alternativa
+    setvar(VAR_TEMP_4, 0)
+    call_if_eq(VAR_FACING, DIR_NORTH, PalletTown_EventScript_MomUseAltRoute)
+    textcolor(NPC_TEXT_COLOR_FEMALE)
+    call(PalletTown_EventScript_MomGiveRunningShoes)
+    release
+    end
+}
+
+script PalletTown_EventScript_MomGiveRunningShoes {
+    msgbox(PalletTown_Text_MomGiveRunningShoes)
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
     playfanfare(MUS_OBTAIN_KEY_ITEM)
-    message(PalletTown_Text_MomGiveRunningShoes2)
+    message(PalletTown_Text_ReceivedRunningShoesFromMom)
     waitmessage
     waitfanfare
+    delay(30)
+    textcolor(NPC_TEXT_COLOR_FEMALE)
+    msgbox(PalletTown_Text_MomGiveRunningShoes2)
+    closemessage
     setflag(FLAG_SYS_B_DASH)
     setvar(VAR_MOM_SHOES, 0)
-    fadescreen(FADE_TO_BLACK)
+    call(PalletTown_EventScript_MomWalkHome)
+    return
+}
+
+// Desde (13,2), rodea al jugador y baja por el camino entre las casas
+// hasta quedar frente a la puerta de su casa (6,7)
+script PalletTown_EventScript_MomWalkHome {
+    call_if_eq(VAR_TEMP_4, 0, PalletTown_EventScript_MomWalkToHouse)
+    call_if_eq(VAR_TEMP_4, 1, PalletTown_EventScript_MomWalkToHouseAlt)
+    applymovement(LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown)
+    waitmovement(LOCALID_PALLET_MOM)
+    opendoor(6, 7)
+    waitdooranim
+    applymovement(LOCALID_PALLET_MOM, PalletTown_Movement_MomEnterHouse)
+    waitmovement(0)
+    closedoor(6, 7)
+    waitdooranim
     removeobject(LOCALID_PALLET_MOM)
     setflag(FLAG_HIDE_MOM)
-    delay(30)
-    fadescreen(FADE_FROM_BLACK)
-    setvar(VAR_MOM_SHOES, 0)
-    releaseall
-    end
+    return
 }
 
-script PalletTown_EventScript_MomGiveRunningShoesMoveLeft {
-    applymovement(LOCALID_PALLET_MOM, PalletTown_Momvement_MomGiveRunningShoes_left)
-    waitmovement(0)
-    call(PalletTown_EventScript_TriggerMomGiveRunningShoes2)
-    releaseall
-    end
+script PalletTown_EventScript_MomUseAltRoute {
+    setvar(VAR_TEMP_4, 1)
+    return
 }
 
-script PalletTown_EventScript_MomGiveRunningShoesMoveRight {
-    applymovement(LOCALID_PALLET_MOM, PalletTown_Momvement_MomGiveRunningShoes_right)
-    waitmovement(0)
-    call(PalletTown_EventScript_TriggerMomGiveRunningShoes2)
-    releaseall
-    end
+script PalletTown_EventScript_MomWalkToHouse {
+    applymovement(LOCALID_PALLET_MOM, PalletTown_Movement_MomWalkToHouse)
+    return
 }
 
-movement(global) PalletTown_Momvement_MomGiveRunningShoes_left {
+script PalletTown_EventScript_MomWalkToHouseAlt {
+    applymovement(LOCALID_PALLET_MOM, PalletTown_Movement_MomWalkToHouseAlt)
+    return
+}
+
+// Igual que la ruta normal, pero sale por la izquierda para no pasar por (13,3)
+movement(global) PalletTown_Movement_MomWalkToHouseAlt {
+    walk_left
     walk_down
-    walk_right
-    walk_right
-    walk_right
-    walk_right
-    walk_right
-    walk_right
-    walk_up
-    walk_up
-    walk_up
-    walk_up
-    walk_up
-    walk_up
-    face_up
+    walk_left
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_in_place_faster_up
     step_end
 }
 
-movement(global) PalletTown_Momvement_MomGiveRunningShoes_right {
+movement(global) PalletTown_Movement_MomWalkToHouse {
     walk_down
-    walk_right
-    walk_right
-    walk_right
-    walk_right
-    walk_right
-    walk_right
-    walk_up
-    walk_up
-    walk_up
-    walk_up
-    walk_up
-    walk_up
-    walk_right
-    face_up
+    walk_left
+    walk_left
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_in_place_faster_up
     step_end
 }
+
+movement(global) PalletTown_Movement_MomEnterHouse {
+    walk_up
+    delay_4
+    set_invisible
+    step_end
+}
+
+
+

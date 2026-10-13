@@ -83,18 +83,27 @@ text PalletTown_Text_MomDontGoOut {
 }
 
 text PalletTown_Text_MomGiveRunningShoes {
-    "Mom: Wow! You and your Pokémon\n"
-    "make a great team!\p"
-    "Now that you have your Pokédex\n"
+    "Mom: Wow, sweetheart! You and\n"
+    "your Pokémon make a great team!\p"
+    "Now that you have your Pokédex,\n"
     "your adventure is just beginning!\p"
     "Here, take these Running Shoes\n"
-    "with you. They'll be very useful\n"
+    "with you. They'll be very useful\l"
     "on your journey.$"
 }
 
+text PalletTown_Text_ReceivedRunningShoesFromMom {
+    "{PLAYER} received a pair of\n"
+    "Running Shoes from Mom!$"
+}
+
 text PalletTown_Text_MomGiveRunningShoes2 {
-    "Mom: And don't forget to wear them!\n"
-    "They're essential for every Trainer!\p"
-    "Come home every now and then and\n"
-    "show me how you're doing!$"
+    "Mom: To use them, simply press B\n"
+    "while moving to get where\l"
+    "you want.\p"
+    "And don't forget to wear them!\n"
+    "They're essential for every\l"
+    "Trainer!\p"
+    "Come home from time to time\n"
+    "and show me how you're doing!$"
 }

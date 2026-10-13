@@ -70,15 +70,15 @@
     {
       "local_id": "LOCALID_PALLET_MOM",
       "graphics_id": "OBJ_EVENT_GFX_MOM",
-      "x": 6,
-      "y": 7,
+      "x": 13,
+      "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
+      "script": "PalletTown_EventScript_Mom",
       "flag": "FLAG_HIDE_MOM"
     }
   ],
@@ -94,7 +94,7 @@
       "x": 15,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_LAVENDER_TOWN",
+      "dest_map": "MAP_CELADON_CITY",
       "dest_warp_id": "0"
     },
     {
@@ -136,20 +136,11 @@
     {
       "type": "trigger",
       "x": 12,
-      "y": 1,
+      "y": 2,
       "elevation": 0,
       "var": "VAR_MOM_SHOES",
       "var_value": "1",
-      "script": "PalletTown_EventScript_TriggerMomGiveRunningShoes_left"
-    },
-    {
-      "type": "trigger",
-      "x": 13,
-      "y": 1,
-      "elevation": 0,
-      "var": "VAR_MOM_SHOES",
-      "var_value": "1",
-      "script": "PalletTown_EventScript_TriggerMomGiveRunningShoes_right"
+      "script": "PalletTown_EventScript_TriggerMomGiveRunningShoes"
     }
   ],
   "bg_events": [
