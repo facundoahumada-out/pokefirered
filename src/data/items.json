@@ -6062,7 +6062,7 @@
     {
       "english": "Adamant Mint",
       "itemId": "ITEM_ADAMANT_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nAdamant.",
@@ -6078,7 +6078,7 @@
     {
       "english": "Bold Mint",
       "itemId": "ITEM_BOLD_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nBold.",
@@ -6094,7 +6094,7 @@
     {
       "english": "Brave Mint",
       "itemId": "ITEM_BRAVE_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nBrave.",
@@ -6110,7 +6110,7 @@
     {
       "english": "Calm Mint",
       "itemId": "ITEM_CALM_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nCalm.",
@@ -6126,7 +6126,7 @@
     {
       "english": "Careful Mint",
       "itemId": "ITEM_CAREFUL_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nCareful.",
@@ -6142,7 +6142,7 @@
     {
       "english": "Gentle Mint",
       "itemId": "ITEM_GENTLE_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nGentle.",
@@ -6158,7 +6158,7 @@
     {
       "english": "Hasty Mint",
       "itemId": "ITEM_HASTY_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nHasty.",
@@ -6174,7 +6174,7 @@
     {
       "english": "Impish Mint",
       "itemId": "ITEM_IMPISH_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nImpish.",
@@ -6190,7 +6190,7 @@
     {
       "english": "Jolly Mint",
       "itemId": "ITEM_JOLLY_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nJolly.",
@@ -6206,7 +6206,7 @@
     {
       "english": "Lax Mint",
       "itemId": "ITEM_LAX_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nLax.",
@@ -6222,7 +6222,7 @@
     {
       "english": "Lonely Mint",
       "itemId": "ITEM_LONELY_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nLonely.",
@@ -6238,7 +6238,7 @@
     {
       "english": "Mild Mint",
       "itemId": "ITEM_MILD_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nMild.",
@@ -6254,7 +6254,7 @@
     {
       "english": "Modest Mint",
       "itemId": "ITEM_MODEST_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nModest.",
@@ -6270,7 +6270,7 @@
     {
       "english": "Naive Mint",
       "itemId": "ITEM_NAIVE_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nNaive.",
@@ -6286,7 +6286,7 @@
     {
       "english": "Naughty Mint",
       "itemId": "ITEM_NAUGHTY_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nNaughty.",
@@ -6302,7 +6302,7 @@
     {
       "english": "Quiet Mint",
       "itemId": "ITEM_QUIET_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nQuiet.",
@@ -6318,7 +6318,7 @@
     {
       "english": "Rash Mint",
       "itemId": "ITEM_RASH_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nRash.",
@@ -6334,7 +6334,7 @@
     {
       "english": "Relaxed Mint",
       "itemId": "ITEM_RELAXED_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nRelaxed.",
@@ -6350,7 +6350,7 @@
     {
       "english": "Sassy Mint",
       "itemId": "ITEM_SASSY_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nSassy.",
@@ -6366,7 +6366,7 @@
     {
       "english": "Serious Mint",
       "itemId": "ITEM_SERIOUS_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nSerious.",
@@ -6382,7 +6382,7 @@
     {
       "english": "Timid Mint",
       "itemId": "ITEM_TIMID_MINT",
-      "price": 20000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "Changes the nature\\nof a Pok\u00e9mon to\\nTimid.",

@@ -165,11 +165,13 @@ static const struct DnsLightColour sDnsLightColours[] =
     { &gTileset_SSAnne, 10, 13, LIGHT_WINDOW_MID },
     { &gTileset_SSAnne, 10, 14, LIGHT_WINDOW_BRIGHT },
     { &gTileset_SSAnne, 10, 15, LIGHT_WINDOW_SHINE },
-    // Pallet Town street lamp: colours 8-10 of the glass palette, lit with the same shades as
-    // the window glass colours 1-3 (instead of the ones their brightness would give them)
+    // Pallet Town street lamp bulbs: colours 8-11 of the glass palette, lit from the lightest to the
+    // darkest shade of the window glass (instead of the ones their brightness would give them).
+    // Colour 11 is black during the day, so it's never lit by the glass gradient and needs its own entry.
     { &gTileset_PalletTown, GLASS_PALETTE, 8, LIGHT_WINDOW_SHINE },
     { &gTileset_PalletTown, GLASS_PALETTE, 9, LIGHT_WINDOW_BRIGHT },
     { &gTileset_PalletTown, GLASS_PALETTE, 10, LIGHT_WINDOW_MID },
+    { &gTileset_PalletTown, GLASS_PALETTE, 11, LIGHT_WINDOW_DARK },
     // Celadon Department Store roof: glass of the windows of the facade (colours 13-15 and the white reflection 11 of palette 9)
     { &gTileset_DepartmentStore, 9, 13, LIGHT_WINDOW_MID },
     { &gTileset_DepartmentStore, 9, 14, LIGHT_WINDOW_BRIGHT },
@@ -181,9 +183,9 @@ static const struct DnsLightColour sDnsLightColours[] =
     // Celadon Condominiums roof: glass of the windows of the facade (colours 11-12 of palette 2)
     { &gTileset_Condominiums, 2, 12, LIGHT_WINDOW_MID },
     { &gTileset_Condominiums, 2, 11, LIGHT_WINDOW_SHINE },
-    // Celadon Condominiums roof: the sky uses colour 9 of palette 10 (only used by the sky tiles, so the
-    // planters, which use the same blue of Building's palette 0, aren't darkened)
-    { &gTileset_Condominiums, 10, 9, NIGHT_SKY },
+    // Celadon Condominiums roof: the sky uses colour 13 of palette 8, which no other tile uses (the palettes
+    // are shared with Silph Co.), so the planters, drawn with the same blue of Building's palette 0, aren't darkened
+    { &gTileset_Condominiums, 8, 13, NIGHT_SKY },
     {NULL}, // Terminator
 };
 
