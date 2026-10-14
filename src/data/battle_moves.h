@@ -5109,7 +5109,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
     [MOVE_PLUCK] =
     {
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_BUG_BITE,
         .power = 60,
         .type = TYPE_FLYING,
         .split = SPLIT_PHYSICAL,
@@ -5228,7 +5228,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
     [MOVE_FLING] =
     {
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_FLING,
         .power = 30,
         .type = TYPE_DARK,
         .split = SPLIT_PHYSICAL,
@@ -6219,7 +6219,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
     [MOVE_BUG_BITE] =
     {
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_BUG_BITE,
         .power = 60,
         .type = TYPE_BUG,
         .split = SPLIT_PHYSICAL,
@@ -6967,7 +6967,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
     [MOVE_SKY_DROP] =
     {
-        .effect = EFFECT_SEMI_INVULNERABLE,
+        .effect = EFFECT_SKY_DROP,
         .power = 60,
         .type = TYPE_FLYING,
         .split = SPLIT_PHYSICAL,
@@ -6993,7 +6993,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
     [MOVE_CIRCLE_THROW] =
     {
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_CIRCLE_THROW,
         .power = 60,
         .type = TYPE_FIGHTING,
         .split = SPLIT_PHYSICAL,
@@ -7006,7 +7006,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
     [MOVE_INCINERATE] =
     {
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_INCINERATE,
         .power = 60,
         .type = TYPE_FIRE,
         .split = SPLIT_SPECIAL,
@@ -7058,7 +7058,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
     [MOVE_RETALIATE] =
     {
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_RETALIATE,
         .power = 70,
         .type = TYPE_NORMAL,
         .split = SPLIT_PHYSICAL,
@@ -7201,7 +7201,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
     [MOVE_DRAGON_TAIL] =
     {
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_CIRCLE_THROW,
         .power = 60,
         .type = TYPE_DRAGON,
         .split = SPLIT_PHYSICAL,

@@ -110,6 +110,44 @@
 #define VARIOUS_ENTRAINMENT                     31
 #define VARIOUS_CLEAR_SMOG_RESET                32
 #define VARIOUS_FINAL_GAMBIT_DAMAGE             33
+#define VARIOUS_RETALIATE_POWER                 34
+#define VARIOUS_TRY_FLING                       35
+#define VARIOUS_FLING_EFFECT                    36
+#define VARIOUS_TRY_BUG_BITE                    37
+#define VARIOUS_TRY_INCINERATE                  38
+#define VARIOUS_CAN_SKY_DROP                    39
+#define VARIOUS_SKY_DROP_LIFT                   40
+#define VARIOUS_SKY_DROP_DROP                   41
+#define VARIOUS_CAN_HIT_ESCAPE                  42
+#define VARIOUS_TRY_SOAK                        43
+#define VARIOUS_TRY_REFLECT_TYPE                44
+#define VARIOUS_TRY_GASTRO_ACID                 45
+#define VARIOUS_POWER_TRICK                     46
+#define VARIOUS_TRY_PSYCHO_SHIFT                47
+#define VARIOUS_PSYCHO_SHIFT_CURE               48
+#define VARIOUS_TRY_BESTOW                      49
+#define VARIOUS_TRY_ALLY_SWITCH                 50
+#define VARIOUS_TRY_AFTER_YOU                   51
+#define VARIOUS_TRY_AQUA_RING                   52
+#define VARIOUS_TRY_MAGNET_RISE                 53
+#define VARIOUS_TRY_TELEKINESIS                 54
+#define VARIOUS_TRY_EMBARGO                     55
+#define VARIOUS_TRY_HEAL_BLOCK                  56
+#define VARIOUS_TRY_QUASH                       57
+#define VARIOUS_TRY_COPYCAT                     58
+#define VARIOUS_TRY_ME_FIRST                    59
+#define VARIOUS_SET_HEALING_WISH                60
+#define VARIOUS_LUNAR_DANCE_PP                  61
+#define VARIOUS_TRY_TRICK_ROOM                  62
+#define VARIOUS_TRY_GRAVITY                     63
+#define VARIOUS_TRY_MAGIC_ROOM                  64
+#define VARIOUS_TRY_WONDER_ROOM                 65
+#define VARIOUS_TRY_MISTY_TERRAIN               66
+#define VARIOUS_TRY_SMACK_DOWN                  67
+
+// gBattleStruct->healingWish
+#define HEALING_WISH  1
+#define LUNAR_DANCE   2
 
 // Cmd_manipulatedmg
 #define DMG_CHANGE_SIGN            0

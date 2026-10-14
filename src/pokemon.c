@@ -2435,6 +2435,12 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     defense = defender->defense;
     spAttack = attacker->spAttack;
     spDefense = defender->spDefense;
+    if (gBattleStruct->wonderRoomTimer)
+    {
+        // Wonder Room swaps the raw Defense and Sp. Def (stat stages stay put)
+        defense = defender->spDefense;
+        spDefense = defender->defense;
+    }
 
     // Get attacker hold item info
     if (attacker->item == ITEM_ENIGMA_BERRY)
@@ -5805,15 +5811,15 @@ u32 CanMonLearnTMHM(struct Pokemon *mon, u8 tm)
     {
         return 0;
     }
-    else if (tm < 32)
-    {
-        u32 mask = 1 << tm;
-        return sTMHMLearnsets[species][0] & mask;
-    }
     else
     {
-        u32 mask = 1 << (tm - 32);
-        return sTMHMLearnsets[species][1] & mask;
+        // See tmhm_learnsets.h: TM51 onwards live in a second set of bits
+        const u32 *learnset = sTMHMLearnsets[species];
+        u8 bit = TMHM_BIT(tm);
+
+        if (tm >= NUM_ORIGINAL_TMS && tm < NUM_TECHNICAL_MACHINES)
+            learnset += 2;
+        return learnset[bit / 32] & (1 << (bit % 32));
     }
 }
 

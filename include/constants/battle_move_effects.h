@@ -304,4 +304,11 @@
 #define EFFECT_GEOMANCY 294
 #define EFFECT_MISTY_TERRAIN 295
 
+// Generation 4/5 moves implemented after the fact
+#define EFFECT_FLING 296
+#define EFFECT_SKY_DROP 297
+#define EFFECT_INCINERATE 298
+#define EFFECT_RETALIATE 299
+#define EFFECT_BUG_BITE 300
+
 #endif  // GUARD_CONSTANTS_BATTLE_MOVE_EFFECTS_H

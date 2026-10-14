@@ -1,12 +1,17 @@
-#define TMHM_LEARNSET(moves) {(u32)(moves), ((u64)(moves) >> 32)}
-#define TMHM(tmhm) ((u64)1 << (ITEM_##tmhm - ITEM_TM01_FOCUS_PUNCH))
-
 // This table determines which TMs and HMs a species is capable of learning.
-// Each entry is a 64-bit bit array spread across two 32-bit values, with
-// each bit corresponding to a machine.
-static const u32 sTMHMLearnsets[][2] =
+// Each entry holds two sets of machines, each a 64-bit bit array spread across two 32-bit values:
+//  - the first set has the original machines: TM01-TM50 and the HMs
+//  - the second set has the Gen 5 TMs added later: TM51-TM93
+// Both sets use TMHM(), but a machine only counts in its own set.
+#define TMHM_BIT(i) ((i) < NUM_ORIGINAL_TMS ? (i)                                \
+                   : (i) < NUM_TECHNICAL_MACHINES ? (i) - NUM_ORIGINAL_TMS      \
+                   : (i) - NUM_TECHNICAL_MACHINES + NUM_ORIGINAL_TMS)
+#define TMHM(tmhm) ((u64)1 << TMHM_BIT(ITEM_##tmhm - ITEM_TM01))
+#define TMHM_LEARNSET(machines, newMachines) {(u32)(machines), ((u64)(machines) >> 32), (u32)(newMachines), ((u64)(newMachines) >> 32)}
+
+static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
 {
-    [SPECIES_NONE]        = TMHM_LEARNSET(0),
+    [SPECIES_NONE]        = TMHM_LEARNSET(0, 0),
 
     [SPECIES_BULBASAUR]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -27,7 +32,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_IVYSAUR]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -48,7 +58,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_VENUSAUR]    = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -72,7 +87,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CHARMANDER]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM02_DRAGON_CLAW)
@@ -97,7 +119,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CHARMELEON]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM02_DRAGON_CLAW)
@@ -122,7 +152,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CHARIZARD]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM02_DRAGON_CLAW)
@@ -152,7 +190,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM58_SKY_DROP)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SQUIRTLE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -178,7 +229,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_WARTORTLE]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -204,7 +260,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_BLASTOISE]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -233,11 +294,24 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
-    [SPECIES_CATERPIE]    = TMHM_LEARNSET(0),
+    [SPECIES_CATERPIE]    = TMHM_LEARNSET(0,
+                                          0),
 
-    [SPECIES_METAPOD]     = TMHM_LEARNSET(0),
+    [SPECIES_METAPOD]     = TMHM_LEARNSET(0,
+                                          0),
 
     [SPECIES_BUTTERFREE]  = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -260,11 +334,22 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
-    [SPECIES_WEEDLE]      = TMHM_LEARNSET(0),
+    [SPECIES_WEEDLE]      = TMHM_LEARNSET(0,
+                                          0),
 
-    [SPECIES_KAKUNA]      = TMHM_LEARNSET(0),
+    [SPECIES_KAKUNA]      = TMHM_LEARNSET(0,
+                                          0),
 
     [SPECIES_BEEDRILL]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -286,7 +371,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PIDGEY]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -303,7 +399,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PIDGEOTTO]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -320,7 +421,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PIDGEOT]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -338,7 +444,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_RATTATA]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -364,7 +476,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_RATICATE]    = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -393,7 +515,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_SPEAROW]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -410,7 +544,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_FEAROW]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -428,7 +568,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_EKANS]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -450,7 +597,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM04_STRENGTH)),
+                                        | TMHM(HM04_STRENGTH),
+                                          TMHM(TM66_PAYBACK)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_ARBOK]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -473,7 +626,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM04_STRENGTH)),
+                                        | TMHM(HM04_STRENGTH),
+                                          TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PIKACHU]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -497,7 +658,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_RAICHU]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -523,7 +692,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_SANDSHREW]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -548,7 +727,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SANDSLASH]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -574,7 +763,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_NIDORAN_F]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -602,7 +804,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_NIDORINA]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -630,7 +836,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_NIDOQUEEN]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -671,7 +881,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM60_QUASH)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_NIDORAN_M]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -698,7 +921,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_NIDORINO]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -725,7 +952,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_NIDOKING]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -765,7 +996,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM60_QUASH)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CLEFAIRY]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -800,7 +1044,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CLEFABLE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -836,7 +1091,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_VULPIX]      = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -855,7 +1123,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM50_OVERHEAT)),
+                                        | TMHM(TM50_OVERHEAT),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_NINETALES]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -875,7 +1150,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM50_OVERHEAT)),
+                                        | TMHM(TM50_OVERHEAT),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_JIGGLYPUFF]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -908,7 +1192,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_WIGGLYTUFF]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -942,7 +1239,22 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_ZUBAT]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -964,7 +1276,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(TM49_SNATCH)),
+                                        | TMHM(TM49_SNATCH),
+                                          TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_GOLBAT]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -987,7 +1305,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(TM49_SNATCH)),
+                                        | TMHM(TM49_SNATCH),
+                                          TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_ODDISH]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -1005,7 +1330,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_GLOOM]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -1023,7 +1353,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_VILEPLUME]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -1042,7 +1378,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PARAS]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -1065,7 +1408,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PARASECT]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -1089,7 +1440,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_VENONAT]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1108,7 +1468,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_VENOMOTH]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1129,7 +1492,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_DIGLETT]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1150,7 +1520,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_DUGTRIO]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1172,7 +1547,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MEOWTH]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -1199,7 +1581,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PERSIAN]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -1228,7 +1619,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM63_EMBARGO)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PSYDUCK]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -1257,7 +1659,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_GOLDUCK]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -1287,7 +1695,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MANKEY]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -1316,7 +1732,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PRIMEAPE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -1346,7 +1774,21 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_GROWLITHE]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -1369,7 +1811,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_ARCANINE]    = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -1393,7 +1842,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_POLIWAG]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -1415,7 +1873,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_POLIWHIRL]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -1443,7 +1904,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_POLIWRATH]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -1474,7 +1940,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_ABRA]        = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -1502,7 +1979,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM51_ALLY_SWITCH)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_KADABRA]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -1530,7 +2019,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM51_ALLY_SWITCH)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_ALAKAZAM]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -1559,7 +2060,21 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM51_ALLY_SWITCH)
+                                        | TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_MACHOP]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -1584,7 +2099,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MACHOKE]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -1609,7 +2135,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MACHAMP]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -1635,7 +2172,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_BELLSPROUT]  = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -1654,7 +2204,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_WEEPINBELL]  = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -1673,7 +2228,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_VICTREEBEL]  = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -1693,7 +2253,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_TENTACOOL]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -1716,7 +2282,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_TENTACRUEL]  = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -1740,7 +2312,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_GEODUDE]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -1763,7 +2342,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_GRAVELER]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -1786,7 +2375,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_GOLEM]       = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM05_ROAR)
@@ -1811,7 +2410,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PONYTA]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1829,7 +2440,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
-                                        | TMHM(HM04_STRENGTH)),
+                                        | TMHM(HM04_STRENGTH),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_RAPIDASH]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1848,7 +2464,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
-                                        | TMHM(HM04_STRENGTH)),
+                                        | TMHM(HM04_STRENGTH),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_SLOWPOKE]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -1879,7 +2502,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_SLOWBRO]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -1915,7 +2548,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_MAGNEMITE]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1932,7 +2578,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_MAGNETON]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1950,7 +2606,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_FARFETCHD]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1968,7 +2635,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_DODUO]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1984,7 +2662,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_DODRIO]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2003,7 +2685,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SEEL]        = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -2024,7 +2712,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_DEWGONG]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -2046,7 +2737,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_GRIMER]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2071,7 +2767,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM46_THIEF)),
+                                        | TMHM(TM46_THIEF),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MUK]         = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -2102,7 +2806,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SHELLDER]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -2120,7 +2834,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CLOYSTER]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -2140,7 +2858,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_GASTLY]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2163,7 +2888,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)),
+                                        | TMHM(TM49_SNATCH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_HAUNTER]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2186,7 +2921,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(TM49_SNATCH)),
+                                        | TMHM(TM49_SNATCH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_GENGAR]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -2216,7 +2964,22 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_ONIX]        = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -2239,7 +3002,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_DROWZEE]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -2266,7 +3041,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_HYPNO]       = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -2294,7 +3077,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_KRABBY]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -2319,7 +3112,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_KINGLER]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -2345,7 +3146,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM60_QUASH)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_VOLTORB]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2364,7 +3175,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_ELECTRODE]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2384,7 +3203,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_EXEGGCUTE]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -2407,7 +3235,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM04_STRENGTH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_EXEGGUTOR]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -2431,7 +3268,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM04_STRENGTH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_CUBONE]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -2459,7 +3306,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MAROWAK]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -2488,7 +3344,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_HITMONLEE]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -2510,7 +3378,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_HITMONCHAN]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -2532,7 +3410,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LICKITUNG]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -2569,7 +3456,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_KOFFING]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2593,7 +3493,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_WEEZING]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2618,7 +3525,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_RHYHORN]     = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -2648,7 +3563,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_RHYDON]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM05_ROAR)
@@ -2683,7 +3608,22 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CHANSEY]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -2724,7 +3664,22 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_TANGELA]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -2746,7 +3701,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_KANGASKHAN]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -2786,7 +3748,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_HORSEA]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -2805,7 +3778,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_SEADRA]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -2825,7 +3802,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_GOLDEEN]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -2844,7 +3826,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SEAKING]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -2864,7 +3850,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_STARYU]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -2888,7 +3879,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_STARMIE]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -2914,7 +3912,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_MR_MIME]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -2946,7 +3955,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_SCYTHER]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2966,7 +3988,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_JYNX]        = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -2995,7 +4025,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_ELECTABUZZ]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -3021,7 +4063,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_MAGMAR]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -3044,7 +4095,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PINSIR]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -3069,7 +4127,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_TAUROS]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -3100,9 +4170,21 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
-    [SPECIES_MAGIKARP]    = TMHM_LEARNSET(0),
+    [SPECIES_MAGIKARP]    = TMHM_LEARNSET(0,
+                                          0),
 
     [SPECIES_GYARADOS]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -3134,7 +4216,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LAPRAS]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -3164,9 +4256,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
-    [SPECIES_DITTO]       = TMHM_LEARNSET(0),
+    [SPECIES_DITTO]       = TMHM_LEARNSET(0,
+                                          0),
 
     [SPECIES_EEVEE]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -3182,7 +4281,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        | TMHM(TM45_ATTRACT)),
+                                        | TMHM(TM45_ATTRACT),
+                                          TMHM(TM67_RETALIATE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_VAPOREON]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -3207,7 +4310,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_JOLTEON]     = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -3229,7 +4338,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_FLAREON]     = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -3250,7 +4368,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(TM50_OVERHEAT)),
+                                        | TMHM(TM50_OVERHEAT),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PORYGON]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -3275,7 +4400,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_OMANYTE]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -3299,7 +4432,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_OMASTAR]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -3324,7 +4463,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_KABUTO]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -3350,7 +4497,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
-                                        | TMHM(HM07_WATERFALL)),
+                                        | TMHM(HM07_WATERFALL),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_KABUTOPS]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -3380,7 +4532,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_AERODACTYL]  = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM05_ROAR)
@@ -3411,7 +4572,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM58_SKY_DROP)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SNORLAX]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -3443,7 +4614,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
-                                        | TMHM(HM04_STRENGTH)),
+                                        | TMHM(HM04_STRENGTH),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_ARTICUNO]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -3468,7 +4650,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM58_SKY_DROP)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_ZAPDOS]      = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -3493,7 +4682,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM58_SKY_DROP)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_MOLTRES]     = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -3517,7 +4716,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM58_SKY_DROP)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_DRATINI]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -3544,7 +4751,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
-                                        | TMHM(HM07_WATERFALL)),
+                                        | TMHM(HM07_WATERFALL),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_DRAGONAIR]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -3571,7 +4783,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
-                                        | TMHM(HM07_WATERFALL)),
+                                        | TMHM(HM07_WATERFALL),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_DRAGONITE]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM02_DRAGON_CLAW)
@@ -3613,7 +4830,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM58_SKY_DROP)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MEWTWO]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -3658,7 +4887,26 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_MEW]         = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM02_DRAGON_CLAW)
@@ -3718,7 +4966,50 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM51_ALLY_SWITCH)
+                                        | TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM58_SKY_DROP)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM60_QUASH)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)
+                                        | TMHM(TM91_TRICK_ROOM)
+                                        | TMHM(TM92_WILD_CHARGE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_CHIKORITA]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -3739,7 +5030,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_BAYLEEF]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -3763,7 +5059,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MEGANIUM]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -3789,7 +5090,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CYNDAQUIL]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -3807,7 +5116,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
-                                        | TMHM(HM01_CUT)),
+                                        | TMHM(HM01_CUT),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_QUILAVA]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM05_ROAR)
@@ -3831,7 +5145,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_TYPHLOSION]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM05_ROAR)
@@ -3857,7 +5176,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_TOTODILE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -3882,7 +5213,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CROCONAW]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -3911,7 +5249,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_FERALIGATR]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM02_DRAGON_CLAW)
@@ -3943,7 +5288,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SENTRET]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -3970,7 +5326,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM03_SURF)),
+                                        | TMHM(HM03_SURF),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_FURRET]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -4003,7 +5368,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_HOOTHOOT]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -4024,7 +5400,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_NOCTOWL]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -4046,7 +5428,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LEDYBA]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -4069,7 +5458,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LEDIAN]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -4093,7 +5489,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SPINARAK]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -4112,7 +5517,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_ARIADOS]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -4132,7 +5542,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CROBAT]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -4156,7 +5572,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CHINCHOU]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -4179,7 +5603,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_LANTURN]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -4203,7 +5634,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_PICHU]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -4221,7 +5660,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_CLEFFA]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -4247,7 +5694,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_IGGLYBUFF]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -4272,7 +5728,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_TOGEPI]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -4298,7 +5764,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_TOGETIC]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -4330,7 +5805,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_NATU]        = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -4355,7 +5841,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM51_ALLY_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_XATU]        = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -4382,7 +5878,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM02_FLY)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM51_ALLY_SWITCH)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_MAREEP]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -4400,7 +5907,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_FLAAFFY]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -4423,7 +5935,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_AMPHAROS]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -4447,7 +5966,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_BELLOSSOM]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -4467,7 +5996,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MARILL]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -4493,7 +6029,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_AZUMARILL]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -4520,7 +6062,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SUDOWOODO]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -4544,7 +6095,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_POLITOED]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -4573,7 +6133,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_HOPPIP]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -4590,7 +6158,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SKIPLOOM]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -4607,7 +6183,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_JUMPLUFF]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -4625,7 +6209,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_AIPOM]       = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -4656,7 +6249,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SUNKERN]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -4676,7 +6281,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SUNFLORA]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -4697,7 +6307,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_YANMA]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -4717,7 +6333,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_WOOPER]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -4744,7 +6364,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_QUAGSIRE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -4776,7 +6400,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_ESPEON]      = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -4800,7 +6433,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_UMBREON]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -4823,7 +6465,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_MURKROW]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -4845,7 +6496,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM60_QUASH)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_SLOWKING]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -4881,7 +6543,22 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM60_QUASH)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_MISDREAVUS]  = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -4907,11 +6584,23 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
-    [SPECIES_UNOWN]       = TMHM_LEARNSET(0),
+    [SPECIES_UNOWN]       = TMHM_LEARNSET(0,
+                                          0),
 
-    [SPECIES_WOBBUFFET]   = TMHM_LEARNSET(0),
+    [SPECIES_WOBBUFFET]   = TMHM_LEARNSET(0,
+                                          0),
 
     [SPECIES_GIRAFARIG]   = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -4940,7 +6629,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_PINECO]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -4962,7 +6663,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_FORRETRESS]  = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -4985,7 +6694,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_DUNSPARCE]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -5017,7 +6738,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_GLIGAR]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -5043,7 +6777,22 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_STEELIX]     = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -5068,7 +6817,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_SNUBBULL]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -5103,7 +6865,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_GRANBULL]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -5141,7 +6914,22 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_QWILFISH]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -5163,7 +6951,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SCIZOR]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -5185,7 +6981,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_SHUCKLE]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -5207,7 +7014,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_HERACROSS]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -5232,7 +7047,21 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SNEASEL]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -5264,7 +7093,21 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_TEDDIURSA]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM05_ROAR)
@@ -5291,7 +7134,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_URSARING]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM05_ROAR)
@@ -5320,7 +7173,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SLUGMA]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -5339,7 +7205,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MAGCARGO]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -5363,7 +7234,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SWINUB]      = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -5388,7 +7270,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PILOSWINE]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -5414,7 +7300,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CORSOLA]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -5445,7 +7337,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_REMORAID]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -5469,7 +7369,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_OCTILLERY]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -5495,7 +7401,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_DELIBIRD]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -5515,7 +7431,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MANTINE]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -5536,7 +7457,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SKARMORY]    = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -5559,7 +7487,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM58_SKY_DROP)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_HOUNDOUR]    = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -5585,7 +7522,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_HOUNDOOM]    = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -5613,7 +7559,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_KINGDRA]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -5633,7 +7589,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM60_QUASH)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_PHANPY]      = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -5653,7 +7615,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_DONPHAN]     = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -5674,7 +7640,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PORYGON2]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -5699,7 +7674,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_STANTLER]    = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM05_ROAR)
@@ -5727,9 +7710,23 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
-    [SPECIES_SMEARGLE]    = TMHM_LEARNSET(0),
+    [SPECIES_SMEARGLE]    = TMHM_LEARNSET(0,
+                                          0),
 
     [SPECIES_TYROGUE]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
@@ -5749,7 +7746,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM67_RETALIATE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_HITMONTOP]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
@@ -5771,7 +7774,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM67_RETALIATE)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SMOOCHUM]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -5795,7 +7806,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_ELEKID]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -5818,7 +7838,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_MAGBY]       = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -5839,7 +7866,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MILTANK]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -5871,7 +7903,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_BLISSEY]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -5912,7 +7956,23 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_RAIKOU]      = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM05_ROAR)
@@ -5939,7 +7999,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM60_QUASH)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_ENTEI]       = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM05_ROAR)
@@ -5966,7 +8037,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM60_QUASH)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_SUICUNE]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -5995,7 +8076,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM60_QUASH)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_LARVITAR]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -6017,7 +8106,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_PUPITAR]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -6039,7 +8137,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_TYRANITAR]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM02_DRAGON_CLAW)
@@ -6078,7 +8185,23 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_LUGIA]       = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -6119,7 +8242,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM58_SKY_DROP)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_HO_OH]       = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM05_ROAR)
@@ -6156,7 +8289,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM58_SKY_DROP)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CELEBI]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -6184,57 +8329,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
-
-    [SPECIES_OLD_UNOWN_B] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_C] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_D] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_E] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_F] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_G] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_H] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_I] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_J] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_K] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_L] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_M] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_N] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_O] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_P] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_Q] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_R] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_S] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_T] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_U] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_V] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_W] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_X] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_Y] = TMHM_LEARNSET(0),
-
-    [SPECIES_OLD_UNOWN_Z] = TMHM_LEARNSET(0),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_TREECKO]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -6261,7 +8369,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_GROVYLE]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -6288,7 +8404,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SCEPTILE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM02_DRAGON_CLAW)
@@ -6319,7 +8445,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_TORCHIC]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -6341,7 +8480,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_COMBUSKEN]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -6366,7 +8512,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_BLAZIKEN]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM05_ROAR)
@@ -6394,7 +8551,22 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MUDKIP]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -6419,7 +8591,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MARSHTOMP]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -6445,7 +8621,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SWAMPERT]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -6475,7 +8657,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_POOCHYENA]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -6498,7 +8689,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_MIGHTYENA]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -6523,7 +8721,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_ZIGZAGOON]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -6550,7 +8756,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LINOONE]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -6580,11 +8794,23 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
-    [SPECIES_WURMPLE]     = TMHM_LEARNSET(0),
+    [SPECIES_WURMPLE]     = TMHM_LEARNSET(0,
+                                          0),
 
-    [SPECIES_SILCOON]     = TMHM_LEARNSET(0),
+    [SPECIES_SILCOON]     = TMHM_LEARNSET(0,
+                                          0),
 
     [SPECIES_BEAUTIFLY]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -6605,9 +8831,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
-    [SPECIES_CASCOON]     = TMHM_LEARNSET(0),
+    [SPECIES_CASCOON]     = TMHM_LEARNSET(0,
+                                          0),
 
     [SPECIES_DUSTOX]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -6629,7 +8863,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LOTAD]       = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -6652,7 +8893,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LOMBRE]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -6681,7 +8928,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LUDICOLO]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -6712,7 +8966,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SEEDOT]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -6732,7 +8995,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_NUZLEAF]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -6759,7 +9030,21 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_SHIFTRY]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -6787,7 +9072,24 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_NINCADA]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -6806,7 +9108,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_NINJASK]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -6828,7 +9135,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SHEDINJA]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -6849,7 +9164,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_TAILLOW]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -6866,7 +9190,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SWELLOW]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -6884,7 +9213,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SHROOMISH]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -6903,7 +9238,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_BRELOOM]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -6931,7 +9272,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SPINDA]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -6961,7 +9315,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_WINGULL]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -6982,7 +9346,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_PELIPPER]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7005,7 +9374,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
-                                        | TMHM(HM03_SURF)),
+                                        | TMHM(HM03_SURF),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM58_SKY_DROP)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SURSKIT]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7026,7 +9404,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MASQUERAIN]  = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7049,7 +9432,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_WAILMER]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -7074,7 +9465,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_WAILORD]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -7100,7 +9495,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SKITTY]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -7126,7 +9526,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_DELCATTY]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -7156,7 +9567,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_KECLEON]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -7193,7 +9616,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_BALTOY]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7217,7 +9653,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM51_ALLY_SWITCH)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_CLAYDOL]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7245,7 +9694,22 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM51_ALLY_SWITCH)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_NOSEPASS]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7268,7 +9732,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_TORKOAL]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7288,7 +9761,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SABLEYE]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -7319,7 +9802,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_BARBOACH]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7341,7 +9837,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_WHISCASH]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7367,7 +9867,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LUVDISC]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7387,7 +9894,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CORPHISH]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7415,7 +9926,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
-                                        | TMHM(HM07_WATERFALL)),
+                                        | TMHM(HM07_WATERFALL),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CRAWDAUNT]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7445,7 +9965,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_FEEBAS]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7464,7 +9996,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MILOTIC]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7486,7 +10021,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CARVANHA]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7508,7 +10050,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_SHARPEDO]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -7537,7 +10085,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_TRAPINCH]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7559,7 +10116,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_VIBRAVA]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7583,7 +10145,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_FLYGON]      = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM06_TOXIC)
@@ -7611,7 +10179,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MAKUHITA]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -7634,7 +10212,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_HARIYAMA]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -7658,7 +10245,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_ELECTRIKE]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -7678,7 +10277,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_MANECTRIC]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -7699,7 +10305,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_NUMEL]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7721,7 +10335,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CAMERUPT]    = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -7745,7 +10365,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_SPHEAL]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7770,7 +10401,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SEALEO]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -7796,7 +10432,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_WALREIN]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -7823,7 +10464,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CACNEA]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -7842,7 +10489,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CACTURNE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -7863,7 +10518,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SNORUNT]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7883,7 +10550,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_GLALIE]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7907,7 +10577,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LUNATONE]    = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -7931,7 +10609,23 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_SOLROCK]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -7958,7 +10652,25 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM50_OVERHEAT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_AZURILL]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -7977,7 +10689,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
-                                        | TMHM(HM07_WATERFALL)),
+                                        | TMHM(HM07_WATERFALL),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SPOINK]      = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -8003,7 +10719,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_GRUMPIG]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -8031,7 +10756,21 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_PLUSLE]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -8049,7 +10788,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_MINUN]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -8067,7 +10814,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
 
     [SPECIES_MAWILE]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -8095,7 +10850,23 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_MEDITITE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -8121,7 +10892,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_MEDICHAM]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -8148,7 +10930,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SWABLU]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -8168,7 +10963,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
-                                        | TMHM(HM02_FLY)),
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_ALTARIA]     = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM05_ROAR)
@@ -8197,9 +10997,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
-    [SPECIES_WYNAUT]      = TMHM_LEARNSET(0),
+    [SPECIES_WYNAUT]      = TMHM_LEARNSET(0,
+                                          0),
 
     [SPECIES_DUSKULL]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -8223,7 +11032,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_DUSCLOPS]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
@@ -8254,7 +11073,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_ROSELIA]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -8273,7 +11105,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SLAKOTH]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -8304,7 +11143,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_VIGOROTH]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -8338,7 +11185,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SLAKING]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -8373,7 +11230,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM60_QUASH)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_GULPIN]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -8398,7 +11267,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SWALOT]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -8424,7 +11297,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_TROPIUS]     = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -8451,7 +11330,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_WHISMUR]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -8473,7 +11359,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        | TMHM(TM45_ATTRACT)),
+                                        | TMHM(TM45_ATTRACT),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LOUDRED]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -8503,7 +11395,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_EXPLOUD]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -8534,7 +11434,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CLAMPERL]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -8553,7 +11463,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_HUNTAIL]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -8575,7 +11488,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_GOREBYSS]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -8598,7 +11515,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_ABSOL]       = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -8635,7 +11557,25 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
 
     [SPECIES_SHUPPET]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -8660,7 +11600,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_BANETTE]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -8686,7 +11636,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_SEVIPER]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -8711,7 +11674,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_ZANGOOSE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -8746,7 +11717,22 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_RELICANTH]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -8773,7 +11759,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_ARON]        = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -8799,7 +11794,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LAIRON]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -8825,7 +11826,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_AGGRON]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM02_DRAGON_CLAW)
@@ -8864,7 +11872,22 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_CASTFORM]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -8891,7 +11914,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM55_SCALD)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_VOLBEAT]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -8917,7 +11949,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_ILLUMISE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -8943,7 +11984,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LILEEP]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -8960,7 +12010,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        | TMHM(TM45_ATTRACT)),
+                                        | TMHM(TM45_ATTRACT),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_CRADILY]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -8983,7 +12040,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_ANORITH]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -9004,7 +12071,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_ARMALDO]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
@@ -9029,7 +12104,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_RALTS]       = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -9056,7 +12143,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM51_ALLY_SWITCH)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_KIRLIA]      = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -9083,7 +12181,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM51_ALLY_SWITCH)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_GARDEVOIR]   = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -9111,7 +12220,21 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM51_ALLY_SWITCH)
+                                        | TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_BAGON]       = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM05_ROAR)
@@ -9135,7 +12258,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SHELGON]     = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM05_ROAR)
@@ -9159,7 +12287,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_SALAMENCE]   = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM05_ROAR)
@@ -9188,9 +12321,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
-    [SPECIES_BELDUM]      = TMHM_LEARNSET(0),
+    [SPECIES_BELDUM]      = TMHM_LEARNSET(0,
+                                          0),
 
     [SPECIES_METANG]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -9218,7 +12361,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_METAGROSS]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -9246,7 +12399,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_REGIROCK]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -9271,7 +12435,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_REGICE]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -9296,7 +12473,21 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_REGISTEEL]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
@@ -9322,7 +12513,21 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
 
     [SPECIES_KYOGRE]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -9353,7 +12558,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_GROUDON]     = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM05_ROAR)
@@ -9387,7 +12600,22 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_RAYQUAZA]    = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
@@ -9425,7 +12653,24 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM58_SKY_DROP)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LATIAS]      = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
@@ -9463,7 +12708,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_LATIOS]      = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
@@ -9501,7 +12758,19 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
 
     [SPECIES_JIRACHI]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -9528,7 +12797,20 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_DEOXYS]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
@@ -9566,7 +12848,23 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM09_ROCK_CLIMB)),
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM51_ALLY_SWITCH)
+                                        | TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
     [SPECIES_CHIMECHO]    = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -9591,6 +12889,1072 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
-                                        | TMHM(HM05_FLASH)),
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
 
+    [SPECIES_ANNIHILAPE]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+                                        | TMHM(TM08_BULK_UP)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM12_TAUNT)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM31_BRICK_BREAK)
+                                        | TMHM(TM39_ROCK_TOMB)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(TM50_OVERHEAT),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_MAGNEZONE]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM16_LIGHT_SCREEN)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM33_REFLECT)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM37_SANDSTORM)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)
+                                        | TMHM(TM92_WILD_CHARGE)),
+
+    [SPECIES_LICKILICKY]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+                                        | TMHM(TM03_WATER_PULSE)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM13_ICE_BEAM)
+                                        | TMHM(TM14_BLIZZARD)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM23_IRON_TAIL)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM31_BRICK_BREAK)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM35_FLAMETHROWER)
+                                        | TMHM(TM37_SANDSTORM)
+                                        | TMHM(TM38_FIRE_BLAST)
+                                        | TMHM(TM39_ROCK_TOMB)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(HM01_CUT)
+                                        | TMHM(HM03_SURF)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(HM06_ROCK_SMASH)
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_RHYPERIOR]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+                                        | TMHM(TM05_ROAR)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM13_ICE_BEAM)
+                                        | TMHM(TM14_BLIZZARD)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM23_IRON_TAIL)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM31_BRICK_BREAK)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM35_FLAMETHROWER)
+                                        | TMHM(TM37_SANDSTORM)
+                                        | TMHM(TM38_FIRE_BLAST)
+                                        | TMHM(TM39_ROCK_TOMB)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(HM01_CUT)
+                                        | TMHM(HM03_SURF)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(HM06_ROCK_SMASH)
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM90_FLASH_CANNON)),
+
+    [SPECIES_TANGROWTH]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
+                                        | TMHM(TM09_BULLET_SEED)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM19_GIGA_DRAIN)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM31_BRICK_BREAK)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM33_REFLECT)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM36_SLUDGE_BOMB)
+                                        | TMHM(TM39_ROCK_TOMB)
+                                        | TMHM(TM40_AERIAL_ACE)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(HM01_CUT)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(HM05_FLASH)
+                                        | TMHM(HM06_ROCK_SMASH),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_ELECTIVIRE]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM08_BULK_UP)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM12_TAUNT)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM16_LIGHT_SCREEN)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM23_IRON_TAIL)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM31_BRICK_BREAK)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM33_REFLECT)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM35_FLAMETHROWER)
+                                        | TMHM(TM39_ROCK_TOMB)
+                                        | TMHM(TM41_TORMENT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(HM05_FLASH)
+                                        | TMHM(HM06_ROCK_SMASH)
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM71_VOLT_SWITCH)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
+
+    [SPECIES_MAGMORTAR]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+                                        | TMHM(TM05_ROAR)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM12_TAUNT)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM23_IRON_TAIL)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM31_BRICK_BREAK)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM35_FLAMETHROWER)
+                                        | TMHM(TM38_FIRE_BLAST)
+                                        | TMHM(TM39_ROCK_TOMB)
+                                        | TMHM(TM41_TORMENT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(TM50_OVERHEAT)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(HM06_ROCK_SMASH)
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_LEAFEON]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM05_ROAR)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM09_BULLET_SEED)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM19_GIGA_DRAIN)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM23_IRON_TAIL)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM40_AERIAL_ACE)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(HM05_FLASH)
+                                        | TMHM(HM06_ROCK_SMASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_GLACEON]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
+                                        | TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM05_ROAR)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM07_HAIL)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM13_ICE_BEAM)
+                                        | TMHM(TM14_BLIZZARD)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM23_IRON_TAIL)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(HM06_ROCK_SMASH),
+                                          TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM78_FROST_BREATH)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_SYLVEON]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM05_ROAR)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM16_LIGHT_SCREEN)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM20_SAFEGUARD)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM23_IRON_TAIL)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM33_REFLECT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM48_SKILL_SWAP)
+                                        | TMHM(HM01_CUT)
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_PORYGON_Z]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM13_ICE_BEAM)
+                                        | TMHM(TM14_BLIZZARD)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM23_IRON_TAIL)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM40_AERIAL_ACE)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
+
+    [SPECIES_AMBIPOM]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+                                        | TMHM(TM03_WATER_PULSE)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM12_TAUNT)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM23_IRON_TAIL)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM31_BRICK_BREAK)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM40_AERIAL_ACE)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(TM49_SNATCH)
+                                        | TMHM(HM01_CUT)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(HM06_ROCK_SMASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_YANMEGA]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM19_GIGA_DRAIN)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM40_AERIAL_ACE)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(TM47_STEEL_WING)
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_HONCHKROW]   = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM12_TAUNT)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM40_AERIAL_ACE)
+                                        | TMHM(TM41_TORMENT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(TM47_STEEL_WING)
+                                        | TMHM(TM49_SNATCH)
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM59_INCINERATE)
+                                        | TMHM(TM60_QUASH)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
+
+    [SPECIES_MISMAGIUS]   = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM12_TAUNT)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM40_AERIAL_ACE)
+                                        | TMHM(TM41_TORMENT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(TM48_SKILL_SWAP)
+                                        | TMHM(TM49_SNATCH)
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM61_WILL_O_WISP)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
+
+    [SPECIES_FARIGIRAF]   = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM05_ROAR)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM16_LIGHT_SCREEN)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM33_REFLECT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(TM48_SKILL_SWAP),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
+
+    [SPECIES_GLISCOR]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM12_TAUNT)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM23_IRON_TAIL)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM31_BRICK_BREAK)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM36_SLUDGE_BOMB)
+                                        | TMHM(TM37_SANDSTORM)
+                                        | TMHM(TM39_ROCK_TOMB)
+                                        | TMHM(TM40_AERIAL_ACE)
+                                        | TMHM(TM41_TORMENT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(TM47_STEEL_WING)
+                                        | TMHM(HM01_CUT)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(HM06_ROCK_SMASH),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_WEAVILE]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+                                        | TMHM(TM03_WATER_PULSE)
+                                        | TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM07_HAIL)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM12_TAUNT)
+                                        | TMHM(TM13_ICE_BEAM)
+                                        | TMHM(TM14_BLIZZARD)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM23_IRON_TAIL)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM31_BRICK_BREAK)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM33_REFLECT)
+                                        | TMHM(TM40_AERIAL_ACE)
+                                        | TMHM(TM41_TORMENT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(TM49_SNATCH)
+                                        | TMHM(HM01_CUT)
+                                        | TMHM(HM03_SURF)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(HM06_ROCK_SMASH),
+                                          TMHM(TM52_FOCUS_BLAST)
+                                        | TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM56_FLING)
+                                        | TMHM(TM63_EMBARGO)
+                                        | TMHM(TM65_SHADOW_CLAW)
+                                        | TMHM(TM66_PAYBACK)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM80_X_SCISSOR)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM93_SNARL)),
+
+    [SPECIES_MAMOSWINE]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM07_HAIL)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM13_ICE_BEAM)
+                                        | TMHM(TM14_BLIZZARD)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM16_LIGHT_SCREEN)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM33_REFLECT)
+                                        | TMHM(TM37_SANDSTORM)
+                                        | TMHM(TM39_ROCK_TOMB)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(HM06_ROCK_SMASH)
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_DUDUNSPARCE] = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM13_ICE_BEAM)
+                                        | TMHM(TM14_BLIZZARD)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM35_FLAMETHROWER)
+                                        | TMHM(TM37_SANDSTORM)
+                                        | TMHM(TM38_FIRE_BLAST)
+                                        | TMHM(TM39_ROCK_TOMB)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM46_THIEF),
+                                          TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM70_STONE_EDGE)
+                                        | TMHM(TM73_GYRO_BALL)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM81_DRAGON_TAIL)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM92_WILD_CHARGE)),
+
+    [SPECIES_WYRDEER]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM05_ROAR)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM16_LIGHT_SCREEN)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM33_REFLECT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(TM48_SKILL_SWAP),
+                                          TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)
+                                        | TMHM(TM92_WILD_CHARGE)),
+
+    [SPECIES_CHINGLING]   = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM12_TAUNT)
+                                        | TMHM(TM16_LIGHT_SCREEN)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM20_SAFEGUARD)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM33_REFLECT)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM41_TORMENT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM48_SKILL_SWAP)
+                                        | TMHM(TM49_SNATCH)
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
+
+    [SPECIES_BONSLY]      = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM31_BRICK_BREAK)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM37_SANDSTORM)
+                                        | TMHM(TM39_ROCK_TOMB)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM46_THIEF),
+                                          TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM69_ROCK_POLISH)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_MIME_JR]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+                                        | TMHM(TM04_CALM_MIND)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM12_TAUNT)
+                                        | TMHM(TM16_LIGHT_SCREEN)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM20_SAFEGUARD)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM31_BRICK_BREAK)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM33_REFLECT)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM41_TORMENT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(TM48_SKILL_SWAP)
+                                        | TMHM(TM49_SNATCH)
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM57_CHARGE_BEAM)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)
+                                        | TMHM(TM91_TRICK_ROOM)),
+
+    [SPECIES_HAPPINY]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM07_HAIL)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM16_LIGHT_SCREEN)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM20_SAFEGUARD)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM35_FLAMETHROWER)
+                                        | TMHM(TM38_FIRE_BLAST)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(HM05_FLASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_MUNCHLAX]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+                                        | TMHM(TM03_WATER_PULSE)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM13_ICE_BEAM)
+                                        | TMHM(TM14_BLIZZARD)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM31_BRICK_BREAK)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM35_FLAMETHROWER)
+                                        | TMHM(TM37_SANDSTORM)
+                                        | TMHM(TM38_FIRE_BLAST)
+                                        | TMHM(TM39_ROCK_TOMB)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(HM03_SURF)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(HM06_ROCK_SMASH)
+                                        | TMHM(HM09_ROCK_CLIMB),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_MANTYKE]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM07_HAIL)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM13_ICE_BEAM)
+                                        | TMHM(TM14_BLIZZARD)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM40_AERIAL_ACE)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(HM03_SURF)
+                                        | TMHM(HM07_WATERFALL)
+                                        | TMHM(HM08_DIVE),
+                                          TMHM(TM55_SCALD)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM77_BULLDOZE)
+                                        | TMHM(TM79_ROCK_SLIDE)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_TOGEKISS]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+                                        | TMHM(TM03_WATER_PULSE)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM16_LIGHT_SCREEN)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM20_SAFEGUARD)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM29_PSYCHIC)
+                                        | TMHM(TM30_SHADOW_BALL)
+                                        | TMHM(TM31_BRICK_BREAK)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM33_REFLECT)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM35_FLAMETHROWER)
+                                        | TMHM(TM38_FIRE_BLAST)
+                                        | TMHM(TM40_AERIAL_ACE)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM47_STEEL_WING)
+                                        | TMHM(HM02_FLY)
+                                        | TMHM(HM05_FLASH)
+                                        | TMHM(HM06_ROCK_SMASH),
+                                          TMHM(TM56_FLING)
+                                        | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM68_GIGA_IMPACT)
+                                        | TMHM(TM72_THUNDER_WAVE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM84_DREAM_EATER)
+                                        | TMHM(TM85_GRASS_KNOT)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM89_SUBSTITUTE)),
+
+    [SPECIES_DUCFETCHD]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM23_IRON_TAIL)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM40_AERIAL_ACE)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(TM46_THIEF)
+                                        | TMHM(TM47_STEEL_WING)
+                                        | TMHM(HM01_CUT)
+                                        | TMHM(HM02_FLY),
+                                          TMHM(TM54_FALSE_SWIPE)
+                                        | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM67_RETALIATE)
+                                        | TMHM(TM74_SWORDS_DANCE)
+                                        | TMHM(TM76_PSYCH_UP)
+                                        | TMHM(TM82_WORK_UP)
+                                        | TMHM(TM83_POISON_JAB)
+                                        | TMHM(TM86_SWAGGER)
+                                        | TMHM(TM87_PLUCK)
+                                        | TMHM(TM88_U_TURN)
+                                        | TMHM(TM89_SUBSTITUTE)),
 };

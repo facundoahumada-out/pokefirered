@@ -1,0 +1,17 @@
+// DEBUG: gives one of each TM (TM01-TM93) to test them.
+// Called by the fat man in Pallet Town. Remove before release.
+script Debug_EventScript_GiveAllTMs {
+    checkitem(ITEM_TM_CASE)
+    if (var(VAR_RESULT) == FALSE) {
+        additem(ITEM_TM_CASE)
+    }
+    setvar(VAR_0x8004, ITEM_TM01)
+    while (var(VAR_0x8004) <= ITEM_TM93) {
+        additem(VAR_0x8004, 1)
+        addvar(VAR_0x8004, 1)
+    }
+    playfanfare(MUS_OBTAIN_TMHM)
+    msgbox(format("DEBUG: Recibiste las MT01-MT93."))
+    waitfanfare
+    return
+}

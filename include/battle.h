@@ -467,7 +467,25 @@ struct BattleStruct
         struct MultiBattlePokemonTx multiBattleMons[3];
     } multiBuffer;
     u8 padding_1E4[0x1C];
-}; // size == 0x200 bytes
+    u8 skyDropTargets[MAX_BATTLERS_COUNT]; // battler held in the air by each Sky Drop user, + 1 (0 = none)
+    u8 pendingVisibleBattlers; // bitfield of battlers brought back to the field (Sky Drop, Gravity) whose sprite must be shown again
+    u8 retaliateTimers[2]; // per side; 2 when a mon faints, decremented each turn end. Retaliate doubles at 1.
+    u16 flingItem; // item thrown by Fling this move, or ITEM_NONE if its effect can't apply
+    // Turns left on each battler's Magnet Rise, Telekinesis, Embargo and Heal Block (0 = inactive)
+    u8 magnetRiseTimers[MAX_BATTLERS_COUNT];
+    u8 telekinesisTimers[MAX_BATTLERS_COUNT];
+    u8 embargoTimers[MAX_BATTLERS_COUNT];
+    u8 healBlockTimers[MAX_BATTLERS_COUNT];
+    u16 hiddenItems[MAX_BATTLERS_COUNT]; // held item hidden by Embargo or Magic Room, given back when both end
+    u8 healingWish[MAX_BATTLERS_COUNT]; // HEALING_WISH_* waiting for the next Pokémon sent to this slot
+    u16 lastUsedMove; // last move used by anyone, for Copycat
+    // Turns left on field-wide effects (0 = inactive)
+    u8 trickRoomTimer;
+    u8 gravityTimer;
+    u8 magicRoomTimer;
+    u8 wonderRoomTimer;
+    u8 mistyTerrainTimer;
+};
 
 extern struct BattleStruct *gBattleStruct;
 

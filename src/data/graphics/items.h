@@ -641,6 +641,7 @@ const u32 gItemIcon_TMHM[] = INCBIN_U32("graphics/items/icons/tm_hm.4bpp.lz");
 
 const u32 gItemIconPalette_FightingTMHM[] = INCBIN_U32("graphics/items/icon_palettes/fighting_tm_hm.gbapal.lz");
 const u32 gItemIconPalette_DragonTMHM[]   = INCBIN_U32("graphics/items/icon_palettes/dragon_tm_hm.gbapal.lz");
+const u32 gItemIconPalette_BugTMHM[]      = INCBIN_U32("graphics/items/icon_palettes/bug_tm_hm.gbapal.lz");
 const u32 gItemIconPalette_WaterTMHM[]    = INCBIN_U32("graphics/items/icon_palettes/water_tm_hm.gbapal.lz");
 const u32 gItemIconPalette_PsychicTMHM[]  = INCBIN_U32("graphics/items/icon_palettes/psychic_tm_hm.gbapal.lz");
 const u32 gItemIconPalette_NormalTMHM[]   = INCBIN_U32("graphics/items/icon_palettes/normal_tm_hm.gbapal.lz");

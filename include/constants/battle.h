@@ -151,7 +151,11 @@
 #define STATUS3_UNDERWATER              (1 << 18)
 #define STATUS3_INTIMIDATE_POKES        (1 << 19)
 #define STATUS3_TRACE                   (1 << 20)
-#define STATUS3_SEMI_INVULNERABLE       (STATUS3_UNDERGROUND | STATUS3_ON_AIR | STATUS3_UNDERWATER)
+#define STATUS3_SKY_DROPPED             (1 << 21) // Held in the air by an opponent's Sky Drop
+#define STATUS3_AQUA_RING               (1 << 22)
+#define STATUS3_PHANTOM_FORCE           (1 << 23) // Vanished by Shadow Force: nothing can hit it
+#define STATUS3_SMACKED_DOWN            (1 << 24) // Grounded by Smack Down until it switches out
+#define STATUS3_SEMI_INVULNERABLE       (STATUS3_UNDERGROUND | STATUS3_ON_AIR | STATUS3_UNDERWATER | STATUS3_PHANTOM_FORCE)
 
 // Not really sure what a "hitmarker" is.
 #define HITMARKER_WAKE_UP_CLEAR         (1 << 4) // Cleared when waking up. Never set or checked.
