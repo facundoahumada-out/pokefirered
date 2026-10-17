@@ -113,3 +113,29 @@ MtMoon_1F_Text_BrockHelpsExcavateFossils::
 	.string "under Mt. Moon.\p"
 	.string "Sometimes, Brock of Pewter Gym\n"
 	.string "lends me a hand.$"
+
+MtMoon_1F_Text_DailyBrockIntro::
+# 117 "data/maps/MtMoon_1F/text.pory"
+	.string "Well, if it isn't Kanto's new\n"
+	.string "Pokémon League Champion!\p"
+	.string "I've been exploring Mt. Moon to\n"
+	.string "learn more about the Pokémon that\l"
+	.string "inhabit these caves.\p"
+	.string "But I must admit, I'd like to see\n"
+	.string "how much you've improved since our\l"
+	.string "last battle.\p"
+	.string "So, what do you say? Would you\n"
+	.string "like a rematch?$"
+
+MtMoon_1F_Text_DailyBrockAccept::
+# 130 "data/maps/MtMoon_1F/text.pory"
+	.string "Excellent! Let's see if your team\n"
+	.string "is as solid as the rocks beneath\l"
+	.string "our feet!$"
+
+MtMoon_1F_Text_DailyBrockDeclined::
+# 136 "data/maps/MtMoon_1F/text.pory"
+	.string "No problem! The mountain will\n"
+	.string "still be here when you're ready.\p"
+	.string "Take good care of your Pokémon,\n"
+	.string "Champion!$"

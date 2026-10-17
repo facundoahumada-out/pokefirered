@@ -45,9 +45,10 @@ text PewterCity_Museum_1F_Text_RunningSpaceExhibitThisMonth {
 }
 
 text PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu {
-    "I want a Pikachu!\n"
-    "It's so cute!\p"
-    "I asked my daddy to catch me one!$"
+    "I want to see some Pikachu!\n"
+    "They're so cute!\p"
+    "I asked my daddy to befriend a\n"
+    "Pikachu and introduce me to it!$"
 }
 
 text PewterCity_Museum_1F_Text_PikachuSoonIPromise {
@@ -61,4 +62,56 @@ text PewterCity_Museum_1F_Text_SpaceShuttle {
 text PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon {
     "A meteorite that fell on Mt. Moon.\n"
     "It is thought to be a Moon Stone.$"
+}
+
+text PewterCity_Museum_2F_Text_HeyYoungMan {
+    "Hey, young man!\n"
+    "You're a Pokémon Trainer, right?$"
+}
+
+text PewterCity_Museum_2F_Text_HeyYoungLady {
+    "Hey, young lady!\n"
+    "You're a Pokémon Trainer, right?$"
+}
+
+text PewterCity_Museum_2F_Text_CouldYouBringMePikachu {
+    "Could you bring me a Pikachu and\n"
+    "show it to my little one?\p"
+    "I'll reward you with something\n"
+    "that will grant it great power.\p"
+    "I understand there are some in\n"
+    "Viridian Forest, though they're\l"
+    "hard to find.$"
+}
+
+text PewterCity_Museum_2F_Text_RememberToBringPikachu {
+    "Remember to bring a Pikachu to\n"
+    "show my daughter, please.$"
+}
+
+text PewterCity_Museum_2F_Text_PikaPikaCuterUpClose {
+    "Pika, Pika!\n"
+    "It's even cuter up close!\p"
+    "I wish I could take it home\n"
+    "with me!$"
+}
+
+text PewterCity_Museum_2F_Text_YouMadeHerDay {
+    "My, you certainly made her day!\p"
+    "Please, take this as a token of\n"
+    "my gratitude.$"
+}
+
+text PewterCity_Museum_2F_Text_CantStopThinkingAboutPikachu {
+    "I can't stop thinking about that\n"
+    "Pikachu!\p"
+    "I hope I get to see one again\n"
+    "someday!$"
+}
+
+text PewterCity_Museum_2F_Text_DaughterHasntStoppedTalking {
+    "My daughter hasn't stopped talking\n"
+    "about your Pikachu!\p"
+    "Thank you again for making her\n"
+    "so happy!$"
 }

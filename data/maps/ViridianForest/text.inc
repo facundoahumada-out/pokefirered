@@ -125,3 +125,31 @@ ViridianForest_Text_LeavingViridianForest::
 # 124 "data/maps/ViridianForest/text.pory"
 	.string "Leaving Viridian Forest\n"
 	.string "Pewter City Ahead$"
+
+ViridianForest_Text_DailyErikaIntro::
+# 129 "data/maps/ViridianForest/text.pory"
+	.string "Oh my, what a pleasant surprise.\p"
+	.string "I've heard that you've conquered\n"
+	.string "the Pokémon League. You must be\l"
+	.string "very proud.\p"
+	.string "This forest reminds me that even\n"
+	.string "the most delicate Pokémon can hide\l"
+	.string "extraordinary strength.\p"
+	.string "I wonder if your team has\n"
+	.string "blossomed as much as you have.\p"
+	.string "Tell me, would you grant me the\n"
+	.string "pleasure of a rematch?$"
+
+ViridianForest_Text_DailyErikaAccept::
+# 143 "data/maps/ViridianForest/text.pory"
+	.string "Thank you. I hope this encounter\n"
+	.string "will show us how much we've both\l"
+	.string "grown.$"
+
+ViridianForest_Text_DailyErikaDeclined::
+# 149 "data/maps/ViridianForest/text.pory"
+	.string "Of course. There is no need to\n"
+	.string "rush.\p"
+	.string "Nature teaches us that everything\n"
+	.string "has its own time. I hope to see\l"
+	.string "you again soon.$"

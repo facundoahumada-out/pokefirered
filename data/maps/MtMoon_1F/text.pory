@@ -113,3 +113,29 @@ text MtMoon_1F_Text_BrockHelpsExcavateFossils {
     "Sometimes, Brock of Pewter Gym\n"
     "lends me a hand.$"
 }
+
+text MtMoon_1F_Text_DailyBrockIntro {
+    "Well, if it isn't Kanto's new\n"
+    "Pokémon League Champion!\p"
+    "I've been exploring Mt. Moon to\n"
+    "learn more about the Pokémon that\l"
+    "inhabit these caves.\p"
+    "But I must admit, I'd like to see\n"
+    "how much you've improved since our\l"
+    "last battle.\p"
+    "So, what do you say? Would you\n"
+    "like a rematch?$"
+}
+
+text MtMoon_1F_Text_DailyBrockAccept {
+    "Excellent! Let's see if your team\n"
+    "is as solid as the rocks beneath\l"
+    "our feet!$"
+}
+
+text MtMoon_1F_Text_DailyBrockDeclined {
+    "No problem! The mountain will\n"
+    "still be here when you're ready.\p"
+    "Take good care of your Pokémon,\n"
+    "Champion!$"
+}

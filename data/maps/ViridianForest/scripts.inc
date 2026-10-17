@@ -6,94 +6,128 @@ ViridianForest_MapScripts::
 
 ViridianForest_OnTransition::
 # 6 "data/maps/ViridianForest/scripts.pory"
+	special UpdateDailyLeaderVisibility
+# 7 "data/maps/ViridianForest/scripts.pory"
 	setworldmapflag FLAG_WORLD_MAP_VIRIDIAN_FOREST
 	end
 
 
 ViridianForest_EventScript_Youngster::
-# 11 "data/maps/ViridianForest/scripts.pory"
+# 12 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_FriendsItchingToBattle, MSGBOX_NPC
 	end
 
 
 ViridianForest_EventScript_Boy::
-# 16 "data/maps/ViridianForest/scripts.pory"
+# 17 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_RanOutOfPokeBalls, MSGBOX_NPC
 	end
 
 
 ViridianForest_EventScript_TrainerTips1::
-# 21 "data/maps/ViridianForest/scripts.pory"
+# 22 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_AvoidGrassyAreasWhenWeak, MSGBOX_SIGN
 	end
 
 
 ViridianForest_EventScript_TrainerTips2::
-# 26 "data/maps/ViridianForest/scripts.pory"
+# 27 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_UseAntidoteForPoison, MSGBOX_SIGN
 	end
 
 
 ViridianForest_EventScript_TrainerTips3::
-# 31 "data/maps/ViridianForest/scripts.pory"
+# 32 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_ContactOakViaPCToRatePokedex, MSGBOX_SIGN
 	end
 
 
 ViridianForest_EventScript_TrainerTips4::
-# 36 "data/maps/ViridianForest/scripts.pory"
+# 37 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_CantCatchOwnedMons, MSGBOX_SIGN
 	end
 
 
 ViridianForest_EventScript_TrainerTips5::
-# 41 "data/maps/ViridianForest/scripts.pory"
+# 42 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_WeakenMonsBeforeCapture, MSGBOX_SIGN
 	end
 
 
 ViridianForest_EventScript_ExitSign::
-# 46 "data/maps/ViridianForest/scripts.pory"
+# 47 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_LeavingViridianForest, MSGBOX_SIGN
 	end
 
 
 ViridianForest_EventScript_Rick::
-# 51 "data/maps/ViridianForest/scripts.pory"
-	trainerbattle_single TRAINER_BUG_CATCHER_RICK, ViridianForest_Text_RickIntro, ViridianForest_Text_RickDefeat
 # 52 "data/maps/ViridianForest/scripts.pory"
+	trainerbattle_single TRAINER_BUG_CATCHER_RICK, ViridianForest_Text_RickIntro, ViridianForest_Text_RickDefeat
+# 53 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_RickPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 ViridianForest_EventScript_Doug::
-# 57 "data/maps/ViridianForest/scripts.pory"
-	trainerbattle_single TRAINER_BUG_CATCHER_DOUG, ViridianForest_Text_DougIntro, ViridianForest_Text_DougDefeat
 # 58 "data/maps/ViridianForest/scripts.pory"
+	trainerbattle_single TRAINER_BUG_CATCHER_DOUG, ViridianForest_Text_DougIntro, ViridianForest_Text_DougDefeat
+# 59 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_DougPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 ViridianForest_EventScript_Sammy::
-# 63 "data/maps/ViridianForest/scripts.pory"
-	trainerbattle_single TRAINER_BUG_CATCHER_SAMMY, ViridianForest_Text_SammyIntro, ViridianForest_Text_SammyDefeat
 # 64 "data/maps/ViridianForest/scripts.pory"
+	trainerbattle_single TRAINER_BUG_CATCHER_SAMMY, ViridianForest_Text_SammyIntro, ViridianForest_Text_SammyDefeat
+# 65 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_SammyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 ViridianForest_EventScript_Anthony::
-# 69 "data/maps/ViridianForest/scripts.pory"
-	trainerbattle_single TRAINER_BUG_CATCHER_ANTHONY, ViridianForest_Text_AnthonyIntro, ViridianForest_Text_AnthonyDefeat
 # 70 "data/maps/ViridianForest/scripts.pory"
+	trainerbattle_single TRAINER_BUG_CATCHER_ANTHONY, ViridianForest_Text_AnthonyIntro, ViridianForest_Text_AnthonyDefeat
+# 71 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_AnthonyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 ViridianForest_EventScript_Charlie::
-# 75 "data/maps/ViridianForest/scripts.pory"
-	trainerbattle_single TRAINER_BUG_CATCHER_CHARLIE, ViridianForest_Text_CharlieIntro, ViridianForest_Text_CharlieDefeat
 # 76 "data/maps/ViridianForest/scripts.pory"
+	trainerbattle_single TRAINER_BUG_CATCHER_CHARLIE, ViridianForest_Text_CharlieIntro, ViridianForest_Text_CharlieDefeat
+# 77 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_CharliePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+ViridianForest_EventScript_DailyErika::
+# 83 "data/maps/ViridianForest/scripts.pory"
+	lock
+# 84 "data/maps/ViridianForest/scripts.pory"
+	faceplayer
+# 85 "data/maps/ViridianForest/scripts.pory"
+	specialvar VAR_RESULT, IsDailyLeaderBeatenToday
+# 86 "data/maps/ViridianForest/scripts.pory"
+	goto_if_eq VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten
+# 87 "data/maps/ViridianForest/scripts.pory"
+	msgbox ViridianForest_Text_DailyErikaIntro, MSGBOX_YESNO
+# 88 "data/maps/ViridianForest/scripts.pory"
+	goto_if_eq VAR_RESULT, NO, ViridianForest_EventScript_DailyErikaDeclined
+# 89 "data/maps/ViridianForest/scripts.pory"
+	msgbox ViridianForest_Text_DailyErikaAccept
+# 90 "data/maps/ViridianForest/scripts.pory"
+	cleartrainerflag TRAINER_DAILY_ERIKA
+# 91 "data/maps/ViridianForest/scripts.pory"
+	trainerbattle_no_intro TRAINER_DAILY_ERIKA, Text_DailyLeaderDefeat
+# 92 "data/maps/ViridianForest/scripts.pory"
+	goto EventScript_DailyLeaderReward
+	end
+
+
+ViridianForest_EventScript_DailyErikaDeclined::
+# 97 "data/maps/ViridianForest/scripts.pory"
+	msgbox ViridianForest_Text_DailyErikaDeclined
+# 98 "data/maps/ViridianForest/scripts.pory"
+	release
 	end
 

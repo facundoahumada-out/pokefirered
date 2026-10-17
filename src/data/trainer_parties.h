@@ -10860,3 +10860,66 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CueBallPaxton[] = {
         .species = SPECIES_MUK,
     },
 };
+
+// Daily rematch (src/daily_battles.c). Placeholder party
+static const struct TrainerMonNoItemDefaultMoves sParty_DailyBrock[] = {
+    {
+        .iv = 0,
+        .lvl = 5,
+        .species = SPECIES_RATTATA,
+    },
+};
+
+// Daily rematch (src/daily_battles.c). Placeholder party
+static const struct TrainerMonNoItemDefaultMoves sParty_DailyMisty[] = {
+    {
+        .iv = 0,
+        .lvl = 5,
+        .species = SPECIES_RATTATA,
+    },
+};
+
+// Daily rematch (src/daily_battles.c). Placeholder party
+static const struct TrainerMonNoItemDefaultMoves sParty_DailyLtSurge[] = {
+    {
+        .iv = 0,
+        .lvl = 5,
+        .species = SPECIES_RATTATA,
+    },
+};
+
+// Daily rematch (src/daily_battles.c). Placeholder party
+static const struct TrainerMonNoItemDefaultMoves sParty_DailyErika[] = {
+    {
+        .iv = 0,
+        .lvl = 5,
+        .species = SPECIES_RATTATA,
+    },
+};
+
+// Daily rematch (src/daily_battles.c). Placeholder party
+static const struct TrainerMonNoItemDefaultMoves sParty_DailyKoga[] = {
+    {
+        .iv = 0,
+        .lvl = 5,
+        .species = SPECIES_RATTATA,
+    },
+};
+
+// Daily rematch (src/daily_battles.c). Placeholder party
+static const struct TrainerMonNoItemDefaultMoves sParty_DailySabrina[] = {
+    {
+        .iv = 0,
+        .lvl = 5,
+        .species = SPECIES_RATTATA,
+    },
+};
+
+// Daily rematch (src/daily_battles.c). Placeholder party
+static const struct TrainerMonNoItemDefaultMoves sParty_DailyBlaine[] = {
+    {
+        .iv = 0,
+        .lvl = 5,
+        .species = SPECIES_RATTATA,
+    },
+};

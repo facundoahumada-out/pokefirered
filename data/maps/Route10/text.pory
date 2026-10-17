@@ -104,3 +104,28 @@ text Route10_Text_RockTunnel {
 text Route10_Text_PowerPlant {
     "Power Plant$"
 }
+
+text Route10_Text_DailyLtSurgeIntro {
+    "HAHAHA! So Kanto has a new\n"
+    "Champion! I LIKE THAT!\p"
+    "A trainer who's proven they've got\n"
+    "guts!\p"
+    "But winning the League doesn't\n"
+    "mean you can beat a seasoned\l"
+    "veteran like me.\p"
+    "What do you say, recruit?! Ready\n"
+    "for a rematch at full power?$"
+}
+
+text Route10_Text_DailyLtSurgeAccept {
+    "THAT'S THE SPIRIT!\p"
+    "GET YOUR TEAM READY FOR A\n"
+    "HIGH-VOLTAGE SHOCK!$"
+}
+
+text Route10_Text_DailyLtSurgeDeclined {
+    "HAHAHA! Is the mighty Champion\n"
+    "afraid of a little sparring?!\p"
+    "Come back when you've got the guts\n"
+    "to face me!$"
+}

@@ -1,4 +1,11 @@
-mapscripts SaffronCity_Dojo_MapScripts {}
+mapscripts SaffronCity_Dojo_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: SaffronCity_Dojo_OnTransition
+}
+
+script SaffronCity_Dojo_OnTransition {
+    special(UpdateDailyLeaderVisibility)
+    end
+}
 
 script SaffronCity_Dojo_EventScript_TriggerMasterBattleLeft {
     lockall
@@ -164,6 +171,27 @@ script SaffronCity_Dojo_EventScript_MasterKoichiAlreadyGotHitmon {
 
 script SaffronCity_Dojo_EventScript_DefeatedMasterKoichi {
     setvar(VAR_MAP_SCENE_SAFFRON_CITY_DOJO, 1)
+    release
+    end
+}
+
+// Daily gym leader rematch (see src/daily_battles.c)
+script SaffronCity_Dojo_EventScript_DailySabrina {
+    lock
+    faceplayer
+    specialvar(VAR_RESULT, IsDailyLeaderBeatenToday)
+    goto_if_eq(VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten)
+    msgbox(SaffronCity_Dojo_Text_DailySabrinaIntro, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, SaffronCity_Dojo_EventScript_DailySabrinaDeclined)
+    msgbox(SaffronCity_Dojo_Text_DailySabrinaAccept)
+    cleartrainerflag(TRAINER_DAILY_SABRINA)
+    trainerbattle_no_intro(TRAINER_DAILY_SABRINA, Text_DailyLeaderDefeat)
+    goto(EventScript_DailyLeaderReward)
+    end
+}
+
+script SaffronCity_Dojo_EventScript_DailySabrinaDeclined {
+    msgbox(SaffronCity_Dojo_Text_DailySabrinaDeclined)
     release
     end
 }

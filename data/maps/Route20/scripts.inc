@@ -6,50 +6,84 @@ Route20_MapScripts::
 
 Route20_OnTransition::
 # 6 "data/maps/Route20/scripts.pory"
-	call_if_unset FLAG_STOPPED_SEAFOAM_B3F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB3F
+	special UpdateDailyLeaderVisibility
 # 7 "data/maps/Route20/scripts.pory"
+	call_if_unset FLAG_STOPPED_SEAFOAM_B3F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB3F
+# 8 "data/maps/Route20/scripts.pory"
 	call_if_unset FLAG_STOPPED_SEAFOAM_B4F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB4F
 	end
 
 
 Route20_EventScript_ResetSeafoamBouldersForB3F::
-# 12 "data/maps/Route20/scripts.pory"
-	clearflag FLAG_HIDE_SEAFOAM_1F_BOULDER_1
 # 13 "data/maps/Route20/scripts.pory"
-	clearflag FLAG_HIDE_SEAFOAM_1F_BOULDER_2
+	clearflag FLAG_HIDE_SEAFOAM_1F_BOULDER_1
 # 14 "data/maps/Route20/scripts.pory"
-	setflag FLAG_HIDE_SEAFOAM_B1F_BOULDER_1
+	clearflag FLAG_HIDE_SEAFOAM_1F_BOULDER_2
 # 15 "data/maps/Route20/scripts.pory"
-	setflag FLAG_HIDE_SEAFOAM_B1F_BOULDER_2
+	setflag FLAG_HIDE_SEAFOAM_B1F_BOULDER_1
 # 16 "data/maps/Route20/scripts.pory"
-	setflag FLAG_HIDE_SEAFOAM_B2F_BOULDER_1
+	setflag FLAG_HIDE_SEAFOAM_B1F_BOULDER_2
 # 17 "data/maps/Route20/scripts.pory"
-	setflag FLAG_HIDE_SEAFOAM_B2F_BOULDER_2
+	setflag FLAG_HIDE_SEAFOAM_B2F_BOULDER_1
 # 18 "data/maps/Route20/scripts.pory"
-	setflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_1
+	setflag FLAG_HIDE_SEAFOAM_B2F_BOULDER_2
 # 19 "data/maps/Route20/scripts.pory"
+	setflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_1
+# 20 "data/maps/Route20/scripts.pory"
 	setflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_2
 	return
 
 
 Route20_EventScript_ResetSeafoamBouldersForB4F::
-# 24 "data/maps/Route20/scripts.pory"
-	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_3
 # 25 "data/maps/Route20/scripts.pory"
-	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_4
+	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_3
 # 26 "data/maps/Route20/scripts.pory"
-	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_5
+	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_4
 # 27 "data/maps/Route20/scripts.pory"
-	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_6
+	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_5
 # 28 "data/maps/Route20/scripts.pory"
-	setflag FLAG_HIDE_SEAFOAM_B4F_BOULDER_1
+	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_6
 # 29 "data/maps/Route20/scripts.pory"
+	setflag FLAG_HIDE_SEAFOAM_B4F_BOULDER_1
+# 30 "data/maps/Route20/scripts.pory"
 	setflag FLAG_HIDE_SEAFOAM_B4F_BOULDER_2
 	return
 
 
 Route20_EventScript_SeafoamIslandsSign::
-# 34 "data/maps/Route20/scripts.pory"
+# 35 "data/maps/Route20/scripts.pory"
 	msgbox Route20_Text_SeafoamIslands, MSGBOX_SIGN
+	end
+
+
+Route20_EventScript_DailyMisty::
+# 41 "data/maps/Route20/scripts.pory"
+	lock
+# 42 "data/maps/Route20/scripts.pory"
+	faceplayer
+# 43 "data/maps/Route20/scripts.pory"
+	specialvar VAR_RESULT, IsDailyLeaderBeatenToday
+# 44 "data/maps/Route20/scripts.pory"
+	goto_if_eq VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten
+# 45 "data/maps/Route20/scripts.pory"
+	msgbox Route20_Text_DailyMistyIntro, MSGBOX_YESNO
+# 46 "data/maps/Route20/scripts.pory"
+	goto_if_eq VAR_RESULT, NO, Route20_EventScript_DailyMistyDeclined
+# 47 "data/maps/Route20/scripts.pory"
+	msgbox Route20_Text_DailyMistyAccept
+# 48 "data/maps/Route20/scripts.pory"
+	cleartrainerflag TRAINER_DAILY_MISTY
+# 49 "data/maps/Route20/scripts.pory"
+	trainerbattle_no_intro TRAINER_DAILY_MISTY, Text_DailyLeaderDefeat
+# 50 "data/maps/Route20/scripts.pory"
+	goto EventScript_DailyLeaderReward
+	end
+
+
+Route20_EventScript_DailyMistyDeclined::
+# 55 "data/maps/Route20/scripts.pory"
+	msgbox Route20_Text_DailyMistyDeclined
+# 56 "data/maps/Route20/scripts.pory"
+	release
 	end
 

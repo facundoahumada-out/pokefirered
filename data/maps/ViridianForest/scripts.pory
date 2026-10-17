@@ -3,6 +3,7 @@ mapscripts ViridianForest_MapScripts {
 }
 
 script ViridianForest_OnTransition {
+    special(UpdateDailyLeaderVisibility)
     setworldmapflag(FLAG_WORLD_MAP_VIRIDIAN_FOREST)
     end
 }
@@ -74,5 +75,26 @@ script ViridianForest_EventScript_Anthony {
 script ViridianForest_EventScript_Charlie {
     trainerbattle_single(TRAINER_BUG_CATCHER_CHARLIE, ViridianForest_Text_CharlieIntro, ViridianForest_Text_CharlieDefeat)
     msgbox(ViridianForest_Text_CharliePostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+// Daily gym leader rematch (see src/daily_battles.c)
+script ViridianForest_EventScript_DailyErika {
+    lock
+    faceplayer
+    specialvar(VAR_RESULT, IsDailyLeaderBeatenToday)
+    goto_if_eq(VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten)
+    msgbox(ViridianForest_Text_DailyErikaIntro, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, ViridianForest_EventScript_DailyErikaDeclined)
+    msgbox(ViridianForest_Text_DailyErikaAccept)
+    cleartrainerflag(TRAINER_DAILY_ERIKA)
+    trainerbattle_no_intro(TRAINER_DAILY_ERIKA, Text_DailyLeaderDefeat)
+    goto(EventScript_DailyLeaderReward)
+    end
+}
+
+script ViridianForest_EventScript_DailyErikaDeclined {
+    msgbox(ViridianForest_Text_DailyErikaDeclined)
+    release
     end
 }

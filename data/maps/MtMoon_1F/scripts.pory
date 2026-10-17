@@ -3,6 +3,7 @@ mapscripts MtMoon_1F_MapScripts {
 }
 
 script MtMoon_1F_OnTransition {
+    special(UpdateDailyLeaderVisibility)
     setworldmapflag(FLAG_WORLD_MAP_MT_MOON_1F)
     end
 }
@@ -51,5 +52,26 @@ script MtMoon_1F_EventScript_Kent {
 script MtMoon_1F_EventScript_Robby {
     trainerbattle_single(TRAINER_BUG_CATCHER_ROBBY, MtMoon_1F_Text_RobbyIntro, MtMoon_1F_Text_RobbyDefeat)
     msgbox(MtMoon_1F_Text_RobbyPostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+// Daily gym leader rematch (see src/daily_battles.c)
+script MtMoon_1F_EventScript_DailyBrock {
+    lock
+    faceplayer
+    specialvar(VAR_RESULT, IsDailyLeaderBeatenToday)
+    goto_if_eq(VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten)
+    msgbox(MtMoon_1F_Text_DailyBrockIntro, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, MtMoon_1F_EventScript_DailyBrockDeclined)
+    msgbox(MtMoon_1F_Text_DailyBrockAccept)
+    cleartrainerflag(TRAINER_DAILY_BROCK)
+    trainerbattle_no_intro(TRAINER_DAILY_BROCK, Text_DailyLeaderDefeat)
+    goto(EventScript_DailyLeaderReward)
+    end
+}
+
+script MtMoon_1F_EventScript_DailyBrockDeclined {
+    msgbox(MtMoon_1F_Text_DailyBrockDeclined)
+    release
     end
 }

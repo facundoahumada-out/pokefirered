@@ -1223,9 +1223,9 @@
 
 // Unused hidden item flags
 #define FLAG_TUTOR_ELEMENTAL_PUNCHES    0x4A7 // Free lesson of the elemental punches tutor already used
-#define FLAG_UNUSED_0x4A8               0x4A8 // Unused Flag
-#define FLAG_UNUSED_0x4A9               0x4A9 // Unused Flag
-#define FLAG_UNUSED_0x4AA               0x4AA // Unused Flag
+#define FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST 0x4A8 // The balding man in Pewter Museum 2F asked the player to bring a Pikachu
+#define FLAG_GOT_LIGHT_BALL_PEWTER_MUSEUM  0x4A9 // Showed a Pikachu to the little girl in Pewter Museum 2F
+#define FLAG_HIDE_DAILY_LEADER          0x4AA // Hides the gym leader of the daily rematches when it's not their day (see src/daily_battles.c)
 #define FLAG_UNUSED_0x4AB               0x4AB // Unused Flag
 #define FLAG_UNUSED_0x4AC               0x4AC // Unused Flag
 #define FLAG_UNUSED_0x4AD               0x4AD // Unused Flag

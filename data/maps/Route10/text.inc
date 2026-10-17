@@ -104,3 +104,28 @@ Route10_Text_RockTunnel::
 Route10_Text_PowerPlant::
 # 104 "data/maps/Route10/text.pory"
 	.string "Power Plant$"
+
+Route10_Text_DailyLtSurgeIntro::
+# 108 "data/maps/Route10/text.pory"
+	.string "HAHAHA! So Kanto has a new\n"
+	.string "Champion! I LIKE THAT!\p"
+	.string "A trainer who's proven they've got\n"
+	.string "guts!\p"
+	.string "But winning the League doesn't\n"
+	.string "mean you can beat a seasoned\l"
+	.string "veteran like me.\p"
+	.string "What do you say, recruit?! Ready\n"
+	.string "for a rematch at full power?$"
+
+Route10_Text_DailyLtSurgeAccept::
+# 120 "data/maps/Route10/text.pory"
+	.string "THAT'S THE SPIRIT!\p"
+	.string "GET YOUR TEAM READY FOR A\n"
+	.string "HIGH-VOLTAGE SHOCK!$"
+
+Route10_Text_DailyLtSurgeDeclined::
+# 126 "data/maps/Route10/text.pory"
+	.string "HAHAHA! Is the mighty Champion\n"
+	.string "afraid of a little sparring?!\p"
+	.string "Come back when you've got the guts\n"
+	.string "to face me!$"

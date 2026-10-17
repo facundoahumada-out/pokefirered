@@ -3,6 +3,7 @@ mapscripts Route20_MapScripts {
 }
 
 script Route20_OnTransition {
+    special(UpdateDailyLeaderVisibility)
     call_if_unset(FLAG_STOPPED_SEAFOAM_B3F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB3F)
     call_if_unset(FLAG_STOPPED_SEAFOAM_B4F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB4F)
     end
@@ -32,5 +33,26 @@ script Route20_EventScript_ResetSeafoamBouldersForB4F {
 
 script Route20_EventScript_SeafoamIslandsSign {
     msgbox(Route20_Text_SeafoamIslands, MSGBOX_SIGN)
+    end
+}
+
+// Daily gym leader rematch (see src/daily_battles.c)
+script Route20_EventScript_DailyMisty {
+    lock
+    faceplayer
+    specialvar(VAR_RESULT, IsDailyLeaderBeatenToday)
+    goto_if_eq(VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten)
+    msgbox(Route20_Text_DailyMistyIntro, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, Route20_EventScript_DailyMistyDeclined)
+    msgbox(Route20_Text_DailyMistyAccept)
+    cleartrainerflag(TRAINER_DAILY_MISTY)
+    trainerbattle_no_intro(TRAINER_DAILY_MISTY, Text_DailyLeaderDefeat)
+    goto(EventScript_DailyLeaderReward)
+    end
+}
+
+script Route20_EventScript_DailyMistyDeclined {
+    msgbox(Route20_Text_DailyMistyDeclined)
+    release
     end
 }

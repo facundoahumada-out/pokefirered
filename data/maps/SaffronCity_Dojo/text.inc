@@ -123,3 +123,32 @@ SaffronCity_Dojo_Text_GoesAroundComesAround::
 SaffronCity_Dojo_Text_FightingDojo::
 # 123 "data/maps/SaffronCity_Dojo/text.pory"
 	.string "Fighting Dojo$"
+
+SaffronCity_Dojo_Text_DailySabrinaIntro::
+# 127 "data/maps/SaffronCity_Dojo/text.pory"
+	.string "I've heard that you've become the\n"
+	.string "Pokémon League Champion. The power\l"
+	.string "you've demonstrated is undeniable.\p"
+	.string "However, strength alone does not\n"
+	.string "determine the outcome of a battle.\p"
+	.string "Focus, foresight, and willpower\n"
+	.string "can be just as decisive.\p"
+	.string "I'm observing the Fighting Dojo's\n"
+	.string "master as he trains his students.\p"
+	.string "I wonder if your mind has evolved\n"
+	.string "as much as your team has.\p"
+	.string "Will you accept a rematch with me?$"
+
+SaffronCity_Dojo_Text_DailySabrinaAccept::
+# 142 "data/maps/SaffronCity_Dojo/text.pory"
+	.string "Very well. Try to anticipate my\n"
+	.string "moves…\p"
+	.string "Though knowing you must do so\n"
+	.string "doesn't mean you'll succeed.$"
+
+SaffronCity_Dojo_Text_DailySabrinaDeclined::
+# 149 "data/maps/SaffronCity_Dojo/text.pory"
+	.string "Very well. Even the future has its\n"
+	.string "uncertainties.\p"
+	.string "I'll leave the decision in your\n"
+	.string "hands.$"

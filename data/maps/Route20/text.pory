@@ -150,3 +150,29 @@ text Route20_Text_MistyTrainsHere {
     "They say that Misty of the\n"
     "Cerulean Gym trains here.$"
 }
+
+text Route20_Text_DailyMistyIntro {
+    "So you really did become the\n"
+    "Pokémon League Champion?!\p"
+    "Ha! Don't think that means you can\n"
+    "beat me so easily!\p"
+    "I've been training my Water-type\n"
+    "Pokémon here on these islands, and\l"
+    "I can't wait to put them to the\l"
+    "test.\p"
+    "Come on! Do you dare to challenge\n"
+    "me again?$"
+}
+
+text Route20_Text_DailyMistyAccept {
+    "That's what I wanted to hear! I\n"
+    "hope you brought more than just a\l"
+    "Champion's title!$"
+}
+
+text Route20_Text_DailyMistyDeclined {
+    "What?! You came all this way just\n"
+    "to turn me down?\p"
+    "…Fine! But don't think I'll forget\n"
+    "this!$"
+}

@@ -150,3 +150,29 @@ Route20_Text_MistyTrainsHere::
 	.string "are common sights in these parts.\p"
 	.string "They say that Misty of the\n"
 	.string "Cerulean Gym trains here.$"
+
+Route20_Text_DailyMistyIntro::
+# 154 "data/maps/Route20/text.pory"
+	.string "So you really did become the\n"
+	.string "Pokémon League Champion?!\p"
+	.string "Ha! Don't think that means you can\n"
+	.string "beat me so easily!\p"
+	.string "I've been training my Water-type\n"
+	.string "Pokémon here on these islands, and\l"
+	.string "I can't wait to put them to the\l"
+	.string "test.\p"
+	.string "Come on! Do you dare to challenge\n"
+	.string "me again?$"
+
+Route20_Text_DailyMistyAccept::
+# 167 "data/maps/Route20/text.pory"
+	.string "That's what I wanted to hear! I\n"
+	.string "hope you brought more than just a\l"
+	.string "Champion's title!$"
+
+Route20_Text_DailyMistyDeclined::
+# 173 "data/maps/Route20/text.pory"
+	.string "What?! You came all this way just\n"
+	.string "to turn me down?\p"
+	.string "…Fine! But don't think I'll forget\n"
+	.string "this!$"

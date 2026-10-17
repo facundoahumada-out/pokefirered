@@ -125,3 +125,31 @@ text ViridianForest_Text_LeavingViridianForest {
     "Leaving Viridian Forest\n"
     "Pewter City Ahead$"
 }
+
+text ViridianForest_Text_DailyErikaIntro {
+    "Oh my, what a pleasant surprise.\p"
+    "I've heard that you've conquered\n"
+    "the Pokémon League. You must be\l"
+    "very proud.\p"
+    "This forest reminds me that even\n"
+    "the most delicate Pokémon can hide\l"
+    "extraordinary strength.\p"
+    "I wonder if your team has\n"
+    "blossomed as much as you have.\p"
+    "Tell me, would you grant me the\n"
+    "pleasure of a rematch?$"
+}
+
+text ViridianForest_Text_DailyErikaAccept {
+    "Thank you. I hope this encounter\n"
+    "will show us how much we've both\l"
+    "grown.$"
+}
+
+text ViridianForest_Text_DailyErikaDeclined {
+    "Of course. There is no need to\n"
+    "rush.\p"
+    "Nature teaches us that everything\n"
+    "has its own time. I hope to see\l"
+    "you again soon.$"
+}

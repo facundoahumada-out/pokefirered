@@ -15,14 +15,141 @@ script PewterCity_Museum_2F_EventScript_Scientist {
     end
 }
 
+// Pikachu sidequest: the girl wants to see a Pikachu and her father asks the player to bring one.
+// Showing her a Pikachu (talking to her with one in the party) earns a Light Ball from the father.
 script PewterCity_Museum_2F_EventScript_LittleGirl {
-    msgbox(PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu, MSGBOX_NPC)
+    lock
+    faceplayer
+    goto_if_set(FLAG_GOT_LIGHT_BALL_PEWTER_MUSEUM, PewterCity_Museum_2F_EventScript_LittleGirlAfterReward)
+    call(PewterCity_Museum_2F_EventScript_CheckPartyHasPikachu)
+    goto_if_eq(VAR_RESULT, TRUE, PewterCity_Museum_2F_EventScript_ShowPikachu)
+    msgbox(PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu)
+    applymovement(LOCALID_MUSEUM_2F_LITTLE_GIRL, Common_Movement_FaceRight)
+    waitmovement(0)
+    goto_if_set(FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST, PewterCity_Museum_2F_EventScript_LittleGirlEnd)
+    call(PewterCity_Museum_2F_EventScript_DadAsksForPikachu)
+    release
+    end
+}
+
+script PewterCity_Museum_2F_EventScript_LittleGirlEnd {
+    release
+    end
+}
+
+script PewterCity_Museum_2F_EventScript_LittleGirlAfterReward {
+    msgbox(PewterCity_Museum_2F_Text_CantStopThinkingAboutPikachu)
+    release
+    end
+}
+
+// The father turns towards the side the player is talking to the girl from
+script PewterCity_Museum_2F_EventScript_ShowPikachu {
+    specialvar(VAR_RESULT, GetPlayerFacingDirection)
+    switch (var(VAR_RESULT)) {
+        case DIR_EAST:
+            applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_FaceLeft)
+        case DIR_SOUTH:
+            applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_FaceUp)
+        default:
+            applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, Common_Movement_FaceDown)
+    }
+    waitmovement(0)
+    msgbox(PewterCity_Museum_2F_Text_PikaPikaCuterUpClose)
+    msgbox(PewterCity_Museum_2F_Text_YouMadeHerDay)
+    giveitem(ITEM_LIGHT_BALL)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_BagIsFull)
+    setflag(FLAG_GOT_LIGHT_BALL_PEWTER_MUSEUM)
+    setflag(FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST)
+    release
     end
 }
 
 script PewterCity_Museum_2F_EventScript_BaldingMan {
-    msgbox(PewterCity_Museum_1F_Text_PikachuSoonIPromise, MSGBOX_NPC)
+    lock
+    goto_if_set(FLAG_GOT_LIGHT_BALL_PEWTER_MUSEUM, PewterCity_Museum_2F_EventScript_BaldingManAfterReward)
+    goto_if_set(FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST, PewterCity_Museum_2F_EventScript_BaldingManReminder)
+    call(PewterCity_Museum_2F_EventScript_DadAsksForPikachu)
+    release
     end
+}
+
+script PewterCity_Museum_2F_EventScript_BaldingManReminder {
+    msgbox(PewterCity_Museum_1F_Text_PikachuSoonIPromise)
+    applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, Common_Movement_FacePlayer)
+    waitmovement(0)
+    msgbox(PewterCity_Museum_2F_Text_RememberToBringPikachu)
+    applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, Common_Movement_FaceDown)
+    waitmovement(0)
+    release
+    end
+}
+
+script PewterCity_Museum_2F_EventScript_BaldingManAfterReward {
+    faceplayer
+    msgbox(PewterCity_Museum_2F_Text_DaughterHasntStoppedTalking)
+    release
+    end
+}
+
+// The father notices the player, steps one tile to the right (away from his daughter) and asks for a Pikachu.
+// If the player is already standing on that tile (talking to him from the right), he doesn't move.
+script PewterCity_Museum_2F_EventScript_DadAsksForPikachu {
+    msgbox(PewterCity_Museum_1F_Text_PikachuSoonIPromise)
+    playse(SE_PIN)
+    applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadNoticePlayer)
+    waitmovement(0)
+    checkplayergender
+    if (var(VAR_RESULT) == MALE) {
+        msgbox(PewterCity_Museum_2F_Text_HeyYoungMan)
+    } else {
+        msgbox(PewterCity_Museum_2F_Text_HeyYoungLady)
+    }
+    specialvar(VAR_RESULT, GetPlayerFacingDirection)
+    if (var(VAR_RESULT) == DIR_WEST) {
+        msgbox(PewterCity_Museum_2F_Text_CouldYouBringMePikachu)
+        applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, Common_Movement_FaceDown)
+    } else {
+        applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadStepRight)
+        waitmovement(0)
+        msgbox(PewterCity_Museum_2F_Text_CouldYouBringMePikachu)
+        applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadStepBack)
+    }
+    waitmovement(0)
+    setflag(FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST)
+    return
+}
+
+// Output: VAR_RESULT = TRUE if there's a Pikachu (not an Egg) in the player's party
+script PewterCity_Museum_2F_EventScript_CheckPartyHasPikachu {
+    setvar(VAR_0x8004, 0)
+    while (var(VAR_0x8004) < PARTY_SIZE) {
+        specialvar(VAR_RESULT, GetPartyMonSpecies)
+        if (var(VAR_RESULT) == SPECIES_PIKACHU) {
+            setvar(VAR_RESULT, TRUE)
+            return
+        }
+        addvar(VAR_0x8004, 1)
+    }
+    setvar(VAR_RESULT, FALSE)
+    return
+}
+
+movement PewterCity_Museum_2F_Movement_DadNoticePlayer {
+    delay_1
+    delay_4
+    emote_exclamation_mark
+    face_player
+}
+
+movement PewterCity_Museum_2F_Movement_DadStepRight {
+    walk_right
+    face_player
+}
+
+movement PewterCity_Museum_2F_Movement_DadStepBack {
+    walk_left
+    face_down
 }
 
 script PewterCity_Museum_2F_EventScript_SpaceShuttle {
@@ -33,4 +160,12 @@ script PewterCity_Museum_2F_EventScript_SpaceShuttle {
 script PewterCity_Museum_2F_EventScript_MoonStone {
     msgbox(PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon, MSGBOX_SIGN)
     end
+}
+
+movement PewterCity_Museum_2F_Movement_FaceLeft {
+    face_left
+}
+
+movement PewterCity_Museum_2F_Movement_FaceUp {
+    face_up
 }

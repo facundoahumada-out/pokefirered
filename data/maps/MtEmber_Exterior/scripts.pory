@@ -4,6 +4,7 @@ mapscripts MtEmber_Exterior_MapScripts {
 }
 
 script MtEmber_Exterior_OnTransition {
+    special(UpdateDailyLeaderVisibility)
     setworldmapflag(FLAG_WORLD_MAP_MT_EMBER_EXTERIOR)
     call_if_eq(VAR_MAP_SCENE_MT_EMBER_EXTERIOR, 2, MtEmber_Exterior_EventScript_RocketsFaceDown)
     end
@@ -134,5 +135,26 @@ script MtEmber_Exterior_EventScript_Beth {
 script MtEmber_Exterior_EventScript_Jocelyn {
     trainerbattle_single(TRAINER_CRUSH_GIRL_JOCELYN, MtEmber_Exterior_Text_JocelynIntro, MtEmber_Exterior_Text_JocelynDefeat)
     msgbox(MtEmber_Exterior_Text_JocelynPostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+// Daily gym leader rematch (see src/daily_battles.c)
+script MtEmber_Exterior_EventScript_DailyBlaine {
+    lock
+    faceplayer
+    specialvar(VAR_RESULT, IsDailyLeaderBeatenToday)
+    goto_if_eq(VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten)
+    msgbox(MtEmber_Exterior_Text_DailyBlaineIntro, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, MtEmber_Exterior_EventScript_DailyBlaineDeclined)
+    msgbox(MtEmber_Exterior_Text_DailyBlaineAccept)
+    cleartrainerflag(TRAINER_DAILY_BLAINE)
+    trainerbattle_no_intro(TRAINER_DAILY_BLAINE, Text_DailyLeaderDefeat)
+    goto(EventScript_DailyLeaderReward)
+    end
+}
+
+script MtEmber_Exterior_EventScript_DailyBlaineDeclined {
+    msgbox(MtEmber_Exterior_Text_DailyBlaineDeclined)
+    release
     end
 }

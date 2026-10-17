@@ -171,3 +171,32 @@ text MtEmber_Exterior_Text_JocelynPostBattle {
     "The way you battle, it reminds me\n"
     "of the guy who dumped me…$"
 }
+
+text MtEmber_Exterior_Text_DailyBlaineIntro {
+    "Heh, heh, heh! So the new Champion\n"
+    "has decided to visit my little\l"
+    "outdoor laboratory!\p"
+    "The heat of Mt. Ember is perfect\n"
+    "for my research!\p"
+    "But come to think of it, what\n"
+    "better experiment could there be\l"
+    "than pitting my Pokémon against\l"
+    "the trainer who conquered the\l"
+    "League?\p"
+    "Tell me, young Champion! Dare you\n"
+    "accept a rematch that'll turn up\l"
+    "the heat?$"
+}
+
+text MtEmber_Exterior_Text_DailyBlaineAccept {
+    "Magnificent! Hypothesis number\n"
+    "one: the Champion can withstand\l"
+    "extreme temperatures!\p"
+    "Let's put it to the test!$"
+}
+
+text MtEmber_Exterior_Text_DailyBlaineDeclined {
+    "WHAT?! And I was preparing such an\n"
+    "explosive experiment!\p"
+    "Oh, well! Science can wait!$"
+}

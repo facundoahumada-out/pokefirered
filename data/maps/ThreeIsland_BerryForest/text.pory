@@ -47,3 +47,33 @@ text ThreeIsland_BerryForest_Text_BewareWildBerryLovingMons {
     "Beware of wild, Berry-loving\n"
     "Pokémon!$"
 }
+
+text ThreeIsland_BerryForest_Text_DailyKogaIntro {
+    "So, it is you… Kanto's new Pokémon\n"
+    "League Champion.\p"
+    "Your victory proves your skill,\n"
+    "but true mastery cannot be\l"
+    "achieved through a single triumph.\p"
+    "Even a victorious warrior must\n"
+    "continue to perfect their art.\p"
+    "I train in this forest, far from\n"
+    "the distractions of the outside\l"
+    "world.\p"
+    "Tell me, Champion… Will you accept\n"
+    "my challenge and test your skills\l"
+    "against mine in a rematch?$"
+}
+
+text ThreeIsland_BerryForest_Text_DailyKogaAccept {
+    "Very well. Empty your mind,\n"
+    "observe your opponent, and\l"
+    "underestimate no move.\p"
+    "Let our battle begin!$"
+}
+
+text ThreeIsland_BerryForest_Text_DailyKogaDeclined {
+    "I understand. A ninja knows that\n"
+    "not every battle must be fought in\l"
+    "the present moment.\p"
+    "Our paths shall cross again.$"
+}

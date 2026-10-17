@@ -1,4 +1,11 @@
-mapscripts Route10_MapScripts {}
+mapscripts Route10_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Route10_OnTransition
+}
+
+script Route10_OnTransition {
+    special(UpdateDailyLeaderVisibility)
+    end
+}
 
 script Route10_EventScript_Unused {
     end
@@ -16,5 +23,26 @@ script Route10_EventScript_SouthRockTunnelSign {
 
 script Route10_EventScript_PowerPlantSign {
     msgbox(Route10_Text_PowerPlant, MSGBOX_SIGN)
+    end
+}
+
+// Daily gym leader rematch (see src/daily_battles.c)
+script Route10_EventScript_DailyLtSurge {
+    lock
+    faceplayer
+    specialvar(VAR_RESULT, IsDailyLeaderBeatenToday)
+    goto_if_eq(VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten)
+    msgbox(Route10_Text_DailyLtSurgeIntro, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, Route10_EventScript_DailyLtSurgeDeclined)
+    msgbox(Route10_Text_DailyLtSurgeAccept)
+    cleartrainerflag(TRAINER_DAILY_LT_SURGE)
+    trainerbattle_no_intro(TRAINER_DAILY_LT_SURGE, Text_DailyLeaderDefeat)
+    goto(EventScript_DailyLeaderReward)
+    end
+}
+
+script Route10_EventScript_DailyLtSurgeDeclined {
+    msgbox(Route10_Text_DailyLtSurgeDeclined)
+    release
     end
 }

@@ -460,4 +460,8 @@ gSpecials::
 	def_special BufferMoveTutorPrice
 	def_special CanPayMoveTutorPrice
 	def_special PayMoveTutorPrice
+	def_special GetDayOfWeek
+	def_special UpdateDailyLeaderVisibility
+	def_special IsDailyLeaderBeatenToday
+	def_special SetDailyLeaderBeatenToday
 gSpecialsEnd::

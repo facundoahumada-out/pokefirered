@@ -47,3 +47,33 @@ ThreeIsland_BerryForest_Text_BewareWildBerryLovingMons::
 # 46 "data/maps/ThreeIsland_BerryForest/text.pory"
 	.string "Beware of wild, Berry-loving\n"
 	.string "Pokémon!$"
+
+ThreeIsland_BerryForest_Text_DailyKogaIntro::
+# 51 "data/maps/ThreeIsland_BerryForest/text.pory"
+	.string "So, it is you… Kanto's new Pokémon\n"
+	.string "League Champion.\p"
+	.string "Your victory proves your skill,\n"
+	.string "but true mastery cannot be\l"
+	.string "achieved through a single triumph.\p"
+	.string "Even a victorious warrior must\n"
+	.string "continue to perfect their art.\p"
+	.string "I train in this forest, far from\n"
+	.string "the distractions of the outside\l"
+	.string "world.\p"
+	.string "Tell me, Champion… Will you accept\n"
+	.string "my challenge and test your skills\l"
+	.string "against mine in a rematch?$"
+
+ThreeIsland_BerryForest_Text_DailyKogaAccept::
+# 67 "data/maps/ThreeIsland_BerryForest/text.pory"
+	.string "Very well. Empty your mind,\n"
+	.string "observe your opponent, and\l"
+	.string "underestimate no move.\p"
+	.string "Let our battle begin!$"
+
+ThreeIsland_BerryForest_Text_DailyKogaDeclined::
+# 74 "data/maps/ThreeIsland_BerryForest/text.pory"
+	.string "I understand. A ninja knows that\n"
+	.string "not every battle must be fought in\l"
+	.string "the present moment.\p"
+	.string "Our paths shall cross again.$"

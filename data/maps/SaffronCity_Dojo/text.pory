@@ -123,3 +123,32 @@ text SaffronCity_Dojo_Text_GoesAroundComesAround {
 text SaffronCity_Dojo_Text_FightingDojo {
     "Fighting Dojo$"
 }
+
+text SaffronCity_Dojo_Text_DailySabrinaIntro {
+    "I've heard that you've become the\n"
+    "Pokémon League Champion. The power\l"
+    "you've demonstrated is undeniable.\p"
+    "However, strength alone does not\n"
+    "determine the outcome of a battle.\p"
+    "Focus, foresight, and willpower\n"
+    "can be just as decisive.\p"
+    "I'm observing the Fighting Dojo's\n"
+    "master as he trains his students.\p"
+    "I wonder if your mind has evolved\n"
+    "as much as your team has.\p"
+    "Will you accept a rematch with me?$"
+}
+
+text SaffronCity_Dojo_Text_DailySabrinaAccept {
+    "Very well. Try to anticipate my\n"
+    "moves…\p"
+    "Though knowing you must do so\n"
+    "doesn't mean you'll succeed.$"
+}
+
+text SaffronCity_Dojo_Text_DailySabrinaDeclined {
+    "Very well. Even the future has its\n"
+    "uncertainties.\p"
+    "I'll leave the decision in your\n"
+    "hands.$"
+}

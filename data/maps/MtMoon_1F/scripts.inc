@@ -6,68 +6,102 @@ MtMoon_1F_MapScripts::
 
 MtMoon_1F_OnTransition::
 # 6 "data/maps/MtMoon_1F/scripts.pory"
+	special UpdateDailyLeaderVisibility
+# 7 "data/maps/MtMoon_1F/scripts.pory"
 	setworldmapflag FLAG_WORLD_MAP_MT_MOON_1F
 	end
 
 
 MtMoon_1F_EventScript_ZubatSign::
-# 11 "data/maps/MtMoon_1F/scripts.pory"
+# 12 "data/maps/MtMoon_1F/scripts.pory"
 	msgbox MtMoon_1F_Text_ZubatIsABloodsucker, MSGBOX_SIGN
 	end
 
 
 MtMoon_1F_EventScript_Marcos::
-# 16 "data/maps/MtMoon_1F/scripts.pory"
-	trainerbattle_single TRAINER_HIKER_MARCOS, MtMoon_1F_Text_MarcosIntro, MtMoon_1F_Text_MarcosDefeat
 # 17 "data/maps/MtMoon_1F/scripts.pory"
+	trainerbattle_single TRAINER_HIKER_MARCOS, MtMoon_1F_Text_MarcosIntro, MtMoon_1F_Text_MarcosDefeat
+# 18 "data/maps/MtMoon_1F/scripts.pory"
 	msgbox MtMoon_1F_Text_MarcosPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 MtMoon_1F_EventScript_Josh::
-# 22 "data/maps/MtMoon_1F/scripts.pory"
-	trainerbattle_single TRAINER_YOUNGSTER_JOSH, MtMoon_1F_Text_JoshIntro, MtMoon_1F_Text_JoshDefeat
 # 23 "data/maps/MtMoon_1F/scripts.pory"
+	trainerbattle_single TRAINER_YOUNGSTER_JOSH, MtMoon_1F_Text_JoshIntro, MtMoon_1F_Text_JoshDefeat
+# 24 "data/maps/MtMoon_1F/scripts.pory"
 	msgbox MtMoon_1F_Text_JoshPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 MtMoon_1F_EventScript_Miriam::
-# 28 "data/maps/MtMoon_1F/scripts.pory"
-	trainerbattle_single TRAINER_LASS_MIRIAM, MtMoon_1F_Text_MiriamIntro, MtMoon_1F_Text_MiriamDefeat
 # 29 "data/maps/MtMoon_1F/scripts.pory"
+	trainerbattle_single TRAINER_LASS_MIRIAM, MtMoon_1F_Text_MiriamIntro, MtMoon_1F_Text_MiriamDefeat
+# 30 "data/maps/MtMoon_1F/scripts.pory"
 	msgbox MtMoon_1F_Text_MiriamPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 MtMoon_1F_EventScript_Iris::
-# 34 "data/maps/MtMoon_1F/scripts.pory"
-	trainerbattle_single TRAINER_LASS_IRIS, MtMoon_1F_Text_IrisIntro, MtMoon_1F_Text_IrisDefeat
 # 35 "data/maps/MtMoon_1F/scripts.pory"
+	trainerbattle_single TRAINER_LASS_IRIS, MtMoon_1F_Text_IrisIntro, MtMoon_1F_Text_IrisDefeat
+# 36 "data/maps/MtMoon_1F/scripts.pory"
 	msgbox MtMoon_1F_Text_IrisPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 MtMoon_1F_EventScript_Jovan::
-# 40 "data/maps/MtMoon_1F/scripts.pory"
-	trainerbattle_single TRAINER_SUPER_NERD_JOVAN, MtMoon_1F_Text_JovanIntro, MtMoon_1F_Text_JovanDefeat
 # 41 "data/maps/MtMoon_1F/scripts.pory"
+	trainerbattle_single TRAINER_SUPER_NERD_JOVAN, MtMoon_1F_Text_JovanIntro, MtMoon_1F_Text_JovanDefeat
+# 42 "data/maps/MtMoon_1F/scripts.pory"
 	msgbox MtMoon_1F_Text_JovanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 MtMoon_1F_EventScript_Kent::
-# 46 "data/maps/MtMoon_1F/scripts.pory"
-	trainerbattle_single TRAINER_BUG_CATCHER_KENT, MtMoon_1F_Text_KentIntro, MtMoon_1F_Text_KentDefeat
 # 47 "data/maps/MtMoon_1F/scripts.pory"
+	trainerbattle_single TRAINER_BUG_CATCHER_KENT, MtMoon_1F_Text_KentIntro, MtMoon_1F_Text_KentDefeat
+# 48 "data/maps/MtMoon_1F/scripts.pory"
 	msgbox MtMoon_1F_Text_KentPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 MtMoon_1F_EventScript_Robby::
-# 52 "data/maps/MtMoon_1F/scripts.pory"
-	trainerbattle_single TRAINER_BUG_CATCHER_ROBBY, MtMoon_1F_Text_RobbyIntro, MtMoon_1F_Text_RobbyDefeat
 # 53 "data/maps/MtMoon_1F/scripts.pory"
+	trainerbattle_single TRAINER_BUG_CATCHER_ROBBY, MtMoon_1F_Text_RobbyIntro, MtMoon_1F_Text_RobbyDefeat
+# 54 "data/maps/MtMoon_1F/scripts.pory"
 	msgbox MtMoon_1F_Text_RobbyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+MtMoon_1F_EventScript_DailyBrock::
+# 60 "data/maps/MtMoon_1F/scripts.pory"
+	lock
+# 61 "data/maps/MtMoon_1F/scripts.pory"
+	faceplayer
+# 62 "data/maps/MtMoon_1F/scripts.pory"
+	specialvar VAR_RESULT, IsDailyLeaderBeatenToday
+# 63 "data/maps/MtMoon_1F/scripts.pory"
+	goto_if_eq VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten
+# 64 "data/maps/MtMoon_1F/scripts.pory"
+	msgbox MtMoon_1F_Text_DailyBrockIntro, MSGBOX_YESNO
+# 65 "data/maps/MtMoon_1F/scripts.pory"
+	goto_if_eq VAR_RESULT, NO, MtMoon_1F_EventScript_DailyBrockDeclined
+# 66 "data/maps/MtMoon_1F/scripts.pory"
+	msgbox MtMoon_1F_Text_DailyBrockAccept
+# 67 "data/maps/MtMoon_1F/scripts.pory"
+	cleartrainerflag TRAINER_DAILY_BROCK
+# 68 "data/maps/MtMoon_1F/scripts.pory"
+	trainerbattle_no_intro TRAINER_DAILY_BROCK, Text_DailyLeaderDefeat
+# 69 "data/maps/MtMoon_1F/scripts.pory"
+	goto EventScript_DailyLeaderReward
+	end
+
+
+MtMoon_1F_EventScript_DailyBrockDeclined::
+# 74 "data/maps/MtMoon_1F/scripts.pory"
+	msgbox MtMoon_1F_Text_DailyBrockDeclined
+# 75 "data/maps/MtMoon_1F/scripts.pory"
+	release
 	end
 

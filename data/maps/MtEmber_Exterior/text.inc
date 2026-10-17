@@ -170,3 +170,32 @@ MtEmber_Exterior_Text_JocelynPostBattle::
 # 170 "data/maps/MtEmber_Exterior/text.pory"
 	.string "The way you battle, it reminds me\n"
 	.string "of the guy who dumped me…$"
+
+MtEmber_Exterior_Text_DailyBlaineIntro::
+# 175 "data/maps/MtEmber_Exterior/text.pory"
+	.string "Heh, heh, heh! So the new Champion\n"
+	.string "has decided to visit my little\l"
+	.string "outdoor laboratory!\p"
+	.string "The heat of Mt. Ember is perfect\n"
+	.string "for my research!\p"
+	.string "But come to think of it, what\n"
+	.string "better experiment could there be\l"
+	.string "than pitting my Pokémon against\l"
+	.string "the trainer who conquered the\l"
+	.string "League?\p"
+	.string "Tell me, young Champion! Dare you\n"
+	.string "accept a rematch that'll turn up\l"
+	.string "the heat?$"
+
+MtEmber_Exterior_Text_DailyBlaineAccept::
+# 191 "data/maps/MtEmber_Exterior/text.pory"
+	.string "Magnificent! Hypothesis number\n"
+	.string "one: the Champion can withstand\l"
+	.string "extreme temperatures!\p"
+	.string "Let's put it to the test!$"
+
+MtEmber_Exterior_Text_DailyBlaineDeclined::
+# 198 "data/maps/MtEmber_Exterior/text.pory"
+	.string "WHAT?! And I was preparing such an\n"
+	.string "explosive experiment!\p"
+	.string "Oh, well! Science can wait!$"

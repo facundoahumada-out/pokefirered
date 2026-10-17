@@ -1,0 +1,32 @@
+// Shared scripts for the daily gym leader rematches (see src/daily_battles.c)
+
+script EventScript_DailyLeaderReward {
+    msgbox(Text_DailyLeaderTakeThis)
+    giveitem(ITEM_MASTER_BALL)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_BagIsFull)
+    special(SetDailyLeaderBeatenToday)
+    msgbox(Text_DailyLeaderSeeYouNextWeek)
+    release
+    end
+}
+
+script EventScript_DailyLeaderAlreadyBeaten {
+    msgbox(Text_DailyLeaderSeeYouNextWeek)
+    release
+    end
+}
+
+text Text_DailyLeaderDefeat {
+    "What a battle!\n"
+    "You really are the Champion!$"
+}
+
+text Text_DailyLeaderTakeThis {
+    "That was a great battle!\n"
+    "Please, take this as a reward.$"
+}
+
+text Text_DailyLeaderSeeYouNextWeek {
+    "Let's battle again next week,\n"
+    "Champion!$"
+}
