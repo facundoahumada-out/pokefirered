@@ -1,6 +1,12 @@
 #ifndef GUARD_CONSTANTS_ABILITIES_H
 #define GUARD_CONSTANTS_ABILITIES_H
 
+// Chance (in percent) for a newly created Pokémon to get its species' hidden ability.
+#define HIDDEN_ABILITY_CHANCE 5
+
+// abilityNum value that selects the hidden ability.
+#define ABILITY_NUM_HIDDEN 2
+
 #define ABILITY_NONE 0
 #define ABILITY_STENCH 1
 #define ABILITY_DRIZZLE 2

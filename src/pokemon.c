@@ -1875,7 +1875,12 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         SetBoxMonData(boxMon, MON_DATA_SPDEF_IV, &iv);
     }
 
-    if (gSpeciesInfo[species].abilities[1])
+    if (gSpeciesInfo[species].abilityHidden != ABILITY_NONE && Random() % 100 < HIDDEN_ABILITY_CHANCE)
+    {
+        value = ABILITY_NUM_HIDDEN;
+        SetBoxMonData(boxMon, MON_DATA_ABILITY_NUM, &value);
+    }
+    else if (gSpeciesInfo[species].abilities[1])
     {
         value = personality & 1;
         SetBoxMonData(boxMon, MON_DATA_ABILITY_NUM, &value);
@@ -2421,6 +2426,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     u8 attackerHoldEffect;
     u8 attackerHoldEffectParam;
 
+    // Infiltrator slips past Reflect and Light Screen
+    if (attacker->ability == ABILITY_INFILTRATOR)
+        sideStatus &= ~(SIDE_STATUS_REFLECT | SIDE_STATUS_LIGHTSCREEN);
+
     if (!powerOverride)
         gBattleMovePower = gBattleMoves[move].power;
     else
@@ -2526,6 +2535,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         attack = (150 * attack) / 100;
     if (defender->ability == ABILITY_MARVEL_SCALE && defender->status1)
         defense = (150 * defense) / 100;
+    if (attacker->ability == ABILITY_TOXIC_BOOST && attacker->status1 & STATUS1_PSN_ANY)
+        attack = (150 * attack) / 100;
+    if (attacker->ability == ABILITY_SOLAR_POWER && WEATHER_HAS_EFFECT2 && gBattleWeather & B_WEATHER_SUN)
+        spAttack = (150 * spAttack) / 100;
     if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, ABILITYEFFECT_MUD_SPORT, 0))
         gBattleMovePower /= 2;
     if (type == TYPE_FIRE && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, ABILITYEFFECT_WATER_SPORT, 0))
@@ -2550,6 +2563,30 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
       || move == MOVE_COMET_PUNCH || move == MOVE_MEGA_PUNCH || move == MOVE_DYNAMIC_PUNCH || move == MOVE_FOCUS_PUNCH
       || move == MOVE_BULLET_PUNCH || move == MOVE_DRAIN_PUNCH || move == MOVE_SKY_UPPERCUT))
         gBattleMovePower = (120 * gBattleMovePower) / 100;
+    if (attacker->ability == ABILITY_SHEER_FORCE && MoveHasSheerForceBoost(move))
+        gBattleMovePower = (130 * gBattleMovePower) / 100;
+    if (attacker->ability == ABILITY_ANALYTIC && GetBattlerTurnOrderNum(battlerIdAtk) == gBattlersCount - 1)
+        gBattleMovePower = (130 * gBattleMovePower) / 100;
+    if (attacker->ability == ABILITY_SAND_FORCE && WEATHER_HAS_EFFECT2 && gBattleWeather & B_WEATHER_SANDSTORM
+     && (type == TYPE_ROCK || type == TYPE_GROUND || type == TYPE_STEEL))
+        gBattleMovePower = (130 * gBattleMovePower) / 100;
+    if (attacker->ability == ABILITY_PIXILATE && type == TYPE_FAIRY && gBattleMoves[move].type == TYPE_NORMAL)
+        gBattleMovePower = (130 * gBattleMovePower) / 100;
+    if (defender->ability == ABILITY_DRY_SKIN && type == TYPE_FIRE)
+        gBattleMovePower = (125 * gBattleMovePower) / 100;
+    if (attacker->ability == ABILITY_RIVALRY)
+    {
+        u8 attackerGender = GetGenderFromSpeciesAndPersonality(attacker->species, attacker->personality);
+        u8 defenderGender = GetGenderFromSpeciesAndPersonality(defender->species, defender->personality);
+
+        if (attackerGender != MON_GENDERLESS && defenderGender != MON_GENDERLESS)
+        {
+            if (attackerGender == defenderGender)
+                gBattleMovePower = (125 * gBattleMovePower) / 100;
+            else
+                gBattleMovePower = (75 * gBattleMovePower) / 100;
+        }
+    }
 
     // Self-destruct / Explosion cut defense in half
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
@@ -2557,7 +2594,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 
     if (IS_MOVE_PHYSICAL(move))
     {
-        if (gCritMultiplier == 2)
+        if (defender->ability == ABILITY_UNAWARE)
+        {
+            damage = attack; // Unaware ignores the attacker's stat stages
+        }
+        else if (gCritMultiplier == 2)
         {
             // Critical hit, if attacker has lost attack stat stages then ignore stat drop
             if (attacker->statStages[STAT_ATK] > DEFAULT_STAT_STAGE)
@@ -2571,7 +2612,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         damage = damage * gBattleMovePower;
         damage *= (2 * attacker->level / 5 + 2);
 
-        if (gCritMultiplier == 2)
+        if (attacker->ability == ABILITY_UNAWARE)
+        {
+            damageHelper = defense; // Unaware ignores the defender's stat stages
+        }
+        else if (gCritMultiplier == 2)
         {
             // Critical hit, if defender has gained defense stat stages then ignore stat increase
             if (defender->statStages[STAT_DEF] < DEFAULT_STAT_STAGE)
@@ -2612,7 +2657,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 
     if (IS_MOVE_SPECIAL(move))
     {
-        if (gCritMultiplier == 2)
+        if (defender->ability == ABILITY_UNAWARE)
+        {
+            damage = spAttack;
+        }
+        else if (gCritMultiplier == 2)
         {
             // Critical hit, if attacker has lost sp. attack stat stages then ignore stat drop
             if (attacker->statStages[STAT_SPATK] > DEFAULT_STAT_STAGE)
@@ -2626,7 +2675,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         damage = damage * gBattleMovePower;
         damage *= (2 * attacker->level / 5 + 2);
 
-        if (gCritMultiplier == 2)
+        if (attacker->ability == ABILITY_UNAWARE)
+        {
+            damageHelper = spDefense;
+        }
+        else if (gCritMultiplier == 2)
         {
             // Critical hit, if defender has gained sp. defense stat stages then ignore stat increase
             if (defender->statStages[STAT_SPDEF] < DEFAULT_STAT_STAGE)
@@ -2652,7 +2705,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         // Moves hitting both targets do half damage in double battles
         if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && gBattleMoves[move].target == MOVE_TARGET_BOTH && CountAliveMonsInBattle(BATTLE_ALIVE_DEF_SIDE) == 2)
             damage /= 2;
+    }
 
+    // Weather and Flash Fire apply to physical and special moves alike
+    if (!IS_MOVE_STATUS(move))
+    {
         // Are effects of weather negated with cloud nine or air lock
         if (WEATHER_HAS_EFFECT2)
         {
@@ -3232,7 +3289,10 @@ u32 GetBoxMonData3(struct BoxPokemon *boxMon, s32 field, u8 *data)
         retVal = substruct3->isEgg;
         break;
     case MON_DATA_ABILITY_NUM:
-        retVal = substruct3->abilityNum;
+        if (substruct3->hiddenAbility)
+            retVal = ABILITY_NUM_HIDDEN;
+        else
+            retVal = substruct3->abilityNum;
         break;
     case MON_DATA_COOL_RIBBON:
         retVal = substruct3->coolRibbon;
@@ -3645,7 +3705,16 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
             boxMon->isEgg = FALSE;
         break;
     case MON_DATA_ABILITY_NUM:
-        SET8(substruct3->abilityNum);
+        if (*data == ABILITY_NUM_HIDDEN)
+        {
+            substruct3->hiddenAbility = TRUE;
+            substruct3->abilityNum = 0;
+        }
+        else
+        {
+            substruct3->hiddenAbility = FALSE;
+            SET8(substruct3->abilityNum);
+        }
         break;
     case MON_DATA_COOL_RIBBON:
         SET8(substruct3->coolRibbon);
@@ -3843,11 +3912,17 @@ u8 GetMonsStateToDoubles(void)
     return (aliveCount > 1) ? PLAYER_HAS_TWO_USABLE_MONS : PLAYER_HAS_ONE_USABLE_MON;
 }
 
-u8 GetAbilityBySpecies(u16 species, bool8 abilityNum)
+u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
 {
-    if (abilityNum)
+    if (abilityNum == ABILITY_NUM_HIDDEN)
+        gLastUsedAbility = gSpeciesInfo[species].abilityHidden;
+    else if (abilityNum)
         gLastUsedAbility = gSpeciesInfo[species].abilities[1];
     else
+        gLastUsedAbility = gSpeciesInfo[species].abilities[0];
+
+    // Fall back to the first ability if the selected slot is empty (e.g. after evolving)
+    if (gLastUsedAbility == ABILITY_NONE)
         gLastUsedAbility = gSpeciesInfo[species].abilities[0];
 
     return gLastUsedAbility;

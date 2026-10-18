@@ -168,7 +168,10 @@ struct DisableStruct
     /*0x14*/ u8 battlerPreventingEscape;
     /*0x15*/ u8 battlerWithSureHit;
     /*0x16*/ u8 isFirstTurn;
-    /*0x17*/ u8 unk17;
+    /*0x17*/ u8 hadItemOnEntry:1;      // Unburden: was holding an item when it came in
+    /*0x17*/ u8 switchInAbilityDone:1; // Frisk/Anticipation/Imposter/Unnerve already announced
+    /*0x17*/ u8 cudChewTimer:2;        // Cud Chew: turn ends left until the eaten Berry is eaten again
+    /*0x17*/ u8 unk17:4;
     /*0x18*/ u8 truantCounter : 1;
     /*0x18*/ u8 truantSwitchInHack : 1; // Unused here, but used in pokeemerald
     /*0x18*/ u8 unk18_a_2 : 2;
@@ -486,6 +489,11 @@ struct BattleStruct
     u8 magicRoomTimer;
     u8 wonderRoomTimer;
     u8 mistyTerrainTimer;
+    u8 abilityStatAnims[2]; // stat-change animations for the ability scripts: [0] raised stat, [1] lowered stat
+    u8 defiantPending;      // battlers whose Defiant triggers once the current move ends
+    u8 moxieTargets;        // targets already counted by Moxie during the current move
+    u8 absorbBoostBattler;  // Sap Sipper/Motor Drive/Storm Drain holder (+ 1) owed a stat boost, 0 = none
+    u8 absorbBoostStat;
 };
 
 extern struct BattleStruct *gBattleStruct;

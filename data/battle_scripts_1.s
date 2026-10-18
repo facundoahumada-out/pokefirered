@@ -959,6 +959,7 @@ BattleScript_MoveMissedDoDamage::
 	resultmessage
 	waitmessage B_WAIT_TIME_LONG
 	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE, BattleScript_MoveEnd
+	jumpifability BS_ATTACKER, ABILITY_MAGIC_GUARD, BattleScript_MoveEnd
 	printstring STRINGID_PKMNCRASHED
 	waitmessage B_WAIT_TIME_LONG
 	damagecalc
@@ -4800,6 +4801,14 @@ BattleScript_WishButFullHp::
 	waitmessage B_WAIT_TIME_LONG
 	end2
 
+BattleScript_PoisonHealActivates::
+	printstring STRINGID_PKMNSXRESTOREDHPALITTLE2
+	waitmessage B_WAIT_TIME_LONG
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	end2
+
 BattleScript_IngrainTurnHeal::
 	playanimation BS_ATTACKER, B_ANIM_INGRAIN_HEAL
 	printstring STRINGID_PKMNABSORBEDNUTRIENTS
@@ -5168,6 +5177,7 @@ BattleScript_MoveEffectConfusion::
 BattleScript_MoveEffectRecoil::
 	jumpifmove MOVE_STRUGGLE, BattleScript_DoRecoil
 	jumpifability BS_ATTACKER, ABILITY_ROCK_HEAD, BattleScript_RecoilEnd
+	jumpifability BS_ATTACKER, ABILITY_MAGIC_GUARD, BattleScript_RecoilEnd
 BattleScript_DoRecoil::
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
 	healthbarupdate BS_ATTACKER
@@ -5266,6 +5276,7 @@ BattleScript_IntimidateActivationAnimLoop::
 	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
 	printstring STRINGID_PKMNCUTSATTACKWITH
 	waitmessage B_WAIT_TIME_LONG
+	various BS_TARGET, VARIOUS_TRY_DEFIANT
 BattleScript_IntimidateFail::
 	addbyte gBattlerTarget, 1
 	goto BattleScript_IntimidateActivationAnimLoop
@@ -5442,6 +5453,134 @@ BattleScript_AbilityCuredStatus::
 	printstring STRINGID_PKMNSXCUREDITSYPROBLEM
 	waitmessage B_WAIT_TIME_LONG
 	updatestatusicon BS_SCRIPTING
+	return
+
+@ Ability stat changes: the C side already moved the stages and filled
+@ gBattleTextBuff1 (raised stat) / gBattleTextBuff2 (lowered stat)
+BattleScript_AbilityRaisesStatRet::
+	various BS_SCRIPTING, VARIOUS_LOAD_RAISE_STAT_ANIM
+	playanimation BS_SCRIPTING, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_ABILITYRAISEDSTAT
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_AbilityLowersStatRet::
+	various BS_SCRIPTING, VARIOUS_LOAD_LOWER_STAT_ANIM
+	playanimation BS_SCRIPTING, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_ABILITYLOWEREDSTAT
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_AbilityRaisesStatEnd3::
+	call BattleScript_AbilityRaisesStatRet
+	end3
+
+BattleScript_AbilityLowersStatEnd3::
+	call BattleScript_AbilityLowersStatRet
+	end3
+
+BattleScript_MoodyActivates::
+	call BattleScript_AbilityRaisesStatRet
+	call BattleScript_AbilityLowersStatRet
+	end3
+
+BattleScript_WeakArmorActivates::
+	call BattleScript_AbilityLowersStatRet
+	call BattleScript_AbilityRaisesStatRet
+	return
+
+BattleScript_AngerPointActivates::
+	various BS_SCRIPTING, VARIOUS_LOAD_RAISE_STAT_ANIM
+	playanimation BS_SCRIPTING, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_ABILITYMAXEDATTACK
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_MoveUsedFlinchedSteadfast::
+	printstring STRINGID_PKMNFLINCHED
+	waitmessage B_WAIT_TIME_LONG
+	call BattleScript_AbilityRaisesStatRet
+	goto BattleScript_MoveEnd
+
+BattleScript_FriskActivates::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNFRISKEDITEM
+	waitmessage B_WAIT_TIME_LONG
+	end3
+
+BattleScript_AnticipationActivates::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNSHUDDERED
+	waitmessage B_WAIT_TIME_LONG
+	end3
+
+BattleScript_UnnerveActivates::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_FOESTOONERVOUS
+	waitmessage B_WAIT_TIME_LONG
+	end3
+
+@ gBattlerAttacker/gBattlerTarget and gCurrentMove (Transform) are set by the C side
+BattleScript_ImposterActivates::
+	transformdataexecution
+	attackanimation
+	waitanimation
+	printfromtable gTransformUsedStringIds
+	waitmessage B_WAIT_TIME_LONG
+	sethword gCurrentMove, MOVE_NONE
+	end3
+
+BattleScript_CursedBodyActivates::
+	printstring STRINGID_CURSEDBODYDISABLED
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_PickpocketActivates::
+	playanimation BS_ATTACKER, B_ANIM_ITEM_STEAL
+	printstring STRINGID_PKMNPICKPOCKETED
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_AbilityHurtsHolderEnd3::
+	printstring STRINGID_PKMNHURTBYOWNABILITY
+	waitmessage B_WAIT_TIME_LONG
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	tryfaintmon BS_ATTACKER
+	checkteamslost BattleScript_AbilityHurtsHolderEnd
+BattleScript_AbilityHurtsHolderEnd::
+	end3
+
+BattleScript_HealerActivates::
+	printstring STRINGID_HEALERCUREDALLY
+	waitmessage B_WAIT_TIME_LONG
+	updatestatusicon BS_SCRIPTING
+	end3
+
+BattleScript_HarvestActivates::
+	printstring STRINGID_PKMNHARVESTEDBERRY
+	waitmessage B_WAIT_TIME_LONG
+	end3
+
+@ Cud Chew runs the Berry's own effect script first, which returns here
+BattleScript_CudChewEnd3::
+	end3
+
+BattleScript_LeafGuardProtects::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNPROTECTEDBYABILITY
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_MagicBounceActivates::
+	attackstring
+	ppreduce
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNMOVEBOUNCEDABILITY
+	waitmessage B_WAIT_TIME_LONG
+	orword gHitMarker, HITMARKER_ATTACKSTRING_PRINTED | HITMARKER_NO_PPDEDUCT | HITMARKER_ALLOW_NO_PP
+	setmagiccoattarget BS_ATTACKER
 	return
 
 BattleScript_IgnoresWhileAsleep::
