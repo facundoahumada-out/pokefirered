@@ -221,6 +221,18 @@ void ReducePlayerPartyToThree(void)
     Free(party);
 }
 
+// TEMP (testing Oak's National Dex scene): marks the first 60 Kanto Pokémon as seen and caught.
+void SetTestDexCaught60(void)
+{
+    u16 i;
+
+    for (i = 1; i <= 60; i++)
+    {
+        GetSetPokedexFlag(i, FLAG_SET_SEEN);
+        GetSetPokedexFlag(i, FLAG_SET_CAUGHT);
+    }
+}
+
 // TEMP (testing the daily gym leaders): gives a level 70 team with perfect IVs and strong moves.
 // Mons that don't fit in the party go to the PC.
 void GiveTestTeam(void)

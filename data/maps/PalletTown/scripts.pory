@@ -475,6 +475,12 @@ script PalletTown_EventScript_FatMan {
     faceplayer
     msgbox(PalletTown_Text_CanStoreItemsAndMonsInPC)
     special(GiveTestTeam)  // TEMP: test team for the daily gym leaders
+    // TEMP: 60 caught + post-game state so talking to Oak in his lab starts the National Dex scene
+    special(SetTestDexCaught60)
+    setflag(FLAG_SYS_GAME_CLEAR)
+    setflag(FLAG_WORLD_MAP_ONE_ISLAND)
+    clearflag(FLAG_HIDE_OAK_IN_HIS_LAB)
+    setvar(VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6)
     release
     end
 }

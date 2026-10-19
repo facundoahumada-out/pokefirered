@@ -413,3 +413,22 @@ PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
 	.string "I think I'll try looking around\n"
 	.string "One Island first…\p"
 	.string "Anyways, I'm outta here!$"
+
+PalletTown_ProfessorOaksLab_Text_OakAlmostForgotOldTickets::
+# 418 "data/maps/PalletTown_ProfessorOaksLab/text.pory"
+	.string "Oh, {PLAYER}, I almost forgot!\p"
+	.string "I found some old tickets that my\n"
+	.string "good friend, Mr. Pokémon, gave me.\p"
+	.string "He's an eccentric fellow, full of\n"
+	.string "curiosity.\p"
+	.string "I want you to investigate where\n"
+	.string "the Seagallop Hi-Speed can take\l"
+	.string "you with them…\p"
+	.string "When I asked Mr. Pokémon, he just\n"
+	.string "smiled and said goodbye.\p"
+	.string "Here you go.$"
+
+PalletTown_ProfessorOaksLab_Text_OakDontTellRivalAboutTickets::
+# 432 "data/maps/PalletTown_ProfessorOaksLab/text.pory"
+	.string "Don't tell {RIVAL} about this,\n"
+	.string "or he'll get even more jealous.$"

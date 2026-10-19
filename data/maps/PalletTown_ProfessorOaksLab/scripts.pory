@@ -117,6 +117,20 @@ script PalletTown_ProfessorOaksLab_EventScript_NationalDexScene {
     call_if_eq(VAR_FACING, DIR_WEST, PalletTown_ProfessorOaksLab_EventScript_RivalExit)
     removeobject(LOCALID_OAKS_LAB_RIVAL)
     fadedefaultbgm
+    delay(30)
+    playse(SE_PIN)
+    applymovement(LOCALID_OAKS_LAB_PROF_OAK, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(LOCALID_OAKS_LAB_PROF_OAK, Common_Movement_Delay48)
+    waitmovement(0)
+    setvar(VAR_0x8004, LOCALID_OAKS_LAB_PROF_OAK)
+    special(PlayerFaceObject)
+    msgbox(PalletTown_ProfessorOaksLab_Text_OakAlmostForgotOldTickets)
+    giveitem(ITEM_MYSTIC_TICKET)
+    giveitem(ITEM_AURORA_TICKET)
+    setflag(FLAG_ENABLE_SHIP_NAVEL_ROCK)
+    setflag(FLAG_ENABLE_SHIP_BIRTH_ISLAND)
+    msgbox(PalletTown_ProfessorOaksLab_Text_OakDontTellRivalAboutTickets)
     setvar(VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8)
     releaseall
     end

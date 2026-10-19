@@ -112,6 +112,7 @@ struct PairedPalettes
 u8 GetObjectEventIdByLocalIdAndMap(u8, u8, u8);
 bool8 TryGetObjectEventIdByLocalIdAndMap(u8, u8, u8, u8 *);
 u8 GetObjectEventIdByXY(s16, s16);
+u8 GetDirectionToFace(s16 x1, s16 y1, s16 x2, s16 y2);
 void SetObjectEventDirection(struct ObjectEvent *, u8);
 void RemoveObjectEventByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup);
 u16 GetBoulderRevealFlagByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup);

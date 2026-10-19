@@ -2604,3 +2604,16 @@ static void Task_WingFlapSound(u8 taskId)
     if (data[0] == gSpecialVar_0x8004 - 1)
         DestroyTask(taskId);
 }
+
+// Turns the player toward the object with local id gSpecialVar_0x8004 on the current map.
+void PlayerFaceObject(void)
+{
+    u8 objectEventId;
+    struct ObjectEvent *player = &gObjectEvents[gPlayerAvatar.objectEventId];
+
+    if (TryGetObjectEventIdByLocalIdAndMap(gSpecialVar_0x8004, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, &objectEventId))
+        return;
+
+    ObjectEventTurn(player, GetDirectionToFace(player->currentCoords.x, player->currentCoords.y,
+                                               gObjectEvents[objectEventId].currentCoords.x, gObjectEvents[objectEventId].currentCoords.y));
+}

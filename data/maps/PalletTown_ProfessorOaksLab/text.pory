@@ -414,3 +414,22 @@ text PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex {
     "One Island first…\p"
     "Anyways, I'm outta here!$"
 }
+
+text PalletTown_ProfessorOaksLab_Text_OakAlmostForgotOldTickets {
+    "Oh, {PLAYER}, I almost forgot!\p"
+    "I found some old tickets that my\n"
+    "good friend, Mr. Pokémon, gave me.\p"
+    "He's an eccentric fellow, full of\n"
+    "curiosity.\p"
+    "I want you to investigate where\n"
+    "the Seagallop Hi-Speed can take\l"
+    "you with them…\p"
+    "When I asked Mr. Pokémon, he just\n"
+    "smiled and said goodbye.\p"
+    "Here you go.$"
+}
+
+text PalletTown_ProfessorOaksLab_Text_OakDontTellRivalAboutTickets {
+    "Don't tell {RIVAL} about this,\n"
+    "or he'll get even more jealous.$"
+}

@@ -465,4 +465,6 @@ gSpecials::
 	def_special IsDailyLeaderBeatenToday
 	def_special SetDailyLeaderBeatenToday
 	def_special GiveTestTeam
+	def_special SetTestDexCaught60
+	def_special PlayerFaceObject
 gSpecialsEnd::
