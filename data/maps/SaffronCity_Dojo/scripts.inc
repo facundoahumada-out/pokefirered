@@ -274,7 +274,7 @@ SaffronCity_Dojo_EventScript_DailySabrina::
 # 182 "data/maps/SaffronCity_Dojo/scripts.pory"
 	specialvar VAR_RESULT, IsDailyLeaderBeatenToday
 # 183 "data/maps/SaffronCity_Dojo/scripts.pory"
-	goto_if_eq VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten
+	goto_if_eq VAR_RESULT, TRUE, SaffronCity_Dojo_EventScript_DailySabrinaPostBattle
 # 184 "data/maps/SaffronCity_Dojo/scripts.pory"
 	msgbox SaffronCity_Dojo_Text_DailySabrinaIntro, MSGBOX_YESNO
 # 185 "data/maps/SaffronCity_Dojo/scripts.pory"
@@ -286,14 +286,28 @@ SaffronCity_Dojo_EventScript_DailySabrina::
 # 188 "data/maps/SaffronCity_Dojo/scripts.pory"
 	trainerbattle_no_intro TRAINER_DAILY_SABRINA, Text_DailyLeaderDefeat
 # 189 "data/maps/SaffronCity_Dojo/scripts.pory"
-	goto EventScript_DailyLeaderReward
+	setvar VAR_0x8008, ITEM_TM95_PSYSHOCK
+# 190 "data/maps/SaffronCity_Dojo/scripts.pory"
+	call EventScript_DailyLeaderReward
+# 191 "data/maps/SaffronCity_Dojo/scripts.pory"
+	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
+# 192 "data/maps/SaffronCity_Dojo/scripts.pory"
+	goto SaffronCity_Dojo_EventScript_DailySabrinaPostBattle
+	end
+
+
+SaffronCity_Dojo_EventScript_DailySabrinaPostBattle::
+# 197 "data/maps/SaffronCity_Dojo/scripts.pory"
+	msgbox SaffronCity_Dojo_Text_DailySabrinaPostBattle
+# 198 "data/maps/SaffronCity_Dojo/scripts.pory"
+	release
 	end
 
 
 SaffronCity_Dojo_EventScript_DailySabrinaDeclined::
-# 194 "data/maps/SaffronCity_Dojo/scripts.pory"
+# 203 "data/maps/SaffronCity_Dojo/scripts.pory"
 	msgbox SaffronCity_Dojo_Text_DailySabrinaDeclined
-# 195 "data/maps/SaffronCity_Dojo/scripts.pory"
+# 204 "data/maps/SaffronCity_Dojo/scripts.pory"
 	release
 	end
 

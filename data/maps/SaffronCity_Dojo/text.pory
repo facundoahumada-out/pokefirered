@@ -152,3 +152,12 @@ text SaffronCity_Dojo_Text_DailySabrinaDeclined {
     "I'll leave the decision in your\n"
     "hands.$"
 }
+
+text SaffronCity_Dojo_Text_DailySabrinaPostBattle {
+    "Your strength of will continues to\n"
+    "surprise me.\p"
+    "I can already envision several\n"
+    "ways to improve my strategy.\p"
+    "Return next Saturday, and we shall\n"
+    "see what the future holds.$"
+}

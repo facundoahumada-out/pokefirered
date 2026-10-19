@@ -92,6 +92,7 @@ struct TrainerMonNoItemCustomMoves
 {
     u16 iv;
     u8 lvl;
+    u8 hiddenPowerType; // TYPE_* of Hidden Power (adjusts the IVs), or 0 (TYPE_NORMAL) to leave them alone
     u16 species;
     u16 moves[MAX_MON_MOVES];
 };

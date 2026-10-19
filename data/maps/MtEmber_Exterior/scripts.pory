@@ -143,13 +143,22 @@ script MtEmber_Exterior_EventScript_DailyBlaine {
     lock
     faceplayer
     specialvar(VAR_RESULT, IsDailyLeaderBeatenToday)
-    goto_if_eq(VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten)
+    goto_if_eq(VAR_RESULT, TRUE, MtEmber_Exterior_EventScript_DailyBlainePostBattle)
     msgbox(MtEmber_Exterior_Text_DailyBlaineIntro, MSGBOX_YESNO)
     goto_if_eq(VAR_RESULT, NO, MtEmber_Exterior_EventScript_DailyBlaineDeclined)
     msgbox(MtEmber_Exterior_Text_DailyBlaineAccept)
     cleartrainerflag(TRAINER_DAILY_BLAINE)
     trainerbattle_no_intro(TRAINER_DAILY_BLAINE, Text_DailyLeaderDefeat)
-    goto(EventScript_DailyLeaderReward)
+    setvar(VAR_0x8008, ITEM_TM96_FLARE_BLITZ)
+    call(EventScript_DailyLeaderReward)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_BagIsFull)
+    goto(MtEmber_Exterior_EventScript_DailyBlainePostBattle)
+    end
+}
+
+script MtEmber_Exterior_EventScript_DailyBlainePostBattle {
+    msgbox(MtEmber_Exterior_Text_DailyBlainePostBattle)
+    release
     end
 }
 

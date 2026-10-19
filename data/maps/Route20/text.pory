@@ -176,3 +176,11 @@ text Route20_Text_DailyMistyDeclined {
     "…Fine! But don't think I'll forget\n"
     "this!$"
 }
+
+text Route20_Text_DailyMistyPostBattle {
+    "Oh, come on! I was so sure I'd win\n"
+    "this time!\p"
+    "Just you wait! I'll be here next\n"
+    "Tuesday, and I'll be ready for\l"
+    "you!$"
+}

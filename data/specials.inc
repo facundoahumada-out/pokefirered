@@ -464,4 +464,5 @@ gSpecials::
 	def_special UpdateDailyLeaderVisibility
 	def_special IsDailyLeaderBeatenToday
 	def_special SetDailyLeaderBeatenToday
+	def_special GiveTestTeam
 gSpecialsEnd::

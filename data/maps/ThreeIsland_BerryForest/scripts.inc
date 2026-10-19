@@ -121,7 +121,7 @@ ThreeIsland_BerryForest_EventScript_DailyKoga::
 # 75 "data/maps/ThreeIsland_BerryForest/scripts.pory"
 	specialvar VAR_RESULT, IsDailyLeaderBeatenToday
 # 76 "data/maps/ThreeIsland_BerryForest/scripts.pory"
-	goto_if_eq VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten
+	goto_if_eq VAR_RESULT, TRUE, ThreeIsland_BerryForest_EventScript_DailyKogaPostBattle
 # 77 "data/maps/ThreeIsland_BerryForest/scripts.pory"
 	msgbox ThreeIsland_BerryForest_Text_DailyKogaIntro, MSGBOX_YESNO
 # 78 "data/maps/ThreeIsland_BerryForest/scripts.pory"
@@ -133,14 +133,28 @@ ThreeIsland_BerryForest_EventScript_DailyKoga::
 # 81 "data/maps/ThreeIsland_BerryForest/scripts.pory"
 	trainerbattle_no_intro TRAINER_DAILY_KOGA, Text_DailyLeaderDefeat
 # 82 "data/maps/ThreeIsland_BerryForest/scripts.pory"
-	goto EventScript_DailyLeaderReward
+	setvar VAR_0x8008, ITEM_TM94_VENOSHOCK
+# 83 "data/maps/ThreeIsland_BerryForest/scripts.pory"
+	call EventScript_DailyLeaderReward
+# 84 "data/maps/ThreeIsland_BerryForest/scripts.pory"
+	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
+# 85 "data/maps/ThreeIsland_BerryForest/scripts.pory"
+	goto ThreeIsland_BerryForest_EventScript_DailyKogaPostBattle
+	end
+
+
+ThreeIsland_BerryForest_EventScript_DailyKogaPostBattle::
+# 90 "data/maps/ThreeIsland_BerryForest/scripts.pory"
+	msgbox ThreeIsland_BerryForest_Text_DailyKogaPostBattle
+# 91 "data/maps/ThreeIsland_BerryForest/scripts.pory"
+	release
 	end
 
 
 ThreeIsland_BerryForest_EventScript_DailyKogaDeclined::
-# 87 "data/maps/ThreeIsland_BerryForest/scripts.pory"
+# 96 "data/maps/ThreeIsland_BerryForest/scripts.pory"
 	msgbox ThreeIsland_BerryForest_Text_DailyKogaDeclined
-# 88 "data/maps/ThreeIsland_BerryForest/scripts.pory"
+# 97 "data/maps/ThreeIsland_BerryForest/scripts.pory"
 	release
 	end
 

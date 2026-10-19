@@ -180,13 +180,22 @@ script SaffronCity_Dojo_EventScript_DailySabrina {
     lock
     faceplayer
     specialvar(VAR_RESULT, IsDailyLeaderBeatenToday)
-    goto_if_eq(VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten)
+    goto_if_eq(VAR_RESULT, TRUE, SaffronCity_Dojo_EventScript_DailySabrinaPostBattle)
     msgbox(SaffronCity_Dojo_Text_DailySabrinaIntro, MSGBOX_YESNO)
     goto_if_eq(VAR_RESULT, NO, SaffronCity_Dojo_EventScript_DailySabrinaDeclined)
     msgbox(SaffronCity_Dojo_Text_DailySabrinaAccept)
     cleartrainerflag(TRAINER_DAILY_SABRINA)
     trainerbattle_no_intro(TRAINER_DAILY_SABRINA, Text_DailyLeaderDefeat)
-    goto(EventScript_DailyLeaderReward)
+    setvar(VAR_0x8008, ITEM_TM95_PSYSHOCK)
+    call(EventScript_DailyLeaderReward)
+    goto_if_eq(VAR_RESULT, FALSE, EventScript_BagIsFull)
+    goto(SaffronCity_Dojo_EventScript_DailySabrinaPostBattle)
+    end
+}
+
+script SaffronCity_Dojo_EventScript_DailySabrinaPostBattle {
+    msgbox(SaffronCity_Dojo_Text_DailySabrinaPostBattle)
+    release
     end
 }
 

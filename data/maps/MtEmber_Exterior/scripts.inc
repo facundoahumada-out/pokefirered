@@ -224,7 +224,7 @@ MtEmber_Exterior_EventScript_DailyBlaine::
 # 145 "data/maps/MtEmber_Exterior/scripts.pory"
 	specialvar VAR_RESULT, IsDailyLeaderBeatenToday
 # 146 "data/maps/MtEmber_Exterior/scripts.pory"
-	goto_if_eq VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten
+	goto_if_eq VAR_RESULT, TRUE, MtEmber_Exterior_EventScript_DailyBlainePostBattle
 # 147 "data/maps/MtEmber_Exterior/scripts.pory"
 	msgbox MtEmber_Exterior_Text_DailyBlaineIntro, MSGBOX_YESNO
 # 148 "data/maps/MtEmber_Exterior/scripts.pory"
@@ -236,14 +236,28 @@ MtEmber_Exterior_EventScript_DailyBlaine::
 # 151 "data/maps/MtEmber_Exterior/scripts.pory"
 	trainerbattle_no_intro TRAINER_DAILY_BLAINE, Text_DailyLeaderDefeat
 # 152 "data/maps/MtEmber_Exterior/scripts.pory"
-	goto EventScript_DailyLeaderReward
+	setvar VAR_0x8008, ITEM_TM96_FLARE_BLITZ
+# 153 "data/maps/MtEmber_Exterior/scripts.pory"
+	call EventScript_DailyLeaderReward
+# 154 "data/maps/MtEmber_Exterior/scripts.pory"
+	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
+# 155 "data/maps/MtEmber_Exterior/scripts.pory"
+	goto MtEmber_Exterior_EventScript_DailyBlainePostBattle
+	end
+
+
+MtEmber_Exterior_EventScript_DailyBlainePostBattle::
+# 160 "data/maps/MtEmber_Exterior/scripts.pory"
+	msgbox MtEmber_Exterior_Text_DailyBlainePostBattle
+# 161 "data/maps/MtEmber_Exterior/scripts.pory"
+	release
 	end
 
 
 MtEmber_Exterior_EventScript_DailyBlaineDeclined::
-# 157 "data/maps/MtEmber_Exterior/scripts.pory"
+# 166 "data/maps/MtEmber_Exterior/scripts.pory"
 	msgbox MtEmber_Exterior_Text_DailyBlaineDeclined
-# 158 "data/maps/MtEmber_Exterior/scripts.pory"
+# 167 "data/maps/MtEmber_Exterior/scripts.pory"
 	release
 	end
 

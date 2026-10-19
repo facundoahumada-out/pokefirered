@@ -64,7 +64,7 @@ Route20_EventScript_DailyMisty::
 # 43 "data/maps/Route20/scripts.pory"
 	specialvar VAR_RESULT, IsDailyLeaderBeatenToday
 # 44 "data/maps/Route20/scripts.pory"
-	goto_if_eq VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten
+	goto_if_eq VAR_RESULT, TRUE, Route20_EventScript_DailyMistyPostBattle
 # 45 "data/maps/Route20/scripts.pory"
 	msgbox Route20_Text_DailyMistyIntro, MSGBOX_YESNO
 # 46 "data/maps/Route20/scripts.pory"
@@ -76,14 +76,28 @@ Route20_EventScript_DailyMisty::
 # 49 "data/maps/Route20/scripts.pory"
 	trainerbattle_no_intro TRAINER_DAILY_MISTY, Text_DailyLeaderDefeat
 # 50 "data/maps/Route20/scripts.pory"
-	goto EventScript_DailyLeaderReward
+	setvar VAR_0x8008, ITEM_TM55_SCALD
+# 51 "data/maps/Route20/scripts.pory"
+	call EventScript_DailyLeaderReward
+# 52 "data/maps/Route20/scripts.pory"
+	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
+# 53 "data/maps/Route20/scripts.pory"
+	goto Route20_EventScript_DailyMistyPostBattle
+	end
+
+
+Route20_EventScript_DailyMistyPostBattle::
+# 58 "data/maps/Route20/scripts.pory"
+	msgbox Route20_Text_DailyMistyPostBattle
+# 59 "data/maps/Route20/scripts.pory"
+	release
 	end
 
 
 Route20_EventScript_DailyMistyDeclined::
-# 55 "data/maps/Route20/scripts.pory"
+# 64 "data/maps/Route20/scripts.pory"
 	msgbox Route20_Text_DailyMistyDeclined
-# 56 "data/maps/Route20/scripts.pory"
+# 65 "data/maps/Route20/scripts.pory"
 	release
 	end
 

@@ -82,7 +82,7 @@ MtMoon_1F_EventScript_DailyBrock::
 # 62 "data/maps/MtMoon_1F/scripts.pory"
 	specialvar VAR_RESULT, IsDailyLeaderBeatenToday
 # 63 "data/maps/MtMoon_1F/scripts.pory"
-	goto_if_eq VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten
+	goto_if_eq VAR_RESULT, TRUE, MtMoon_1F_EventScript_DailyBrockPostBattle
 # 64 "data/maps/MtMoon_1F/scripts.pory"
 	msgbox MtMoon_1F_Text_DailyBrockIntro, MSGBOX_YESNO
 # 65 "data/maps/MtMoon_1F/scripts.pory"
@@ -94,14 +94,28 @@ MtMoon_1F_EventScript_DailyBrock::
 # 68 "data/maps/MtMoon_1F/scripts.pory"
 	trainerbattle_no_intro TRAINER_DAILY_BROCK, Text_DailyLeaderDefeat
 # 69 "data/maps/MtMoon_1F/scripts.pory"
-	goto EventScript_DailyLeaderReward
+	setvar VAR_0x8008, ITEM_TM70_STONE_EDGE
+# 70 "data/maps/MtMoon_1F/scripts.pory"
+	call EventScript_DailyLeaderReward
+# 71 "data/maps/MtMoon_1F/scripts.pory"
+	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
+# 72 "data/maps/MtMoon_1F/scripts.pory"
+	goto MtMoon_1F_EventScript_DailyBrockPostBattle
+	end
+
+
+MtMoon_1F_EventScript_DailyBrockPostBattle::
+# 77 "data/maps/MtMoon_1F/scripts.pory"
+	msgbox MtMoon_1F_Text_DailyBrockPostBattle
+# 78 "data/maps/MtMoon_1F/scripts.pory"
+	release
 	end
 
 
 MtMoon_1F_EventScript_DailyBrockDeclined::
-# 74 "data/maps/MtMoon_1F/scripts.pory"
+# 83 "data/maps/MtMoon_1F/scripts.pory"
 	msgbox MtMoon_1F_Text_DailyBrockDeclined
-# 75 "data/maps/MtMoon_1F/scripts.pory"
+# 84 "data/maps/MtMoon_1F/scripts.pory"
 	release
 	end
 

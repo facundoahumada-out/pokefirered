@@ -199,3 +199,13 @@ MtEmber_Exterior_Text_DailyBlaineDeclined::
 	.string "WHAT?! And I was preparing such an\n"
 	.string "explosive experiment!\p"
 	.string "Oh, well! Science can wait!$"
+
+MtEmber_Exterior_Text_DailyBlainePostBattle::
+# 204 "data/maps/MtEmber_Exterior/text.pory"
+	.string "INCREDIBLE! My calculations were\n"
+	.string "completely off! Ha ha ha!\p"
+	.string "I'll need seven days, three new\n"
+	.string "theories, and a few explosive\l"
+	.string "experiments to crack your\l"
+	.string "strategy!\p"
+	.string "Until next Sunday, Champion!$"

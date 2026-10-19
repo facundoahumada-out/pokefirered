@@ -77,3 +77,12 @@ text ThreeIsland_BerryForest_Text_DailyKogaDeclined {
     "the present moment.\p"
     "Our paths shall cross again.$"
 }
+
+text ThreeIsland_BerryForest_Text_DailyKogaPostBattle {
+    "Your skills continue to sharpen,\n"
+    "Champion.\p"
+    "I shall spend the coming days\n"
+    "refining my techniques.\p"
+    "Seek me here next Friday, and we\n"
+    "shall test our resolve once more.$"
+}

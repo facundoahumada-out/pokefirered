@@ -139,3 +139,11 @@ text MtMoon_1F_Text_DailyBrockDeclined {
     "Take good care of your Pokémon,\n"
     "Champion!$"
 }
+
+text MtMoon_1F_Text_DailyBrockPostBattle {
+    "That was a solid battle! You've\n"
+    "really got what it takes to be\l"
+    "Champion.\p"
+    "I'll be back here next Monday, so\n"
+    "come see me again!$"
+}

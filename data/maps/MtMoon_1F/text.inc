@@ -139,3 +139,11 @@ MtMoon_1F_Text_DailyBrockDeclined::
 	.string "still be here when you're ready.\p"
 	.string "Take good care of your Pokémon,\n"
 	.string "Champion!$"
+
+MtMoon_1F_Text_DailyBrockPostBattle::
+# 143 "data/maps/MtMoon_1F/text.pory"
+	.string "That was a solid battle! You've\n"
+	.string "really got what it takes to be\l"
+	.string "Champion.\p"
+	.string "I'll be back here next Monday, so\n"
+	.string "come see me again!$"

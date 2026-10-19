@@ -26,13 +26,6 @@ script PewterCity_Museum_2F_EventScript_LittleGirl {
     msgbox(PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu)
     applymovement(LOCALID_MUSEUM_2F_LITTLE_GIRL, Common_Movement_FaceRight)
     waitmovement(0)
-    goto_if_set(FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST, PewterCity_Museum_2F_EventScript_LittleGirlEnd)
-    call(PewterCity_Museum_2F_EventScript_DadAsksForPikachu)
-    release
-    end
-}
-
-script PewterCity_Museum_2F_EventScript_LittleGirlEnd {
     release
     end
 }
@@ -92,8 +85,8 @@ script PewterCity_Museum_2F_EventScript_BaldingManAfterReward {
     end
 }
 
-// The father notices the player, steps one tile to the right (away from his daughter) and asks for a Pikachu.
-// If the player is already standing on that tile (talking to him from the right), he doesn't move.
+// The father notices the player and takes them one tile to the right (away from his daughter)
+// to ask for a Pikachu. He always ends up at the right of his spot, the player next to him.
 script PewterCity_Museum_2F_EventScript_DadAsksForPikachu {
     msgbox(PewterCity_Museum_1F_Text_PikachuSoonIPromise)
     playse(SE_PIN)
@@ -106,15 +99,25 @@ script PewterCity_Museum_2F_EventScript_DadAsksForPikachu {
         msgbox(PewterCity_Museum_2F_Text_HeyYoungLady)
     }
     specialvar(VAR_RESULT, GetPlayerFacingDirection)
-    if (var(VAR_RESULT) == DIR_WEST) {
-        msgbox(PewterCity_Museum_2F_Text_CouldYouBringMePikachu)
-        applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, Common_Movement_FaceDown)
-    } else {
-        applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadStepRight)
-        waitmovement(0)
-        msgbox(PewterCity_Museum_2F_Text_CouldYouBringMePikachu)
-        applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadStepBack)
+    switch (var(VAR_RESULT)) {
+        case DIR_WEST:
+            // Player was at his right: both step right, side by side
+            applymovement(LOCALID_PLAYER, PewterCity_Museum_2F_Movement_PlayerStepAsideFromRight)
+            applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadStepAsideFaceRight)
+        case DIR_SOUTH:
+            // Player was above him: both step right, the player stays above him
+            applymovement(LOCALID_PLAYER, PewterCity_Museum_2F_Movement_PlayerStepAsideFromAbove)
+            applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadStepAsideFaceUp)
+        default:
+            // Player was below him: the tile at the right of the player is a wall, so the player
+            // goes around through the father's spot and ends up above him
+            applymovement(LOCALID_PLAYER, PewterCity_Museum_2F_Movement_PlayerStepAsideFromBelow)
+            applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadStepAsideFaceUp)
     }
+    waitmovement(LOCALID_PLAYER)
+    waitmovement(LOCALID_MUSEUM_2F_BALDING_MAN)
+    msgbox(PewterCity_Museum_2F_Text_CouldYouBringMePikachu)
+    applymovement(LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadStepBack)
     waitmovement(0)
     setflag(FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST)
     return
@@ -142,9 +145,33 @@ movement PewterCity_Museum_2F_Movement_DadNoticePlayer {
     face_player
 }
 
-movement PewterCity_Museum_2F_Movement_DadStepRight {
+movement PewterCity_Museum_2F_Movement_DadStepAsideFaceRight {
     walk_right
-    face_player
+    face_right
+}
+
+movement PewterCity_Museum_2F_Movement_DadStepAsideFaceUp {
+    walk_right
+    face_up
+}
+
+movement PewterCity_Museum_2F_Movement_PlayerStepAsideFromRight {
+    walk_right
+    face_left
+}
+
+movement PewterCity_Museum_2F_Movement_PlayerStepAsideFromAbove {
+    walk_right
+    face_down
+}
+
+// Waits a bit so the father has started leaving his spot before the player walks into it
+movement PewterCity_Museum_2F_Movement_PlayerStepAsideFromBelow {
+    delay_8
+    walk_up
+    walk_up
+    walk_right
+    face_down
 }
 
 movement PewterCity_Museum_2F_Movement_DadStepBack {

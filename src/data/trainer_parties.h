@@ -10861,65 +10861,244 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CueBallPaxton[] = {
     },
 };
 
-// Daily rematch (src/daily_battles.c). Placeholder party
-static const struct TrainerMonNoItemDefaultMoves sParty_DailyBrock[] = {
+// Daily rematch (src/daily_battles.c)
+static const struct TrainerMonNoItemCustomMoves sParty_DailyBrock[] = {
     {
-        .iv = 0,
-        .lvl = 5,
-        .species = SPECIES_RATTATA,
+        .iv = 255,
+        .lvl = 56,
+        .species = SPECIES_GOLEM,
+        .moves = {MOVE_EARTHQUAKE, MOVE_EXPLOSION, MOVE_ROCK_THROW, MOVE_SANDSTORM},
+    },
+    {
+        .iv = 255,
+        .lvl = 60,
+        .species = SPECIES_ONIX,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_STEALTH_ROCK, MOVE_TOXIC},
+    },
+    {
+        .iv = 255,
+        .lvl = 58,
+        .species = SPECIES_RHYDON,
+        .moves = {MOVE_DRILL_RUN, MOVE_ROCK_SLIDE, MOVE_THUNDER_PUNCH, MOVE_MEGAHORN},
+    },
+    {
+        .iv = 255,
+        .lvl = 57,
+        .species = SPECIES_OMASTAR,
+        .moves = {MOVE_ANCIENT_POWER, MOVE_EARTH_POWER, MOVE_BRINE, MOVE_PROTECT},
+    },
+    {
+        .iv = 255,
+        .lvl = 57,
+        .species = SPECIES_KABUTOPS,
+        .moves = {MOVE_ROCK_SLIDE, MOVE_AERIAL_ACE, MOVE_AQUA_JET, MOVE_SWORDS_DANCE},
     },
 };
 
-// Daily rematch (src/daily_battles.c). Placeholder party
-static const struct TrainerMonNoItemDefaultMoves sParty_DailyMisty[] = {
+// Daily rematch (src/daily_battles.c)
+static const struct TrainerMonNoItemCustomMoves sParty_DailyMisty[] = {
     {
-        .iv = 0,
-        .lvl = 5,
-        .species = SPECIES_RATTATA,
+        .iv = 255,
+        .lvl = 56,
+        .species = SPECIES_SEAKING,
+        .moves = {MOVE_WATERFALL, MOVE_POISON_JAB, MOVE_BOUNCE, MOVE_AQUA_RING},
+    },
+    {
+        .iv = 255,
+        .lvl = 60,
+        .species = SPECIES_STARMIE,
+        .moves = {MOVE_SCALD, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_RECOVER},
+    },
+    {
+        .iv = 255,
+        .lvl = 58,
+        .species = SPECIES_TENTACRUEL,
+        .moves = {MOVE_SCALD, MOVE_SLUDGE_BOMB, MOVE_ICE_BEAM, MOVE_GIGA_DRAIN},
+    },
+    {
+        .iv = 255,
+        .lvl = 57,
+        .species = SPECIES_GOLDUCK,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_PSYCHIC, MOVE_RAIN_DANCE},
+    },
+    {
+        .iv = 255,
+        .lvl = 57,
+        .species = SPECIES_KINGLER,
+        .moves = {MOVE_CRABHAMMER, MOVE_ICE_PUNCH, MOVE_SUPERPOWER, MOVE_ENDURE},
     },
 };
 
-// Daily rematch (src/daily_battles.c). Placeholder party
-static const struct TrainerMonNoItemDefaultMoves sParty_DailyLtSurge[] = {
+// Daily rematch (src/daily_battles.c)
+static const struct TrainerMonNoItemCustomMoves sParty_DailyLtSurge[] = {
     {
-        .iv = 0,
-        .lvl = 5,
-        .species = SPECIES_RATTATA,
+        .iv = 255,
+        .lvl = 56,
+        .species = SPECIES_ELECTRODE,
+        .moves = {MOVE_DISCHARGE, MOVE_SIGNAL_BEAM, MOVE_MIRROR_COAT, MOVE_LIGHT_SCREEN},
+    },
+    {
+        .iv = 255,
+        .lvl = 60,
+        .species = SPECIES_RAICHU,
+        .moves = {MOVE_WILD_CHARGE, MOVE_IRON_TAIL, MOVE_COUNTER, MOVE_THUNDER_WAVE},
+    },
+    {
+        .iv = 255,
+        .lvl = 58,
+        .hiddenPowerType = TYPE_GRASS,
+        .species = SPECIES_JOLTEON,
+        .moves = {MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_CHARGE_BEAM, MOVE_HIDDEN_POWER},
+    },
+    {
+        .iv = 255,
+        .lvl = 57,
+        .hiddenPowerType = TYPE_ICE,
+        .species = SPECIES_ELECTABUZZ,
+        .moves = {MOVE_THUNDERBOLT, MOVE_FOCUS_BLAST, MOVE_HIDDEN_POWER, MOVE_PROTECT},
+    },
+    {
+        .iv = 255,
+        .lvl = 57,
+        .species = SPECIES_MAGNETON,
+        .moves = {MOVE_DISCHARGE, MOVE_FLASH_CANNON, MOVE_TRI_ATTACK, MOVE_SUPERSONIC},
     },
 };
 
-// Daily rematch (src/daily_battles.c). Placeholder party
-static const struct TrainerMonNoItemDefaultMoves sParty_DailyErika[] = {
+// Daily rematch (src/daily_battles.c)
+static const struct TrainerMonNoItemCustomMoves sParty_DailyErika[] = {
     {
-        .iv = 0,
-        .lvl = 5,
-        .species = SPECIES_RATTATA,
+        .iv = 255,
+        .lvl = 56,
+        .species = SPECIES_PARASECT,
+        .moves = {MOVE_SEED_BOMB, MOVE_LEECH_LIFE, MOVE_CROSS_POISON, MOVE_SPORE},
+    },
+    {
+        .iv = 255,
+        .lvl = 60,
+        .species = SPECIES_VILEPLUME,
+        .moves = {MOVE_PETAL_DANCE, MOVE_SLUDGE_BOMB, MOVE_MOONBLAST, MOVE_SYNTHESIS},
+    },
+    {
+        .iv = 255,
+        .lvl = 58,
+        .species = SPECIES_TANGELA,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_ANCIENT_POWER, MOVE_WRING_OUT, MOVE_LEECH_SEED},
+    },
+    {
+        .iv = 255,
+        .lvl = 57,
+        .species = SPECIES_VICTREEBEL,
+        .moves = {MOVE_LEAF_BLADE, MOVE_POISON_JAB, MOVE_LEECH_LIFE, MOVE_KNOCK_OFF},
+    },
+    {
+        .iv = 255,
+        .lvl = 57,
+        .hiddenPowerType = TYPE_GROUND,
+        .species = SPECIES_EXEGGUTOR,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_EXTRASENSORY, MOVE_HIDDEN_POWER, MOVE_LIGHT_SCREEN},
     },
 };
 
-// Daily rematch (src/daily_battles.c). Placeholder party
-static const struct TrainerMonNoItemDefaultMoves sParty_DailyKoga[] = {
+// Daily rematch (src/daily_battles.c)
+static const struct TrainerMonNoItemCustomMoves sParty_DailyKoga[] = {
     {
-        .iv = 0,
-        .lvl = 5,
-        .species = SPECIES_RATTATA,
+        .iv = 255,
+        .lvl = 56,
+        .species = SPECIES_VENOMOTH,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_SIGNAL_BEAM, MOVE_AIR_SLASH, MOVE_QUIVER_DANCE},
+    },
+    {
+        .iv = 255,
+        .lvl = 60,
+        .species = SPECIES_WEEZING,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_FLAMETHROWER, MOVE_SHADOW_BALL, MOVE_ACID_SPRAY},
+    },
+    {
+        .iv = 255,
+        .lvl = 58,
+        .species = SPECIES_GOLBAT,
+        .moves = {MOVE_CROSS_POISON, MOVE_ACROBATICS, MOVE_LEECH_LIFE, MOVE_SUPER_FANG},
+    },
+    {
+        .iv = 255,
+        .lvl = 57,
+        .species = SPECIES_MUK,
+        .moves = {MOVE_POISON_JAB, MOVE_DRAIN_PUNCH, MOVE_KNOCK_OFF, MOVE_DISABLE},
+    },
+    {
+        .iv = 255,
+        .lvl = 57,
+        .species = SPECIES_ARBOK,
+        .moves = {MOVE_POISON_JAB, MOVE_CRUNCH, MOVE_FIRE_FANG, MOVE_GLARE},
     },
 };
 
-// Daily rematch (src/daily_battles.c). Placeholder party
-static const struct TrainerMonNoItemDefaultMoves sParty_DailySabrina[] = {
+// Daily rematch (src/daily_battles.c)
+static const struct TrainerMonNoItemCustomMoves sParty_DailySabrina[] = {
     {
-        .iv = 0,
-        .lvl = 5,
-        .species = SPECIES_RATTATA,
+        .iv = 255,
+        .lvl = 56,
+        .species = SPECIES_HYPNO,
+        .moves = {MOVE_PSYSHOCK, MOVE_SHADOW_BALL, MOVE_GRASS_KNOT, MOVE_HYPNOSIS},
+    },
+    {
+        .iv = 255,
+        .lvl = 60,
+        .species = SPECIES_ALAKAZAM,
+        .moves = {MOVE_FOCUS_BLAST, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_RECOVER},
+    },
+    {
+        .iv = 255,
+        .lvl = 58,
+        .species = SPECIES_ESPEON,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_HYPER_VOICE, MOVE_CALM_MIND},
+    },
+    {
+        .iv = 255,
+        .lvl = 57,
+        .species = SPECIES_MR_MIME,
+        .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_DAZZLING_GLEAM, MOVE_ENERGY_BALL},
+    },
+    {
+        .iv = 255,
+        .lvl = 57,
+        .species = SPECIES_SLOWBRO,
+        .moves = {MOVE_SCALD, MOVE_PSYCHIC, MOVE_SIGNAL_BEAM, MOVE_CALM_MIND},
     },
 };
 
-// Daily rematch (src/daily_battles.c). Placeholder party
-static const struct TrainerMonNoItemDefaultMoves sParty_DailyBlaine[] = {
+// Daily rematch (src/daily_battles.c)
+static const struct TrainerMonNoItemCustomMoves sParty_DailyBlaine[] = {
     {
-        .iv = 0,
-        .lvl = 5,
-        .species = SPECIES_RATTATA,
+        .iv = 255,
+        .lvl = 57,
+        .species = SPECIES_RAPIDASH,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_DRILL_RUN, MOVE_BOUNCE, MOVE_FLAME_CHARGE},
+    },
+    {
+        .iv = 255,
+        .lvl = 60,
+        .species = SPECIES_ARCANINE,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_EXTREME_SPEED, MOVE_THUNDER_FANG, MOVE_PLAY_ROUGH},
+    },
+    {
+        .iv = 255,
+        .lvl = 59,
+        .species = SPECIES_FLAREON,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_SUPERPOWER, MOVE_BODY_SLAM, MOVE_WILL_O_WISP},
+    },
+    {
+        .iv = 255,
+        .lvl = 58,
+        .hiddenPowerType = TYPE_GRASS,
+        .species = SPECIES_MAGMAR,
+        .moves = {MOVE_FLAMETHROWER, MOVE_FOCUS_BLAST, MOVE_CLEAR_SMOG, MOVE_HIDDEN_POWER},
+    },
+    {
+        .iv = 255,
+        .lvl = 58,
+        .species = SPECIES_NINETALES,
+        .moves = {MOVE_HEAT_WAVE, MOVE_SHADOW_BALL, MOVE_ENERGY_BALL, MOVE_SUNNY_DAY},
     },
 };

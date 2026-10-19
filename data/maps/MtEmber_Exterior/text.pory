@@ -200,3 +200,13 @@ text MtEmber_Exterior_Text_DailyBlaineDeclined {
     "explosive experiment!\p"
     "Oh, well! Science can wait!$"
 }
+
+text MtEmber_Exterior_Text_DailyBlainePostBattle {
+    "INCREDIBLE! My calculations were\n"
+    "completely off! Ha ha ha!\p"
+    "I'll need seven days, three new\n"
+    "theories, and a few explosive\l"
+    "experiments to crack your\l"
+    "strategy!\p"
+    "Until next Sunday, Champion!$"
+}

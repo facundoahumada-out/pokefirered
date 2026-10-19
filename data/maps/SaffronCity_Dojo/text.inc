@@ -152,3 +152,12 @@ SaffronCity_Dojo_Text_DailySabrinaDeclined::
 	.string "uncertainties.\p"
 	.string "I'll leave the decision in your\n"
 	.string "hands.$"
+
+SaffronCity_Dojo_Text_DailySabrinaPostBattle::
+# 156 "data/maps/SaffronCity_Dojo/text.pory"
+	.string "Your strength of will continues to\n"
+	.string "surprise me.\p"
+	.string "I can already envision several\n"
+	.string "ways to improve my strategy.\p"
+	.string "Return next Saturday, and we shall\n"
+	.string "see what the future holds.$"

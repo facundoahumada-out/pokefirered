@@ -1555,6 +1555,36 @@ static void SpriteCB_UnusedDebugSprite_Step(struct Sprite *sprite)
     }
 }
 
+// Changes the lowest bit of each IV so that Hidden Power has the given type (same formula as
+// Cmd_hiddenpowercalc). Keeps as many bits set as possible so the IVs barely change.
+static void SetMonHiddenPowerType(struct Pokemon *mon, u8 type)
+{
+    s32 typeBits, i;
+    u8 hpType;
+
+    for (typeBits = 63; typeBits >= 0; typeBits--)
+    {
+        hpType = ((NUMBER_OF_MON_TYPES - 4) * typeBits) / 63 + 1;
+        if (hpType >= TYPE_MYSTERY)
+            hpType++;
+        if (hpType == type)
+            break;
+    }
+    if (typeBits < 0)
+        return;
+
+    // Same stat order as the type bits of Cmd_hiddenpowercalc
+    for (i = 0; i < NUM_STATS; i++)
+    {
+        static const u8 sIVs[NUM_STATS] = {MON_DATA_HP_IV, MON_DATA_ATK_IV, MON_DATA_DEF_IV, MON_DATA_SPEED_IV, MON_DATA_SPATK_IV, MON_DATA_SPDEF_IV};
+        u8 iv = GetMonData(mon, sIVs[i], NULL);
+
+        iv = (iv & ~1) | ((typeBits >> i) & 1);
+        SetMonData(mon, sIVs[i], &iv);
+    }
+    CalculateMonStats(mon);
+}
+
 static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 {
     u32 nameHash = 0;
@@ -1606,6 +1636,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                if (partyData[i].hiddenPowerType != TYPE_NORMAL)
+                    SetMonHiddenPowerType(&party[i], partyData[i].hiddenPowerType);
 
                 for (j = 0; j < MAX_MON_MOVES; j++)
                 {

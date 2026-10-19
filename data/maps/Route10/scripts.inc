@@ -40,7 +40,7 @@ Route10_EventScript_DailyLtSurge::
 # 33 "data/maps/Route10/scripts.pory"
 	specialvar VAR_RESULT, IsDailyLeaderBeatenToday
 # 34 "data/maps/Route10/scripts.pory"
-	goto_if_eq VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten
+	goto_if_eq VAR_RESULT, TRUE, Route10_EventScript_DailyLtSurgePostBattle
 # 35 "data/maps/Route10/scripts.pory"
 	msgbox Route10_Text_DailyLtSurgeIntro, MSGBOX_YESNO
 # 36 "data/maps/Route10/scripts.pory"
@@ -52,14 +52,28 @@ Route10_EventScript_DailyLtSurge::
 # 39 "data/maps/Route10/scripts.pory"
 	trainerbattle_no_intro TRAINER_DAILY_LT_SURGE, Text_DailyLeaderDefeat
 # 40 "data/maps/Route10/scripts.pory"
-	goto EventScript_DailyLeaderReward
+	setvar VAR_0x8008, ITEM_TM92_WILD_CHARGE
+# 41 "data/maps/Route10/scripts.pory"
+	call EventScript_DailyLeaderReward
+# 42 "data/maps/Route10/scripts.pory"
+	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
+# 43 "data/maps/Route10/scripts.pory"
+	goto Route10_EventScript_DailyLtSurgePostBattle
+	end
+
+
+Route10_EventScript_DailyLtSurgePostBattle::
+# 48 "data/maps/Route10/scripts.pory"
+	msgbox Route10_Text_DailyLtSurgePostBattle
+# 49 "data/maps/Route10/scripts.pory"
+	release
 	end
 
 
 Route10_EventScript_DailyLtSurgeDeclined::
-# 45 "data/maps/Route10/scripts.pory"
+# 54 "data/maps/Route10/scripts.pory"
 	msgbox Route10_Text_DailyLtSurgeDeclined
-# 46 "data/maps/Route10/scripts.pory"
+# 55 "data/maps/Route10/scripts.pory"
 	release
 	end
 

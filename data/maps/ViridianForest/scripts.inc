@@ -108,7 +108,7 @@ ViridianForest_EventScript_DailyErika::
 # 85 "data/maps/ViridianForest/scripts.pory"
 	specialvar VAR_RESULT, IsDailyLeaderBeatenToday
 # 86 "data/maps/ViridianForest/scripts.pory"
-	goto_if_eq VAR_RESULT, TRUE, EventScript_DailyLeaderAlreadyBeaten
+	goto_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_DailyErikaPostBattle
 # 87 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_DailyErikaIntro, MSGBOX_YESNO
 # 88 "data/maps/ViridianForest/scripts.pory"
@@ -120,14 +120,28 @@ ViridianForest_EventScript_DailyErika::
 # 91 "data/maps/ViridianForest/scripts.pory"
 	trainerbattle_no_intro TRAINER_DAILY_ERIKA, Text_DailyLeaderDefeat
 # 92 "data/maps/ViridianForest/scripts.pory"
-	goto EventScript_DailyLeaderReward
+	setvar VAR_0x8008, ITEM_TM53_ENERGY_BALL
+# 93 "data/maps/ViridianForest/scripts.pory"
+	call EventScript_DailyLeaderReward
+# 94 "data/maps/ViridianForest/scripts.pory"
+	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
+# 95 "data/maps/ViridianForest/scripts.pory"
+	goto ViridianForest_EventScript_DailyErikaPostBattle
+	end
+
+
+ViridianForest_EventScript_DailyErikaPostBattle::
+# 100 "data/maps/ViridianForest/scripts.pory"
+	msgbox ViridianForest_Text_DailyErikaPostBattle
+# 101 "data/maps/ViridianForest/scripts.pory"
+	release
 	end
 
 
 ViridianForest_EventScript_DailyErikaDeclined::
-# 97 "data/maps/ViridianForest/scripts.pory"
+# 106 "data/maps/ViridianForest/scripts.pory"
 	msgbox ViridianForest_Text_DailyErikaDeclined
-# 98 "data/maps/ViridianForest/scripts.pory"
+# 107 "data/maps/ViridianForest/scripts.pory"
 	release
 	end
 

@@ -129,3 +129,11 @@ Route10_Text_DailyLtSurgeDeclined::
 	.string "afraid of a little sparring?!\p"
 	.string "Come back when you've got the guts\n"
 	.string "to face me!$"
+
+Route10_Text_DailyLtSurgePostBattle::
+# 133 "data/maps/Route10/text.pory"
+	.string "HAHAHA! You really packed a punch,\n"
+	.string "Champion!\p"
+	.string "But this battle isn't over!\p"
+	.string "I'll be back next Wednesday for\n"
+	.string "another high-voltage showdown!$"

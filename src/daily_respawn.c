@@ -24,7 +24,7 @@ struct MushroomPatch
 
 static const struct MushroomPatch sMushroomPatches[] =
 {
-    { MAP_GROUP(MAP_PALLET_TOWN), MAP_NUM(MAP_PALLET_TOWN), 3, 18, 0x010, 0x238, ITEM_TINY_MUSHROOM },
+    { MAP_GROUP(MAP_PALLET_TOWN), MAP_NUM(MAP_PALLET_TOWN), 3, 18, 0x010, 0x238, ITEM_BIG_MUSHROOM  },
 };
 
 #define MUSHROOM_PATCH_COUNT ARRAY_COUNT(sMushroomPatches)

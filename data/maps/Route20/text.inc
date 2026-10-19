@@ -176,3 +176,11 @@ Route20_Text_DailyMistyDeclined::
 	.string "to turn me down?\p"
 	.string "…Fine! But don't think I'll forget\n"
 	.string "this!$"
+
+Route20_Text_DailyMistyPostBattle::
+# 180 "data/maps/Route20/text.pory"
+	.string "Oh, come on! I was so sure I'd win\n"
+	.string "this time!\p"
+	.string "Just you wait! I'll be here next\n"
+	.string "Tuesday, and I'll be ready for\l"
+	.string "you!$"

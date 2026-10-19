@@ -153,3 +153,11 @@ text ViridianForest_Text_DailyErikaDeclined {
     "has its own time. I hope to see\l"
     "you again soon.$"
 }
+
+text ViridianForest_Text_DailyErikaPostBattle {
+    "What a lovely battle. My Pokémon\n"
+    "and I still have much to learn.\p"
+    "I shall return next Thursday. I\n"
+    "hope we can enjoy another match\l"
+    "together.$"
+}

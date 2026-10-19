@@ -129,3 +129,11 @@ text Route10_Text_DailyLtSurgeDeclined {
     "Come back when you've got the guts\n"
     "to face me!$"
 }
+
+text Route10_Text_DailyLtSurgePostBattle {
+    "HAHAHA! You really packed a punch,\n"
+    "Champion!\p"
+    "But this battle isn't over!\p"
+    "I'll be back next Wednesday for\n"
+    "another high-voltage showdown!$"
+}

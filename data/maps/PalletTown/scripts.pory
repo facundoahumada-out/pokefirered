@@ -471,51 +471,10 @@ movement(global) PalletTown_Movement_SignLadyMoveOutOfWayLeft {
 }
 
 script PalletTown_EventScript_FatMan {
-    msgbox(PalletTown_Text_CanStoreItemsAndMonsInPC, MSGBOX_NPC)
-    additem(ITEM_HM09_ROCK_CLIMB)
-    call(Debug_EventScript_GiveAllTMs)
-    setvar(VAR_MOM_SHOES, 1)
-    clearflag(FLAG_HIDE_MOM)
-    addobject(LOCALID_PALLET_MOM)
-    additem(ITEM_ADAMANT_MINT)
-    additem(ITEM_BOLD_MINT)
-    additem(ITEM_BRAVE_MINT)
-    additem(ITEM_CALM_MINT)
-    additem(ITEM_CAREFUL_MINT)
-    additem(ITEM_GENTLE_MINT)
-    additem(ITEM_HASTY_MINT)
-    additem(ITEM_IMPISH_MINT)
-    additem(ITEM_JOLLY_MINT)
-    additem(ITEM_LAX_MINT)
-    additem(ITEM_LONELY_MINT)
-    additem(ITEM_MILD_MINT)
-    additem(ITEM_MODEST_MINT)
-    additem(ITEM_NAIVE_MINT)
-    additem(ITEM_NAUGHTY_MINT)
-    additem(ITEM_QUIET_MINT)
-    additem(ITEM_RASH_MINT)
-    additem(ITEM_RELAXED_MINT)
-    additem(ITEM_SASSY_MINT)
-    additem(ITEM_SERIOUS_MINT)
-    additem(ITEM_TIMID_MINT)
-    additem(ITEM_SHINY_CHARM)
-    givemon(SPECIES_AMBIPOM, 25)
-    givemon(SPECIES_FARFETCHD, 32)
-    additem(ITEM_RARE_CANDY, 2)
-    additem(ITEM_SHINY_STONE)
-    additem(ITEM_DUSK_STONE)
-    additem(ITEM_OVAL_STONE)
-    additem(ITEM_RAZOR_CLAW)
-    additem(ITEM_RAZOR_FANG)
-    additem(ITEM_PROTECTOR)
-    additem(ITEM_ELECTIRIZER)
-    additem(ITEM_MAGMARIZER)
-    additem(ITEM_DUBIOUS_DISC)
-    additem(ITEM_BICYCLE)
-    setflag(FLAG_GOT_BICYCLE)
-    special(ForcePlayerOntoBike)
-    warp(MAP_ROUTE17, 2, 19)
-    waitstate
+    lock
+    faceplayer
+    msgbox(PalletTown_Text_CanStoreItemsAndMonsInPC)
+    special(GiveTestTeam)  // TEMP: test team for the daily gym leaders
     release
     end
 }

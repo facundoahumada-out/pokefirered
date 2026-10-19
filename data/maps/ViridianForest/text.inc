@@ -153,3 +153,11 @@ ViridianForest_Text_DailyErikaDeclined::
 	.string "Nature teaches us that everything\n"
 	.string "has its own time. I hope to see\l"
 	.string "you again soon.$"
+
+ViridianForest_Text_DailyErikaPostBattle::
+# 157 "data/maps/ViridianForest/text.pory"
+	.string "What a lovely battle. My Pokémon\n"
+	.string "and I still have much to learn.\p"
+	.string "I shall return next Thursday. I\n"
+	.string "hope we can enjoy another match\l"
+	.string "together.$"

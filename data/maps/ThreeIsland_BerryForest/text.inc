@@ -77,3 +77,12 @@ ThreeIsland_BerryForest_Text_DailyKogaDeclined::
 	.string "not every battle must be fought in\l"
 	.string "the present moment.\p"
 	.string "Our paths shall cross again.$"
+
+ThreeIsland_BerryForest_Text_DailyKogaPostBattle::
+# 81 "data/maps/ThreeIsland_BerryForest/text.pory"
+	.string "Your skills continue to sharpen,\n"
+	.string "Champion.\p"
+	.string "I shall spend the coming days\n"
+	.string "refining my techniques.\p"
+	.string "Seek me here next Friday, and we\n"
+	.string "shall test our resolve once more.$"

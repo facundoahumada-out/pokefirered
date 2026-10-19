@@ -11,6 +11,7 @@
 #include "random.h"
 #include "script_pokemon_util.h"
 #include "constants/items.h"
+#include "constants/moves.h"
 #include "constants/pokemon.h"
 
 static void CB2_ReturnFromChooseHalfParty(void);
@@ -219,3 +220,39 @@ void ReducePlayerPartyToThree(void)
     CalculatePlayerPartyCount();
     Free(party);
 }
+
+// TEMP (testing the daily gym leaders): gives a level 70 team with perfect IVs and strong moves.
+// Mons that don't fit in the party go to the PC.
+void GiveTestTeam(void)
+{
+    static const struct {
+        u16 species;
+        u16 moves[MAX_MON_MOVES];
+    } sTestTeam[PARTY_SIZE] = {
+        { SPECIES_METAGROSS, { MOVE_METEOR_MASH, MOVE_EARTHQUAKE, MOVE_ZEN_HEADBUTT, MOVE_BULLET_PUNCH } },
+        { SPECIES_SALAMENCE, { MOVE_OUTRAGE, MOVE_EARTHQUAKE, MOVE_FLAMETHROWER, MOVE_DRAGON_DANCE } },
+        { SPECIES_GENGAR,    { MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_THUNDERBOLT, MOVE_FOCUS_BLAST } },
+        { SPECIES_SWAMPERT,  { MOVE_WATERFALL, MOVE_EARTHQUAKE, MOVE_ICE_PUNCH, MOVE_STEALTH_ROCK } },
+        { SPECIES_BRELOOM,   { MOVE_SPORE, MOVE_SEED_BOMB, MOVE_DRAIN_PUNCH, MOVE_MACH_PUNCH } },
+        { SPECIES_BLAZIKEN,  { MOVE_FLARE_BLITZ, MOVE_CLOSE_COMBAT, MOVE_THUNDER_PUNCH, MOVE_SWORDS_DANCE } },
+    };
+    struct Pokemon *mon = AllocZeroed(sizeof(struct Pokemon));
+    u32 i, j;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        u16 species = sTestTeam[i].species;
+
+        CreateMon(mon, species, 70, MAX_PER_STAT_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+        for (j = 0; j < MAX_MON_MOVES; j++)
+        {
+            SetMonData(mon, MON_DATA_MOVE1 + j, &sTestTeam[i].moves[j]);
+            SetMonData(mon, MON_DATA_PP1 + j, &gBattleMoves[sTestTeam[i].moves[j]].pp);
+        }
+        GiveMonToPlayer(mon);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_SET_SEEN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_SET_CAUGHT);
+    }
+    Free(mon);
+}
+
