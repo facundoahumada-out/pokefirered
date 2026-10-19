@@ -15,6 +15,7 @@ script PalletTown_OnTransition {
     call_if_eq(VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1, PalletTown_EventScript_SetSignLadyDone)
     setflag(FLAG_HIDE_MOM)
     call_if_eq(VAR_MOM_SHOES, 1, PalletTown_EventScript_ShowMomAtExit)
+    call(PalletTown_EventScript_TestDailyLeadersVisibility)
     end
 }
 
@@ -711,5 +712,33 @@ movement(global) PalletTown_Movement_MomEnterHouse {
     step_end
 }
 
-
-
+// TEMP: copies of the 7 daily gym leaders in Pallet Town to test them. Only today's one is shown
+// (FLAG_TEMP_11 = Monday ... FLAG_TEMP_17 = Sunday). Remove this script, its call in
+// PalletTown_OnTransition and the 7 object events when done.
+script PalletTown_EventScript_TestDailyLeadersVisibility {
+    setflag(FLAG_TEMP_11)
+    setflag(FLAG_TEMP_12)
+    setflag(FLAG_TEMP_13)
+    setflag(FLAG_TEMP_14)
+    setflag(FLAG_TEMP_15)
+    setflag(FLAG_TEMP_16)
+    setflag(FLAG_TEMP_17)
+    specialvar(VAR_RESULT, GetDayOfWeek)
+    switch (var(VAR_RESULT)) {
+        case 1:
+            clearflag(FLAG_TEMP_11)
+        case 2:
+            clearflag(FLAG_TEMP_12)
+        case 3:
+            clearflag(FLAG_TEMP_13)
+        case 4:
+            clearflag(FLAG_TEMP_14)
+        case 5:
+            clearflag(FLAG_TEMP_15)
+        case 6:
+            clearflag(FLAG_TEMP_16)
+        case 0:
+            clearflag(FLAG_TEMP_17)
+    }
+    return
+}
