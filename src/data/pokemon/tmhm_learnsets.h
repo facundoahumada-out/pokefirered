@@ -606,7 +606,8 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH),
-                                          TMHM(TM66_PAYBACK)
+                                          TMHM(TM64_SLUDGE_WAVE)
+                                        | TMHM(TM66_PAYBACK)
                                         | TMHM(TM77_BULLDOZE)
                                         | TMHM(TM79_ROCK_SLIDE)
                                         | TMHM(TM83_POISON_JAB)
@@ -636,7 +637,8 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH),
-                                          TMHM(TM66_PAYBACK)
+                                          TMHM(TM64_SLUDGE_WAVE)
+                                        | TMHM(TM66_PAYBACK)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM77_BULLDOZE)
                                         | TMHM(TM79_ROCK_SLIDE)
@@ -898,6 +900,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM56_FLING)
                                         | TMHM(TM59_INCINERATE)
                                         | TMHM(TM60_QUASH)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM65_SHADOW_CLAW)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM70_STONE_EDGE)
@@ -1016,6 +1019,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM56_FLING)
                                         | TMHM(TM59_INCINERATE)
                                         | TMHM(TM60_QUASH)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM65_SHADOW_CLAW)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM70_STONE_EDGE)
@@ -1408,6 +1412,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM53_ENERGY_BALL)
                                         | TMHM(TM56_FLING)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM74_SWORDS_DANCE)
                                         | TMHM(TM85_GRASS_KNOT)
@@ -1526,6 +1531,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM53_ENERGY_BALL)
                                         | TMHM(TM62_ACROBATICS)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM75_STRUGGLE_BUG)
                                         | TMHM(TM86_SWAGGER)
@@ -1580,7 +1586,8 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
-                                          TMHM(TM65_SHADOW_CLAW)
+                                          TMHM(TM64_SLUDGE_WAVE)
+                                        | TMHM(TM65_SHADOW_CLAW)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM70_STONE_EDGE)
                                         | TMHM(TM77_BULLDOZE)
@@ -2245,6 +2252,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM74_SWORDS_DANCE)
                                         | TMHM(TM85_GRASS_KNOT)
                                         | TMHM(TM86_SWAGGER)
@@ -2270,6 +2278,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM74_SWORDS_DANCE)
                                         | TMHM(TM85_GRASS_KNOT)
                                         | TMHM(TM86_SWAGGER)
@@ -2296,6 +2305,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM74_SWORDS_DANCE)
                                         | TMHM(TM85_GRASS_KNOT)
@@ -2326,6 +2336,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE),
                                           TMHM(TM55_SCALD)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM74_SWORDS_DANCE)
                                         | TMHM(TM83_POISON_JAB)
@@ -2357,6 +2368,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE),
                                           TMHM(TM55_SCALD)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM74_SWORDS_DANCE)
@@ -2389,7 +2401,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM09_ROCK_CLIMB),
                                           TMHM(TM56_FLING)
                                         | TMHM(TM59_INCINERATE)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
                                         | TMHM(TM73_GYRO_BALL)
@@ -2422,7 +2433,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM09_ROCK_CLIMB),
                                           TMHM(TM56_FLING)
                                         | TMHM(TM59_INCINERATE)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
                                         | TMHM(TM73_GYRO_BALL)
@@ -2458,7 +2468,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                           TMHM(TM52_FOCUS_BLAST)
                                         | TMHM(TM56_FLING)
                                         | TMHM(TM59_INCINERATE)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
@@ -2628,7 +2637,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM44_REST)
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM57_CHARGE_BEAM)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM71_VOLT_SWITCH)
                                         | TMHM(TM72_THUNDER_WAVE)
                                         | TMHM(TM73_GYRO_BALL)
@@ -2656,7 +2664,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM44_REST)
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM57_CHARGE_BEAM)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM71_VOLT_SWITCH)
                                         | TMHM(TM72_THUNDER_WAVE)
@@ -2818,7 +2825,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM46_THIEF),
                                           TMHM(TM56_FLING)
                                         | TMHM(TM59_INCINERATE)
-                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM79_ROCK_SLIDE)
                                         | TMHM(TM83_POISON_JAB)
@@ -2859,7 +2866,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                           TMHM(TM52_FOCUS_BLAST)
                                         | TMHM(TM56_FLING)
                                         | TMHM(TM59_INCINERATE)
-                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM79_ROCK_SLIDE)
@@ -2885,8 +2892,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM08_DIVE),
-                                          TMHM(TM64_EXPLOSION)
-                                        | TMHM(TM66_PAYBACK)
+                                          TMHM(TM66_PAYBACK)
                                         | TMHM(TM86_SWAGGER)
                                         | TMHM(TM89_SUBSTITUTE)),
 
@@ -2909,8 +2915,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM08_DIVE),
-                                          TMHM(TM64_EXPLOSION)
-                                        | TMHM(TM66_PAYBACK)
+                                          TMHM(TM66_PAYBACK)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM78_FROST_BREATH)
                                         | TMHM(TM83_POISON_JAB)
@@ -2942,7 +2947,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                           TMHM(TM53_ENERGY_BALL)
                                         | TMHM(TM61_WILL_O_WISP)
                                         | TMHM(TM63_EMBARGO)
-                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM76_PSYCH_UP)
                                         | TMHM(TM84_DREAM_EATER)
@@ -2977,7 +2982,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM56_FLING)
                                         | TMHM(TM61_WILL_O_WISP)
                                         | TMHM(TM63_EMBARGO)
-                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM65_SHADOW_CLAW)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM76_PSYCH_UP)
@@ -3022,7 +3027,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM56_FLING)
                                         | TMHM(TM61_WILL_O_WISP)
                                         | TMHM(TM63_EMBARGO)
-                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM65_SHADOW_CLAW)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM68_GIGA_IMPACT)
@@ -3056,8 +3061,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
-                                          TMHM(TM64_EXPLOSION)
-                                        | TMHM(TM66_PAYBACK)
+                                          TMHM(TM66_PAYBACK)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
                                         | TMHM(TM73_GYRO_BALL)
@@ -3232,7 +3236,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM57_CHARGE_BEAM)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM71_VOLT_SWITCH)
                                         | TMHM(TM72_THUNDER_WAVE)
                                         | TMHM(TM73_GYRO_BALL)
@@ -3260,7 +3263,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM57_CHARGE_BEAM)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM71_VOLT_SWITCH)
                                         | TMHM(TM72_THUNDER_WAVE)
@@ -3292,7 +3294,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM53_ENERGY_BALL)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM74_SWORDS_DANCE)
                                         | TMHM(TM76_PSYCH_UP)
                                         | TMHM(TM84_DREAM_EATER)
@@ -3326,7 +3327,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM53_ENERGY_BALL)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM74_SWORDS_DANCE)
                                         | TMHM(TM76_PSYCH_UP)
@@ -3553,7 +3553,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM59_INCINERATE)
                                         | TMHM(TM61_WILL_O_WISP)
-                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM73_GYRO_BALL)
                                         | TMHM(TM86_SWAGGER)
@@ -3586,7 +3586,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM59_INCINERATE)
                                         | TMHM(TM61_WILL_O_WISP)
-                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM73_GYRO_BALL)
@@ -5047,7 +5047,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM61_WILL_O_WISP)
                                         | TMHM(TM62_ACROBATICS)
                                         | TMHM(TM63_EMBARGO)
-                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM65_SHADOW_CLAW)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM67_RETALIATE)
@@ -5591,7 +5591,8 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH),
-                                          TMHM(TM75_STRUGGLE_BUG)
+                                          TMHM(TM64_SLUDGE_WAVE)
+                                        | TMHM(TM75_STRUGGLE_BUG)
                                         | TMHM(TM80_X_SCISSOR)
                                         | TMHM(TM83_POISON_JAB)
                                         | TMHM(TM86_SWAGGER)
@@ -5617,7 +5618,8 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH),
-                                          TMHM(TM68_GIGA_IMPACT)
+                                          TMHM(TM64_SLUDGE_WAVE)
+                                        | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM75_STRUGGLE_BUG)
                                         | TMHM(TM80_X_SCISSOR)
                                         | TMHM(TM83_POISON_JAB)
@@ -6179,7 +6181,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
                                           TMHM(TM56_FLING)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
                                         | TMHM(TM76_PSYCH_UP)
@@ -6448,6 +6449,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE),
                                           TMHM(TM55_SCALD)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM77_BULLDOZE)
                                         | TMHM(TM86_SWAGGER)
                                         | TMHM(TM89_SUBSTITUTE)),
@@ -6486,6 +6488,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                           TMHM(TM52_FOCUS_BLAST)
                                         | TMHM(TM55_SCALD)
                                         | TMHM(TM56_FLING)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM70_STONE_EDGE)
                                         | TMHM(TM77_BULLDOZE)
@@ -6750,8 +6753,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
-                                          TMHM(TM64_EXPLOSION)
-                                        | TMHM(TM66_PAYBACK)
+                                          TMHM(TM66_PAYBACK)
                                         | TMHM(TM73_GYRO_BALL)
                                         | TMHM(TM75_STRUGGLE_BUG)
                                         | TMHM(TM77_BULLDOZE)
@@ -6782,8 +6784,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
-                                          TMHM(TM64_EXPLOSION)
-                                        | TMHM(TM66_PAYBACK)
+                                          TMHM(TM66_PAYBACK)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM71_VOLT_SWITCH)
@@ -6907,8 +6908,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
-                                          TMHM(TM64_EXPLOSION)
-                                        | TMHM(TM66_PAYBACK)
+                                          TMHM(TM66_PAYBACK)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
@@ -7042,7 +7042,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE),
                                           TMHM(TM55_SCALD)
-                                        | TMHM(TM64_EXPLOSION)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM72_THUNDER_WAVE)
                                         | TMHM(TM73_GYRO_BALL)
@@ -7106,7 +7106,8 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
-                                          TMHM(TM69_ROCK_POLISH)
+                                          TMHM(TM64_SLUDGE_WAVE)
+                                        | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
                                         | TMHM(TM73_GYRO_BALL)
                                         | TMHM(TM75_STRUGGLE_BUG)
@@ -7330,7 +7331,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM09_ROCK_CLIMB),
                                           TMHM(TM59_INCINERATE)
                                         | TMHM(TM61_WILL_O_WISP)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
@@ -7433,7 +7433,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
                                           TMHM(TM55_SCALD)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
                                         | TMHM(TM77_BULLDOZE)
@@ -7500,6 +7499,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM55_SCALD)
                                         | TMHM(TM57_CHARGE_BEAM)
                                         | TMHM(TM59_INCINERATE)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM72_THUNDER_WAVE)
@@ -8699,6 +8699,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE),
                                           TMHM(TM55_SCALD)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM79_ROCK_SLIDE)
                                         | TMHM(TM86_SWAGGER)
                                         | TMHM(TM89_SUBSTITUTE)),
@@ -8730,6 +8731,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM08_DIVE),
                                           TMHM(TM55_SCALD)
                                         | TMHM(TM56_FLING)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM77_BULLDOZE)
                                         | TMHM(TM79_ROCK_SLIDE)
                                         | TMHM(TM86_SWAGGER)
@@ -8767,6 +8769,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                           TMHM(TM52_FOCUS_BLAST)
                                         | TMHM(TM55_SCALD)
                                         | TMHM(TM56_FLING)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM70_STONE_EDGE)
                                         | TMHM(TM77_BULLDOZE)
@@ -9106,7 +9109,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM09_ROCK_CLIMB),
                                           TMHM(TM53_ENERGY_BALL)
                                         | TMHM(TM54_FALSE_SWIPE)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM67_RETALIATE)
                                         | TMHM(TM74_SWORDS_DANCE)
                                         | TMHM(TM85_GRASS_KNOT)
@@ -9143,7 +9145,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM54_FALSE_SWIPE)
                                         | TMHM(TM56_FLING)
                                         | TMHM(TM63_EMBARGO)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM67_RETALIATE)
                                         | TMHM(TM74_SWORDS_DANCE)
@@ -9186,7 +9187,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM54_FALSE_SWIPE)
                                         | TMHM(TM56_FLING)
                                         | TMHM(TM63_EMBARGO)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM67_RETALIATE)
                                         | TMHM(TM68_GIGA_IMPACT)
@@ -9766,7 +9766,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM51_ALLY_SWITCH)
                                         | TMHM(TM57_CHARGE_BEAM)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM73_GYRO_BALL)
                                         | TMHM(TM76_PSYCH_UP)
@@ -9808,7 +9807,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM09_ROCK_CLIMB),
                                           TMHM(TM51_ALLY_SWITCH)
                                         | TMHM(TM57_CHARGE_BEAM)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
@@ -9845,8 +9843,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
-                                          TMHM(TM64_EXPLOSION)
-                                        | TMHM(TM69_ROCK_POLISH)
+                                          TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
                                         | TMHM(TM71_VOLT_SWITCH)
                                         | TMHM(TM72_THUNDER_WAVE)
@@ -9876,7 +9873,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM09_ROCK_CLIMB),
                                           TMHM(TM59_INCINERATE)
                                         | TMHM(TM61_WILL_O_WISP)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM70_STONE_EDGE)
                                         | TMHM(TM73_GYRO_BALL)
@@ -10082,6 +10078,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                           TMHM(TM54_FALSE_SWIPE)
                                         | TMHM(TM55_SCALD)
                                         | TMHM(TM56_FLING)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM66_PAYBACK)
                                         | TMHM(TM67_RETALIATE)
                                         | TMHM(TM68_GIGA_IMPACT)
@@ -10482,7 +10479,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM09_ROCK_CLIMB),
                                           TMHM(TM59_INCINERATE)
                                         | TMHM(TM61_WILL_O_WISP)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
@@ -10695,8 +10691,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH),
-                                          TMHM(TM64_EXPLOSION)
-                                        | TMHM(TM66_PAYBACK)
+                                          TMHM(TM66_PAYBACK)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM73_GYRO_BALL)
                                         | TMHM(TM77_BULLDOZE)
@@ -10730,7 +10725,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                           TMHM(TM57_CHARGE_BEAM)
                                         | TMHM(TM62_ACROBATICS)
                                         | TMHM(TM63_EMBARGO)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
@@ -10776,7 +10770,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM61_WILL_O_WISP)
                                         | TMHM(TM62_ACROBATICS)
                                         | TMHM(TM63_EMBARGO)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
@@ -11393,7 +11386,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
-                                          TMHM(TM64_EXPLOSION)
+                                          TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM84_DREAM_EATER)
                                         | TMHM(TM86_SWAGGER)
                                         | TMHM(TM89_SUBSTITUTE)
@@ -11424,7 +11417,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
-                                          TMHM(TM64_EXPLOSION)
+                                          TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM77_BULLDOZE)
                                         | TMHM(TM84_DREAM_EATER)
@@ -11802,7 +11795,8 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
-                                          TMHM(TM66_PAYBACK)
+                                          TMHM(TM64_SLUDGE_WAVE)
+                                        | TMHM(TM66_PAYBACK)
                                         | TMHM(TM67_RETALIATE)
                                         | TMHM(TM77_BULLDOZE)
                                         | TMHM(TM80_X_SCISSOR)
@@ -12170,6 +12164,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
                                           TMHM(TM53_ENERGY_BALL)
+                                        | TMHM(TM64_SLUDGE_WAVE)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
@@ -12493,8 +12488,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
-                                          TMHM(TM64_EXPLOSION)
-                                        | TMHM(TM69_ROCK_POLISH)
+                                          TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM73_GYRO_BALL)
                                         | TMHM(TM76_PSYCH_UP)
                                         | TMHM(TM77_BULLDOZE)
@@ -12532,8 +12526,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM09_ROCK_CLIMB),
-                                          TMHM(TM64_EXPLOSION)
-                                        | TMHM(TM68_GIGA_IMPACT)
+                                          TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM73_GYRO_BALL)
                                         | TMHM(TM76_PSYCH_UP)
@@ -12572,7 +12565,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                           TMHM(TM52_FOCUS_BLAST)
                                         | TMHM(TM56_FLING)
                                         | TMHM(TM57_CHARGE_BEAM)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM70_STONE_EDGE)
@@ -12610,7 +12602,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                           TMHM(TM52_FOCUS_BLAST)
                                         | TMHM(TM56_FLING)
                                         | TMHM(TM57_CHARGE_BEAM)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM72_THUNDER_WAVE)
@@ -12650,7 +12641,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                           TMHM(TM52_FOCUS_BLAST)
                                         | TMHM(TM56_FLING)
                                         | TMHM(TM57_CHARGE_BEAM)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM65_SHADOW_CLAW)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM69_ROCK_POLISH)
@@ -13088,7 +13078,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM44_REST)
                                         | TMHM(HM05_FLASH),
                                           TMHM(TM57_CHARGE_BEAM)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM71_VOLT_SWITCH)
                                         | TMHM(TM72_THUNDER_WAVE)
@@ -13138,7 +13127,6 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                           TMHM(TM52_FOCUS_BLAST)
                                         | TMHM(TM56_FLING)
                                         | TMHM(TM59_INCINERATE)
-                                        | TMHM(TM64_EXPLOSION)
                                         | TMHM(TM67_RETALIATE)
                                         | TMHM(TM68_GIGA_IMPACT)
                                         | TMHM(TM73_GYRO_BALL)
@@ -13883,8 +13871,7 @@ static const u32 sTMHMLearnsets[NUM_SPECIES][4] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF),
-                                          TMHM(TM64_EXPLOSION)
-                                        | TMHM(TM69_ROCK_POLISH)
+                                          TMHM(TM69_ROCK_POLISH)
                                         | TMHM(TM76_PSYCH_UP)
                                         | TMHM(TM79_ROCK_SLIDE)
                                         | TMHM(TM86_SWAGGER)
