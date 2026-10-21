@@ -21,295 +21,299 @@ PewterCity_Museum_2F_EventScript_Scientist::
 
 
 PewterCity_Museum_2F_EventScript_LittleGirl::
-# 21 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	lock
 # 22 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	faceplayer
+	lock
 # 23 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	goto_if_set FLAG_GOT_LIGHT_BALL_PEWTER_MUSEUM, PewterCity_Museum_2F_EventScript_LittleGirlAfterReward
+	faceplayer
 # 24 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	call PewterCity_Museum_2F_EventScript_CheckPartyHasPikachu
+	goto_if_set FLAG_GOT_LIGHT_BALL_PEWTER_MUSEUM, PewterCity_Museum_2F_EventScript_LittleGirlAfterReward
 # 25 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	goto_if_eq VAR_RESULT, TRUE, PewterCity_Museum_2F_EventScript_ShowPikachu
-# 26 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	msgbox PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu
-# 27 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	applymovement LOCALID_MUSEUM_2F_LITTLE_GIRL, Common_Movement_FaceRight
-# 28 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	waitmovement 0
+	goto_if_set FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST, PewterCity_Museum_2F_EventScript_LittleGirl_2
+PewterCity_Museum_2F_EventScript_LittleGirl_1:
 # 29 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	msgbox PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu
+# 30 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	applymovement LOCALID_MUSEUM_2F_LITTLE_GIRL, Common_Movement_FaceRight
+# 31 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	waitmovement 0
+# 32 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	release
 	end
 
+PewterCity_Museum_2F_EventScript_LittleGirl_2:
+# 26 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	call PewterCity_Museum_2F_EventScript_CheckPartyHasPikachu
+# 27 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	goto_if_eq VAR_RESULT, TRUE, PewterCity_Museum_2F_EventScript_ShowPikachu
+	goto PewterCity_Museum_2F_EventScript_LittleGirl_1
+
 
 PewterCity_Museum_2F_EventScript_LittleGirlAfterReward::
-# 34 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 37 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	msgbox PewterCity_Museum_2F_Text_CantStopThinkingAboutPikachu
-# 35 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 38 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	release
 	end
 
 
 PewterCity_Museum_2F_EventScript_ShowPikachu::
-# 41 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 44 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	specialvar VAR_RESULT, GetPlayerFacingDirection
-# 42 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	switch VAR_RESULT
-# 43 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	case DIR_EAST, PewterCity_Museum_2F_EventScript_ShowPikachu_3
 # 45 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	case DIR_SOUTH, PewterCity_Museum_2F_EventScript_ShowPikachu_4
+	switch VAR_RESULT
+# 46 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	case DIR_EAST, PewterCity_Museum_2F_EventScript_ShowPikachu_3
 # 48 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	case DIR_SOUTH, PewterCity_Museum_2F_EventScript_ShowPikachu_4
+# 51 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	applymovement LOCALID_MUSEUM_2F_BALDING_MAN, Common_Movement_FaceDown
 PewterCity_Museum_2F_EventScript_ShowPikachu_1:
-# 50 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	waitmovement 0
-# 51 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	msgbox PewterCity_Museum_2F_Text_PikaPikaCuterUpClose
-# 52 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	msgbox PewterCity_Museum_2F_Text_YouMadeHerDay
 # 53 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	giveitem ITEM_LIGHT_BALL
+	waitmovement 0
 # 54 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
+	msgbox PewterCity_Museum_2F_Text_PikaPikaCuterUpClose
 # 55 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	setflag FLAG_GOT_LIGHT_BALL_PEWTER_MUSEUM
+	msgbox PewterCity_Museum_2F_Text_YouMadeHerDay
 # 56 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	setflag FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST
+	giveitem ITEM_LIGHT_BALL
 # 57 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
+# 58 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	setflag FLAG_GOT_LIGHT_BALL_PEWTER_MUSEUM
+# 59 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	release
 	end
 
 PewterCity_Museum_2F_EventScript_ShowPikachu_3:
-# 44 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 47 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	applymovement LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_FaceLeft
 	goto PewterCity_Museum_2F_EventScript_ShowPikachu_1
 
 PewterCity_Museum_2F_EventScript_ShowPikachu_4:
-# 46 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 49 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	applymovement LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_FaceUp
 	goto PewterCity_Museum_2F_EventScript_ShowPikachu_1
 
 
 PewterCity_Museum_2F_EventScript_BaldingMan::
-# 62 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	lock
-# 63 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	goto_if_set FLAG_GOT_LIGHT_BALL_PEWTER_MUSEUM, PewterCity_Museum_2F_EventScript_BaldingManAfterReward
 # 64 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	goto_if_set FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST, PewterCity_Museum_2F_EventScript_BaldingManReminder
+	lock
 # 65 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	call PewterCity_Museum_2F_EventScript_DadAsksForPikachu
+	goto_if_set FLAG_GOT_LIGHT_BALL_PEWTER_MUSEUM, PewterCity_Museum_2F_EventScript_BaldingManAfterReward
 # 66 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	goto_if_set FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST, PewterCity_Museum_2F_EventScript_BaldingManReminder
+# 67 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	call PewterCity_Museum_2F_EventScript_DadAsksForPikachu
+# 68 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	release
 	end
 
 
 PewterCity_Museum_2F_EventScript_BaldingManReminder::
-# 71 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	msgbox PewterCity_Museum_1F_Text_PikachuSoonIPromise
-# 72 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	applymovement LOCALID_MUSEUM_2F_BALDING_MAN, Common_Movement_FacePlayer
 # 73 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	waitmovement 0
+	msgbox PewterCity_Museum_1F_Text_PikachuSoonIPromise
 # 74 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	msgbox PewterCity_Museum_2F_Text_RememberToBringPikachu
+	applymovement LOCALID_MUSEUM_2F_BALDING_MAN, Common_Movement_FacePlayer
 # 75 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	applymovement LOCALID_MUSEUM_2F_BALDING_MAN, Common_Movement_FaceDown
-# 76 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	waitmovement 0
+# 76 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	msgbox PewterCity_Museum_2F_Text_RememberToBringPikachu
 # 77 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	applymovement LOCALID_MUSEUM_2F_BALDING_MAN, Common_Movement_FaceDown
+# 78 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	waitmovement 0
+# 79 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	release
 	end
 
 
 PewterCity_Museum_2F_EventScript_BaldingManAfterReward::
-# 82 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	faceplayer
-# 83 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	msgbox PewterCity_Museum_2F_Text_DaughterHasntStoppedTalking
 # 84 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	faceplayer
+# 85 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	msgbox PewterCity_Museum_2F_Text_DaughterHasntStoppedTalking
+# 86 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	release
 	end
 
 
 PewterCity_Museum_2F_EventScript_DadAsksForPikachu::
-# 91 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	msgbox PewterCity_Museum_1F_Text_PikachuSoonIPromise
-# 92 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	playse SE_PIN
 # 93 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	applymovement LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadNoticePlayer
+	msgbox PewterCity_Museum_1F_Text_PikachuSoonIPromise
 # 94 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	waitmovement 0
+	playse SE_PIN
 # 95 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	checkplayergender
+	applymovement LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadNoticePlayer
 # 96 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	waitmovement 0
+# 97 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	checkplayergender
+# 98 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	compare VAR_RESULT, MALE
 	goto_if_eq PewterCity_Museum_2F_EventScript_DadAsksForPikachu_2
-# 99 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 101 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	msgbox PewterCity_Museum_2F_Text_HeyYoungLady
 PewterCity_Museum_2F_EventScript_DadAsksForPikachu_1:
-# 101 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	specialvar VAR_RESULT, GetPlayerFacingDirection
-# 102 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	switch VAR_RESULT
 # 103 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+# 104 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	switch VAR_RESULT
+# 105 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	case DIR_WEST, PewterCity_Museum_2F_EventScript_DadAsksForPikachu_7
-# 107 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 109 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	case DIR_SOUTH, PewterCity_Museum_2F_EventScript_DadAsksForPikachu_8
-# 114 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 116 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	applymovement LOCALID_PLAYER, PewterCity_Museum_2F_Movement_PlayerStepAsideFromBelow
-# 115 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 117 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	applymovement LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadStepAsideFaceUp
 PewterCity_Museum_2F_EventScript_DadAsksForPikachu_5:
-# 117 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	waitmovement LOCALID_PLAYER
-# 118 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	waitmovement LOCALID_MUSEUM_2F_BALDING_MAN
 # 119 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	msgbox PewterCity_Museum_2F_Text_CouldYouBringMePikachu
+	waitmovement LOCALID_PLAYER
 # 120 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	applymovement LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadStepBack
+	waitmovement LOCALID_MUSEUM_2F_BALDING_MAN
 # 121 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	waitmovement 0
+	msgbox PewterCity_Museum_2F_Text_CouldYouBringMePikachu
 # 122 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	applymovement LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadStepBack
+# 123 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	waitmovement 0
+# 124 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	setflag FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST
 	return
 
 PewterCity_Museum_2F_EventScript_DadAsksForPikachu_2:
-# 97 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 99 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	msgbox PewterCity_Museum_2F_Text_HeyYoungMan
 	goto PewterCity_Museum_2F_EventScript_DadAsksForPikachu_1
 
 PewterCity_Museum_2F_EventScript_DadAsksForPikachu_7:
-# 105 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 107 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	applymovement LOCALID_PLAYER, PewterCity_Museum_2F_Movement_PlayerStepAsideFromRight
-# 106 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 108 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	applymovement LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadStepAsideFaceRight
 	goto PewterCity_Museum_2F_EventScript_DadAsksForPikachu_5
 
 PewterCity_Museum_2F_EventScript_DadAsksForPikachu_8:
-# 109 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 111 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	applymovement LOCALID_PLAYER, PewterCity_Museum_2F_Movement_PlayerStepAsideFromAbove
-# 110 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 112 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	applymovement LOCALID_MUSEUM_2F_BALDING_MAN, PewterCity_Museum_2F_Movement_DadStepAsideFaceUp
 	goto PewterCity_Museum_2F_EventScript_DadAsksForPikachu_5
 
 
 PewterCity_Museum_2F_EventScript_CheckPartyHasPikachu::
-# 128 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 130 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	setvar VAR_0x8004, 0
 PewterCity_Museum_2F_EventScript_CheckPartyHasPikachu_2:
-# 129 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 131 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	compare VAR_0x8004, PARTY_SIZE
 	goto_if_lt PewterCity_Museum_2F_EventScript_CheckPartyHasPikachu_3
-# 137 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 139 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	setvar VAR_RESULT, FALSE
 	return
 
 PewterCity_Museum_2F_EventScript_CheckPartyHasPikachu_3:
-# 130 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 132 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	specialvar VAR_RESULT, GetPartyMonSpecies
-# 131 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 133 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	compare VAR_RESULT, SPECIES_PIKACHU
 	goto_if_eq PewterCity_Museum_2F_EventScript_CheckPartyHasPikachu_6
-# 135 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 137 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	addvar VAR_0x8004, 1
 	goto PewterCity_Museum_2F_EventScript_CheckPartyHasPikachu_2
 
 PewterCity_Museum_2F_EventScript_CheckPartyHasPikachu_6:
-# 132 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 134 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	setvar VAR_RESULT, TRUE
 	return
 
 
-# 141 "data/maps/PewterCity_Museum_2F/scripts.pory"
-PewterCity_Museum_2F_Movement_DadNoticePlayer:
-# 142 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	delay_1
 # 143 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	delay_4
+PewterCity_Museum_2F_Movement_DadNoticePlayer:
 # 144 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	emote_exclamation_mark
+	delay_1
 # 145 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	delay_4
+# 146 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	emote_exclamation_mark
+# 147 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	face_player
 	step_end
 
-# 148 "data/maps/PewterCity_Museum_2F/scripts.pory"
-PewterCity_Museum_2F_Movement_DadStepAsideFaceRight:
-# 149 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	walk_right
 # 150 "data/maps/PewterCity_Museum_2F/scripts.pory"
+PewterCity_Museum_2F_Movement_DadStepAsideFaceRight:
+# 151 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	walk_right
+# 152 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	face_right
 	step_end
 
-# 153 "data/maps/PewterCity_Museum_2F/scripts.pory"
-PewterCity_Museum_2F_Movement_DadStepAsideFaceUp:
-# 154 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	walk_right
 # 155 "data/maps/PewterCity_Museum_2F/scripts.pory"
+PewterCity_Museum_2F_Movement_DadStepAsideFaceUp:
+# 156 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	walk_right
+# 157 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	face_up
 	step_end
 
-# 158 "data/maps/PewterCity_Museum_2F/scripts.pory"
-PewterCity_Museum_2F_Movement_PlayerStepAsideFromRight:
-# 159 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	walk_right
 # 160 "data/maps/PewterCity_Museum_2F/scripts.pory"
+PewterCity_Museum_2F_Movement_PlayerStepAsideFromRight:
+# 161 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	walk_right
+# 162 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	face_left
 	step_end
 
-# 163 "data/maps/PewterCity_Museum_2F/scripts.pory"
-PewterCity_Museum_2F_Movement_PlayerStepAsideFromAbove:
-# 164 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	walk_right
 # 165 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	face_down
-	step_end
-
-# 169 "data/maps/PewterCity_Museum_2F/scripts.pory"
-PewterCity_Museum_2F_Movement_PlayerStepAsideFromBelow:
-# 170 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	delay_8
-# 171 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	walk_up
-# 172 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	walk_up
-# 173 "data/maps/PewterCity_Museum_2F/scripts.pory"
+PewterCity_Museum_2F_Movement_PlayerStepAsideFromAbove:
+# 166 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	walk_right
-# 174 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 167 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	face_down
 	step_end
 
-# 177 "data/maps/PewterCity_Museum_2F/scripts.pory"
-PewterCity_Museum_2F_Movement_DadStepBack:
-# 178 "data/maps/PewterCity_Museum_2F/scripts.pory"
-	walk_left
+# 171 "data/maps/PewterCity_Museum_2F/scripts.pory"
+PewterCity_Museum_2F_Movement_PlayerStepAsideFromBelow:
+# 172 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	delay_8
+# 173 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	walk_up
+# 174 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	walk_up
+# 175 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	walk_right
+# 176 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	face_down
+	step_end
+
 # 179 "data/maps/PewterCity_Museum_2F/scripts.pory"
+PewterCity_Museum_2F_Movement_DadStepBack:
+# 180 "data/maps/PewterCity_Museum_2F/scripts.pory"
+	walk_left
+# 181 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	face_down
 	step_end
 
 PewterCity_Museum_2F_EventScript_SpaceShuttle::
-# 183 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 185 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	msgbox PewterCity_Museum_1F_Text_SpaceShuttle, MSGBOX_SIGN
 	end
 
 
 PewterCity_Museum_2F_EventScript_MoonStone::
-# 188 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 190 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	msgbox PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon, MSGBOX_SIGN
 	end
 
 
-# 192 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 194 "data/maps/PewterCity_Museum_2F/scripts.pory"
 PewterCity_Museum_2F_Movement_FaceLeft:
-# 193 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 195 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	face_left
 	step_end
 
-# 196 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 198 "data/maps/PewterCity_Museum_2F/scripts.pory"
 PewterCity_Museum_2F_Movement_FaceUp:
-# 197 "data/maps/PewterCity_Museum_2F/scripts.pory"
+# 199 "data/maps/PewterCity_Museum_2F/scripts.pory"
 	face_up
 	step_end

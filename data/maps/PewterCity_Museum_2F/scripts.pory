@@ -16,13 +16,16 @@ script PewterCity_Museum_2F_EventScript_Scientist {
 }
 
 // Pikachu sidequest: the girl wants to see a Pikachu and her father asks the player to bring one.
-// Showing her a Pikachu (talking to her with one in the party) earns a Light Ball from the father.
+// Showing her a Pikachu (talking to her with one in the party) earns a Light Ball from the father,
+// but only once the father has asked for it; before that she doesn't notice the player's Pikachu.
 script PewterCity_Museum_2F_EventScript_LittleGirl {
     lock
     faceplayer
     goto_if_set(FLAG_GOT_LIGHT_BALL_PEWTER_MUSEUM, PewterCity_Museum_2F_EventScript_LittleGirlAfterReward)
-    call(PewterCity_Museum_2F_EventScript_CheckPartyHasPikachu)
-    goto_if_eq(VAR_RESULT, TRUE, PewterCity_Museum_2F_EventScript_ShowPikachu)
+    if (flag(FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST)) {
+        call(PewterCity_Museum_2F_EventScript_CheckPartyHasPikachu)
+        goto_if_eq(VAR_RESULT, TRUE, PewterCity_Museum_2F_EventScript_ShowPikachu)
+    }
     msgbox(PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu)
     applymovement(LOCALID_MUSEUM_2F_LITTLE_GIRL, Common_Movement_FaceRight)
     waitmovement(0)
@@ -53,7 +56,6 @@ script PewterCity_Museum_2F_EventScript_ShowPikachu {
     giveitem(ITEM_LIGHT_BALL)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_BagIsFull)
     setflag(FLAG_GOT_LIGHT_BALL_PEWTER_MUSEUM)
-    setflag(FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST)
     release
     end
 }
