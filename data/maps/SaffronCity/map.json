@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -36,6 +37,7 @@
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
       "x": 22,
       "y": 15,
@@ -49,6 +51,7 @@
       "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
       "x": 26,
       "y": 16,
@@ -62,6 +65,7 @@
       "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
       "x": 46,
       "y": 13,
@@ -75,6 +79,7 @@
       "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
       "x": 27,
       "y": 22,
@@ -88,6 +93,7 @@
       "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
       "x": 25,
       "y": 33,
@@ -102,6 +108,7 @@
     },
     {
       "local_id": "LOCALID_SAFFRON_DOOR_GUARD_GRUNT",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
       "x": 34,
       "y": 31,
@@ -115,6 +122,7 @@
       "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
       "x": 30,
       "y": 39,
@@ -128,6 +136,7 @@
       "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
       "x": 48,
       "y": 24,
@@ -141,6 +150,7 @@
       "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 37,
       "y": 32,
@@ -154,6 +164,7 @@
       "flag": "FLAG_HIDE_SAFFRON_CIVILIANS"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
       "x": 21,
       "y": 23,
@@ -167,6 +178,7 @@
       "flag": "FLAG_HIDE_SAFFRON_CIVILIANS"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MAN",
       "x": 39,
       "y": 16,
@@ -180,6 +192,7 @@
       "flag": "FLAG_HIDE_SAFFRON_CIVILIANS"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
       "x": 44,
       "y": 22,
@@ -193,6 +206,7 @@
       "flag": "FLAG_HIDE_SAFFRON_CIVILIANS"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PIDGEOT",
       "x": 45,
       "y": 22,
@@ -206,6 +220,7 @@
       "flag": "FLAG_HIDE_SAFFRON_CIVILIANS"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
       "x": 32,
       "y": 39,
@@ -219,6 +234,7 @@
       "flag": "FLAG_HIDE_SAFFRON_CIVILIANS"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CRUSH_GIRL",
       "x": 47,
       "y": 24,
@@ -414,6 +430,5 @@
       "script": "SaffronCity_EventScript_TrainerFanClubSign"
     }
   ],
-  "connections_no_include": true,
-  "floor_number": 0
+  "connections_no_include": true
 }
