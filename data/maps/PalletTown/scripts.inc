@@ -803,274 +803,275 @@ PalletTown_Movement_SignLadyMoveOutOfWayLeft::
 
 PalletTown_EventScript_FatMan::
 # 474 "data/maps/PalletTown/scripts.pory"
-	lock
-# 475 "data/maps/PalletTown/scripts.pory"
-	faceplayer
-# 476 "data/maps/PalletTown/scripts.pory"
-	msgbox PalletTown_Text_CanStoreItemsAndMonsInPC
-# 477 "data/maps/PalletTown/scripts.pory"
-	special GiveTestTeam
-# 479 "data/maps/PalletTown/scripts.pory"
-	special SetTestDexCaught60
-# 480 "data/maps/PalletTown/scripts.pory"
-	setflag FLAG_SYS_GAME_CLEAR
-# 481 "data/maps/PalletTown/scripts.pory"
-	setflag FLAG_WORLD_MAP_ONE_ISLAND
-# 482 "data/maps/PalletTown/scripts.pory"
-	clearflag FLAG_HIDE_OAK_IN_HIS_LAB
-# 483 "data/maps/PalletTown/scripts.pory"
-	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6
-# 484 "data/maps/PalletTown/scripts.pory"
-	release
-	end
+	goto EventScript_StatEditor
+	return
 
 
 PalletTown_EventScript_OaksLabSign::
-# 489 "data/maps/PalletTown/scripts.pory"
+# 478 "data/maps/PalletTown/scripts.pory"
 	lockall
-# 490 "data/maps/PalletTown/scripts.pory"
+# 479 "data/maps/PalletTown/scripts.pory"
 	famechecker FAMECHECKER_OAK, 0
-# 491 "data/maps/PalletTown/scripts.pory"
+# 480 "data/maps/PalletTown/scripts.pory"
 	msgbox PalletTown_Text_OakPokemonResearchLab
-# 492 "data/maps/PalletTown/scripts.pory"
+# 481 "data/maps/PalletTown/scripts.pory"
 	releaseall
 	end
 
 
 PalletTown_EventScript_PlayersHouseSign::
-# 497 "data/maps/PalletTown/scripts.pory"
+# 486 "data/maps/PalletTown/scripts.pory"
 	msgbox PalletTown_Text_PlayersHouse, MSGBOX_SIGN
 	end
 
 
 PalletTown_EventScript_RivalsHouseSign::
-# 502 "data/maps/PalletTown/scripts.pory"
+# 491 "data/maps/PalletTown/scripts.pory"
 	msgbox PalletTown_Text_RivalsHouse, MSGBOX_SIGN
 	end
 
 
 PalletTown_EventScript_TownSign::
-# 507 "data/maps/PalletTown/scripts.pory"
+# 496 "data/maps/PalletTown/scripts.pory"
 	msgbox PalletTown_Text_TownSign, MSGBOX_SIGN
 	end
 
 
 PalletTown_EventScript_TrainerTips::
-# 512 "data/maps/PalletTown/scripts.pory"
+# 501 "data/maps/PalletTown/scripts.pory"
 	lockall
-# 513 "data/maps/PalletTown/scripts.pory"
+# 502 "data/maps/PalletTown/scripts.pory"
 	msgbox PalletTown_Text_PressStartToOpenMenu
-# 514 "data/maps/PalletTown/scripts.pory"
+# 503 "data/maps/PalletTown/scripts.pory"
 	setvar VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1
-# 515 "data/maps/PalletTown/scripts.pory"
+# 504 "data/maps/PalletTown/scripts.pory"
 	releaseall
 	end
 
 
 PalletTown_EventScript_SignLadyTrigger::
-# 520 "data/maps/PalletTown/scripts.pory"
+# 509 "data/maps/PalletTown/scripts.pory"
 	lockall
-# 521 "data/maps/PalletTown/scripts.pory"
+# 510 "data/maps/PalletTown/scripts.pory"
 	applymovement LOCALID_PALLET_SIGN_LADY, Common_Movement_WalkInPlaceFasterRight
-# 522 "data/maps/PalletTown/scripts.pory"
+# 511 "data/maps/PalletTown/scripts.pory"
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-# 523 "data/maps/PalletTown/scripts.pory"
+# 512 "data/maps/PalletTown/scripts.pory"
 	waitmovement 0
-# 524 "data/maps/PalletTown/scripts.pory"
+# 513 "data/maps/PalletTown/scripts.pory"
 	call PalletTown_EventScript_SignLadyShowSign
-# 525 "data/maps/PalletTown/scripts.pory"
+# 514 "data/maps/PalletTown/scripts.pory"
 	releaseall
 	end
 
 
 PalletTown_EventScript_SignLadyShowSign::
-# 530 "data/maps/PalletTown/scripts.pory"
+# 519 "data/maps/PalletTown/scripts.pory"
 	textcolor NPC_TEXT_COLOR_FEMALE
-# 531 "data/maps/PalletTown/scripts.pory"
+# 520 "data/maps/PalletTown/scripts.pory"
 	msgbox PalletTown_Text_LookCopiedTrainerTipsSign
-# 532 "data/maps/PalletTown/scripts.pory"
+# 521 "data/maps/PalletTown/scripts.pory"
 	closemessage
-# 533 "data/maps/PalletTown/scripts.pory"
+# 522 "data/maps/PalletTown/scripts.pory"
 	delay 20
-# 534 "data/maps/PalletTown/scripts.pory"
+# 523 "data/maps/PalletTown/scripts.pory"
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-# 535 "data/maps/PalletTown/scripts.pory"
+# 524 "data/maps/PalletTown/scripts.pory"
 	setflag FLAG_OPENED_START_MENU
-# 536 "data/maps/PalletTown/scripts.pory"
+# 525 "data/maps/PalletTown/scripts.pory"
 	setvar VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1
-# 537 "data/maps/PalletTown/scripts.pory"
+# 526 "data/maps/PalletTown/scripts.pory"
 	setvar VAR_TEMP_2, FALSE
-# 538 "data/maps/PalletTown/scripts.pory"
+# 527 "data/maps/PalletTown/scripts.pory"
 	special SetWalkingIntoSignVars
-# 539 "data/maps/PalletTown/scripts.pory"
+# 528 "data/maps/PalletTown/scripts.pory"
 	special DisableMsgBoxWalkaway
-# 540 "data/maps/PalletTown/scripts.pory"
+# 529 "data/maps/PalletTown/scripts.pory"
 	signmsg
-# 541 "data/maps/PalletTown/scripts.pory"
+# 530 "data/maps/PalletTown/scripts.pory"
 	msgbox PalletTown_Text_PressStartToOpenMenuCopy
-# 542 "data/maps/PalletTown/scripts.pory"
+# 531 "data/maps/PalletTown/scripts.pory"
 	normalmsg
 	return
 
 
 PalletTown_EventScript_SignLadyStartShowSign::
-# 547 "data/maps/PalletTown/scripts.pory"
+# 536 "data/maps/PalletTown/scripts.pory"
 	applymovement LOCALID_PALLET_SIGN_LADY, Common_Movement_FacePlayer
-# 548 "data/maps/PalletTown/scripts.pory"
+# 537 "data/maps/PalletTown/scripts.pory"
 	waitmovement 0
-# 549 "data/maps/PalletTown/scripts.pory"
+# 538 "data/maps/PalletTown/scripts.pory"
 	call PalletTown_EventScript_SignLadyShowSign
-# 550 "data/maps/PalletTown/scripts.pory"
+# 539 "data/maps/PalletTown/scripts.pory"
 	release
 	end
 
 
 PalletTown_EventScript_TriggerMomGiveRunningShoes::
-# 555 "data/maps/PalletTown/scripts.pory"
+# 544 "data/maps/PalletTown/scripts.pory"
 	lockall
-# 556 "data/maps/PalletTown/scripts.pory"
+# 545 "data/maps/PalletTown/scripts.pory"
 	setvar VAR_TEMP_4, 0
-# 557 "data/maps/PalletTown/scripts.pory"
+# 546 "data/maps/PalletTown/scripts.pory"
 	textcolor NPC_TEXT_COLOR_FEMALE
-# 558 "data/maps/PalletTown/scripts.pory"
+# 547 "data/maps/PalletTown/scripts.pory"
 	applymovement LOCALID_PALLET_MOM, Common_Movement_WalkInPlaceFasterLeft
-# 559 "data/maps/PalletTown/scripts.pory"
+# 548 "data/maps/PalletTown/scripts.pory"
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-# 560 "data/maps/PalletTown/scripts.pory"
+# 549 "data/maps/PalletTown/scripts.pory"
 	waitmovement 0
-# 561 "data/maps/PalletTown/scripts.pory"
+# 550 "data/maps/PalletTown/scripts.pory"
 	waitse
-# 562 "data/maps/PalletTown/scripts.pory"
+# 551 "data/maps/PalletTown/scripts.pory"
 	playse SE_PIN
-# 563 "data/maps/PalletTown/scripts.pory"
+# 552 "data/maps/PalletTown/scripts.pory"
 	applymovement LOCALID_PALLET_MOM, Common_Movement_ExclamationMark
-# 564 "data/maps/PalletTown/scripts.pory"
+# 553 "data/maps/PalletTown/scripts.pory"
 	waitmovement 0
-# 565 "data/maps/PalletTown/scripts.pory"
+# 554 "data/maps/PalletTown/scripts.pory"
 	applymovement LOCALID_PALLET_MOM, Common_Movement_Delay48
-# 566 "data/maps/PalletTown/scripts.pory"
+# 555 "data/maps/PalletTown/scripts.pory"
 	waitmovement 0
-# 567 "data/maps/PalletTown/scripts.pory"
+# 556 "data/maps/PalletTown/scripts.pory"
 	msgbox PalletTown_Text_MomDontGoOut
-# 568 "data/maps/PalletTown/scripts.pory"
+# 557 "data/maps/PalletTown/scripts.pory"
 	closemessage
-# 569 "data/maps/PalletTown/scripts.pory"
+# 558 "data/maps/PalletTown/scripts.pory"
 	call PalletTown_EventScript_MomGiveRunningShoes
-# 570 "data/maps/PalletTown/scripts.pory"
+# 559 "data/maps/PalletTown/scripts.pory"
 	releaseall
 	end
 
 
 PalletTown_EventScript_Mom::
-# 575 "data/maps/PalletTown/scripts.pory"
+# 564 "data/maps/PalletTown/scripts.pory"
 	lock
-# 576 "data/maps/PalletTown/scripts.pory"
+# 565 "data/maps/PalletTown/scripts.pory"
 	faceplayer
-# 578 "data/maps/PalletTown/scripts.pory"
+# 567 "data/maps/PalletTown/scripts.pory"
 	setvar VAR_TEMP_4, 0
-# 579 "data/maps/PalletTown/scripts.pory"
+# 568 "data/maps/PalletTown/scripts.pory"
 	call_if_eq VAR_FACING, DIR_NORTH, PalletTown_EventScript_MomUseAltRoute
-# 580 "data/maps/PalletTown/scripts.pory"
+# 569 "data/maps/PalletTown/scripts.pory"
 	textcolor NPC_TEXT_COLOR_FEMALE
-# 581 "data/maps/PalletTown/scripts.pory"
+# 570 "data/maps/PalletTown/scripts.pory"
 	call PalletTown_EventScript_MomGiveRunningShoes
-# 582 "data/maps/PalletTown/scripts.pory"
+# 571 "data/maps/PalletTown/scripts.pory"
 	release
 	end
 
 
 PalletTown_EventScript_MomGiveRunningShoes::
-# 587 "data/maps/PalletTown/scripts.pory"
+# 576 "data/maps/PalletTown/scripts.pory"
 	msgbox PalletTown_Text_MomGiveRunningShoes
-# 588 "data/maps/PalletTown/scripts.pory"
+# 577 "data/maps/PalletTown/scripts.pory"
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-# 589 "data/maps/PalletTown/scripts.pory"
+# 578 "data/maps/PalletTown/scripts.pory"
 	playfanfare MUS_OBTAIN_KEY_ITEM
-# 590 "data/maps/PalletTown/scripts.pory"
+# 579 "data/maps/PalletTown/scripts.pory"
 	message PalletTown_Text_ReceivedRunningShoesFromMom
-# 591 "data/maps/PalletTown/scripts.pory"
+# 580 "data/maps/PalletTown/scripts.pory"
 	waitmessage
-# 592 "data/maps/PalletTown/scripts.pory"
+# 581 "data/maps/PalletTown/scripts.pory"
 	waitfanfare
-# 593 "data/maps/PalletTown/scripts.pory"
+# 582 "data/maps/PalletTown/scripts.pory"
 	delay 30
-# 594 "data/maps/PalletTown/scripts.pory"
+# 583 "data/maps/PalletTown/scripts.pory"
 	textcolor NPC_TEXT_COLOR_FEMALE
-# 595 "data/maps/PalletTown/scripts.pory"
+# 584 "data/maps/PalletTown/scripts.pory"
 	msgbox PalletTown_Text_MomGiveRunningShoes2
-# 596 "data/maps/PalletTown/scripts.pory"
+# 585 "data/maps/PalletTown/scripts.pory"
 	closemessage
-# 597 "data/maps/PalletTown/scripts.pory"
+# 586 "data/maps/PalletTown/scripts.pory"
 	setflag FLAG_SYS_B_DASH
-# 598 "data/maps/PalletTown/scripts.pory"
+# 587 "data/maps/PalletTown/scripts.pory"
 	setvar VAR_MOM_SHOES, 0
-# 599 "data/maps/PalletTown/scripts.pory"
+# 588 "data/maps/PalletTown/scripts.pory"
 	call PalletTown_EventScript_MomWalkHome
 	return
 
 
 PalletTown_EventScript_MomWalkHome::
-# 606 "data/maps/PalletTown/scripts.pory"
+# 595 "data/maps/PalletTown/scripts.pory"
 	call_if_eq VAR_TEMP_4, 0, PalletTown_EventScript_MomWalkToHouse
-# 607 "data/maps/PalletTown/scripts.pory"
+# 596 "data/maps/PalletTown/scripts.pory"
 	call_if_eq VAR_TEMP_4, 1, PalletTown_EventScript_MomWalkToHouseAlt
-# 608 "data/maps/PalletTown/scripts.pory"
+# 597 "data/maps/PalletTown/scripts.pory"
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-# 609 "data/maps/PalletTown/scripts.pory"
+# 598 "data/maps/PalletTown/scripts.pory"
 	waitmovement LOCALID_PALLET_MOM
-# 610 "data/maps/PalletTown/scripts.pory"
+# 599 "data/maps/PalletTown/scripts.pory"
 	opendoor 6, 7
-# 611 "data/maps/PalletTown/scripts.pory"
+# 600 "data/maps/PalletTown/scripts.pory"
 	waitdooranim
-# 612 "data/maps/PalletTown/scripts.pory"
+# 601 "data/maps/PalletTown/scripts.pory"
 	applymovement LOCALID_PALLET_MOM, PalletTown_Movement_MomEnterHouse
-# 613 "data/maps/PalletTown/scripts.pory"
+# 602 "data/maps/PalletTown/scripts.pory"
 	waitmovement 0
-# 614 "data/maps/PalletTown/scripts.pory"
+# 603 "data/maps/PalletTown/scripts.pory"
 	closedoor 6, 7
-# 615 "data/maps/PalletTown/scripts.pory"
+# 604 "data/maps/PalletTown/scripts.pory"
 	waitdooranim
-# 616 "data/maps/PalletTown/scripts.pory"
+# 605 "data/maps/PalletTown/scripts.pory"
 	removeobject LOCALID_PALLET_MOM
-# 617 "data/maps/PalletTown/scripts.pory"
+# 606 "data/maps/PalletTown/scripts.pory"
 	setflag FLAG_HIDE_MOM
 	return
 
 
 PalletTown_EventScript_MomUseAltRoute::
-# 622 "data/maps/PalletTown/scripts.pory"
+# 611 "data/maps/PalletTown/scripts.pory"
 	setvar VAR_TEMP_4, 1
 	return
 
 
 PalletTown_EventScript_MomWalkToHouse::
-# 627 "data/maps/PalletTown/scripts.pory"
+# 616 "data/maps/PalletTown/scripts.pory"
 	applymovement LOCALID_PALLET_MOM, PalletTown_Movement_MomWalkToHouse
 	return
 
 
 PalletTown_EventScript_MomWalkToHouseAlt::
-# 632 "data/maps/PalletTown/scripts.pory"
+# 621 "data/maps/PalletTown/scripts.pory"
 	applymovement LOCALID_PALLET_MOM, PalletTown_Movement_MomWalkToHouseAlt
 	return
 
 
-# 637 "data/maps/PalletTown/scripts.pory"
+# 626 "data/maps/PalletTown/scripts.pory"
 PalletTown_Movement_MomWalkToHouseAlt::
+# 627 "data/maps/PalletTown/scripts.pory"
+	walk_left
+# 628 "data/maps/PalletTown/scripts.pory"
+	walk_down
+# 629 "data/maps/PalletTown/scripts.pory"
+	walk_left
+# 630 "data/maps/PalletTown/scripts.pory"
+	walk_down
+# 631 "data/maps/PalletTown/scripts.pory"
+	walk_down
+# 632 "data/maps/PalletTown/scripts.pory"
+	walk_down
+# 633 "data/maps/PalletTown/scripts.pory"
+	walk_down
+# 634 "data/maps/PalletTown/scripts.pory"
+	walk_down
+# 635 "data/maps/PalletTown/scripts.pory"
+	walk_left
+# 636 "data/maps/PalletTown/scripts.pory"
+	walk_left
+# 637 "data/maps/PalletTown/scripts.pory"
+	walk_left
 # 638 "data/maps/PalletTown/scripts.pory"
 	walk_left
 # 639 "data/maps/PalletTown/scripts.pory"
-	walk_down
-# 640 "data/maps/PalletTown/scripts.pory"
 	walk_left
+# 640 "data/maps/PalletTown/scripts.pory"
+	walk_in_place_faster_up
 # 641 "data/maps/PalletTown/scripts.pory"
-	walk_down
-# 642 "data/maps/PalletTown/scripts.pory"
-	walk_down
-# 643 "data/maps/PalletTown/scripts.pory"
-	walk_down
+	step_end
+
 # 644 "data/maps/PalletTown/scripts.pory"
-	walk_down
+PalletTown_Movement_MomWalkToHouse::
 # 645 "data/maps/PalletTown/scripts.pory"
 	walk_down
 # 646 "data/maps/PalletTown/scripts.pory"
@@ -1078,128 +1079,109 @@ PalletTown_Movement_MomWalkToHouseAlt::
 # 647 "data/maps/PalletTown/scripts.pory"
 	walk_left
 # 648 "data/maps/PalletTown/scripts.pory"
-	walk_left
-# 649 "data/maps/PalletTown/scripts.pory"
-	walk_left
-# 650 "data/maps/PalletTown/scripts.pory"
-	walk_left
-# 651 "data/maps/PalletTown/scripts.pory"
-	walk_in_place_faster_up
-# 652 "data/maps/PalletTown/scripts.pory"
-	step_end
-
-# 655 "data/maps/PalletTown/scripts.pory"
-PalletTown_Movement_MomWalkToHouse::
-# 656 "data/maps/PalletTown/scripts.pory"
 	walk_down
+# 649 "data/maps/PalletTown/scripts.pory"
+	walk_down
+# 650 "data/maps/PalletTown/scripts.pory"
+	walk_down
+# 651 "data/maps/PalletTown/scripts.pory"
+	walk_down
+# 652 "data/maps/PalletTown/scripts.pory"
+	walk_down
+# 653 "data/maps/PalletTown/scripts.pory"
+	walk_left
+# 654 "data/maps/PalletTown/scripts.pory"
+	walk_left
+# 655 "data/maps/PalletTown/scripts.pory"
+	walk_left
+# 656 "data/maps/PalletTown/scripts.pory"
+	walk_left
 # 657 "data/maps/PalletTown/scripts.pory"
 	walk_left
 # 658 "data/maps/PalletTown/scripts.pory"
-	walk_left
-# 659 "data/maps/PalletTown/scripts.pory"
-	walk_down
-# 660 "data/maps/PalletTown/scripts.pory"
-	walk_down
-# 661 "data/maps/PalletTown/scripts.pory"
-	walk_down
-# 662 "data/maps/PalletTown/scripts.pory"
-	walk_down
-# 663 "data/maps/PalletTown/scripts.pory"
-	walk_down
-# 664 "data/maps/PalletTown/scripts.pory"
-	walk_left
-# 665 "data/maps/PalletTown/scripts.pory"
-	walk_left
-# 666 "data/maps/PalletTown/scripts.pory"
-	walk_left
-# 667 "data/maps/PalletTown/scripts.pory"
-	walk_left
-# 668 "data/maps/PalletTown/scripts.pory"
-	walk_left
-# 669 "data/maps/PalletTown/scripts.pory"
 	walk_in_place_faster_up
-# 670 "data/maps/PalletTown/scripts.pory"
+# 659 "data/maps/PalletTown/scripts.pory"
 	step_end
 
-# 673 "data/maps/PalletTown/scripts.pory"
+# 662 "data/maps/PalletTown/scripts.pory"
 PalletTown_Movement_MomEnterHouse::
-# 674 "data/maps/PalletTown/scripts.pory"
+# 663 "data/maps/PalletTown/scripts.pory"
 	walk_up
-# 675 "data/maps/PalletTown/scripts.pory"
+# 664 "data/maps/PalletTown/scripts.pory"
 	delay_4
-# 676 "data/maps/PalletTown/scripts.pory"
+# 665 "data/maps/PalletTown/scripts.pory"
 	set_invisible
-# 677 "data/maps/PalletTown/scripts.pory"
+# 666 "data/maps/PalletTown/scripts.pory"
 	step_end
 
 PalletTown_EventScript_TestDailyLeadersVisibility::
-# 684 "data/maps/PalletTown/scripts.pory"
+# 673 "data/maps/PalletTown/scripts.pory"
 	setflag FLAG_TEMP_11
-# 685 "data/maps/PalletTown/scripts.pory"
+# 674 "data/maps/PalletTown/scripts.pory"
 	setflag FLAG_TEMP_12
-# 686 "data/maps/PalletTown/scripts.pory"
+# 675 "data/maps/PalletTown/scripts.pory"
 	setflag FLAG_TEMP_13
-# 687 "data/maps/PalletTown/scripts.pory"
+# 676 "data/maps/PalletTown/scripts.pory"
 	setflag FLAG_TEMP_14
-# 688 "data/maps/PalletTown/scripts.pory"
+# 677 "data/maps/PalletTown/scripts.pory"
 	setflag FLAG_TEMP_15
-# 689 "data/maps/PalletTown/scripts.pory"
+# 678 "data/maps/PalletTown/scripts.pory"
 	setflag FLAG_TEMP_16
-# 690 "data/maps/PalletTown/scripts.pory"
+# 679 "data/maps/PalletTown/scripts.pory"
 	setflag FLAG_TEMP_17
-# 691 "data/maps/PalletTown/scripts.pory"
+# 680 "data/maps/PalletTown/scripts.pory"
 	specialvar VAR_RESULT, GetDayOfWeek
-# 692 "data/maps/PalletTown/scripts.pory"
+# 681 "data/maps/PalletTown/scripts.pory"
 	switch VAR_RESULT
-# 693 "data/maps/PalletTown/scripts.pory"
+# 682 "data/maps/PalletTown/scripts.pory"
 	case 1, PalletTown_EventScript_TestDailyLeadersVisibility_3
-# 695 "data/maps/PalletTown/scripts.pory"
+# 684 "data/maps/PalletTown/scripts.pory"
 	case 2, PalletTown_EventScript_TestDailyLeadersVisibility_4
-# 697 "data/maps/PalletTown/scripts.pory"
+# 686 "data/maps/PalletTown/scripts.pory"
 	case 3, PalletTown_EventScript_TestDailyLeadersVisibility_5
-# 699 "data/maps/PalletTown/scripts.pory"
+# 688 "data/maps/PalletTown/scripts.pory"
 	case 4, PalletTown_EventScript_TestDailyLeadersVisibility_6
-# 701 "data/maps/PalletTown/scripts.pory"
+# 690 "data/maps/PalletTown/scripts.pory"
 	case 5, PalletTown_EventScript_TestDailyLeadersVisibility_7
-# 703 "data/maps/PalletTown/scripts.pory"
+# 692 "data/maps/PalletTown/scripts.pory"
 	case 6, PalletTown_EventScript_TestDailyLeadersVisibility_8
-# 705 "data/maps/PalletTown/scripts.pory"
+# 694 "data/maps/PalletTown/scripts.pory"
 	case 0, PalletTown_EventScript_TestDailyLeadersVisibility_9
 PalletTown_EventScript_TestDailyLeadersVisibility_1:
 	return
 
 PalletTown_EventScript_TestDailyLeadersVisibility_3:
-# 694 "data/maps/PalletTown/scripts.pory"
+# 683 "data/maps/PalletTown/scripts.pory"
 	clearflag FLAG_TEMP_11
 	goto PalletTown_EventScript_TestDailyLeadersVisibility_1
 
 PalletTown_EventScript_TestDailyLeadersVisibility_4:
-# 696 "data/maps/PalletTown/scripts.pory"
+# 685 "data/maps/PalletTown/scripts.pory"
 	clearflag FLAG_TEMP_12
 	goto PalletTown_EventScript_TestDailyLeadersVisibility_1
 
 PalletTown_EventScript_TestDailyLeadersVisibility_5:
-# 698 "data/maps/PalletTown/scripts.pory"
+# 687 "data/maps/PalletTown/scripts.pory"
 	clearflag FLAG_TEMP_13
 	goto PalletTown_EventScript_TestDailyLeadersVisibility_1
 
 PalletTown_EventScript_TestDailyLeadersVisibility_6:
-# 700 "data/maps/PalletTown/scripts.pory"
+# 689 "data/maps/PalletTown/scripts.pory"
 	clearflag FLAG_TEMP_14
 	goto PalletTown_EventScript_TestDailyLeadersVisibility_1
 
 PalletTown_EventScript_TestDailyLeadersVisibility_7:
-# 702 "data/maps/PalletTown/scripts.pory"
+# 691 "data/maps/PalletTown/scripts.pory"
 	clearflag FLAG_TEMP_15
 	goto PalletTown_EventScript_TestDailyLeadersVisibility_1
 
 PalletTown_EventScript_TestDailyLeadersVisibility_8:
-# 704 "data/maps/PalletTown/scripts.pory"
+# 693 "data/maps/PalletTown/scripts.pory"
 	clearflag FLAG_TEMP_16
 	goto PalletTown_EventScript_TestDailyLeadersVisibility_1
 
 PalletTown_EventScript_TestDailyLeadersVisibility_9:
-# 706 "data/maps/PalletTown/scripts.pory"
+# 695 "data/maps/PalletTown/scripts.pory"
 	clearflag FLAG_TEMP_17
 	goto PalletTown_EventScript_TestDailyLeadersVisibility_1
 

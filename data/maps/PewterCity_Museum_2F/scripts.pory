@@ -52,6 +52,7 @@ script PewterCity_Museum_2F_EventScript_ShowPikachu {
     }
     waitmovement(0)
     msgbox(PewterCity_Museum_2F_Text_PikaPikaCuterUpClose)
+    textcolor(NPC_TEXT_COLOR_MALE)
     msgbox(PewterCity_Museum_2F_Text_YouMadeHerDay)
     giveitem(ITEM_LIGHT_BALL)
     goto_if_eq(VAR_RESULT, FALSE, EventScript_BagIsFull)

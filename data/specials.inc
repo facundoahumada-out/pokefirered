@@ -467,4 +467,5 @@ gSpecials::
 	def_special GiveTestTeam
 	def_special SetTestDexCaught60
 	def_special PlayerFaceObject
+	def_special OpenStatEditor
 gSpecialsEnd::

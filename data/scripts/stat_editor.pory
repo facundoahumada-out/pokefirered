@@ -1,0 +1,57 @@
+// NPC that opens the IV/EV editor ("Pokémon Booster!", see src/stat_editor.c).
+// Use it from any NPC with: script MyMap_EventScript_Booster { goto(EventScript_StatEditor) }
+script EventScript_StatEditor {
+    lock
+    faceplayer
+    msgbox(Text_StatEditorIntro, MSGBOX_YESNO)
+    if (var(VAR_RESULT) == NO) {
+        goto(EventScript_StatEditorDeclined)
+    }
+    msgbox(Text_StatEditorWhichMon)
+    special(ChoosePartyMon)
+    waitstate
+    if (var(VAR_0x8004) >= PARTY_SIZE) {
+        goto(EventScript_StatEditorDeclined)
+    }
+    special(IsSelectedMonEgg)
+    if (var(VAR_RESULT) == TRUE) {
+        msgbox(Text_StatEditorEgg)
+        release
+        end
+    }
+    special(OpenStatEditor)
+    waitstate
+    msgbox(Text_StatEditorDone)
+    release
+    end
+}
+
+script EventScript_StatEditorDeclined {
+    msgbox(Text_StatEditorDeclined)
+    release
+    end
+}
+
+text Text_StatEditorIntro {
+    "I can boost the hidden potential\n"
+    "of your POKéMON.\p"
+    "Want me to take a look?$"
+}
+
+text Text_StatEditorWhichMon {
+    "Which POKéMON should I boost?$"
+}
+
+text Text_StatEditorEgg {
+    "That's an EGG!\n"
+    "There's nothing to boost yet.$"
+}
+
+text Text_StatEditorDone {
+    "All done!\n"
+    "Come back anytime.$"
+}
+
+text Text_StatEditorDeclined {
+    "Come back anytime.$"
+}
