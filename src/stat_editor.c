@@ -89,7 +89,7 @@ static void Task_StatEditorFadeOut(u8 taskId);
 static void LoadTabTilemap(void);
 static void PrintMonInfo(void);
 static void PrintStats(void);
-static void ChangeSelectedValue(s32 delta);
+static void ChangeSelectedValue(s32 delta, bool8 wrap);
 
 static const u32 sStatEditor_Gfx[] = INCBIN_U32("graphics/stat_editor/tiles.4bpp.lz");
 static const u16 sStatEditor_Pal[] = INCBIN_U16("graphics/stat_editor/tiles.gbapal");
@@ -313,17 +313,17 @@ static void Task_StatEditorInput(u8 taskId)
             PrintStats();
         }
         else if (JOY_REPT(DPAD_UP))
-            ChangeSelectedValue(10);
+            ChangeSelectedValue(10, JOY_NEW(DPAD_UP));
         else if (JOY_REPT(DPAD_DOWN))
-            ChangeSelectedValue(-10);
+            ChangeSelectedValue(-10, JOY_NEW(DPAD_DOWN));
         else if (JOY_REPT(DPAD_RIGHT))
-            ChangeSelectedValue(1);
+            ChangeSelectedValue(1, FALSE);
         else if (JOY_REPT(DPAD_LEFT))
-            ChangeSelectedValue(-1);
+            ChangeSelectedValue(-1, FALSE);
         else if (JOY_NEW(R_BUTTON))
-            ChangeSelectedValue(MAX_TOTAL_EVS);
+            ChangeSelectedValue(MAX_TOTAL_EVS, FALSE);
         else if (JOY_NEW(L_BUTTON))
-            ChangeSelectedValue(-MAX_TOTAL_EVS);
+            ChangeSelectedValue(-MAX_TOTAL_EVS, FALSE);
         else if (++sStatEditor->blinkTimer >= BLINK_FRAMES)
         {
             sStatEditor->blinkTimer = 0;
@@ -479,7 +479,8 @@ static void PrintStats(void)
     CopyWindowToVram(WIN_HIDDEN_POWER, COPYWIN_GFX);
 }
 
-static void ChangeSelectedValue(s32 delta)
+// wrap: going down from 0 jumps to the maximum, and going up from the maximum jumps to 0
+static void ChangeSelectedValue(s32 delta, bool8 wrap)
 {
     struct Pokemon *mon = sStatEditor->mon;
     u8 stat = sStatEditor->cursor;
@@ -505,7 +506,12 @@ static void ChangeSelectedValue(s32 delta)
         value = GetMonData(mon, sEVData[stat]);
     }
 
-    newValue = (value + delta < 0) ? 0 : (value + delta > max) ? max : value + delta;
+    if (wrap && delta < 0 && value == 0)
+        newValue = max;
+    else if (wrap && delta > 0 && value >= max)
+        newValue = 0;
+    else
+        newValue = (value + delta < 0) ? 0 : (value + delta > max) ? max : value + delta;
     if (newValue == value)
         return;
 
