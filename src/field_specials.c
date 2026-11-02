@@ -2605,6 +2605,17 @@ static void Task_WingFlapSound(u8 taskId)
         DestroyTask(taskId);
 }
 
+// Sets the graphics/sprite of an object event on the current map.
+// VAR_0x8004 = localId, VAR_0x8005 = graphicsId
+void Script_SetObjectGraphicsId(void)
+{
+    ObjectEventSetGraphicsIdByLocalIdAndMap(
+        gSpecialVar_0x8004,
+        gSaveBlock1Ptr->location.mapNum,
+        gSaveBlock1Ptr->location.mapGroup,
+        gSpecialVar_0x8005);
+}
+
 // Turns the player toward the object with local id gSpecialVar_0x8004 on the current map.
 void PlayerFaceObject(void)
 {

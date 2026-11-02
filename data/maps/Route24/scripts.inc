@@ -90,79 +90,155 @@ Route24_EventScript_BattleRocket::
 # 58 "data/maps/Route24/scripts.pory"
 	waitmessage
 # 59 "data/maps/Route24/scripts.pory"
-	playbgm MUS_ENCOUNTER_ROCKET, 0
-# 60 "data/maps/Route24/scripts.pory"
 	waitbuttonpress
-# 61 "data/maps/Route24/scripts.pory"
-	setvar VAR_LAST_TALKED, LOCALID_ROUTE24_ROCKET
+# 60 "data/maps/Route24/scripts.pory"
+	closemessage
 # 62 "data/maps/Route24/scripts.pory"
-	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_6, Route24_Text_RocketDefeat
+	applymovement LOCALID_ROUTE24_ROCKET, Route24_Movement_RocketSpinFast
 # 63 "data/maps/Route24/scripts.pory"
+	waitmovement 0
+# 65 "data/maps/Route24/scripts.pory"
+	setvar VAR_0x8004, LOCALID_ROUTE24_ROCKET
+# 66 "data/maps/Route24/scripts.pory"
+	setvar VAR_0x8005, OBJ_EVENT_GFX_ROCKET_M
+# 67 "data/maps/Route24/scripts.pory"
+	callnative Script_SetObjectGraphicsId
+# 69 "data/maps/Route24/scripts.pory"
+	applymovement LOCALID_ROUTE24_ROCKET, Route24_Movement_RocketSpinSlow
+# 70 "data/maps/Route24/scripts.pory"
+	waitmovement 0
+# 71 "data/maps/Route24/scripts.pory"
+	playbgm MUS_ENCOUNTER_ROCKET, 0
+# 72 "data/maps/Route24/scripts.pory"
+	message Route24_Text_RocketReveal
+# 73 "data/maps/Route24/scripts.pory"
+	waitmessage
+# 74 "data/maps/Route24/scripts.pory"
+	waitbuttonpress
+# 75 "data/maps/Route24/scripts.pory"
+	setvar VAR_LAST_TALKED, LOCALID_ROUTE24_ROCKET
+# 76 "data/maps/Route24/scripts.pory"
+	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_6, Route24_Text_RocketDefeat
+# 77 "data/maps/Route24/scripts.pory"
 	msgbox Route24_Text_YoudBecomeTopRocketLeader
-# 64 "data/maps/Route24/scripts.pory"
+# 78 "data/maps/Route24/scripts.pory"
 	setvar VAR_MAP_SCENE_ROUTE24, 1
 	return
 
 
 Route24_EventScript_RocketApproachPlayer::
-# 69 "data/maps/Route24/scripts.pory"
+# 83 "data/maps/Route24/scripts.pory"
 	applymovement LOCALID_ROUTE24_ROCKET, Route24_Movement_RocketApproachPlayer
-# 70 "data/maps/Route24/scripts.pory"
+# 84 "data/maps/Route24/scripts.pory"
 	waitmovement 0
 	return
 
 
 Route24_EventScript_RocketMotionToPlayer::
-# 75 "data/maps/Route24/scripts.pory"
+# 89 "data/maps/Route24/scripts.pory"
 	applymovement LOCALID_ROUTE24_ROCKET, Common_Movement_WalkInPlaceFasterLeft
-# 76 "data/maps/Route24/scripts.pory"
+# 90 "data/maps/Route24/scripts.pory"
 	waitmovement 0
 	return
 
 
 Route24_EventScript_NoRoomForNuggetTrigger::
-# 81 "data/maps/Route24/scripts.pory"
+# 95 "data/maps/Route24/scripts.pory"
 	msgbox Route24_Text_YouDontHaveAnyRoom
-# 82 "data/maps/Route24/scripts.pory"
+# 96 "data/maps/Route24/scripts.pory"
 	closemessage
-# 83 "data/maps/Route24/scripts.pory"
+# 97 "data/maps/Route24/scripts.pory"
 	applymovement LOCALID_PLAYER, Route24_Movement_WalkDown
-# 84 "data/maps/Route24/scripts.pory"
+# 98 "data/maps/Route24/scripts.pory"
 	waitmovement 0
-# 85 "data/maps/Route24/scripts.pory"
+# 99 "data/maps/Route24/scripts.pory"
 	call_if_eq VAR_TEMP_1, 0, Route24_EventScript_RocketWalkBackToPos
-# 86 "data/maps/Route24/scripts.pory"
+# 100 "data/maps/Route24/scripts.pory"
 	release
 	end
 
 
 Route24_EventScript_RocketWalkBackToPos::
-# 91 "data/maps/Route24/scripts.pory"
+# 105 "data/maps/Route24/scripts.pory"
 	applymovement LOCALID_ROUTE24_ROCKET, Route24_Movement_RocketWalkBackToPos
-# 92 "data/maps/Route24/scripts.pory"
+# 106 "data/maps/Route24/scripts.pory"
 	waitmovement 0
 	return
 
 
-# 96 "data/maps/Route24/scripts.pory"
-Route24_Movement_RocketApproachPlayer::
-# 97 "data/maps/Route24/scripts.pory"
-	walk_left
-# 98 "data/maps/Route24/scripts.pory"
-	step_end
-
-# 101 "data/maps/Route24/scripts.pory"
-Route24_Movement_RocketWalkBackToPos::
-# 102 "data/maps/Route24/scripts.pory"
-	walk_right
-# 103 "data/maps/Route24/scripts.pory"
+# 110 "data/maps/Route24/scripts.pory"
+Route24_Movement_RocketSpinFast:
+# 111 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_down
+# 112 "data/maps/Route24/scripts.pory"
 	walk_in_place_faster_left
-# 104 "data/maps/Route24/scripts.pory"
+# 113 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_up
+# 114 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_right
+# 115 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_down
+# 116 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_left
+# 117 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_up
+# 118 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_right
+# 119 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_down
+# 120 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_left
+# 121 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_up
+# 122 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_right
+# 123 "data/maps/Route24/scripts.pory"
 	step_end
 
-# 107 "data/maps/Route24/scripts.pory"
+# 126 "data/maps/Route24/scripts.pory"
+Route24_Movement_RocketSpinSlow:
+# 127 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_down
+# 128 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_left
+# 129 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_up
+# 130 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_right
+# 131 "data/maps/Route24/scripts.pory"
+	walk_in_place_fast_down
+# 132 "data/maps/Route24/scripts.pory"
+	walk_in_place_fast_left
+# 133 "data/maps/Route24/scripts.pory"
+	walk_in_place_fast_up
+# 134 "data/maps/Route24/scripts.pory"
+	walk_in_place_fast_right
+# 135 "data/maps/Route24/scripts.pory"
+	walk_in_place_down
+# 136 "data/maps/Route24/scripts.pory"
+	walk_in_place_left
+# 137 "data/maps/Route24/scripts.pory"
+	step_end
+
+# 140 "data/maps/Route24/scripts.pory"
+Route24_Movement_RocketApproachPlayer::
+# 141 "data/maps/Route24/scripts.pory"
+	walk_left
+# 142 "data/maps/Route24/scripts.pory"
+	step_end
+
+# 145 "data/maps/Route24/scripts.pory"
+Route24_Movement_RocketWalkBackToPos::
+# 146 "data/maps/Route24/scripts.pory"
+	walk_right
+# 147 "data/maps/Route24/scripts.pory"
+	walk_in_place_faster_left
+# 148 "data/maps/Route24/scripts.pory"
+	step_end
+
+# 151 "data/maps/Route24/scripts.pory"
 Route24_Movement_WalkDown::
-# 108 "data/maps/Route24/scripts.pory"
+# 152 "data/maps/Route24/scripts.pory"
 	walk_down
-# 109 "data/maps/Route24/scripts.pory"
+# 153 "data/maps/Route24/scripts.pory"
 	step_end

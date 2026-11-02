@@ -56,7 +56,21 @@ script Route24_EventScript_BattleRocket {
     giveitem_msg(Route24_Text_ReceivedNuggetFromMysteryTrainer, ITEM_NUGGET)
     message(Route24_Text_JoinTeamRocket)
     waitmessage
+    waitbuttonpress
+    closemessage
+    // Fast spin as civilian
+    applymovement(LOCALID_ROUTE24_ROCKET, Route24_Movement_RocketSpinFast)
+    waitmovement(0)
+    // Change sprite to Rocket uniform mid-spin
+    setvar(VAR_0x8004, LOCALID_ROUTE24_ROCKET)
+    setvar(VAR_0x8005, OBJ_EVENT_GFX_ROCKET_M)
+    callnative(Script_SetObjectGraphicsId)
+    // Slower spin to finish the reveal
+    applymovement(LOCALID_ROUTE24_ROCKET, Route24_Movement_RocketSpinSlow)
+    waitmovement(0)
     playbgm(MUS_ENCOUNTER_ROCKET, 0)
+    message(Route24_Text_RocketReveal)
+    waitmessage
     waitbuttonpress
     setvar(VAR_LAST_TALKED, LOCALID_ROUTE24_ROCKET)
     trainerbattle_no_intro(TRAINER_TEAM_ROCKET_GRUNT_6, Route24_Text_RocketDefeat)
@@ -91,6 +105,36 @@ script Route24_EventScript_RocketWalkBackToPos {
     applymovement(LOCALID_ROUTE24_ROCKET, Route24_Movement_RocketWalkBackToPos)
     waitmovement(0)
     return
+}
+
+movement Route24_Movement_RocketSpinFast {
+    walk_in_place_faster_down
+    walk_in_place_faster_left
+    walk_in_place_faster_up
+    walk_in_place_faster_right
+    walk_in_place_faster_down
+    walk_in_place_faster_left
+    walk_in_place_faster_up
+    walk_in_place_faster_right
+    walk_in_place_faster_down
+    walk_in_place_faster_left
+    walk_in_place_faster_up
+    walk_in_place_faster_right
+    step_end
+}
+
+movement Route24_Movement_RocketSpinSlow {
+    walk_in_place_faster_down
+    walk_in_place_faster_left
+    walk_in_place_faster_up
+    walk_in_place_faster_right
+    walk_in_place_fast_down
+    walk_in_place_fast_left
+    walk_in_place_fast_up
+    walk_in_place_fast_right
+    walk_in_place_down
+    walk_in_place_left
+    step_end
 }
 
 movement(global) Route24_Movement_RocketApproachPlayer {

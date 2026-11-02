@@ -36,6 +36,7 @@ enum
     WIN_VALUES,       // IV/EV column + the IV and EV sums below it
     WIN_TOTALS,       // final stats
     WIN_HIDDEN_POWER,
+    WIN_HEADER,       // button hints on the top bar
     WIN_COUNT
 };
 
@@ -52,6 +53,7 @@ enum
 #define FONT_STAT_EDITOR  FONT_NORMAL
 #define TEXT_PAL          15
 #define HIDDEN_POWER_PAL  14
+#define HEADER_PAL        13
 #define MON_PIC_X         40
 #define MON_PIC_Y         64
 
@@ -89,12 +91,33 @@ static void Task_StatEditorFadeOut(u8 taskId);
 static void LoadTabTilemap(void);
 static void PrintMonInfo(void);
 static void PrintStats(void);
+static void PrintHeader(void);
 static void ChangeSelectedValue(s32 delta, bool8 wrap);
 
 static const u32 sStatEditor_Gfx[] = INCBIN_U32("graphics/stat_editor/tiles.4bpp.lz");
 static const u16 sStatEditor_Pal[] = INCBIN_U16("graphics/stat_editor/tiles.gbapal");
 static const u32 sStatEditor_IVsTilemap[] = INCBIN_U32("graphics/stat_editor/tilemap_ivs.bin.lz");
 static const u32 sStatEditor_EVsTilemap[] = INCBIN_U32("graphics/stat_editor/tilemap_evs.bin.lz");
+
+// Button hints of the top bar. Written in the game so they can be changed here.
+// The button icons are right-aligned to HEADER_RIGHT_X.
+#define HEADER_RIGHT_X    236
+#define HEADER_Y          1
+#define HEADER_FONT       FONT_SMALL
+static const u8 sText_HeaderBrowse[] = _("{DPAD_ANY}Move {A_BUTTON}Edit Stats {B_BUTTON}Back");
+static const u8 sText_HeaderEdit[]   = _("{DPAD_LEFTRIGHT}Low/Raise {DPAD_UPDOWN}-/+10 {B_BUTTON}Back");
+
+// The button icons (graphics/fonts/keypad_icons.png) use colours 1-4 of the window palette
+static const u16 sHeaderPal[] =
+{
+    RGB(0, 0, 0),    // transparent
+    RGB(31, 31, 31), // text and icons
+    RGB(12, 12, 12), // text shadow and icon outline
+    RGB(26, 26, 25), // icon shading
+    RGB(28, 0, 0),   // icon arrows
+};
+
+static const u8 sHeaderTextColors[3] = {0, 1, 2};
 
 static const u16 sTextPal[] =
 {
@@ -204,6 +227,15 @@ static const struct WindowTemplate sWindowTemplates[] =
         .paletteNum = HIDDEN_POWER_PAL,
         .baseBlock = 162
     },
+    [WIN_HEADER] = {
+        .bg = 0,
+        .tilemapLeft = 0,
+        .tilemapTop = 0,
+        .width = 30,
+        .height = 2,
+        .paletteNum = HEADER_PAL,
+        .baseBlock = 170
+    },
     DUMMY_WIN_TEMPLATE
 };
 
@@ -254,6 +286,7 @@ static void CB2_InitStatEditor(void)
     DeactivateAllTextPrinters();
     LoadPalette(sTextPal, BG_PLTT_ID(TEXT_PAL), sizeof(sTextPal));
     ListMenuLoadStdPalAt(BG_PLTT_ID(HIDDEN_POWER_PAL), 1);
+    LoadPalette(sHeaderPal, BG_PLTT_ID(HEADER_PAL), sizeof(sHeaderPal));
     for (i = 0; i < WIN_COUNT; i++)
     {
         FillWindowPixelBuffer(i, PIXEL_FILL(0));
@@ -263,6 +296,7 @@ static void CB2_InitStatEditor(void)
 
     PrintMonInfo();
     PrintStats();
+    PrintHeader();
     sStatEditor->monSpriteId = CreateMonPicSprite_HandleDeoxys(GetMonData(sStatEditor->mon, MON_DATA_SPECIES),
                                                                GetMonData(sStatEditor->mon, MON_DATA_OT_ID),
                                                                GetMonData(sStatEditor->mon, MON_DATA_PERSONALITY),
@@ -311,6 +345,7 @@ static void Task_StatEditorInput(u8 taskId)
             sStatEditor->editing = FALSE;
             sStatEditor->blinkHidden = FALSE;
             PrintStats();
+            PrintHeader();
         }
         else if (JOY_REPT(DPAD_UP))
             ChangeSelectedValue(10, JOY_NEW(DPAD_UP));
@@ -339,6 +374,7 @@ static void Task_StatEditorInput(u8 taskId)
         sStatEditor->editing = TRUE;
         sStatEditor->blinkTimer = 0;
         PrintStats();
+        PrintHeader();
     }
     else if (JOY_NEW(B_BUTTON))
     {
@@ -415,6 +451,16 @@ static void PrintNumberCentered(u8 windowId, s32 value, u8 centerX, u8 y, u8 col
 
     ConvertIntToDecimalStringN(str, value, STR_CONV_MODE_LEFT_ALIGN, 3);
     PrintCentered(windowId, str, centerX, y, color);
+}
+
+static void PrintHeader(void)
+{
+    const u8 *str = sStatEditor->editing ? sText_HeaderEdit : sText_HeaderBrowse;
+    s32 x = HEADER_RIGHT_X - GetStringWidth(HEADER_FONT, str, 0);
+
+    FillWindowPixelBuffer(WIN_HEADER, PIXEL_FILL(0));
+    AddTextPrinterParameterized3(WIN_HEADER, HEADER_FONT, x < 0 ? 0 : x, HEADER_Y, sHeaderTextColors, TEXT_SKIP_DRAW, str);
+    CopyWindowToVram(WIN_HEADER, COPYWIN_GFX);
 }
 
 // Things that don't change while the screen is open
