@@ -151,6 +151,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DeoxysD;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DeoxysA;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DeoxysN;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MintRed;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MintPurple;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MintBlue;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MintGreen;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MintPink;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MintYellow;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -307,4 +313,10 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DEOXYS_A]                 = &gObjectEventGraphicsInfo_DeoxysA,
     [OBJ_EVENT_GFX_DEOXYS_N]                 = &gObjectEventGraphicsInfo_DeoxysN,
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
+    [OBJ_EVENT_GFX_MINT_RED]                 = &gObjectEventGraphicsInfo_MintRed,
+    [OBJ_EVENT_GFX_MINT_PURPLE]              = &gObjectEventGraphicsInfo_MintPurple,
+    [OBJ_EVENT_GFX_MINT_BLUE]                = &gObjectEventGraphicsInfo_MintBlue,
+    [OBJ_EVENT_GFX_MINT_GREEN]               = &gObjectEventGraphicsInfo_MintGreen,
+    [OBJ_EVENT_GFX_MINT_PINK]                = &gObjectEventGraphicsInfo_MintPink,
+    [OBJ_EVENT_GFX_MINT_YELLOW]              = &gObjectEventGraphicsInfo_MintYellow,
 };

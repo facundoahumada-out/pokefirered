@@ -1115,73 +1115,93 @@ PalletTown_Movement_MomEnterHouse::
 	step_end
 
 PalletTown_EventScript_TestDailyLeadersVisibility::
+# 670 "data/maps/PalletTown/scripts.pory"
+	goto_if_unset FLAG_SYS_GAME_CLEAR, PalletTown_EventScript_HideAllDailyLeaders
+# 671 "data/maps/PalletTown/scripts.pory"
+	setflag FLAG_HIDE_PALLET_DAILY_BROCK
+# 672 "data/maps/PalletTown/scripts.pory"
+	setflag FLAG_HIDE_PALLET_DAILY_MISTY
 # 673 "data/maps/PalletTown/scripts.pory"
-	setflag FLAG_TEMP_11
+	setflag FLAG_HIDE_PALLET_DAILY_SURGE
 # 674 "data/maps/PalletTown/scripts.pory"
-	setflag FLAG_TEMP_12
+	setflag FLAG_HIDE_PALLET_DAILY_ERIKA
 # 675 "data/maps/PalletTown/scripts.pory"
-	setflag FLAG_TEMP_13
+	setflag FLAG_HIDE_PALLET_DAILY_KOGA
 # 676 "data/maps/PalletTown/scripts.pory"
-	setflag FLAG_TEMP_14
+	setflag FLAG_HIDE_PALLET_DAILY_SABRINA
 # 677 "data/maps/PalletTown/scripts.pory"
-	setflag FLAG_TEMP_15
+	setflag FLAG_HIDE_PALLET_DAILY_BLAINE
 # 678 "data/maps/PalletTown/scripts.pory"
-	setflag FLAG_TEMP_16
-# 679 "data/maps/PalletTown/scripts.pory"
-	setflag FLAG_TEMP_17
-# 680 "data/maps/PalletTown/scripts.pory"
 	specialvar VAR_RESULT, GetDayOfWeek
-# 681 "data/maps/PalletTown/scripts.pory"
+# 679 "data/maps/PalletTown/scripts.pory"
 	switch VAR_RESULT
-# 682 "data/maps/PalletTown/scripts.pory"
+# 680 "data/maps/PalletTown/scripts.pory"
 	case 1, PalletTown_EventScript_TestDailyLeadersVisibility_3
-# 684 "data/maps/PalletTown/scripts.pory"
+# 682 "data/maps/PalletTown/scripts.pory"
 	case 2, PalletTown_EventScript_TestDailyLeadersVisibility_4
-# 686 "data/maps/PalletTown/scripts.pory"
+# 684 "data/maps/PalletTown/scripts.pory"
 	case 3, PalletTown_EventScript_TestDailyLeadersVisibility_5
-# 688 "data/maps/PalletTown/scripts.pory"
+# 686 "data/maps/PalletTown/scripts.pory"
 	case 4, PalletTown_EventScript_TestDailyLeadersVisibility_6
-# 690 "data/maps/PalletTown/scripts.pory"
+# 688 "data/maps/PalletTown/scripts.pory"
 	case 5, PalletTown_EventScript_TestDailyLeadersVisibility_7
-# 692 "data/maps/PalletTown/scripts.pory"
+# 690 "data/maps/PalletTown/scripts.pory"
 	case 6, PalletTown_EventScript_TestDailyLeadersVisibility_8
-# 694 "data/maps/PalletTown/scripts.pory"
+# 692 "data/maps/PalletTown/scripts.pory"
 	case 0, PalletTown_EventScript_TestDailyLeadersVisibility_9
 PalletTown_EventScript_TestDailyLeadersVisibility_1:
 	return
 
 PalletTown_EventScript_TestDailyLeadersVisibility_3:
-# 683 "data/maps/PalletTown/scripts.pory"
-	clearflag FLAG_TEMP_11
+# 681 "data/maps/PalletTown/scripts.pory"
+	clearflag FLAG_HIDE_PALLET_DAILY_BROCK
 	goto PalletTown_EventScript_TestDailyLeadersVisibility_1
 
 PalletTown_EventScript_TestDailyLeadersVisibility_4:
-# 685 "data/maps/PalletTown/scripts.pory"
-	clearflag FLAG_TEMP_12
+# 683 "data/maps/PalletTown/scripts.pory"
+	clearflag FLAG_HIDE_PALLET_DAILY_MISTY
 	goto PalletTown_EventScript_TestDailyLeadersVisibility_1
 
 PalletTown_EventScript_TestDailyLeadersVisibility_5:
-# 687 "data/maps/PalletTown/scripts.pory"
-	clearflag FLAG_TEMP_13
+# 685 "data/maps/PalletTown/scripts.pory"
+	clearflag FLAG_HIDE_PALLET_DAILY_SURGE
 	goto PalletTown_EventScript_TestDailyLeadersVisibility_1
 
 PalletTown_EventScript_TestDailyLeadersVisibility_6:
-# 689 "data/maps/PalletTown/scripts.pory"
-	clearflag FLAG_TEMP_14
+# 687 "data/maps/PalletTown/scripts.pory"
+	clearflag FLAG_HIDE_PALLET_DAILY_ERIKA
 	goto PalletTown_EventScript_TestDailyLeadersVisibility_1
 
 PalletTown_EventScript_TestDailyLeadersVisibility_7:
-# 691 "data/maps/PalletTown/scripts.pory"
-	clearflag FLAG_TEMP_15
+# 689 "data/maps/PalletTown/scripts.pory"
+	clearflag FLAG_HIDE_PALLET_DAILY_KOGA
 	goto PalletTown_EventScript_TestDailyLeadersVisibility_1
 
 PalletTown_EventScript_TestDailyLeadersVisibility_8:
-# 693 "data/maps/PalletTown/scripts.pory"
-	clearflag FLAG_TEMP_16
+# 691 "data/maps/PalletTown/scripts.pory"
+	clearflag FLAG_HIDE_PALLET_DAILY_SABRINA
 	goto PalletTown_EventScript_TestDailyLeadersVisibility_1
 
 PalletTown_EventScript_TestDailyLeadersVisibility_9:
-# 695 "data/maps/PalletTown/scripts.pory"
-	clearflag FLAG_TEMP_17
+# 693 "data/maps/PalletTown/scripts.pory"
+	clearflag FLAG_HIDE_PALLET_DAILY_BLAINE
 	goto PalletTown_EventScript_TestDailyLeadersVisibility_1
+
+
+PalletTown_EventScript_HideAllDailyLeaders::
+# 699 "data/maps/PalletTown/scripts.pory"
+	setflag FLAG_HIDE_PALLET_DAILY_BROCK
+# 700 "data/maps/PalletTown/scripts.pory"
+	setflag FLAG_HIDE_PALLET_DAILY_MISTY
+# 701 "data/maps/PalletTown/scripts.pory"
+	setflag FLAG_HIDE_PALLET_DAILY_SURGE
+# 702 "data/maps/PalletTown/scripts.pory"
+	setflag FLAG_HIDE_PALLET_DAILY_ERIKA
+# 703 "data/maps/PalletTown/scripts.pory"
+	setflag FLAG_HIDE_PALLET_DAILY_KOGA
+# 704 "data/maps/PalletTown/scripts.pory"
+	setflag FLAG_HIDE_PALLET_DAILY_SABRINA
+# 705 "data/maps/PalletTown/scripts.pory"
+	setflag FLAG_HIDE_PALLET_DAILY_BLAINE
+	return
 

@@ -28,6 +28,10 @@ script ViridianCity_PokemonCenter_2F_EventScript_WelcomeCheck {
     lockall
     applymovement(1, Common_Movement_WalkInPlaceFasterDown)
     waitmovement(0)
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Callout)
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, ViridianCity_PokemonCenter_2F_Movement_WalkToCounter)
+    waitmovement(0)
     msgbox(ViridianCity_PokemonCenter_2F_Text_Welcome1)
     msgbox(ViridianCity_PokemonCenter_2F_Text_Welcome2)
     msgbox(ViridianCity_PokemonCenter_2F_Text_Welcome3)
@@ -35,6 +39,17 @@ script ViridianCity_PokemonCenter_2F_EventScript_WelcomeCheck {
     setflag(FLAG_CP_2F_WELCOME_DONE)
     releaseall
     end
+}
+
+movement ViridianCity_PokemonCenter_2F_Movement_WalkToCounter {
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_up
+    walk_up
+    walk_in_place_faster_up
+    step_end
 }
 
 // =============================================

@@ -213,7 +213,7 @@ static const struct DnsTint sDnsTints[] =
     // Day: no filter
     [TIME_DAY] =       { .r = {256, 0},   .g = {256, 0},   .b = {256, 0} },
     // Afternoon: warm orange light, more red and less green and blue
-    [TIME_AFTERNOON] = { .r = {244, 30},  .g = {244, -30}, .b = {228, -48} },
+    [TIME_AFTERNOON] = { .r = {256, 16},  .g = {252, -12}, .b = {240, -24} },
     // Night: dark blue, the colour is darkened proportionally (less red and green than blue)
     [TIME_NIGHT] =     { .r = {144, 0},   .g = {144, 0},   .b = {208, 0} },
 };

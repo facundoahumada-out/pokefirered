@@ -1,10 +1,16 @@
-ViridianCity_PokemonCenter_2F_Text_Welcome1::
+ViridianCity_PokemonCenter_2F_Text_Callout::
 # 2 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+	.string "Hey there, Trainer!\p"
+	.string "Could you come over here\n"
+	.string "for a moment?$"
+
+ViridianCity_PokemonCenter_2F_Text_Welcome1::
+# 8 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "Welcome to the POKéMON\n"
 	.string "Service Corner!$"
 
 ViridianCity_PokemonCenter_2F_Text_Welcome2::
-# 7 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+# 13 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "I'm here to help you get the\n"
 	.string "most out of your POKéMON!\p"
 	.string "I can help your POKéMON remember\n"
@@ -12,7 +18,7 @@ ViridianCity_PokemonCenter_2F_Text_Welcome2::
 	.string "their Abilities!$"
 
 ViridianCity_PokemonCenter_2F_Text_Welcome3::
-# 15 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+# 21 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "The young lady to my right offers\n"
 	.string "a rather special service of\l"
 	.string "her own.\p"
@@ -22,7 +28,7 @@ ViridianCity_PokemonCenter_2F_Text_Welcome3::
 	.string "and reach their full potential!$"
 
 ViridianCity_PokemonCenter_2F_Text_Welcome4::
-# 25 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+# 31 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "It's a service for those who've\n"
 	.string "truly mastered the art of\l"
 	.string "POKéMON training.\p"
@@ -31,7 +37,7 @@ ViridianCity_PokemonCenter_2F_Text_Welcome4::
 	.string "someday!$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1Greeting::
-# 35 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+# 41 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "Oh, hello Trainer!\p"
 	.string "If one of your POKéMON has\n"
 	.string "forgotten a move, I can help it\l"
@@ -44,48 +50,48 @@ ViridianCity_PokemonCenter_2F_Text_Obj1Greeting::
 	.string "So, what can I do for you today?$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1WhichMon::
-# 48 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+# 54 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "Which POKéMON should I help?$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1TeachWhichMove::
-# 52 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+# 58 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "Which move should it remember?$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1NoMoves::
-# 56 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+# 62 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "Hmm, it doesn't seem to have\n"
 	.string "any forgotten moves…$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1CantEgg::
-# 61 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+# 67 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "Oh, that's an EGG!\n"
 	.string "I can't help with that, sorry!$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1CurrentAbility::
-# 66 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+# 72 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "Your POKéMON's current Ability\n"
 	.string "is {STR_VAR_1}.\p"
 	.string "Would you like me to change it?$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1AbilityChanged::
-# 72 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+# 78 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "There we go!\p"
 	.string "Your POKéMON's Ability has been\n"
 	.string "changed to {STR_VAR_1}!$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1OnlyOneAbility::
-# 78 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+# 84 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "Hmm, it seems your POKéMON\n"
 	.string "only has one possible Ability.\p"
 	.string "There's nothing to change here!$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1Bye::
-# 84 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+# 90 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "Come back anytime you need\n"
 	.string "my help!$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj2PreLeague::
-# 90 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+# 96 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "Oh, hello there!\p"
 	.string "I offer a special service known\n"
 	.string "as the POKéMON Booster!\p"
@@ -97,7 +103,7 @@ ViridianCity_PokemonCenter_2F_Text_Obj2PreLeague::
 	.string "that honor!$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj2PostLeague::
-# 102 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+# 108 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
 	.string "Well, well! Look who's back!\p"
 	.string "My, you've certainly come a long\n"
 	.string "way! I can tell you've become a\l"

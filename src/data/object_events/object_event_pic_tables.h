@@ -795,6 +795,36 @@ static const struct SpriteFrameImage sPicTable_MtItem[] = {
     overworld_frame(gObjectEventPic_MtItem, 2, 2, 0),
 };
 
+static const struct SpriteFrameImage sPicTable_MintRed[] = {
+    overworld_frame(gObjectEventPic_MintRed, 2, 2, 0),
+    overworld_frame(gObjectEventPic_MintRed, 2, 2, 1),
+};
+
+static const struct SpriteFrameImage sPicTable_MintPurple[] = {
+    overworld_frame(gObjectEventPic_MintPurple, 2, 2, 0),
+    overworld_frame(gObjectEventPic_MintPurple, 2, 2, 1),
+};
+
+static const struct SpriteFrameImage sPicTable_MintBlue[] = {
+    overworld_frame(gObjectEventPic_MintBlue, 2, 2, 0),
+    overworld_frame(gObjectEventPic_MintBlue, 2, 2, 1),
+};
+
+static const struct SpriteFrameImage sPicTable_MintGreen[] = {
+    overworld_frame(gObjectEventPic_MintGreen, 2, 2, 0),
+    overworld_frame(gObjectEventPic_MintGreen, 2, 2, 1),
+};
+
+static const struct SpriteFrameImage sPicTable_MintPink[] = {
+    overworld_frame(gObjectEventPic_MintPink, 2, 2, 0),
+    overworld_frame(gObjectEventPic_MintPink, 2, 2, 1),
+};
+
+static const struct SpriteFrameImage sPicTable_MintYellow[] = {
+    overworld_frame(gObjectEventPic_MintYellow, 2, 2, 0),
+    overworld_frame(gObjectEventPic_MintYellow, 2, 2, 1),
+};
+
 static const struct SpriteFrameImage sPicTable_ProfOak[] = {
     overworld_frame(gObjectEventPic_ProfOak, 2, 4, 0),
     overworld_frame(gObjectEventPic_ProfOak, 2, 4, 1),

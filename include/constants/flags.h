@@ -1227,10 +1227,10 @@
 #define FLAG_GOT_LIGHT_BALL_PEWTER_MUSEUM  0x4A9 // Showed a Pikachu to the little girl in Pewter Museum 2F
 #define FLAG_HIDE_DAILY_LEADER          0x4AA // Hides the gym leader of the daily rematches when it's not their day (see src/daily_battles.c)
 #define FLAG_CP_2F_WELCOME_DONE         0x4AB
-#define FLAG_UNUSED_0x4AC               0x4AC // Unused Flag
-#define FLAG_UNUSED_0x4AD               0x4AD // Unused Flag
-#define FLAG_UNUSED_0x4AE               0x4AE // Unused Flag
-#define FLAG_UNUSED_0x4AF               0x4AF // Unused Flag
+#define FLAG_HIDE_PALLET_DAILY_BROCK    0x4AC
+#define FLAG_HIDE_PALLET_DAILY_MISTY    0x4AD
+#define FLAG_HIDE_PALLET_DAILY_SURGE    0x4AE
+#define FLAG_HIDE_PALLET_DAILY_ERIKA    0x4AF
 
 // Boss clear flags, 1200
 #define FLAG_DEFEATED_BROCK           0x4B0
@@ -1247,10 +1247,10 @@
 #define FLAG_DEFEATED_LANCE           0x4BB
 #define FLAG_DEFEATED_CHAMP           0x4BC
 
-// Unused?
-#define FLAG_0x4BD               0x4BD
-#define FLAG_0x4BE               0x4BE
-#define FLAG_0x4BF               0x4BF
+// Pallet Town daily leader visibility (continued)
+#define FLAG_HIDE_PALLET_DAILY_KOGA     0x4BD
+#define FLAG_HIDE_PALLET_DAILY_SABRINA  0x4BE
+#define FLAG_HIDE_PALLET_DAILY_BLAINE   0x4BF
 #define FLAG_0x4C0               0x4C0
 #define FLAG_0x4C1               0x4C1
 #define FLAG_0x4C2               0x4C2

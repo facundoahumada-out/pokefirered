@@ -156,8 +156,14 @@
 #define OBJ_EVENT_GFX_DEOXYS_N 150
 #define OBJ_EVENT_GFX_SS_ANNE 151
 #define OBJ_EVENT_GFX_MT_ITEM 152
+#define OBJ_EVENT_GFX_MINT_RED 153
+#define OBJ_EVENT_GFX_MINT_PURPLE 154
+#define OBJ_EVENT_GFX_MINT_BLUE 155
+#define OBJ_EVENT_GFX_MINT_GREEN 156
+#define OBJ_EVENT_GFX_MINT_PINK 157
+#define OBJ_EVENT_GFX_MINT_YELLOW 158
 
-#define NUM_OBJ_EVENT_GFX     153
+#define NUM_OBJ_EVENT_GFX     159
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.

@@ -1,4 +1,10 @@
 // Welcome scene (first visit)
+text ViridianCity_PokemonCenter_2F_Text_Callout {
+    "Hey there, Trainer!\p"
+    "Could you come over here\n"
+    "for a moment?"
+}
+
 text ViridianCity_PokemonCenter_2F_Text_Welcome1 {
     "Welcome to the POKéMON\n"
     "Service Corner!"

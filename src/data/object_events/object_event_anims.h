@@ -995,6 +995,13 @@ static const union AnimCmd *const sAnimTable_Inanimate[] = {
     [ANIM_STAY_STILL] = sAnim_StayStill
 };
 
+static const union AnimCmd *const sAnimTable_TwoDirections[] = {
+    [ANIM_STD_FACE_SOUTH] = sAnim_FaceSouth,
+    [ANIM_STD_FACE_NORTH] = sAnim_FaceNorth,
+    [ANIM_STD_FACE_WEST] = sAnim_FaceSouth,
+    [ANIM_STD_FACE_EAST] = sAnim_FaceSouth,
+};
+
 // Leftover from Ruby/Sapphire
 static const union AnimCmd *const sAnimTable_QuintyPlump[] = {
     [ANIM_STD_FACE_SOUTH] = sAnim_QuintyPlumpFaceSouth,

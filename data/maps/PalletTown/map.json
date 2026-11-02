@@ -92,7 +92,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_1F_EventScript_DailyBrock",
-      "flag": "FLAG_TEMP_11"
+      "flag": "FLAG_HIDE_PALLET_DAILY_BROCK"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MISTY",
@@ -105,7 +105,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route20_EventScript_DailyMisty",
-      "flag": "FLAG_TEMP_12"
+      "flag": "FLAG_HIDE_PALLET_DAILY_MISTY"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LT_SURGE",
@@ -118,7 +118,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route10_EventScript_DailyLtSurge",
-      "flag": "FLAG_TEMP_13"
+      "flag": "FLAG_HIDE_PALLET_DAILY_SURGE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ERIKA",
@@ -131,7 +131,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ViridianForest_EventScript_DailyErika",
-      "flag": "FLAG_TEMP_14"
+      "flag": "FLAG_HIDE_PALLET_DAILY_ERIKA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_KOGA",
@@ -144,7 +144,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_BerryForest_EventScript_DailyKoga",
-      "flag": "FLAG_TEMP_15"
+      "flag": "FLAG_HIDE_PALLET_DAILY_KOGA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SABRINA",
@@ -157,7 +157,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SaffronCity_Dojo_EventScript_DailySabrina",
-      "flag": "FLAG_TEMP_16"
+      "flag": "FLAG_HIDE_PALLET_DAILY_SABRINA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLAINE",
@@ -170,7 +170,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtEmber_Exterior_EventScript_DailyBlaine",
-      "flag": "FLAG_TEMP_17"
+      "flag": "FLAG_HIDE_PALLET_DAILY_BLAINE"
     }
   ],
   "warp_events": [
