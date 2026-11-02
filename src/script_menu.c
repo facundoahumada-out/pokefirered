@@ -511,6 +511,12 @@ static const struct MenuAction sMultichoiceList_Exit[] = {
     { gOtherText_Exit }
 };
 
+static const struct MenuAction sMultichoiceList_ServiceCorner[] = {
+    { gText_RememberMoves },
+    { gText_ChangeAbility },
+    { gOtherText_Exit }
+};
+
 static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_YES_NO]                                     = MULTICHOICE(sMultichoiceList_YesNo),
     [MULTICHOICE_EEVEELUTIONS]                               = MULTICHOICE(sMultichoiceList_Eeveelutions),
@@ -578,6 +584,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_JOIN_OR_LEAD]                               = MULTICHOICE(sMultichoiceList_JoinOrLead),
     [MULTICHOICE_TRAINER_TOWER_MODE]                         = MULTICHOICE(sMultichoiceList_TrainerTowerMode),
     [MULTICHOICE_ELEMENTAL_PUNCHES]                          = MULTICHOICE(sMultichoiceList_ElementalPunches),
+    [MULTICHOICE_SERVICE_CORNER]                              = MULTICHOICE(sMultichoiceList_ServiceCorner),
 };
 
 // From Cool to Berries goes unused

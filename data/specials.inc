@@ -468,4 +468,6 @@ gSpecials::
 	def_special SetTestDexCaught60
 	def_special PlayerFaceObject
 	def_special OpenStatEditor
+	def_special CycleMonAbility
+	def_special BufferMonAbilityName
 gSpecialsEnd::

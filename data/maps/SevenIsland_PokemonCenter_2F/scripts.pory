@@ -1,9 +1,23 @@
 mapscripts SevenIsland_PokemonCenter_2F_MapScripts {
-    MAP_SCRIPT_ON_FRAME_TABLE: CableClub_OnFrame
+    MAP_SCRIPT_ON_FRAME_TABLE: SevenIsland_PokemonCenter_2F_OnFrame
     MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE: CableClub_OnWarp
     MAP_SCRIPT_ON_LOAD: CableClub_OnLoad
     MAP_SCRIPT_ON_TRANSITION: CableClub_OnTransition
 }
+
+raw `
+SevenIsland_PokemonCenter_2F_OnFrame:
+	map_script_2 VAR_TEMP_1, 0, ViridianCity_PokemonCenter_2F_EventScript_WelcomeCheck
+	map_script_2 VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1, CableClub_EventScript_Tutorial
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_SINGLE_BATTLE, CableClub_EventScript_ExitLinkRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_DOUBLE_BATTLE, CableClub_EventScript_ExitLinkRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_MULTI_BATTLE, CableClub_EventScript_ExitLinkRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_TRADE_CENTER, CableClub_EventScript_ExitTradeCenter
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_UNION_ROOM, CableClub_EventScript_ExitUnionRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_BERRY_CRUSH, CableClub_EventScript_ExitLinkRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_MINIGAME, CableClub_EventScript_ExitMinigameRoom
+	.2byte 0
+`
 
 // The below 3 are unused and leftover from RS
 script SevenIsland_PokemonCenter_2F_EventScript_Colosseum {

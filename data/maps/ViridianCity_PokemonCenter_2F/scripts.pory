@@ -1,8 +1,145 @@
 mapscripts ViridianCity_PokemonCenter_2F_MapScripts {
-    MAP_SCRIPT_ON_FRAME_TABLE: CableClub_OnFrame
+    MAP_SCRIPT_ON_FRAME_TABLE: ViridianCity_PokemonCenter_2F_OnFrame
     MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE: CableClub_OnWarp
     MAP_SCRIPT_ON_LOAD: CableClub_OnLoad
     MAP_SCRIPT_ON_TRANSITION: CableClub_OnTransition
+}
+
+raw `
+ViridianCity_PokemonCenter_2F_OnFrame:
+	map_script_2 VAR_TEMP_1, 0, ViridianCity_PokemonCenter_2F_EventScript_WelcomeCheck
+	map_script_2 VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1, CableClub_EventScript_Tutorial
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_SINGLE_BATTLE, CableClub_EventScript_ExitLinkRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_DOUBLE_BATTLE, CableClub_EventScript_ExitLinkRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_MULTI_BATTLE, CableClub_EventScript_ExitLinkRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_TRADE_CENTER, CableClub_EventScript_ExitTradeCenter
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_UNION_ROOM, CableClub_EventScript_ExitUnionRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_BERRY_CRUSH, CableClub_EventScript_ExitLinkRoom
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_MINIGAME, CableClub_EventScript_ExitMinigameRoom
+	.2byte 0
+`
+
+// =============================================
+// First-visit welcome
+// =============================================
+script ViridianCity_PokemonCenter_2F_EventScript_WelcomeCheck {
+    setvar(VAR_TEMP_1, 1)
+    goto_if_set(FLAG_CP_2F_WELCOME_DONE, EventScript_Return)
+    lockall
+    applymovement(1, Common_Movement_WalkInPlaceFasterDown)
+    waitmovement(0)
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Welcome1)
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Welcome2)
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Welcome3)
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Welcome4)
+    setflag(FLAG_CP_2F_WELCOME_DONE)
+    releaseall
+    end
+}
+
+// =============================================
+// Object 1 - Move Relearner & Ability Changer
+// =============================================
+script ViridianCity_PokemonCenter_2F_EventScript_Obj1 {
+    lock
+    faceplayer
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Obj1Greeting)
+    multichoice(0, 0, MULTICHOICE_SERVICE_CORNER, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: // Remember Moves
+            goto(ViridianCity_PokemonCenter_2F_EventScript_RememberMoves)
+        case 1: // Change Ability
+            goto(ViridianCity_PokemonCenter_2F_EventScript_ChangeAbility)
+        default: // Exit
+            goto(ViridianCity_PokemonCenter_2F_EventScript_Obj1Bye)
+    }
+    end
+}
+
+script ViridianCity_PokemonCenter_2F_EventScript_Obj1Bye {
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Obj1Bye)
+    release
+    end
+}
+
+// --- Remember Moves ---
+script ViridianCity_PokemonCenter_2F_EventScript_RememberMoves {
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Obj1WhichMon)
+    special(ChooseMonForMoveRelearner)
+    waitstate
+    goto_if_ge(VAR_0x8004, PARTY_SIZE, ViridianCity_PokemonCenter_2F_EventScript_Obj1Bye)
+    special(IsSelectedMonEgg)
+    goto_if_eq(VAR_RESULT, TRUE, ViridianCity_PokemonCenter_2F_EventScript_CantEgg)
+    goto_if_eq(VAR_0x8005, 0, ViridianCity_PokemonCenter_2F_EventScript_NoMoves)
+    goto(ViridianCity_PokemonCenter_2F_EventScript_TeachMove)
+    end
+}
+
+script ViridianCity_PokemonCenter_2F_EventScript_TeachMove {
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Obj1TeachWhichMove)
+    special(TeachMoveRelearnerMove)
+    waitstate
+    goto_if_eq(VAR_0x8004, 0, ViridianCity_PokemonCenter_2F_EventScript_RememberMoves)
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Obj1Bye)
+    release
+    end
+}
+
+script ViridianCity_PokemonCenter_2F_EventScript_NoMoves {
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Obj1NoMoves)
+    release
+    end
+}
+
+script ViridianCity_PokemonCenter_2F_EventScript_CantEgg {
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Obj1CantEgg)
+    release
+    end
+}
+
+// --- Change Ability ---
+script ViridianCity_PokemonCenter_2F_EventScript_ChangeAbility {
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Obj1WhichMon)
+    special(ChoosePartyMon)
+    waitstate
+    goto_if_ge(VAR_0x8004, PARTY_SIZE, ViridianCity_PokemonCenter_2F_EventScript_Obj1Bye)
+    special(IsSelectedMonEgg)
+    goto_if_eq(VAR_RESULT, TRUE, ViridianCity_PokemonCenter_2F_EventScript_CantEgg)
+    special(BufferMonAbilityName)
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Obj1CurrentAbility, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, ViridianCity_PokemonCenter_2F_EventScript_Obj1Bye)
+    special(CycleMonAbility)
+    goto_if_eq(VAR_RESULT, FALSE, ViridianCity_PokemonCenter_2F_EventScript_OnlyOneAbility)
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Obj1AbilityChanged)
+    release
+    end
+}
+
+script ViridianCity_PokemonCenter_2F_EventScript_OnlyOneAbility {
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Obj1OnlyOneAbility)
+    release
+    end
+}
+
+// =============================================
+// Object 2 - Pokémon Booster (Stat Editor)
+// =============================================
+script ViridianCity_PokemonCenter_2F_EventScript_Obj2 {
+    lock
+    faceplayer
+    goto_if_set(FLAG_SYS_GAME_CLEAR, ViridianCity_PokemonCenter_2F_EventScript_Obj2PostLeague)
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Obj2PreLeague)
+    release
+    end
+}
+
+script ViridianCity_PokemonCenter_2F_EventScript_Obj2PostLeague {
+    msgbox(ViridianCity_PokemonCenter_2F_Text_Obj2PostLeague, MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        goto(EventScript_StatEditor)
+    }
+    release
+    end
 }
 
 // The below 3 are unused and leftover from RS

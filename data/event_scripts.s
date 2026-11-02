@@ -676,6 +676,7 @@ gStdScriptsEnd::
 	.include "data/maps/ViridianCity_School/text.inc"
 	.include "data/maps/ViridianCity_Mart/text.inc"
 	.include "data/maps/ViridianCity_PokemonCenter_1F/text.inc"
+	.include "data/maps/ViridianCity_PokemonCenter_2F/text.inc"
 	.include "data/maps/PewterCity_Museum_1F/text.inc"
 	.include "data/maps/PewterCity_Museum_2F/text.inc"
 	.include "data/maps/PewterCity_Gym/text.inc"

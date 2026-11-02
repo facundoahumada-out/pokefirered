@@ -1226,7 +1226,7 @@
 #define FLAG_PEWTER_MUSEUM_PIKACHU_REQUEST 0x4A8 // The balding man in Pewter Museum 2F asked the player to bring a Pikachu
 #define FLAG_GOT_LIGHT_BALL_PEWTER_MUSEUM  0x4A9 // Showed a Pikachu to the little girl in Pewter Museum 2F
 #define FLAG_HIDE_DAILY_LEADER          0x4AA // Hides the gym leader of the daily rematches when it's not their day (see src/daily_battles.c)
-#define FLAG_UNUSED_0x4AB               0x4AB // Unused Flag
+#define FLAG_CP_2F_WELCOME_DONE         0x4AB
 #define FLAG_UNUSED_0x4AC               0x4AC // Unused Flag
 #define FLAG_UNUSED_0x4AD               0x4AD // Unused Flag
 #define FLAG_UNUSED_0x4AE               0x4AE // Unused Flag

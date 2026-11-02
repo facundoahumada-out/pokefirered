@@ -70,6 +70,7 @@
 #define MULTICHOICE_JOIN_OR_LEAD                               63
 #define MULTICHOICE_TRAINER_TOWER_MODE                         64
 #define MULTICHOICE_ELEMENTAL_PUNCHES                          65
+#define MULTICHOICE_SERVICE_CORNER                             66
 
 #define MULTICHOICE_NONE                                      255
 

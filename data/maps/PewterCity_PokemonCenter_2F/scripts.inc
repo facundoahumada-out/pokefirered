@@ -1,6 +1,6 @@
 PewterCity_PokemonCenter_2F_MapScripts::
 # 2 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, CableClub_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, PewterCity_PokemonCenter_2F_OnFrame
 # 3 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, CableClub_OnWarp
 # 4 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
@@ -10,20 +10,45 @@ PewterCity_PokemonCenter_2F_MapScripts::
 	.byte 0
 
 
-PewterCity_PokemonCenter_2F_EventScript_Colosseum::
+# 8 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
+
+# 9 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
+PewterCity_PokemonCenter_2F_OnFrame:
 # 10 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
+	map_script_2 VAR_TEMP_1, 0, ViridianCity_PokemonCenter_2F_EventScript_WelcomeCheck
+# 11 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
+	map_script_2 VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1, CableClub_EventScript_Tutorial
+# 12 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_SINGLE_BATTLE, CableClub_EventScript_ExitLinkRoom
+# 13 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_DOUBLE_BATTLE, CableClub_EventScript_ExitLinkRoom
+# 14 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_MULTI_BATTLE, CableClub_EventScript_ExitLinkRoom
+# 15 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_TRADE_CENTER, CableClub_EventScript_ExitTradeCenter
+# 16 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_UNION_ROOM, CableClub_EventScript_ExitUnionRoom
+# 17 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_BERRY_CRUSH, CableClub_EventScript_ExitLinkRoom
+# 18 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
+	map_script_2 VAR_CABLE_CLUB_STATE, USING_MINIGAME, CableClub_EventScript_ExitMinigameRoom
+# 19 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
+	.2byte 0
+
+PewterCity_PokemonCenter_2F_EventScript_Colosseum::
+# 24 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
 	call CableClub_EventScript_Colosseum
 	end
 
 
 PewterCity_PokemonCenter_2F_EventScript_TradeCenter::
-# 15 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
+# 29 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
 	call CableClub_EventScript_TradeCenter
 	end
 
 
 PewterCity_PokemonCenter_2F_EventScript_RecordCorner::
-# 20 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
+# 34 "data/maps/PewterCity_PokemonCenter_2F/scripts.pory"
 	call CableClub_EventScript_RecordCorner
 	end
 
