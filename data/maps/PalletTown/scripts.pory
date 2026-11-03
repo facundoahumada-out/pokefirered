@@ -470,7 +470,7 @@ movement(global) PalletTown_Movement_SignLadyMoveOutOfWayLeft {
 }
 
 script PalletTown_EventScript_FatMan {
-    goto(EventScript_StatEditor)
+    msgbox(PalletTown_Text_CanStoreItemsAndMonsInPC, MSGBOX_NPC)
 }
 
 script PalletTown_EventScript_OaksLabSign {
