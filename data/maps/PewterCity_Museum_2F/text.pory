@@ -97,7 +97,7 @@ text PewterCity_Museum_2F_Text_PikaPikaCuterUpClose {
 }
 
 text PewterCity_Museum_2F_Text_YouMadeHerDay {
-    "My, you certainly made her day!\p"
+    "{COLOR BLUE}My, you certainly made her day!\p"
     "Please, take this as a token of\n"
     "my gratitude.$"
 }

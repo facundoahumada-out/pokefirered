@@ -177,13 +177,10 @@ Route24_Movement_RocketSpinFast:
 # 114 "data/maps/Route24/scripts.pory"
 	walk_in_place_faster_right
 # 115 "data/maps/Route24/scripts.pory"
-	walk_in_place_faster_down
-# 116 "data/maps/Route24/scripts.pory"
-	walk_in_place_faster_left
-# 117 "data/maps/Route24/scripts.pory"
-	walk_in_place_faster_up
+	step_end
+
 # 118 "data/maps/Route24/scripts.pory"
-	walk_in_place_faster_right
+Route24_Movement_RocketSpinSlow:
 # 119 "data/maps/Route24/scripts.pory"
 	walk_in_place_faster_down
 # 120 "data/maps/Route24/scripts.pory"
@@ -193,52 +190,39 @@ Route24_Movement_RocketSpinFast:
 # 122 "data/maps/Route24/scripts.pory"
 	walk_in_place_faster_right
 # 123 "data/maps/Route24/scripts.pory"
-	step_end
-
-# 126 "data/maps/Route24/scripts.pory"
-Route24_Movement_RocketSpinSlow:
-# 127 "data/maps/Route24/scripts.pory"
-	walk_in_place_faster_down
-# 128 "data/maps/Route24/scripts.pory"
-	walk_in_place_faster_left
-# 129 "data/maps/Route24/scripts.pory"
-	walk_in_place_faster_up
-# 130 "data/maps/Route24/scripts.pory"
-	walk_in_place_faster_right
-# 131 "data/maps/Route24/scripts.pory"
 	walk_in_place_fast_down
-# 132 "data/maps/Route24/scripts.pory"
+# 124 "data/maps/Route24/scripts.pory"
 	walk_in_place_fast_left
-# 133 "data/maps/Route24/scripts.pory"
+# 125 "data/maps/Route24/scripts.pory"
 	walk_in_place_fast_up
-# 134 "data/maps/Route24/scripts.pory"
+# 126 "data/maps/Route24/scripts.pory"
 	walk_in_place_fast_right
-# 135 "data/maps/Route24/scripts.pory"
+# 127 "data/maps/Route24/scripts.pory"
 	walk_in_place_down
-# 136 "data/maps/Route24/scripts.pory"
+# 128 "data/maps/Route24/scripts.pory"
 	walk_in_place_left
-# 137 "data/maps/Route24/scripts.pory"
+# 129 "data/maps/Route24/scripts.pory"
 	step_end
 
-# 140 "data/maps/Route24/scripts.pory"
+# 132 "data/maps/Route24/scripts.pory"
 Route24_Movement_RocketApproachPlayer::
-# 141 "data/maps/Route24/scripts.pory"
+# 133 "data/maps/Route24/scripts.pory"
 	walk_left
-# 142 "data/maps/Route24/scripts.pory"
+# 134 "data/maps/Route24/scripts.pory"
 	step_end
 
-# 145 "data/maps/Route24/scripts.pory"
+# 137 "data/maps/Route24/scripts.pory"
 Route24_Movement_RocketWalkBackToPos::
-# 146 "data/maps/Route24/scripts.pory"
+# 138 "data/maps/Route24/scripts.pory"
 	walk_right
-# 147 "data/maps/Route24/scripts.pory"
+# 139 "data/maps/Route24/scripts.pory"
 	walk_in_place_faster_left
-# 148 "data/maps/Route24/scripts.pory"
+# 140 "data/maps/Route24/scripts.pory"
 	step_end
 
-# 151 "data/maps/Route24/scripts.pory"
+# 143 "data/maps/Route24/scripts.pory"
 Route24_Movement_WalkDown::
-# 152 "data/maps/Route24/scripts.pory"
+# 144 "data/maps/Route24/scripts.pory"
 	walk_down
-# 153 "data/maps/Route24/scripts.pory"
+# 145 "data/maps/Route24/scripts.pory"
 	step_end

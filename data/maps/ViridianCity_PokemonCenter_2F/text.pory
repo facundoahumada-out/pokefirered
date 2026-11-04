@@ -39,16 +39,14 @@ text ViridianCity_PokemonCenter_2F_Text_Welcome4 {
 
 // Object 1 - Move Relearner & Ability Changer
 text ViridianCity_PokemonCenter_2F_Text_Obj1Greeting {
-    "Oh, hello Trainer!\p"
-    "If one of your POKéMON has\n"
-    "forgotten a move, I can help it\l"
-    "remember!\p"
-    "I can also awaken its other\n"
-    "Abilities, if you'd like.\p"
+    "Oh, happy to see you, Trainer!\p"
+    "I can help your Pokémon remember\n"
+    "forgotten moves or awaken their\l"
+    "other Abilities!\p"
     "There's always something new to\n"
-    "discover about your POKéMON,\l"
-    "isn't there?\p"
-    "So, what can I do for you today?"
+    "discover about your Pokémon!\p"
+    "So, what can I do for you\n"
+    "this time?"
 }
 
 text ViridianCity_PokemonCenter_2F_Text_Obj1WhichMon {

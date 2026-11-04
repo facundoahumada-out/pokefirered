@@ -112,14 +112,6 @@ movement Route24_Movement_RocketSpinFast {
     walk_in_place_faster_left
     walk_in_place_faster_up
     walk_in_place_faster_right
-    walk_in_place_faster_down
-    walk_in_place_faster_left
-    walk_in_place_faster_up
-    walk_in_place_faster_right
-    walk_in_place_faster_down
-    walk_in_place_faster_left
-    walk_in_place_faster_up
-    walk_in_place_faster_right
     step_end
 }
 

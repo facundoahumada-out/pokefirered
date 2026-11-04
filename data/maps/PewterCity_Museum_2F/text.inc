@@ -98,7 +98,7 @@ PewterCity_Museum_2F_Text_PikaPikaCuterUpClose::
 
 PewterCity_Museum_2F_Text_YouMadeHerDay::
 # 99 "data/maps/PewterCity_Museum_2F/text.pory"
-	.string "My, you certainly made her day!\p"
+	.string "{COLOR BLUE}My, you certainly made her day!\p"
 	.string "Please, take this as a token of\n"
 	.string "my gratitude.$"
 
