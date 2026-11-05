@@ -1,0 +1,249 @@
+// Shared mint pickup script
+script Common_EventScript_FindMint {
+    lock
+    faceplayer
+    waitse
+    copyvar(VAR_0x8004, VAR_0x8000)
+    bufferitemname(STR_VAR_2, VAR_0x8000)
+    msgbox(Common_Text_MintAsk, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, Common_EventScript_MintLeave)
+    checkitemspace(VAR_0x8000, 1)
+    goto_if_eq(VAR_RESULT, TRUE, Common_EventScript_PickUpMint)
+    goto(Common_EventScript_MintNoRoom)
+    end
+}
+
+script Common_EventScript_MintLeave {
+    msgbox(Common_Text_MintLeft)
+    release
+    end
+}
+
+script Common_EventScript_PickUpMint {
+    additem(VAR_0x8004, 1)
+    playfanfare(MUS_OBTAIN_ITEM)
+    message(Common_Text_MintPicked)
+    waitfanfare
+    waitmessage
+    removeobject(VAR_LAST_TALKED)
+    msgbox(Common_Text_MintPutAway)
+    release
+    end
+}
+
+script Common_EventScript_MintNoRoom {
+    msgbox(Common_Text_MintBagFull)
+    release
+    end
+}
+
+text Common_Text_MintAsk {
+    "A fragrant mint plant is growing\n"
+    "here!\p"
+    "It's a {STR_VAR_2}!\n"
+    "Would you like to pick it?"
+}
+
+text Common_Text_MintPicked {
+    "{PLAYER} picked the {STR_VAR_2}!"
+}
+
+text Common_Text_MintLeft {
+    "You left the mint plant alone."
+}
+
+text Common_Text_MintPutAway {
+    "{PLAYER} put away the\n"
+    "{STR_VAR_2} in the Bag."
+}
+
+text Common_Text_MintBagFull {
+    "Too bad!\n"
+    "The Bag is full."
+}
+
+// =============================================
+// Individual mint scripts
+// =============================================
+
+// Route 1 - Lax Mint
+script Route1_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_LAX_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Viridian City - Timid Mint
+script ViridianCity_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_TIMID_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Route 2 - Gentle Mint
+script Route2_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_GENTLE_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Pewter City - Quiet Mint
+script PewterCity_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_QUIET_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Route 4 - Lonely Mint
+script Route4_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_LONELY_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Route 7 - Mild Mint
+script Route7_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_MILD_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Route 10 - Bold Mint
+script Route10_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_BOLD_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Route 11 - Neutral Mint (Serious)
+script Route11_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_SERIOUS_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Route 13 - Careful Mint
+script Route13_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_CAREFUL_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Route 14 - Naughty Mint
+script Route14_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_NAUGHTY_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Route 15 - Jolly Mint
+script Route15_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_JOLLY_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Fuchsia City - Impish Mint
+script FuchsiaCity_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_IMPISH_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Route 16 - Modest Mint
+script Route16_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_MODEST_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Route 23 - Adamant Mint
+script Route23_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_ADAMANT_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// One Island - Neutral Mint (Serious)
+script OneIsland_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_SERIOUS_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Two Island Cape Brink - Calm Mint
+script TwoIsland_CapeBrink_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_CALM_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Three Island Bond Bridge - Brave Mint
+script ThreeIsland_BondBridge_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_BRAVE_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Four Island - Modest Mint
+script FourIsland_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_MODEST_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Five Island Meadow - Adamant Mint
+script FiveIsland_Meadow_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_ADAMANT_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Five Island Resort Gorgeous - Relaxed Mint
+script FiveIsland_ResortGorgeous_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_RELAXED_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Six Island - Jolly Mint
+script SixIsland_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_JOLLY_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Six Island Water Path - Neutral Mint (Serious)
+script SixIsland_WaterPath_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_SERIOUS_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Six Island Green Path - Careful Mint
+script SixIsland_GreenPath_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_CAREFUL_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Seven Island Sevault Canyon - Adamant Mint
+script SevaultCanyon_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_ADAMANT_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Route 28 - Modest Mint
+script Route28_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_MODEST_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
+// Mt. Silver Exterior - Sassy Mint
+script MtSilver_Exterior_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_SASSY_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}

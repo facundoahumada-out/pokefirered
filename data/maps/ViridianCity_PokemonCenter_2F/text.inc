@@ -1,44 +1,17 @@
-ViridianCity_PokemonCenter_2F_Text_Callout::
+ViridianCity_PokemonCenter_2F_Text_Welcome::
 # 2 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "Hey there, Trainer!\p"
-	.string "Could you come over here\n"
-	.string "for a moment?$"
-
-ViridianCity_PokemonCenter_2F_Text_Welcome1::
-# 8 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "Welcome to the POKéMON\n"
-	.string "Service Corner!$"
-
-ViridianCity_PokemonCenter_2F_Text_Welcome2::
-# 13 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "I'm here to help you get the\n"
-	.string "most out of your POKéMON!\p"
-	.string "I can help your POKéMON remember\n"
-	.string "forgotten moves or even change\l"
-	.string "their Abilities!$"
-
-ViridianCity_PokemonCenter_2F_Text_Welcome3::
-# 21 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "The young lady to my right offers\n"
-	.string "a rather special service of\l"
-	.string "her own.\p"
-	.string "Her POKéMON Booster allows\n"
-	.string "experienced Trainers to fine-tune\l"
-	.string "their POKéMON's individual stats\l"
-	.string "and reach their full potential!$"
-
-ViridianCity_PokemonCenter_2F_Text_Welcome4::
-# 31 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "It's a service for those who've\n"
-	.string "truly mastered the art of\l"
-	.string "POKéMON training.\p"
-	.string "So, keep training hard! You might\n"
-	.string "find yourself ready for it\l"
-	.string "someday!$"
+	.string "{COLOR RED}Oh, happy to see you, Trainer!\p"
+	.string "I can help your Pokémon remember\n"
+	.string "forgotten moves or awaken their\l"
+	.string "other Abilities!\p"
+	.string "There's always something new to\n"
+	.string "discover about your Pokémon!\p"
+	.string "So, what can I do for you\n"
+	.string "this time?$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1Greeting::
-# 41 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "Oh, happy to see you, Trainer!\p"
+# 14 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+	.string "{COLOR RED}Oh, happy to see you, Trainer!\p"
 	.string "I can help your Pokémon remember\n"
 	.string "forgotten moves or awaken their\l"
 	.string "other Abilities!\p"
@@ -48,71 +21,71 @@ ViridianCity_PokemonCenter_2F_Text_Obj1Greeting::
 	.string "this time?$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1WhichMon::
-# 52 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "Which POKéMON should I help?$"
+# 25 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+	.string "{COLOR RED}Which Pokémon should I help?$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1TeachWhichMove::
-# 56 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "Which move should it remember?$"
+# 29 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+	.string "{COLOR RED}Which move should it remember?$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1NoMoves::
-# 60 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "Hmm, it doesn't seem to have\n"
+# 33 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+	.string "{COLOR RED}Hmm, it doesn't seem to have\n"
 	.string "any forgotten moves…$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1CantEgg::
-# 65 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "Oh, that's an EGG!\n"
+# 38 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+	.string "{COLOR RED}Oh, that's an EGG!\n"
 	.string "I can't help with that, sorry!$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1CurrentAbility::
-# 70 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "Your POKéMON's current Ability\n"
+# 43 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+	.string "{COLOR RED}Your Pokémon's current Ability\n"
 	.string "is {STR_VAR_1}.\p"
 	.string "Would you like me to change it?$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1AbilityChanged::
-# 76 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "There we go!\p"
-	.string "Your POKéMON's Ability has been\n"
+# 49 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+	.string "{COLOR RED}There we go!\p"
+	.string "Your Pokémon's Ability has been\n"
 	.string "changed to {STR_VAR_1}!$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1OnlyOneAbility::
-# 82 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "Hmm, it seems your POKéMON\n"
+# 55 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+	.string "{COLOR RED}Hmm, it seems your Pokémon\n"
 	.string "only has one possible Ability.\p"
 	.string "There's nothing to change here!$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj1Bye::
-# 88 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "Come back anytime you need\n"
+# 61 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+	.string "{COLOR RED}Come back anytime you need\n"
 	.string "my help!$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj2PreLeague::
-# 94 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "Oh, hello there!\p"
+# 67 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+	.string "{COLOR RED}Oh, hello there!\p"
 	.string "I offer a special service known\n"
-	.string "as the POKéMON Booster!\p"
+	.string "as the Pokémon Booster!\p"
 	.string "However, this service is only\n"
 	.string "available to Trainers who have\l"
 	.string "proven their strength by\l"
-	.string "conquering the POKéMON League.\p"
+	.string "conquering the Pokémon League.\p"
 	.string "Come back when you've earned\n"
 	.string "that honor!$"
 
 ViridianCity_PokemonCenter_2F_Text_Obj2PostLeague::
-# 106 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
-	.string "Well, well! Look who's back!\p"
+# 79 "data/maps/ViridianCity_PokemonCenter_2F/text.pory"
+	.string "{COLOR RED}Well, well! Look who's back!\p"
 	.string "My, you've certainly come a long\n"
 	.string "way! I can tell you've become a\l"
 	.string "much more experienced Trainer!\p"
 	.string "That means you're finally ready\n"
-	.string "to use the POKéMON Booster!\p"
+	.string "to use the Pokémon Booster!\p"
 	.string "With this special service, you can\n"
-	.string "fine-tune your POKéMON's\l"
+	.string "fine-tune your Pokémon's\l"
 	.string "individual stats and help them\l"
 	.string "reach their full potential.\p"
 	.string "I'm so excited to see what you'll\n"
 	.string "accomplish with your team!\p"
-	.string "So, shall we give your POKéMON\n"
+	.string "So, shall we give your Pokémon\n"
 	.string "a little boost?$"

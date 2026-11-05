@@ -1,45 +1,18 @@
 // Welcome scene (first visit)
-text ViridianCity_PokemonCenter_2F_Text_Callout {
-    "Hey there, Trainer!\p"
-    "Could you come over here\n"
-    "for a moment?"
-}
-
-text ViridianCity_PokemonCenter_2F_Text_Welcome1 {
-    "Welcome to the POKéMON\n"
-    "Service Corner!"
-}
-
-text ViridianCity_PokemonCenter_2F_Text_Welcome2 {
-    "I'm here to help you get the\n"
-    "most out of your POKéMON!\p"
-    "I can help your POKéMON remember\n"
-    "forgotten moves or even change\l"
-    "their Abilities!"
-}
-
-text ViridianCity_PokemonCenter_2F_Text_Welcome3 {
-    "The young lady to my right offers\n"
-    "a rather special service of\l"
-    "her own.\p"
-    "Her POKéMON Booster allows\n"
-    "experienced Trainers to fine-tune\l"
-    "their POKéMON's individual stats\l"
-    "and reach their full potential!"
-}
-
-text ViridianCity_PokemonCenter_2F_Text_Welcome4 {
-    "It's a service for those who've\n"
-    "truly mastered the art of\l"
-    "POKéMON training.\p"
-    "So, keep training hard! You might\n"
-    "find yourself ready for it\l"
-    "someday!"
+text ViridianCity_PokemonCenter_2F_Text_Welcome {
+    "{COLOR RED}Oh, happy to see you, Trainer!\p"
+    "I can help your Pokémon remember\n"
+    "forgotten moves or awaken their\l"
+    "other Abilities!\p"
+    "There's always something new to\n"
+    "discover about your Pokémon!\p"
+    "So, what can I do for you\n"
+    "this time?"
 }
 
 // Object 1 - Move Relearner & Ability Changer
 text ViridianCity_PokemonCenter_2F_Text_Obj1Greeting {
-    "Oh, happy to see you, Trainer!\p"
+    "{COLOR RED}Oh, happy to see you, Trainer!\p"
     "I can help your Pokémon remember\n"
     "forgotten moves or awaken their\l"
     "other Abilities!\p"
@@ -50,72 +23,72 @@ text ViridianCity_PokemonCenter_2F_Text_Obj1Greeting {
 }
 
 text ViridianCity_PokemonCenter_2F_Text_Obj1WhichMon {
-    "Which POKéMON should I help?"
+    "{COLOR RED}Which Pokémon should I help?"
 }
 
 text ViridianCity_PokemonCenter_2F_Text_Obj1TeachWhichMove {
-    "Which move should it remember?"
+    "{COLOR RED}Which move should it remember?"
 }
 
 text ViridianCity_PokemonCenter_2F_Text_Obj1NoMoves {
-    "Hmm, it doesn't seem to have\n"
+    "{COLOR RED}Hmm, it doesn't seem to have\n"
     "any forgotten moves…"
 }
 
 text ViridianCity_PokemonCenter_2F_Text_Obj1CantEgg {
-    "Oh, that's an EGG!\n"
+    "{COLOR RED}Oh, that's an EGG!\n"
     "I can't help with that, sorry!"
 }
 
 text ViridianCity_PokemonCenter_2F_Text_Obj1CurrentAbility {
-    "Your POKéMON's current Ability\n"
+    "{COLOR RED}Your Pokémon's current Ability\n"
     "is {STR_VAR_1}.\p"
     "Would you like me to change it?"
 }
 
 text ViridianCity_PokemonCenter_2F_Text_Obj1AbilityChanged {
-    "There we go!\p"
-    "Your POKéMON's Ability has been\n"
+    "{COLOR RED}There we go!\p"
+    "Your Pokémon's Ability has been\n"
     "changed to {STR_VAR_1}!"
 }
 
 text ViridianCity_PokemonCenter_2F_Text_Obj1OnlyOneAbility {
-    "Hmm, it seems your POKéMON\n"
+    "{COLOR RED}Hmm, it seems your Pokémon\n"
     "only has one possible Ability.\p"
     "There's nothing to change here!"
 }
 
 text ViridianCity_PokemonCenter_2F_Text_Obj1Bye {
-    "Come back anytime you need\n"
+    "{COLOR RED}Come back anytime you need\n"
     "my help!"
 }
 
 // Object 2 - Pokémon Booster (Stat Editor)
 text ViridianCity_PokemonCenter_2F_Text_Obj2PreLeague {
-    "Oh, hello there!\p"
+    "{COLOR RED}Oh, hello there!\p"
     "I offer a special service known\n"
-    "as the POKéMON Booster!\p"
+    "as the Pokémon Booster!\p"
     "However, this service is only\n"
     "available to Trainers who have\l"
     "proven their strength by\l"
-    "conquering the POKéMON League.\p"
+    "conquering the Pokémon League.\p"
     "Come back when you've earned\n"
     "that honor!"
 }
 
 text ViridianCity_PokemonCenter_2F_Text_Obj2PostLeague {
-    "Well, well! Look who's back!\p"
+    "{COLOR RED}Well, well! Look who's back!\p"
     "My, you've certainly come a long\n"
     "way! I can tell you've become a\l"
     "much more experienced Trainer!\p"
     "That means you're finally ready\n"
-    "to use the POKéMON Booster!\p"
+    "to use the Pokémon Booster!\p"
     "With this special service, you can\n"
-    "fine-tune your POKéMON's\l"
+    "fine-tune your Pokémon's\l"
     "individual stats and help them\l"
     "reach their full potential.\p"
     "I'm so excited to see what you'll\n"
     "accomplish with your team!\p"
-    "So, shall we give your POKéMON\n"
+    "So, shall we give your Pokémon\n"
     "a little boost?"
 }
