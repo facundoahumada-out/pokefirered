@@ -18,6 +18,8 @@
 #include "quest_log_player.h"
 #include "random.h"
 #include "script.h"
+#include "item.h"
+#include "constants/items.h"
 #include "strings.h"
 #include "wild_encounter.h"
 #include "constants/event_object_movement.h"
@@ -1246,6 +1248,17 @@ bool8 PartyHasMonWithSurf(void)
                 break;
             if (MonKnowsMove(&gPlayerParty[i], MOVE_SURF))
                 return TRUE;
+        }
+        if (CheckBagHasItem(ITEM_HM03_SURF, 1))
+        {
+            for (i = 0; i < PARTY_SIZE; i++)
+            {
+                if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE)
+                    break;
+                if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG)
+                    && CanMonLearnTMHM(&gPlayerParty[i], ITEM_HM03_SURF - ITEM_TM01))
+                    return TRUE;
+            }
         }
     }
     return FALSE;

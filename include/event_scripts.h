@@ -1193,6 +1193,7 @@ extern const u8 CableClub_Text_PleaseWaitBCancel[];
 
 // fldeff_flash
 extern const u8 EventScript_FldEffFlash[];
+extern const u8 EventScript_UseFlashPrompt[];
 
 // field_control_avatar
 extern const u8 EventScript_CancelMessageBox[];

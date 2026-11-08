@@ -3,3 +3,29 @@ script EventScript_FldEffFlash {
     setflashlevel(0)
     end
 }
+
+script EventScript_UseFlashPrompt {
+    goto_if_questlog(EventScript_ReleaseEnd)
+    lockall
+    checkpartymove(MOVE_FLASH)
+    goto_if_eq(VAR_RESULT, PARTY_SIZE, EventScript_UseFlashEnd)
+    bufferpartymonnick(STR_VAR_1, VAR_RESULT)
+    msgbox(Text_CaveIsDarkUseFlash, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, EventScript_UseFlashEnd)
+    closemessage
+    setflag(FLAG_SYS_FLASH_ACTIVE)
+    animateflash(0)
+    setflashlevel(0)
+    releaseall
+    end
+}
+
+script EventScript_UseFlashEnd {
+    releaseall
+    end
+}
+
+text Text_CaveIsDarkUseFlash {
+    "It's pitch dark.\n"
+    "Would you like to use Flash?$"
+}

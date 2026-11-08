@@ -1790,6 +1790,34 @@ bool8 ScrCmd_checkpartymove(struct ScriptContext * ctx)
             break;
         }
     }
+
+    if (gSpecialVar_Result == PARTY_SIZE)
+    {
+        u16 hmItem;
+
+        for (hmItem = ITEM_HM01_CUT; hmItem <= ITEM_HM09_ROCK_CLIMB; hmItem++)
+        {
+            if (ItemIdToBattleMoveId(hmItem) == moveId)
+                break;
+        }
+        if (hmItem <= ITEM_HM09_ROCK_CLIMB && CheckBagHasItem(hmItem, 1))
+        {
+            for (i = 0; i < PARTY_SIZE; i++)
+            {
+                u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL);
+                if (!species)
+                    break;
+                if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG)
+                    && CanMonLearnTMHM(&gPlayerParty[i], hmItem - ITEM_TM01))
+                {
+                    gSpecialVar_Result = i;
+                    gSpecialVar_0x8004 = species;
+                    break;
+                }
+            }
+        }
+    }
+
     return FALSE;
 }
 

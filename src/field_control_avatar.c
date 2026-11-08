@@ -26,9 +26,11 @@
 #include "trainer_see.h"
 #include "vs_seeker.h"
 #include "wild_encounter.h"
+#include "item.h"
 #include "constants/songs.h"
 #include "constants/event_bg.h"
 #include "constants/event_objects.h"
+#include "constants/items.h"
 #include "constants/maps.h"
 #include "constants/metatile_behaviors.h"
 
@@ -401,6 +403,22 @@ static const u8 *GetInteractionScript(struct MapPosition *position, u8 metatileB
     script = GetInteractedWaterScript(position, metatileBehavior, direction);
     if (script != NULL)
         return script;
+
+    if (gMapHeader.cave == TRUE
+        && !FlagGet(FLAG_SYS_FLASH_ACTIVE)
+        && FlagGet(FLAG_BADGE01_GET)
+        && CheckBagHasItem(ITEM_HM05_FLASH, 1))
+    {
+        u8 i;
+        for (i = 0; i < PARTY_SIZE; i++)
+        {
+            if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE)
+                break;
+            if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG)
+                && CanMonLearnTMHM(&gPlayerParty[i], ITEM_HM05_FLASH - ITEM_TM01))
+                return EventScript_UseFlashPrompt;
+        }
+    }
 
     return NULL;
 }
