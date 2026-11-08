@@ -12029,8 +12029,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
     [SPECIES_DUCFETCHD] =
     {
-        .baseHP = 72, .baseAttack = 105, .baseDefense = 70, .baseSpeed = 95, .baseSpAttack = 50, .baseSpDefense = 68,
-        .types = {TYPE_GRASS, TYPE_FLYING},
+        .baseHP = 75, .baseAttack = 110, .baseDefense = 82, .baseSpeed = 85, .baseSpAttack = 71, .baseSpDefense = 87,
+        .types = {TYPE_FIGHTING, TYPE_FLYING},
         .catchRate = 45, .expYield = 172,
         .evYield_Attack = 2,
         .itemCommon = ITEM_NONE, .itemRare = ITEM_STICK,
@@ -12038,7 +12038,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .eggCycles = 20, .friendship = 70,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = {EGG_GROUP_FLYING, EGG_GROUP_FIELD},
-        .abilities = {ABILITY_INNER_FOCUS, ABILITY_SUPER_LUCK},
-        .safariZoneFleeRate = 0, .bodyColor = BODY_COLOR_PURPLE, .noFlip = TRUE,
+        .abilities = {ABILITY_KEEN_EYE, ABILITY_INNER_FOCUS},
+        .abilityHidden = ABILITY_DEFIANT,
+        .safariZoneFleeRate = 0, .bodyColor = BODY_COLOR_WHITE, .noFlip = TRUE,
     },
 };
