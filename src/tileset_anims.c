@@ -85,7 +85,8 @@ static const u16 *const sTilesetAnims_General_Tiles0AD[] = {
     sTilesetAnims_General_Tiles0AD_Frame1,
     sTilesetAnims_General_Tiles0AD_Frame2,
     sTilesetAnims_General_Tiles0AD_Frame3,
-    sTilesetAnims_General_Tiles0AD_Frame1
+    sTilesetAnims_General_Tiles0AD_Frame1,
+    sTilesetAnims_General_Tiles0AD_Frame0
 };
 
 // palette: general 03
@@ -99,7 +100,8 @@ static const u16 *const sTilesetAnims_General_Tiles0BD[] = {
     sTilesetAnims_General_Tiles0BD_Frame1,
     sTilesetAnims_General_Tiles0BD_Frame2,
     sTilesetAnims_General_Tiles0BD_Frame3,
-    sTilesetAnims_General_Tiles0BD_Frame1
+    sTilesetAnims_General_Tiles0BD_Frame1,
+    sTilesetAnims_General_Tiles0BD_Frame0
 };
 
 // palette: general 00

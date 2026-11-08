@@ -5303,6 +5303,12 @@ static void Task_PokeSum_SwitchDisplayedPokemon(u8 taskId)
                 CopyToBgTilemapBuffer(sMonSummaryScreen->infoAndMovesPageBgNum, gSummaryScreen_PageSkills_Tilemap, 0, 0);
             }
         }
+        FillWindowPixelBuffer(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], 0);
+        FillWindowPixelBuffer(sMonSummaryScreen->windowIds[POKESUM_WIN_TRAINER_MEMO], 0);
+        FillWindowPixelBuffer(sMonSummaryScreen->windowIds[5], 0);
+        CopyWindowToVram(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], COPYWIN_GFX);
+        CopyWindowToVram(sMonSummaryScreen->windowIds[POKESUM_WIN_TRAINER_MEMO], COPYWIN_GFX);
+        CopyWindowToVram(sMonSummaryScreen->windowIds[5], COPYWIN_GFX);
         sMonSummaryScreen->switchMonTaskState++;
         break;
     case 5:
