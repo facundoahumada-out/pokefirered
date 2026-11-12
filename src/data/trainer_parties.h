@@ -5606,13 +5606,19 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock[] = {
         .iv = 0,
         .lvl = 12,
         .species = SPECIES_GEODUDE,
-        .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE},
+        .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_ROCK_TOMB, MOVE_ROCK_POLISH},
+    },
+    {
+        .iv = 0,
+        .lvl = 13,
+        .species = SPECIES_KABUTO,
+        .moves = {MOVE_SCRATCH, MOVE_HARDEN, MOVE_ROCK_TOMB, MOVE_CLAMP},
     },
     {
         .iv = 0,
         .lvl = 14,
         .species = SPECIES_ONIX,
-        .moves = {MOVE_TACKLE, MOVE_BIND, MOVE_ROCK_TOMB, MOVE_NONE},
+        .moves = {MOVE_TACKLE, MOVE_BIND, MOVE_ROCK_TOMB, MOVE_RAGE},
     },
 };
 

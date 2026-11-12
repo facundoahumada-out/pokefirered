@@ -467,7 +467,7 @@ const u16 gEggMoves[] = {
               MOVE_BUBBLE_BEAM,
               MOVE_AURORA_BEAM,
               MOVE_RAPID_SPIN,
-              MOVE_DIG,
+              MOVE_CLAMP,
               MOVE_FLAIL,
               MOVE_KNOCK_OFF,
               MOVE_CONFUSE_RAY),
