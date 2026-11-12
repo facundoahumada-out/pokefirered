@@ -106,10 +106,16 @@ Route7_EventScript_Mint::
 	end
 
 
+Route8_EventScript_Mint::
+	setvar VAR_0x8000, ITEM_NAIVE_MINT
+	goto Common_EventScript_FindMint
+	end
+
+
 Route10_EventScript_Mint::
-# 113 "data/scripts/mint_scripts.pory"
+# 120 "data/scripts/mint_scripts.pory"
 	setvar VAR_0x8000, ITEM_BOLD_MINT
-# 114 "data/scripts/mint_scripts.pory"
+# 121 "data/scripts/mint_scripts.pory"
 	goto Common_EventScript_FindMint
 	end
 

@@ -1278,7 +1278,7 @@
 #define FLAG_MINT_SEVAULT_CANYON                  0x4D7
 #define FLAG_MINT_ROUTE28                        0x4D8
 #define FLAG_MINT_MT_SILVER_EXTERIOR             0x4D9
-#define FLAG_0x4DA               0x4DA
+#define FLAG_MINT_ROUTE8                        0x4DA
 #define FLAG_0x4DB               0x4DB
 #define FLAG_0x4DC               0x4DC
 #define FLAG_0x4DD               0x4DD

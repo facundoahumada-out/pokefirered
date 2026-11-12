@@ -74,6 +74,7 @@ gFieldEffectScriptPointers::
 	.4byte gFldEffScript_PhotoFlash              @ FLDEFF_PHOTO_FLASH
 	.4byte gFldEffScript_UseRockClimb            @ FLDEFF_USE_ROCK_CLIMB
 	.4byte gFldEffScript_RockClimbDust           @ FLDEFF_ROCK_CLIMB_DUST
+	.4byte gFldEffScript_UseFlash                @ FLDEFF_USE_FLASH
 
 gFldEffScript_ExclamationMarkIcon::
 	callnative FldEff_ExclamationMarkIcon1
@@ -353,4 +354,8 @@ gFldEffScript_UseRockClimb::
 
 gFldEffScript_RockClimbDust::
 	loadfadedpal_callnative gSpritePalette_BigDust, FldEff_RockClimbDust
+	end
+
+gFldEffScript_UseFlash::
+	callnative FldEff_UseFlashScript
 	end

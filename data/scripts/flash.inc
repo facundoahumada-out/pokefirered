@@ -16,31 +16,37 @@ EventScript_UseFlashPrompt::
 # 11 "data/scripts/flash.pory"
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_UseFlashEnd
 # 12 "data/scripts/flash.pory"
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	setfieldeffectargument 0, VAR_RESULT
 # 13 "data/scripts/flash.pory"
-	msgbox Text_CaveIsDarkUseFlash, MSGBOX_YESNO
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
 # 14 "data/scripts/flash.pory"
-	goto_if_eq VAR_RESULT, NO, EventScript_UseFlashEnd
+	msgbox Text_CaveIsDarkUseFlash, MSGBOX_YESNO
 # 15 "data/scripts/flash.pory"
-	closemessage
+	goto_if_eq VAR_RESULT, NO, EventScript_UseFlashEnd
 # 16 "data/scripts/flash.pory"
-	setflag FLAG_SYS_FLASH_ACTIVE
+	closemessage
 # 17 "data/scripts/flash.pory"
-	animateflash 0
+	dofieldeffect FLDEFF_USE_FLASH
 # 18 "data/scripts/flash.pory"
-	setflashlevel 0
+	waitstate
 # 19 "data/scripts/flash.pory"
+	setflag FLAG_SYS_FLASH_ACTIVE
+# 20 "data/scripts/flash.pory"
+	animateflash 0
+# 21 "data/scripts/flash.pory"
+	setflashlevel 0
+# 22 "data/scripts/flash.pory"
 	releaseall
 	end
 
 
 EventScript_UseFlashEnd::
-# 24 "data/scripts/flash.pory"
+# 27 "data/scripts/flash.pory"
 	releaseall
 	end
 
 
 Text_CaveIsDarkUseFlash::
-# 28 "data/scripts/flash.pory"
+# 31 "data/scripts/flash.pory"
 	.string "It's pitch dark.\n"
 	.string "Would you like to use Flash?$"

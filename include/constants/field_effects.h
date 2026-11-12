@@ -73,6 +73,7 @@
 #define FLDEFF_PHOTO_FLASH               69
 #define FLDEFF_USE_ROCK_CLIMB            70
 #define FLDEFF_ROCK_CLIMB_DUST           71
+#define FLDEFF_USE_FLASH                 72
 
 #define FLDEFF_PAL_TAG_GENERAL_0          0x1004
 #define FLDEFF_PAL_TAG_GENERAL_1          0x1005

@@ -10,6 +10,7 @@
 #include "script.h"
 #include "constants/songs.h"
 #include "constants/map_types.h"
+#include "constants/field_effects.h"
 
 struct FlashStruct
 {
@@ -187,6 +188,20 @@ static void FldEff_UseFlash(void)
     PlaySE(SE_M_REFLECT);
     FlagSet(FLAG_SYS_FLASH_ACTIVE);
     ScriptContext_SetupScript(EventScript_FldEffFlash);
+}
+
+static void UseFlashFieldEffectCallback(void)
+{
+    PlaySE(SE_M_REFLECT);
+    FieldEffectActiveListRemove(FLDEFF_USE_FLASH);
+    ScriptContext_Enable();
+}
+
+bool8 FldEff_UseFlashScript(void)
+{
+    u8 taskId = CreateFieldEffectShowMon();
+    FLDEFF_SET_FUNC_TO_DATA(UseFlashFieldEffectCallback);
+    return FALSE;
 }
 
 // Map transition animatics

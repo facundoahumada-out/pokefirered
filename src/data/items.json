@@ -3601,12 +3601,12 @@
       "secondaryId": 0
     },
     {
-      "english": "Stick",
+      "english": "Leek",
       "itemId": "ITEM_STICK",
       "price": 200,
       "holdEffect": "HOLD_EFFECT_STICK",
       "holdEffectParam": 0,
-      "description_english": "A stick of leek to be held by a\\nFARFETCH'D. It raises Farfetch'd's\\ncritical-hit ratio.",
+      "description_english": "A leek stalk to be held by a\\nFarfetch'd or Ducfetch'd. It raises\\nthe holder's critical-hit ratio.",
       "importance": 0,
       "registrability": 0,
       "pocket": "POCKET_ITEMS",

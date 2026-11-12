@@ -108,6 +108,13 @@ script Route7_EventScript_Mint {
     end
 }
 
+// Route 8 - Naive Mint
+script Route8_EventScript_Mint {
+    setvar(VAR_0x8000, ITEM_NAIVE_MINT)
+    goto(Common_EventScript_FindMint)
+    end
+}
+
 // Route 10 - Bold Mint
 script Route10_EventScript_Mint {
     setvar(VAR_0x8000, ITEM_BOLD_MINT)

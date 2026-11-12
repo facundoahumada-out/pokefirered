@@ -1,13 +1,30 @@
 // Welcome scene (first visit)
+text ViridianCity_PokemonCenter_2F_Text_WelcomeCallOver {
+    "{COLOR RED}Hey there, Trainer! Could you\n"
+    "come over here for a moment?"
+}
+
 text ViridianCity_PokemonCenter_2F_Text_Welcome {
-    "{COLOR RED}Oh, happy to see you, Trainer!\p"
+    "{COLOR RED}Welcome to the Pokémon Service\n"
+    "Corner!\p"
+    "I'm here to help you get the\n"
+    "most out of your Pokémon!\p"
     "I can help your Pokémon remember\n"
-    "forgotten moves or awaken their\l"
-    "other Abilities!\p"
-    "There's always something new to\n"
-    "discover about your Pokémon!\p"
-    "So, what can I do for you\n"
-    "this time?"
+    "forgotten moves or even change\l"
+    "their Abilities!\p"
+    "The young lady to my right offers\n"
+    "a rather special service of her\l"
+    "own.\p"
+    "Her Pokémon Booster allows\n"
+    "experienced Trainers to fine-tune\l"
+    "their Pokémon's individual stats\l"
+    "and reach their full potential!\p"
+    "It's a service for those who've\n"
+    "truly mastered the art of\l"
+    "Pokémon training.\p"
+    "So, keep growing together! You\n"
+    "might find yourself ready for it\l"
+    "someday!"
 }
 
 // Object 1 - Move Relearner & Ability Changer

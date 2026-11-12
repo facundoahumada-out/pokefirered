@@ -28,6 +28,8 @@ script ViridianCity_PokemonCenter_2F_EventScript_WelcomeCheck {
     lockall
     applymovement(1, Common_Movement_WalkInPlaceFasterDown)
     waitmovement(0)
+    msgbox(ViridianCity_PokemonCenter_2F_Text_WelcomeCallOver)
+    closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, ViridianCity_PokemonCenter_2F_Movement_WalkToCounter)
     waitmovement(0)
     msgbox(ViridianCity_PokemonCenter_2F_Text_Welcome)

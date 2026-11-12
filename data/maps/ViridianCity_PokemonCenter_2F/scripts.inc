@@ -47,211 +47,215 @@ ViridianCity_PokemonCenter_2F_EventScript_WelcomeCheck::
 # 30 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	waitmovement 0
 # 31 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ViridianCity_PokemonCenter_2F_Movement_WalkToCounter
+	msgbox ViridianCity_PokemonCenter_2F_Text_WelcomeCallOver
 # 32 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	waitmovement 0
+	closemessage
 # 33 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	msgbox ViridianCity_PokemonCenter_2F_Text_Welcome
+	applymovement OBJ_EVENT_ID_PLAYER, ViridianCity_PokemonCenter_2F_Movement_WalkToCounter
 # 34 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	setflag FLAG_CP_2F_WELCOME_DONE
+	waitmovement 0
 # 35 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+	msgbox ViridianCity_PokemonCenter_2F_Text_Welcome
+# 36 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+	setflag FLAG_CP_2F_WELCOME_DONE
+# 37 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	releaseall
 	end
 
 
-# 39 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-ViridianCity_PokemonCenter_2F_Movement_WalkToCounter:
-# 40 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	walk_right
 # 41 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	walk_right
+ViridianCity_PokemonCenter_2F_Movement_WalkToCounter:
 # 42 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	walk_right
 # 43 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	walk_right
 # 44 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	walk_up
+	walk_right
 # 45 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	walk_up
+	walk_right
 # 46 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	walk_in_place_faster_up
+	walk_up
 # 47 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+	walk_up
+# 48 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+	walk_in_place_faster_up
+# 49 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	step_end
 
 ViridianCity_PokemonCenter_2F_EventScript_Obj1::
-# 54 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	lock
-# 55 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	faceplayer
 # 56 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1Greeting
+	lock
 # 57 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	multichoice 0, 0, MULTICHOICE_SERVICE_CORNER, FALSE
+	faceplayer
 # 58 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	switch VAR_RESULT
+	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1Greeting
 # 59 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	case 0, ViridianCity_PokemonCenter_2F_EventScript_Obj1_3
+	multichoice 0, 0, MULTICHOICE_SERVICE_CORNER, FALSE
+# 60 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+	switch VAR_RESULT
 # 61 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+	case 0, ViridianCity_PokemonCenter_2F_EventScript_Obj1_3
+# 63 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	case 1, ViridianCity_PokemonCenter_2F_EventScript_Obj1_4
-# 64 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 66 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	goto ViridianCity_PokemonCenter_2F_EventScript_Obj1Bye
 ViridianCity_PokemonCenter_2F_EventScript_Obj1_1:
 	end
 
 ViridianCity_PokemonCenter_2F_EventScript_Obj1_3:
-# 60 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 62 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	goto ViridianCity_PokemonCenter_2F_EventScript_RememberMoves
 	goto ViridianCity_PokemonCenter_2F_EventScript_Obj1_1
 
 ViridianCity_PokemonCenter_2F_EventScript_Obj1_4:
-# 62 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 64 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	goto ViridianCity_PokemonCenter_2F_EventScript_ChangeAbility
 	goto ViridianCity_PokemonCenter_2F_EventScript_Obj1_1
 
 
 ViridianCity_PokemonCenter_2F_EventScript_Obj1Bye::
-# 70 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 72 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1Bye
-# 71 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 73 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	release
 	end
 
 
 ViridianCity_PokemonCenter_2F_EventScript_RememberMoves::
-# 77 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1WhichMon
-# 78 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	special ChooseMonForMoveRelearner
 # 79 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	waitstate
+	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1WhichMon
 # 80 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	goto_if_ge VAR_0x8004, PARTY_SIZE, ViridianCity_PokemonCenter_2F_EventScript_Obj1Bye
+	special ChooseMonForMoveRelearner
 # 81 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	special IsSelectedMonEgg
+	waitstate
 # 82 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	goto_if_eq VAR_RESULT, TRUE, ViridianCity_PokemonCenter_2F_EventScript_CantEgg
+	goto_if_ge VAR_0x8004, PARTY_SIZE, ViridianCity_PokemonCenter_2F_EventScript_Obj1Bye
 # 83 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	goto_if_eq VAR_0x8005, 0, ViridianCity_PokemonCenter_2F_EventScript_NoMoves
+	special IsSelectedMonEgg
 # 84 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+	goto_if_eq VAR_RESULT, TRUE, ViridianCity_PokemonCenter_2F_EventScript_CantEgg
+# 85 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+	goto_if_eq VAR_0x8005, 0, ViridianCity_PokemonCenter_2F_EventScript_NoMoves
+# 86 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	goto ViridianCity_PokemonCenter_2F_EventScript_TeachMove
 	end
 
 
 ViridianCity_PokemonCenter_2F_EventScript_TeachMove::
-# 89 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1TeachWhichMove
-# 90 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	special TeachMoveRelearnerMove
 # 91 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	waitstate
+	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1TeachWhichMove
 # 92 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	goto_if_eq VAR_0x8004, 0, ViridianCity_PokemonCenter_2F_EventScript_RememberMoves
+	special TeachMoveRelearnerMove
 # 93 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1Bye
+	waitstate
 # 94 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+	goto_if_eq VAR_0x8004, 0, ViridianCity_PokemonCenter_2F_EventScript_RememberMoves
+# 95 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1Bye
+# 96 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	release
 	end
 
 
 ViridianCity_PokemonCenter_2F_EventScript_NoMoves::
-# 99 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 101 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1NoMoves
-# 100 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 102 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	release
 	end
 
 
 ViridianCity_PokemonCenter_2F_EventScript_CantEgg::
-# 105 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 107 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1CantEgg
-# 106 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 108 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	release
 	end
 
 
 ViridianCity_PokemonCenter_2F_EventScript_ChangeAbility::
-# 112 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1WhichMon
-# 113 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	special ChoosePartyMon
 # 114 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	waitstate
+	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1WhichMon
 # 115 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	goto_if_ge VAR_0x8004, PARTY_SIZE, ViridianCity_PokemonCenter_2F_EventScript_Obj1Bye
+	special ChoosePartyMon
 # 116 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	special IsSelectedMonEgg
+	waitstate
 # 117 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	goto_if_eq VAR_RESULT, TRUE, ViridianCity_PokemonCenter_2F_EventScript_CantEgg
+	goto_if_ge VAR_0x8004, PARTY_SIZE, ViridianCity_PokemonCenter_2F_EventScript_Obj1Bye
 # 118 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	special BufferMonAbilityName
+	special IsSelectedMonEgg
 # 119 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1CurrentAbility, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, ViridianCity_PokemonCenter_2F_EventScript_CantEgg
 # 120 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	goto_if_eq VAR_RESULT, NO, ViridianCity_PokemonCenter_2F_EventScript_Obj1Bye
+	special BufferMonAbilityName
 # 121 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	special CycleMonAbility
+	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1CurrentAbility, MSGBOX_YESNO
 # 122 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	goto_if_eq VAR_RESULT, FALSE, ViridianCity_PokemonCenter_2F_EventScript_OnlyOneAbility
+	goto_if_eq VAR_RESULT, NO, ViridianCity_PokemonCenter_2F_EventScript_Obj1Bye
 # 123 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1AbilityChanged
+	special CycleMonAbility
 # 124 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+	goto_if_eq VAR_RESULT, FALSE, ViridianCity_PokemonCenter_2F_EventScript_OnlyOneAbility
+# 125 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1AbilityChanged
+# 126 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	release
 	end
 
 
 ViridianCity_PokemonCenter_2F_EventScript_OnlyOneAbility::
-# 129 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 131 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	msgbox ViridianCity_PokemonCenter_2F_Text_Obj1OnlyOneAbility
-# 130 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 132 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	release
 	end
 
 
 ViridianCity_PokemonCenter_2F_EventScript_Obj2::
-# 138 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	lock
-# 139 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	faceplayer
 # 140 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	goto_if_set FLAG_SYS_GAME_CLEAR, ViridianCity_PokemonCenter_2F_EventScript_Obj2PostLeague
+	lock
 # 141 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
-	msgbox ViridianCity_PokemonCenter_2F_Text_Obj2PreLeague
+	faceplayer
 # 142 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+	goto_if_set FLAG_SYS_GAME_CLEAR, ViridianCity_PokemonCenter_2F_EventScript_Obj2PostLeague
+# 143 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+	msgbox ViridianCity_PokemonCenter_2F_Text_Obj2PreLeague
+# 144 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	release
 	end
 
 
 ViridianCity_PokemonCenter_2F_EventScript_Obj2PostLeague::
-# 147 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 149 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	msgbox ViridianCity_PokemonCenter_2F_Text_Obj2PostLeague, MSGBOX_YESNO
-# 148 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 150 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ViridianCity_PokemonCenter_2F_EventScript_Obj2PostLeague_2
 ViridianCity_PokemonCenter_2F_EventScript_Obj2PostLeague_1:
-# 151 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 153 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	release
 	end
 
 ViridianCity_PokemonCenter_2F_EventScript_Obj2PostLeague_2:
-# 149 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 151 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	goto EventScript_StatEditor
 	goto ViridianCity_PokemonCenter_2F_EventScript_Obj2PostLeague_1
 
 
 ViridianCity_PokemonCenter_2F_EventScript_Colosseum::
-# 157 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 159 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	call CableClub_EventScript_Colosseum
 	end
 
 
 ViridianCity_PokemonCenter_2F_EventScript_TradeCenter::
-# 162 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 164 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	call CableClub_EventScript_TradeCenter
 	end
 
 
 ViridianCity_PokemonCenter_2F_EventScript_RecordCorner::
-# 167 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
+# 169 "data/maps/ViridianCity_PokemonCenter_2F/scripts.pory"
 	call CableClub_EventScript_RecordCorner
 	end
 

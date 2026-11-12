@@ -9,10 +9,13 @@ script EventScript_UseFlashPrompt {
     lockall
     checkpartymove(MOVE_FLASH)
     goto_if_eq(VAR_RESULT, PARTY_SIZE, EventScript_UseFlashEnd)
+    setfieldeffectargument(0, VAR_RESULT)
     bufferpartymonnick(STR_VAR_1, VAR_RESULT)
     msgbox(Text_CaveIsDarkUseFlash, MSGBOX_YESNO)
     goto_if_eq(VAR_RESULT, NO, EventScript_UseFlashEnd)
     closemessage
+    dofieldeffect(FLDEFF_USE_FLASH)
+    waitstate
     setflag(FLAG_SYS_FLASH_ACTIVE)
     animateflash(0)
     setflashlevel(0)
