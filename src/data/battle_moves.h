@@ -2128,7 +2128,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
-    [MOVE_CRABHAMMER] =
+    [MOVE_AQUA_HAMMER] =
     {
         .effect = EFFECT_HIGH_CRITICAL,
         .power = 100,
@@ -3308,7 +3308,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_MOONLIGHT,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_FAIRY,
         .split = SPLIT_STATUS,
         .accuracy = 0,
         .pp = 5,
