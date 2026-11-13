@@ -1,7 +1,6 @@
 // Shared mint pickup script
 script Common_EventScript_FindMint {
     lock
-    faceplayer
     waitse
     copyvar(VAR_0x8004, VAR_0x8000)
     bufferitemname(STR_VAR_2, VAR_0x8000)
