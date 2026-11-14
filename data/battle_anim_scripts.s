@@ -598,6 +598,7 @@ gBattleAnims_Moves::
 	.4byte Move_PROTECT         @ MOVE_CRAFTY_SHIELD
 	.4byte Move_MEAN_LOOK       @ MOVE_FAIRY_LOCK
 	.4byte Move_ATTRACT         @ MOVE_BABY_DOLL_EYES
+	.4byte Move_CRABHAMMER      @ MOVE_AQUA_HAMMER
 
 	.align 2
 gBattleAnims_StatusConditions::

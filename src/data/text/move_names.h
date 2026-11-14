@@ -572,4 +572,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_CRAFTY_SHIELD] = _("Craftyshield"),
     [MOVE_FAIRY_LOCK]    = _("Fairy Lock"),
     [MOVE_BABY_DOLL_EYES] = _("Baby-Doll Ey"),
+    [MOVE_AQUA_HAMMER]   = _("Aqua Hammer"),
 };

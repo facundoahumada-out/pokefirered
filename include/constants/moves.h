@@ -580,8 +580,9 @@
 #define MOVE_CRAFTY_SHIELD 570
 #define MOVE_FAIRY_LOCK 571
 #define MOVE_BABY_DOLL_EYES 572
+#define MOVE_AQUA_HAMMER 573
 
-#define MOVES_COUNT 573
+#define MOVES_COUNT 574
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

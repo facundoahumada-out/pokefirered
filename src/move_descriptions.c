@@ -573,6 +573,7 @@ const u8 gMoveDescription_FlowerShield[] = _("Raises the Defense\nof Grass-type\
 const u8 gMoveDescription_CraftyShield[] = _("Protects allies\nfrom status moves.\nGoes first.");
 const u8 gMoveDescription_FairyLock[] = _("Prevents all\nPokémon from\nfleeing or\nswitching out.");
 const u8 gMoveDescription_BabyDollEyes[] = _("Lowers the\ntarget's Attack.\nGoes first.");
+const u8 gMoveDescription_AquaHammer[] = _("Slams the target\nwith water. High\ncritical-hit ratio.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1147,4 +1148,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_CRAFTY_SHIELD - 1] = gMoveDescription_CraftyShield,
     [MOVE_FAIRY_LOCK    - 1] = gMoveDescription_FairyLock,
     [MOVE_BABY_DOLL_EYES - 1] = gMoveDescription_BabyDollEyes,
+    [MOVE_AQUA_HAMMER - 1] = gMoveDescription_AquaHammer,
 };
