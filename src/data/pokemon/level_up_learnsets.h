@@ -2370,7 +2370,7 @@ static const u16 sChikoritaLevelUpLearnset[] = {
 };
 
 static const u16 sBayleefLevelUpLearnset[] = {
-    LEVEL_UP_MOVE(1, MOVE_LEAFT_TORNADO),
+    LEVEL_UP_MOVE(1, MOVE_LEAF_TORNADO),
     LEVEL_UP_MOVE(1, MOVE_TACKLE),
     LEVEL_UP_MOVE(1, MOVE_TAIL_WHIP),
     LEVEL_UP_MOVE(6, MOVE_DISARMING_VOICE),
