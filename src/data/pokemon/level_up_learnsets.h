@@ -706,8 +706,8 @@ static const u16 sOddishLevelUpLearnset[] = {
 };
 
 static const u16 sGloomLevelUpLearnset[] = {
+    LEVEL_UP_MOVE(1, MOVE_SLUDGE),
     LEVEL_UP_MOVE(1, MOVE_ABSORB),
-    LEVEL_UP_MOVE(1, MOVE_SWEET_SCENT),
     LEVEL_UP_MOVE(5, MOVE_SWEET_SCENT),
     LEVEL_UP_MOVE(9, MOVE_ACID),
     LEVEL_UP_MOVE(13, MOVE_POISON_POWDER),
