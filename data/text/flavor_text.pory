@@ -149,3 +149,10 @@ text Text_PlayerFacingTVScreen {
     "There's a Pokémon on TV!\n"
     "It looks like it's having fun.$"
 }
+
+text Text_PokemonCenterShelf {
+    "A shelf stocked with various healing\n"
+    "items for Pokémon.\p"
+    "Everything a Trainer needs to keep\n"
+    "their team in good shape!$"
+}

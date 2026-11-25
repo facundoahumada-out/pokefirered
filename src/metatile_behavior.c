@@ -1123,6 +1123,14 @@ bool8 MetatileBehavior_IsTrainerTowerMonitor(u8 metatileBehavior)
         return FALSE;
 }
 
+bool8 MetatileBehavior_IsPokemonCenterShelf(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_POKEMON_CENTER_SHELF)
+        return TRUE;
+    else
+        return FALSE;
+}
+
 bool8 MetatileBehavior_IsRockClimbable(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_ROCK_CLIMB)

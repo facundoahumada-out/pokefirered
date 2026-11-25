@@ -1002,6 +1002,42 @@ static const union AnimCmd *const sAnimTable_TwoDirections[] = {
     [ANIM_STD_FACE_EAST] = sAnim_FaceSouth,
 };
 
+// Mints: frame 0 = down, frame 1 = up, frame 2 = right (left is frame 2 flipped).
+// Every standard anim (including the "Go" ones the engine uses when an
+// object turns) must be defined, or it reads past the end of the table.
+static const union AnimCmd sAnim_MintFaceEast[] = {
+    ANIMCMD_FRAME(2, 16),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_MintFaceWest[] = {
+    ANIMCMD_FRAME(2, 16, .hFlip = TRUE),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd *const sAnimTable_Mint[] = {
+    [ANIM_STD_FACE_SOUTH] = sAnim_FaceSouth,
+    [ANIM_STD_FACE_NORTH] = sAnim_FaceNorth,
+    [ANIM_STD_FACE_WEST] = sAnim_MintFaceWest,
+    [ANIM_STD_FACE_EAST] = sAnim_MintFaceEast,
+    [ANIM_STD_GO_SOUTH] = sAnim_FaceSouth,
+    [ANIM_STD_GO_NORTH] = sAnim_FaceNorth,
+    [ANIM_STD_GO_WEST] = sAnim_MintFaceWest,
+    [ANIM_STD_GO_EAST] = sAnim_MintFaceEast,
+    [ANIM_STD_GO_FAST_SOUTH] = sAnim_FaceSouth,
+    [ANIM_STD_GO_FAST_NORTH] = sAnim_FaceNorth,
+    [ANIM_STD_GO_FAST_WEST] = sAnim_MintFaceWest,
+    [ANIM_STD_GO_FAST_EAST] = sAnim_MintFaceEast,
+    [ANIM_STD_GO_FASTER_SOUTH] = sAnim_FaceSouth,
+    [ANIM_STD_GO_FASTER_NORTH] = sAnim_FaceNorth,
+    [ANIM_STD_GO_FASTER_WEST] = sAnim_MintFaceWest,
+    [ANIM_STD_GO_FASTER_EAST] = sAnim_MintFaceEast,
+    [ANIM_STD_GO_FASTEST_SOUTH] = sAnim_FaceSouth,
+    [ANIM_STD_GO_FASTEST_NORTH] = sAnim_FaceNorth,
+    [ANIM_STD_GO_FASTEST_WEST] = sAnim_MintFaceWest,
+    [ANIM_STD_GO_FASTEST_EAST] = sAnim_MintFaceEast,
+};
+
 // Leftover from Ruby/Sapphire
 static const union AnimCmd *const sAnimTable_QuintyPlump[] = {
     [ANIM_STD_FACE_SOUTH] = sAnim_QuintyPlumpFaceSouth,

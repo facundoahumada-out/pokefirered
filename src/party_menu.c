@@ -25,6 +25,7 @@
 #include "help_system.h"
 #include "item.h"
 #include "item_menu.h"
+#include "item_menu_icons.h"
 #include "item_use.h"
 #include "link.h"
 #include "link_rfu.h"
@@ -416,6 +417,10 @@ static EWRAM_DATA u16 *sSlot2TilemapBuffer = NULL;
 static EWRAM_DATA struct Pokemon *sSacredAshQuestLogMonBackup = NULL;
 EWRAM_DATA u8 gSelectedOrderFromParty[3] = {0};
 static EWRAM_DATA u16 sPartyMenuItemId = ITEM_NONE;
+static EWRAM_DATA u8 sHeldItemIconSpriteId = 0;
+static EWRAM_DATA s8 sHeldItemIconSlot = 0;
+
+#define TAG_PARTY_HELD_ITEM_ICON 1210
 ALIGNED(4) EWRAM_DATA u8 gBattlePartyCurrentOrder[PARTY_SIZE / 2] = {0}; // bits 0-3 are the current pos of Slot 1, 4-7 are Slot 2, and so on
 
 COMMON_DATA void (*gItemUseCB)(u8, TaskFunc) = NULL;
@@ -506,6 +511,8 @@ static bool8 ShowPartyMenu(void)
         break;
     case 3:
         ResetSpriteData();
+        sHeldItemIconSpriteId = MAX_SPRITES;
+        sHeldItemIconSlot = -1;
         ++gMain.state;
         break;
     case 4:
@@ -997,9 +1004,62 @@ static void CreateCancelConfirmPokeballSprites(void)
     }
 }
 
+static void DestroyHeldItemIcon(void)
+{
+    if (sHeldItemIconSpriteId != MAX_SPRITES)
+    {
+        DestroySprite(&gSprites[sHeldItemIconSpriteId]);
+        FreeSpriteTilesByTag(TAG_PARTY_HELD_ITEM_ICON);
+        FreeSpritePaletteByTag(TAG_PARTY_HELD_ITEM_ICON);
+        sHeldItemIconSpriteId = MAX_SPRITES;
+    }
+    sHeldItemIconSlot = -1;
+}
+
+// Shows the icon of the item held by the Pokemon under the cursor
+static void ShowHeldItemIcon(u8 slot)
+{
+    u16 item;
+    u8 spriteId;
+
+    DestroyHeldItemIcon();
+    if (slot >= PARTY_SIZE || sPartyMenuBoxes == NULL)
+        return;
+    if (GetMonData(&gPlayerParty[slot], MON_DATA_SPECIES) == SPECIES_NONE
+     || GetMonData(&gPlayerParty[slot], MON_DATA_IS_EGG))
+        return;
+    item = GetMonData(&gPlayerParty[slot], MON_DATA_HELD_ITEM);
+    if (item == ITEM_NONE)
+        return;
+
+    spriteId = AddItemIconObject(TAG_PARTY_HELD_ITEM_ICON, TAG_PARTY_HELD_ITEM_ICON, item);
+    if (spriteId == MAX_SPRITES)
+        return;
+    gSprites[spriteId].x = sPartyMenuBoxes[slot].spriteCoords[0] + 8;
+    gSprites[spriteId].y = sPartyMenuBoxes[slot].spriteCoords[1] + 8;
+    gSprites[spriteId].oam.priority = 0;
+    gSprites[spriteId].subpriority = 0;
+    sHeldItemIconSpriteId = spriteId;
+    sHeldItemIconSlot = slot;
+}
+
+static void RefreshHeldItemIcon(u8 slot)
+{
+    if (sHeldItemIconSlot == slot || gPartyMenu.slotId == slot)
+        ShowHeldItemIcon(slot);
+}
+
 void AnimatePartySlot(u8 slot, u8 animNum)
 {
     u8 spriteId;
+
+    if (gPartyMenu.menuType != PARTY_MENU_TYPE_MULTI_SHOWCASE)
+    {
+        if (animNum == 1)
+            ShowHeldItemIcon(slot);
+        else if (sHeldItemIconSlot == slot)
+            DestroyHeldItemIcon();
+    }
 
     switch (slot)
     {
@@ -3586,6 +3646,7 @@ static void Task_UpdateHeldItemSprite(u8 taskId)
     if (IsPartyMenuTextPrinterActive() != TRUE)
     {
         UpdatePartyMonHeldItemSprite(&gPlayerParty[slotId], &sPartyMenuBoxes[slotId]);
+        RefreshHeldItemIcon(slotId);
         Task_ReturnToChooseMonAfterText(taskId);
     }
 }

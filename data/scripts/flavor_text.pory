@@ -138,3 +138,8 @@ script EventScript_Indigo_HighestAuthority {
     msgbox(Text_Indigo_HighestAuthority, MSGBOX_SIGN)
     end
 }
+
+script EventScript_PokemonCenterShelf {
+    msgbox(Text_PokemonCenterShelf, MSGBOX_SIGN)
+    end
+}

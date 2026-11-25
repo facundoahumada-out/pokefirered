@@ -148,3 +148,10 @@ Text_PlayerFacingTVScreen::
 # 148 "data/text/flavor_text.pory"
 	.string "There's a Pokémon on TV!\n"
 	.string "It looks like it's having fun.$"
+
+Text_PokemonCenterShelf::
+# 153 "data/text/flavor_text.pory"
+	.string "A shelf stocked with various healing\n"
+	.string "items for Pokémon.\p"
+	.string "Everything a Trainer needs to keep\n"
+	.string "their team in good shape!$"

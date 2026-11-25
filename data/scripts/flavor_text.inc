@@ -165,3 +165,9 @@ EventScript_Indigo_HighestAuthority::
 	msgbox Text_Indigo_HighestAuthority, MSGBOX_SIGN
 	end
 
+
+EventScript_PokemonCenterShelf::
+# 143 "data/scripts/flavor_text.pory"
+	msgbox Text_PokemonCenterShelf, MSGBOX_SIGN
+	end
+

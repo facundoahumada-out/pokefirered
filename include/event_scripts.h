@@ -1215,6 +1215,7 @@ extern const u8 EventScript_Cabinet[];
 extern const u8 EventScript_Kitchen[];
 extern const u8 EventScript_Dresser[];
 extern const u8 EventScript_Snacks[];
+extern const u8 EventScript_PokemonCenterShelf[];
 extern const u8 EventScript_Painting[];
 extern const u8 EventScript_PowerPlantMachine[];
 extern const u8 EventScript_Telephone[];
